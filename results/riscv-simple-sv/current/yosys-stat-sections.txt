@@ -1,0 +1,140 @@
+109-Removed 12 unused modules.
+110-
+111-3. Executing RTLIL backend.
+112-Output filename: /workspace/incremental-synthesis/results/riscv-simple-sv/current/frontend.rtlil
+113-
+114:4. Printing statistics.
+115-
+116-=== data_memory_interface ===
+117-
+118-        +----------Local Count, excluding submodules.
+119-        | 
+120-       24 wires
+121-      283 wire bits
+122-       15 public wires
+123-      268 public wire bits
+124-       13 ports
+125-      204 port bits
+126-       13 cells
+127-        2   $and
+128-        2   $eq
+129-        1   $logic_not
+130-        1   $mux
+131-        1   $not
+132-        2   $pmux
+133-        1   $reduce_or
+134-        2   $shl
+135-        1   $shr
+136-
+137-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+138-
+139-        +----------Local Count, excluding submodules.
+140-        | 
+141-        5 wires
+142-      161 wire bits
+143-        5 public wires
+144-      161 public wire bits
+145-        3 ports
+146-       97 port bits
+147-        1 cells
+148-        1   $mux
+149-
+150-=== $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer ===
+151-
+152-        +----------Local Count, excluding submodules.
+153-        | 
+154-       10 wires
+--
+3766-Used module:             $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+3767-Used module:         $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+3768-Used module:         \regfile
+3769-Removed 0 unused modules.
+3770-
+3771:5.25. Printing statistics.
+3772-
+3773-=== data_memory_interface ===
+3774-
+3775-        +----------Local Count, excluding submodules.
+3776-        | 
+3777-      130 wires
+3778-      383 wire bits
+3779-       15 public wires
+3780-      268 public wire bits
+3781-       13 ports
+3782-      204 port bits
+3783-      183 cells
+3784-       22   $_ANDNOT_
+3785-       20   $_AND_
+3786-       81   $_MUX_
+3787-       54   $_NAND_
+3788-        2   $_NOR_
+3789-        1   $_NOT_
+3790-        1   $_ORNOT_
+3791-        1   $_OR_
+3792-        1   $_XOR_
+3793-
+3794-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+3795-
+3796-        +----------Local Count, excluding submodules.
+3797-        | 
+3798-        5 wires
+3799-      161 wire bits
+3800-        5 public wires
+3801-      161 public wire bits
+3802-        3 ports
+3803-       97 port bits
+3804-       32 cells
+3805-       32   $_MUX_
+3806-
+3807-=== $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer ===
+3808-
+3809-        +----------Local Count, excluding submodules.
+3810-        | 
+3811-      203 wires
+--
+4181-Dumping module `\riscv_core'.
+4182-Dumping module `\singlecycle_control'.
+4183-Dumping module `\singlecycle_ctlpath'.
+4184-Dumping module `\singlecycle_datapath'.
+4185-
+4186:9. Printing statistics.
+4187-
+4188-=== $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer ===
+4189-
+4190-        +----------Local Count, excluding submodules.
+4191-        | 
+4192-      471 wires
+4193-     1007 wire bits
+4194-       11 public wires
+4195-      547 public wire bits
+4196-        3 ports
+4197-      291 port bits
+4198-      492 cells
+4199-        6   $_ANDNOT_
+4200-      197   $_AND_
+4201-      288   $_NAND_
+4202-        1   $_NOR_
+4203-
+4204-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+4205-
+4206-        +----------Local Count, excluding submodules.
+4207-        | 
+4208-        5 wires
+4209-      161 wire bits
+4210-        5 public wires
+4211-      161 public wire bits
+4212-        3 ports
+4213-       97 port bits
+4214-       32 cells
+4215-       32   $_MUX_
+4216-
+4217-=== $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer ===
+4218-
+4219-        +----------Local Count, excluding submodules.
+4220-        | 
+4221-      203 wires
+4222-      486 wire bits
+4223-        7 public wires
+4224-      290 public wire bits
+4225-        3 ports
+4226-      162 port bits
