@@ -1,0 +1,37 @@
+# ----------------------------
+# 读取版本 A，作为 gold
+# ----------------------------
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-simple-sv-A/core/common     /workspace/incremental-synthesis/benchmarks/riscv-simple-sv-A/core/common/control_transfer.sv
+
+prep -top control_transfer
+
+design -stash gold_design
+design -reset-vlog
+
+# ----------------------------
+# 读取版本 B，作为 gate
+# ----------------------------
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-simple-sv-B/core/common     /workspace/incremental-synthesis/benchmarks/riscv-simple-sv-B/core/common/control_transfer.sv
+
+prep -top control_transfer
+
+design -stash gate_design
+design -reset-vlog
+
+# ----------------------------
+# 将两个独立设计复制到当前设计
+# ----------------------------
+design -copy-from gold_design     -as gold     control_transfer
+
+design -copy-from gate_design     -as gate     control_transfer
+
+# ----------------------------
+# 建立并证明等价关系
+# ----------------------------
+equiv_make gold gate equiv
+
+hierarchy -check -top equiv
+
+equiv_simple -v
+
+equiv_status -assert
