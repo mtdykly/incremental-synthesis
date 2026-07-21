@@ -1,0 +1,3 @@
+[submodule "benchmarks/riscv-simple-sv"]
+	path = benchmarks/riscv-simple-sv
+	url = https://github.com/mtdykly/riscv-simple-sv.git
