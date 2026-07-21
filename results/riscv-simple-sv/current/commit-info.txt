@@ -1,7 +1,0 @@
-commit d665812203a8639b0ac6c1739e25295955d57732
-Author:     Marek Materzok <tilk@tilk.eu>
-AuthorDate: Tue Jun 2 18:04:43 2026 +0200
-Commit:     Marek Materzok <tilk@tilk.eu>
-CommitDate: Tue Jun 2 18:04:43 2026 +0200
-
-    Support modern Yosys
