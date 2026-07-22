@@ -1,0 +1,11 @@
+--- results/eco-001/normalized/base/frontend.rtlil	2026-07-21 07:21:27.436725830 +0000
++++ results/eco-001/normalized/new/frontend.rtlil	2026-07-21 07:21:27.448725645 +0000
+@@ -2181,7 +2181,7 @@
+     connect \Y \take_branch
+     connect \S { $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP $procmux$286_CMP $procmux$285_CMP $procmux$284_CMP }
+     connect \B { $logic_not$<SRC>/core/common/control_transfer.sv:17$24_Y \result_equal_zero $logic_not$<SRC>/core/common/control_transfer.sv:19$25_Y \result_equal_zero $logic_not$<SRC>/core/common/control_transfer.sv:21$26_Y \result_equal_zero }
+-    connect \A 1'x
++    connect \A 1'0
+   end
+   attribute \src "<SRC>/core/common/control_transfer.sv:21.35-21.53"
+   cell $logic_not $logic_not$<SRC>/core/common/control_transfer.sv:21$26

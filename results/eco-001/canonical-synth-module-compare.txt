@@ -1,0 +1,63 @@
+
+变化模块：$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  base hash: c7dfb2a46883adc0
+  new  hash: a29ff1a45f11c589
+
+变化模块：$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  base hash: 3ccabe6840b64b62
+  new  hash: e1293aa52adcf7e6
+
+变化模块：$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  base hash: 5b05107cb9ea8d17
+  new  hash: 3376fd1566ca7c9b
+
+变化模块：$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  base hash: 410ac3cf968ff1e7
+  new  hash: 28386858e4142ea4
+
+变化模块：$paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  base hash: 4fad9bac2d686932
+  new  hash: 4827d9c036eedfa8
+
+变化模块：\alu
+  base hash: 9f5b6d4fe06a7a44
+  new  hash: 9da2ace367a2db20
+
+变化模块：\alu_control
+  base hash: e08d4059ff26e212
+  new  hash: d3578f12da5b7ce2
+
+变化模块：\control_transfer
+  base hash: 07b667b9fb6cdf1b
+  new  hash: a58cf577c05a2bf9
+
+变化模块：\data_memory_interface
+  base hash: bd1cbbbd5a0ed27f
+  new  hash: 78f865d7bdf1aa6f
+
+变化模块：\immediate_generator
+  base hash: d76d509a890504d1
+  new  hash: bb7a0b60644001c1
+
+变化模块：\regfile
+  base hash: 147c3906987442b8
+  new  hash: 8d0a3452158d3027
+
+变化模块：\singlecycle_control
+  base hash: 699f7e8c0c131c8e
+  new  hash: d70a49ca83311f63
+
+========================================================================
+变化模块数量：12
+  $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  \alu
+  \alu_control
+  \control_transfer
+  \data_memory_interface
+  \immediate_generator
+  \regfile
+  \singlecycle_control

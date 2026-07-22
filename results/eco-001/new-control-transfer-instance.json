@@ -1,0 +1,24 @@
+{
+  "connections": {
+    "inst_funct3": [
+      9,
+      10,
+      11
+    ],
+    "result_equal_zero": [
+      19
+    ],
+    "take_branch": [
+      38
+    ]
+  },
+  "instance": "control_transfer",
+  "parameters": {},
+  "parent": "singlecycle_ctlpath",
+  "port_directions": {
+    "inst_funct3": "input",
+    "result_equal_zero": "input",
+    "take_branch": "output"
+  },
+  "type": "control_transfer"
+}

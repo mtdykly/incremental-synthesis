@@ -1,0 +1,19 @@
+
+变化模块：\control_transfer
+  base hash: 42c823379d9a3e24
+  new  hash: 490248df88e9be1d
+--- base/\control_transfer
++++ new/\control_transfer
+@@ -81,7 +81,7 @@
+     connect \Y \take_branch
+     connect \S { $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP $procmux$286_CMP $procmux$285_CMP $procmux$284_CMP }
+     connect \B { $logic_not$<SRC>/core/common/control_transfer.sv:17$24_Y \result_equal_zero $logic_not$<SRC>/core/common/control_transfer.sv:19$25_Y \result_equal_zero $logic_not$<SRC>/core/common/control_transfer.sv:21$26_Y \result_equal_zero }
+-    connect \A 1'x
++    connect \A 1'0
+   end
+   cell $logic_not $logic_not$<SRC>/core/common/control_transfer.sv:21$26
+     parameter \Y_WIDTH 1
+
+========================================================================
+变化模块数量：1
+  \control_transfer

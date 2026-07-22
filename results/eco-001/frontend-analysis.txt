@@ -1,0 +1,195 @@
+模块级比较
+========================================================================
+
+变化模块：$paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  cell 总数：1 -> 1
+  新增 cell：1
+  删除 cell：1
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120    [$add]
+
+  删除 cell 名称：
+    $add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/adder.sv:17$120    [$add]
+
+变化模块：alu
+  cell 总数：24 -> 24
+  新增 cell：12
+  删除 cell：12
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:28$4    [$add]
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:38$14    [$and]
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:23$2    [$logic_not]
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:33$9    [$eq]
+    $lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:34$10    [$lt]
+    $lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:35$11    [$lt]
+    $or$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:37$13    [$or]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:30$6    [$shl]
+    $shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:31$7    [$shr]
+    $sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:32$8    [$sshr]
+    $sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5    [$sub]
+    $xor$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:36$12    [$xor]
+
+  删除 cell 名称：
+    $add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:28$4    [$add]
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:38$14    [$and]
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:23$2    [$logic_not]
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:33$9    [$eq]
+    $lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:34$10    [$lt]
+    $lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:35$11    [$lt]
+    $or$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:37$13    [$or]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:30$6    [$shl]
+    $shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:31$7    [$shr]
+    $sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:32$8    [$sshr]
+    $sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:29$5    [$sub]
+    $xor$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu.sv:36$12    [$xor]
+
+变化模块：alu_control
+  cell 总数：21 -> 21
+  新增 cell：2
+  删除 cell：2
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu_control.sv:42$18    [$eq]
+    $logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu_control.sv:42$19    [$logic_and]
+
+  删除 cell 名称：
+    $eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu_control.sv:42$18    [$eq]
+    $logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu_control.sv:42$19    [$logic_and]
+
+变化模块：control_transfer
+  cell 总数：10 -> 10
+  新增 cell：3
+  删除 cell：3
+  修改 cell：1
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24    [$logic_not]
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25    [$logic_not]
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26    [$logic_not]
+
+  删除 cell 名称：
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/control_transfer.sv:17$24    [$logic_not]
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/control_transfer.sv:19$25    [$logic_not]
+    $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/control_transfer.sv:21$26    [$logic_not]
+
+  修改 cell 详情：
+
+    修改 cell：$procmux$283
+      type: $pmux -> $pmux
+      port A: ['x'] -> ['0']
+
+变化模块：data_memory_interface
+  cell 总数：19 -> 19
+  新增 cell：11
+  删除 cell：11
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38    [$and]
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40    [$and]
+    $mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:32$27    [$mul]
+    $mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$34    [$mul]
+    $not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$37    [$not]
+    $not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$39    [$not]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:32$28    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:38$30    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:39$31    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:40$32    [$shl]
+    $shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35    [$shr]
+
+  删除 cell 名称：
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:53$38    [$and]
+    $and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:54$40    [$and]
+    $mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:32$27    [$mul]
+    $mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:47$34    [$mul]
+    $not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:53$37    [$not]
+    $not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:54$39    [$not]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:32$28    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:38$30    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:39$31    [$shl]
+    $shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:40$32    [$shl]
+    $shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/data_memory_interface.sv:47$35    [$shr]
+
+变化模块：regfile
+  cell 总数：14 -> 14
+  新增 cell：4
+  删除 cell：4
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $meminit$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:28$84    [$meminit_v2]
+    $memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:24$71    [$memrd]
+    $memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:25$72    [$memrd]
+    $ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80    [$reduce_bool]
+
+  删除 cell 名称：
+    $meminit$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/regfile.sv:28$84    [$meminit_v2]
+    $memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/regfile.sv:24$71    [$memrd]
+    $memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/regfile.sv:25$72    [$memrd]
+    $ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/regfile.sv:33$80    [$reduce_bool]
+
+变化模块：singlecycle_control
+  cell 总数：86 -> 86
+  新增 cell：1
+  删除 cell：1
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/singlecycle/singlecycle_control.sv:25$90    [$mux]
+
+  删除 cell 名称：
+    $ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/singlecycle/singlecycle_control.sv:25$90    [$mux]
+
+========================================================================
+变化模块数量：7
+  $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  alu
+  alu_control
+  control_transfer
+  data_memory_interface
+  regfile
+  singlecycle_control
+
+  模块 control_transfer 的下游传播锥
+    起始变化 cell 数量：4
+    最大追踪深度：8
+    下游传播锥 cell 数量：4
+    模块总 cell 数量：10
+    传播锥占模块比例：40.00%
+
+    深度 0：4 个 cell
+      $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24    [$logic_not]
+      $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25    [$logic_not]
+      $logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26    [$logic_not]
+      $procmux$283    [$pmux]
+
+  传播锥到达的模块输出：
+    take_branch
+
+  已输出传播锥 DOT 文件：results/eco-001/frontend-cone.dot

@@ -1,0 +1,189 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `scripts/find_control_transfer_counterexample.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \control_transfer
+
+2.2. Analyzing design hierarchy..
+Top module:  \control_transfer
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+Renaming module \control_transfer to \gold.
+
+3. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \control_transfer
+
+4.2. Analyzing design hierarchy..
+Top module:  \control_transfer
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+Renaming module \control_transfer to \gate.
+
+5. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: take_branch_gold (\take_branch_gold), take_branch_gate (\take_branch_gate) -> take_branch
+Presumably equivalent wires: inst_funct3_gold (\inst_funct3_gold), inst_funct3_gate (\inst_funct3_gate) -> inst_funct3
+Presumably equivalent wires: result_equal_zero_gold (\result_equal_zero_gold), result_equal_zero_gate (\result_equal_zero_gate) -> result_equal_zero
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+6.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+7. Executing EQUIV_SIMPLE pass.
+Found 1 unproven $equiv cells (1 groups) in equiv:
+  Trying to prove $equiv for \take_branch:ezsat
+ failed.
+Proved 0 previously unproven $equiv cells.
+
+8. Executing EQUIV_MITER pass.
+Creating miter miter from module equiv.
+Seed $equiv cell: $auto$equiv_make.cc:258:find_same_wires$11046
+Gold cone: 4 cells (0 leaves).
+Gate cone: 4 cells (0 leaves).
+Selected 7 miter cells.
+Selected 9 miter wires.
+Created miter input port inst_funct3.
+Created miter input port result_equal_zero.
+Created miter output port take_branch.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \miter
+
+9.2. Analyzing design hierarchy..
+Top module:  \miter
+Removing unused module `\equiv'.
+Removed 1 unused modules.
+
+10. Executing FLATTEN pass (flatten design).
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+12. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up SAT problem:
+Import set-constraint: \trigger = 1'1
+Final constraint equation: \trigger = 1'1
+Import def constraint for this timestep: \result_equal_zero
+Import def constraint for this timestep: \inst_funct3
+Imported 10 cells to SAT database.
+Import show expression: \trigger
+Import show expression: \inst_funct3
+Import show expression: \result_equal_zero
+Import show expression: \cmp_take_branch
+Import show expression: \trigger
+Import show expression: \take_branch
+
+Solving problem with 175 variables and 442 clauses..
+SAT solving finished - model found:
+
+  Signal Name                     Dec       Hex           Bin
+  ----------------------- ----------- --------- -------------
+  \cmp_take_branch                  0         0             0
+  \inst_funct3                      2         2           010
+  \result_equal_zero                1         1             1
+  \take_branch                      1         1             1
+  \trigger                          1         1             1
+Dumping SAT model to VCD file results/eco-001/control-transfer-counterexample.vcd
+
+End of script. Logfile hash: d1bd226ca8, time: 0.26s, user: 0.24s, system: 0.04s, MEM: 70.32 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 95% 4x read_json (0 sec), 1% 1x id_gc (0 sec), ...

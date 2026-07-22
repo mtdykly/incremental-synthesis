@@ -1,0 +1,32 @@
+# 读取 base 门级设计
+read_json results/eco-001/canonical-base/synth.json
+hierarchy -check -top regfile
+flatten
+opt_clean
+rename regfile gold
+design -stash gold_design
+
+# 读取 new 门级设计
+read_json results/eco-001/canonical-new/synth.json
+hierarchy -check -top regfile
+flatten
+opt_clean
+rename regfile gate
+design -stash gate_design
+
+# 把两个版本复制到同一个工作设计
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+# 构建等价检查电路
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+# 先做简单等价证明
+equiv_simple
+
+# regfile 含有时序逻辑，再尝试归纳证明
+equiv_induct -seq 10
+
+# 若仍有未证明项则报错
+equiv_status -assert

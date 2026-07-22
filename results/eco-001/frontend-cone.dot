@@ -1,0 +1,10 @@
+digraph eco_cone {
+  rankdir=LR;
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24\\n$logic_not", shape=box];
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25\\n$logic_not", shape=box];
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26\\n$logic_not", shape=box];
+  "$procmux$283" [label="$procmux$283\\n$pmux", shape=box];
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24" -> "$procmux$283" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:17$24_Y"];
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25" -> "$procmux$283" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:19$25_Y"];
+  "$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26" -> "$procmux$283" [label="$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:21$26_Y"];
+}

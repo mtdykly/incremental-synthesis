@@ -1,0 +1,45 @@
+{
+  "connections": {
+    "A": [
+      4
+    ],
+    "B": [
+      5
+    ],
+    "Y": [
+      7
+    ]
+  },
+  "name": "$abc$14862$auto$blifparse.cc:397:parse_blif$14863",
+  "type": "$_ANDNOT_"
+}
+{
+  "connections": {
+    "A": [
+      3
+    ],
+    "B": [
+      7
+    ],
+    "Y": [
+      8
+    ]
+  },
+  "name": "$abc$14862$auto$blifparse.cc:397:parse_blif$14864",
+  "type": "$_OR_"
+}
+{
+  "connections": {
+    "A": [
+      2
+    ],
+    "B": [
+      8
+    ],
+    "Y": [
+      6
+    ]
+  },
+  "name": "$abc$14862$auto$blifparse.cc:397:parse_blif$14865",
+  "type": "$_XNOR_"
+}

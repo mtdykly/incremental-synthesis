@@ -1,0 +1,8 @@
+digraph eco_cone {
+  rankdir=LR;
+  "$abc$14925$auto$blifparse.cc:397:parse_blif$14926" [label="$abc$14925$auto$blifparse.cc:397:parse_blif$14926\\n$_ORNOT_", shape=box];
+  "$abc$14925$auto$blifparse.cc:397:parse_blif$14927" [label="$abc$14925$auto$blifparse.cc:397:parse_blif$14927\\n$_XNOR_", shape=box];
+  "$abc$14925$auto$blifparse.cc:397:parse_blif$14928" [label="$abc$14925$auto$blifparse.cc:397:parse_blif$14928\\n$_AND_", shape=box];
+  "$abc$14925$auto$blifparse.cc:397:parse_blif$14926" -> "$abc$14925$auto$blifparse.cc:397:parse_blif$14928" [label="$abc$14925$new_n6"];
+  "$abc$14925$auto$blifparse.cc:397:parse_blif$14927" -> "$abc$14925$auto$blifparse.cc:397:parse_blif$14928" [label="$abc$14925$new_n7"];
+}

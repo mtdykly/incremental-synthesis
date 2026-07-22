@@ -1,0 +1,8 @@
+
+变化模块：\control_transfer
+  base hash: 8abc622f2c480fc8
+  new  hash: c563e11ac573fed0
+
+========================================================================
+变化模块数量：1
+  \control_transfer

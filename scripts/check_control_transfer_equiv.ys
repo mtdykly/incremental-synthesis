@@ -1,0 +1,46 @@
+# ============================================================
+# 读取 base 综合结果
+# ============================================================
+
+read_json results/eco-001/canonical-base/synth.json
+
+hierarchy -check -top control_transfer
+rename control_transfer gold
+
+design -stash gold_design
+
+
+# ============================================================
+# 读取 new 综合结果
+# ============================================================
+
+design -reset
+
+read_json results/eco-001/canonical-new/synth.json
+
+hierarchy -check -top control_transfer
+rename control_transfer gate
+
+design -stash gate_design
+
+
+# ============================================================
+# 将两个版本放入同一个设计
+# ============================================================
+
+design -reset
+
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+
+# ============================================================
+# 构造并执行等价验证
+# ============================================================
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+equiv_simple
+
+equiv_status -assert

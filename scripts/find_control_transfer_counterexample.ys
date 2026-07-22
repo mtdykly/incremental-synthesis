@@ -1,0 +1,43 @@
+# ============================================================
+# 读取 base 综合结果
+# ============================================================
+
+read_json results/eco-001/canonical-base/synth.json
+hierarchy -check -top control_transfer
+rename control_transfer gold
+design -stash gold_design
+
+# ============================================================
+# 读取 new 综合结果
+# ============================================================
+
+design -reset
+
+read_json results/eco-001/canonical-new/synth.json
+hierarchy -check -top control_transfer
+rename control_transfer gate
+design -stash gate_design
+
+# ============================================================
+# 放到同一个设计中
+# ============================================================
+
+design -reset
+
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+# 尝试证明，保留未证明的 take_branch
+equiv_simple
+
+# 从未证明的 $equiv 创建 miter
+equiv_miter -trigger -cmp miter
+
+hierarchy -check -top miter
+flatten
+opt_clean
+
+sat -set trigger 1 -set-def-inputs -show-inputs -show-outputs -show trigger -dump_vcd results/eco-001/control-transfer-counterexample.vcd miter
