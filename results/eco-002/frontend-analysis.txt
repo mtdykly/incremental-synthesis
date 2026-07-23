@@ -1,0 +1,1308 @@
+
+变化模块：$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  base hash: a250dbcc81ee8598
+  new  hash: 08738b6bc7096517
+--- base/$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
++++ new/$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+@@ -12,20 +12,53 @@
+   wire width 32 \input_array[1]
+   wire width 32 \input_array[0]
+   wire width 256 input 1 \in_bus
++  wire $procmux$266_CMP
++  wire $procmux$265_CMP
++  wire $procmux$264_CMP
+   wire $procmux$263_CMP
+   wire $procmux$262_CMP
+   wire $procmux$261_CMP
+   wire $procmux$260_CMP
+   wire $procmux$259_CMP
+-  wire $procmux$258_CMP
+-  wire $procmux$257_CMP
+-  wire $procmux$256_CMP
+   attribute \full_case 1
+-  cell $logic_not $procmux$263_CMP0
++  cell $logic_not $procmux$266_CMP0
+     parameter \Y_WIDTH 1
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
++    connect \Y $procmux$266_CMP
++    connect \A \sel
++  end
++  attribute \full_case 1
++  cell $eq $procmux$265_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$265_CMP
++    connect \B 3'001
++    connect \A \sel
++  end
++  attribute \full_case 1
++  cell $eq $procmux$264_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$264_CMP
++    connect \B 3'010
++    connect \A \sel
++  end
++  attribute \full_case 1
++  cell $eq $procmux$263_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
+     connect \Y $procmux$263_CMP
++    connect \B 3'011
+     connect \A \sel
+   end
+   attribute \full_case 1
+@@ -36,7 +69,7 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$262_CMP
+-    connect \B 3'001
++    connect \B 3'100
+     connect \A \sel
+   end
+   attribute \full_case 1
+@@ -47,7 +80,7 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$261_CMP
+-    connect \B 3'010
++    connect \B 3'101
+     connect \A \sel
+   end
+   attribute \full_case 1
+@@ -58,7 +91,7 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$260_CMP
+-    connect \B 3'011
++    connect \B 3'110
+     connect \A \sel
+   end
+   attribute \full_case 1
+@@ -69,48 +102,15 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$259_CMP
+-    connect \B 3'100
+-    connect \A \sel
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$258_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$258_CMP
+-    connect \B 3'101
+-    connect \A \sel
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$257_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$257_CMP
+-    connect \B 3'110
+-    connect \A \sel
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$256_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$256_CMP
+     connect \B 3'111
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$255
++  cell $pmux $procmux$258
+     parameter \WIDTH 32
+     parameter \S_WIDTH 8
+     connect \Y \out
+-    connect \S { $procmux$263_CMP $procmux$262_CMP $procmux$261_CMP $procmux$260_CMP $procmux$259_CMP $procmux$258_CMP $procmux$257_CMP $procmux$256_CMP }
++    connect \S { $procmux$266_CMP $procmux$265_CMP $procmux$264_CMP $procmux$263_CMP $procmux$262_CMP $procmux$261_CMP $procmux$260_CMP $procmux$259_CMP }
+     connect \B \in_bus
+     connect \A 32'x
+   end
+
+变化模块：$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  base hash: f7be7a6849dfd0c3
+  new  hash: 3590d0d18729f8aa
+--- base/$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
++++ new/$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+@@ -7,21 +7,21 @@
+   wire width 32 \input_array[1]
+   wire width 32 \input_array[0]
+   wire width 64 input 1 \in_bus
+-  wire $procmux$271_CMP
++  wire $procmux$274_CMP
+   attribute \full_case 1
+-  cell $not $procmux$271_CMP0
++  cell $not $procmux$274_CMP0
+     parameter \Y_WIDTH 1
+     parameter \A_WIDTH 1
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$271_CMP
++    connect \Y $procmux$274_CMP
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$269
++  cell $pmux $procmux$272
+     parameter \WIDTH 32
+     parameter \S_WIDTH 2
+     connect \Y \out
+-    connect \S { $procmux$271_CMP \sel }
++    connect \S { $procmux$274_CMP \sel }
+     connect \B \in_bus
+     connect \A 32'x
+   end
+
+变化模块：$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  base hash: 57b4e9b71daa1448
+  new  hash: 08bad3957f2b4bbf
+--- base/$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
++++ new/$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+@@ -8,57 +8,57 @@
+   wire width 32 \input_array[1]
+   wire width 32 \input_array[0]
+   wire width 128 input 1 \in_bus
++  wire $procmux$271_CMP
++  wire $procmux$270_CMP
++  wire $procmux$269_CMP
+   wire $procmux$268_CMP
+-  wire $procmux$267_CMP
+-  wire $procmux$266_CMP
+-  wire $procmux$265_CMP
+   attribute \full_case 1
+-  cell $logic_not $procmux$268_CMP0
++  cell $logic_not $procmux$271_CMP0
+     parameter \Y_WIDTH 1
+     parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$268_CMP
++    connect \Y $procmux$271_CMP
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$267_CMP0
++  cell $eq $procmux$270_CMP0
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 2
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$267_CMP
++    connect \Y $procmux$270_CMP
+     connect \B 2'01
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$266_CMP0
++  cell $eq $procmux$269_CMP0
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 2
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$266_CMP
++    connect \Y $procmux$269_CMP
+     connect \B 2'10
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$265_CMP0
++  cell $eq $procmux$268_CMP0
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 2
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$265_CMP
++    connect \Y $procmux$268_CMP
+     connect \B 2'11
+     connect \A \sel
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$264
++  cell $pmux $procmux$267
+     parameter \WIDTH 32
+     parameter \S_WIDTH 4
+     connect \Y \out
+-    connect \S { $procmux$268_CMP $procmux$267_CMP $procmux$266_CMP $procmux$265_CMP }
++    connect \S { $procmux$271_CMP $procmux$270_CMP $procmux$269_CMP $procmux$268_CMP }
+     connect \B \in_bus
+     connect \A 32'x
+   end
+
+变化模块：$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  base hash: f4c70f2a882956b5
+  new  hash: cc45185330274da1
+--- base/$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
++++ new/$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+@@ -7,24 +7,30 @@
+   wire input 2 \reset
+   wire width 32 input 4 \next
+   wire input 1 \clock
++  wire width 32 $procmux$246_Y
+   wire width 32 $0\value[31:0]
++  attribute \full_case 1
++  cell $mux $procmux$249
++    parameter \WIDTH 32
++    connect \Y $0\value[31:0]
++    connect \S \reset
++    connect \B 4194304
++    connect \A $procmux$246_Y
++  end
+   cell $mux $procmux$246
+     parameter \WIDTH 32
+-    connect \Y $0\value[31:0]
++    connect \Y $procmux$246_Y
+     connect \S \write_enable
+     connect \B \next
+     connect \A \value
+   end
+   attribute \always_ff 1
+-  cell $adff $procdff$332
++  cell $dff $procdff$333
+     parameter \WIDTH 32
+     parameter \CLK_POLARITY 1'1
+-    parameter \ARST_VALUE 4194304
+-    parameter \ARST_POLARITY 1'1
+     connect \Q \value
+     connect \D $0\value[31:0]
+     connect \CLK \clock
+-    connect \ARST \reset
+   end
+ end
+ attribute \hdlname "multiplexer"
+
+变化模块：\alu
+  base hash: aef0434702335bcf
+  new  hash: 0d098382be81a38e
+--- base/\alu
++++ new/\alu
+@@ -9,6 +9,9 @@
+   wire width 32 signed $sshr$/__DESIGN_ROOT__/core/common/alu.sv:32$8_Y
+   wire width 32 signed $shr$/__DESIGN_ROOT__/core/common/alu.sv:31$7_Y
+   wire width 32 signed $shl$/__DESIGN_ROOT__/core/common/alu.sv:30$6_Y
++  wire $procmux$329_CMP
++  wire $procmux$328_CMP
++  wire $procmux$327_CMP
+   wire $procmux$326_CMP
+   wire $procmux$325_CMP
+   wire $procmux$324_CMP
+@@ -17,9 +20,6 @@
+   wire $procmux$321_CMP
+   wire $procmux$320_CMP
+   wire $procmux$319_CMP
+-  wire $procmux$318_CMP
+-  wire $procmux$317_CMP
+-  wire $procmux$316_CMP
+   wire width 32 signed $or$/__DESIGN_ROOT__/core/common/alu.sv:37$13_Y
+   wire $lt$/__DESIGN_ROOT__/core/common/alu.sv:35$11_Y
+   wire $lt$/__DESIGN_ROOT__/core/common/alu.sv:34$10_Y
+@@ -77,6 +77,39 @@
+     connect \A \operand_a
+   end
+   attribute \full_case 1
++  cell $eq $procmux$329_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 5
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 5
++    parameter \A_SIGNED 0
++    connect \Y $procmux$329_CMP
++    connect \B 5'00001
++    connect \A \alu_function
++  end
++  attribute \full_case 1
++  cell $eq $procmux$328_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 5
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 5
++    parameter \A_SIGNED 0
++    connect \Y $procmux$328_CMP
++    connect \B 5'00010
++    connect \A \alu_function
++  end
++  attribute \full_case 1
++  cell $eq $procmux$327_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 5
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 5
++    parameter \A_SIGNED 0
++    connect \Y $procmux$327_CMP
++    connect \B 5'00011
++    connect \A \alu_function
++  end
++  attribute \full_case 1
+   cell $eq $procmux$326_CMP0
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 5
+@@ -84,7 +117,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$326_CMP
+-    connect \B 5'00001
++    connect \B 5'00100
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -95,7 +128,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$325_CMP
+-    connect \B 5'00010
++    connect \B 5'00101
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -106,7 +139,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$324_CMP
+-    connect \B 5'00011
++    connect \B 5'00110
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -117,7 +150,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$323_CMP
+-    connect \B 5'00100
++    connect \B 5'00111
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -128,7 +161,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$322_CMP
+-    connect \B 5'00101
++    connect \B 5'01000
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -139,7 +172,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$321_CMP
+-    connect \B 5'00110
++    connect \B 5'01001
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -150,7 +183,7 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$320_CMP
+-    connect \B 5'00111
++    connect \B 5'01010
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+@@ -161,48 +194,15 @@
+     parameter \A_WIDTH 5
+     parameter \A_SIGNED 0
+     connect \Y $procmux$319_CMP
+-    connect \B 5'01000
+-    connect \A \alu_function
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$318_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 5
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 5
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$318_CMP
+-    connect \B 5'01001
+-    connect \A \alu_function
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$317_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 5
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 5
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$317_CMP
+-    connect \B 5'01010
+-    connect \A \alu_function
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$316_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 5
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 5
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$316_CMP
+     connect \B 5'01011
+     connect \A \alu_function
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$315
++  cell $pmux $procmux$318
+     parameter \WIDTH 32
+     parameter \S_WIDTH 11
+     connect \Y \result
+-    connect \S { $procmux$326_CMP $procmux$325_CMP $procmux$324_CMP $procmux$323_CMP $procmux$322_CMP $procmux$321_CMP $procmux$320_CMP $procmux$319_CMP $procmux$318_CMP $procmux$317_CMP $procmux$316_CMP }
++    connect \S { $procmux$329_CMP $procmux$328_CMP $procmux$327_CMP $procmux$326_CMP $procmux$325_CMP $procmux$324_CMP $procmux$323_CMP $procmux$322_CMP $procmux$321_CMP $procmux$320_CMP $procmux$319_CMP }
+     connect \B { $add$/__DESIGN_ROOT__/core/common/alu.sv:28$4_Y $sub$/__DESIGN_ROOT__/core/common/alu.sv:29$5_Y $shl$/__DESIGN_ROOT__/core/common/alu.sv:30$6_Y $shr$/__DESIGN_ROOT__/core/common/alu.sv:31$7_Y $sshr$/__DESIGN_ROOT__/core/common/alu.sv:32$8_Y 31'0000000000000000000000000000000 $eq$/__DESIGN_ROOT__/core/common/alu.sv:33$9_Y 31'0000000000000000000000000000000 $lt$/__DESIGN_ROOT__/core/common/alu.sv:34$10_Y 31'0000000000000000000000000000000 $lt$/__DESIGN_ROOT__/core/common/alu.sv:35$11_Y $xor$/__DESIGN_ROOT__/core/common/alu.sv:36$12_Y $or$/__DESIGN_ROOT__/core/common/alu.sv:37$13_Y $and$/__DESIGN_ROOT__/core/common/alu.sv:38$14_Y }
+     connect \A 0
+   end
+
+变化模块：\alu_control
+  base hash: d9d1ce8e27bc3d5a
+  new  hash: 395451bab51cf7c7
+--- base/\alu_control
++++ new/\alu_control
+@@ -8,74 +8,74 @@
+   wire width 5 \branch_funct
+   wire width 2 input 1 \alu_op_type
+   wire width 5 output 4 \alu_function
++  wire $procmux$316_CMP
++  wire $procmux$315_CMP
++  wire $procmux$314_CMP
+   wire $procmux$313_CMP
+-  wire $procmux$312_CMP
+-  wire $procmux$311_CMP
+-  wire $procmux$310_CMP
+-  wire $procmux$301_CMP
++  wire $procmux$304_CMP
++  wire $procmux$303_CMP
+   wire $procmux$300_CMP
++  wire $procmux$299_CMP
++  wire $procmux$298_CMP
+   wire $procmux$297_CMP
+   wire $procmux$296_CMP
+   wire $procmux$295_CMP
+-  wire $procmux$294_CMP
+-  wire $procmux$293_CMP
+-  wire $procmux$292_CMP
+   wire $logic_and$/__DESIGN_ROOT__/core/common/alu_control.sv:42$19_Y
+   wire $eq$/__DESIGN_ROOT__/core/common/alu_control.sv:42$18_Y
+   attribute \full_case 1
+   memory width 5 size 8 $auto$proc_rom.cc:155:do_switch$122
+   attribute \full_case 1
+-  cell $logic_not $procmux$313_CMP0
+-    parameter \Y_WIDTH 1
++  cell $logic_not $procmux$316_CMP0
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$316_CMP
++    connect \A \alu_op_type
++  end
++  attribute \full_case 1
++  cell $eq $procmux$315_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$315_CMP
++    connect \B 2'10
++    connect \A \alu_op_type
++  end
++  attribute \full_case 1
++  cell $eq $procmux$314_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$314_CMP
++    connect \B 2'11
++    connect \A \alu_op_type
++  end
++  attribute \full_case 1
++  cell $eq $procmux$313_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
+     parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+     connect \Y $procmux$313_CMP
+-    connect \A \alu_op_type
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$312_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$312_CMP
+-    connect \B 2'10
+-    connect \A \alu_op_type
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$311_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$311_CMP
+-    connect \B 2'11
+-    connect \A \alu_op_type
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$310_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$310_CMP
+     connect \B 2'01
+     connect \A \alu_op_type
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$309
++  cell $pmux $procmux$312
+     parameter \WIDTH 5
+     parameter \S_WIDTH 4
+     connect \Y \alu_function
+-    connect \S { $procmux$313_CMP $procmux$312_CMP $procmux$311_CMP $procmux$310_CMP }
++    connect \S { $procmux$316_CMP $procmux$315_CMP $procmux$314_CMP $procmux$313_CMP }
+     connect \B { 5'00001 \op_funct \op_imm_funct \branch_funct }
+     connect \A 5'x
+   end
+   attribute \full_case 1
+-  cell $mux $procmux$307
++  cell $mux $procmux$310
+     parameter \WIDTH 5
+     connect \Y \op_funct
+     connect \S \inst_funct7 [5]
+@@ -83,7 +83,7 @@
+     connect \A \default_funct
+   end
+   attribute \full_case 1
+-  cell $mux $procmux$304
++  cell $mux $procmux$307
+     parameter \WIDTH 5
+     connect \Y \op_imm_funct
+     connect \S $logic_and$/__DESIGN_ROOT__/core/common/alu_control.sv:42$19_Y
+@@ -91,39 +91,72 @@
+     connect \A \default_funct
+   end
+   attribute \full_case 1
+-  cell $logic_not $procmux$301_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$301_CMP
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$300_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$300_CMP
++  cell $logic_not $procmux$304_CMP0
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$304_CMP
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$303_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$303_CMP
+     connect \B 3'101
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$299
++  cell $pmux $procmux$302
+     parameter \WIDTH 5
+     parameter \S_WIDTH 2
+     connect \Y \secondary_funct
+-    connect \S { $procmux$301_CMP $procmux$300_CMP }
++    connect \S { $procmux$304_CMP $procmux$303_CMP }
+     connect \B 10'0001000101
+     connect \A 5'x
+   end
+   attribute \full_case 1
+-  cell $logic_not $procmux$297_CMP0
+-    parameter \Y_WIDTH 1
++  cell $logic_not $procmux$300_CMP0
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$300_CMP
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$299_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$299_CMP
++    connect \B 3'001
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$298_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$298_CMP
++    connect \B 3'100
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$297_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$297_CMP
++    connect \B 3'101
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+@@ -134,7 +167,7 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$296_CMP
+-    connect \B 3'001
++    connect \B 3'110
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+@@ -145,48 +178,15 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$295_CMP
+-    connect \B 3'100
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$294_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$294_CMP
+-    connect \B 3'101
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$293_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$293_CMP
+-    connect \B 3'110
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$292_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$292_CMP
+     connect \B 3'111
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$291
++  cell $pmux $procmux$294
+     parameter \WIDTH 5
+     parameter \S_WIDTH 6
+     connect \Y \branch_funct
+-    connect \S { $procmux$297_CMP $procmux$296_CMP $procmux$295_CMP $procmux$294_CMP $procmux$293_CMP $procmux$292_CMP }
++    connect \S { $procmux$300_CMP $procmux$299_CMP $procmux$298_CMP $procmux$297_CMP $procmux$296_CMP $procmux$295_CMP }
+     connect \B 30'001100011000111001110100001000
+     connect \A 5'x
+   end
+
+变化模块：\control_transfer
+  base hash: fb96e33c64de6dfe
+  new  hash: ab4a0b3911fbf310
+--- base/\control_transfer
++++ new/\control_transfer
+@@ -2,21 +2,54 @@
+   wire output 3 \take_branch
+   wire input 1 \result_equal_zero
+   wire width 3 input 2 \inst_funct3
++  wire $procmux$292_CMP
++  wire $procmux$291_CMP
++  wire $procmux$290_CMP
+   wire $procmux$289_CMP
+   wire $procmux$288_CMP
+   wire $procmux$287_CMP
+-  wire $procmux$286_CMP
+-  wire $procmux$285_CMP
+-  wire $procmux$284_CMP
+   wire $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:21$26_Y
+   wire $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:19$25_Y
+   wire $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:17$24_Y
+   attribute \full_case 1
+-  cell $logic_not $procmux$289_CMP0
++  cell $logic_not $procmux$292_CMP0
+     parameter \Y_WIDTH 1
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
++    connect \Y $procmux$292_CMP
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$291_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$291_CMP
++    connect \B 3'001
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$290_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
++    connect \Y $procmux$290_CMP
++    connect \B 3'100
++    connect \A \inst_funct3
++  end
++  attribute \full_case 1
++  cell $eq $procmux$289_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 3
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 3
++    parameter \A_SIGNED 0
+     connect \Y $procmux$289_CMP
++    connect \B 3'101
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+@@ -27,7 +60,7 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$288_CMP
+-    connect \B 3'001
++    connect \B 3'110
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+@@ -38,48 +71,15 @@
+     parameter \A_WIDTH 3
+     parameter \A_SIGNED 0
+     connect \Y $procmux$287_CMP
+-    connect \B 3'100
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$286_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$286_CMP
+-    connect \B 3'101
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$285_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$285_CMP
+-    connect \B 3'110
+-    connect \A \inst_funct3
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$284_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 3
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 3
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$284_CMP
+     connect \B 3'111
+     connect \A \inst_funct3
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$283
++  cell $pmux $procmux$286
+     parameter \WIDTH 1
+     parameter \S_WIDTH 6
+     connect \Y \take_branch
+-    connect \S { $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP $procmux$286_CMP $procmux$285_CMP $procmux$284_CMP }
++    connect \S { $procmux$292_CMP $procmux$291_CMP $procmux$290_CMP $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP }
+     connect \B { $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:17$24_Y \result_equal_zero $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:19$25_Y \result_equal_zero $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:21$26_Y \result_equal_zero }
+     connect \A 1'x
+   end
+
+变化模块：\data_memory_interface
+  base hash: 7692cd3125f49bd3
+  new  hash: 71c8a602db69f552
+--- base/\data_memory_interface
++++ new/\data_memory_interface
+@@ -17,12 +17,12 @@
+   wire width 4 $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:40$32_Y
+   wire width 4 $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:39$31_Y
+   wire width 4 $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:38$30_Y
+-  wire $procmux$281_CMP
+-  wire $procmux$280_CMP
++  wire $procmux$284_CMP
++  wire $procmux$283_CMP
++  wire $procmux$282_CMP
+   wire $procmux$279_CMP
+-  wire $procmux$276_CMP
+-  wire $procmux$275_CMP
+-  wire $procmux$274_CMP
++  wire $procmux$278_CMP
++  wire $procmux$277_CMP
+   wire $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$39_Y
+   wire $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$37_Y
+   wire width 32 $mul$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:47$34_Y
+@@ -80,80 +80,80 @@
+     connect \A \write_data
+   end
+   attribute \full_case 1
+-  cell $logic_not $procmux$281_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$281_CMP
+-    connect \A \data_format [1:0]
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$280_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$280_CMP
++  cell $logic_not $procmux$284_CMP0
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$284_CMP
++    connect \A \data_format [1:0]
++  end
++  attribute \full_case 1
++  cell $eq $procmux$283_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$283_CMP
+     connect \B 2'01
+     connect \A \data_format [1:0]
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$279_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$279_CMP
++  cell $eq $procmux$282_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$282_CMP
+     connect \B 2'10
+     connect \A \data_format [1:0]
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$278
++  cell $pmux $procmux$281
+     parameter \WIDTH 4
+     parameter \S_WIDTH 3
+     connect \Y \bus_byte_enable
+-    connect \S { $procmux$281_CMP $procmux$280_CMP $procmux$279_CMP }
++    connect \S { $procmux$284_CMP $procmux$283_CMP $procmux$282_CMP }
+     connect \B { $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:38$30_Y $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:39$31_Y $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:40$32_Y }
+     connect \A 4'0000
+   end
+   attribute \full_case 1
+-  cell $logic_not $procmux$276_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$276_CMP
+-    connect \A \data_format [1:0]
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$275_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$275_CMP
++  cell $logic_not $procmux$279_CMP0
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$279_CMP
++    connect \A \data_format [1:0]
++  end
++  attribute \full_case 1
++  cell $eq $procmux$278_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$278_CMP
+     connect \B 2'01
+     connect \A \data_format [1:0]
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$274_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 2
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$274_CMP
++  cell $eq $procmux$277_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 2
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$277_CMP
+     connect \B 2'10
+     connect \A \data_format [1:0]
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$273
++  cell $pmux $procmux$276
+     parameter \WIDTH 32
+     parameter \S_WIDTH 3
+     connect \Y \read_data
+-    connect \S { $procmux$276_CMP $procmux$275_CMP $procmux$274_CMP }
++    connect \S { $procmux$279_CMP $procmux$278_CMP $procmux$277_CMP }
+     connect \B { $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$38_Y \position_fix [7:0] $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$40_Y \position_fix [15:0] \position_fix }
+     connect \A 32'x
+   end
+
+变化模块：\immediate_generator
+  base hash: bd7634a3296f157d
+  new  hash: ba91f86b80cf2e02
+--- base/\immediate_generator
++++ new/\immediate_generator
+@@ -1,34 +1,105 @@
+ module \immediate_generator
+   wire width 32 input 1 \inst
+   wire width 32 output 2 \immediate
++  wire $procmux$257_CTRL
++  wire width 4 $procmux$257_CMP
++  wire $procmux$256_CTRL
++  wire width 2 $procmux$256_CMP
++  wire $procmux$255_CMP
+   wire $procmux$254_CTRL
+-  wire width 4 $procmux$254_CMP
+-  wire $procmux$253_CTRL
+-  wire width 2 $procmux$253_CMP
+-  wire $procmux$252_CMP
+-  wire $procmux$251_CTRL
+-  wire width 2 $procmux$251_CMP
+-  wire $procmux$250_CMP
++  wire width 2 $procmux$254_CMP
++  wire $procmux$253_CMP
+   attribute \full_case 1
+-  cell $eq $procmux$254_CMP3
++  cell $eq $procmux$257_CMP3
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 7
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 7
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$254_CMP [3]
++    connect \Y $procmux$257_CMP [3]
+     connect \B 7'1100111
+     connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+-  cell $eq $procmux$254_CMP2
++  cell $eq $procmux$257_CMP2
+     parameter \Y_WIDTH 1
+     parameter \B_WIDTH 7
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 7
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$254_CMP [2]
++    connect \Y $procmux$257_CMP [2]
+     connect \B 7'0010011
++    connect \A \inst [6:0]
++  end
++  attribute \full_case 1
++  cell $eq $procmux$257_CMP1
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 7
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 7
++    parameter \A_SIGNED 0
++    connect \Y $procmux$257_CMP [1]
++    connect \B 7'0000111
++    connect \A \inst [6:0]
++  end
++  attribute \full_case 1
++  cell $eq $procmux$257_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 7
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 7
++    parameter \A_SIGNED 0
++    connect \Y $procmux$257_CMP [0]
++    connect \B 7'0000011
++    connect \A \inst [6:0]
++  end
++  attribute \full_case 1
++  cell $reduce_or $procmux$257_ANY
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 4
++    parameter \A_SIGNED 0
++    connect \Y $procmux$257_CTRL
++    connect \A $procmux$257_CMP
++  end
++  attribute \full_case 1
++  cell $eq $procmux$256_CMP1
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 7
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 7
++    parameter \A_SIGNED 0
++    connect \Y $procmux$256_CMP [1]
++    connect \B 7'0100011
++    connect \A \inst [6:0]
++  end
++  attribute \full_case 1
++  cell $eq $procmux$256_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 7
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 7
++    parameter \A_SIGNED 0
++    connect \Y $procmux$256_CMP [0]
++    connect \B 7'0100111
++    connect \A \inst [6:0]
++  end
++  attribute \full_case 1
++  cell $reduce_or $procmux$256_ANY
++    parameter \Y_WIDTH 1
++    parameter \A_WIDTH 2
++    parameter \A_SIGNED 0
++    connect \Y $procmux$256_CTRL
++    connect \A $procmux$256_CMP
++  end
++  attribute \full_case 1
++  cell $eq $procmux$255_CMP0
++    parameter \Y_WIDTH 1
++    parameter \B_WIDTH 7
++    parameter \B_SIGNED 0
++    parameter \A_WIDTH 7
++    parameter \A_SIGNED 0
++    connect \Y $procmux$255_CMP
++    connect \B 7'1100011
+     connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+@@ -39,7 +110,7 @@
+     parameter \A_WIDTH 7
+     parameter \A_SIGNED 0
+     connect \Y $procmux$254_CMP [1]
+-    connect \B 7'0000111
++    connect \B 7'0110111
+     connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+@@ -50,27 +121,16 @@
+     parameter \A_WIDTH 7
+     parameter \A_SIGNED 0
+     connect \Y $procmux$254_CMP [0]
+-    connect \B 7'0000011
++    connect \B 7'0010111
+     connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+   cell $reduce_or $procmux$254_ANY
+     parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 4
++    parameter \A_WIDTH 2
+     parameter \A_SIGNED 0
+     connect \Y $procmux$254_CTRL
+     connect \A $procmux$254_CMP
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$253_CMP1
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 7
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 7
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$253_CMP [1]
+-    connect \B 7'0100011
+-    connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+   cell $eq $procmux$253_CMP0
+@@ -79,76 +139,16 @@
+     parameter \B_SIGNED 0
+     parameter \A_WIDTH 7
+     parameter \A_SIGNED 0
+-    connect \Y $procmux$253_CMP [0]
+-    connect \B 7'0100111
+-    connect \A \inst [6:0]
+-  end
+-  attribute \full_case 1
+-  cell $reduce_or $procmux$253_ANY
+-    parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$253_CTRL
+-    connect \A $procmux$253_CMP
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$252_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 7
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 7
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$252_CMP
+-    connect \B 7'1100011
+-    connect \A \inst [6:0]
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$251_CMP1
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 7
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 7
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$251_CMP [1]
+-    connect \B 7'0110111
+-    connect \A \inst [6:0]
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$251_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 7
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 7
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$251_CMP [0]
+-    connect \B 7'0010111
+-    connect \A \inst [6:0]
+-  end
+-  attribute \full_case 1
+-  cell $reduce_or $procmux$251_ANY
+-    parameter \Y_WIDTH 1
+-    parameter \A_WIDTH 2
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$251_CTRL
+-    connect \A $procmux$251_CMP
+-  end
+-  attribute \full_case 1
+-  cell $eq $procmux$250_CMP0
+-    parameter \Y_WIDTH 1
+-    parameter \B_WIDTH 7
+-    parameter \B_SIGNED 0
+-    parameter \A_WIDTH 7
+-    parameter \A_SIGNED 0
+-    connect \Y $procmux$250_CMP
++    connect \Y $procmux$253_CMP
+     connect \B 7'1101111
+     connect \A \inst [6:0]
+   end
+   attribute \full_case 1
+-  cell $pmux $procmux$249
++  cell $pmux $procmux$252
+     parameter \WIDTH 32
+     parameter \S_WIDTH 5
+     connect \Y \immediate
+-    connect \S { $procmux$254_CTRL $procmux$253_CTRL $procmux$252_CMP $procmux$251_CTRL $procmux$250_CMP }
++    connect \S { $procmux$257_CTRL $procmux$256_CTRL $procmux$255_CMP $procmux$254_CTRL $procmux$253_CMP }
+     connect \B { \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31:20] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31:25] \inst [11:7] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [7] \inst [30:25] \inst [11:8] 1'0 \inst [31:12] 12'000000000000 \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [31] \inst [19:12] \inst [20] \inst [30:21] 1'0 }
+     connect \A 0
+   end
+
+变化模块：\regfile
+  base hash: c0ea5e71351c7560
+  new  hash: 842dc9f3cdf15050
+--- base/\regfile
++++ new/\regfile
+@@ -131,7 +131,7 @@
+     connect \DATA 0
+     connect \ADDR 0
+   end
+-  cell $memwr_v2 $auto$proc_memwr.cc:45:proc_memwr$333
++  cell $memwr_v2 $auto$proc_memwr.cc:45:proc_memwr$334
+     parameter \WIDTH 32
+     parameter \PRIORITY_MASK 0'x
+     parameter \PORTID 0
+
+========================================================================
+变化模块数量：10
+  $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  \alu
+  \alu_control
+  \control_transfer
+  \data_memory_interface
+  \immediate_generator
+  \regfile

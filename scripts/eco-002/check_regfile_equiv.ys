@@ -1,0 +1,54 @@
+# ============================================================
+# base
+# ============================================================
+
+read_json results/eco-002/normalized/base/synth.json
+
+hierarchy -check -top regfile
+flatten
+opt_clean
+
+rename -top gold
+design -stash gold_design
+
+
+# ============================================================
+# new
+# ============================================================
+
+design -reset
+
+read_json results/eco-002/normalized/new/synth.json
+
+hierarchy -check -top regfile
+flatten
+opt_clean
+
+rename -top gate
+design -stash gate_design
+
+
+# ============================================================
+# 合并设计
+# ============================================================
+
+design -reset
+
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+
+# ============================================================
+# 时序等价验证
+# ============================================================
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+# 先证明容易匹配的组合逻辑和状态点
+equiv_simple
+
+# 对剩余时序检查点做归纳证明
+equiv_induct -seq 10
+
+equiv_status -assert

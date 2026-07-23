@@ -1,0 +1,47 @@
+# ============================================================
+# base register
+# ============================================================
+
+read_json results/eco-002/normalized/base/synth.json
+
+hierarchy -check -top $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+flatten
+opt_clean
+
+rename -top gold
+design -stash gold_design
+
+
+# ============================================================
+# new register
+# ============================================================
+
+design -reset
+
+read_json results/eco-002/normalized/new/synth.json
+
+hierarchy -check -top $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+flatten
+opt_clean
+
+rename -top gate
+design -stash gate_design
+
+
+# ============================================================
+# combine and check
+# ============================================================
+
+design -reset
+
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+equiv_simple
+equiv_induct -seq 4
+
+# 此处不加 -assert
+equiv_status

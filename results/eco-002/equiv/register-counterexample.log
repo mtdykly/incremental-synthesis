@@ -1,0 +1,8 @@
+VCD info: dumpfile results/eco-002/equiv/register_non_equiv.vcd opened for output.
+reset asserted between clocks: gold=00400000 gate=12345678
+COUNTEREXAMPLE FOUND
+base async reset changed immediately
+new sync reset waited for the next clock edge
+after next posedge: gold=00400000 gate=00400000
+REGISTER NON-EQUIVALENCE WITNESS PASSED
+experiments/eco-002/register_non_equiv_tb.sv:111: $finish called at 16000 (1ps)

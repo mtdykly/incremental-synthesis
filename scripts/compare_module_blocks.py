@@ -1,3 +1,4 @@
+# 判断模块结构是否变化
 #!/usr/bin/env python3
 
 import argparse
@@ -6,6 +7,41 @@ import hashlib
 import re
 from pathlib import Path
 
+def normalize_verilog_attribute(line: str) -> str:
+    """
+    删除 Verilog 属性中的 src 字段，保留其他属性。
+    """
+    match = re.match(
+        r'^(\s*)\(\*\s*(.*?)\s*\*\)(.*)$',
+        line,
+    )
+
+    if not match:
+        return line
+
+    indentation = match.group(1)
+    attribute_body = match.group(2)
+    remainder = match.group(3)
+
+    attributes = [
+        item.strip()
+        for item in attribute_body.split(",")
+    ]
+
+    attributes = [
+        item
+        for item in attributes
+        if not re.match(r"^src\s*=", item)
+    ]
+
+    if not attributes:
+        return remainder.lstrip()
+
+    return (
+        f"{indentation}(* "
+        + ", ".join(attributes)
+        + f" *){remainder}"
+    )
 
 def normalize_block(lines: list[str], kind: str) -> str:
     result: list[str] = []
@@ -13,12 +49,17 @@ def normalize_block(lines: list[str], kind: str) -> str:
     for line in lines:
         line = line.rstrip()
 
-        # RTLIL 中的源码位置不属于电路结构
         if kind == "rtlil" and re.match(
             r"^\s*attribute\s+\\src\s+",
             line,
         ):
             continue
+
+        if kind == "verilog":
+            line = normalize_verilog_attribute(line)
+
+            if not line.strip():
+                continue
 
         result.append(line)
 

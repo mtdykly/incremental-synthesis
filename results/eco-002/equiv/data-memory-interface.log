@@ -1,0 +1,366 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `scripts/eco-002/check_data_memory_interface_equiv.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+2.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+Renaming module data_memory_interface to gold.
+
+5. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+6.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+
+7. Executing FLATTEN pass (flatten design).
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+Renaming module data_memory_interface to gate.
+
+9. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: write_enable_gold (\write_enable_gold), write_enable_gate (\write_enable_gate) -> write_enable
+Presumably equivalent wires: write_data_gold (\write_data_gold), write_data_gate (\write_data_gate) -> write_data
+Presumably equivalent wires: read_enable_gold (\read_enable_gold), read_enable_gate (\read_enable_gate) -> read_enable
+Presumably equivalent wires: read_data_gold (\read_data_gold), read_data_gate (\read_data_gate) -> read_data
+Presumably equivalent wires: data_format_gold (\data_format_gold), data_format_gate (\data_format_gate) -> data_format
+Presumably equivalent wires: clock_gold (\clock_gold), clock_gate (\clock_gate) -> clock
+Presumably equivalent wires: bus_write_enable_gold (\write_enable_gold), bus_write_enable_gate (\write_enable_gate) -> bus_write_enable
+Presumably equivalent wires: bus_write_data_gold (\bus_write_data_gold), bus_write_data_gate (\bus_write_data_gate) -> bus_write_data
+Presumably equivalent wires: bus_read_enable_gold (\read_enable_gold), bus_read_enable_gate (\read_enable_gate) -> bus_read_enable
+Presumably equivalent wires: bus_read_data_gold (\bus_read_data_gold), bus_read_data_gate (\bus_read_data_gate) -> bus_read_data
+Presumably equivalent wires: bus_byte_enable_gold (\bus_byte_enable_gold), bus_byte_enable_gate (\bus_byte_enable_gate) -> bus_byte_enable
+Presumably equivalent wires: bus_address_gold (\address_gold), bus_address_gate (\address_gate) -> bus_address
+Presumably equivalent wires: address_gold (\address_gold), address_gate (\address_gate) -> address
+Changing input A of cell $abc$14868$auto$blifparse.cc:397:parse_blif$14880_gate ($_NAND_): \read_data_gate [7] -> \read_data [7]
+Changing input A of cell $abc$14866$auto$blifparse.cc:397:parse_blif$14878_gold ($_NAND_): \read_data_gold [7] -> \read_data [7]
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+10.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+10.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+11. Executing EQUIV_SIMPLE pass.
+Found 102 unproven $equiv cells (6 groups) in equiv:
+ Grouping SAT models for \bus_address:
+  Trying to prove $equiv for \bus_address [0]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [1]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [2]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [3]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [4]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [5]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [6]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [7]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [8]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [9]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [10]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [11]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [12]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [13]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [14]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [15]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [16]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [17]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [18]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [19]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [20]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [21]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [22]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [23]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [24]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [25]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [26]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [27]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [28]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [29]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [30]:ezsat
+ success!
+  Trying to prove $equiv for \bus_address [31]:ezsat
+ success!
+ Grouping SAT models for \bus_byte_enable:
+  Trying to prove $equiv for \bus_byte_enable [0]:ezsat
+ success!
+  Trying to prove $equiv for \bus_byte_enable [1]:ezsat
+ success!
+  Trying to prove $equiv for \bus_byte_enable [2]:ezsat
+ success!
+  Trying to prove $equiv for \bus_byte_enable [3]:ezsat
+ success!
+  Trying to prove $equiv for \bus_read_enable:ezsat
+ success!
+ Grouping SAT models for \bus_write_data:
+  Trying to prove $equiv for \bus_write_data [0]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [1]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [2]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [3]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [4]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [5]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [6]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [7]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [8]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [9]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [10]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [11]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [12]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [13]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [14]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [15]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [16]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [17]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [18]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [19]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [20]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [21]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [22]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [23]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [24]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [25]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [26]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [27]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [28]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [29]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [30]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_data [31]:ezsat
+ success!
+  Trying to prove $equiv for \bus_write_enable:ezsat
+ success!
+ Grouping SAT models for \read_data:
+  Trying to prove $equiv for \read_data [0]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [1]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [2]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [3]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [4]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [5]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [6]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [7]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [8]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [9]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [10]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [11]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [12]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [13]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [14]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [15]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [16]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [17]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [18]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [19]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [20]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [21]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [22]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [23]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [24]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [25]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [26]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [27]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [28]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [29]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [30]:ezsat
+ success!
+  Trying to prove $equiv for \read_data [31]:ezsat
+ success!
+Proved 102 previously unproven $equiv cells.
+
+12. Executing EQUIV_STATUS pass.
+Found 102 $equiv cells in equiv:
+  Of those cells 102 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+End of script. Logfile hash: 7395236bf3, time: 0.28s, user: 0.25s, system: 0.06s, MEM: 69.48 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 90% 4x read_json (0 sec), 5% 1x equiv_simple (0 sec), ...

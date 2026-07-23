@@ -1,0 +1,41 @@
+# ============================================================
+# base register
+# ============================================================
+
+read_json results/eco-002/normalized/base/synth.json
+
+hierarchy -check -top $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+
+flatten
+opt_clean
+
+rename -top register_gold
+design -stash gold_design
+
+
+# ============================================================
+# new register
+# ============================================================
+
+design -reset
+
+read_json results/eco-002/normalized/new/synth.json
+
+hierarchy -check -top $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+flatten
+opt_clean
+
+rename -top register_gate
+design -stash gate_design
+
+
+# ============================================================
+# 合并并导出门级 Verilog
+# ============================================================
+
+design -reset
+
+design -copy-from gold_design register_gold
+design -copy-from gate_design register_gate
+
+write_verilog -noattr -noexpr results/eco-002/equiv/register_pair.v

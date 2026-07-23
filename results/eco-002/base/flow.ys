@@ -1,0 +1,46 @@
+read_verilog -sv -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/singlecycle -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/synth /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/adder.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/alu.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/alu_control.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/constants.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/control_transfer.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/data_memory_interface.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/example_data_memory_bus.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/example_memory_bus.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/example_text_memory_bus.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/immediate_generator.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/instruction_decoder.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/multiplexer.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/multiplexer2.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/multiplexer4.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/multiplexer8.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/regfile.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/common/register.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/singlecycle/riscv_core.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/singlecycle/singlecycle_control.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/singlecycle/singlecycle_ctlpath.sv /workspace/incremental-synthesis/benchmarks/riscv-eco-002-base/core/singlecycle/singlecycle_datapath.sv
+
+# ============================================================
+# 第一阶段：RTL 前端处理
+# ============================================================
+
+# 确定顶层模块，并删除顶层不可达模块
+hierarchy -check -top riscv_core
+
+# 将 always、case、if 等过程结构转换为内部 cell 和连接
+proc
+
+# 删除简单的无效逻辑和未使用对象
+opt_clean
+
+# 检查当前设计
+check
+
+# 将前端处理后的设计写出
+write_json /workspace/incremental-synthesis/results/eco-002/base/frontend.json
+write_rtlil /workspace/incremental-synthesis/results/eco-002/base/frontend.rtlil
+
+# 将当前统计信息写入 yosys.log
+stat -top riscv_core
+
+# ============================================================
+# 第二阶段：完整逻辑综合
+# ============================================================
+
+synth -top riscv_core
+
+# 清理综合后无用的 cell 和 wire
+opt_clean -purge
+
+# 检查综合结果
+check
+
+# 输出综合统计信息
+stat -top riscv_core
+
+# 将综合后的设计写出
+write_json /workspace/incremental-synthesis/results/eco-002/base/synth.json
+write_rtlil /workspace/incremental-synthesis/results/eco-002/base/synth.rtlil
+
+# 输出结构化 Verilog 网表
+write_verilog -noattr -noexpr -nodec     /workspace/incremental-synthesis/results/eco-002/base/riscv_core_netlist.v

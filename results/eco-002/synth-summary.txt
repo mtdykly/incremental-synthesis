@@ -1,0 +1,1016 @@
+模块级比较
+========================================================================
+
+变化模块：$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  cell 总数：492 -> 492
+  新增 cell：492
+  删除 cell：492
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12544    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12545    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12546    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12547    [$_NOR_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12548    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12549    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12550    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12551    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12552    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12553    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12554    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12555    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12556    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12557    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12558    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12559    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12560    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12561    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12562    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12563    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12564    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12565    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12566    [$_ANDNOT_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12567    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12568    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12569    [$_AND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12570    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12571    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12572    [$_NAND_]
+    $abc$12543$auto$blifparse.cc:397:parse_blif$12573    [$_AND_]
+
+  删除 cell 名称：
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12542    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12543    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12544    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12545    [$_NOR_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12546    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12547    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12548    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12549    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12550    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12551    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12552    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12553    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12554    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12555    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12556    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12557    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12558    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12559    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12560    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12561    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12562    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12563    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12564    [$_ANDNOT_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12565    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12566    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12567    [$_AND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12568    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12569    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12570    [$_NAND_]
+    $abc$12541$auto$blifparse.cc:397:parse_blif$12571    [$_AND_]
+
+变化模块：$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  cell 总数：32 -> 32
+  新增 cell：32
+  删除 cell：32
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13037    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13038    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13039    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13040    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13041    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13042    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13043    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13044    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13045    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13046    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13047    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13048    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13049    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13050    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13051    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13052    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13053    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13054    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13055    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13056    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13057    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13058    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13059    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13060    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13061    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13062    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13063    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13064    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13065    [$_MUX_]
+    $abc$13036$auto$blifparse.cc:397:parse_blif$13066    [$_MUX_]
+
+  删除 cell 名称：
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13035    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13036    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13037    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13038    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13039    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13040    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13041    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13042    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13043    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13044    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13045    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13046    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13047    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13048    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13049    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13050    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13051    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13052    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13053    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13054    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13055    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13056    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13057    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13058    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13059    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13060    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13061    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13062    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13063    [$_MUX_]
+    $abc$13034$auto$blifparse.cc:397:parse_blif$13064    [$_MUX_]
+
+变化模块：$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  cell 总数：228 -> 228
+  新增 cell：228
+  删除 cell：228
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13070    [$_ANDNOT_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13071    [$_NOR_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13072    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13073    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13074    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13075    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13076    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13077    [$_ANDNOT_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13078    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13079    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13080    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13081    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13082    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13083    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13084    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13085    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13086    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13087    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13088    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13089    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13090    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13091    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13092    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13093    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13094    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13095    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13096    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13097    [$_NAND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13098    [$_AND_]
+    $abc$13069$auto$blifparse.cc:397:parse_blif$13099    [$_NAND_]
+
+  删除 cell 名称：
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13068    [$_ANDNOT_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13069    [$_NOR_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13070    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13071    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13072    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13073    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13074    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13075    [$_ANDNOT_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13076    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13077    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13078    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13079    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13080    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13081    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13082    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13083    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13084    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13085    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13086    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13087    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13088    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13089    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13090    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13091    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13092    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13093    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13094    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13095    [$_NAND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13096    [$_AND_]
+    $abc$13067$auto$blifparse.cc:397:parse_blif$13097    [$_NAND_]
+
+变化模块：$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  cell 总数：32 -> 32
+  新增 cell：2
+  删除 cell：2
+  修改 cell：30
+
+  cell 类型数量变化：
+    $_DFFE_PP0P_                       31 -> 0      delta=-31
+    $_DFFE_PP1P_                        1 -> 0      delta=-1
+    $_SDFFE_PP0P_                       0 -> 31     delta=+31
+    $_SDFFE_PP1P_                       0 -> 1      delta=+1
+
+  新增 cell 名称：
+    $auto$ff.cc:337:slice$10995    [$_SDFFE_PP0P_]
+    $auto$ff.cc:337:slice$10996    [$_SDFFE_PP0P_]
+
+  删除 cell 名称：
+    $auto$ff.cc:337:slice$10963    [$_DFFE_PP0P_]
+    $auto$ff.cc:337:slice$10964    [$_DFFE_PP0P_]
+
+  修改 cell 详情：
+
+    修改 cell：$auto$ff.cc:337:slice$10965
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [7] -> [5]
+      port Q: [39] -> [37]
+
+    修改 cell：$auto$ff.cc:337:slice$10966
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [8] -> [6]
+      port Q: [40] -> [38]
+
+    修改 cell：$auto$ff.cc:337:slice$10967
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [9] -> [7]
+      port Q: [41] -> [39]
+
+    修改 cell：$auto$ff.cc:337:slice$10968
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [10] -> [8]
+      port Q: [42] -> [40]
+
+    修改 cell：$auto$ff.cc:337:slice$10969
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [11] -> [9]
+      port Q: [43] -> [41]
+
+    修改 cell：$auto$ff.cc:337:slice$10970
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [12] -> [10]
+      port Q: [44] -> [42]
+
+    修改 cell：$auto$ff.cc:337:slice$10971
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [13] -> [11]
+      port Q: [45] -> [43]
+
+    修改 cell：$auto$ff.cc:337:slice$10972
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [14] -> [12]
+      port Q: [46] -> [44]
+
+    修改 cell：$auto$ff.cc:337:slice$10973
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [15] -> [13]
+      port Q: [47] -> [45]
+
+    修改 cell：$auto$ff.cc:337:slice$10974
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [16] -> [14]
+      port Q: [48] -> [46]
+
+    修改 cell：$auto$ff.cc:337:slice$10975
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [17] -> [15]
+      port Q: [49] -> [47]
+
+    修改 cell：$auto$ff.cc:337:slice$10976
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [18] -> [16]
+      port Q: [50] -> [48]
+
+    修改 cell：$auto$ff.cc:337:slice$10977
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [19] -> [17]
+      port Q: [51] -> [49]
+
+    修改 cell：$auto$ff.cc:337:slice$10978
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [20] -> [18]
+      port Q: [52] -> [50]
+
+    修改 cell：$auto$ff.cc:337:slice$10979
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [21] -> [19]
+      port Q: [53] -> [51]
+
+    修改 cell：$auto$ff.cc:337:slice$10980
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [22] -> [20]
+      port Q: [54] -> [52]
+
+    修改 cell：$auto$ff.cc:337:slice$10981
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [23] -> [21]
+      port Q: [55] -> [53]
+
+    修改 cell：$auto$ff.cc:337:slice$10982
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [24] -> [22]
+      port Q: [56] -> [54]
+
+    修改 cell：$auto$ff.cc:337:slice$10983
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [25] -> [23]
+      port Q: [57] -> [55]
+
+    修改 cell：$auto$ff.cc:337:slice$10984
+      type: $_DFFE_PP0P_ -> $_SDFFE_PP0P_
+      port D: [26] -> [24]
+      port Q: [58] -> [56]
+
+变化模块：$paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  cell 总数：162 -> 162
+  新增 cell：162
+  删除 cell：162
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13300    [$_AND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13301    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13302    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13303    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13304    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13305    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13306    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13307    [$_OR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13308    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13309    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13310    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13311    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13312    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13313    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13314    [$_OR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13315    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13316    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13317    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13318    [$_OR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13319    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13320    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13321    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13322    [$_OR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13323    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13324    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13325    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13326    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13327    [$_XOR_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13328    [$_NAND_]
+    $abc$13299$auto$blifparse.cc:397:parse_blif$13329    [$_OR_]
+
+  删除 cell 名称：
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13298    [$_AND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13299    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13300    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13301    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13302    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13303    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13304    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13305    [$_OR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13306    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13307    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13308    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13309    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13310    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13311    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13312    [$_OR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13313    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13314    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13315    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13316    [$_OR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13317    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13318    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13319    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13320    [$_OR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13321    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13322    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13323    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13324    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13325    [$_XOR_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13326    [$_NAND_]
+    $abc$13297$auto$blifparse.cc:397:parse_blif$13327    [$_OR_]
+
+变化模块：alu
+  cell 总数：1351 -> 1351
+  新增 cell：1351
+  删除 cell：1351
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13466    [$_NOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13467    [$_NOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13468    [$_NOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13469    [$_NOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13470    [$_ORNOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13471    [$_XNOR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13472    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13473    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13474    [$_AND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13475    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13476    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13477    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13478    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13479    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13480    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13481    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13482    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13483    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13484    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13485    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13486    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13487    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13488    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13489    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13490    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13491    [$_NAND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13492    [$_OR_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13493    [$_AND_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13494    [$_NOT_]
+    $abc$13465$auto$blifparse.cc:397:parse_blif$13495    [$_NAND_]
+
+  删除 cell 名称：
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13464    [$_NOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13465    [$_NOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13466    [$_NOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13467    [$_NOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13468    [$_ORNOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13469    [$_XNOR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13470    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13471    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13472    [$_AND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13473    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13474    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13475    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13476    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13477    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13478    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13479    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13480    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13481    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13482    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13483    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13484    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13485    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13486    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13487    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13488    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13489    [$_NAND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13490    [$_OR_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13491    [$_AND_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13492    [$_NOT_]
+    $abc$13463$auto$blifparse.cc:397:parse_blif$13493    [$_NAND_]
+
+变化模块：alu_control
+  cell 总数：46 -> 46
+  新增 cell：46
+  删除 cell：46
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14818    [$_NOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14819    [$_ANDNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14820    [$_ANDNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14821    [$_ORNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14822    [$_AND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14823    [$_ORNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14824    [$_AND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14825    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14826    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14827    [$_ANDNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14828    [$_NOR_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14829    [$_ORNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14830    [$_AND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14831    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14832    [$_ANDNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14833    [$_ORNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14834    [$_OR_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14835    [$_AND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14836    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14837    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14838    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14839    [$_MUX_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14840    [$_ORNOT_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14841    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14842    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14843    [$_MUX_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14844    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14845    [$_AND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14846    [$_NAND_]
+    $abc$14817$auto$blifparse.cc:397:parse_blif$14847    [$_NAND_]
+
+  删除 cell 名称：
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14816    [$_NOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14817    [$_ANDNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14818    [$_ANDNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14819    [$_ORNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14820    [$_AND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14821    [$_ORNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14822    [$_AND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14823    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14824    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14825    [$_ANDNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14826    [$_NOR_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14827    [$_ORNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14828    [$_AND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14829    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14830    [$_ANDNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14831    [$_ORNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14832    [$_OR_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14833    [$_AND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14834    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14835    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14836    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14837    [$_MUX_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14838    [$_ORNOT_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14839    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14840    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14841    [$_MUX_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14842    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14843    [$_AND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14844    [$_NAND_]
+    $abc$14815$auto$blifparse.cc:397:parse_blif$14845    [$_NAND_]
+
+变化模块：control_transfer
+  cell 总数：3 -> 3
+  新增 cell：3
+  删除 cell：3
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$14864$auto$blifparse.cc:397:parse_blif$14865    [$_ANDNOT_]
+    $abc$14864$auto$blifparse.cc:397:parse_blif$14866    [$_OR_]
+    $abc$14864$auto$blifparse.cc:397:parse_blif$14867    [$_XNOR_]
+
+  删除 cell 名称：
+    $abc$14862$auto$blifparse.cc:397:parse_blif$14863    [$_ANDNOT_]
+    $abc$14862$auto$blifparse.cc:397:parse_blif$14864    [$_OR_]
+    $abc$14862$auto$blifparse.cc:397:parse_blif$14865    [$_XNOR_]
+
+变化模块：data_memory_interface
+  cell 总数：191 -> 191
+  新增 cell：191
+  删除 cell：191
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14869    [$_NOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14870    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14871    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14872    [$_AND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14873    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14874    [$_MUX_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14875    [$_MUX_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14876    [$_MUX_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14877    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14878    [$_XOR_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14879    [$_NOR_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14880    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14881    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14882    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14883    [$_MUX_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14884    [$_MUX_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14885    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14886    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14887    [$_AND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14888    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14889    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14890    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14891    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14892    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14893    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14894    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14895    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14896    [$_NAND_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14897    [$_ANDNOT_]
+    $abc$14868$auto$blifparse.cc:397:parse_blif$14898    [$_NAND_]
+
+  删除 cell 名称：
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14867    [$_NOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14868    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14869    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14870    [$_AND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14871    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14872    [$_MUX_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14873    [$_MUX_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14874    [$_MUX_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14875    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14876    [$_XOR_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14877    [$_NOR_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14878    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14879    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14880    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14881    [$_MUX_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14882    [$_MUX_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14883    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14884    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14885    [$_AND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14886    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14887    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14888    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14889    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14890    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14891    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14892    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14893    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14894    [$_NAND_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14895    [$_ANDNOT_]
+    $abc$14866$auto$blifparse.cc:397:parse_blif$14896    [$_NAND_]
+
+变化模块：immediate_generator
+  cell 总数：106 -> 106
+  新增 cell：106
+  删除 cell：106
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15061    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15062    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15063    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15064    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15065    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15066    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15067    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15068    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15069    [$_OR_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15070    [$_NOR_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15071    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15072    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15073    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15074    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15075    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15076    [$_NOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15077    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15078    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15079    [$_ORNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15080    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15081    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15082    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15083    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15084    [$_ANDNOT_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15085    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15086    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15087    [$_AND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15088    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15089    [$_NAND_]
+    $abc$15060$auto$blifparse.cc:397:parse_blif$15090    [$_AND_]
+
+  删除 cell 名称：
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15059    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15060    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15061    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15062    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15063    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15064    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15065    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15066    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15067    [$_OR_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15068    [$_NOR_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15069    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15070    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15071    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15072    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15073    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15074    [$_NOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15075    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15076    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15077    [$_ORNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15078    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15079    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15080    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15081    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15082    [$_ANDNOT_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15083    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15084    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15085    [$_AND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15086    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15087    [$_NAND_]
+    $abc$15058$auto$blifparse.cc:397:parse_blif$15088    [$_AND_]
+
+变化模块：regfile
+  cell 总数：5000 -> 5040
+  新增 cell：4050
+  删除 cell：4010
+  修改 cell：990
+
+  cell 类型数量变化：
+    $_ANDNOT_                         134 -> 138    delta=+4
+    $_AND_                            683 -> 709    delta=+26
+    $_MUX_                            998 -> 978    delta=-20
+    $_NAND_                           928 -> 940    delta=+12
+    $_NOR_                            208 -> 218    delta=+10
+    $_ORNOT_                          598 -> 611    delta=+13
+    $_OR_                             459 -> 454    delta=-5
+
+  新增 cell 名称：
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15169    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15170    [$_OR_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15171    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15172    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15173    [$_MUX_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15174    [$_ANDNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15175    [$_NOR_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15176    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15177    [$_MUX_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15178    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15179    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15180    [$_OR_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15181    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15182    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15183    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15184    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15185    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15186    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15187    [$_MUX_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15188    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15189    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15190    [$_OR_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15191    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15192    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15193    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15194    [$_ORNOT_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15195    [$_OR_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15196    [$_AND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15197    [$_NAND_]
+    $abc$15168$auto$blifparse.cc:397:parse_blif$15198    [$_MUX_]
+
+  删除 cell 名称：
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15167    [$_ORNOT_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15168    [$_OR_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15169    [$_AND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15170    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15171    [$_ORNOT_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15172    [$_NOR_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15173    [$_NOR_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15174    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15175    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15176    [$_ORNOT_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15177    [$_OR_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15178    [$_AND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15179    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15180    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15181    [$_ORNOT_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15182    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15183    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15184    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15185    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15186    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15187    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15188    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15189    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15190    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15191    [$_MUX_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15192    [$_ORNOT_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15193    [$_OR_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15194    [$_AND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15195    [$_NAND_]
+    $abc$15166$auto$blifparse.cc:397:parse_blif$15196    [$_MUX_]
+
+  修改 cell 详情：
+
+    修改 cell：$auto$ff.cc:337:slice$1340
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [21] -> [19]
+      port E: [4872] -> [4920]
+      port Q: [2795] -> [3043]
+
+    修改 cell：$auto$ff.cc:337:slice$1341
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [22] -> [20]
+      port E: [4872] -> [4920]
+      port Q: [2706] -> [2938]
+
+    修改 cell：$auto$ff.cc:337:slice$1342
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [23] -> [21]
+      port E: [4872] -> [4920]
+      port Q: [2653] -> [2849]
+
+    修改 cell：$auto$ff.cc:337:slice$1343
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [24] -> [22]
+      port E: [4872] -> [4920]
+      port Q: [2512] -> [2794]
+
+    修改 cell：$auto$ff.cc:337:slice$1344
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [25] -> [23]
+      port E: [4872] -> [4920]
+      port Q: [2451] -> [2661]
+
+    修改 cell：$auto$ff.cc:337:slice$1345
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [26] -> [24]
+      port E: [4872] -> [4920]
+      port Q: [2356] -> [2556]
+
+    修改 cell：$auto$ff.cc:337:slice$1346
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [27] -> [25]
+      port E: [4872] -> [4920]
+      port Q: [2255] -> [2505]
+
+    修改 cell：$auto$ff.cc:337:slice$1347
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [28] -> [26]
+      port E: [4872] -> [4920]
+      port Q: [2108] -> [2358]
+
+    修改 cell：$auto$ff.cc:337:slice$1348
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [29] -> [27]
+      port E: [4872] -> [4920]
+      port Q: [2028] -> [2297]
+
+    修改 cell：$auto$ff.cc:337:slice$1349
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [30] -> [28]
+      port E: [4872] -> [4920]
+      port Q: [1930] -> [2202]
+
+    修改 cell：$auto$ff.cc:337:slice$1350
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [31] -> [29]
+      port E: [4872] -> [4920]
+      port Q: [1825] -> [2071]
+
+    修改 cell：$auto$ff.cc:337:slice$1351
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [32] -> [30]
+      port E: [4872] -> [4920]
+      port Q: [1774] -> [1972]
+
+    修改 cell：$auto$ff.cc:337:slice$1352
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [33] -> [31]
+      port E: [4872] -> [4920]
+      port Q: [1629] -> [1867]
+
+    修改 cell：$auto$ff.cc:337:slice$1353
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [34] -> [32]
+      port E: [4872] -> [4920]
+      port Q: [1594] -> [1762]
+
+    修改 cell：$auto$ff.cc:337:slice$1354
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [35] -> [33]
+      port E: [4872] -> [4920]
+      port Q: [1449] -> [1687]
+
+    修改 cell：$auto$ff.cc:337:slice$1355
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [36] -> [34]
+      port E: [4872] -> [4920]
+      port Q: [1382] -> [1588]
+
+    修改 cell：$auto$ff.cc:337:slice$1356
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [37] -> [35]
+      port E: [4872] -> [4920]
+      port Q: [1259] -> [1483]
+
+    修改 cell：$auto$ff.cc:337:slice$1357
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [38] -> [36]
+      port E: [4872] -> [4920]
+      port Q: [1170] -> [1416]
+
+    修改 cell：$auto$ff.cc:337:slice$1358
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [39] -> [37]
+      port E: [4872] -> [4920]
+      port Q: [1117] -> [1307]
+
+    修改 cell：$auto$ff.cc:337:slice$1359
+      type: $_DFFE_PP_ -> $_DFFE_PP_
+      port D: [40] -> [38]
+      port E: [4872] -> [4920]
+      port Q: [976] -> [1206]
+
+变化模块：singlecycle_control
+  cell 总数：39 -> 39
+  新增 cell：39
+  删除 cell：39
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19220    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19221    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19222    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19223    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19224    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19225    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19226    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19227    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19228    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19229    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19230    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19231    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19232    [$_NOR_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19233    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19234    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19235    [$_NOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19236    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19237    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19238    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19239    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19240    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19241    [$_AND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19242    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19243    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19244    [$_NOR_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19245    [$_ANDNOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19246    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19247    [$_NOT_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19248    [$_NAND_]
+    $abc$19219$auto$blifparse.cc:397:parse_blif$19249    [$_AND_]
+
+  删除 cell 名称：
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19178    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19179    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19180    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19181    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19182    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19183    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19184    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19185    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19186    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19187    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19188    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19189    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19190    [$_NOR_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19191    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19192    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19193    [$_NOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19194    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19195    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19196    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19197    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19198    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19199    [$_AND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19200    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19201    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19202    [$_NOR_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19203    [$_ANDNOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19204    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19205    [$_NOT_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19206    [$_NAND_]
+    $abc$19177$auto$blifparse.cc:397:parse_blif$19207    [$_AND_]
+
+========================================================================
+变化模块数量：12
+  $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  alu
+  alu_control
+  control_transfer
+  data_memory_interface
+  immediate_generator
+  regfile
+  singlecycle_control
