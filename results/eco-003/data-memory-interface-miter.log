@@ -1,0 +1,183 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `experiments/eco-003/check_data_memory_interface_miter.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+2.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+Renaming module \data_memory_interface to \gold.
+
+3. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+4.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+Renaming module \data_memory_interface to \gate.
+
+5. Executing MITER pass (creating miter circuit).
+Creating miter cell "miter" with gold cell "gold" and gate cell "gate".
+
+5.1. Executing FLATTEN pass (flatten design).
+<suppressed ~2 debug messages>
+
+5.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+Removed 0 unused cells and 6 unused wires.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \miter
+
+6.2. Analyzing design hierarchy..
+Top module:  \miter
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+
+8. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up SAT problem:
+Final constraint equation: { } = { }
+Imported 392 cells to SAT database.
+Import proof-constraint: \trigger = 1'0
+Final proof equation: \trigger = 1'0
+Import show expression: \in_address
+Import show expression: \in_bus_read_data
+Import show expression: \in_clock
+Import show expression: \in_data_format
+Import show expression: \in_read_enable
+Import show expression: \in_write_data
+Import show expression: \in_write_enable
+Import show expression: \trigger
+Import show expression: \cmp_bus_address
+Import show expression: \gate_bus_address
+Import show expression: \gold_bus_address
+Import show expression: \cmp_bus_byte_enable
+Import show expression: \gate_bus_byte_enable
+Import show expression: \gold_bus_byte_enable
+Import show expression: \cmp_bus_read_enable
+Import show expression: \gate_bus_read_enable
+Import show expression: \gold_bus_read_enable
+Import show expression: \cmp_bus_write_data
+Import show expression: \gate_bus_write_data
+Import show expression: \gold_bus_write_data
+Import show expression: \cmp_bus_write_enable
+Import show expression: \gate_bus_write_enable
+Import show expression: \gold_bus_write_enable
+Import show expression: \cmp_read_data
+Import show expression: \gate_read_data
+Import show expression: \gold_read_data
+
+Solving problem with 2383 variables and 6127 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+End of script. Logfile hash: 942e155519, time: 0.92s, user: 0.86s, system: 0.12s, MEM: 196.95 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 93% 4x read_json (0 sec), 2% 2x id_gc (0 sec), ...

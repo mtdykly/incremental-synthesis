@@ -1,0 +1,8 @@
+M	core/common/constants.sv
+M	core/common/control_transfer.sv
+M	core/multicycle/multicycle_control.sv
+M	core/multicycle/multicycle_ctlpath.sv
+M	core/multicycle/multicycle_datapath.sv
+M	core/multicycle/riscv_core.sv
+M	core/singlecycle/singlecycle_control.sv
+M	core/singlecycle/singlecycle_ctlpath.sv

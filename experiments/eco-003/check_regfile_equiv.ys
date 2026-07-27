@@ -1,0 +1,62 @@
+# ============================================================
+# 读取 base regfile
+# ============================================================
+
+read_json results/eco-003/base-normalized/synth.json
+hierarchy -check -top regfile
+
+rename regfile gold
+design -stash gold
+
+design -reset
+
+
+# ============================================================
+# 读取 new regfile
+# ============================================================
+
+read_json results/eco-003/new-normalized/synth.json
+hierarchy -check -top regfile
+
+rename regfile gate
+design -stash gate
+
+design -reset
+
+
+# ============================================================
+# 恢复两个待比较模块
+# ============================================================
+
+design -copy-from gold -as gold gold
+design -copy-from gate -as gate gate
+
+
+# ============================================================
+# 形式验证预处理
+#
+# 必须在 equiv_make 之前，
+# 并且对 gold 和 gate 同时执行
+# ============================================================
+
+async2sync
+opt_clean
+
+
+# ============================================================
+# 构造时序等价验证电路
+# ============================================================
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+
+# ============================================================
+# 等价证明
+# ============================================================
+
+equiv_struct
+equiv_simple -seq 2
+equiv_induct -seq 8
+
+equiv_status -assert

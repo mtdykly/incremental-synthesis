@@ -1,0 +1,51 @@
+# ============================================================
+# 读取 base，并将 singlecycle_ctlpath 展平为 gold
+# ============================================================
+
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_ctlpath.sv
+
+prep -top singlecycle_ctlpath -flatten
+rename singlecycle_ctlpath gold
+design -stash gold
+
+design -reset
+
+# ============================================================
+# 读取 new，并将 singlecycle_ctlpath 展平为 gate
+# ============================================================
+
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv
+
+prep -top singlecycle_ctlpath -flatten
+rename singlecycle_ctlpath gate
+design -stash gate
+
+design -reset
+
+# ============================================================
+# 构造等价电路
+# ============================================================
+
+design -copy-from gold -as gold gold
+design -copy-from gate -as gate gate
+
+# ============================================================
+# 只比较 singlecycle_ctlpath 的外部输出
+# ============================================================
+
+# 创建只比较模块外部输出的等价 miter
+miter -equiv -flatten -make_outputs -make_outcmp \
+    gold gate miter
+
+hierarchy -check -top miter
+
+# SAT 不支持直接导入 $mem_v2，
+# 将 case 推断出的 ROM 映射成普通组合逻辑
+memory_map -rom-only -keepdc
+
+opt_clean
+check
+stat
+
+# 证明任意输入下，所有外部输出均相同
+sat -verify -prove trigger 0 -show-inputs -show-outputs miter

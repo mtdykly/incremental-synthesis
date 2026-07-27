@@ -1,0 +1,10 @@
+digraph eco_cone {
+  rankdir=LR;
+  "alu_control" [label="alu_control\\nalu_control"];
+  "control_transfer" [label="control_transfer\\ncontrol_transfer", shape=box];
+  "singlecycle_control" [label="singlecycle_control\\nsinglecycle_control", shape=box];
+  "control_transfer" -> "singlecycle_control" [label="take_branch"];
+  "singlecycle_control" -> "alu_control" [label="alu_op_type"];
+  "singlecycle_control" -> "alu_control" [label="alu_op_type"];
+  "singlecycle_control" -> "alu_control" [label="alu_op_type"];
+}

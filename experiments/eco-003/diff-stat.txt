@@ -1,0 +1,9 @@
+ core/common/constants.sv                |  7 +++-
+ core/common/control_transfer.sv         | 33 ++++++----------
+ core/multicycle/multicycle_control.sv   | 68 ++++++++++++++++-----------------
+ core/multicycle/multicycle_ctlpath.sv   | 21 ++++++----
+ core/multicycle/multicycle_datapath.sv  | 20 +++++-----
+ core/multicycle/riscv_core.sv           |  8 ++--
+ core/singlecycle/singlecycle_control.sv | 38 ++++++------------
+ core/singlecycle/singlecycle_ctlpath.sv | 16 +++-----
+ 8 files changed, 97 insertions(+), 114 deletions(-)

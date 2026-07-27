@@ -1,0 +1,36 @@
+# ============================================================
+# 读取 base，并将 singlecycle_ctlpath 展平为 gold
+# ============================================================
+
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_ctlpath.sv
+
+prep -top singlecycle_ctlpath -flatten
+rename singlecycle_ctlpath gold
+design -stash gold
+
+design -reset
+
+# ============================================================
+# 读取 new，并将 singlecycle_ctlpath 展平为 gate
+# ============================================================
+
+read_verilog -sv     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common     -I/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv     /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv
+
+prep -top singlecycle_ctlpath -flatten
+rename singlecycle_ctlpath gate
+design -stash gate
+
+design -reset
+
+# ============================================================
+# 构造等价电路
+# ============================================================
+
+design -copy-from gold -as gold gold
+design -copy-from gate -as gate gate
+
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+
+equiv_simple
+equiv_status -assert
