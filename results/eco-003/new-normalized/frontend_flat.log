@@ -1,0 +1,138 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Running command `
+    read_rtlil /__RESULT_ROOT__/frontend.rtlil;
+    hierarchy -check -top riscv_core;
+    flatten;
+    opt_clean;
+    write_json /__RESULT_ROOT__/frontend_flat.json;
+    write_rtlil /__RESULT_ROOT__/frontend_flat.rtlil;
+    stat
+  ' --
+
+1. Executing RTLIL frontend.
+Input filename: /__RESULT_ROOT__/frontend.rtlil
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \singlecycle_ctlpath
+Used module:         \alu_control
+Used module:         \control_transfer
+Used module:         \singlecycle_control
+Used module:     \singlecycle_datapath
+Used module:         $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Used module:         \alu
+Used module:         $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:         $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:         $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:         $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:         \regfile
+
+2.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \singlecycle_ctlpath
+Used module:         \alu_control
+Used module:         \control_transfer
+Used module:         \singlecycle_control
+Used module:     \singlecycle_datapath
+Used module:         $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Used module:         \alu
+Used module:         $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:         $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:         $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:             $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:         $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:         \regfile
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Deleting now unused module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Deleting now unused module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Deleting now unused module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+Deleting now unused module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module alu.
+Deleting now unused module alu_control.
+Deleting now unused module control_transfer.
+Deleting now unused module data_memory_interface.
+Deleting now unused module immediate_generator.
+Deleting now unused module instruction_decoder.
+Deleting now unused module regfile.
+Deleting now unused module singlecycle_control.
+Deleting now unused module singlecycle_ctlpath.
+Deleting now unused module singlecycle_datapath.
+<suppressed ~20 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+5. Executing JSON backend.
+
+6. Executing RTLIL backend.
+Output filename: /__RESULT_ROOT__/frontend_flat.rtlil
+
+7. Printing statistics.
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      699 wires
+    10188 wire bits
+      232 public wires
+     4831 public wire bits
+       10 ports
+      168 port bits
+        2 memories
+       80 memory bits
+      563 cells
+        3   $add
+       33   $adff
+        3   $and
+        2   $div
+      275   $eq
+        3   $logic_and
+       20   $logic_not
+        2   $lt
+        2   $meminit
+        2   $memrd_v2
+        2   $mod
+        5   $mul
+      148   $mux
+        4   $not
+        1   $or
+       23   $pmux
+        1   $reduce_bool
+        3   $reduce_or
+       21   $scopeinfo
+        5   $shl
+        2   $shr
+        1   $sshr
+        1   $sub
+        1   $xor
+
+End of script. Logfile hash: 72865b2bf1, time: 0.04s, user: 0.05s, system: 0.01s, MEM: 21.85 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 29% 1x opt_clean (0 sec), 19% 1x flatten (0 sec), ...

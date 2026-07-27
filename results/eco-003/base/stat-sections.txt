@@ -1,0 +1,80 @@
+755:29. Printing statistics.
+756-
+757-=== $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer ===
+758-
+759-        +----------Local Count, excluding submodules.
+760-        | 
+761-       19 wires
+762-      555 wire bits
+763-       11 public wires
+764-      547 public wire bits
+765-        3 ports
+766-      291 port bits
+767-        9 cells
+768-        7   $eq
+769-        1   $logic_not
+770-        1   $pmux
+771-
+772-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+773-
+774-        +----------Local Count, excluding submodules.
+775-        | 
+776-        6 wires
+777-      162 wire bits
+778-        5 public wires
+779-      161 public wire bits
+780-        3 ports
+--
+5680:30.25. Printing statistics.
+5681-
+5682-=== $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer ===
+5683-
+5684-        +----------Local Count, excluding submodules.
+5685-        | 
+5686-      471 wires
+5687-     1007 wire bits
+5688-       11 public wires
+5689-      547 public wire bits
+5690-        3 ports
+5691-      291 port bits
+5692-      492 cells
+5693-        6   $_ANDNOT_
+5694-      197   $_AND_
+5695-      288   $_NAND_
+5696-        1   $_NOR_
+5697-
+5698-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+5699-
+5700-        +----------Local Count, excluding submodules.
+5701-        | 
+5702-        5 wires
+5703-      161 wire bits
+5704-        5 public wires
+5705-      161 public wire bits
+--
+6109:33. Printing statistics.
+6110-
+6111-=== $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer ===
+6112-
+6113-        +----------Local Count, excluding submodules.
+6114-        | 
+6115-      463 wires
+6116-      751 wire bits
+6117-        3 public wires
+6118-      291 public wire bits
+6119-        3 ports
+6120-      291 port bits
+6121-      492 cells
+6122-        6   $_ANDNOT_
+6123-      197   $_AND_
+6124-      288   $_NAND_
+6125-        1   $_NOR_
+6126-
+6127-=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+6128-
+6129-        +----------Local Count, excluding submodules.
+6130-        | 
+6131-        3 wires
+6132-       97 wire bits
+6133-        3 public wires
+6134-       97 public wire bits

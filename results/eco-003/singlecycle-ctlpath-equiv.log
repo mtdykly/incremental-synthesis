@@ -1,0 +1,995 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/experiments/eco-003/check_singlecycle_ctlpath_equiv.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv' to AST representation.
+Generating RTLIL representation for module `\alu_control'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv' to AST representation.
+Generating RTLIL representation for module `\control_transfer'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_control'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_ctlpath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_ctlpath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+5. Executing PREP pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \alu_control
+Used module:     \control_transfer
+Used module:     \singlecycle_control
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \alu_control
+Used module:     \control_transfer
+Used module:     \singlecycle_control
+Removed 0 unused modules.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17 in module singlecycle_control.
+Marked 4 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19$10 in module control_transfer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:67$8 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:60$7 in module alu_control.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:42$3 in module alu_control.
+Marked 2 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:35$2 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:25$1 in module alu_control.
+Removed a total of 2 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 19 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+<suppressed ~11 debug messages>
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+     1/11: $1\reg_writeback_select[2:0]
+     2/11: $1\data_mem_read_enable[0:0]
+     3/11: $1\alu_op_type[2:0]
+     4/11: $1\alu_operand_b_select[0:0]
+     5/11: $1\alu_operand_a_select[0:0]
+     6/11: $1\regfile_write_enable[0:0]
+     7/11: $1\data_mem_write_enable[0:0]
+     8/11: $1\pc_write_enable[0:0]
+     9/11: $1\jalr_enable[0:0]
+    10/11: $1\jal_enable[0:0]
+    11/11: $1\branch_enable[0:0]
+Creating decoders for process `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19$10'.
+     1/4: $4\next_pc_select[1:0]
+     2/4: $3\next_pc_select[1:0]
+     3/4: $2\next_pc_select[1:0]
+     4/4: $1\next_pc_select[1:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9'.
+     1/1: $1\m_extension_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:67$8'.
+     1/1: $1\branch_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:60$7'.
+     1/1: $1\secondary_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6'.
+     1/1: $1\default_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:42$3'.
+     1/1: $1\op_imm_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:35$2'.
+     1/2: $2\op_funct[4:0]
+     2/2: $1\op_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:25$1'.
+     1/1: $1\alu_function[4:0]
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\singlecycle_control.\alu_op_type' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\branch_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\jal_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\jalr_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\pc_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\regfile_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\alu_operand_a_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\alu_operand_b_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\data_mem_read_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\data_mem_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\singlecycle_control.\reg_writeback_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+No latch inferred for signal `\control_transfer.\next_pc_select' from process `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19$10'.
+No latch inferred for signal `\alu_control.\m_extension_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9'.
+No latch inferred for signal `\alu_control.\branch_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:67$8'.
+No latch inferred for signal `\alu_control.\secondary_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:60$7'.
+No latch inferred for signal `\alu_control.\default_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6'.
+No latch inferred for signal `\alu_control.\op_imm_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:42$3'.
+No latch inferred for signal `\alu_control.\op_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:35$2'.
+No latch inferred for signal `\alu_control.\alu_function' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:25$1'.
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+Removing empty process `singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/singlecycle/singlecycle_control.sv:24$17'.
+Found and cleaned up 4 empty switches in `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19$10'.
+Removing empty process `control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19$10'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:79$9'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:67$8'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:67$8'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:60$7'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:60$7'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:47$6'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:42$3'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:42$3'.
+Found and cleaned up 2 empty switches in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:35$2'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:35$2'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:25$1'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:25$1'.
+Cleaned up 13 empty switches.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+Optimizing module singlecycle_control.
+Optimizing module control_transfer.
+<suppressed ~1 debug messages>
+Optimizing module alu_control.
+<suppressed ~3 debug messages>
+
+5.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module singlecycle_control.
+Deleting now unused module control_transfer.
+Deleting now unused module alu_control.
+<suppressed ~3 debug messages>
+
+5.4. Executing FUTURE pass.
+
+5.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 72 unused wires.
+<suppressed ~1 debug messages>
+
+5.7. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+
+5.8. Executing OPT pass (performing simple optimizations).
+
+5.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 170 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Computing hashes of 62 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+<suppressed ~324 debug messages>
+Removed a total of 108 cells.
+
+5.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_ctlpath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\alu_control.$procmux$208.
+    dead port 1/2 on $mux $flatten\control_transfer.$procmux$162.
+    dead port 1/2 on $mux $flatten\control_transfer.$procmux$165.
+    dead port 1/2 on $mux $flatten\control_transfer.$procmux$171.
+    dead port 2/2 on $mux $flatten\control_transfer.$procmux$182.
+Removed 5 multiplexer ports.
+<suppressed ~48 debug messages>
+
+5.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_ctlpath.
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$99: { $auto$opt_reduce.cc:137:opt_pmux$224 $flatten\singlecycle_control.$procmux$33_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$39: { $auto$opt_reduce.cc:137:opt_pmux$226 $flatten\singlecycle_control.$procmux$37_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$111: $auto$opt_reduce.cc:137:opt_pmux$228
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$51: { $auto$opt_reduce.cc:137:opt_pmux$232 $flatten\singlecycle_control.$procmux$30_CMP $auto$opt_reduce.cc:137:opt_pmux$230 $flatten\singlecycle_control.$procmux$32_CMP $flatten\singlecycle_control.$procmux$35_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$123: { $auto$opt_reduce.cc:137:opt_pmux$234 $flatten\singlecycle_control.$procmux$29_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$63: { $auto$opt_reduce.cc:137:opt_pmux$238 $auto$opt_reduce.cc:137:opt_pmux$236 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$135: { $flatten\singlecycle_control.$procmux$40_CMP $auto$opt_reduce.cc:137:opt_pmux$240 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$75: { $auto$opt_reduce.cc:137:opt_pmux$244 $auto$opt_reduce.cc:137:opt_pmux$242 }
+    New ctrl vector for $pmux cell $flatten\alu_control.$procmux$189: { $auto$opt_reduce.cc:137:opt_pmux$250 $auto$opt_reduce.cc:137:opt_pmux$248 $auto$opt_reduce.cc:137:opt_pmux$246 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$147: { $auto$opt_reduce.cc:137:opt_pmux$252 $flatten\singlecycle_control.$procmux$30_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$27: { $auto$opt_reduce.cc:137:opt_pmux$256 $auto$opt_reduce.cc:137:opt_pmux$254 $flatten\singlecycle_control.$procmux$31_CMP $flatten\singlecycle_control.$procmux$37_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$87: { $auto$opt_reduce.cc:137:opt_pmux$260 $auto$opt_reduce.cc:137:opt_pmux$258 }
+  Optimizing cells in module \singlecycle_ctlpath.
+Performed a total of 12 changes.
+
+5.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 76 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Computing hashes of 72 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+5.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 117 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_ctlpath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+5.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_ctlpath.
+    New ctrl vector for $pmux cell $flatten\control_transfer.$procmux$175: { $auto$opt_reduce.cc:137:opt_pmux$264 $auto$opt_reduce.cc:137:opt_pmux$262 }
+  Optimizing cells in module \singlecycle_ctlpath.
+Performed a total of 1 changes.
+
+5.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 74 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+5.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+
+5.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.8.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_ctlpath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+5.8.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_ctlpath.
+Performed a total of 0 changes.
+
+5.8.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 74 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+5.8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+
+5.8.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.8.20. Finished fast OPT passes. (There is nothing left to do.)
+
+5.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port singlecycle_ctlpath.$flatten\alu_control.$auto$mem.cc:351:emit$21 ($flatten\alu_control.$auto$proc_rom.cc:155:do_switch$19).
+Removed top 29 address bits (of 32) from memory init port singlecycle_ctlpath.$flatten\alu_control.$auto$mem.cc:351:emit$25 ($flatten\alu_control.$auto$proc_rom.cc:155:do_switch$23).
+Removed top 5 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$37_CMP0 ($eq).
+Removed top 3 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$36_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$35_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$34_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$33_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$32_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$31_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell singlecycle_ctlpath.$flatten\control_transfer.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26$14 ($mux).
+Removed top 1 bits (of 2) from mux cell singlecycle_ctlpath.$flatten\control_transfer.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24$12 ($mux).
+Removed top 2 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$218_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$217_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$216_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$194_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:43$4 ($eq).
+Removed top 1 bits (of 2) from wire singlecycle_ctlpath.$flatten\control_transfer.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24$12_Y.
+Removed top 1 bits (of 2) from wire singlecycle_ctlpath.$flatten\control_transfer.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23$11_Y.
+
+5.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.12. Executing OPT pass (performing simple optimizations).
+
+5.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+5.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 72 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+5.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+
+5.12.4. Finished fast OPT passes.
+
+5.13. Executing SORT pass.
+
+5.14. Printing statistics.
+
+=== singlecycle_ctlpath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       95 wires
+      178 wire bits
+       45 public wires
+      119 public wire bits
+       13 ports
+       34 port bits
+       72 cells
+       20   $eq
+        1   $logic_and
+        2   $logic_not
+        2   $mem_v2
+        9   $mux
+       14   $pmux
+       21   $reduce_or
+        3   $scopeinfo
+
+5.15. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+Renaming module \singlecycle_ctlpath to \gold.
+
+6. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv' to AST representation.
+Generating RTLIL representation for module `\alu_control'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv' to AST representation.
+Generating RTLIL representation for module `\control_transfer'.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:17.22-17.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18.22-18.54.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19.22-19.54.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:20.22-20.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21.21-21.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:22.21-22.52.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:23.22-23.40.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_control'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+10. Executing PREP pass.
+
+10.1. Executing HIERARCHY pass (managing design hierarchy).
+
+10.1.1. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \alu_control
+Used module:     \control_transfer
+Used module:     \singlecycle_control
+
+10.1.2. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \alu_control
+Used module:     \control_transfer
+Used module:     \singlecycle_control
+Removed 0 unused modules.
+
+10.2. Executing PROC pass (convert processes to netlists).
+
+10.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282 in module singlecycle_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:23$280 in module singlecycle_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:15$276 in module control_transfer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:67$274 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:60$273 in module alu_control.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:42$269 in module alu_control.
+Marked 2 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35$268 in module alu_control.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:25$267 in module alu_control.
+Removed a total of 2 dead cases.
+
+10.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 17 assignments to connections.
+
+10.2.4. Executing PROC_INIT pass (extract init attributes).
+
+10.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+<suppressed ~9 debug messages>
+
+10.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+     1/8: $1\reg_writeback_select[2:0]
+     2/8: $1\data_mem_read_enable[0:0]
+     3/8: $1\alu_op_type[2:0]
+     4/8: $1\alu_operand_b_select[0:0]
+     5/8: $1\alu_operand_a_select[0:0]
+     6/8: $1\regfile_write_enable[0:0]
+     7/8: $1\data_mem_write_enable[0:0]
+     8/8: $1\pc_write_enable[0:0]
+Creating decoders for process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:23$280'.
+     1/1: $1\next_pc_select[1:0]
+Creating decoders for process `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:15$276'.
+     1/1: $1\take_branch[0:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275'.
+     1/1: $1\m_extension_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:67$274'.
+     1/1: $1\branch_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:60$273'.
+     1/1: $1\secondary_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272'.
+     1/1: $1\default_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:42$269'.
+     1/1: $1\op_imm_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35$268'.
+     1/2: $2\op_funct[4:0]
+     2/2: $1\op_funct[4:0]
+Creating decoders for process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:25$267'.
+     1/1: $1\alu_function[4:0]
+
+10.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\singlecycle_control.\alu_op_type' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\pc_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\regfile_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\alu_operand_a_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\alu_operand_b_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\data_mem_read_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\data_mem_write_enable' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\reg_writeback_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+No latch inferred for signal `\singlecycle_control.\next_pc_select' from process `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:23$280'.
+No latch inferred for signal `\control_transfer.\take_branch' from process `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:15$276'.
+No latch inferred for signal `\alu_control.\m_extension_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275'.
+No latch inferred for signal `\alu_control.\branch_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:67$274'.
+No latch inferred for signal `\alu_control.\secondary_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:60$273'.
+No latch inferred for signal `\alu_control.\default_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272'.
+No latch inferred for signal `\alu_control.\op_imm_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:42$269'.
+No latch inferred for signal `\alu_control.\op_funct' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35$268'.
+No latch inferred for signal `\alu_control.\alu_function' from process `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:25$267'.
+
+10.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+10.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+Removing empty process `singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:31$282'.
+Found and cleaned up 1 empty switch in `\singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:23$280'.
+Removing empty process `singlecycle_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:23$280'.
+Found and cleaned up 1 empty switch in `\control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:15$276'.
+Removing empty process `control_transfer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:15$276'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:79$275'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:67$274'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:67$274'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:60$273'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:60$273'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:47$272'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:42$269'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:42$269'.
+Found and cleaned up 2 empty switches in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35$268'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35$268'.
+Found and cleaned up 1 empty switch in `\alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:25$267'.
+Removing empty process `alu_control.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:25$267'.
+Cleaned up 11 empty switches.
+
+10.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+Optimizing module singlecycle_control.
+Optimizing module control_transfer.
+<suppressed ~1 debug messages>
+Optimizing module alu_control.
+<suppressed ~3 debug messages>
+
+10.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module singlecycle_control.
+Deleting now unused module control_transfer.
+Deleting now unused module alu_control.
+<suppressed ~3 debug messages>
+
+10.4. Executing FUTURE pass.
+
+10.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+10.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 56 unused wires.
+<suppressed ~1 debug messages>
+
+10.7. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+
+10.8. Executing OPT pass (performing simple optimizations).
+
+10.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+10.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 132 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Computing hashes of 49 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+<suppressed ~249 debug messages>
+Removed a total of 83 cells.
+
+10.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_ctlpath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\alu_control.$procmux$421.
+Removed 1 multiplexer ports.
+<suppressed ~32 debug messages>
+
+10.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_ctlpath.
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$304: { $auto$opt_reduce.cc:137:opt_pmux$437 $flatten\singlecycle_control.$procmux$302_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$352: { $auto$opt_reduce.cc:137:opt_pmux$441 $auto$opt_reduce.cc:137:opt_pmux$439 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$364: { $auto$opt_reduce.cc:137:opt_pmux$443 $flatten\singlecycle_control.$procmux$298_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$316: { $auto$opt_reduce.cc:137:opt_pmux$447 $flatten\singlecycle_control.$procmux$295_CMP $auto$opt_reduce.cc:137:opt_pmux$445 $flatten\singlecycle_control.$procmux$297_CMP $flatten\singlecycle_control.$procmux$300_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$376: $auto$opt_reduce.cc:137:opt_pmux$449
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$328: { $auto$opt_reduce.cc:137:opt_pmux$453 $auto$opt_reduce.cc:137:opt_pmux$451 }
+    New ctrl vector for $pmux cell $flatten\control_transfer.$procmux$393: { $auto$opt_reduce.cc:137:opt_pmux$457 $auto$opt_reduce.cc:137:opt_pmux$455 }
+    New ctrl vector for $pmux cell $flatten\alu_control.$procmux$402: { $auto$opt_reduce.cc:137:opt_pmux$463 $auto$opt_reduce.cc:137:opt_pmux$461 $auto$opt_reduce.cc:137:opt_pmux$459 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$292: { $auto$opt_reduce.cc:137:opt_pmux$467 $auto$opt_reduce.cc:137:opt_pmux$465 $flatten\singlecycle_control.$procmux$296_CMP $flatten\singlecycle_control.$procmux$302_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_control.$procmux$340: { $auto$opt_reduce.cc:137:opt_pmux$471 $auto$opt_reduce.cc:137:opt_pmux$469 }
+  Optimizing cells in module \singlecycle_ctlpath.
+Performed a total of 10 changes.
+
+10.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 66 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+10.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 84 unused wires.
+<suppressed ~1 debug messages>
+
+10.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+10.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_ctlpath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+10.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_ctlpath.
+Performed a total of 0 changes.
+
+10.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 66 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+10.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+
+10.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+10.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+10.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port singlecycle_ctlpath.$flatten\alu_control.$auto$mem.cc:351:emit$286 ($flatten\alu_control.$auto$proc_rom.cc:155:do_switch$284).
+Removed top 29 address bits (of 32) from memory init port singlecycle_ctlpath.$flatten\alu_control.$auto$mem.cc:351:emit$290 ($flatten\alu_control.$auto$proc_rom.cc:155:do_switch$288).
+Removed top 1 bits (of 2) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43$270 ($eq).
+Removed top 2 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$407_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$429_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$430_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell singlecycle_ctlpath.$flatten\alu_control.$procmux$431_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell singlecycle_ctlpath.$flatten\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25$281 ($mux).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$296_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$297_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$298_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$299_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$300_CMP0 ($eq).
+Removed top 3 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$301_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell singlecycle_ctlpath.$flatten\singlecycle_control.$procmux$302_CMP0 ($eq).
+Removed top 1 bits (of 2) from wire singlecycle_ctlpath.$flatten\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25$281_Y.
+
+10.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+10.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+10.12. Executing OPT pass (performing simple optimizations).
+
+10.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_ctlpath.
+
+10.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_ctlpath'.
+Computing hashes of 64 cells of `\singlecycle_ctlpath'.
+Finding duplicate cells in `\singlecycle_ctlpath'.
+Removed a total of 0 cells.
+
+10.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_ctlpath..
+
+10.12.4. Finished fast OPT passes.
+
+10.13. Executing SORT pass.
+
+10.14. Printing statistics.
+
+=== singlecycle_ctlpath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       83 wires
+      162 wire bits
+       39 public wires
+      113 public wire bits
+       13 ports
+       34 port bits
+       64 cells
+       20   $eq
+        1   $logic_and
+        3   $logic_not
+        2   $mem_v2
+        5   $mux
+       12   $pmux
+       18   $reduce_or
+        3   $scopeinfo
+
+10.15. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+Renaming module \singlecycle_ctlpath to \gate.
+
+11. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: alu_control.alu_function_gold (\alu_function_gold), alu_control.alu_function_gate (\alu_function_gate) -> alu_control.alu_function
+Presumably equivalent wires: alu_control.alu_op_type_gold (\alu_control.alu_op_type_gold), alu_control.alu_op_type_gate (\alu_control.alu_op_type_gate) -> alu_control.alu_op_type
+Presumably equivalent wires: alu_control.branch_funct_gold (\alu_control.branch_funct_gold), alu_control.branch_funct_gate (\alu_control.branch_funct_gate) -> alu_control.branch_funct
+Presumably equivalent wires: alu_control.default_funct_gold (\alu_control.default_funct_gold), alu_control.default_funct_gate (\alu_control.default_funct_gate) -> alu_control.default_funct
+Presumably equivalent wires: alu_control.inst_funct3_gold (\inst_funct3_gold), alu_control.inst_funct3_gate (\inst_funct3_gate) -> alu_control.inst_funct3
+Presumably equivalent wires: alu_control.inst_funct7_gold (\inst_funct7_gold), alu_control.inst_funct7_gate (\inst_funct7_gate) -> alu_control.inst_funct7
+Presumably equivalent wires: alu_control.m_extension_funct_gold (\alu_control.m_extension_funct_gold), alu_control.m_extension_funct_gate (\alu_control.m_extension_funct_gate) -> alu_control.m_extension_funct
+Presumably equivalent wires: alu_control.op_funct_gold (\alu_control.op_funct_gold), alu_control.op_funct_gate (\alu_control.op_funct_gate) -> alu_control.op_funct
+Presumably equivalent wires: alu_control.op_imm_funct_gold (\alu_control.op_imm_funct_gold), alu_control.op_imm_funct_gate (\alu_control.op_imm_funct_gate) -> alu_control.op_imm_funct
+Presumably equivalent wires: alu_control.secondary_funct_gold (\alu_control.secondary_funct_gold), alu_control.secondary_funct_gate (\alu_control.secondary_funct_gate) -> alu_control.secondary_funct
+Presumably equivalent wires: alu_function_gold (\alu_function_gold), alu_function_gate (\alu_function_gate) -> alu_function
+Presumably equivalent wires: alu_op_type_gold (\alu_control.alu_op_type_gold), alu_op_type_gate (\alu_control.alu_op_type_gate) -> alu_op_type
+Presumably equivalent wires: alu_operand_a_select_gold (\alu_operand_a_select_gold), alu_operand_a_select_gate (\alu_operand_a_select_gate) -> alu_operand_a_select
+Presumably equivalent wires: alu_operand_b_select_gold (\alu_operand_b_select_gold), alu_operand_b_select_gate (\alu_operand_b_select_gate) -> alu_operand_b_select
+Presumably equivalent wires: alu_result_equal_zero_gold (\alu_result_equal_zero_gold), alu_result_equal_zero_gate (\alu_result_equal_zero_gate) -> alu_result_equal_zero
+Presumably equivalent wires: control_transfer.inst_funct3_gold (\inst_funct3_gold), control_transfer.inst_funct3_gate (\inst_funct3_gate) -> control_transfer.inst_funct3
+Presumably equivalent wires: control_transfer.result_equal_zero_gold (\alu_result_equal_zero_gold), control_transfer.result_equal_zero_gate (\alu_result_equal_zero_gate) -> control_transfer.result_equal_zero
+Presumably equivalent wires: data_mem_read_enable_gold (\data_mem_read_enable_gold), data_mem_read_enable_gate (\data_mem_read_enable_gate) -> data_mem_read_enable
+Presumably equivalent wires: data_mem_write_enable_gold (\data_mem_write_enable_gold), data_mem_write_enable_gate (\data_mem_write_enable_gate) -> data_mem_write_enable
+Presumably equivalent wires: inst_funct3_gold (\inst_funct3_gold), inst_funct3_gate (\inst_funct3_gate) -> inst_funct3
+Presumably equivalent wires: inst_funct7_gold (\inst_funct7_gold), inst_funct7_gate (\inst_funct7_gate) -> inst_funct7
+Presumably equivalent wires: inst_opcode_gold (\inst_opcode_gold), inst_opcode_gate (\inst_opcode_gate) -> inst_opcode
+Presumably equivalent wires: next_pc_select_gold (\next_pc_select_gold), next_pc_select_gate (\next_pc_select_gate) -> next_pc_select
+Presumably equivalent wires: pc_write_enable_gold (\pc_write_enable_gold), pc_write_enable_gate (\pc_write_enable_gate) -> pc_write_enable
+Presumably equivalent wires: reg_writeback_select_gold (\reg_writeback_select_gold), reg_writeback_select_gate (\reg_writeback_select_gate) -> reg_writeback_select
+Presumably equivalent wires: regfile_write_enable_gold (\regfile_write_enable_gold), regfile_write_enable_gate (\regfile_write_enable_gate) -> regfile_write_enable
+Presumably equivalent wires: singlecycle_control.alu_op_type_gold (\alu_control.alu_op_type_gold), singlecycle_control.alu_op_type_gate (\alu_control.alu_op_type_gate) -> singlecycle_control.alu_op_type
+Presumably equivalent wires: singlecycle_control.alu_operand_a_select_gold (\alu_operand_a_select_gold), singlecycle_control.alu_operand_a_select_gate (\alu_operand_a_select_gate) -> singlecycle_control.alu_operand_a_select
+Presumably equivalent wires: singlecycle_control.alu_operand_b_select_gold (\alu_operand_b_select_gold), singlecycle_control.alu_operand_b_select_gate (\alu_operand_b_select_gate) -> singlecycle_control.alu_operand_b_select
+Presumably equivalent wires: singlecycle_control.data_mem_read_enable_gold (\data_mem_read_enable_gold), singlecycle_control.data_mem_read_enable_gate (\data_mem_read_enable_gate) -> singlecycle_control.data_mem_read_enable
+Presumably equivalent wires: singlecycle_control.data_mem_write_enable_gold (\data_mem_write_enable_gold), singlecycle_control.data_mem_write_enable_gate (\data_mem_write_enable_gate) -> singlecycle_control.data_mem_write_enable
+Presumably equivalent wires: singlecycle_control.inst_opcode_gold (\inst_opcode_gold), singlecycle_control.inst_opcode_gate (\inst_opcode_gate) -> singlecycle_control.inst_opcode
+Presumably equivalent wires: singlecycle_control.pc_write_enable_gold (\pc_write_enable_gold), singlecycle_control.pc_write_enable_gate (\pc_write_enable_gate) -> singlecycle_control.pc_write_enable
+Presumably equivalent wires: singlecycle_control.reg_writeback_select_gold (\reg_writeback_select_gold), singlecycle_control.reg_writeback_select_gate (\reg_writeback_select_gate) -> singlecycle_control.reg_writeback_select
+Presumably equivalent wires: singlecycle_control.regfile_write_enable_gold (\regfile_write_enable_gold), singlecycle_control.regfile_write_enable_gate (\regfile_write_enable_gate) -> singlecycle_control.regfile_write_enable
+Changing input A of cell $flatten\alu_control.$procmux$415_gate ($mux): \alu_control.default_funct_gate -> \alu_control.default_funct
+Changing input B of cell $flatten\alu_control.$procmux$415_gate ($mux): \alu_control.secondary_funct_gate -> \alu_control.secondary_funct
+Changing input A of cell $flatten\alu_control.$procmux$418_gate ($mux): \alu_control.default_funct_gate -> \alu_control.default_funct
+Changing input B of cell $flatten\alu_control.$procmux$418_gate ($mux): \alu_control.m_extension_funct_gate -> \alu_control.m_extension_funct
+Changing input B of cell $flatten\alu_control.$procmux$424_gate ($mux): \alu_control.secondary_funct_gate -> \alu_control.secondary_funct
+Changing input B of cell $flatten\alu_control.$procmux$427_gate ($pmux): { 10'0000000001 \alu_control.op_funct_gate \alu_control.op_imm_funct_gate \alu_control.branch_funct_gate } -> { 10'0000000001 \alu_control.op_funct \alu_control.op_imm_funct \alu_control.branch_funct }
+Changing input A of cell $flatten\alu_control.$procmux$428_CMP0_gate ($eq): \alu_control.alu_op_type_gate -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$429_CMP0_gate ($eq): \alu_control.alu_op_type_gate -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$430_CMP0_gate ($eq): \alu_control.alu_op_type_gate -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$431_CMP0_gate ($eq): \alu_control.alu_op_type_gate -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$432_CMP0_gate ($logic_not): \alu_control.alu_op_type_gate -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$202_gold ($mux): \alu_control.default_funct_gold -> \alu_control.default_funct
+Changing input B of cell $flatten\alu_control.$procmux$202_gold ($mux): \alu_control.secondary_funct_gold -> \alu_control.secondary_funct
+Changing input A of cell $flatten\alu_control.$procmux$205_gold ($mux): \alu_control.default_funct_gold -> \alu_control.default_funct
+Changing input B of cell $flatten\alu_control.$procmux$205_gold ($mux): \alu_control.m_extension_funct_gold -> \alu_control.m_extension_funct
+Changing input B of cell $flatten\alu_control.$procmux$211_gold ($mux): \alu_control.secondary_funct_gold -> \alu_control.secondary_funct
+Changing input B of cell $flatten\alu_control.$procmux$214_gold ($pmux): { 10'0000000001 \alu_control.op_funct_gold \alu_control.op_imm_funct_gold \alu_control.branch_funct_gold } -> { 10'0000000001 \alu_control.op_funct \alu_control.op_imm_funct \alu_control.branch_funct }
+Changing input A of cell $flatten\alu_control.$procmux$215_CMP0_gold ($eq): \alu_control.alu_op_type_gold -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$216_CMP0_gold ($eq): \alu_control.alu_op_type_gold -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$217_CMP0_gold ($eq): \alu_control.alu_op_type_gold -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$218_CMP0_gold ($eq): \alu_control.alu_op_type_gold -> \alu_control.alu_op_type
+Changing input A of cell $flatten\alu_control.$procmux$219_CMP0_gold ($logic_not): \alu_control.alu_op_type_gold -> \alu_control.alu_op_type
+Presumably equivalent cells: alu_control_gold alu_control_gate ($scopeinfo) -> alu_control
+Presumably equivalent cells: control_transfer_gold control_transfer_gate ($scopeinfo) -> control_transfer
+Presumably equivalent cells: singlecycle_control_gold singlecycle_control_gate ($scopeinfo) -> singlecycle_control
+
+12. Executing HIERARCHY pass (managing design hierarchy).
+
+12.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+12.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+13. Executing EQUIV_SIMPLE pass.
+Found 90 unproven $equiv cells (31 groups) in equiv:
+ Grouping SAT models for \alu_op_type:
+  Trying to prove $equiv for \alu_op_type [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_op_type [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_op_type [2]:ezsat
+ success!
+ Grouping SAT models for \alu_function:
+  Trying to prove $equiv for \alu_function [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_function [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_function [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_function [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_function [4]:ezsat
+ success!
+ Grouping SAT models for \next_pc_select:
+  Trying to prove $equiv for \next_pc_select [0]:ezsat
+ success!
+  Trying to prove $equiv for \next_pc_select [1]:ezsat
+ success!
+  Trying to prove $equiv for \pc_write_enable:ezsat
+ success!
+  Trying to prove $equiv for \regfile_write_enable:ezsat
+ success!
+  Trying to prove $equiv for \alu_operand_a_select:ezsat
+ success!
+  Trying to prove $equiv for \alu_operand_b_select:ezsat
+ success!
+  Trying to prove $equiv for \data_mem_read_enable:ezsat
+ success!
+  Trying to prove $equiv for \data_mem_write_enable:ezsat
+ success!
+ Grouping SAT models for \reg_writeback_select:
+  Trying to prove $equiv for \reg_writeback_select [0]:ezsat
+ success!
+  Trying to prove $equiv for \reg_writeback_select [1]:ezsat
+ success!
+  Trying to prove $equiv for \reg_writeback_select [2]:ezsat
+ success!
+ Grouping SAT models for \singlecycle_control.reg_writeback_select:
+  Trying to prove $equiv for \singlecycle_control.reg_writeback_select [0]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.reg_writeback_select [1]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.reg_writeback_select [2]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.data_mem_write_enable:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.data_mem_read_enable:ezsat
+ success!
+ Grouping SAT models for \singlecycle_control.alu_op_type:
+  Trying to prove $equiv for \singlecycle_control.alu_op_type [0]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.alu_op_type [1]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.alu_op_type [2]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.alu_operand_b_select:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.alu_operand_a_select:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.regfile_write_enable:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.pc_write_enable:ezsat
+ success!
+ Grouping SAT models for \singlecycle_control.inst_opcode:
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [0]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [1]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [2]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [3]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [4]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [5]:ezsat
+ success!
+  Trying to prove $equiv for \singlecycle_control.inst_opcode [6]:ezsat
+ success!
+ Grouping SAT models for \control_transfer.inst_funct3:
+  Trying to prove $equiv for \control_transfer.inst_funct3 [0]:ezsat
+ success!
+  Trying to prove $equiv for \control_transfer.inst_funct3 [1]:ezsat
+ success!
+  Trying to prove $equiv for \control_transfer.inst_funct3 [2]:ezsat
+ success!
+  Trying to prove $equiv for \control_transfer.result_equal_zero:ezsat
+ success!
+ Grouping SAT models for \alu_control.m_extension_funct:
+  Trying to prove $equiv for \alu_control.m_extension_funct [0]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.m_extension_funct [1]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.m_extension_funct [2]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.m_extension_funct [3]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.m_extension_funct [4]:ezsat
+ failed.
+ Grouping SAT models for \alu_control.branch_funct:
+  Trying to prove $equiv for \alu_control.branch_funct [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.branch_funct [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.branch_funct [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.branch_funct [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.branch_funct [4]:ezsat
+ success!
+ Grouping SAT models for \alu_control.op_imm_funct:
+  Trying to prove $equiv for \alu_control.op_imm_funct [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_imm_funct [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_imm_funct [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_imm_funct [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_imm_funct [4]:ezsat
+ success!
+ Grouping SAT models for \alu_control.op_funct:
+  Trying to prove $equiv for \alu_control.op_funct [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_funct [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_funct [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_funct [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.op_funct [4]:ezsat
+ success!
+ Grouping SAT models for \alu_control.secondary_funct:
+  Trying to prove $equiv for \alu_control.secondary_funct [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.secondary_funct [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.secondary_funct [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.secondary_funct [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.secondary_funct [4]:ezsat
+ success!
+ Grouping SAT models for \alu_control.default_funct:
+  Trying to prove $equiv for \alu_control.default_funct [0]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.default_funct [1]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.default_funct [2]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.default_funct [3]:ezsat
+ failed.
+  Trying to prove $equiv for \alu_control.default_funct [4]:ezsat
+ failed.
+ Grouping SAT models for \alu_control.alu_function:
+  Trying to prove $equiv for \alu_control.alu_function [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_function [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_function [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_function [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_function [4]:ezsat
+ success!
+ Grouping SAT models for \alu_control.inst_funct7:
+  Trying to prove $equiv for \alu_control.inst_funct7 [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [2]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [3]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [4]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [5]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct7 [6]:ezsat
+ success!
+ Grouping SAT models for \alu_control.inst_funct3:
+  Trying to prove $equiv for \alu_control.inst_funct3 [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct3 [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.inst_funct3 [2]:ezsat
+ success!
+ Grouping SAT models for \alu_control.alu_op_type:
+  Trying to prove $equiv for \alu_control.alu_op_type [0]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_op_type [1]:ezsat
+ success!
+  Trying to prove $equiv for \alu_control.alu_op_type [2]:ezsat
+ success!
+Proved 80 previously unproven $equiv cells.
+
+14. Executing EQUIV_STATUS pass.
+Found 90 $equiv cells in equiv:
+  Of those cells 80 are proven and 10 are unproven.
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$505: \alu_control.m_extension_funct_gold [4] \alu_control.m_extension_funct_gate [4]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$504: \alu_control.m_extension_funct_gold [3] \alu_control.m_extension_funct_gate [3]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$503: \alu_control.m_extension_funct_gold [2] \alu_control.m_extension_funct_gate [2]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$502: \alu_control.m_extension_funct_gold [1] \alu_control.m_extension_funct_gate [1]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$501: \alu_control.m_extension_funct_gold [0] \alu_control.m_extension_funct_gate [0]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$490: \alu_control.default_funct_gold [4] \alu_control.default_funct_gate [4]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$489: \alu_control.default_funct_gold [3] \alu_control.default_funct_gate [3]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$488: \alu_control.default_funct_gold [2] \alu_control.default_funct_gate [2]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$487: \alu_control.default_funct_gold [1] \alu_control.default_funct_gate [1]
+  Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$486: \alu_control.default_funct_gold [0] \alu_control.default_funct_gate [0]
+Found a total of 10 unproven $equiv cells.
+ERROR: Found 10 unproven $equiv cells in 'equiv_status -assert'.

@@ -1,0 +1,7 @@
+commit afa9cbbbc932059191ee5bba5b3808bb43e29f60
+Author:     Marek Materzok <tilk@tilk.eu>
+AuthorDate: Wed May 8 19:47:14 2019 +0200
+Commit:     Marek Materzok <tilk@tilk.eu>
+CommitDate: Wed May 8 19:47:14 2019 +0200
+
+    Somewhat working auipc and lui.

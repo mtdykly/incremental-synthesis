@@ -1,0 +1,823 @@
+模块级比较
+========================================================================
+
+变化模块：$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  cell 总数：9 -> 9
+  新增 cell：9
+  删除 cell：9
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procmux$1684    [$pmux]
+    $procmux$1685_CMP0    [$eq]
+    $procmux$1686_CMP0    [$eq]
+    $procmux$1687_CMP0    [$eq]
+    $procmux$1688_CMP0    [$eq]
+    $procmux$1689_CMP0    [$eq]
+    $procmux$1690_CMP0    [$eq]
+    $procmux$1691_CMP0    [$eq]
+    $procmux$1692_CMP0    [$logic_not]
+
+  删除 cell 名称：
+    $procmux$1716    [$pmux]
+    $procmux$1717_CMP0    [$eq]
+    $procmux$1718_CMP0    [$eq]
+    $procmux$1719_CMP0    [$eq]
+    $procmux$1720_CMP0    [$eq]
+    $procmux$1721_CMP0    [$eq]
+    $procmux$1722_CMP0    [$eq]
+    $procmux$1723_CMP0    [$eq]
+    $procmux$1724_CMP0    [$logic_not]
+
+变化模块：$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  cell 总数：2 -> 2
+  新增 cell：2
+  删除 cell：2
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procmux$1698    [$pmux]
+    $procmux$1700_CMP0    [$not]
+
+  删除 cell 名称：
+    $procmux$1730    [$pmux]
+    $procmux$1732_CMP0    [$not]
+
+变化模块：$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  cell 总数：5 -> 5
+  新增 cell：5
+  删除 cell：5
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procmux$1693    [$pmux]
+    $procmux$1694_CMP0    [$eq]
+    $procmux$1695_CMP0    [$eq]
+    $procmux$1696_CMP0    [$eq]
+    $procmux$1697_CMP0    [$logic_not]
+
+  删除 cell 名称：
+    $procmux$1725    [$pmux]
+    $procmux$1726_CMP0    [$eq]
+    $procmux$1727_CMP0    [$eq]
+    $procmux$1728_CMP0    [$eq]
+    $procmux$1729_CMP0    [$logic_not]
+
+变化模块：$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  cell 总数：2 -> 2
+  新增 cell：2
+  删除 cell：2
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procdff$1937    [$adff]
+    $procmux$1675    [$mux]
+
+  删除 cell 名称：
+    $procdff$1990    [$adff]
+    $procmux$1707    [$mux]
+
+变化模块：$paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  cell 总数：1 -> 1
+  新增 cell：1
+  删除 cell：1
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $add$/__DESIGN_ROOT__/core/common/adder.sv:17$151    [$add]
+
+  删除 cell 名称：
+    $add$/__DESIGN_ROOT__/core/common/adder.sv:17$152    [$add]
+
+变化模块：alu
+  cell 总数：67 -> 67
+  新增 cell：37
+  删除 cell：37
+  修改 cell：2
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procmux$1754    [$mux]
+    $procmux$1756    [$mux]
+    $procmux$1757_CMP0    [$eq]
+    $procmux$1761    [$mux]
+    $procmux$1764    [$mux]
+    $procmux$1766    [$mux]
+    $procmux$1767_CMP0    [$eq]
+    $procmux$1771    [$mux]
+    $procmux$1773    [$mux]
+    $procmux$1774_CMP0    [$eq]
+    $procmux$1779    [$mux]
+    $procmux$1781    [$mux]
+    $procmux$1782_CMP0    [$eq]
+    $procmux$1788    [$mux]
+    $procmux$1791    [$mux]
+    $procmux$1793    [$mux]
+    $procmux$1794_CMP0    [$eq]
+    $procmux$1800    [$mux]
+    $procmux$1802    [$mux]
+    $procmux$1803_CMP0    [$eq]
+    $procmux$1805    [$pmux]
+    $procmux$1806_CMP0    [$eq]
+    $procmux$1807_CMP0    [$eq]
+    $procmux$1808_CMP0    [$eq]
+    $procmux$1809_CMP0    [$eq]
+    $procmux$1811_CMP0    [$eq]
+    $procmux$1812_CMP0    [$eq]
+    $procmux$1813_CMP0    [$eq]
+    $procmux$1814_CMP0    [$eq]
+    $procmux$1815_CMP0    [$eq]
+
+  删除 cell 名称：
+    $procmux$1807    [$mux]
+    $procmux$1809    [$mux]
+    $procmux$1814    [$mux]
+    $procmux$1817    [$mux]
+    $procmux$1819    [$mux]
+    $procmux$1824    [$mux]
+    $procmux$1826    [$mux]
+    $procmux$1827_CMP0    [$eq]
+    $procmux$1832    [$mux]
+    $procmux$1834    [$mux]
+    $procmux$1835_CMP0    [$eq]
+    $procmux$1841    [$mux]
+    $procmux$1844    [$mux]
+    $procmux$1846    [$mux]
+    $procmux$1847_CMP0    [$eq]
+    $procmux$1853    [$mux]
+    $procmux$1855    [$mux]
+    $procmux$1856_CMP0    [$eq]
+    $procmux$1858    [$pmux]
+    $procmux$1859_CMP0    [$eq]
+    $procmux$1860_CMP0    [$eq]
+    $procmux$1861_CMP0    [$eq]
+    $procmux$1862_CMP0    [$eq]
+    $procmux$1863_CMP0    [$eq]
+    $procmux$1864_CMP0    [$eq]
+    $procmux$1865_CMP0    [$eq]
+    $procmux$1866_CMP0    [$eq]
+    $procmux$1867_CMP0    [$eq]
+    $procmux$1868_CMP0    [$eq]
+    $procmux$1869_CMP0    [$eq]
+
+  修改 cell 详情：
+
+    修改 cell：$procmux$1810_CMP0
+      type: $eq -> $eq
+      port B: ['0', '1', '0', '0', '1'] -> ['0', '1', '1', '1', '0']
+      port Y: [564] -> [1150]
+
+    修改 cell：$procmux$1820_CMP0
+      type: $eq -> $eq
+      port B: ['1', '0', '0', '0', '1'] -> ['0', '0', '1', '0', '0']
+      port Y: [661] -> [1160]
+
+变化模块：alu_control
+  cell 总数：26 -> 26
+  新增 cell：24
+  删除 cell：24
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $auto$mem.cc:305:emit$154    [$memrd_v2]
+    $auto$mem.cc:305:emit$158    [$memrd_v2]
+    $auto$mem.cc:351:emit$155    [$meminit]
+    $auto$mem.cc:351:emit$159    [$meminit]
+    $procmux$1721    [$pmux]
+    $procmux$1722_CMP0    [$eq]
+    $procmux$1723_CMP0    [$eq]
+    $procmux$1724_CMP0    [$eq]
+    $procmux$1725_CMP0    [$eq]
+    $procmux$1726_CMP0    [$eq]
+    $procmux$1727_CMP0    [$logic_not]
+    $procmux$1729    [$pmux]
+    $procmux$1730_CMP0    [$eq]
+    $procmux$1731_CMP0    [$logic_not]
+    $procmux$1734    [$mux]
+    $procmux$1737    [$mux]
+    $procmux$1740    [$mux]
+    $procmux$1743    [$mux]
+    $procmux$1746    [$pmux]
+    $procmux$1747_CMP0    [$eq]
+    $procmux$1748_CMP0    [$eq]
+    $procmux$1749_CMP0    [$eq]
+    $procmux$1750_CMP0    [$eq]
+    $procmux$1751_CMP0    [$logic_not]
+
+  删除 cell 名称：
+    $auto$mem.cc:305:emit$155    [$memrd_v2]
+    $auto$mem.cc:305:emit$159    [$memrd_v2]
+    $auto$mem.cc:351:emit$156    [$meminit]
+    $auto$mem.cc:351:emit$160    [$meminit]
+    $procmux$1774    [$pmux]
+    $procmux$1775_CMP0    [$eq]
+    $procmux$1776_CMP0    [$eq]
+    $procmux$1777_CMP0    [$eq]
+    $procmux$1778_CMP0    [$eq]
+    $procmux$1779_CMP0    [$eq]
+    $procmux$1780_CMP0    [$logic_not]
+    $procmux$1782    [$pmux]
+    $procmux$1783_CMP0    [$eq]
+    $procmux$1784_CMP0    [$logic_not]
+    $procmux$1787    [$mux]
+    $procmux$1790    [$mux]
+    $procmux$1793    [$mux]
+    $procmux$1796    [$mux]
+    $procmux$1799    [$pmux]
+    $procmux$1800_CMP0    [$eq]
+    $procmux$1801_CMP0    [$eq]
+    $procmux$1802_CMP0    [$eq]
+    $procmux$1803_CMP0    [$eq]
+    $procmux$1804_CMP0    [$logic_not]
+
+变化模块：control_transfer
+  cell 总数：20 -> 10
+  新增 cell：10
+  删除 cell：20
+  修改 cell：0
+
+  cell 类型数量变化：
+    $logic_not                          1 -> 4      delta=+3
+    $mux                               13 -> 0      delta=-13
+
+  新增 cell 名称：
+    $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:18$42    [$logic_not]
+    $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:19$43    [$logic_not]
+    $logic_not$/__DESIGN_ROOT__/core/common/control_transfer.sv:21$44    [$logic_not]
+    $procmux$1712    [$pmux]
+    $procmux$1713_CMP0    [$eq]
+    $procmux$1714_CMP0    [$eq]
+    $procmux$1715_CMP0    [$eq]
+    $procmux$1716_CMP0    [$eq]
+    $procmux$1717_CMP0    [$eq]
+    $procmux$1718_CMP0    [$logic_not]
+
+  删除 cell 名称：
+    $procmux$1744    [$mux]
+    $procmux$1747    [$mux]
+    $procmux$1750    [$mux]
+    $procmux$1753    [$mux]
+    $procmux$1756    [$mux]
+    $procmux$1760    [$pmux]
+    $procmux$1761_CMP0    [$eq]
+    $procmux$1762_CMP0    [$eq]
+    $procmux$1763_CMP0    [$eq]
+    $procmux$1764_CMP0    [$eq]
+    $procmux$1765_CMP0    [$eq]
+    $procmux$1766_CMP0    [$logic_not]
+    $procmux$1767    [$mux]
+    $procmux$1770    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:23$42    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:24$43    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:25$44    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:26$45    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:27$46    [$mux]
+    $ternary$/__DESIGN_ROOT__/core/common/control_transfer.sv:28$47    [$mux]
+
+  模块端口定义发生变化
+
+变化模块：data_memory_interface
+  cell 总数：19 -> 19
+  新增 cell：19
+  删除 cell：19
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$56    [$and]
+    $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$58    [$and]
+    $mul$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:32$45    [$mul]
+    $mul$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:47$52    [$mul]
+    $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$55    [$not]
+    $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$57    [$not]
+    $procmux$1702    [$pmux]
+    $procmux$1703_CMP0    [$eq]
+    $procmux$1704_CMP0    [$eq]
+    $procmux$1705_CMP0    [$logic_not]
+    $procmux$1707    [$pmux]
+    $procmux$1708_CMP0    [$eq]
+    $procmux$1709_CMP0    [$eq]
+    $procmux$1710_CMP0    [$logic_not]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:32$46    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:38$48    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:39$49    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:40$50    [$shl]
+    $shr$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:47$53    [$shr]
+
+  删除 cell 名称：
+    $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$59    [$and]
+    $and$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$61    [$and]
+    $mul$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:32$48    [$mul]
+    $mul$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:47$55    [$mul]
+    $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:53$58    [$not]
+    $not$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:54$60    [$not]
+    $procmux$1734    [$pmux]
+    $procmux$1735_CMP0    [$eq]
+    $procmux$1736_CMP0    [$eq]
+    $procmux$1737_CMP0    [$logic_not]
+    $procmux$1739    [$pmux]
+    $procmux$1740_CMP0    [$eq]
+    $procmux$1741_CMP0    [$eq]
+    $procmux$1742_CMP0    [$logic_not]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:32$49    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:38$51    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:39$52    [$shl]
+    $shl$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:40$53    [$shl]
+    $shr$/__DESIGN_ROOT__/core/common/data_memory_interface.sv:47$56    [$shr]
+
+变化模块：immediate_generator
+  cell 总数：14 -> 14
+  新增 cell：14
+  删除 cell：14
+  修改 cell：0
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $procmux$1678    [$pmux]
+    $procmux$1679_CMP0    [$eq]
+    $procmux$1680_ANY    [$reduce_or]
+    $procmux$1680_CMP0    [$eq]
+    $procmux$1680_CMP1    [$eq]
+    $procmux$1681_CMP0    [$eq]
+    $procmux$1682_ANY    [$reduce_or]
+    $procmux$1682_CMP0    [$eq]
+    $procmux$1682_CMP1    [$eq]
+    $procmux$1683_ANY    [$reduce_or]
+    $procmux$1683_CMP0    [$eq]
+    $procmux$1683_CMP1    [$eq]
+    $procmux$1683_CMP2    [$eq]
+    $procmux$1683_CMP3    [$eq]
+
+  删除 cell 名称：
+    $procmux$1710    [$pmux]
+    $procmux$1711_CMP0    [$eq]
+    $procmux$1712_ANY    [$reduce_or]
+    $procmux$1712_CMP0    [$eq]
+    $procmux$1712_CMP1    [$eq]
+    $procmux$1713_CMP0    [$eq]
+    $procmux$1714_ANY    [$reduce_or]
+    $procmux$1714_CMP0    [$eq]
+    $procmux$1714_CMP1    [$eq]
+    $procmux$1715_ANY    [$reduce_or]
+    $procmux$1715_CMP0    [$eq]
+    $procmux$1715_CMP1    [$eq]
+    $procmux$1715_CMP2    [$eq]
+    $procmux$1715_CMP3    [$eq]
+
+变化模块：regfile
+  cell 总数：291 -> 291
+  新增 cell：233
+  删除 cell：233
+  修改 cell：58
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  新增 cell 名称：
+    $ne$/__DESIGN_ROOT__/core/common/regfile.sv:40$106    [$reduce_bool]
+    $procdff$1829    [$adff]
+    $procdff$1832    [$adff]
+    $procdff$1835    [$adff]
+    $procdff$1838    [$adff]
+    $procdff$1841    [$adff]
+    $procdff$1844    [$adff]
+    $procdff$1847    [$adff]
+    $procdff$1850    [$adff]
+    $procdff$1853    [$adff]
+    $procdff$1856    [$adff]
+    $procdff$1859    [$adff]
+    $procdff$1862    [$adff]
+    $procdff$1865    [$adff]
+    $procdff$1868    [$adff]
+    $procdff$1871    [$adff]
+    $procdff$1874    [$adff]
+    $procdff$1877    [$adff]
+    $procdff$1880    [$adff]
+    $procdff$1883    [$adff]
+    $procdff$1886    [$adff]
+    $procdff$1889    [$adff]
+    $procdff$1892    [$adff]
+    $procdff$1895    [$adff]
+    $procdff$1898    [$adff]
+    $procdff$1901    [$adff]
+    $procdff$1904    [$adff]
+    $procdff$1907    [$adff]
+    $procdff$1910    [$adff]
+    $procdff$1913    [$adff]
+
+  删除 cell 名称：
+    $ne$/__DESIGN_ROOT__/core/common/regfile.sv:40$109    [$reduce_bool]
+    $procdff$1882    [$adff]
+    $procdff$1885    [$adff]
+    $procdff$1888    [$adff]
+    $procdff$1891    [$adff]
+    $procdff$1894    [$adff]
+    $procdff$1897    [$adff]
+    $procdff$1900    [$adff]
+    $procdff$1903    [$adff]
+    $procdff$1906    [$adff]
+    $procdff$1909    [$adff]
+    $procdff$1912    [$adff]
+    $procdff$1915    [$adff]
+    $procdff$1918    [$adff]
+    $procdff$1921    [$adff]
+    $procdff$1924    [$adff]
+    $procdff$1927    [$adff]
+    $procdff$1930    [$adff]
+    $procdff$1933    [$adff]
+    $procdff$1936    [$adff]
+    $procdff$1939    [$adff]
+    $procdff$1942    [$adff]
+    $procdff$1945    [$adff]
+    $procdff$1948    [$adff]
+    $procdff$1951    [$adff]
+    $procdff$1954    [$adff]
+    $procdff$1957    [$adff]
+    $procdff$1960    [$adff]
+    $procdff$1963    [$adff]
+    $procdff$1966    [$adff]
+
+  修改 cell 详情：
+
+    修改 cell：$procmux$1239
+      type: $mux -> $mux
+      port A: [597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628] -> [533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564]
+      port B: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51] -> ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+      port S: [2589] -> [2557]
+      port Y: [2590, 2591, 2592, 2593, 2594, 2595, 2596, 2597, 2598, 2599, 2600, 2601, 2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610, 2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2620, 2621] -> [2558, 2559, 2560, 2561, 2562, 2563, 2564, 2565, 2566, 2567, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2576, 2577, 2578, 2579, 2580, 2581, 2582, 2583, 2584, 2585, 2586, 2587, 2588, 2589]
+
+    修改 cell：$procmux$1240_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '0'] -> ['0', '1', '1', '0', '0']
+      port Y: [2589] -> [2557]
+
+    修改 cell：$procmux$1271
+      type: $mux -> $mux
+      port B: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] -> [2623, 2624, 2625, 2626, 2627, 2628, 2629, 2630, 2631, 2632, 2633, 2634, 2635, 2636, 2637, 2638, 2639, 2640, 2641, 2642, 2643, 2644, 2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2653, 2654]
+      port S: [2654] -> [4]
+      port Y: [2655, 2656, 2657, 2658, 2659, 2660, 2661, 2662, 2663, 2664, 2665, 2666, 2667, 2668, 2669, 2670, 2671, 2672, 2673, 2674, 2675, 2676, 2677, 2678, 2679, 2680, 2681, 2682, 2683, 2684, 2685, 2686] -> [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532]
+
+    修改 cell：$procmux$1363
+      type: $mux -> $mux
+      port A: [2753, 2754, 2755, 2756, 2757, 2758, 2759, 2760, 2761, 2762, 2763, 2764, 2765, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2774, 2775, 2776, 2777, 2778, 2779, 2780, 2781, 2782, 2783, 2784] -> [405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436]
+      port B: [2786, 2787, 2788, 2789, 2790, 2791, 2792, 2793, 2794, 2795, 2796, 2797, 2798, 2799, 2800, 2801, 2802, 2803, 2804, 2805, 2806, 2807, 2808, 2809, 2810, 2811, 2812, 2813, 2814, 2815, 2816, 2817] -> ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+      port S: [116] -> [2753]
+      port Y: [2818, 2819, 2820, 2821, 2822, 2823, 2824, 2825, 2826, 2827, 2828, 2829, 2830, 2831, 2832, 2833, 2834, 2835, 2836, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2845, 2846, 2847, 2848, 2849] -> [2754, 2755, 2756, 2757, 2758, 2759, 2760, 2761, 2762, 2763, 2764, 2765, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2774, 2775, 2776, 2777, 2778, 2779, 2780, 2781, 2782, 2783, 2784, 2785]
+
+    修改 cell：$procmux$1395
+      type: $mux -> $mux
+      port A: [405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436] -> [2754, 2755, 2756, 2757, 2758, 2759, 2760, 2761, 2762, 2763, 2764, 2765, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2774, 2775, 2776, 2777, 2778, 2779, 2780, 2781, 2782, 2783, 2784, 2785]
+      port B: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] -> [2787, 2788, 2789, 2790, 2791, 2792, 2793, 2794, 2795, 2796, 2797, 2798, 2799, 2800, 2801, 2802, 2803, 2804, 2805, 2806, 2807, 2808, 2809, 2810, 2811, 2812, 2813, 2814, 2815, 2816, 2817, 2818]
+      port S: [2850] -> [116]
+      port Y: [2851, 2852, 2853, 2854, 2855, 2856, 2857, 2858, 2859, 2860, 2861, 2862, 2863, 2864, 2865, 2866, 2867, 2868, 2869, 2870, 2871, 2872, 2873, 2874, 2875, 2876, 2877, 2878, 2879, 2880, 2881, 2882] -> [2819, 2820, 2821, 2822, 2823, 2824, 2825, 2826, 2827, 2828, 2829, 2830, 2831, 2832, 2833, 2834, 2835, 2836, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2845, 2846, 2847, 2848, 2849, 2850]
+
+    修改 cell：$procmux$1495
+      type: $mux -> $mux
+      port A: [341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372] -> [277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308]
+      port B: [3014, 3015, 3016, 3017, 3018, 3019, 3020, 3021, 3022, 3023, 3024, 3025, 3026, 3027, 3028, 3029, 3030, 3031, 3032, 3033, 3034, 3035, 3036, 3037, 3038, 3039, 3040, 3041, 3042, 3043, 3044, 3045] -> ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+      port S: [4] -> [2949]
+      port Y: [309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340] -> [2950, 2951, 2952, 2953, 2954, 2955, 2956, 2957, 2958, 2959, 2960, 2961, 2962, 2963, 2964, 2965, 2966, 2967, 2968, 2969, 2970, 2971, 2972, 2973, 2974, 2975, 2976, 2977, 2978, 2979, 2980, 2981]
+
+    修改 cell：$procmux$1527
+      type: $mux -> $mux
+      port B: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'] -> [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+      port S: [3046] -> [2982]
+      port Y: [3047, 3048, 3049, 3050, 3051, 3052, 3053, 3054, 3055, 3056, 3057, 3058, 3059, 3060, 3061, 3062, 3063, 3064, 3065, 3066, 3067, 3068, 3069, 3070, 3071, 3072, 3073, 3074, 3075, 3076, 3077, 3078] -> [2983, 2984, 2985, 2986, 2987, 2988, 2989, 2990, 2991, 2992, 2993, 2994, 2995, 2996, 2997, 2998, 2999, 3000, 3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3013, 3014]
+
+    修改 cell：$procmux$1528_CMP0
+      type: $eq -> $eq
+      port Y: [3046] -> [2982]
+
+    修改 cell：$procmux$295_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '1', '1', '1', '1'] -> ['1', '1', '1', '1', '1']
+      port Y: [3341] -> [3275]
+
+    修改 cell：$procmux$296_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '0', '1', '1', '1'] -> ['0', '1', '1', '1', '1']
+      port Y: [3342] -> [3276]
+
+    修改 cell：$procmux$297_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '0', '1', '1', '1'] -> ['1', '0', '1', '1', '1']
+      port Y: [3343] -> [3277]
+
+    修改 cell：$procmux$298_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '1', '0', '1', '1'] -> ['0', '0', '1', '1', '1']
+      port Y: [3344] -> [3278]
+
+    修改 cell：$procmux$299_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '1', '0', '1', '1'] -> ['1', '1', '0', '1', '1']
+      port Y: [3345] -> [3279]
+
+    修改 cell：$procmux$300_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '0', '0', '1', '1'] -> ['0', '1', '0', '1', '1']
+      port Y: [3346] -> [3280]
+
+    修改 cell：$procmux$301_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '0', '0', '1', '1'] -> ['1', '0', '0', '1', '1']
+      port Y: [3347] -> [3281]
+
+    修改 cell：$procmux$302_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '1', '1', '0', '1'] -> ['0', '0', '0', '1', '1']
+      port Y: [3348] -> [3282]
+
+    修改 cell：$procmux$303_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '1', '1', '0', '1'] -> ['1', '1', '1', '0', '1']
+      port Y: [3349] -> [3283]
+
+    修改 cell：$procmux$304_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '0', '1', '0', '1'] -> ['0', '1', '1', '0', '1']
+      port Y: [3350] -> [3284]
+
+    修改 cell：$procmux$305_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['0', '0', '1', '0', '1'] -> ['1', '0', '1', '0', '1']
+      port Y: [3351] -> [3285]
+
+    修改 cell：$procmux$306_CMP0
+      type: $eq -> $eq
+      port A: [15, 16, 17, 18, 19] -> [10, 11, 12, 13, 14]
+      port B: ['1', '1', '0', '0', '1'] -> ['0', '0', '1', '0', '1']
+      port Y: [3352] -> [3286]
+
+变化模块：singlecycle_control
+  cell 总数：121 -> 93
+  新增 cell：19
+  删除 cell：47
+  修改 cell：74
+
+  cell 类型数量变化：
+    $eq                               110 -> 83     delta=-27
+    $mux                                0 -> 1      delta=+1
+    $pmux                              11 -> 9      delta=-2
+
+  新增 cell 名称：
+    $procmux$161    [$pmux]
+    $procmux$162_CMP0    [$eq]
+    $procmux$173    [$pmux]
+    $procmux$174_CMP0    [$eq]
+    $procmux$185    [$pmux]
+    $procmux$186_CMP0    [$eq]
+    $procmux$197    [$pmux]
+    $procmux$198_CMP0    [$eq]
+    $procmux$209    [$pmux]
+    $procmux$210_CMP0    [$eq]
+    $procmux$221    [$pmux]
+    $procmux$222_CMP0    [$eq]
+    $procmux$233    [$pmux]
+    $procmux$234_CMP0    [$eq]
+    $procmux$245    [$pmux]
+    $procmux$246_CMP0    [$eq]
+    $procmux$257    [$pmux]
+    $procmux$258_CMP0    [$eq]
+    $ternary$/__DESIGN_ROOT__/core/singlecycle/singlecycle_control.sv:25$121    [$mux]
+
+  删除 cell 名称：
+    $procmux$162    [$pmux]
+    $procmux$172_CMP0    [$eq]
+    $procmux$174    [$pmux]
+    $procmux$184_CMP0    [$eq]
+    $procmux$186    [$pmux]
+    $procmux$196_CMP0    [$eq]
+    $procmux$198    [$pmux]
+    $procmux$208_CMP0    [$eq]
+    $procmux$210    [$pmux]
+    $procmux$220_CMP0    [$eq]
+    $procmux$222    [$pmux]
+    $procmux$232_CMP0    [$eq]
+    $procmux$234    [$pmux]
+    $procmux$244_CMP0    [$eq]
+    $procmux$246    [$pmux]
+    $procmux$256_CMP0    [$eq]
+    $procmux$258    [$pmux]
+    $procmux$261_CMP0    [$eq]
+    $procmux$262_CMP0    [$eq]
+    $procmux$263_CMP0    [$eq]
+    $procmux$264_CMP0    [$eq]
+    $procmux$265_CMP0    [$eq]
+    $procmux$266_CMP0    [$eq]
+    $procmux$267_CMP0    [$eq]
+    $procmux$268_CMP0    [$eq]
+    $procmux$270    [$pmux]
+    $procmux$271_CMP0    [$eq]
+    $procmux$272_CMP0    [$eq]
+    $procmux$273_CMP0    [$eq]
+    $procmux$274_CMP0    [$eq]
+
+  修改 cell 详情：
+
+    修改 cell：$procmux$163_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '1', '0', '1', '1'] -> ['1', '1', '1', '0', '0', '1', '1']
+      port Y: [24] -> [25]
+
+    修改 cell：$procmux$164_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '0', '1', '1'] -> ['1', '1', '0', '0', '0', '1', '1']
+      port Y: [25] -> [26]
+
+    修改 cell：$procmux$165_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '0', '1', '1'] -> ['1', '1', '1', '0', '1', '1', '0']
+      port Y: [26] -> [27]
+
+    修改 cell：$procmux$166_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '1', '1', '0'] -> ['1', '1', '0', '0', '1', '1', '0']
+      port Y: [27] -> [28]
+
+    修改 cell：$procmux$167_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '1', '1', '0'] -> ['1', '1', '0', '0', '0', '1', '0']
+      port Y: [28] -> [29]
+
+    修改 cell：$procmux$168_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '0', '1', '0'] -> ['1', '1', '1', '0', '1', '0', '0']
+      port Y: [29] -> [30]
+
+    修改 cell：$procmux$169_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '1', '0', '0'] -> ['1', '1', '0', '0', '1', '0', '0']
+      port Y: [30] -> [31]
+
+    修改 cell：$procmux$170_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '1', '0', '0'] -> ['1', '1', '1', '1', '0', '0', '0']
+      port Y: [31] -> [32]
+
+    修改 cell：$procmux$171_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '1', '0', '0', '0'] -> ['1', '1', '0', '0', '0', '0', '0']
+      port Y: [32] -> [33]
+
+    修改 cell：$procmux$175_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '1', '0', '1', '1'] -> ['1', '1', '1', '0', '0', '1', '1']
+      port Y: [34] -> [35]
+
+    修改 cell：$procmux$176_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '0', '1', '1'] -> ['1', '1', '0', '0', '0', '1', '1']
+      port Y: [35] -> [36]
+
+    修改 cell：$procmux$177_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '0', '1', '1'] -> ['1', '1', '1', '0', '1', '1', '0']
+      port Y: [36] -> [37]
+
+    修改 cell：$procmux$178_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '1', '1', '0'] -> ['1', '1', '0', '0', '1', '1', '0']
+      port Y: [37] -> [38]
+
+    修改 cell：$procmux$179_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '1', '1', '0'] -> ['1', '1', '0', '0', '0', '1', '0']
+      port Y: [38] -> [39]
+
+    修改 cell：$procmux$180_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '0', '1', '0'] -> ['1', '1', '1', '0', '1', '0', '0']
+      port Y: [39] -> [40]
+
+    修改 cell：$procmux$181_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '1', '0', '0'] -> ['1', '1', '0', '0', '1', '0', '0']
+      port Y: [40] -> [41]
+
+    修改 cell：$procmux$182_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '0', '0', '1', '0', '0'] -> ['1', '1', '1', '1', '0', '0', '0']
+      port Y: [41] -> [42]
+
+    修改 cell：$procmux$183_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '1', '0', '0', '0'] -> ['1', '1', '0', '0', '0', '0', '0']
+      port Y: [42] -> [43]
+
+    修改 cell：$procmux$187_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '1', '0', '1', '1'] -> ['1', '1', '1', '0', '0', '1', '1']
+      port Y: [44] -> [45]
+
+    修改 cell：$procmux$188_CMP0
+      type: $eq -> $eq
+      port B: ['1', '1', '1', '0', '0', '1', '1'] -> ['1', '1', '0', '0', '0', '1', '1']
+      port Y: [45] -> [46]
+
+  模块端口定义发生变化
+
+变化模块：singlecycle_ctlpath
+  cell 总数：3 -> 3
+  新增 cell：0
+  删除 cell：0
+  修改 cell：2
+
+  cell 类型数量变化：
+    cell 类型数量没有变化
+
+  修改 cell 详情：
+
+    修改 cell：control_transfer
+      type: control_transfer -> control_transfer
+      port branch_enable: [39] -> None
+      port jal_enable: [40] -> None
+      port jalr_enable: [41] -> None
+      port next_pc_select: [34, 35] -> None
+      port take_branch: None -> [39]
+
+    修改 cell：singlecycle_control
+      type: singlecycle_control -> singlecycle_control
+      port branch_enable: [39] -> None
+      port jal_enable: [40] -> None
+      port jalr_enable: [41] -> None
+      port next_pc_select: None -> [34, 35]
+      port take_branch: None -> [39]
+
+========================================================================
+变化模块数量：13
+  $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+  $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+  $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+  $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+  $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+  alu
+  alu_control
+  control_transfer
+  data_memory_interface
+  immediate_generator
+  regfile
+  singlecycle_control
+  singlecycle_ctlpath
+
+  模块 singlecycle_ctlpath 的下游传播锥
+    起始变化 cell 数量：2
+    最大追踪深度：10
+    下游传播锥 cell 数量：3
+    模块总 cell 数量：3
+    传播锥占模块比例：100.00%
+
+    深度 0：2 个 cell
+      control_transfer    [control_transfer]
+      singlecycle_control    [singlecycle_control]
+
+    深度 1：1 个 cell
+      alu_control    [alu_control]
+
+  传播锥到达的模块输出：
+    alu_function
+    alu_operand_a_select
+    alu_operand_b_select
+    data_mem_read_enable
+    data_mem_write_enable
+    next_pc_select
+    pc_write_enable
+    reg_writeback_select
+    regfile_write_enable
+
+  已输出传播锥 DOT 文件：/workspace/incremental-synthesis/results/eco-003/singlecycle-ctlpath-cone.dot

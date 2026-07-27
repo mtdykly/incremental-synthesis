@@ -1,0 +1,7 @@
+commit 71cbf1d29a86f663b14173566482777c7371b146
+Author:     Marek Materzok <tilk@tilk.eu>
+AuthorDate: Thu May 9 11:42:57 2019 +0200
+Commit:     Marek Materzok <tilk@tilk.eu>
+CommitDate: Thu May 9 11:42:57 2019 +0200
+
+    Common ctltransfer for singlecycle and multicycle.
