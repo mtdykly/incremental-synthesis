@@ -1,0 +1,14 @@
+# 分区综合的内部展平阶段。
+#
+# 调用该脚本之前，外部生成的 Yosys 脚本必须已经完成：
+#   1. read_verilog
+#   2. hierarchy -top <partition_root>
+#   3. proc
+#   4. opt_clean
+#
+# 分区根模块作为当前设计顶层，因此不会被消除。
+# 根模块内部的所有子模块实例在这里展平。
+
+flatten -noscopeinfo
+opt_clean
+check
