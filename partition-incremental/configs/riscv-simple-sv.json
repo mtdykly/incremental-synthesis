@@ -1,0 +1,7 @@
+{
+  "design": "riscv-simple-sv",
+  "top": "riscv_core",
+  "partition_strategy": "top_first_level_instances",
+  "flatten_internal": true,
+  "preserve_partition_root": true
+}

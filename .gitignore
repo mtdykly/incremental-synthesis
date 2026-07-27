@@ -1,0 +1,6 @@
+
+# Partition-based incremental synthesis
+.partition-cache/
+partition-incremental/.tmp/
+results/partition-incremental/
+partition-incremental/**/__pycache__/
