@@ -1,0 +1,43 @@
+{
+  "base_partitions_dir": "results/partition-incremental/riscv-simple-sv/base/partitions",
+  "base_signatures": "results/partition-incremental/riscv-simple-sv/base/partition_signatures.json",
+  "decisions": {
+    "data_memory_interface": {
+      "base_implementation_signature": "970917a61ad1fb3d2db3fe37fe670e4f6f980f2f3844aacb988d6e475b2616c1",
+      "cache_available": true,
+      "cached_netlist": "results/partition-incremental/riscv-simple-sv/base/partitions/data_memory_interface/partition_netlist.v",
+      "new_implementation_signature": "970917a61ad1fb3d2db3fe37fe670e4f6f980f2f3844aacb988d6e475b2616c1",
+      "reasons": [],
+      "status": "reuse"
+    },
+    "singlecycle_ctlpath": {
+      "base_implementation_signature": "636b11acedbe3374c326de6c6e7f569153d5698071ce9a13a6e07054eda1240c",
+      "cache_available": true,
+      "cached_netlist": "results/partition-incremental/riscv-simple-sv/base/partitions/singlecycle_ctlpath/partition_netlist.v",
+      "new_implementation_signature": "636b11acedbe3374c326de6c6e7f569153d5698071ce9a13a6e07054eda1240c",
+      "reasons": [],
+      "status": "reuse"
+    },
+    "singlecycle_datapath": {
+      "base_implementation_signature": "79de0b8a84ce0f5df23f5a32ea9203c093370205cef9db94d66c78945c2101f4",
+      "cache_available": true,
+      "cached_netlist": "results/partition-incremental/riscv-simple-sv/base/partitions/singlecycle_datapath/partition_netlist.v",
+      "new_implementation_signature": "79de0b8a84ce0f5df23f5a32ea9203c093370205cef9db94d66c78945c2101f4",
+      "reasons": [],
+      "status": "reuse"
+    }
+  },
+  "dirty_partitions": [],
+  "interface_changed_partitions": [],
+  "new_signatures": "results/partition-incremental/riscv-simple-sv/base/partition_signatures.json",
+  "reusable_partitions": [
+    "data_memory_interface",
+    "singlecycle_ctlpath",
+    "singlecycle_datapath"
+  ],
+  "schema_version": 1,
+  "top_shell": {
+    "reasons": [],
+    "status": "reuse"
+  }
+}

@@ -1,0 +1,516 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-002/new/partition-frontends/singlecycle_datapath/run_prepare_partition_frontend.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv' to AST representation.
+Generating RTLIL representation for module `\adder'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv' to AST representation.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu_control.sv' to AST representation.
+Generating RTLIL representation for module `\alu_control'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/constants.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/constants.sv' to AST representation.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/control_transfer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/control_transfer.sv' to AST representation.
+Generating RTLIL representation for module `\control_transfer'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/data_memory_interface.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/data_memory_interface.sv' to AST representation.
+Generating RTLIL representation for module `\data_memory_interface'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_data_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_data_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_data_memory_bus'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_memory_bus'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_text_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_text_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_text_memory_bus'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv' to AST representation.
+Generating RTLIL representation for module `\immediate_generator'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv' to AST representation.
+Generating RTLIL representation for module `\instruction_decoder'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer2'.
+Successfully finished Verilog frontend.
+
+14. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer4'.
+Successfully finished Verilog frontend.
+
+15. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer8'.
+Successfully finished Verilog frontend.
+
+16. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv' to AST representation.
+Generating RTLIL representation for module `\regfile'.
+Successfully finished Verilog frontend.
+
+17. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv' to AST representation.
+Generating RTLIL representation for module `\register'.
+Successfully finished Verilog frontend.
+
+18. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/riscv_core.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/riscv_core.sv' to AST representation.
+Generating RTLIL representation for module `\riscv_core'.
+Successfully finished Verilog frontend.
+
+19. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_control.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_control'.
+Successfully finished Verilog frontend.
+
+20. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_ctlpath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_ctlpath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+21. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_datapath'.
+Successfully finished Verilog frontend.
+
+22. Executing HIERARCHY pass (managing design hierarchy).
+
+22.1. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     \register
+Used module:     \multiplexer8
+Used module:         \multiplexer
+Used module:     \multiplexer2
+Used module:     \multiplexer4
+Used module:     \alu
+Used module:     \adder
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+
+22.2. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+Generating RTLIL representation for module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+
+22.3. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+Generating RTLIL representation for module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+
+22.4. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+Generating RTLIL representation for module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \INITIAL = 4194304
+
+22.5. Executing AST frontend in derive mode using pre-parsed AST for module `\register'.
+Parameter \WIDTH = 32
+Parameter \INITIAL = 4194304
+Generating RTLIL representation for module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Parameter \WIDTH = 32
+
+22.6. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer8'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+22.7. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer2'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+22.8. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer4'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+22.9. Executing AST frontend in derive mode using pre-parsed AST for module `\adder'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+
+22.10. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         \multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+Found cached RTLIL representation for module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+Found cached RTLIL representation for module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+Found cached RTLIL representation for module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+
+22.11. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+
+22.12. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\riscv_core'.
+Removing unused module `\register'.
+Removing unused module `\multiplexer8'.
+Removing unused module `\multiplexer4'.
+Removing unused module `\multiplexer2'.
+Removing unused module `\multiplexer'.
+Removing unused module `\example_text_memory_bus'.
+Removing unused module `\example_memory_bus'.
+Removing unused module `\example_data_memory_bus'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\control_transfer'.
+Removing unused module `\alu_control'.
+Removing unused module `\adder'.
+Removed 15 unused modules.
+
+23. Executing PROC pass (convert processes to netlists).
+
+23.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+23.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107 in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107 in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99 in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99 in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93 in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93 in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:22$62 in module immediate_generator.
+Marked 2 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73 in module regfile.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:25$3 in module alu.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23$118 in module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+Removed a total of 3 dead cases.
+
+23.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 24 assignments to connections.
+
+23.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:21$119'.
+  Set init value: \value = 4194304
+
+23.5. Executing PROC_ARST pass (detect async resets in processes).
+
+23.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~9 debug messages>
+
+23.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$117'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$116'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$115'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$114'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$113'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$112'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$111'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$110'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$106_DATA[31:0]$109
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$105'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$104'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$103'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$102'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$98_DATA[31:0]$101
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$97'.
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$96'.
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$92_DATA[31:0]$95
+Creating decoders for process `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:22$62'.
+     1/1: $1\immediate[31:0]
+Creating decoders for process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28$85'.
+Creating decoders for process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+     1/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_EN[31:0]$83
+     2/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_DATA[31:0]$82
+     3/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_ADDR[4:0]$81
+     4/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_EN[31:0]$79
+     5/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_DATA[31:0]$78
+     6/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_ADDR[4:0]$77
+Creating decoders for process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:25$3'.
+     1/1: $1\result[31:0]
+Creating decoders for process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:21$119'.
+Creating decoders for process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23$118'.
+     1/1: $0\value[31:0]
+
+23.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[0]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$117'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[1]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$116'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[2]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$115'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[3]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$114'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[4]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$113'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[5]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$112'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[6]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$111'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[7]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$110'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$106_DATA' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[0]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$105'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[1]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$104'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[2]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$103'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[3]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$102'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$98_DATA' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.\input_array[0]' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$97'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.\input_array[1]' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$96'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$92_DATA' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93'.
+No latch inferred for signal `\immediate_generator.\immediate' from process `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:22$62'.
+No latch inferred for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28$69_EN' from process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28$85'.
+No latch inferred for signal `\alu.\result' from process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:25$3'.
+
+23.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_ADDR' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+  created $dff cell `$procdff$190' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_DATA' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+  created $dff cell `$procdff$191' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_EN' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+  created $dff cell `$procdff$192' with positive edge clock.
+Creating register for signal `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.\value' using process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23$118'.
+  created $dff cell `$procdff$193' with positive edge clock.
+
+23.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+23.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$117'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$116'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$115'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$114'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$113'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$112'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$111'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$110'.
+Found and cleaned up 1 empty switch in `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$107'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$105'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$104'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$103'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$102'.
+Found and cleaned up 1 empty switch in `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$99'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$97'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:24$96'.
+Found and cleaned up 1 empty switch in `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21$93'.
+Found and cleaned up 1 empty switch in `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:22$62'.
+Removing empty process `immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:22$62'.
+Removing empty process `regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28$85'.
+Found and cleaned up 2 empty switches in `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+Removing empty process `regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31$73'.
+Found and cleaned up 1 empty switch in `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:25$3'.
+Removing empty process `alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:25$3'.
+Removing empty process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:21$119'.
+Found and cleaned up 2 empty switches in `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23$118'.
+Removing empty process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23$118'.
+Cleaned up 9 empty switches.
+
+23.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module instruction_decoder.
+Optimizing module immediate_generator.
+Optimizing module singlecycle_datapath.
+Optimizing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module regfile.
+<suppressed ~1 debug messages>
+Optimizing module alu.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+
+24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer..
+Finding unused cells or wires in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer..
+Finding unused cells or wires in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer..
+Finding unused cells or wires in module \instruction_decoder..
+Finding unused cells or wires in module \immediate_generator..
+Finding unused cells or wires in module \singlecycle_datapath..
+Finding unused cells or wires in module $paramod\adder\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \regfile..
+Finding unused cells or wires in module \alu..
+Finding unused cells or wires in module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register..
+Removed 3 unused cells and 67 unused wires.
+<suppressed ~11 debug messages>
+
+25. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer...
+Checking module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer...
+Checking module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer...
+Checking module instruction_decoder...
+Checking module immediate_generator...
+Checking module singlecycle_datapath...
+Checking module $paramod\adder\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000...
+Checking module regfile...
+Checking module alu...
+Checking module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register...
+Found and reported 0 problems.
+
+26. Executing JSON backend.
+
+27. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-002/new/partition-frontends/singlecycle_datapath/frontend.rtlil
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+28. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Deleting now unused module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Deleting now unused module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Deleting now unused module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+Deleting now unused module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module alu.
+Deleting now unused module immediate_generator.
+Deleting now unused module instruction_decoder.
+Deleting now unused module regfile.
+<suppressed ~14 debug messages>
+
+29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+30. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+31. Executing JSON backend.
+
+32. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-002/new/partition-frontends/singlecycle_datapath/flattened.rtlil
+
+33. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      172 wires
+     3506 wire bits
+      116 public wires
+     2937 public wire bits
+       18 ports
+      194 port bits
+        1 memories
+     1024 memory bits
+       75 cells
+        3   $add
+        1   $and
+        1   $dff
+       32   $eq
+        3   $logic_not
+        2   $lt
+        1   $meminit_v2
+        2   $memrd
+        1   $memwr_v2
+       11   $mux
+        2   $not
+        1   $or
+        6   $pmux
+        1   $reduce_bool
+        3   $reduce_or
+        1   $shl
+        1   $shr
+        1   $sshr
+        1   $sub
+        1   $xor
+
+Warnings: 1 unique messages, 4 total
+End of script. Logfile hash: 4389fc07bd, time: 0.06s, user: 0.06s, system: 0.02s, MEM: 19.84 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 48% 22x read_verilog (0 sec), 10% 2x opt_clean (0 sec), ...

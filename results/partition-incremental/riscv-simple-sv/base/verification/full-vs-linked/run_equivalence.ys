@@ -1,0 +1,46 @@
+# ==================================================
+# Prepare full synthesis result as the gold design.
+# ==================================================
+read_json "/workspace/incremental-synthesis/results/partition-incremental/riscv-simple-sv/base/full-reference/full_reference.json"
+hierarchy -check -top riscv_core
+flatten -noscopeinfo
+opt_clean
+async2sync
+opt_clean
+rename riscv_core gold
+design -stash gold_design
+design -reset
+
+# ==================================================
+# Prepare partition-linked result as the gate design.
+# ==================================================
+read_json "/workspace/incremental-synthesis/results/partition-incremental/riscv-simple-sv/base/linked/linked.json"
+hierarchy -check -top riscv_core
+flatten -noscopeinfo
+opt_clean
+async2sync
+opt_clean
+rename riscv_core gate
+design -stash gate_design
+design -reset
+
+# Restore both normalized designs.
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+# Construct the equivalence-checking design.
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/riscv-simple-sv/base/verification/full-vs-linked/equiv_before_proof.json"
+
+# First try direct SAT proofs.
+equiv_simple -seq 5
+equiv_status
+
+# Prove remaining sequential equivalence cells.
+equiv_induct -seq 10
+
+# Fail the run if any equivalence cell remains unproven.
+equiv_status -assert

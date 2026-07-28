@@ -1,0 +1,43 @@
+{
+  "base_partitions_dir": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions",
+  "base_signatures": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partition_signatures.json",
+  "decisions": {
+    "data_memory_interface": {
+      "base_implementation_signature": "f7b733073418772901c2554afa44da403b3bffc7791805d72ec8cc14a932fc1e",
+      "cache_available": true,
+      "cached_netlist": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/data_memory_interface/partition_netlist.v",
+      "new_implementation_signature": "f7b733073418772901c2554afa44da403b3bffc7791805d72ec8cc14a932fc1e",
+      "reasons": [],
+      "status": "reuse"
+    },
+    "singlecycle_ctlpath": {
+      "base_implementation_signature": "571029d026877540b421d97fcccba6c69f2c9e5ac3a65fe5f7b9ac8200b38392",
+      "cache_available": true,
+      "cached_netlist": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/singlecycle_ctlpath/partition_netlist.v",
+      "new_implementation_signature": "571029d026877540b421d97fcccba6c69f2c9e5ac3a65fe5f7b9ac8200b38392",
+      "reasons": [],
+      "status": "reuse"
+    },
+    "singlecycle_datapath": {
+      "base_implementation_signature": "8f288ce1b71369d143f94da8408c3944afa9f1239a5540fb13a6f90b773627b2",
+      "cache_available": true,
+      "cached_netlist": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/singlecycle_datapath/partition_netlist.v",
+      "new_implementation_signature": "8f288ce1b71369d143f94da8408c3944afa9f1239a5540fb13a6f90b773627b2",
+      "reasons": [],
+      "status": "reuse"
+    }
+  },
+  "dirty_partitions": [],
+  "interface_changed_partitions": [],
+  "new_signatures": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partition_signatures.json",
+  "reusable_partitions": [
+    "data_memory_interface",
+    "singlecycle_ctlpath",
+    "singlecycle_datapath"
+  ],
+  "schema_version": 1,
+  "top_shell": {
+    "reasons": [],
+    "status": "reuse"
+  }
+}

@@ -5,11 +5,6 @@ set -euo pipefail
 usage() {
     echo "Usage:"
     echo "  $0 <case_name> <base_source_dir> <new_source_dir>"
-    echo
-    echo "Example:"
-    echo "  $0 eco-001 \\"
-    echo "     benchmarks/riscv-eco-001-base \\"
-    echo "     benchmarks/riscv-eco-001-new"
 }
 
 if [[ $# -ne 3 ]]; then
@@ -23,7 +18,6 @@ NEW_SRC="$(realpath "$3")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
-
 BASE_OUT="$OUT/base"
 NEW_OUT="$OUT/new"
 PLAN_OUT="$OUT/plan"
@@ -32,26 +26,23 @@ EXPORT_HIERARCHY="$REPO_ROOT/partition-incremental/scripts/export_hierarchy.sh"
 EXTRACT_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/extract_first_level_partitions.py"
 SYNTH_ALL="$REPO_ROOT/partition-incremental/scripts/synth_all_partitions.sh"
 CHECK_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/check_partition_outputs.sh"
+PREPARE_ALL_FRONTENDS="$REPO_ROOT/partition-incremental/scripts/prepare_all_partition_frontends.sh"
 COMPUTE_SIGNATURES="$REPO_ROOT/partition-incremental/scripts/compute_partition_signatures.py"
 COMPARE_SIGNATURES="$REPO_ROOT/partition-incremental/scripts/compare_partition_signatures.py"
 
 PARTITION_FLOW="$REPO_ROOT/partition-incremental/yosys/synth_partition.ys"
-PARTITION_SCRIPT="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
+PARTITION_FRONTEND_SCRIPT="$REPO_ROOT/partition-incremental/scripts/prepare_partition_frontend.sh"
 TOP_SCRIPT="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
 
 YOSYS_VERSION="$(yosys -V | head -n 1)"
 
-if [[ ! -d "$BASE_SRC" ]]; then
-    echo "ERROR: Base source directory does not exist:"
-    echo "  $BASE_SRC"
-    exit 1
-fi
-
-if [[ ! -d "$NEW_SRC" ]]; then
-    echo "ERROR: New source directory does not exist:"
-    echo "  $NEW_SRC"
-    exit 1
-fi
+for source_dir in "$BASE_SRC" "$NEW_SRC"; do
+    if [[ ! -d "$source_dir" ]]; then
+        echo "ERROR: source directory does not exist:"
+        echo "  $source_dir"
+        exit 1
+    fi
+done
 
 mkdir -p "$BASE_OUT" "$NEW_OUT" "$PLAN_OUT"
 
@@ -60,10 +51,7 @@ echo "============================================================"
 echo "1. Prepare Base hierarchy"
 echo "============================================================"
 
-"$EXPORT_HIERARCHY" \
-    "$BASE_SRC" \
-    "$BASE_OUT" \
-    riscv_core
+"$EXPORT_HIERARCHY" "$BASE_SRC" "$BASE_OUT" riscv_core
 
 python3 "$EXTRACT_PARTITIONS" \
     "$BASE_OUT/frontend_hier.json" \
@@ -74,6 +62,8 @@ echo
 echo "============================================================"
 echo "2. Build Base partition cache"
 echo "============================================================"
+
+rm -rf "$BASE_OUT/partitions"
 
 "$SYNTH_ALL" \
     "$BASE_SRC" \
@@ -86,16 +76,17 @@ echo "============================================================"
 
 echo
 echo "============================================================"
-echo "3. Compute Base signatures"
+echo "3. Compute Base signatures from isolated partition IR"
 echo "============================================================"
 
 python3 "$COMPUTE_SIGNATURES" \
     --hier-json "$BASE_OUT/frontend_hier.json" \
     --manifest "$BASE_OUT/partition_manifest.json" \
+    --partition-ir-dir "$BASE_OUT/partitions" \
     --output "$BASE_OUT/partition_signatures.json" \
     --yosys-version "$YOSYS_VERSION" \
     --partition-flow-file "$PARTITION_FLOW" \
-    --partition-flow-file "$PARTITION_SCRIPT" \
+    --partition-flow-file "$PARTITION_FRONTEND_SCRIPT" \
     --top-flow-file "$TOP_SCRIPT"
 
 echo
@@ -109,21 +100,13 @@ python3 "$COMPARE_SIGNATURES" \
     --base-partitions-dir "$BASE_OUT/partitions" \
     --output "$BASE_OUT/self_reuse_plan.json"
 
-SELF_DIRTY_COUNT="$(
-    jq '.dirty_partitions | length' \
-        "$BASE_OUT/self_reuse_plan.json"
-)"
-
-if [[ "$SELF_DIRTY_COUNT" -ne 0 ]]; then
+if [[ "$(jq '.dirty_partitions | length' "$BASE_OUT/self_reuse_plan.json")" -ne 0 ]]; then
     echo "ERROR: Base self-check produced dirty partitions."
     jq '.' "$BASE_OUT/self_reuse_plan.json"
     exit 1
 fi
 
-if [[ "$(
-    jq -r '.top_shell.status' \
-        "$BASE_OUT/self_reuse_plan.json"
-)" != "reuse" ]]; then
+if [[ "$(jq -r '.top_shell.status' "$BASE_OUT/self_reuse_plan.json")" != "reuse" ]]; then
     echo "ERROR: Base top shell cannot reuse itself."
     exit 1
 fi
@@ -132,42 +115,59 @@ echo "PASS: Base self-check marked all partitions reusable."
 
 echo
 echo "============================================================"
-echo "5. Prepare New hierarchy only"
+echo "5. Prepare New hierarchy"
 echo "============================================================"
 
-# 删除以前可能残留的 New 分区综合结果，
-# 保证本次检测没有使用 New 分区综合网表。
-rm -rf "$NEW_OUT/partitions"
+rm -rf "$NEW_OUT/partitions" "$NEW_OUT/partition-frontends"
 
-"$EXPORT_HIERARCHY" \
-    "$NEW_SRC" \
-    "$NEW_OUT" \
-    riscv_core
+"$EXPORT_HIERARCHY" "$NEW_SRC" "$NEW_OUT" riscv_core
 
 python3 "$EXTRACT_PARTITIONS" \
     "$NEW_OUT/frontend_hier.json" \
     --top riscv_core \
     --output "$NEW_OUT/partition_manifest.json"
 
-python3 "$COMPUTE_SIGNATURES" \
-    --hier-json "$NEW_OUT/frontend_hier.json" \
-    --manifest "$NEW_OUT/partition_manifest.json" \
-    --output "$NEW_OUT/partition_signatures.json" \
-    --yosys-version "$YOSYS_VERSION" \
-    --partition-flow-file "$PARTITION_FLOW" \
-    --partition-flow-file "$PARTITION_SCRIPT" \
-    --top-flow-file "$TOP_SCRIPT"
+echo
+echo "============================================================"
+echo "6. Prepare New isolated partition IR without synthesis"
+echo "============================================================"
 
-if [[ -d "$NEW_OUT/partitions" ]]; then
-    echo "ERROR: New partition synthesis directory unexpectedly exists."
+"$PREPARE_ALL_FRONTENDS" \
+    "$NEW_SRC" \
+    "$NEW_OUT/partition_manifest.json" \
+    "$NEW_OUT/partition-frontends"
+
+if find "$NEW_OUT/partition-frontends" \
+    -type f \
+    \( -name 'synth.json' \
+       -o -name 'synth.rtlil' \
+       -o -name 'partition_netlist.v' \) \
+    | grep -q .
+then
+    echo "ERROR: New frontend preparation produced synthesis outputs."
     exit 1
 fi
 
-echo "PASS: New detection completed without partition synthesis."
+echo "PASS: New partition IR generated without synthesis."
 
 echo
 echo "============================================================"
-echo "6. Compare Base and New signatures"
+echo "7. Compute New signatures from isolated partition IR"
+echo "============================================================"
+
+python3 "$COMPUTE_SIGNATURES" \
+    --hier-json "$NEW_OUT/frontend_hier.json" \
+    --manifest "$NEW_OUT/partition_manifest.json" \
+    --partition-ir-dir "$NEW_OUT/partition-frontends" \
+    --output "$NEW_OUT/partition_signatures.json" \
+    --yosys-version "$YOSYS_VERSION" \
+    --partition-flow-file "$PARTITION_FLOW" \
+    --partition-flow-file "$PARTITION_FRONTEND_SCRIPT" \
+    --top-flow-file "$TOP_SCRIPT"
+
+echo
+echo "============================================================"
+echo "8. Compare Base and New signatures"
 echo "============================================================"
 
 python3 "$COMPARE_SIGNATURES" \
@@ -178,7 +178,7 @@ python3 "$COMPARE_SIGNATURES" \
 
 echo
 echo "============================================================"
-echo "7. Reuse plan"
+echo "9. Reuse plan"
 echo "============================================================"
 
 jq '{
@@ -189,68 +189,13 @@ jq '{
 }' "$PLAN_OUT/reuse_plan.json"
 
 echo
-echo "============================================================"
-echo "8. Changed internal modules"
-echo "============================================================"
+echo "Detailed decisions:"
 
-python3 - \
-    "$BASE_OUT/partition_signatures.json" \
-    "$NEW_OUT/partition_signatures.json" <<'PY'
-import json
-import sys
-
-with open(sys.argv[1], encoding="utf-8") as file:
-    base = json.load(file)
-
-with open(sys.argv[2], encoding="utf-8") as file:
-    new = json.load(file)
-
-all_partitions = sorted(
-    set(base["partitions"]) | set(new["partitions"])
-)
-
-found_change = False
-
-for partition in all_partitions:
-    old_partition = base["partitions"].get(partition)
-    new_partition = new["partitions"].get(partition)
-
-    if old_partition is None:
-        print(f"[{partition}] new partition")
-        found_change = True
-        continue
-
-    if new_partition is None:
-        print(f"[{partition}] removed partition")
-        found_change = True
-        continue
-
-    old_modules = {
-        item["module_name"]: item["module_signature"]
-        for item in old_partition["internal_module_signatures"]
-    }
-
-    new_modules = {
-        item["module_name"]: item["module_signature"]
-        for item in new_partition["internal_module_signatures"]
-    }
-
-    changed_modules = [
-        name
-        for name in sorted(set(old_modules) | set(new_modules))
-        if old_modules.get(name) != new_modules.get(name)
-    ]
-
-    if changed_modules:
-        found_change = True
-        print(f"[{partition}]")
-
-        for name in changed_modules:
-            print(f"  {name}")
-
-if not found_change:
-    print("No internal module signature changes.")
-PY
+jq -r '
+    .decisions
+    | to_entries[]
+    | "\(.key): \(.value.status) [\(.value.reasons | join(", "))]"
+' "$PLAN_OUT/reuse_plan.json"
 
 echo
 echo "Validation completed:"

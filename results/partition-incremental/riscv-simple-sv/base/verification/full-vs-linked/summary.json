@@ -1,0 +1,7 @@
+{
+  "status": "proven",
+  "top_module": "riscv_core",
+  "gold_design": "/workspace/incremental-synthesis/results/partition-incremental/riscv-simple-sv/base/full-reference/full_reference.json",
+  "gate_design": "/workspace/incremental-synthesis/results/partition-incremental/riscv-simple-sv/base/linked/linked.json",
+  "ff_normalization": "async2sync"
+}
