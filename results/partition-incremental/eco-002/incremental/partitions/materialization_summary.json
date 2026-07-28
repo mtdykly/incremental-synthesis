@@ -1,0 +1,41 @@
+{
+  "partitions": [
+    {
+      "partition": "data_memory_interface",
+      "root_module": "data_memory_interface",
+      "action": "reuse",
+      "source_kind": "base_cache",
+      "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/data_memory_interface",
+      "reasons": [],
+      "base_implementation_signature": "f7b733073418772901c2554afa44da403b3bffc7791805d72ec8cc14a932fc1e",
+      "new_implementation_signature": "f7b733073418772901c2554afa44da403b3bffc7791805d72ec8cc14a932fc1e",
+      "partition_netlist_sha256": "164f31183f97cedafad83d2eaa25a3706423b112fe2e771501a5f4222f7d8a44"
+    },
+    {
+      "partition": "singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "action": "reuse",
+      "source_kind": "base_cache",
+      "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/singlecycle_ctlpath",
+      "reasons": [],
+      "base_implementation_signature": "571029d026877540b421d97fcccba6c69f2c9e5ac3a65fe5f7b9ac8200b38392",
+      "new_implementation_signature": "571029d026877540b421d97fcccba6c69f2c9e5ac3a65fe5f7b9ac8200b38392",
+      "partition_netlist_sha256": "e532681d77df6b01ed154ce062e2d24530da8595aeddba6880711a7896c99ac0"
+    },
+    {
+      "partition": "singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "action": "rebuild",
+      "source_kind": "new_synthesis",
+      "source_path": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new",
+      "reasons": [
+        "implementation_changed"
+      ],
+      "base_implementation_signature": "8f288ce1b71369d143f94da8408c3944afa9f1239a5540fb13a6f90b773627b2",
+      "new_implementation_signature": "66a3f4caa7f19f50db658bad3eaab714b35fc3bf2769d3aa815009a8ce6874c3",
+      "partition_netlist_sha256": "b19a63dd0b485bcf5f426f88c588cceed402555170a81ad32fe4247725a09271"
+    }
+  ],
+  "reuse_count": 2,
+  "rebuild_count": 1
+}

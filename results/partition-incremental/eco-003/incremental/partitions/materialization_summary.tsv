@@ -1,0 +1,6 @@
+partition	root_module	action	source	build_seconds
+data_memory_interface	data_memory_interface	reuse	base_cache	0.000
+immediate_generator	immediate_generator	reuse	base_cache	0.000
+instruction_decoder	instruction_decoder	reuse	base_cache	0.000
+singlecycle_ctlpath	singlecycle_ctlpath	rebuild	new_synthesis	0.23
+singlecycle_datapath	singlecycle_datapath	reuse	base_cache	0.000

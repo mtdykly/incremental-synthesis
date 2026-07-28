@@ -1,0 +1,11 @@
+{
+  "partition": "data_memory_interface",
+  "root_module": "data_memory_interface",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/data_memory_interface",
+  "reasons": [],
+  "base_implementation_signature": "42f5a0307acac4df98877fa432c9645d1d8ec5c9b0615dc9cd8d1ff75813af93",
+  "new_implementation_signature": "42f5a0307acac4df98877fa432c9645d1d8ec5c9b0615dc9cd8d1ff75813af93",
+  "partition_netlist_sha256": "f5a7f7d25317c7bbc16d037a69ea77cb316eb9707cf93db10994f7055d53c7a0"
+}

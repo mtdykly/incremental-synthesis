@@ -1,0 +1,6 @@
+iteration,order,full_seconds,incremental_seconds,speedup,improvement_percent,reuse_count,rebuild_count,top_shell_action
+1,full-first,2.39,5.41,0.441774,-126.359833,2,1,reuse
+2,incremental-first,2.38,5.46,0.435897,-129.411765,2,1,reuse
+3,full-first,2.34,5.46,0.428571,-133.333333,2,1,reuse
+4,incremental-first,2.34,5.40,0.433333,-130.769231,2,1,reuse
+5,full-first,2.34,5.33,0.439024,-127.777778,2,1,reuse

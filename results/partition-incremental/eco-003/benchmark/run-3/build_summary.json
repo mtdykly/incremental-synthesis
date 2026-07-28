@@ -1,0 +1,10 @@
+{
+  "case_name": "eco-003",
+  "reuse_plan": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/plan/reuse_plan.json",
+  "reuse_count": 4,
+  "rebuild_count": 1,
+  "top_shell_action": "reuse",
+  "linked_json": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked.json",
+  "linked_netlist": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked_netlist.v",
+  "incremental_build_seconds": 7.336811
+}

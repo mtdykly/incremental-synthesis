@@ -942,6 +942,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
         1   singlecycle_datapath
 
 Warnings: 1 unique messages, 4 total
-End of script. Logfile hash: 868036cb7d, time: 0.06s, user: 0.06s, system: 0.01s, MEM: 19.48 MB peak
+End of script. Logfile hash: 868036cb7d, time: 0.06s, user: 0.07s, system: 0.01s, MEM: 19.39 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 51% 23x read_verilog (0 sec), 9% 1x opt_clean (0 sec), ...
+Time spent: 50% 23x read_verilog (0 sec), 9% 1x opt_clean (0 sec), ...

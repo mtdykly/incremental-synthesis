@@ -1,0 +1,4240 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "singlecycle_ctlpath": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:9.1-56.10"
+      },
+      "ports": {
+        "inst_opcode": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8 ]
+        },
+        "inst_funct3": {
+          "direction": "input",
+          "bits": [ 9, 10, 11 ]
+        },
+        "inst_funct7": {
+          "direction": "input",
+          "bits": [ 12, 13, 14, 15, 16, 17, 18 ]
+        },
+        "alu_result_equal_zero": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "pc_write_enable": {
+          "direction": "output",
+          "bits": [ 20 ]
+        },
+        "regfile_write_enable": {
+          "direction": "output",
+          "bits": [ 21 ]
+        },
+        "alu_operand_a_select": {
+          "direction": "output",
+          "bits": [ 22 ]
+        },
+        "alu_operand_b_select": {
+          "direction": "output",
+          "bits": [ 23 ]
+        },
+        "data_mem_read_enable": {
+          "direction": "output",
+          "bits": [ 24 ]
+        },
+        "data_mem_write_enable": {
+          "direction": "output",
+          "bits": [ 25 ]
+        },
+        "reg_writeback_select": {
+          "direction": "output",
+          "bits": [ 26, 27, 28 ]
+        },
+        "alu_function": {
+          "direction": "output",
+          "bits": [ 29, 30, 31, 32, 33 ]
+        },
+        "next_pc_select": {
+          "direction": "output",
+          "bits": [ 34, 35 ]
+        }
+      },
+      "cells": {
+        "$flatten\\alu_control.$auto$mem.cc:305:emit$125": {
+          "hide_name": 1,
+          "type": "$memrd_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000011",
+            "ARST_VALUE": "xxxxx",
+            "CE_OVER_SRST": "00000000000000000000000000000000",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "COLLISION_X_MASK": "",
+            "INIT_VALUE": "xxxxx",
+            "MEMID": "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$124",
+            "SRST_VALUE": "xxxxx",
+            "TRANSPARENCY_MASK": "",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:80.13-90.20"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "ARST": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input",
+            "SRST": "input"
+          },
+          "connections": {
+            "ADDR": [ 9, 10, 11 ],
+            "ARST": [ "0" ],
+            "CLK": [ "x" ],
+            "DATA": [ 36, 37, 38, 39, 40 ],
+            "EN": [ "1" ],
+            "SRST": [ "0" ]
+          }
+        },
+        "$flatten\\alu_control.$auto$mem.cc:305:emit$129": {
+          "hide_name": 1,
+          "type": "$memrd_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000011",
+            "ARST_VALUE": "xxxxx",
+            "CE_OVER_SRST": "00000000000000000000000000000000",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "COLLISION_X_MASK": "",
+            "INIT_VALUE": "xxxxx",
+            "MEMID": "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$128",
+            "SRST_VALUE": "xxxxx",
+            "TRANSPARENCY_MASK": "",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:48.9-58.16"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "ARST": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input",
+            "SRST": "input"
+          },
+          "connections": {
+            "ADDR": [ 9, 10, 11 ],
+            "ARST": [ "0" ],
+            "CLK": [ "x" ],
+            "DATA": [ 41, 42, 43, 44, 45 ],
+            "EN": [ "1" ],
+            "SRST": [ "0" ]
+          }
+        },
+        "$flatten\\alu_control.$auto$mem.cc:351:emit$126": {
+          "hide_name": 1,
+          "type": "$meminit",
+          "parameters": {
+            "ABITS": "00000000000000000000000000100000",
+            "MEMID": "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$124",
+            "PRIORITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000101",
+            "WORDS": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:80.13-90.20"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "DATA": "input"
+          },
+          "connections": {
+            "ADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "DATA": [ "1", "1", "0", "1", "0", "0", "0", "1", "1", "0", "1", "0", "1", "1", "0", "0", "1", "1", "1", "0", "1", "1", "1", "1", "0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "1", "0", "1", "0", "0", "1" ]
+          }
+        },
+        "$flatten\\alu_control.$auto$mem.cc:351:emit$130": {
+          "hide_name": 1,
+          "type": "$meminit",
+          "parameters": {
+            "ABITS": "00000000000000000000000000100000",
+            "MEMID": "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$128",
+            "PRIORITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000101",
+            "WORDS": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:48.9-58.16"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "DATA": "input"
+          },
+          "connections": {
+            "ADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "DATA": [ "1", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "1", "1", "0", "0", "1", "1", "1", "0", "0", "0", "0", "0", "1", "0", "0", "0", "1", "0", "0", "1", "0", "0", "1", "0", "0", "1", "0", "1", "0" ]
+          }
+        },
+        "$flatten\\alu_control.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43$35": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.31-43.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10 ],
+            "B": [ "1", "0" ],
+            "Y": [ 46 ]
+          }
+        },
+        "$flatten\\alu_control.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43$36": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.13-43.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 46 ],
+            "Y": [ 47 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$141": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000110",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:73.45-73.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "0", "0", "0", "1", "1", "0", "0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0" ],
+            "S": [ 48, 49, 50, 51, 52, 53 ],
+            "Y": [ 54, 55, 56, 57, 58 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$142_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:73.45-73.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 48 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$143_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:72.46-72.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 49 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$144_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:71.46-71.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 50 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$145_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:70.46-70.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 51 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$146_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:69.46-69.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 52 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$147_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.9-76.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:68.27-68.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$149": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:61.9-65.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:62.51-62.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ "1", "0", "1", "0", "0", "0", "1", "0", "0", "0" ],
+            "S": [ 59, 60 ],
+            "Y": [ 61, 62, 63, 64, 65 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$150_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:61.9-65.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:62.51-62.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 59 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$151_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:61.9-65.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:61.27-61.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$154": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.9-45.46|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.13-43.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41, 42, 43, 44, 45 ],
+            "B": [ 61, 62, 63, 64, 65 ],
+            "S": [ 47 ],
+            "Y": [ 66, 67, 68, 69, 70 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$157": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:38.14-40.58|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:38.17-38.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41, 42, 43, 44, 45 ],
+            "B": [ 36, 37, 38, 39, 40 ],
+            "S": [ 12 ],
+            "Y": [ 71, 72, 73, 74, 75 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$160": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:36.9-40.58|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:36.13-36.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71, 72, 73, 74, 75 ],
+            "B": [ "x", "x", "x", "x", "x" ],
+            "S": [ 17 ],
+            "Y": [ 76, 77, 78, 79, 80 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$163": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:36.9-40.58|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:36.13-36.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76, 77, 78, 79, 80 ],
+            "B": [ 61, 62, 63, 64, 65 ],
+            "S": [ 17 ],
+            "Y": [ 81, 82, 83, 84, 85 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$166": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000101",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:30.56-30.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 54, 55, 56, 57, 58, 66, 67, 68, 69, 70, 81, 82, 83, 84, 85, "1", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 86, 87, 88, 89, 90 ],
+            "Y": [ 29, 30, 31, 32, 33 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$167_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:30.56-30.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91, 92, 93 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 86 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$168_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:29.56-29.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91, 92, 93 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 87 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$169_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:28.55-28.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91, 92, 93 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 88 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$170_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:27.54-27.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91, 92, 93 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 89 ]
+          }
+        },
+        "$flatten\\alu_control.$procmux$171_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.9-33.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:26.27-26.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 91, 92, 93 ],
+            "Y": [ 90 ]
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18$42": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18.36-18.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "Y": [ 94 ]
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19$43": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19.36-19.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "Y": [ 95 ]
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21$44": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21.35-21.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "Y": [ 96 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$132": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000110",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21.54-21.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 19, 96, 19, 95, 94, 19 ],
+            "S": [ 97, 98, 99, 100, 101, 102 ],
+            "Y": [ 103 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$133_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21.54-21.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 97 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$134_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:20.54-20.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 98 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$135_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19.55-19.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 99 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$136_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18.55-18.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 100 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$137_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:17.54-17.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 101 ]
+          }
+        },
+        "$flatten\\control_transfer.$procmux$138_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.9-24.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:16.27-16.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11 ],
+            "Y": [ 102 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$173": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ "0", "1", "0", "0", "1", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0" ],
+            "S": [ 104, 105, 106, 107, 108, 109, 110, 111, 112, 113 ],
+            "Y": [ 26, 27, 28 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$174_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 104 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$175_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 105 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$176_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 106 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$177_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 107 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$178_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 108 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$179_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 109 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$180_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 110 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$181_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 111 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$182_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 112 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$183_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 113 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$185": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "S": [ 114, 115, 116, 117, 118, 119, 120, 121, 122, 123 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$186_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 114 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$187_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 115 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$188_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 116 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$189_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 117 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$190_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 118 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$191_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 119 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$192_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 120 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$193_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 121 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$194_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 122 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$195_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 123 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$197": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ "1", "0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "0", "1", "1", "0", "0", "0", "0", "1", "0", "0" ],
+            "S": [ 124, 125, 126, 127, 128, 129, 130, 131, 132, 133 ],
+            "Y": [ 91, 92, 93 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$198_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 124 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$199_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 125 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$200_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 126 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$201_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 127 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$202_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 128 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$203_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 129 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$204_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 130 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$205_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 131 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$206_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 132 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$207_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 133 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$209": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1", "1", "0", "1" ],
+            "S": [ 134, 135, 136, 137, 138, 139, 140, 141, 142, 143 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$210_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 134 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$211_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 135 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$212_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 136 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$213_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 137 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$214_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 138 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$215_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 139 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$216_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 140 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$217_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 141 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$218_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 142 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$219_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 143 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$221": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", "0", "0", "0", "0", "0", "1", "0", "0", "0" ],
+            "S": [ 144, 145, 146, 147, 148, 149, 150, 151, 152, 153 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$222_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 144 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$223_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 145 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$224_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 146 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$225_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 147 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$226_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 148 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$227_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 149 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$228_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 150 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$229_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 151 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$230_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 152 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$231_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 153 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$233": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", "1", "0", "1", "1", "0", "1", "1", "0", "1" ],
+            "S": [ 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$234_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 154 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$235_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 155 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$236_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 156 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$237_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 157 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$238_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 158 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$239_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 159 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$240_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 160 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$241_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 161 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$242_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 162 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$243_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 163 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$245": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "0", "0", "0", "0", "1", "0", "0", "0", "0" ],
+            "S": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$246_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 164 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$247_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 165 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$248_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 166 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$249_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 167 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$250_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 168 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$251_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 169 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$252_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 170 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$253_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 171 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$254_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 172 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$255_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 173 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$257": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "S": [ 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$258_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:151.16-151.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 174 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$259_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:142.16-142.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 175 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$260_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:123.16-123.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 176 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$261_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:114.16-114.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 177 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$262_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:93.16-93.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "1", "0" ],
+            "Y": [ 178 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$263_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:85.16-85.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 179 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$264_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:76.16-76.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 180 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$265_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:67.16-67.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 181 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$266_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:50.16-50.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "0", "0" ],
+            "Y": [ 182 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$267_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.9-185.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:41.27-41.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 183 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$269": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000011",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:24.9-29.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:26.50-26.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "0", "0", "1", 184, 185 ],
+            "S": [ 186, 187, 188 ],
+            "Y": [ 34, 35 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$270_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:24.9-29.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:26.50-26.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 186 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$271_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:24.9-29.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25.70-25.70"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 187 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$272_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:24.9-29.16|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:24.27-24.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 188 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25$121": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25.42-25.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "0" ],
+            "S": [ 103 ],
+            "Y": [ 184, 185 ]
+          }
+        }
+      },
+      "memories": {
+        "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$124": {
+          "hide_name": 1,
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:80.13-90.20"
+          },
+          "width": 5,
+          "start_offset": 0,
+          "size": 8
+        },
+        "$flatten\\alu_control.$auto$proc_rom.cc:155:do_switch$128": {
+          "hide_name": 1,
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:48.9-58.16"
+          },
+          "width": 5,
+          "start_offset": 0,
+          "size": 8
+        }
+      },
+      "netnames": {
+        "$flatten\\alu_control.$2\\op_funct[4:0]": {
+          "hide_name": 1,
+          "bits": [ 76, 77, 78, 79, 80 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:35.16-35.16"
+          }
+        },
+        "$flatten\\alu_control.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43$35_Y": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.31-43.56"
+          }
+        },
+        "$flatten\\alu_control.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43$36_Y": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:43.13-43.56"
+          }
+        },
+        "$flatten\\alu_control.$procmux$142_CMP": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$143_CMP": {
+          "hide_name": 1,
+          "bits": [ 49 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$144_CMP": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$145_CMP": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$146_CMP": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$147_CMP": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$150_CMP": {
+          "hide_name": 1,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$151_CMP": {
+          "hide_name": 1,
+          "bits": [ 60 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$157_Y": {
+          "hide_name": 1,
+          "bits": [ 71, 72, 73, 74, 75 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$167_CMP": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$168_CMP": {
+          "hide_name": 1,
+          "bits": [ 87 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$169_CMP": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$170_CMP": {
+          "hide_name": 1,
+          "bits": [ 89 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\alu_control.$procmux$171_CMP": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18$42_Y": {
+          "hide_name": 1,
+          "bits": [ 94 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:18.36-18.54"
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19$43_Y": {
+          "hide_name": 1,
+          "bits": [ 95 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:19.36-19.54"
+          }
+        },
+        "$flatten\\control_transfer.$logic_not$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21$44_Y": {
+          "hide_name": 1,
+          "bits": [ 96 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:21.35-21.53"
+          }
+        },
+        "$flatten\\control_transfer.$procmux$133_CMP": {
+          "hide_name": 1,
+          "bits": [ 97 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$procmux$134_CMP": {
+          "hide_name": 1,
+          "bits": [ 98 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$procmux$135_CMP": {
+          "hide_name": 1,
+          "bits": [ 99 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$procmux$136_CMP": {
+          "hide_name": 1,
+          "bits": [ 100 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$procmux$137_CMP": {
+          "hide_name": 1,
+          "bits": [ 101 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\control_transfer.$procmux$138_CMP": {
+          "hide_name": 1,
+          "bits": [ 102 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$174_CMP": {
+          "hide_name": 1,
+          "bits": [ 104 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$175_CMP": {
+          "hide_name": 1,
+          "bits": [ 105 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$176_CMP": {
+          "hide_name": 1,
+          "bits": [ 106 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$177_CMP": {
+          "hide_name": 1,
+          "bits": [ 107 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$178_CMP": {
+          "hide_name": 1,
+          "bits": [ 108 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$179_CMP": {
+          "hide_name": 1,
+          "bits": [ 109 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$180_CMP": {
+          "hide_name": 1,
+          "bits": [ 110 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$181_CMP": {
+          "hide_name": 1,
+          "bits": [ 111 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$182_CMP": {
+          "hide_name": 1,
+          "bits": [ 112 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$183_CMP": {
+          "hide_name": 1,
+          "bits": [ 113 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$186_CMP": {
+          "hide_name": 1,
+          "bits": [ 114 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$187_CMP": {
+          "hide_name": 1,
+          "bits": [ 115 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$188_CMP": {
+          "hide_name": 1,
+          "bits": [ 116 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$189_CMP": {
+          "hide_name": 1,
+          "bits": [ 117 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$190_CMP": {
+          "hide_name": 1,
+          "bits": [ 118 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$191_CMP": {
+          "hide_name": 1,
+          "bits": [ 119 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$192_CMP": {
+          "hide_name": 1,
+          "bits": [ 120 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$193_CMP": {
+          "hide_name": 1,
+          "bits": [ 121 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$194_CMP": {
+          "hide_name": 1,
+          "bits": [ 122 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$195_CMP": {
+          "hide_name": 1,
+          "bits": [ 123 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$198_CMP": {
+          "hide_name": 1,
+          "bits": [ 124 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$199_CMP": {
+          "hide_name": 1,
+          "bits": [ 125 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$200_CMP": {
+          "hide_name": 1,
+          "bits": [ 126 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$201_CMP": {
+          "hide_name": 1,
+          "bits": [ 127 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$202_CMP": {
+          "hide_name": 1,
+          "bits": [ 128 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$203_CMP": {
+          "hide_name": 1,
+          "bits": [ 129 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$204_CMP": {
+          "hide_name": 1,
+          "bits": [ 130 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$205_CMP": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$206_CMP": {
+          "hide_name": 1,
+          "bits": [ 132 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$207_CMP": {
+          "hide_name": 1,
+          "bits": [ 133 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$210_CMP": {
+          "hide_name": 1,
+          "bits": [ 134 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$211_CMP": {
+          "hide_name": 1,
+          "bits": [ 135 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$212_CMP": {
+          "hide_name": 1,
+          "bits": [ 136 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$213_CMP": {
+          "hide_name": 1,
+          "bits": [ 137 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$214_CMP": {
+          "hide_name": 1,
+          "bits": [ 138 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$215_CMP": {
+          "hide_name": 1,
+          "bits": [ 139 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$216_CMP": {
+          "hide_name": 1,
+          "bits": [ 140 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$217_CMP": {
+          "hide_name": 1,
+          "bits": [ 141 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$218_CMP": {
+          "hide_name": 1,
+          "bits": [ 142 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$219_CMP": {
+          "hide_name": 1,
+          "bits": [ 143 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$222_CMP": {
+          "hide_name": 1,
+          "bits": [ 144 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$223_CMP": {
+          "hide_name": 1,
+          "bits": [ 145 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$224_CMP": {
+          "hide_name": 1,
+          "bits": [ 146 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$225_CMP": {
+          "hide_name": 1,
+          "bits": [ 147 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$226_CMP": {
+          "hide_name": 1,
+          "bits": [ 148 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$227_CMP": {
+          "hide_name": 1,
+          "bits": [ 149 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$228_CMP": {
+          "hide_name": 1,
+          "bits": [ 150 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$229_CMP": {
+          "hide_name": 1,
+          "bits": [ 151 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$230_CMP": {
+          "hide_name": 1,
+          "bits": [ 152 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$231_CMP": {
+          "hide_name": 1,
+          "bits": [ 153 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$234_CMP": {
+          "hide_name": 1,
+          "bits": [ 154 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$235_CMP": {
+          "hide_name": 1,
+          "bits": [ 155 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$236_CMP": {
+          "hide_name": 1,
+          "bits": [ 156 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$237_CMP": {
+          "hide_name": 1,
+          "bits": [ 157 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$238_CMP": {
+          "hide_name": 1,
+          "bits": [ 158 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$239_CMP": {
+          "hide_name": 1,
+          "bits": [ 159 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$240_CMP": {
+          "hide_name": 1,
+          "bits": [ 160 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$241_CMP": {
+          "hide_name": 1,
+          "bits": [ 161 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$242_CMP": {
+          "hide_name": 1,
+          "bits": [ 162 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$243_CMP": {
+          "hide_name": 1,
+          "bits": [ 163 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$246_CMP": {
+          "hide_name": 1,
+          "bits": [ 164 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$247_CMP": {
+          "hide_name": 1,
+          "bits": [ 165 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$248_CMP": {
+          "hide_name": 1,
+          "bits": [ 166 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$249_CMP": {
+          "hide_name": 1,
+          "bits": [ 167 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$250_CMP": {
+          "hide_name": 1,
+          "bits": [ 168 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$251_CMP": {
+          "hide_name": 1,
+          "bits": [ 169 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$252_CMP": {
+          "hide_name": 1,
+          "bits": [ 170 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$253_CMP": {
+          "hide_name": 1,
+          "bits": [ 171 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$254_CMP": {
+          "hide_name": 1,
+          "bits": [ 172 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$255_CMP": {
+          "hide_name": 1,
+          "bits": [ 173 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$258_CMP": {
+          "hide_name": 1,
+          "bits": [ 174 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$259_CMP": {
+          "hide_name": 1,
+          "bits": [ 175 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$260_CMP": {
+          "hide_name": 1,
+          "bits": [ 176 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$261_CMP": {
+          "hide_name": 1,
+          "bits": [ 177 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$262_CMP": {
+          "hide_name": 1,
+          "bits": [ 178 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$263_CMP": {
+          "hide_name": 1,
+          "bits": [ 179 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$264_CMP": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$265_CMP": {
+          "hide_name": 1,
+          "bits": [ 181 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$266_CMP": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$267_CMP": {
+          "hide_name": 1,
+          "bits": [ 183 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$270_CMP": {
+          "hide_name": 1,
+          "bits": [ 186 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$271_CMP": {
+          "hide_name": 1,
+          "bits": [ 187 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$procmux$272_CMP": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25$121_Y": {
+          "hide_name": 1,
+          "bits": [ 184, 185 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:25.42-25.69"
+          }
+        },
+        "alu_control.alu_function": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "hdlname": "alu_control alu_function",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:13.24-13.36"
+          }
+        },
+        "alu_control.alu_op_type": {
+          "hide_name": 0,
+          "bits": [ 91, 92, 93 ],
+          "attributes": {
+            "hdlname": "alu_control alu_op_type",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:10.24-10.35"
+          }
+        },
+        "alu_control.branch_funct": {
+          "hide_name": 0,
+          "bits": [ 54, 55, 56, 57, 58 ],
+          "attributes": {
+            "hdlname": "alu_control branch_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:20.17-20.29"
+          }
+        },
+        "alu_control.default_funct": {
+          "hide_name": 0,
+          "bits": [ 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "hdlname": "alu_control default_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:16.17-16.30"
+          }
+        },
+        "alu_control.inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11 ],
+          "attributes": {
+            "hdlname": "alu_control inst_funct3",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:11.24-11.35"
+          }
+        },
+        "alu_control.inst_funct7": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "hdlname": "alu_control inst_funct7",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:12.24-12.35",
+            "unused_bits": "1 2 3 4 6"
+          }
+        },
+        "alu_control.m_extension_funct": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40 ],
+          "attributes": {
+            "hdlname": "alu_control m_extension_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:22.17-22.34"
+          }
+        },
+        "alu_control.op_funct": {
+          "hide_name": 0,
+          "bits": [ 81, 82, 83, 84, 85 ],
+          "attributes": {
+            "hdlname": "alu_control op_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:18.17-18.25"
+          }
+        },
+        "alu_control.op_imm_funct": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70 ],
+          "attributes": {
+            "hdlname": "alu_control op_imm_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:19.17-19.29"
+          }
+        },
+        "alu_control.secondary_funct": {
+          "hide_name": 0,
+          "bits": [ 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "hdlname": "alu_control secondary_funct",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:49.17-54.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/alu_control.sv:17.17-17.32"
+          }
+        },
+        "alu_function": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:22.18-22.30"
+          }
+        },
+        "alu_op_type": {
+          "hide_name": 0,
+          "bits": [ 91, 92, 93 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:27.17-27.28"
+          }
+        },
+        "alu_operand_a_select": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:17.12-17.32"
+          }
+        },
+        "alu_operand_b_select": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:18.12-18.32"
+          }
+        },
+        "alu_result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:13.12-13.33"
+          }
+        },
+        "control_transfer.inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11 ],
+          "attributes": {
+            "hdlname": "control_transfer inst_funct3",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:11.18-11.29"
+          }
+        },
+        "control_transfer.result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "control_transfer result_equal_zero",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:10.12-10.29"
+          }
+        },
+        "control_transfer.take_branch": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "hdlname": "control_transfer take_branch",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:43.22-47.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/common/control_transfer.sv:12.12-12.23"
+          }
+        },
+        "data_mem_read_enable": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:19.12-19.32"
+          }
+        },
+        "data_mem_write_enable": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:20.12-20.33"
+          }
+        },
+        "inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:11.18-11.29"
+          }
+        },
+        "inst_funct7": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:12.18-12.29"
+          }
+        },
+        "inst_opcode": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:10.18-10.29"
+          }
+        },
+        "next_pc_select": {
+          "hide_name": 0,
+          "bits": [ 34, 35 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:23.18-23.32"
+          }
+        },
+        "pc_write_enable": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:15.12-15.27"
+          }
+        },
+        "reg_writeback_select": {
+          "hide_name": 0,
+          "bits": [ 26, 27, 28 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:21.18-21.38"
+          }
+        },
+        "regfile_write_enable": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:16.12-16.32"
+          }
+        },
+        "singlecycle_control.alu_op_type": {
+          "hide_name": 0,
+          "bits": [ 91, 92, 93 ],
+          "attributes": {
+            "hdlname": "singlecycle_control alu_op_type",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:16.24-16.35"
+          }
+        },
+        "singlecycle_control.alu_operand_a_select": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "hdlname": "singlecycle_control alu_operand_a_select",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:14.18-14.38"
+          }
+        },
+        "singlecycle_control.alu_operand_b_select": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "hdlname": "singlecycle_control alu_operand_b_select",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:15.18-15.38"
+          }
+        },
+        "singlecycle_control.data_mem_read_enable": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "hdlname": "singlecycle_control data_mem_read_enable",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:17.18-17.38"
+          }
+        },
+        "singlecycle_control.data_mem_write_enable": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "hdlname": "singlecycle_control data_mem_write_enable",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:18.18-18.39"
+          }
+        },
+        "singlecycle_control.inst_opcode": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "singlecycle_control inst_opcode",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:10.18-10.29"
+          }
+        },
+        "singlecycle_control.next_pc_select": {
+          "hide_name": 0,
+          "bits": [ 34, 35 ],
+          "attributes": {
+            "hdlname": "singlecycle_control next_pc_select",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:20.24-20.38"
+          }
+        },
+        "singlecycle_control.pc_write_enable": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "singlecycle_control pc_write_enable",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:12.18-12.33"
+          }
+        },
+        "singlecycle_control.reg_writeback_select": {
+          "hide_name": 0,
+          "bits": [ 26, 27, 28 ],
+          "attributes": {
+            "hdlname": "singlecycle_control reg_writeback_select",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:19.24-19.44"
+          }
+        },
+        "singlecycle_control.regfile_write_enable": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "hdlname": "singlecycle_control regfile_write_enable",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:13.18-13.38"
+          }
+        },
+        "singlecycle_control.take_branch": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "hdlname": "singlecycle_control take_branch",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:29.25-41.6|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_control.sv:11.12-11.23"
+          }
+        },
+        "take_branch": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-new/core/singlecycle/singlecycle_ctlpath.sv:26.11-26.22"
+          }
+        }
+      }
+    }
+  }
+}

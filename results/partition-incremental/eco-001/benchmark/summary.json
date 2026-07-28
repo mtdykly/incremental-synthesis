@@ -1,0 +1,17 @@
+{
+  "iteration_count": 5,
+  "full_seconds": {
+    "median": 2.33,
+    "mean": 2.338,
+    "minimum": 2.33,
+    "maximum": 2.36
+  },
+  "incremental_seconds": {
+    "median": 3.88,
+    "mean": 3.886,
+    "minimum": 3.85,
+    "maximum": 3.93
+  },
+  "median_speedup": 0.6005154639175259,
+  "median_time_reduction_percent": -66.52360515021458
+}

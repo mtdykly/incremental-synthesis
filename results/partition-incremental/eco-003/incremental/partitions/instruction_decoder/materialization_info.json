@@ -1,0 +1,11 @@
+{
+  "partition": "instruction_decoder",
+  "root_module": "instruction_decoder",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/instruction_decoder",
+  "reasons": [],
+  "base_implementation_signature": "3c47353ef235c0eccdac22723cc1319f40286bfaa91dee8bc66a5812e0b9d2fa",
+  "new_implementation_signature": "3c47353ef235c0eccdac22723cc1319f40286bfaa91dee8bc66a5812e0b9d2fa",
+  "partition_netlist_sha256": "b47b101ffd5e58dd4f5401a92aa1158f2fca7ebd4a1a2766a1002989d6e6103b"
+}

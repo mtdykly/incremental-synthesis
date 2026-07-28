@@ -1,0 +1,22 @@
+# Read synthesized top shell.
+read_verilog -sv "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/top-shell/top_shell_netlist.v"
+
+# Read each independently synthesized partition.
+# data_memory_interface -> data_memory_interface
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/data_memory_interface/synth.json"
+# immediate_generator -> immediate_generator
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/immediate_generator/synth.json"
+# instruction_decoder -> instruction_decoder
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/instruction_decoder/synth.json"
+# singlecycle_ctlpath -> singlecycle_ctlpath
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/singlecycle_ctlpath/synth.json"
+# singlecycle_datapath -> singlecycle_datapath
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/singlecycle_datapath/synth.json"
+
+hierarchy -check -top riscv_core
+check
+stat -top riscv_core
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked_netlist.v"
