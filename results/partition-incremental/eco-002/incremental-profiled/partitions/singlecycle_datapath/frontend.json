@@ -1,0 +1,3650 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\\multiplexer": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "CHANNELS": "00000000000000000000000000001000",
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in_bus": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 258, 259, 260 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ]
+        }
+      },
+      "cells": {
+        "$procmux$121": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ],
+            "S": [ 293, 294, 295, 296, 297, 298, 299, 300 ],
+            "Y": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ]
+          }
+        },
+        "$procmux$122_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 293 ]
+          }
+        },
+        "$procmux$123_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 294 ]
+          }
+        },
+        "$procmux$124_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 295 ]
+          }
+        },
+        "$procmux$125_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 296 ]
+          }
+        },
+        "$procmux$126_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 297 ]
+          }
+        },
+        "$procmux$127_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 298 ]
+          }
+        },
+        "$procmux$128_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 299 ]
+          }
+        },
+        "$procmux$129_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 258, 259, 260 ],
+            "Y": [ 300 ]
+          }
+        }
+      },
+      "netnames": {
+        "$procmux$122_CMP": {
+          "hide_name": 1,
+          "bits": [ 293 ],
+          "attributes": {
+          }
+        },
+        "$procmux$123_CMP": {
+          "hide_name": 1,
+          "bits": [ 294 ],
+          "attributes": {
+          }
+        },
+        "$procmux$124_CMP": {
+          "hide_name": 1,
+          "bits": [ 295 ],
+          "attributes": {
+          }
+        },
+        "$procmux$125_CMP": {
+          "hide_name": 1,
+          "bits": [ 296 ],
+          "attributes": {
+          }
+        },
+        "$procmux$126_CMP": {
+          "hide_name": 1,
+          "bits": [ 297 ],
+          "attributes": {
+          }
+        },
+        "$procmux$127_CMP": {
+          "hide_name": 1,
+          "bits": [ 298 ],
+          "attributes": {
+          }
+        },
+        "$procmux$128_CMP": {
+          "hide_name": 1,
+          "bits": [ 299 ],
+          "attributes": {
+          }
+        },
+        "$procmux$129_CMP": {
+          "hide_name": 1,
+          "bits": [ 300 ],
+          "attributes": {
+          }
+        },
+        "in_bus": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:12.45-12.51"
+          }
+        },
+        "input_array[0]": {
+          "hide_name": 0,
+          "bits": [ 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[1]": {
+          "hide_name": 0,
+          "bits": [ 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[2]": {
+          "hide_name": 0,
+          "bits": [ 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[3]": {
+          "hide_name": 0,
+          "bits": [ 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[4]": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[5]": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[6]": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[7]": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:14.45-14.48"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 258, 259, 260 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:13.45-13.48"
+          }
+        }
+      }
+    },
+    "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "CHANNELS": "00000000000000000000000000000010",
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in_bus": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 66 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ]
+        }
+      },
+      "cells": {
+        "$procmux$135": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+            "S": [ 66, 99 ],
+            "Y": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ]
+          }
+        },
+        "$procmux$137_CMP0": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 66 ],
+            "Y": [ 99 ]
+          }
+        }
+      },
+      "netnames": {
+        "$procmux$137_CMP": {
+          "hide_name": 1,
+          "bits": [ 99 ],
+          "attributes": {
+          }
+        },
+        "in_bus": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:12.45-12.51"
+          }
+        },
+        "input_array[0]": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[1]": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:14.45-14.48"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:13.45-13.48"
+          }
+        }
+      }
+    },
+    "$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\\multiplexer": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "CHANNELS": "00000000000000000000000000000100",
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in_bus": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 130, 131 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ]
+        }
+      },
+      "cells": {
+        "$procmux$130": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+            "S": [ 164, 165, 166, 167 ],
+            "Y": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ]
+          }
+        },
+        "$procmux$131_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 130, 131 ],
+            "B": [ "1", "1" ],
+            "Y": [ 164 ]
+          }
+        },
+        "$procmux$132_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 130, 131 ],
+            "B": [ "0", "1" ],
+            "Y": [ 165 ]
+          }
+        },
+        "$procmux$133_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 130, 131 ],
+            "B": [ "1", "0" ],
+            "Y": [ 166 ]
+          }
+        },
+        "$procmux$134_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:21.18-21.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 130, 131 ],
+            "Y": [ 167 ]
+          }
+        }
+      },
+      "netnames": {
+        "$procmux$131_CMP": {
+          "hide_name": 1,
+          "bits": [ 164 ],
+          "attributes": {
+          }
+        },
+        "$procmux$132_CMP": {
+          "hide_name": 1,
+          "bits": [ 165 ],
+          "attributes": {
+          }
+        },
+        "$procmux$133_CMP": {
+          "hide_name": 1,
+          "bits": [ 166 ],
+          "attributes": {
+          }
+        },
+        "$procmux$134_CMP": {
+          "hide_name": 1,
+          "bits": [ 167 ],
+          "attributes": {
+          }
+        },
+        "in_bus": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:12.45-12.51"
+          }
+        },
+        "input_array[0]": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[1]": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[2]": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "input_array[3]": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:19.26-19.37"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:14.45-14.48"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 130, 131 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv:13.45-13.48"
+          }
+        }
+      }
+    },
+    "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "register",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "INITIAL": "00000000010000000000000000000000",
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "write_enable": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "next": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "value": {
+          "direction": "output",
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+        }
+      },
+      "cells": {
+        "$procdff$193": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23.4-25.45"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+            "Q": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+          }
+        },
+        "$procmux$185": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:25.17-25.29|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:25.13-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+            "B": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+            "S": [ 4 ],
+            "Y": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ]
+          }
+        },
+        "$procmux$188": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:24.12-24.17|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:24.8-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 3 ],
+            "Y": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\value[31:0]": {
+          "hide_name": 1,
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23.4-25.45"
+          }
+        },
+        "$procmux$185_Y": {
+          "hide_name": 1,
+          "bits": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:13.12-13.17"
+          }
+        },
+        "next": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:16.24-16.28"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:14.12-14.17"
+          }
+        },
+        "value": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+          "attributes": {
+            "init": "00000000010000000000000000000000",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:18.30-18.35"
+          }
+        },
+        "write_enable": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:15.12-15.24"
+          }
+        }
+      }
+    },
+    "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "adder",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:9.1-19.10"
+      },
+      "parameter_default_values": {
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "operand_a": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "operand_b": {
+          "direction": "input",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        },
+        "result": {
+          "direction": "output",
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+        }
+      },
+      "cells": {
+        "$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:17$120": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:17.21-17.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+            "B": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+            "Y": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+          }
+        }
+      },
+      "netnames": {
+        "operand_a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:12.24-12.33"
+          }
+        },
+        "operand_b": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:13.24-13.33"
+          }
+        },
+        "result": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv:14.24-14.30"
+          }
+        }
+      }
+    },
+    "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer2",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in0": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "in1": {
+          "direction": "input",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 66 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ]
+        }
+      },
+      "cells": {
+        "multiplexer": {
+          "hide_name": 0,
+          "type": "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:21.7-25.6"
+          },
+          "port_directions": {
+            "in_bus": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in_bus": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+            "out": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ],
+            "sel": [ 66 ]
+          }
+        }
+      },
+      "netnames": {
+        "in0": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:12.24-12.27"
+          }
+        },
+        "in1": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:13.24-13.27"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:15.24-15.27"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv:14.24-14.27"
+          }
+        }
+      }
+    },
+    "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer4",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:9.1-29.10"
+      },
+      "parameter_default_values": {
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in0": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "in1": {
+          "direction": "input",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        },
+        "in2": {
+          "direction": "input",
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+        },
+        "in3": {
+          "direction": "input",
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 130, 131 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ]
+        }
+      },
+      "cells": {
+        "multiplexer": {
+          "hide_name": 0,
+          "type": "$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\\multiplexer",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:23.7-27.6"
+          },
+          "port_directions": {
+            "in_bus": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in_bus": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+            "out": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "sel": [ 130, 131 ]
+          }
+        }
+      },
+      "netnames": {
+        "in0": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:12.24-12.27"
+          }
+        },
+        "in1": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:13.24-13.27"
+          }
+        },
+        "in2": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:14.24-14.27"
+          }
+        },
+        "in3": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:15.24-15.27"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:17.24-17.27"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 130, 131 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv:16.24-16.27"
+          }
+        }
+      }
+    },
+    "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "multiplexer8",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:9.1-33.10"
+      },
+      "parameter_default_values": {
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "in0": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "in1": {
+          "direction": "input",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        },
+        "in2": {
+          "direction": "input",
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ]
+        },
+        "in3": {
+          "direction": "input",
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ]
+        },
+        "in4": {
+          "direction": "input",
+          "bits": [ 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161 ]
+        },
+        "in5": {
+          "direction": "input",
+          "bits": [ 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193 ]
+        },
+        "in6": {
+          "direction": "input",
+          "bits": [ 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225 ]
+        },
+        "in7": {
+          "direction": "input",
+          "bits": [ 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 258, 259, 260 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ]
+        }
+      },
+      "cells": {
+        "multiplexer": {
+          "hide_name": 0,
+          "type": "$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\\multiplexer",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:27.7-31.6"
+          },
+          "port_directions": {
+            "in_bus": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in_bus": [ 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+            "out": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ],
+            "sel": [ 258, 259, 260 ]
+          }
+        }
+      },
+      "netnames": {
+        "in0": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:12.24-12.27"
+          }
+        },
+        "in1": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:13.24-13.27"
+          }
+        },
+        "in2": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:14.24-14.27"
+          }
+        },
+        "in3": {
+          "hide_name": 0,
+          "bits": [ 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:15.24-15.27"
+          }
+        },
+        "in4": {
+          "hide_name": 0,
+          "bits": [ 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:16.24-16.27"
+          }
+        },
+        "in5": {
+          "hide_name": 0,
+          "bits": [ 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:17.24-17.27"
+          }
+        },
+        "in6": {
+          "hide_name": 0,
+          "bits": [ 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:18.24-18.27"
+          }
+        },
+        "in7": {
+          "hide_name": 0,
+          "bits": [ 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:19.24-19.27"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:21.24-21.27"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 258, 259, 260 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv:20.24-20.27"
+          }
+        }
+      }
+    },
+    "alu": {
+      "attributes": {
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:9.1-82.10"
+      },
+      "ports": {
+        "alu_function": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6 ]
+        },
+        "operand_a": {
+          "direction": "input",
+          "signed": 1,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ]
+        },
+        "operand_b": {
+          "direction": "input",
+          "signed": 1,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ]
+        },
+        "result": {
+          "direction": "output",
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102 ]
+        },
+        "result_equal_zero": {
+          "direction": "output",
+          "bits": [ 103 ]
+        }
+      },
+      "cells": {
+        "$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:28$4": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:28.34-28.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135 ]
+          }
+        },
+        "$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:38$14": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:38.34-38.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ]
+          }
+        },
+        "$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:23$2": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:23.33-23.48"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102 ],
+            "Y": [ 103 ]
+          }
+        },
+        "$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:33$9": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:33.42-33.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 168 ]
+          }
+        },
+        "$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:34$10": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:34.42-34.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 169 ]
+          }
+        },
+        "$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:35$11": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:35.41-35.84"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 170 ]
+          }
+        },
+        "$or$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37$13": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37.35-37.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202 ]
+          }
+        },
+        "$procmux$173": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001011",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37.60-37.60|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 170, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 169, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 168, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135 ],
+            "S": [ 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373 ],
+            "Y": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102 ]
+          }
+        },
+        "$procmux$174_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37.60-37.60|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "1", "0", "1", "0" ],
+            "Y": [ 363 ]
+          }
+        },
+        "$procmux$175_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:36.59-36.59|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "0", "1", "0", "1", "0" ],
+            "Y": [ 364 ]
+          }
+        },
+        "$procmux$176_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:35.86-35.86|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "0", "0", "1", "0" ],
+            "Y": [ 365 ]
+          }
+        },
+        "$procmux$177_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:34.65-34.65|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "0", "0", "0", "1", "0" ],
+            "Y": [ 366 ]
+          }
+        },
+        "$procmux$178_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:33.66-33.66|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "1", "1", "0", "0" ],
+            "Y": [ 367 ]
+          }
+        },
+        "$procmux$179_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:32.64-32.64|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "0", "1", "1", "0", "0" ],
+            "Y": [ 368 ]
+          }
+        },
+        "$procmux$180_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:31.64-31.64|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "0", "1", "0", "0" ],
+            "Y": [ 369 ]
+          }
+        },
+        "$procmux$181_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:30.64-30.64|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "0", "0", "1", "0", "0" ],
+            "Y": [ 370 ]
+          }
+        },
+        "$procmux$182_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:29.59-29.59|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "1", "0", "0", "0" ],
+            "Y": [ 371 ]
+          }
+        },
+        "$procmux$183_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:28.59-28.59|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "0", "1", "0", "0", "0" ],
+            "Y": [ 372 ]
+          }
+        },
+        "$procmux$184_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.28-27.28|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:27.9-71.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6 ],
+            "B": [ "1", "0", "0", "0", "0" ],
+            "Y": [ 373 ]
+          }
+        },
+        "$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:30$6": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:30.34-30.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43 ],
+            "Y": [ 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330 ]
+          }
+        },
+        "$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:31$7": {
+          "hide_name": 1,
+          "type": "$shr",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:31.34-31.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43 ],
+            "Y": [ 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298 ]
+          }
+        },
+        "$sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:32$8": {
+          "hide_name": 1,
+          "type": "$sshr",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:32.34-32.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43 ],
+            "Y": [ 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266 ]
+          }
+        },
+        "$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:29$5": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:29.34-29.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362 ]
+          }
+        },
+        "$xor$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:36$12": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000001",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000001",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:36.34-36.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "B": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+            "Y": [ 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234 ]
+          }
+        }
+      },
+      "netnames": {
+        "$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:28$4_Y": {
+          "hide_name": 1,
+          "bits": [ 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:28.34-28.58"
+          }
+        },
+        "$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:38$14_Y": {
+          "hide_name": 1,
+          "bits": [ 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:38.34-38.58"
+          }
+        },
+        "$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:33$9_Y": {
+          "hide_name": 1,
+          "bits": [ 168 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:33.42-33.64"
+          }
+        },
+        "$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:34$10_Y": {
+          "hide_name": 1,
+          "bits": [ 169 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:34.42-34.63"
+          }
+        },
+        "$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:35$11_Y": {
+          "hide_name": 1,
+          "bits": [ 170 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:35.41-35.84"
+          }
+        },
+        "$or$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37$13_Y": {
+          "hide_name": 1,
+          "bits": [ 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:37.35-37.59"
+          }
+        },
+        "$procmux$174_CMP": {
+          "hide_name": 1,
+          "bits": [ 363 ],
+          "attributes": {
+          }
+        },
+        "$procmux$175_CMP": {
+          "hide_name": 1,
+          "bits": [ 364 ],
+          "attributes": {
+          }
+        },
+        "$procmux$176_CMP": {
+          "hide_name": 1,
+          "bits": [ 365 ],
+          "attributes": {
+          }
+        },
+        "$procmux$177_CMP": {
+          "hide_name": 1,
+          "bits": [ 366 ],
+          "attributes": {
+          }
+        },
+        "$procmux$178_CMP": {
+          "hide_name": 1,
+          "bits": [ 367 ],
+          "attributes": {
+          }
+        },
+        "$procmux$179_CMP": {
+          "hide_name": 1,
+          "bits": [ 368 ],
+          "attributes": {
+          }
+        },
+        "$procmux$180_CMP": {
+          "hide_name": 1,
+          "bits": [ 369 ],
+          "attributes": {
+          }
+        },
+        "$procmux$181_CMP": {
+          "hide_name": 1,
+          "bits": [ 370 ],
+          "attributes": {
+          }
+        },
+        "$procmux$182_CMP": {
+          "hide_name": 1,
+          "bits": [ 371 ],
+          "attributes": {
+          }
+        },
+        "$procmux$183_CMP": {
+          "hide_name": 1,
+          "bits": [ 372 ],
+          "attributes": {
+          }
+        },
+        "$procmux$184_CMP": {
+          "hide_name": 1,
+          "bits": [ 373 ],
+          "attributes": {
+          }
+        },
+        "$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:30$6_Y": {
+          "hide_name": 1,
+          "bits": [ 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:30.34-30.63"
+          }
+        },
+        "$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:31$7_Y": {
+          "hide_name": 1,
+          "bits": [ 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:31.34-31.63"
+          }
+        },
+        "$sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:32$8_Y": {
+          "hide_name": 1,
+          "bits": [ 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:32.34-32.63"
+          }
+        },
+        "$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:29$5_Y": {
+          "hide_name": 1,
+          "bits": [ 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:29.34-29.58"
+          }
+        },
+        "$xor$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:36$12_Y": {
+          "hide_name": 1,
+          "bits": [ 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:36.34-36.58"
+          }
+        },
+        "alu_function": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:10.25-10.37"
+          }
+        },
+        "operand_a": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:11.25-11.34"
+          }
+        },
+        "operand_b": {
+          "hide_name": 0,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 ],
+          "signed": 1,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:12.25-12.34"
+          }
+        },
+        "result": {
+          "hide_name": 0,
+          "bits": [ 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:13.25-13.31"
+          }
+        },
+        "result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv:14.25-14.42"
+          }
+        }
+      }
+    },
+    "immediate_generator": {
+      "attributes": {
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:9.1-44.10"
+      },
+      "ports": {
+        "inst": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "immediate": {
+          "direction": "output",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+        }
+      },
+      "cells": {
+        "$procmux$139": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000101",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:37.80-37.80|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 22, 14, 15, 16, 17, 18, 19, 20, 21, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, "0", 10, 11, 12, 13, 27, 28, 29, 30, 31, 32, 9, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 9, 10, 11, 12, 13, 27, 28, 29, 30, 31, 32, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33 ],
+            "S": [ 66, 67, 68, 69, 70 ],
+            "Y": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ]
+          }
+        },
+        "$procmux$140_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:37.80-37.80|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "1", "0", "1", "1" ],
+            "Y": [ 66 ]
+          }
+        },
+        "$procmux$141_ANY": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:34.88-34.88|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71, 72 ],
+            "Y": [ 67 ]
+          }
+        },
+        "$procmux$141_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:34.88-34.88|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "0", "0" ],
+            "Y": [ 71 ]
+          }
+        },
+        "$procmux$141_CMP1": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:34.88-34.88|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "1", "1", "0" ],
+            "Y": [ 72 ]
+          }
+        },
+        "$procmux$142_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:32.73-32.73|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "1" ],
+            "Y": [ 68 ]
+          }
+        },
+        "$procmux$143_ANY": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:29.74-29.74|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 73, 74 ],
+            "Y": [ 69 ]
+          }
+        },
+        "$procmux$143_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:29.74-29.74|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "0" ],
+            "Y": [ 73 ]
+          }
+        },
+        "$procmux$143_CMP1": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:29.74-29.74|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "1", "0" ],
+            "Y": [ 74 ]
+          }
+        },
+        "$procmux$144_ANY": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.25-24.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 75, 76, 77, 78 ],
+            "Y": [ 70 ]
+          }
+        },
+        "$procmux$144_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.25-24.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "0", "0", "0" ],
+            "Y": [ 75 ]
+          }
+        },
+        "$procmux$144_CMP1": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.25-24.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "0", "0" ],
+            "Y": [ 76 ]
+          }
+        },
+        "$procmux$144_CMP2": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.25-24.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "0", "0", "1", "0", "0" ],
+            "Y": [ 77 ]
+          }
+        },
+        "$procmux$144_CMP3": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.25-24.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:24.9-41.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8 ],
+            "B": [ "1", "1", "1", "0", "0", "1", "1" ],
+            "Y": [ 78 ]
+          }
+        }
+      },
+      "netnames": {
+        "$procmux$140_CMP": {
+          "hide_name": 1,
+          "bits": [ 66 ],
+          "attributes": {
+          }
+        },
+        "$procmux$141_CMP": {
+          "hide_name": 1,
+          "bits": [ 71, 72 ],
+          "attributes": {
+          }
+        },
+        "$procmux$141_CTRL": {
+          "hide_name": 1,
+          "bits": [ 67 ],
+          "attributes": {
+          }
+        },
+        "$procmux$142_CMP": {
+          "hide_name": 1,
+          "bits": [ 68 ],
+          "attributes": {
+          }
+        },
+        "$procmux$143_CMP": {
+          "hide_name": 1,
+          "bits": [ 73, 74 ],
+          "attributes": {
+          }
+        },
+        "$procmux$143_CTRL": {
+          "hide_name": 1,
+          "bits": [ 69 ],
+          "attributes": {
+          }
+        },
+        "$procmux$144_CMP": {
+          "hide_name": 1,
+          "bits": [ 75, 76, 77, 78 ],
+          "attributes": {
+          }
+        },
+        "$procmux$144_CTRL": {
+          "hide_name": 1,
+          "bits": [ 70 ],
+          "attributes": {
+          }
+        },
+        "immediate": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:11.25-11.34"
+          }
+        },
+        "inst": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv:10.25-10.29"
+          }
+        }
+      }
+    },
+    "instruction_decoder": {
+      "attributes": {
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:9.1-26.10"
+      },
+      "ports": {
+        "inst": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "inst_opcode": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8 ]
+        },
+        "inst_funct3": {
+          "direction": "output",
+          "bits": [ 14, 15, 16 ]
+        },
+        "inst_funct7": {
+          "direction": "output",
+          "bits": [ 27, 28, 29, 30, 31, 32, 33 ]
+        },
+        "inst_rd": {
+          "direction": "output",
+          "bits": [ 9, 10, 11, 12, 13 ]
+        },
+        "inst_rs1": {
+          "direction": "output",
+          "bits": [ 17, 18, 19, 20, 21 ]
+        },
+        "inst_rs2": {
+          "direction": "output",
+          "bits": [ 22, 23, 24, 25, 26 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "inst": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:10.18-10.22"
+          }
+        },
+        "inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:12.18-12.29"
+          }
+        },
+        "inst_funct7": {
+          "hide_name": 0,
+          "bits": [ 27, 28, 29, 30, 31, 32, 33 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:13.18-13.29"
+          }
+        },
+        "inst_opcode": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:11.18-11.29"
+          }
+        },
+        "inst_rd": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:14.18-14.25"
+          }
+        },
+        "inst_rs1": {
+          "hide_name": 0,
+          "bits": [ 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:15.18-15.26"
+          }
+        },
+        "inst_rs2": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25, 26 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv:16.18-16.26"
+          }
+        }
+      }
+    },
+    "regfile": {
+      "attributes": {
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:9.1-35.10"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "write_enable": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "rd_address": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8 ]
+        },
+        "rs1_address": {
+          "direction": "input",
+          "bits": [ 9, 10, 11, 12, 13 ]
+        },
+        "rs2_address": {
+          "direction": "input",
+          "bits": [ 14, 15, 16, 17, 18 ]
+        },
+        "rd_data": {
+          "direction": "input",
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ]
+        },
+        "rs1_data": {
+          "direction": "output",
+          "bits": [ 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82 ]
+        },
+        "rs2_data": {
+          "direction": "output",
+          "bits": [ 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114 ]
+        }
+      },
+      "cells": {
+        "$auto$proc_memwr.cc:45:proc_memwr$194": {
+          "hide_name": 1,
+          "type": "$memwr_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000101",
+            "CLK_ENABLE": "1",
+            "CLK_POLARITY": "1",
+            "MEMID": "\\register",
+            "PORTID": "00000000000000000000000000000000",
+            "PRIORITY_MASK": "",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.37-33.68"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "input",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 115, 116, 117, 118, 119 ],
+            "CLK": [ 2 ],
+            "DATA": [ 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151 ],
+            "EN": [ 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ]
+          }
+        },
+        "$meminit$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28$84": {
+          "hide_name": 1,
+          "type": "$meminit_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000100000",
+            "MEMID": "\\register",
+            "PRIORITY": "00000000000000000000000001010100",
+            "WIDTH": "00000000000000000000000000100000",
+            "WORDS": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:28.13-28.32"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "DATA": "input",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "DATA": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "EN": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ]
+          }
+        },
+        "$memrd$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:24$71": {
+          "hide_name": 1,
+          "type": "$memrd",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000101",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "MEMID": "\\register",
+            "TRANSPARENT": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:24.23-24.31"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 9, 10, 11, 12, 13 ],
+            "CLK": [ "x" ],
+            "DATA": [ 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82 ],
+            "EN": [ "x" ]
+          }
+        },
+        "$memrd$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:25$72": {
+          "hide_name": 1,
+          "type": "$memrd",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000101",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "MEMID": "\\register",
+            "TRANSPARENT": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:25.23-25.31"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 14, 15, 16, 17, 18 ],
+            "CLK": [ "x" ],
+            "DATA": [ 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114 ],
+            "EN": [ "x" ]
+          }
+        },
+        "$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$80": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.17-33.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5, 6, 7, 8 ],
+            "Y": [ 184 ]
+          }
+        },
+        "$procmux$147": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.17-33.35|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.13-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "S": [ 184 ],
+            "Y": [ 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216 ]
+          }
+        },
+        "$procmux$149": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216 ],
+            "S": [ 3 ],
+            "Y": [ 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248 ]
+          }
+        },
+        "$procmux$153": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.17-33.35|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.13-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ],
+            "S": [ 184 ],
+            "Y": [ 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280 ]
+          }
+        },
+        "$procmux$155": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280 ],
+            "S": [ 3 ],
+            "Y": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312 ]
+          }
+        },
+        "$procmux$159": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.17-33.35|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.13-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 4, 5, 6, 7, 8 ],
+            "S": [ 184 ],
+            "Y": [ 313, 314, 315, 316, 317 ]
+          }
+        },
+        "$procmux$161": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 313, 314, 315, 316, 317 ],
+            "S": [ 3 ],
+            "Y": [ 318, 319, 320, 321, 322 ]
+          }
+        },
+        "$procmux$164": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248 ],
+            "S": [ 3 ],
+            "Y": [ 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ]
+          }
+        },
+        "$procmux$167": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312 ],
+            "S": [ 3 ],
+            "Y": [ 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151 ]
+          }
+        },
+        "$procmux$170": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.13-32.25|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:32.9-33.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x" ],
+            "B": [ 318, 319, 320, 321, 322 ],
+            "S": [ 3 ],
+            "Y": [ 115, 116, 117, 118, 119 ]
+          }
+        }
+      },
+      "memories": {
+        "register": {
+          "hide_name": 0,
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:21.18-21.26"
+          },
+          "width": 32,
+          "start_offset": 0,
+          "size": 32
+        }
+      },
+      "netnames": {
+        "$0$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_ADDR[4:0]$74": {
+          "hide_name": 1,
+          "bits": [ 115, 116, 117, 118, 119 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$0$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_DATA[31:0]$75": {
+          "hide_name": 1,
+          "bits": [ 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$0$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_EN[31:0]$76": {
+          "hide_name": 1,
+          "bits": [ 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$2$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_ADDR[4:0]$81": {
+          "hide_name": 1,
+          "bits": [ 318, 319, 320, 321, 322 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$2$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_DATA[31:0]$82": {
+          "hide_name": 1,
+          "bits": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$2$memwr$\\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$70_EN[31:0]$83": {
+          "hide_name": 1,
+          "bits": [ 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:31.5-33.69"
+          }
+        },
+        "$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33$80_Y": {
+          "hide_name": 1,
+          "bits": [ 184 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:33.17-33.35"
+          }
+        },
+        "$procmux$147_Y": {
+          "hide_name": 1,
+          "bits": [ 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216 ],
+          "attributes": {
+          }
+        },
+        "$procmux$153_Y": {
+          "hide_name": 1,
+          "bits": [ 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280 ],
+          "attributes": {
+          }
+        },
+        "$procmux$159_Y": {
+          "hide_name": 1,
+          "bits": [ 313, 314, 315, 316, 317 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:10.12-10.17"
+          }
+        },
+        "rd_address": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:12.18-12.28"
+          }
+        },
+        "rd_data": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:15.19-15.26"
+          }
+        },
+        "rs1_address": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:13.18-13.29"
+          }
+        },
+        "rs1_data": {
+          "hide_name": 0,
+          "bits": [ 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:16.19-16.27"
+          }
+        },
+        "rs2_address": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:14.18-14.29"
+          }
+        },
+        "rs2_data": {
+          "hide_name": 0,
+          "bits": [ 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:17.19-17.27"
+          }
+        },
+        "write_enable": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv:11.12-11.24"
+          }
+        }
+      }
+    },
+    "singlecycle_datapath": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:9.1-165.10"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "data_mem_read_data": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+        },
+        "data_mem_address": {
+          "direction": "output",
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ]
+        },
+        "data_mem_write_data": {
+          "direction": "output",
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ]
+        },
+        "inst": {
+          "direction": "input",
+          "bits": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131 ]
+        },
+        "pc": {
+          "direction": "output",
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ]
+        },
+        "inst_opcode": {
+          "direction": "output",
+          "bits": [ 164, 165, 166, 167, 168, 169, 170 ]
+        },
+        "inst_funct3": {
+          "direction": "output",
+          "bits": [ 171, 172, 173 ]
+        },
+        "inst_funct7": {
+          "direction": "output",
+          "bits": [ 174, 175, 176, 177, 178, 179, 180 ]
+        },
+        "alu_result_equal_zero": {
+          "direction": "output",
+          "bits": [ 181 ]
+        },
+        "pc_write_enable": {
+          "direction": "input",
+          "bits": [ 182 ]
+        },
+        "regfile_write_enable": {
+          "direction": "input",
+          "bits": [ 183 ]
+        },
+        "alu_operand_a_select": {
+          "direction": "input",
+          "bits": [ 184 ]
+        },
+        "alu_operand_b_select": {
+          "direction": "input",
+          "bits": [ 185 ]
+        },
+        "reg_writeback_select": {
+          "direction": "input",
+          "bits": [ 186, 187, 188 ]
+        },
+        "next_pc_select": {
+          "direction": "input",
+          "bits": [ 189, 190 ]
+        },
+        "alu_function": {
+          "direction": "input",
+          "bits": [ 191, 192, 193, 194, 195 ]
+        }
+      },
+      "cells": {
+        "adder_pc_plus_4": {
+          "hide_name": 0,
+          "type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:62.7-66.6"
+          },
+          "port_directions": {
+            "operand_a": "input",
+            "operand_b": "input",
+            "result": "output"
+          },
+          "connections": {
+            "operand_a": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "operand_b": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "result": [ 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227 ]
+          }
+        },
+        "adder_pc_plus_immediate": {
+          "hide_name": 0,
+          "type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:70.7-74.6"
+          },
+          "port_directions": {
+            "operand_a": "input",
+            "operand_b": "input",
+            "result": "output"
+          },
+          "connections": {
+            "operand_a": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "operand_b": [ 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+            "result": [ 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291 ]
+          }
+        },
+        "alu": {
+          "hide_name": 0,
+          "type": "alu",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:76.9-82.6"
+          },
+          "port_directions": {
+            "alu_function": "input",
+            "operand_a": "input",
+            "operand_b": "input",
+            "result": "output",
+            "result_equal_zero": "output"
+          },
+          "connections": {
+            "alu_function": [ 191, 192, 193, 194, 195 ],
+            "operand_a": [ 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323 ],
+            "operand_b": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355 ],
+            "result": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+            "result_equal_zero": [ 181 ]
+          }
+        },
+        "immediate_generator": {
+          "hide_name": 0,
+          "type": "immediate_generator",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:160.25-163.6"
+          },
+          "port_directions": {
+            "immediate": "output",
+            "inst": "input"
+          },
+          "connections": {
+            "immediate": [ 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+            "inst": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131 ]
+          }
+        },
+        "instruction_decoder": {
+          "hide_name": 0,
+          "type": "instruction_decoder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:150.25-158.6"
+          },
+          "port_directions": {
+            "inst": "input",
+            "inst_funct3": "output",
+            "inst_funct7": "output",
+            "inst_opcode": "output",
+            "inst_rd": "output",
+            "inst_rs1": "output",
+            "inst_rs2": "output"
+          },
+          "connections": {
+            "inst": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131 ],
+            "inst_funct3": [ 171, 172, 173 ],
+            "inst_funct7": [ 174, 175, 176, 177, 178, 179, 180 ],
+            "inst_opcode": [ 164, 165, 166, 167, 168, 169, 170 ],
+            "inst_rd": [ 356, 357, 358, 359, 360 ],
+            "inst_rs1": [ 361, 362, 363, 364, 365 ],
+            "inst_rs2": [ 366, 367, 368, 369, 370 ]
+          }
+        },
+        "mux_next_pc_select": {
+          "hide_name": 0,
+          "type": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:86.7-93.6"
+          },
+          "port_directions": {
+            "in0": "input",
+            "in1": "input",
+            "in2": "input",
+            "in3": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in0": [ 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227 ],
+            "in1": [ 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291 ],
+            "in2": [ "0", 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+            "in3": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "out": [ 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402 ],
+            "sel": [ 189, 190 ]
+          }
+        },
+        "mux_operand_a": {
+          "hide_name": 0,
+          "type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:97.7-102.6"
+          },
+          "port_directions": {
+            "in0": "input",
+            "in1": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in0": [ 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434 ],
+            "in1": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "out": [ 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323 ],
+            "sel": [ 184 ]
+          }
+        },
+        "mux_operand_b": {
+          "hide_name": 0,
+          "type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:106.7-111.6"
+          },
+          "port_directions": {
+            "in0": "input",
+            "in1": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in0": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ],
+            "in1": [ 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+            "out": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355 ],
+            "sel": [ 185 ]
+          }
+        },
+        "mux_reg_writeback": {
+          "hide_name": 0,
+          "type": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:115.7-126.6"
+          },
+          "port_directions": {
+            "in0": "input",
+            "in1": "input",
+            "in2": "input",
+            "in3": "input",
+            "in4": "input",
+            "in5": "input",
+            "in6": "input",
+            "in7": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in0": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+            "in1": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+            "in2": [ 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227 ],
+            "in3": [ 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+            "in4": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "in5": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "in6": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "in7": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "out": [ 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466 ],
+            "sel": [ 186, 187, 188 ]
+          }
+        },
+        "program_counter": {
+          "hide_name": 0,
+          "type": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:131.7-137.6"
+          },
+          "port_directions": {
+            "clock": "input",
+            "next": "input",
+            "reset": "input",
+            "value": "output",
+            "write_enable": "input"
+          },
+          "connections": {
+            "clock": [ 2 ],
+            "next": [ 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402 ],
+            "reset": [ 3 ],
+            "value": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+            "write_enable": [ 182 ]
+          }
+        },
+        "regfile": {
+          "hide_name": 0,
+          "type": "regfile",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:139.13-148.6"
+          },
+          "port_directions": {
+            "clock": "input",
+            "rd_address": "input",
+            "rd_data": "input",
+            "rs1_address": "input",
+            "rs1_data": "output",
+            "rs2_address": "input",
+            "rs2_data": "output",
+            "write_enable": "input"
+          },
+          "connections": {
+            "clock": [ 2 ],
+            "rd_address": [ 356, 357, 358, 359, 360 ],
+            "rd_data": [ 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466 ],
+            "rs1_address": [ 361, 362, 363, 364, 365 ],
+            "rs1_data": [ 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434 ],
+            "rs2_address": [ 366, 367, 368, 369, 370 ],
+            "rs2_data": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ],
+            "write_enable": [ 183 ]
+          }
+        }
+      },
+      "netnames": {
+        "alu_function": {
+          "hide_name": 0,
+          "bits": [ 191, 192, 193, 194, 195 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:32.17-32.29"
+          }
+        },
+        "alu_operand_a": {
+          "hide_name": 0,
+          "bits": [ 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:49.18-49.31"
+          }
+        },
+        "alu_operand_a_select": {
+          "hide_name": 0,
+          "bits": [ 184 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:28.11-28.31"
+          }
+        },
+        "alu_operand_b": {
+          "hide_name": 0,
+          "bits": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:50.18-50.31"
+          }
+        },
+        "alu_operand_b_select": {
+          "hide_name": 0,
+          "bits": [ 185 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:29.11-29.31"
+          }
+        },
+        "alu_result": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:51.18-51.28"
+          }
+        },
+        "alu_result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 181 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:23.12-23.33"
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:10.12-10.17"
+          }
+        },
+        "data_mem_address": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:14.19-14.35"
+          }
+        },
+        "data_mem_read_data": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:13.19-13.37"
+          }
+        },
+        "data_mem_write_data": {
+          "hide_name": 0,
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:15.19-15.38"
+          }
+        },
+        "immediate": {
+          "hide_name": 0,
+          "bits": [ 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:54.18-54.27"
+          }
+        },
+        "inst": {
+          "hide_name": 0,
+          "bits": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:17.19-17.23"
+          }
+        },
+        "inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 171, 172, 173 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:21.18-21.29"
+          }
+        },
+        "inst_funct7": {
+          "hide_name": 0,
+          "bits": [ 174, 175, 176, 177, 178, 179, 180 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:22.18-22.29"
+          }
+        },
+        "inst_opcode": {
+          "hide_name": 0,
+          "bits": [ 164, 165, 166, 167, 168, 169, 170 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:20.18-20.29"
+          }
+        },
+        "inst_rd": {
+          "hide_name": 0,
+          "bits": [ 356, 357, 358, 359, 360 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:39.19-39.26"
+          }
+        },
+        "inst_rs1": {
+          "hide_name": 0,
+          "bits": [ 361, 362, 363, 364, 365 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:40.19-40.27"
+          }
+        },
+        "inst_rs2": {
+          "hide_name": 0,
+          "bits": [ 366, 367, 368, 369, 370 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:41.19-41.27"
+          }
+        },
+        "next_pc": {
+          "hide_name": 0,
+          "bits": [ 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:46.18-46.25"
+          }
+        },
+        "next_pc_select": {
+          "hide_name": 0,
+          "bits": [ 189, 190 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:31.17-31.31"
+          }
+        },
+        "pc": {
+          "hide_name": 0,
+          "bits": [ 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:18.19-18.21"
+          }
+        },
+        "pc_plus_4": {
+          "hide_name": 0,
+          "bits": [ 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:44.18-44.27"
+          }
+        },
+        "pc_plus_immediate": {
+          "hide_name": 0,
+          "bits": [ 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:45.18-45.35"
+          }
+        },
+        "pc_write_enable": {
+          "hide_name": 0,
+          "bits": [ 182 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:26.11-26.26"
+          }
+        },
+        "rd_data": {
+          "hide_name": 0,
+          "bits": [ 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:36.18-36.25"
+          }
+        },
+        "reg_writeback_select": {
+          "hide_name": 0,
+          "bits": [ 186, 187, 188 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:30.17-30.37"
+          }
+        },
+        "regfile_write_enable": {
+          "hide_name": 0,
+          "bits": [ 183 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:27.11-27.31"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:11.12-11.17"
+          }
+        },
+        "rs1_data": {
+          "hide_name": 0,
+          "bits": [ 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:37.18-37.26"
+          }
+        },
+        "rs2_data": {
+          "hide_name": 0,
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv:38.18-38.26"
+          }
+        }
+      }
+    }
+  }
+}

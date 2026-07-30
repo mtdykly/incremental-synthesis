@@ -1,0 +1,13 @@
+{
+  "partition": "singlecycle_ctlpath",
+  "root_module": "singlecycle_ctlpath",
+  "action": "rebuild",
+  "source_kind": "new_synthesis",
+  "source_path": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new",
+  "reasons": [
+    "implementation_changed"
+  ],
+  "action_wall_seconds": 0.279807,
+  "yosys_seconds": 0.2,
+  "partition_netlist_sha256": "947acc8af9b069783f2e1b6fb3f08a648c48861e7d6ffcc401443e93e5de994e"
+}
