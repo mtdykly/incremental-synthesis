@@ -1,0 +1,302 @@
+{
+  "partition_count": 5,
+  "partitions": {
+    "data_memory_interface": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [],
+        "instance_path": "riscv_core.data_memory_interface",
+        "module_type": "data_memory_interface"
+      },
+      "internal_modules": [
+        {
+          "display_name": "data_memory_interface",
+          "module_name": "data_memory_interface",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/data_memory_interface.sv:9.1-62.10"
+        }
+      ],
+      "module_count": 1,
+      "partition_index": 1,
+      "root_instance_name": "data_memory_interface",
+      "root_instance_path": "riscv_core.data_memory_interface",
+      "root_module": "data_memory_interface",
+      "root_parameters": {}
+    },
+    "immediate_generator": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [],
+        "instance_path": "riscv_core.immediate_generator",
+        "module_type": "immediate_generator"
+      },
+      "internal_modules": [
+        {
+          "display_name": "immediate_generator",
+          "module_name": "immediate_generator",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/immediate_generator.sv:9.1-44.10"
+        }
+      ],
+      "module_count": 1,
+      "partition_index": 2,
+      "root_instance_name": "immediate_generator",
+      "root_instance_path": "riscv_core.immediate_generator",
+      "root_module": "immediate_generator",
+      "root_parameters": {}
+    },
+    "instruction_decoder": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [],
+        "instance_path": "riscv_core.instruction_decoder",
+        "module_type": "instruction_decoder"
+      },
+      "internal_modules": [
+        {
+          "display_name": "instruction_decoder",
+          "module_name": "instruction_decoder",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/instruction_decoder.sv:9.1-26.10"
+        }
+      ],
+      "module_count": 1,
+      "partition_index": 3,
+      "root_instance_name": "instruction_decoder",
+      "root_instance_path": "riscv_core.instruction_decoder",
+      "root_module": "instruction_decoder",
+      "root_parameters": {}
+    },
+    "singlecycle_ctlpath": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "alu_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.alu_control",
+            "module_type": "alu_control",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "control_transfer",
+            "instance_path": "riscv_core.singlecycle_ctlpath.control_transfer",
+            "module_type": "control_transfer",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "singlecycle_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+            "module_type": "singlecycle_control",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "riscv_core.singlecycle_ctlpath",
+        "module_type": "singlecycle_ctlpath"
+      },
+      "internal_modules": [
+        {
+          "display_name": "alu_control",
+          "module_name": "alu_control",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/alu_control.sv:9.1-92.10"
+        },
+        {
+          "display_name": "control_transfer",
+          "module_name": "control_transfer",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/control_transfer.sv:9.1-26.10"
+        },
+        {
+          "display_name": "singlecycle_control",
+          "module_name": "singlecycle_control",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/singlecycle/singlecycle_control.sv:9.1-183.10"
+        },
+        {
+          "display_name": "singlecycle_ctlpath",
+          "module_name": "singlecycle_ctlpath",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/singlecycle/singlecycle_ctlpath.sv:9.1-56.10"
+        }
+      ],
+      "module_count": 4,
+      "partition_index": 4,
+      "root_instance_name": "singlecycle_ctlpath",
+      "root_instance_path": "riscv_core.singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "root_parameters": {}
+    },
+    "singlecycle_datapath": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "adder_pc_plus_4",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_4",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "adder_pc_plus_immediate",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_immediate",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "alu",
+            "instance_path": "riscv_core.singlecycle_datapath.alu",
+            "module_type": "alu",
+            "parameters": {}
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "multiplexer",
+                "instance_path": "riscv_core.singlecycle_datapath.mux_next_pc_select.multiplexer",
+                "module_type": "$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\\multiplexer",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "mux_next_pc_select",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_next_pc_select",
+            "module_type": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "multiplexer",
+                "instance_path": "riscv_core.singlecycle_datapath.mux_operand_a.multiplexer",
+                "module_type": "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "mux_operand_a",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_a",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "multiplexer",
+                "instance_path": "riscv_core.singlecycle_datapath.mux_operand_b.multiplexer",
+                "module_type": "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "mux_operand_b",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_b",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "multiplexer",
+                "instance_path": "riscv_core.singlecycle_datapath.mux_reg_writeback.multiplexer",
+                "module_type": "$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\\multiplexer",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "mux_reg_writeback",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_reg_writeback",
+            "module_type": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "program_counter",
+            "instance_path": "riscv_core.singlecycle_datapath.program_counter",
+            "module_type": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "regfile",
+            "instance_path": "riscv_core.singlecycle_datapath.regfile",
+            "module_type": "regfile",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "riscv_core.singlecycle_datapath",
+        "module_type": "singlecycle_datapath"
+      },
+      "internal_modules": [
+        {
+          "display_name": "$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\\multiplexer",
+          "module_name": "$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\\multiplexer",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer.sv:9.1-27.10"
+        },
+        {
+          "display_name": "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer",
+          "module_name": "$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\\multiplexer",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer.sv:9.1-27.10"
+        },
+        {
+          "display_name": "$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\\multiplexer",
+          "module_name": "$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\\multiplexer",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer.sv:9.1-27.10"
+        },
+        {
+          "display_name": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+          "module_name": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/register.sv:9.1-27.10"
+        },
+        {
+          "display_name": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "module_name": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/adder.sv:9.1-19.10"
+        },
+        {
+          "display_name": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "module_name": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer2.sv:9.1-27.10"
+        },
+        {
+          "display_name": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+          "module_name": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer4.sv:9.1-29.10"
+        },
+        {
+          "display_name": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+          "module_name": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/multiplexer8.sv:9.1-33.10"
+        },
+        {
+          "display_name": "alu",
+          "module_name": "alu",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/alu.sv:9.1-82.10"
+        },
+        {
+          "display_name": "regfile",
+          "module_name": "regfile",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/common/regfile.sv:9.1-35.10"
+        },
+        {
+          "display_name": "singlecycle_datapath",
+          "module_name": "singlecycle_datapath",
+          "source": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new/core/singlecycle/singlecycle_datapath.sv:9.1-144.10"
+        }
+      ],
+      "module_count": 11,
+      "partition_index": 5,
+      "root_instance_name": "singlecycle_datapath",
+      "root_instance_path": "riscv_core.singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "root_parameters": {}
+    }
+  },
+  "schema_version": 1,
+  "shared_module_types": {},
+  "strategy": "top_first_level_instances",
+  "top": {
+    "display_name": "riscv_core",
+    "local_cell_count": 0,
+    "local_cells": [],
+    "module_name": "riscv_core"
+  }
+}

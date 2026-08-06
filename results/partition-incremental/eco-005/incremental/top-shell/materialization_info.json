@@ -1,0 +1,6 @@
+{
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-005/base/top-shell",
+  "reasons": []
+}

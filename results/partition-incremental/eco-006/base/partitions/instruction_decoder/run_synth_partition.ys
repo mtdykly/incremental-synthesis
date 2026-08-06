@@ -1,0 +1,30 @@
+read_verilog -sv -I/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core -I/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common -I/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/singlecycle "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/adder.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/alu.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/alu_control.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/config.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/constants.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/control_transfer.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/data_memory_interface.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/example_data_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/example_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/example_text_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/immediate_generator.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/instruction_decoder.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/multiplexer.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/multiplexer2.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/multiplexer4.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/multiplexer8.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/regfile.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/common/register.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/singlecycle/riscv_core.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/singlecycle/singlecycle_control.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/singlecycle/singlecycle_ctlpath.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-base/core/singlecycle/singlecycle_datapath.sv"
+
+# Select the partition root module.
+hierarchy -check -top instruction_decoder
+
+# Frontend processing before flattening.
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/frontend.rtlil"
+stat -top instruction_decoder
+
+# Flatten modules inside the partition.
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/flattened.rtlil"
+stat -top instruction_decoder
+
+# Complete generic synthesis.
+synth -top instruction_decoder
+opt_clean -purge
+check
+stat -top instruction_decoder
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/synth.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/partitions/instruction_decoder/partition_netlist.v"

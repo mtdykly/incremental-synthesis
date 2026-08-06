@@ -1,0 +1,4 @@
+partition	root_module	action	source	action_wall_seconds	yosys_seconds
+data_memory_interface	data_memory_interface	reuse	base_cache	0.007682	0.000000
+singlecycle_ctlpath	singlecycle_ctlpath	reuse	base_cache	0.007106	0.000000
+singlecycle_datapath	singlecycle_datapath	reuse	base_cache	0.037687	0.000000

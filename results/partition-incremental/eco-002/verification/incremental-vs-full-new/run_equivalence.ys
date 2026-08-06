@@ -35,12 +35,16 @@ check
 
 write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-002/verification/incremental-vs-full-new/equiv_before_proof.json"
 
-# First try direct SAT proofs.
-equiv_simple -seq 5
+# Prove small combinational cones first.
+equiv_simple -short -seq 1
 equiv_status
 
 # Prove remaining sequential equivalence cells.
-equiv_induct -seq 10
+equiv_induct -seq 2
+equiv_status
 
-# Fail the run if any equivalence cell remains unproven.
+# Retry simple proofs after state equivalences are known.
+equiv_simple -short -seq 1
+
+# Fail if any equivalence cell remains unproven.
 equiv_status -assert

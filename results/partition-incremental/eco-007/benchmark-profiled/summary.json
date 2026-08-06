@@ -1,0 +1,73 @@
+{
+  "iteration_count": 5,
+  "full_median_seconds": 21.51,
+  "incremental_core_median_seconds": 2.672481,
+  "speedup": 8.048700813962757,
+  "time_reduction_percent": 87.57563458856346,
+  "stage_medians": {
+    "full_seconds": 21.51,
+    "incremental_core_seconds": 2.672481,
+    "detection_seconds": 0.869137,
+    "export_hierarchy_seconds": 0.13,
+    "extract_partitions_seconds": 0.05,
+    "prepare_partition_frontends_seconds": 0.53,
+    "compute_signatures_seconds": 0.08,
+    "compare_signatures_seconds": 0.04,
+    "materialize_partitions_seconds": 0.73,
+    "reuse_copy_seconds": 0.052207,
+    "rebuild_wall_seconds": 0.0,
+    "rebuild_yosys_seconds": 0.0,
+    "top_shell_seconds": 0.0,
+    "link_partitions_seconds": 0.92,
+    "check_linked_seconds": 3.06,
+    "unattributed_overhead_seconds": 0.20749800000000018
+  },
+  "stage_breakdown": [
+    {
+      "stage": "link_partitions",
+      "median_seconds": 0.92,
+      "percent_of_incremental": 34.4249407198779
+    },
+    {
+      "stage": "materialize_partitions",
+      "median_seconds": 0.73,
+      "percent_of_incremental": 27.31544209294659
+    },
+    {
+      "stage": "prepare_partition_frontends",
+      "median_seconds": 0.53,
+      "percent_of_incremental": 19.831759327755748
+    },
+    {
+      "stage": "unattributed_overhead",
+      "median_seconds": 0.20749800000000018,
+      "percent_of_incremental": 7.764246032057859
+    },
+    {
+      "stage": "export_hierarchy",
+      "median_seconds": 0.13,
+      "percent_of_incremental": 4.864393797374051
+    },
+    {
+      "stage": "compute_signatures",
+      "median_seconds": 0.08,
+      "percent_of_incremental": 2.993473106076339
+    },
+    {
+      "stage": "extract_partitions",
+      "median_seconds": 0.05,
+      "percent_of_incremental": 1.870920691297712
+    },
+    {
+      "stage": "compare_signatures",
+      "median_seconds": 0.04,
+      "percent_of_incremental": 1.4967365530381695
+    },
+    {
+      "stage": "top_shell",
+      "median_seconds": 0.0,
+      "percent_of_incremental": 0.0
+    }
+  ],
+  "check_linked_median_seconds_excluded_from_core": 3.06
+}

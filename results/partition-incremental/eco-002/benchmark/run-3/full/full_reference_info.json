@@ -1,5 +1,0 @@
-{
-  "top_module": "riscv_core",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new",
-  "synthesis_mode": "complete_flat_synthesis"
-}

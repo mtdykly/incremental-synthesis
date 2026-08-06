@@ -144,14 +144,26 @@ yosys_quote() {
     yosys_quote "$OUTPUT_DIR/equiv_before_proof.json"
     printf '\n\n'
 
-    printf '# First try direct SAT proofs.\n'
-    printf 'equiv_simple -seq 5\n'
+    printf '# Report initial equivalence state.\n'
     printf 'equiv_status\n\n'
 
-    printf '# Prove remaining sequential equivalence cells.\n'
-    printf 'equiv_induct -seq 10\n\n'
+    printf '# Establish easy sequential state correspondences first.\n'
+    printf 'equiv_induct -seq 1\n'
+    printf 'equiv_status\n\n'
 
-    printf '# Fail the run if any equivalence cell remains unproven.\n'
+    printf '# Prove combinational cones independently.\n'
+    printf 'equiv_simple -short -nogroup -seq 1\n'
+    printf 'equiv_status\n\n'
+
+    printf '# Strengthen remaining sequential proofs.\n'
+    printf 'equiv_induct -seq 2\n'
+    printf 'equiv_status\n\n'
+
+    printf '# Retry remaining combinational equivalence cells.\n'
+    printf 'equiv_simple -short -nogroup -seq 1\n'
+    printf 'equiv_status\n\n'
+
+    printf '# Fail if any equivalence cell remains unproven.\n'
     printf 'equiv_status -assert\n'
 } > "$RUN_SCRIPT"
 
@@ -161,12 +173,54 @@ echo "Gate design    : $LINKED_JSON"
 echo "Output         : $OUTPUT_DIR"
 echo
 
+set +e
+
 /usr/bin/time \
     -p \
     -o "$TIME_FILE" \
-    yosys \
-    -l "$LOG_FILE" \
-    -s "$RUN_SCRIPT"
+    timeout \
+        --signal=TERM \
+        --kill-after=30s \
+        30m \
+        yosys \
+        -l "$LOG_FILE" \
+        -s "$RUN_SCRIPT"
+
+VERIFY_STATUS=$?
+
+set -e
+
+if [[ "$VERIFY_STATUS" -eq 124 \
+   || "$VERIFY_STATUS" -eq 137 ]]
+then
+    jq -n \
+        --arg status "timeout" \
+        --arg top_module "$TOP_MODULE" \
+        --arg gold_design "$FULL_JSON" \
+        --arg gate_design "$LINKED_JSON" \
+        --arg timeout "5m" \
+        '{
+            status: $status,
+            top_module: $top_module,
+            gold_design: $gold_design,
+            gate_design: $gate_design,
+            timeout: $timeout
+        }' \
+        > "$OUTPUT_DIR/summary.json"
+
+    echo "ERROR: equivalence verification timed out after 5 minutes."
+    echo "See:"
+    echo "  $LOG_FILE"
+    exit 124
+fi
+
+if [[ "$VERIFY_STATUS" -ne 0 ]]; then
+    echo "ERROR: equivalence verification failed."
+    echo "Exit status: $VERIFY_STATUS"
+    echo "See:"
+    echo "  $LOG_FILE"
+    exit "$VERIFY_STATUS"
+fi
 
 jq -n \
     --arg status "proven" \

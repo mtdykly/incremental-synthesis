@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import copy
 import json
 import sys
 from pathlib import Path
@@ -88,34 +89,137 @@ def canonical_json(value: Any) -> str:
     )
 
 
-def canonical_cells(module: JsonObject) -> list[JsonObject]:
+def memory_reference_descriptor(
+    cell: JsonObject,
+) -> JsonObject:
     """
-    只保留 cell 的类型、参数、端口和连接等内容。
+    描述一个 memory 访问 cell，但忽略原始 MEMID。
 
-    不保留 cell 名称，因为 Yosys 自动生成的 cell 名称可能包含：
-    1. Base/New 的文件绝对路径；
-    2. 自动生成的编号；
-    3. 与功能无关的调试信息。
+    原始 MEMID 通常包含 Yosys 自动编号，不稳定。
     """
-    cells = [
-        clean(cell)
-        for cell in module.get("cells", {}).values()
-    ]
+    result = copy.deepcopy(cell)
 
-    cells.sort(key=canonical_json)
+    parameters = result.get("parameters", {})
 
-    return cells
+    if "MEMID" in parameters:
+        parameters["MEMID"] = "<MEMORY>"
+
+    return clean(result)
 
 
-def canonical_module(module: JsonObject) -> JsonObject:
+def canonical_memories(
+    module: JsonObject,
+) -> tuple[dict[str, str], list[JsonObject]]:
+    """
+    为每个 memory 生成稳定标识。
+
+    稳定标识由以下内容决定：
+    1. memory 自身属性；
+    2. 引用该 memory 的 cell 内容；
+    3. 引用 cell 中忽略原始 MEMID。
+
+    返回：
+    - 原始 memory 名称到稳定 ID 的映射；
+    - 规范化后的 memory 列表。
+    """
+    memories = module.get("memories", {})
+    cells = module.get("cells", {})
+
+    memory_id_map: dict[str, str] = {}
+    canonical_records: list[JsonObject] = []
+
+    for memory_name, memory in memories.items():
+        references = []
+
+        for cell in cells.values():
+            parameters = cell.get("parameters", {})
+
+            if parameters.get("MEMID") == memory_name:
+                references.append(
+                    memory_reference_descriptor(cell)
+                )
+
+        references.sort(key=canonical_json)
+
+        descriptor = {
+            "definition": clean(memory),
+            "references": references,
+        }
+
+        stable_id = (
+            "memory:"
+            + stable_hash(descriptor)
+        )
+
+        memory_id_map[memory_name] = stable_id
+
+        canonical_records.append({
+            "stable_id": stable_id,
+            "definition": clean(memory),
+            "references": references,
+        })
+
+    canonical_records.sort(key=canonical_json)
+
+    return memory_id_map, canonical_records
+
+
+def canonical_cells(
+    module: JsonObject,
+    memory_id_map: dict[str, str],
+) -> list[JsonObject]:
+    """
+    规范化 cell，并将不稳定的 MEMID 替换为稳定 memory ID。
+    """
+    result = []
+
+    for original_cell in module.get(
+        "cells", {}
+    ).values():
+        cell = copy.deepcopy(original_cell)
+
+        parameters = cell.get("parameters", {})
+        memory_id = parameters.get("MEMID")
+
+        if (
+            isinstance(memory_id, str)
+            and memory_id in memory_id_map
+        ):
+            parameters["MEMID"] = (
+                memory_id_map[memory_id]
+            )
+
+        result.append(clean(cell))
+
+    result.sort(key=canonical_json)
+
+    return result
+
+
+def canonical_module(
+    module: JsonObject,
+) -> JsonObject:
+    memory_id_map, memories = canonical_memories(
+        module
+    )
+
     return {
-        "attributes": clean(module.get("attributes", {})),
-        "parameter_default_values": clean(
-            module.get("parameter_default_values", {})
+        "attributes": clean(
+            module.get("attributes", {})
         ),
-        "ports": clean(module.get("ports", {})),
-        "cells": canonical_cells(module),
-        "memories": clean(module.get("memories", {})),
+        "parameter_default_values": clean(
+            module.get(
+                "parameter_default_values", {}
+            )
+        ),
+        "ports": clean(
+            module.get("ports", {})
+        ),
+        "cells": canonical_cells(
+            module,
+            memory_id_map,
+        ),
+        "memories": memories,
     }
 
 
@@ -252,7 +356,7 @@ def main() -> None:
                 hierarchical_modules[hierarchy_root]
             )
             implementation_payload = {
-                "schema_version": 3,
+                "schema_version": 4,
                 "partition_name": partition_name,
                 "root_instance_name": partition.get(
                     "root_instance_name"
@@ -293,7 +397,7 @@ def main() -> None:
             hierarchical_modules[top_module]
         )
         top_payload = {
-            "schema_version": 3,
+            "schema_version": 4,
             "top_module": normalize_name(top_module),
             "module": canonical_module(
                 hierarchical_modules[top_module]
@@ -317,9 +421,10 @@ def main() -> None:
         }
 
         output = {
-            "schema_version": 2,
+            "schema_version": 4,
             "signature_method": (
-                "isolated_partition_flattened_ir_without_cell_names"
+                "isolated_partition_flattened_ir_"
+                "with_stable_memory_ids"
             ),
             "top_module": top_module,
             "partition_environment": partition_environment,

@@ -1,0 +1,11 @@
+{
+  "partition": "singlecycle_datapath",
+  "root_module": "singlecycle_datapath",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-007/base/partitions/singlecycle_datapath",
+  "reasons": [],
+  "base_implementation_signature": "af07a18d572577dc8ba080a16ef4cd2b730152ce54a62823a62d649583a38e74",
+  "new_implementation_signature": "af07a18d572577dc8ba080a16ef4cd2b730152ce54a62823a62d649583a38e74",
+  "partition_netlist_sha256": "22ff37ae6273a6d11474d0bce97943177634027ec7fb92ed4d1d381d6b00089a"
+}

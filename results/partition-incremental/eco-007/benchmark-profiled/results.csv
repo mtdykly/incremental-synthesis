@@ -1,0 +1,6 @@
+iteration,order,full_seconds,incremental_core_seconds,speedup,time_reduction_percent,detection_seconds,export_hierarchy_seconds,extract_partitions_seconds,prepare_partition_frontends_seconds,compute_signatures_seconds,compare_signatures_seconds,materialize_partitions_seconds,reuse_copy_seconds,rebuild_wall_seconds,rebuild_yosys_seconds,top_shell_seconds,link_partitions_seconds,check_linked_seconds,unattributed_overhead_seconds,reuse_count,rebuild_count,top_shell_action
+1,full-first,22.17,2.69607,8.223080,87.839107,0.861438,0.13,0.05,0.53,0.08,0.04,0.76,0.053137000000000004,0,0,0,0.92,3.12,0.1860700000000004,3,0,reuse
+2,incremental-first,21.51,2.672481,8.048701,87.575635,0.869137,0.13,0.05,0.53,0.08,0.04,0.71,0.053162999999999995,0,0,0,0.92,3.07,0.21248099999999992,3,0,reuse
+3,full-first,22.41,2.647498,8.464596,88.186087,0.853668,0.13,0.05,0.51,0.08,0.05,0.73,0.047345,0,0,0,0.89,3.02,0.20749800000000018,3,0,reuse
+4,incremental-first,20.90,2.750499,7.598621,86.839718,0.885313,0.13,0.05,0.55,0.08,0.04,0.78,0.052207,0,0,0,0.91,3.04,0.210499,3,0,reuse
+5,full-first,21.35,2.647158,8.065253,87.601133,0.880646,0.13,0.05,0.54,0.08,0.04,0.7,0.033806,0,0,0,0.94,3.06,0.16715800000000014,3,0,reuse

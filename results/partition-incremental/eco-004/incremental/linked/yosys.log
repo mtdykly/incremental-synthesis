@@ -1,0 +1,229 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/linked/run_link_partitions.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/top-shell/top_shell_netlist.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/top-shell/top_shell_netlist.v' to AST representation.
+Generating RTLIL representation for module `\riscv_core'.
+Successfully finished Verilog frontend.
+
+2. Executing JSON frontend.
+Importing module data_memory_interface from JSON tree.
+
+3. Executing JSON frontend.
+Importing module immediate_generator from JSON tree.
+
+4. Executing JSON frontend.
+Importing module instruction_decoder from JSON tree.
+
+5. Executing JSON frontend.
+Importing module singlecycle_ctlpath from JSON tree.
+
+6. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \singlecycle_datapath
+Used module:     \singlecycle_ctlpath
+Used module:     \instruction_decoder
+Used module:     \immediate_generator
+Used module:     \data_memory_interface
+
+7.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \singlecycle_datapath
+Used module:     \singlecycle_ctlpath
+Used module:     \instruction_decoder
+Used module:     \immediate_generator
+Used module:     \data_memory_interface
+Removed 0 unused modules.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Checking module singlecycle_ctlpath...
+Checking module instruction_decoder...
+Checking module immediate_generator...
+Checking module data_memory_interface...
+Checking module riscv_core...
+Found and reported 0 problems.
+
+9. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    23398 wires
+    24595 wire bits
+       51 public wires
+     1248 public wire bits
+       18 ports
+      192 port bits
+    24500 cells
+      338   $_ANDNOT_
+     5175   $_AND_
+     1055   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+     1289   $_MUX_
+     9093   $_NAND_
+      109   $_NOR_
+      135   $_NOT_
+      748   $_ORNOT_
+     1524   $_OR_
+     2194   $_XNOR_
+     2839   $_XOR_
+
+=== singlecycle_ctlpath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       93 wires
+      114 wire bits
+       13 public wires
+       34 public wire bits
+       13 ports
+       34 port bits
+       94 cells
+       17   $_ANDNOT_
+       29   $_AND_
+        5   $_MUX_
+       22   $_NAND_
+        8   $_NOR_
+        1   $_NOT_
+        1   $_ORNOT_
+       10   $_OR_
+        1   $_XOR_
+
+=== instruction_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       64 wire bits
+        7 public wires
+       64 public wire bits
+        7 ports
+       64 port bits
+
+=== immediate_generator ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       76 wires
+      138 wire bits
+        2 public wires
+       64 public wire bits
+        2 ports
+       64 port bits
+      106 cells
+        9   $_ANDNOT_
+       26   $_AND_
+       63   $_NAND_
+        1   $_NOR_
+        1   $_NOT_
+        3   $_ORNOT_
+        3   $_OR_
+
+=== data_memory_interface ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      152 wires
+      343 wire bits
+       13 public wires
+      204 public wire bits
+       13 ports
+      204 port bits
+      207 cells
+       14   $_ANDNOT_
+       45   $_AND_
+       64   $_MUX_
+       54   $_NAND_
+        3   $_NOR_
+        1   $_NOT_
+       25   $_ORNOT_
+        1   $_XOR_
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       30 wires
+      345 wire bits
+       30 public wires
+      345 public wire bits
+       10 ports
+      168 port bits
+        5 submodules
+        1   data_memory_interface
+        1   immediate_generator
+        1   instruction_decoder
+        1   singlecycle_ctlpath
+        1   singlecycle_datapath
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    24907 riscv_core
+      207 data_memory_interface
+      106 immediate_generator
+       94 singlecycle_ctlpath
+    24500 singlecycle_datapath
+
+        +----------Count including submodules.
+        | 
+    23756 wires
+    25599 wire bits
+      116 public wires
+     1959 public wire bits
+       63 ports
+      726 port bits
+        - memories
+        - memory bits
+        - processes
+    24907 cells
+      378   $_ANDNOT_
+     5275   $_AND_
+     1055   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+     1358   $_MUX_
+     9232   $_NAND_
+      121   $_NOR_
+      138   $_NOT_
+      777   $_ORNOT_
+     1537   $_OR_
+     2194   $_XNOR_
+     2841   $_XOR_
+        5 submodules
+        1   data_memory_interface
+        1   immediate_generator
+        1   instruction_decoder
+        1   singlecycle_ctlpath
+        1   singlecycle_datapath
+
+10. Executing JSON backend.
+
+11. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/linked/linked.rtlil
+
+12. Executing Verilog backend.
+Dumping module `\data_memory_interface'.
+Dumping module `\immediate_generator'.
+Dumping module `\instruction_decoder'.
+Dumping module `\riscv_core'.
+Dumping module `\singlecycle_ctlpath'.
+Dumping module `\singlecycle_datapath'.
+
+End of script. Logfile hash: b9c02140e8, time: 0.73s, user: 0.88s, system: 0.16s, MEM: 184.21 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 61% 10x read_json (0 sec), 13% 2x write_json (0 sec), ...

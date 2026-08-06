@@ -1,0 +1,2037 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-006/incremental-profiled/partitions/singlecycle_datapath/run_synth_partition.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv' to AST representation.
+Generating RTLIL representation for module `\adder'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv' to AST representation.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu_control.sv' to AST representation.
+Generating RTLIL representation for module `\alu_control'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/config.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/config.sv' to AST representation.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/constants.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/constants.sv' to AST representation.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv' to AST representation.
+Generating RTLIL representation for module `\control_transfer'.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:17.22-17.54.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:18.22-18.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:19.22-19.54.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:20.22-20.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:21.21-21.53.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:22.21-22.52.
+Warning: wire '\take_branch' is assigned in a block at /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/control_transfer.sv:23.22-23.40.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/data_memory_interface.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/data_memory_interface.sv' to AST representation.
+Generating RTLIL representation for module `\data_memory_interface'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_data_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_data_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_data_memory_bus'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_memory_bus'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_text_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/example_text_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_text_memory_bus'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv' to AST representation.
+Generating RTLIL representation for module `\immediate_generator'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/instruction_decoder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/instruction_decoder.sv' to AST representation.
+Generating RTLIL representation for module `\instruction_decoder'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24
+Successfully finished Verilog frontend.
+
+14. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer2.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer2.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer2'.
+Successfully finished Verilog frontend.
+
+15. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer4.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer4.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer4'.
+Successfully finished Verilog frontend.
+
+16. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer8.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer8.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer8'.
+Successfully finished Verilog frontend.
+
+17. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv' to AST representation.
+Generating RTLIL representation for module `\regfile'.
+Successfully finished Verilog frontend.
+
+18. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv' to AST representation.
+Generating RTLIL representation for module `\register'.
+Successfully finished Verilog frontend.
+
+19. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/riscv_core.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/riscv_core.sv' to AST representation.
+Generating RTLIL representation for module `\riscv_core'.
+Successfully finished Verilog frontend.
+
+20. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_control.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_control'.
+Successfully finished Verilog frontend.
+
+21. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_ctlpath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_ctlpath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+22. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_datapath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/singlecycle/singlecycle_datapath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_datapath'.
+Successfully finished Verilog frontend.
+
+23. Executing HIERARCHY pass (managing design hierarchy).
+
+23.1. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     \register
+Used module:     \multiplexer8
+Used module:         \multiplexer
+Used module:     \multiplexer2
+Used module:     \multiplexer4
+Used module:     \alu
+Used module:     \adder
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+
+23.2. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+Generating RTLIL representation for module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+
+23.3. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+Generating RTLIL representation for module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+
+23.4. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+Generating RTLIL representation for module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24
+Parameter \WIDTH = 32
+Parameter \INITIAL = 4194304
+
+23.5. Executing AST frontend in derive mode using pre-parsed AST for module `\register'.
+Parameter \WIDTH = 32
+Parameter \INITIAL = 4194304
+Generating RTLIL representation for module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Parameter \WIDTH = 32
+
+23.6. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer8'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+23.7. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer2'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+23.8. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplexer4'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+23.9. Executing AST frontend in derive mode using pre-parsed AST for module `\adder'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+
+23.10. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         \multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 8
+Found cached RTLIL representation for module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 2
+Found cached RTLIL representation for module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Parameter \WIDTH = 32
+Parameter \CHANNELS = 4
+Found cached RTLIL representation for module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+
+23.11. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+
+23.12. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \regfile
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:         $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+Used module:     \alu
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\riscv_core'.
+Removing unused module `\register'.
+Removing unused module `\multiplexer8'.
+Removing unused module `\multiplexer4'.
+Removing unused module `\multiplexer2'.
+Removing unused module `\multiplexer'.
+Removing unused module `\example_text_memory_bus'.
+Removing unused module `\example_memory_bus'.
+Removing unused module `\example_data_memory_bus'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\control_transfer'.
+Removing unused module `\alu_control'.
+Removing unused module `\adder'.
+Removed 15 unused modules.
+
+24. Executing PROC pass (convert processes to netlists).
+
+24.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+24.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126 in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126 in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118 in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118 in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Removed 1 dead cases from process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112 in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112 in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv:22$81 in module immediate_generator.
+Marked 2 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92 in module regfile.
+Marked 7 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:25$3 in module alu.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137 in module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+Removed a total of 3 dead cases.
+
+24.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 27 assignments to connections.
+
+24.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:21$138'.
+  Set init value: \value = 4194304
+
+24.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137'.
+
+24.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~14 debug messages>
+
+24.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$136'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$135'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$134'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$133'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$132'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$131'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$130'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$129'.
+Creating decoders for process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$125_DATA[31:0]$128
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$124'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$123'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$122'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$121'.
+Creating decoders for process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$117_DATA[31:0]$120
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$116'.
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$115'.
+Creating decoders for process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112'.
+     1/1: $1$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$111_DATA[31:0]$114
+Creating decoders for process `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv:22$81'.
+     1/1: $1\immediate[31:0]
+Creating decoders for process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:28$104'.
+Creating decoders for process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+     1/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$102
+     2/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_DATA[31:0]$101
+     3/6: $2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_ADDR[4:0]$100
+     4/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$98
+     5/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_DATA[31:0]$97
+     6/6: $1$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_ADDR[4:0]$96
+Creating decoders for process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:75$29'.
+Creating decoders for process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:25$3'.
+     1/7: $7\result[31:0]
+     2/7: $6\result[31:0]
+     3/7: $5\result[31:0]
+     4/7: $4\result[31:0]
+     5/7: $3\result[31:0]
+     6/7: $2\result[31:0]
+     7/7: $1\result[31:0]
+Creating decoders for process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:21$138'.
+Creating decoders for process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137'.
+     1/1: $0\value[31:0]
+
+24.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[0]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$136'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[1]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$135'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[2]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$134'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[3]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$133'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[4]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$132'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[5]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$131'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[6]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$130'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.\input_array[7]' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$129'.
+No latch inferred for signal `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$125_DATA' from process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[0]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$124'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[1]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$123'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[2]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$122'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.\input_array[3]' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$121'.
+No latch inferred for signal `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$117_DATA' from process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.\input_array[0]' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$116'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.\input_array[1]' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$115'.
+No latch inferred for signal `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$mem2reg_rd$\input_array$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$111_DATA' from process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112'.
+No latch inferred for signal `\immediate_generator.\immediate' from process `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv:22$81'.
+No latch inferred for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:28$88_EN' from process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:28$104'.
+No latch inferred for signal `\alu.\signed_multiplication' from process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:75$29'.
+No latch inferred for signal `\alu.\unsigned_multiplication' from process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:75$29'.
+No latch inferred for signal `\alu.\signed_unsigned_multiplication' from process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:75$29'.
+No latch inferred for signal `\alu.\result' from process `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:25$3'.
+
+24.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_ADDR' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+  created $dff cell `$procdff$266' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_DATA' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+  created $dff cell `$procdff$267' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN' using process `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+  created $dff cell `$procdff$268' with positive edge clock.
+Creating register for signal `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.\value' using process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137'.
+  created $adff cell `$procdff$271' with positive edge clock and positive level reset.
+
+24.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+24.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$136'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$135'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$134'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$133'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$132'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$131'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$130'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$129'.
+Found and cleaned up 1 empty switch in `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126'.
+Removing empty process `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$126'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$124'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$123'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$122'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$121'.
+Found and cleaned up 1 empty switch in `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118'.
+Removing empty process `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$118'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$116'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:24$115'.
+Found and cleaned up 1 empty switch in `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112'.
+Removing empty process `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/multiplexer.sv:21$112'.
+Found and cleaned up 1 empty switch in `\immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv:22$81'.
+Removing empty process `immediate_generator.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/immediate_generator.sv:22$81'.
+Removing empty process `regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:28$104'.
+Found and cleaned up 2 empty switches in `\regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+Removing empty process `regfile.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:31$92'.
+Removing empty process `alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:75$29'.
+Found and cleaned up 7 empty switches in `\alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:25$3'.
+Removing empty process `alu.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:25$3'.
+Removing empty process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:21$138'.
+Found and cleaned up 1 empty switch in `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137'.
+Removing empty process `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/register.sv:23$137'.
+Cleaned up 14 empty switches.
+
+24.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+<suppressed ~1 debug messages>
+Optimizing module instruction_decoder.
+Optimizing module immediate_generator.
+Optimizing module singlecycle_datapath.
+Optimizing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module regfile.
+<suppressed ~1 debug messages>
+Optimizing module alu.
+<suppressed ~5 debug messages>
+Optimizing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+<suppressed ~1 debug messages>
+
+25. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer..
+Finding unused cells or wires in module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer..
+Finding unused cells or wires in module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer..
+Finding unused cells or wires in module \instruction_decoder..
+Finding unused cells or wires in module \immediate_generator..
+Finding unused cells or wires in module \singlecycle_datapath..
+Finding unused cells or wires in module $paramod\adder\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \regfile..
+Finding unused cells or wires in module \alu..
+Finding unused cells or wires in module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register..
+Removed 3 unused cells and 87 unused wires.
+<suppressed ~11 debug messages>
+
+26. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer...
+Checking module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer...
+Checking module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer...
+Checking module instruction_decoder...
+Checking module immediate_generator...
+Checking module singlecycle_datapath...
+Checking module $paramod\adder\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000...
+Checking module regfile...
+Checking module alu...
+Checking module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register...
+Found and reported 0 problems.
+
+27. Executing JSON backend.
+
+28. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-006/incremental-profiled/partitions/singlecycle_datapath/frontend.rtlil
+
+29. Printing statistics.
+
+=== $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       19 wires
+      555 wire bits
+       11 public wires
+      547 public wire bits
+        3 ports
+      291 port bits
+        9 cells
+        7   $eq
+        1   $logic_not
+        1   $pmux
+
+=== $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+      162 wire bits
+        5 public wires
+      161 public wire bits
+        3 ports
+       97 port bits
+        2 cells
+        1   $not
+        1   $pmux
+
+=== $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+      294 wire bits
+        7 public wires
+      290 public wire bits
+        3 ports
+      162 port bits
+        5 cells
+        3   $eq
+        1   $logic_not
+        1   $pmux
+
+=== $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+       99 wire bits
+        5 public wires
+       67 public wire bits
+        5 ports
+       67 port bits
+        2 cells
+        1   $adff
+        1   $mux
+
+=== $paramod\adder\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+       96 wire bits
+        3 public wires
+       96 public wire bits
+        3 ports
+       96 port bits
+        1 cells
+        1   $add
+
+=== $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+       97 wire bits
+        4 public wires
+       97 public wire bits
+        4 ports
+       97 port bits
+        1 submodules
+        1   $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+
+=== $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+      162 wire bits
+        6 public wires
+      162 public wire bits
+        6 ports
+      162 port bits
+        1 submodules
+        1   $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+
+=== $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+      291 wire bits
+       10 public wires
+      291 public wire bits
+       10 ports
+      291 port bits
+        1 submodules
+        1   $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+
+=== alu ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       72 wires
+     1164 wire bits
+        8 public wires
+      294 public wire bits
+        5 ports
+      102 port bits
+       69 cells
+        1   $add
+        1   $and
+        2   $div
+       30   $eq
+        2   $logic_and
+        5   $logic_not
+        2   $lt
+        2   $mod
+        3   $mul
+       14   $mux
+        1   $or
+        1   $pmux
+        1   $shl
+        1   $shr
+        1   $sshr
+        1   $sub
+        1   $xor
+
+=== immediate_generator ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       77 wire bits
+        2 public wires
+       64 public wire bits
+        2 ports
+       64 port bits
+       14 cells
+       10   $eq
+        1   $pmux
+        3   $reduce_or
+
+=== instruction_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       64 wire bits
+        7 public wires
+       64 public wire bits
+        7 ports
+       64 port bits
+
+=== regfile ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       18 wires
+      321 wire bits
+        8 public wires
+      113 public wire bits
+        8 ports
+      113 port bits
+        1 memories
+     1024 memory bits
+       14 cells
+        1   $meminit_v2
+        2   $memrd
+        1   $memwr_v2
+        9   $mux
+        1   $reduce_bool
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       31 wires
+      529 wire bits
+       31 public wires
+      529 public wire bits
+       18 ports
+      194 port bits
+       11 submodules
+        1   $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+        2   $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+        2   $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+        1   alu
+        1   immediate_generator
+        1   instruction_decoder
+        1   regfile
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      119 singlecycle_datapath
+        2 $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+        1 $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+        2   $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer
+        5   $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer
+        9   $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer
+       69 alu
+       14 immediate_generator
+       14 regfile
+
+        +----------Count including submodules.
+        | 
+      216 wires
+     4266 wire bits
+      119 public wires
+     3129 public wire bits
+       87 ports
+     2090 port bits
+        1 memories
+     1024 memory bits
+        - processes
+      119 cells
+        3   $add
+        1   $adff
+        1   $and
+        2   $div
+       50   $eq
+        2   $logic_and
+        7   $logic_not
+        2   $lt
+        1   $meminit_v2
+        2   $memrd
+        1   $memwr_v2
+        2   $mod
+        3   $mul
+       24   $mux
+        2   $not
+        1   $or
+        6   $pmux
+        1   $reduce_bool
+        3   $reduce_or
+        1   $shl
+        1   $shr
+        1   $sshr
+        1   $sub
+        1   $xor
+       11 submodules
+        1   $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+        2   $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+        2   $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+        1   alu
+        1   immediate_generator
+        1   instruction_decoder
+        1   regfile
+
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+30. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer.
+Deleting now unused module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer.
+Deleting now unused module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer.
+Deleting now unused module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+Deleting now unused module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module alu.
+Deleting now unused module immediate_generator.
+Deleting now unused module instruction_decoder.
+Deleting now unused module regfile.
+<suppressed ~14 debug messages>
+
+31. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+32. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+33. Executing JSON backend.
+
+34. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-006/incremental-profiled/partitions/singlecycle_datapath/flattened.rtlil
+
+35. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      216 wires
+     4266 wire bits
+      119 public wires
+     3129 public wire bits
+       18 ports
+      194 port bits
+        1 memories
+     1024 memory bits
+      119 cells
+        3   $add
+        1   $adff
+        1   $and
+        2   $div
+       50   $eq
+        2   $logic_and
+        7   $logic_not
+        2   $lt
+        1   $meminit_v2
+        2   $memrd
+        1   $memwr_v2
+        2   $mod
+        3   $mul
+       24   $mux
+        2   $not
+        1   $or
+        6   $pmux
+        1   $reduce_bool
+        3   $reduce_or
+        1   $shl
+        1   $shr
+        1   $sshr
+        1   $sub
+        1   $xor
+
+36. Executing SYNTH pass.
+
+36.1. Executing HIERARCHY pass (managing design hierarchy).
+
+36.1.1. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+
+36.1.2. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Removed 0 unused modules.
+
+36.2. Executing PROC pass (convert processes to netlists).
+
+36.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+36.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+36.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+36.2.4. Executing PROC_INIT pass (extract init attributes).
+
+36.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+36.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+36.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+36.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+36.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+36.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+36.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+36.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.5. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+36.6. Executing OPT pass (performing simple optimizations).
+
+36.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 119 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 107 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 106 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+<suppressed ~39 debug messages>
+Removed a total of 13 cells.
+
+36.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\alu.$procmux$195.
+    dead port 1/2 on $mux $flatten\alu.$procmux$203.
+    dead port 2/2 on $mux $flatten\alu.$procmux$205.
+    dead port 2/2 on $mux $flatten\alu.$procmux$212.
+    dead port 2/2 on $mux $flatten\alu.$procmux$220.
+    dead port 1/2 on $mux $flatten\alu.$procmux$230.
+    dead port 2/2 on $mux $flatten\alu.$procmux$232.
+    dead port 2/2 on $mux $flatten\alu.$procmux$241.
+    dead port 2/2 on $mux $flatten\regfile.$procmux$168.
+    dead port 2/2 on $mux $flatten\regfile.$procmux$174.
+    dead port 2/2 on $mux $flatten\regfile.$procmux$180.
+Removed 11 multiplexer ports.
+<suppressed ~38 debug messages>
+
+36.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+    New ctrl vector for $pmux cell $flatten\alu.$procmux$244: { $flatten\alu.$procmux$196_CMP $flatten\alu.$procmux$206_CMP $flatten\alu.$procmux$221_CMP $flatten\alu.$procmux$233_CMP $auto$opt_reduce.cc:137:opt_pmux$274 $flatten\alu.$procmux$251_CMP $flatten\alu.$procmux$252_CMP $flatten\alu.$procmux$253_CMP $flatten\alu.$procmux$254_CMP $flatten\alu.$procmux$255_CMP $flatten\alu.$procmux$256_CMP $flatten\alu.$procmux$257_CMP $flatten\alu.$procmux$258_CMP $flatten\alu.$procmux$259_CMP $flatten\alu.$procmux$260_CMP $flatten\alu.$procmux$261_CMP $flatten\alu.$procmux$262_CMP $flatten\alu.$procmux$263_CMP }
+    New ctrl vector for $pmux cell $flatten\mux_reg_writeback.\multiplexer.$procmux$140: { $auto$opt_reduce.cc:137:opt_pmux$276 $flatten\mux_reg_writeback.\multiplexer.$procmux$145_CMP $flatten\mux_reg_writeback.\multiplexer.$procmux$146_CMP $flatten\mux_reg_writeback.\multiplexer.$procmux$147_CMP $flatten\mux_reg_writeback.\multiplexer.$procmux$148_CMP }
+    Consolidated identical input bits for $mux cell $flatten\regfile.$procmux$166:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\regfile.$procmux$166_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\regfile.$procmux$166_Y [0]
+      New connections: $flatten\regfile.$procmux$166_Y [31:1] = { $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] $flatten\regfile.$procmux$166_Y [0] }
+  Optimizing cells in module \singlecycle_datapath.
+    Consolidated identical input bits for $mux cell $flatten\regfile.$procmux$183:
+      Old ports: A=0, B=$flatten\regfile.$2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$102, Y=$flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95
+      New ports: A=1'0, B=$flatten\regfile.$procmux$166_Y [0], Y=$flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0]
+      New connections: $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [31:1] = { $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] $flatten\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:33$89_EN[31:0]$95 [0] }
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 4 changes.
+
+36.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 97 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 0 unused cells and 23 unused wires.
+<suppressed ~1 debug messages>
+
+36.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+36.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 97 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+36.7. Executing FSM pass (extract and optimize FSM).
+
+36.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+36.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+36.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+36.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+36.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+36.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+36.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+36.8. Executing OPT pass (performing simple optimizations).
+
+36.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 97 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+36.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 97 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\program_counter.$procdff$271 ($adff) from module singlecycle_datapath (D = \mux_next_pc_select.multiplexer.out, Q = \program_counter.value).
+
+36.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+36.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+36.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 96 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+36.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 27 address bits (of 32) from memory init port singlecycle_datapath.$flatten\regfile.$meminit$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:28$103 (regfile.register).
+Removed top 32 bits (of 64) from port A of cell singlecycle_datapath.$flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:77$31 ($mul).
+Removed top 32 bits (of 64) from port B of cell singlecycle_datapath.$flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:77$31 ($mul).
+Removed top 31 bits (of 32) from port B of cell singlecycle_datapath.$flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$17 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$163_CMP2 ($eq).
+Removed top 4 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$163_CMP1 ($eq).
+Removed top 5 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$163_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$162_CMP1 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$162_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$160_CMP1 ($eq).
+Removed top 2 bits (of 7) from port B of cell singlecycle_datapath.$flatten\immediate_generator.$procmux$160_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell singlecycle_datapath.$flatten\mux_next_pc_select.\multiplexer.$procmux$152_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_datapath.$flatten\mux_reg_writeback.\multiplexer.$procmux$145_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell singlecycle_datapath.$flatten\mux_reg_writeback.\multiplexer.$procmux$146_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell singlecycle_datapath.$flatten\mux_reg_writeback.\multiplexer.$procmux$147_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$249_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$250_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$251_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$252_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$253_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$254_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$255_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$256_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$257_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$258_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$259_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$260_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$261_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$262_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell singlecycle_datapath.$flatten\alu.$procmux$263_CMP0 ($eq).
+Removed top 29 bits (of 32) from port A of cell singlecycle_datapath.$flatten\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139 ($add).
+
+36.10. Executing PEEPOPT pass (run peephole optimizers).
+
+36.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module singlecycle_datapath:
+  creating $macc model for $flatten\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:28$4 ($add).
+  creating $macc model for $flatten\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139 ($add).
+  creating $macc model for $flatten\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139 ($add).
+  creating $macc model for $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5 ($sub).
+  creating $macc model for $flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:76$30 ($mul).
+  creating $macc model for $flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:77$31 ($mul).
+  creating $alu model for $macc $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5.
+  creating $alu model for $macc $flatten\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139.
+  creating $alu model for $macc $flatten\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139.
+  creating $alu model for $macc $flatten\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:28$4.
+  creating $macc cell for $flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:76$30: $auto$alumacc.cc:382:replace_macc$278
+  creating $macc cell for $flatten\alu.$mul$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:77$31: $auto$alumacc.cc:382:replace_macc$279
+  creating $alu model for $flatten\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:34$10 ($lt): merged with $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5.
+  creating $alu model for $flatten\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:35$11 ($lt): merged with $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5.
+  creating $alu model for $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:33$9 ($eq): merged with $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5.
+  creating $alu cell for $flatten\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:28$4: $auto$alumacc.cc:512:replace_alu$280
+  creating $alu cell for $flatten\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139: $auto$alumacc.cc:512:replace_alu$283
+  creating $alu cell for $flatten\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/adder.sv:17$139: $auto$alumacc.cc:512:replace_alu$286
+  creating $alu cell for $flatten\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:29$5, $flatten\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:34$10, $flatten\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:35$11, $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:33$9: $auto$alumacc.cc:512:replace_alu$289
+  created 4 $alu and 2 $macc cells.
+
+36.13. Executing SHARE pass (SAT-based resource sharing).
+Found 8 cells in module singlecycle_datapath that may be considered for resource sharing.
+  Analyzing resource sharing options for $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:67$28 ($mod):
+    Found 1 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$procmux$196_CMP }.
+    Found 1 candidates: $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:62$26
+    Analyzing resource sharing with $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:62$26 ($mod):
+      Found 1 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$206_CMP }.
+      Activation pattern for cell $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:67$28: { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$procmux$196_CMP } = 2'01
+      Activation pattern for cell $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:62$26: { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$206_CMP } = 3'001
+      Size of SAT problem: 24 cells, 1475 variables, 3933 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:67$28: $auto$share.cc:1062:make_cell_activation_logic$300
+      New cell: $auto$share.cc:663:make_supercell$307 ($mod)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$307 ($mod):
+    Found 2 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$196_CMP $flatten\alu.$procmux$206_CMP }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu.$sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:32$8 ($sshr):
+    Found 1 activation_patterns using ctrl signal $flatten\alu.$procmux$259_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:31$7 ($shr):
+    Found 1 activation_patterns using ctrl signal $flatten\alu.$procmux$260_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:30$6 ($shl):
+    Found 1 activation_patterns using ctrl signal $flatten\alu.$procmux$261_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\regfile.$memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/regfile.sv:24$90 ($memrd):
+    Found 20 activation_patterns using ctrl signal { $flatten\mux_operand_a.\multiplexer.$procmux$156_CMP $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$196_CMP $flatten\alu.$procmux$206_CMP $flatten\alu.$procmux$221_CMP $flatten\alu.$procmux$233_CMP $flatten\alu.$procmux$251_CMP $flatten\alu.$procmux$252_CMP $flatten\alu.$procmux$253_CMP $flatten\alu.$procmux$254_CMP $flatten\alu.$procmux$255_CMP $flatten\alu.$procmux$256_CMP $flatten\alu.$procmux$257_CMP $flatten\alu.$procmux$258_CMP $flatten\alu.$procmux$259_CMP $flatten\alu.$procmux$260_CMP $flatten\alu.$procmux$261_CMP $flatten\alu.$procmux$262_CMP $flatten\alu.$procmux$263_CMP $auto$opt_reduce.cc:137:opt_pmux$274 }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:50$19 ($div):
+    Found 1 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$233_CMP }.
+    Found 1 candidates: $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:55$21
+    Analyzing resource sharing with $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:55$21 ($div):
+      Found 1 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$procmux$221_CMP }.
+      Activation pattern for cell $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:50$19: { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$233_CMP } = 3'001
+      Activation pattern for cell $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:55$21: { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$procmux$221_CMP } = 2'01
+      Size of SAT problem: 24 cells, 1475 variables, 3933 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:55$21: $auto$share.cc:1062:make_cell_activation_logic$310
+      New cell: $auto$share.cc:663:make_supercell$317 ($div)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$317 ($div):
+    Found 2 activation_patterns using ctrl signal { $flatten\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:45$15_Y $flatten\alu.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:47$18_Y $flatten\alu.$procmux$221_CMP $flatten\alu.$procmux$233_CMP }.
+    No candidates found.
+Removing 4 cells in module singlecycle_datapath:
+  Removing cell $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:55$21 ($div).
+  Removing cell $flatten\alu.$div$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:50$19 ($div).
+  Removing cell $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:62$26 ($mod).
+  Removing cell $flatten\alu.$mod$/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new/core/common/alu.sv:67$28 ($mod).
+
+36.14. Executing OPT pass (performing simple optimizations).
+
+36.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 105 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 103 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+36.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~34 debug messages>
+
+36.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 103 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~3 debug messages>
+
+36.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~34 debug messages>
+
+36.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 101 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+36.15. Executing MEMORY pass.
+
+36.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+36.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+36.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing singlecycle_datapath.regfile.register write port 0.
+
+36.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+36.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\regfile.register'[0] in module `\singlecycle_datapath': no output FF found.
+Checking read port `\regfile.register'[1] in module `\singlecycle_datapath': no output FF found.
+Checking read port address `\regfile.register'[0] in module `\singlecycle_datapath': no address FF found.
+Checking read port address `\regfile.register'[1] in module `\singlecycle_datapath': no address FF found.
+
+36.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory singlecycle_datapath.regfile.register by address:
+
+36.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+36.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+36.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.17. Executing OPT pass (performing simple optimizations).
+
+36.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+<suppressed ~11 debug messages>
+
+36.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 93 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:337:slice$277 ($adffe) from module singlecycle_datapath (D = \mux_next_pc_select.multiplexer.out [1:0], Q = \program_counter.value [1:0]).
+
+36.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 8 unused cells and 13 unused wires.
+<suppressed ~9 debug messages>
+
+36.17.5. Rerunning OPT passes. (Removed registers in this run.)
+
+36.17.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+<suppressed ~1 debug messages>
+
+36.17.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 88 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.17.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.17.10. Finished fast OPT passes.
+
+36.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \regfile.register in module \singlecycle_datapath:
+  created 32 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 62 $mux cells.
+  write interface: 32 write mux blocks.
+
+36.19. Executing OPT pass (performing simple optimizations).
+
+36.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+<suppressed ~10 debug messages>
+
+36.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 298 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~185 debug messages>
+
+36.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+    Consolidated identical input bits for $mux cell $auto$share.cc:657:make_supercell$305:
+      Old ports: A={ \alu.operand_b [31] \alu.operand_b }, B={ 1'0 \alu.operand_b }, Y=$auto$share.cc:654:make_supercell$303
+      New ports: A=\alu.operand_b [31], B=1'0, Y=$auto$share.cc:654:make_supercell$303 [32]
+      New connections: $auto$share.cc:654:make_supercell$303 [31:0] = \alu.operand_b
+    Consolidated identical input bits for $mux cell $auto$share.cc:656:make_supercell$304:
+      Old ports: A={ \alu.operand_a [31] \alu.operand_a }, B={ 1'0 \alu.operand_a }, Y=$auto$share.cc:653:make_supercell$302
+      New ports: A=\alu.operand_a [31], B=1'0, Y=$auto$share.cc:653:make_supercell$302 [32]
+      New connections: $auto$share.cc:653:make_supercell$302 [31:0] = \alu.operand_a
+    Consolidated identical input bits for $mux cell $auto$share.cc:657:make_supercell$315:
+      Old ports: A={ \alu.operand_b [31] \alu.operand_b }, B={ 1'0 \alu.operand_b }, Y=$auto$share.cc:654:make_supercell$313
+      New ports: A=\alu.operand_b [31], B=1'0, Y=$auto$share.cc:654:make_supercell$313 [32]
+      New connections: $auto$share.cc:654:make_supercell$313 [31:0] = \alu.operand_b
+    Consolidated identical input bits for $mux cell $auto$share.cc:656:make_supercell$314:
+      Old ports: A={ \alu.operand_a [31] \alu.operand_a }, B={ 1'0 \alu.operand_a }, Y=$auto$share.cc:653:make_supercell$312
+      New ports: A=\alu.operand_a [31], B=1'0, Y=$auto$share.cc:653:make_supercell$312 [32]
+      New connections: $auto$share.cc:653:make_supercell$312 [31:0] = \alu.operand_a
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 4 changes.
+
+36.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 298 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.19.6. Executing OPT_SHARE pass.
+
+36.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 0 unused cells and 101 unused wires.
+<suppressed ~1 debug messages>
+
+36.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~185 debug messages>
+
+36.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 298 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.19.14. Executing OPT_SHARE pass.
+
+36.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\regfile.register[0]$330 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[0]).
+Adding EN signal on $memory\regfile.register[1]$332 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[1]).
+Adding EN signal on $memory\regfile.register[2]$334 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[2]).
+Adding EN signal on $memory\regfile.register[3]$336 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[3]).
+Adding EN signal on $memory\regfile.register[4]$338 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[4]).
+Adding EN signal on $memory\regfile.register[5]$340 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[5]).
+Adding EN signal on $memory\regfile.register[6]$342 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[6]).
+Adding EN signal on $memory\regfile.register[7]$344 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[7]).
+Adding EN signal on $memory\regfile.register[8]$346 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[8]).
+Adding EN signal on $memory\regfile.register[9]$348 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[9]).
+Adding EN signal on $memory\regfile.register[10]$350 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[10]).
+Adding EN signal on $memory\regfile.register[11]$352 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[11]).
+Adding EN signal on $memory\regfile.register[12]$354 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[12]).
+Adding EN signal on $memory\regfile.register[13]$356 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[13]).
+Adding EN signal on $memory\regfile.register[14]$358 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[14]).
+Adding EN signal on $memory\regfile.register[15]$360 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[15]).
+Adding EN signal on $memory\regfile.register[16]$362 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[16]).
+Adding EN signal on $memory\regfile.register[17]$364 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[17]).
+Adding EN signal on $memory\regfile.register[18]$366 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[18]).
+Adding EN signal on $memory\regfile.register[19]$368 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[19]).
+Adding EN signal on $memory\regfile.register[20]$370 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[20]).
+Adding EN signal on $memory\regfile.register[21]$372 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[21]).
+Adding EN signal on $memory\regfile.register[22]$374 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[22]).
+Adding EN signal on $memory\regfile.register[23]$376 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[23]).
+Adding EN signal on $memory\regfile.register[24]$378 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[24]).
+Adding EN signal on $memory\regfile.register[25]$380 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[25]).
+Adding EN signal on $memory\regfile.register[26]$382 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[26]).
+Adding EN signal on $memory\regfile.register[27]$384 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[27]).
+Adding EN signal on $memory\regfile.register[28]$386 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[28]).
+Adding EN signal on $memory\regfile.register[29]$388 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[29]).
+Adding EN signal on $memory\regfile.register[30]$390 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[30]).
+Adding EN signal on $memory\regfile.register[31]$392 ($dff) from module singlecycle_datapath (D = \mux_reg_writeback.multiplexer.out, Q = \regfile.register[31]).
+
+36.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 32 unused cells and 32 unused wires.
+<suppressed ~33 debug messages>
+
+36.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \singlecycle_datapath..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~89 debug messages>
+
+36.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \singlecycle_datapath.
+Performed a total of 0 changes.
+
+36.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 266 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.19.22. Executing OPT_SHARE pass.
+
+36.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+36.20. Executing TECHMAP pass (map to technology primitives).
+
+36.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+36.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$9a99f3bc4ce1ca3c44f8bdb25c4000634acbeb47\_90_div for cells of type $div.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$9a99f3bc4ce1ca3c44f8bdb25c4000634acbeb47\_90_mod for cells of type $mod.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$2653f68ddb8eab7b1907b4a20767b72a824a7a36\_90_alu for cells of type $alu.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \alu.operand_a * \alu.operand_b (32x32 bits, unsigned)
+  add \alu.operand_a * \alu.operand_b (32x32 bits, signed)
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pmux.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$ccbcf9cf459c8d68b04688a9a5245ee9d295a0be\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$b8fb36dbb218c8f6b30171c756a8f8357614d906\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$e765c459d3029c22a22a27989e94858fd9ebfa9c\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000001000000 for cells of type $fa.
+Using template $paramod$039520c137afc9cd69dd56c3fb11a4e1fbe5f664\_90_alu for cells of type $alu.
+Using template $paramod$9a99f3bc4ce1ca3c44f8bdb25c4000634acbeb47$__div_mod_trunc for cells of type $__div_mod_trunc.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000001000000 for cells of type $lcu.
+Running "alumacc" on wrapper $extern:wrap:$neg:Y_WIDTH=33:A_WIDTH=33:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$neg:Y_WIDTH=33:A_WIDTH=33:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$neg:Y_WIDTH=33:A_WIDTH=33:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$__div_mod_u\WIDTH=32'00000000000000000000000000100001 for cells of type $__div_mod_u.
+Using template $paramod$e3e2a2ae1e4d598b5e0e0be67cc1104653ecf8c1\_90_alu for cells of type $alu.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=34:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=34:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=34:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=34:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=35:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=35:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=35:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=35:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=36:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=36:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=36:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=36:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=37:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=37:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=37:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=37:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=38:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=38:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=38:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=38:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=39:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=39:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=39:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=39:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=40:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=40:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=40:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=40:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=41:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=41:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=41:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=41:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=42:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=42:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=42:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=42:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=43:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=43:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=43:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=43:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=44:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=44:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=44:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=44:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=45:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=45:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=45:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=45:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=46:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=46:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=46:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=46:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=47:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=47:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=47:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=47:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=48:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=49:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=49:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=49:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=49:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=50:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=50:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=50:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=50:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=51:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=51:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=51:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=51:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=52:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=52:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=52:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=52:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=53:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=53:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=53:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=53:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=54:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=54:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=54:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=54:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=55:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=55:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=55:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=55:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=56:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=56:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=56:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=56:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=57:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=57:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=57:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=57:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=58:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=58:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=58:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=58:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=59:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=59:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=59:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=59:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=60:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=60:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=60:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=60:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=61:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=61:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=61:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=61:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=62:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=62:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=62:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=62:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=63:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=63:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=63:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=63:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=64:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=64:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=64:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=64:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=65:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=65:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=65:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$ge:Y_WIDTH=1:B_WIDTH=65:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100001 for cells of type $lcu.
+Using template $paramod$cc6a978c1b57cdb49efcec348c88d8e28bf1a01f\_90_alu for cells of type $alu.
+Using template $paramod$66f4d26ff378933eb12ea14eb9e3e72193112f68\_90_alu for cells of type $alu.
+Using template $paramod$f14f58a9dc953225774ed36f8cd52bde0fedcb71\_90_alu for cells of type $alu.
+Using template $paramod$a7260b544fbad3ecb8c199adb8411a5a130453c9\_90_alu for cells of type $alu.
+Using template $paramod$a9242bca79862a7659b9b983a18f5ac6ea6a7433\_90_alu for cells of type $alu.
+Using template $paramod$fe592371df89fd56a552cad9e4e228d0e2157a09\_90_alu for cells of type $alu.
+Using template $paramod$6bc296dde5719e833698f3cf04d06295044d1e25\_90_alu for cells of type $alu.
+Using template $paramod$9ad7a6267efe506852f4afa25e263d668768b291\_90_alu for cells of type $alu.
+Using template $paramod$c546b4f2cb8040b2bb6ac111535cc8fd1100fe5a\_90_alu for cells of type $alu.
+Using template $paramod$d2608cab65eadf578ed22c11852183c64a4794d6\_90_alu for cells of type $alu.
+Using template $paramod$f5362d272f1bdde39b3761b64f1782fd6080f7eb\_90_alu for cells of type $alu.
+Using template $paramod$0cabc5f867fea2e697a62451b7be046b1b62b59d\_90_alu for cells of type $alu.
+Using template $paramod$032e6a5109297833d4cbed055812dc8a30e993b4\_90_alu for cells of type $alu.
+Using template $paramod$30af2f8124d6b4afcd34f31ff530ec03e76ca9b4\_90_alu for cells of type $alu.
+Using template $paramod$cc1407be07f8e1e54886ef620e63d047d1ca1813\_90_alu for cells of type $alu.
+Using template $paramod$1729bc839225b826a817c02c1748f1a83567dbfe\_90_alu for cells of type $alu.
+Using template $paramod$62de0aa059b1237474e30af7988eea99ed833be6\_90_alu for cells of type $alu.
+Using template $paramod$e2b0dd7971fc8bfe1bf8e180c1f03e586c072686\_90_alu for cells of type $alu.
+Using template $paramod$a9e266bc30aaed0abbd1dc643d6fe98d896f5104\_90_alu for cells of type $alu.
+Using template $paramod$d595eeb1c73672ceafa0c1b1297b1f11a6064d44\_90_alu for cells of type $alu.
+Using template $paramod$0db8778394e549de91682b0c3ec02f41b29e1dfe\_90_alu for cells of type $alu.
+Using template $paramod$7cd90b2bbeb7ca8ae47b510eab3671e7de2ab6cd\_90_alu for cells of type $alu.
+Using template $paramod$9d411443c1236ab4b0071355b46ac4a6f240a2cc\_90_alu for cells of type $alu.
+Using template $paramod$dde1a3927437b0fc5f67d439beed18b4c6ecb0e6\_90_alu for cells of type $alu.
+Using template $paramod$215bc039315b6c0d0dd6586da4e831ca7aefc20c\_90_alu for cells of type $alu.
+Using template $paramod$8b5556ad5869da5c406bb321a81ab650246de821\_90_alu for cells of type $alu.
+Using template $paramod$e66c230f1a34e5a2571158194ceecbf1989fdb36\_90_alu for cells of type $alu.
+Using template $paramod$f71a32ff0c95c06748789a26d2b166eec5ae6b5a\_90_alu for cells of type $alu.
+Using template $paramod$b1e65b06490a8cd5996f72ad10f3a59245ed9ba1\_90_alu for cells of type $alu.
+Using template $paramod$16b6ac4765d4deaa60b5e8a3f49cb01ff2b4f634\_90_alu for cells of type $alu.
+Using template $paramod$497fbd9bd08802bd5c1fef72c6e0a4730710d9ea\_90_alu for cells of type $alu.
+Using template $paramod$afce5005fe1872b96c3b25fa8deba299c4d92d75\_90_alu for cells of type $alu.
+Using template $paramod$c1a24180bc1daf1fb95d17515c9f4a0f6ae78486\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100111 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101001 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000101111 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110001 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110111 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111001 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000111111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000111111 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000001000001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000001000001 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~43383 debug messages>
+
+36.21. Executing OPT pass (performing simple optimizations).
+
+36.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+<suppressed ~56922 debug messages>
+
+36.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 70458 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 61343 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 55337 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 51810 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 49797 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 48279 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 47108 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 46140 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 45354 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 44298 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 43533 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 42400 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 41429 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 40174 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 38964 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 38138 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 37836 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 37754 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 37726 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 37724 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Computing hashes of 37722 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+<suppressed ~98208 debug messages>
+Removed a total of 32736 cells.
+
+36.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 4100 unused cells and 28596 unused wires.
+<suppressed ~4101 debug messages>
+
+36.21.5. Finished fast OPT passes.
+
+36.22. Executing ABC pass (technology mapping using ABC).
+
+36.22.1. Extracting gate netlist of module `\singlecycle_datapath' to `<abc-temp-dir>/input.blif'..
+Replacing 2 occurrences of constant undef bits with constant zero bits
+
+36.22.1.1. Executed ABC.
+Extracted 32566 gates and 33703 wires to a netlist network with 1134 inputs and 162 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+36.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     3903
+ABC RESULTS:            ANDNOT cells:      288
+ABC RESULTS:               MUX cells:     2523
+ABC RESULTS:              NAND cells:     7694
+ABC RESULTS:               NOR cells:      186
+ABC RESULTS:               NOT cells:      103
+ABC RESULTS:                OR cells:     1249
+ABC RESULTS:             ORNOT cells:     1737
+ABC RESULTS:              XNOR cells:     1964
+ABC RESULTS:               XOR cells:     3121
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:    32407
+ABC RESULTS:           input signals:     1134
+ABC RESULTS:          output signals:      162
+Removing temp directory.
+Removing global temp directory.
+
+36.23. Executing OPT pass (performing simple optimizations).
+
+36.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+<suppressed ~53 debug messages>
+
+36.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 23824 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+Handling never-active EN on $auto$ff.cc:337:slice$1950 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1919 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1920 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1921 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1922 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1923 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1924 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1925 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1926 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1927 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1928 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1929 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1930 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1931 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1932 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1933 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1934 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1935 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1936 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1937 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1938 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1939 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1940 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1941 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1942 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1943 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1944 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1945 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1946 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1947 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1948 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1949 ($_DFFE_PP_) from module singlecycle_datapath (removing D path).
+
+36.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 0 unused cells and 10161 unused wires.
+<suppressed ~27 debug messages>
+
+36.23.5. Rerunning OPT passes. (Removed registers in this run.)
+
+36.23.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module singlecycle_datapath.
+
+36.23.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\singlecycle_datapath'.
+Computing hashes of 23792 cells of `\singlecycle_datapath'.
+Finding duplicate cells in `\singlecycle_datapath'.
+Removed a total of 0 cells.
+
+36.23.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+
+36.23.10. Finished fast OPT passes.
+
+36.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `singlecycle_datapath'. Setting top module to singlecycle_datapath.
+
+36.24.1. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+
+36.24.2. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Removed 0 unused modules.
+
+36.25. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    22764 wires
+    25864 wire bits
+      125 public wires
+     3225 public wire bits
+       18 ports
+      194 port bits
+    23792 cells
+      288   $_ANDNOT_
+     3903   $_AND_
+       31   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+      992   $_DFFE_PP_
+     2523   $_MUX_
+     7694   $_NAND_
+      186   $_NOR_
+      103   $_NOT_
+     1737   $_ORNOT_
+     1249   $_OR_
+     1964   $_XNOR_
+     3121   $_XOR_
+
+36.26. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+37. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \singlecycle_datapath..
+Removed 0 unused cells and 74 unused wires.
+<suppressed ~74 debug messages>
+
+38. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+39. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    22690 wires
+    23889 wire bits
+       51 public wires
+     1250 public wire bits
+       18 ports
+      194 port bits
+    23792 cells
+      288   $_ANDNOT_
+     3903   $_AND_
+       31   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+      992   $_DFFE_PP_
+     2523   $_MUX_
+     7694   $_NAND_
+      186   $_NOR_
+      103   $_NOT_
+     1737   $_ORNOT_
+     1249   $_OR_
+     1964   $_XNOR_
+     3121   $_XOR_
+
+40. Executing JSON backend.
+
+41. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-006/incremental-profiled/partitions/singlecycle_datapath/synth.rtlil
+
+42. Executing Verilog backend.
+Dumping module `\singlecycle_datapath'.
+
+Warnings: 8 unique messages, 11 total
+End of script. Logfile hash: dc893cb077, time: 19.08s, user: 11.68s, system: 0.60s, MEM: 345.44 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 51% 1x abc (12 sec), 12% 53x opt_merge (3 sec), ...

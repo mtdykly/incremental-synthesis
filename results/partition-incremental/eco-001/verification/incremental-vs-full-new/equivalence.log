@@ -7063,16 +7063,8 @@ Found 1158 unproven $equiv cells (39 groups) in equiv:
  Grouping SAT models for \pc:
   Trying to prove $equiv for \pc [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \pc [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \pc [2]:ezsat
@@ -7138,6976 +7130,3008 @@ ezsat
  Grouping SAT models for \singlecycle_datapath.regfile.register[9]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[9] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[8]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[8] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[7]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[7] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[6]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[6] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[5]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[5] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[4]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[4] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[3]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[3] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[31]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[31] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[30]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[30] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[2]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[2] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[29]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[29] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[28]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[28] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[27]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[27] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[26]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[26] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[25]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[25] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[24]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[24] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[23]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[23] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[22]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[22] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[21]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[21] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[20]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[20] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[1]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[1] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[19]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[19] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[18]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[18] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[17]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[17] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[16]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[16] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[15]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[15] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[14]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[14] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[13]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[13] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[12]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[12] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[11]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[11] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.regfile.register[10]:
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [0]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [1]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [2]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [3]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [4]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [5]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [6]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [7]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [8]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [9]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [10]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [11]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [12]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [13]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [14]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [15]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [16]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [17]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [18]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [19]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [20]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [21]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [22]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [23]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [24]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [25]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [26]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [27]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [28]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [29]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [30]:ezsat
 ezsat
-ezsat
-ezsat
-ezsat
-ezsat
  failed.
   Trying to prove $equiv for \singlecycle_datapath.regfile.register[10] [31]:ezsat
-ezsat
-ezsat
-ezsat
-ezsat
 ezsat
  failed.
  Grouping SAT models for \singlecycle_datapath.mux_reg_writeback.multiplexer.out:
@@ -15253,6 +11277,14 @@ Found 1158 $equiv cells in equiv:
   Of those cells 1158 are proven and 0 are unproven.
   Equivalence successfully proven!
 
-End of script. Logfile hash: 45bd2f44ff, time: 202.58s, user: 201.77s, system: 0.48s, MEM: 246.69 MB peak
+21. Executing EQUIV_SIMPLE pass.
+Proved 0 previously unproven $equiv cells.
+
+22. Executing EQUIV_STATUS pass.
+Found 1158 $equiv cells in equiv:
+  Of those cells 1158 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+End of script. Logfile hash: f7e14994fa, time: 51.73s, user: 51.06s, system: 0.23s, MEM: 175.74 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 97% 1x equiv_simple (197 sec), 1% 1x equiv_induct (3 sec), ...
+Time spent: 91% 2x equiv_simple (46 sec), 7% 1x equiv_induct (3 sec), ...

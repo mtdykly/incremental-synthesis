@@ -1,0 +1,14 @@
+{
+  "partition": "singlecycle_datapath",
+  "root_module": "singlecycle_datapath",
+  "action": "rebuild",
+  "source_kind": "new_synthesis",
+  "source_path": "/workspace/incremental-synthesis/benchmarks/riscv-eco-006-new",
+  "reasons": [
+    "interface_changed",
+    "implementation_changed"
+  ],
+  "base_implementation_signature": "72732660275113d6cf58bb50a61bb11d253d60e9462ec1f58f60530dc28b7a14",
+  "new_implementation_signature": "af07a18d572577dc8ba080a16ef4cd2b730152ce54a62823a62d649583a38e74",
+  "partition_netlist_sha256": "22ff37ae6273a6d11474d0bce97943177634027ec7fb92ed4d1d381d6b00089a"
+}

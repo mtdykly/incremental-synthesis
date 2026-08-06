@@ -1,0 +1,139 @@
+{
+  "case_name": "eco-005",
+  "timing_policy": {
+    "base_cache_build_included": false,
+    "equivalence_check_included": false,
+    "linked_design_check_in_core_time": false,
+    "main_incremental_time": "pipeline_core_seconds"
+  },
+  "reuse_plan": {
+    "reusable_partitions": [
+      "data_memory_interface",
+      "immediate_generator",
+      "instruction_decoder",
+      "singlecycle_ctlpath"
+    ],
+    "dirty_partitions": [
+      "singlecycle_datapath"
+    ],
+    "top_shell": {
+      "reasons": [],
+      "status": "reuse"
+    }
+  },
+  "detection": {
+    "phase_wall_seconds": 1.176276,
+    "export_hierarchy_seconds": 0.13,
+    "extract_partitions_seconds": 0.05,
+    "prepare_partition_frontends_seconds": 0.84,
+    "compute_signatures_seconds": 0.08,
+    "compare_signatures_seconds": 0.04,
+    "partition_frontend_yosys": [
+      {
+        "partition": "data_memory_interface",
+        "root_module": "data_memory_interface",
+        "yosys_seconds": 0.06
+      },
+      {
+        "partition": "immediate_generator",
+        "root_module": "immediate_generator",
+        "yosys_seconds": 0.05
+      },
+      {
+        "partition": "instruction_decoder",
+        "root_module": "instruction_decoder",
+        "yosys_seconds": 0.05
+      },
+      {
+        "partition": "singlecycle_ctlpath",
+        "root_module": "singlecycle_ctlpath",
+        "yosys_seconds": 0.07
+      },
+      {
+        "partition": "singlecycle_datapath",
+        "root_module": "singlecycle_datapath",
+        "yosys_seconds": 0.13
+      }
+    ]
+  },
+  "build": {
+    "phase_wall_seconds": 22.532947,
+    "materialize_partitions_seconds": 21.51,
+    "top_shell_seconds": 0.0,
+    "link_partitions_seconds": 0.93,
+    "check_linked_seconds": 4.75,
+    "materialization": {
+      "partitions": [
+        {
+          "partition": "data_memory_interface",
+          "root_module": "data_memory_interface",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-005/base/partitions/data_memory_interface",
+          "reasons": [],
+          "action_wall_seconds": 0.007842,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "f5a7f7d25317c7bbc16d037a69ea77cb316eb9707cf93db10994f7055d53c7a0"
+        },
+        {
+          "partition": "immediate_generator",
+          "root_module": "immediate_generator",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-005/base/partitions/immediate_generator",
+          "reasons": [],
+          "action_wall_seconds": 0.007388,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "3dfad8cdc5aa5695aa6de04a104437cc4bfa2edf9b3187e3ab8d008f6951019e"
+        },
+        {
+          "partition": "instruction_decoder",
+          "root_module": "instruction_decoder",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-005/base/partitions/instruction_decoder",
+          "reasons": [],
+          "action_wall_seconds": 0.006649,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "b47b101ffd5e58dd4f5401a92aa1158f2fca7ebd4a1a2766a1002989d6e6103b"
+        },
+        {
+          "partition": "singlecycle_ctlpath",
+          "root_module": "singlecycle_ctlpath",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-005/base/partitions/singlecycle_ctlpath",
+          "reasons": [],
+          "action_wall_seconds": 0.008558,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "870776f1b9903d0c27a03c865c9bdeb0dde3e6d9c03cb9c74111b6b6c783df38"
+        },
+        {
+          "partition": "singlecycle_datapath",
+          "root_module": "singlecycle_datapath",
+          "action": "rebuild",
+          "source_kind": "new_synthesis",
+          "source_path": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new",
+          "reasons": [
+            "implementation_changed"
+          ],
+          "action_wall_seconds": 20.492759,
+          "yosys_seconds": 20.41,
+          "partition_netlist_sha256": "dfcd9e1b2cac943b20079412d7143e2128e2a7b3509f8c14efacaef2242ead1a"
+        }
+      ],
+      "reuse_count": 4,
+      "rebuild_count": 1,
+      "reuse_copy_seconds": 0.030437000000000002,
+      "rebuild_wall_seconds": 20.492759,
+      "rebuild_yosys_seconds": 20.41,
+      "partition_action_seconds": 20.523196
+    }
+  },
+  "totals": {
+    "pipeline_core_seconds": 23.76076,
+    "pipeline_with_check_seconds": 28.532792,
+    "profiled_stage_sum_seconds": 23.580000000000002,
+    "unattributed_core_overhead_seconds": 0.18075999999999937
+  }
+}

@@ -1,0 +1,58 @@
+# ==================================================
+# Prepare full synthesis result as the gold design.
+# ==================================================
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/new/full-reference/full_reference.json"
+hierarchy -check -top riscv_core
+flatten -noscopeinfo
+opt_clean
+async2sync
+opt_clean
+rename riscv_core gold
+design -stash gold_design
+design -reset
+
+# ==================================================
+# Prepare partition-linked result as the gate design.
+# ==================================================
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/linked/linked.json"
+hierarchy -check -top riscv_core
+flatten -noscopeinfo
+opt_clean
+async2sync
+opt_clean
+rename riscv_core gate
+design -stash gate_design
+design -reset
+
+# Restore both normalized designs.
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+# Construct the equivalence-checking design.
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/verification/incremental-vs-full-new/equiv_before_proof.json"
+
+# Report initial equivalence state.
+equiv_status
+
+# Establish easy sequential state correspondences first.
+equiv_induct -seq 1
+equiv_status
+
+# Prove combinational cones independently.
+equiv_simple -short -nogroup -seq 1
+equiv_status
+
+# Strengthen remaining sequential proofs.
+equiv_induct -seq 2
+equiv_status
+
+# Retry remaining combinational equivalence cells.
+equiv_simple -short -nogroup -seq 1
+equiv_status
+
+# Fail if any equivalence cell remains unproven.
+equiv_status -assert

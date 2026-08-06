@@ -1,0 +1,253 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-007/new/partition-frontends/data_memory_interface/run_prepare_partition_frontend.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/adder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/adder.sv' to AST representation.
+Generating RTLIL representation for module `\adder'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/alu.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/alu.sv' to AST representation.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/alu_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/alu_control.sv' to AST representation.
+Generating RTLIL representation for module `\alu_control'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/config.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/config.sv' to AST representation.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/constants.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/constants.sv' to AST representation.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/control_transfer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/control_transfer.sv' to AST representation.
+Generating RTLIL representation for module `\control_transfer'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv' to AST representation.
+Generating RTLIL representation for module `\data_memory_interface'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_data_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_data_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_data_memory_bus'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_memory_bus'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_text_memory_bus.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/example_text_memory_bus.sv' to AST representation.
+Generating RTLIL representation for module `\example_text_memory_bus'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/immediate_generator.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/immediate_generator.sv' to AST representation.
+Generating RTLIL representation for module `\immediate_generator'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/instruction_decoder.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/instruction_decoder.sv' to AST representation.
+Generating RTLIL representation for module `\instruction_decoder'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer'.
+Warning: Replacing memory \input_array with list of registers. See /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer.sv:24
+Successfully finished Verilog frontend.
+
+14. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer2.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer2.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer2'.
+Successfully finished Verilog frontend.
+
+15. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer4.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer4.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer4'.
+Successfully finished Verilog frontend.
+
+16. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer8.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/multiplexer8.sv' to AST representation.
+Generating RTLIL representation for module `\multiplexer8'.
+Successfully finished Verilog frontend.
+
+17. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/regfile.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/regfile.sv' to AST representation.
+Generating RTLIL representation for module `\regfile'.
+Successfully finished Verilog frontend.
+
+18. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/register.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/register.sv' to AST representation.
+Generating RTLIL representation for module `\register'.
+Successfully finished Verilog frontend.
+
+19. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/riscv_core.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/riscv_core.sv' to AST representation.
+Generating RTLIL representation for module `\riscv_core'.
+Successfully finished Verilog frontend.
+
+20. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_control.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_control.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_control'.
+Successfully finished Verilog frontend.
+
+21. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_ctlpath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_ctlpath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+22. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_datapath.sv
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/singlecycle/singlecycle_datapath.sv' to AST representation.
+Generating RTLIL representation for module `\singlecycle_datapath'.
+Successfully finished Verilog frontend.
+
+23. Executing HIERARCHY pass (managing design hierarchy).
+
+23.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+23.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removing unused module `\singlecycle_datapath'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\riscv_core'.
+Removing unused module `\register'.
+Removing unused module `\regfile'.
+Removing unused module `\multiplexer8'.
+Removing unused module `\multiplexer4'.
+Removing unused module `\multiplexer2'.
+Removing unused module `\multiplexer'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\example_text_memory_bus'.
+Removing unused module `\example_memory_bus'.
+Removing unused module `\example_data_memory_bus'.
+Removing unused module `\control_transfer'.
+Removing unused module `\alu_control'.
+Removing unused module `\alu'.
+Removing unused module `\adder'.
+Removed 19 unused modules.
+
+24. Executing PROC pass (convert processes to netlists).
+
+24.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+24.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:51$55 in module data_memory_interface.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:35$48 in module data_memory_interface.
+Removed a total of 0 dead cases.
+
+24.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+24.4. Executing PROC_INIT pass (extract init attributes).
+
+24.5. Executing PROC_ARST pass (detect async resets in processes).
+
+24.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+24.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:51$55'.
+     1/1: $1\sign_fix[31:0]
+Creating decoders for process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:46$52'.
+Creating decoders for process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:35$48'.
+     1/1: $1\bus_byte_enable[3:0]
+
+24.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\data_memory_interface.\sign_fix' from process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:51$55'.
+No latch inferred for signal `\data_memory_interface.\position_fix' from process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:46$52'.
+No latch inferred for signal `\data_memory_interface.\bus_byte_enable' from process `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:35$48'.
+
+24.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+24.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+24.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:51$55'.
+Removing empty process `data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:51$55'.
+Removing empty process `data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:46$52'.
+Found and cleaned up 1 empty switch in `\data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:35$48'.
+Removing empty process `data_memory_interface.$proc$/workspace/incremental-synthesis/benchmarks/riscv-eco-007-new/core/common/data_memory_interface.sv:35$48'.
+Cleaned up 2 empty switches.
+
+24.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module data_memory_interface.
+<suppressed ~2 debug messages>
+
+25. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+26. Executing CHECK pass (checking for obvious problems).
+Checking module data_memory_interface...
+Found and reported 0 problems.
+
+27. Executing JSON backend.
+
+28. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-007/new/partition-frontends/data_memory_interface/frontend.rtlil
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+29. Executing FLATTEN pass (flatten design).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+
+31. Executing CHECK pass (checking for obvious problems).
+Checking module data_memory_interface...
+Found and reported 0 problems.
+
+32. Executing JSON backend.
+
+33. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-007/new/partition-frontends/data_memory_interface/flattened.rtlil
+
+34. Printing statistics.
+
+=== data_memory_interface ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       30 wires
+      354 wire bits
+       15 public wires
+      268 public wire bits
+       13 ports
+      204 port bits
+       19 cells
+        2   $and
+        4   $eq
+        2   $logic_not
+        2   $mul
+        2   $not
+        2   $pmux
+        4   $shl
+        1   $shr
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: d09b21d8c9, time: 0.03s, user: 0.04s, system: 0.00s, MEM: 17.29 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 81% 23x read_verilog (0 sec), 5% 2x check (0 sec), ...
