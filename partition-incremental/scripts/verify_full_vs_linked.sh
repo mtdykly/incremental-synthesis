@@ -181,7 +181,7 @@ set +e
     timeout \
         --signal=TERM \
         --kill-after=30s \
-        30m \
+        5m \
         yosys \
         -l "$LOG_FILE" \
         -s "$RUN_SCRIPT"

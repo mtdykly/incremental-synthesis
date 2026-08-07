@@ -1,0 +1,124 @@
+{
+  "partition": {
+    "index": 1152,
+    "name": "singlecycle_datapath.alu_result_equal_zero",
+    "inbits": {
+      "data_mem_address[0]": [
+        0
+      ],
+      "data_mem_address[10]": [
+        0
+      ],
+      "data_mem_address[11]": [
+        0
+      ],
+      "data_mem_address[12]": [
+        0
+      ],
+      "data_mem_address[13]": [
+        0
+      ],
+      "data_mem_address[14]": [
+        0
+      ],
+      "data_mem_address[15]": [
+        0
+      ],
+      "data_mem_address[16]": [
+        0
+      ],
+      "data_mem_address[17]": [
+        0
+      ],
+      "data_mem_address[18]": [
+        0
+      ],
+      "data_mem_address[19]": [
+        0
+      ],
+      "data_mem_address[1]": [
+        0
+      ],
+      "data_mem_address[20]": [
+        0
+      ],
+      "data_mem_address[21]": [
+        0
+      ],
+      "data_mem_address[22]": [
+        0
+      ],
+      "data_mem_address[23]": [
+        0
+      ],
+      "data_mem_address[24]": [
+        0
+      ],
+      "data_mem_address[25]": [
+        0
+      ],
+      "data_mem_address[26]": [
+        0
+      ],
+      "data_mem_address[27]": [
+        0
+      ],
+      "data_mem_address[28]": [
+        0
+      ],
+      "data_mem_address[29]": [
+        0
+      ],
+      "data_mem_address[2]": [
+        0
+      ],
+      "data_mem_address[30]": [
+        0
+      ],
+      "data_mem_address[31]": [
+        0
+      ],
+      "data_mem_address[3]": [
+        0
+      ],
+      "data_mem_address[4]": [
+        0
+      ],
+      "data_mem_address[5]": [
+        0
+      ],
+      "data_mem_address[6]": [
+        0
+      ],
+      "data_mem_address[7]": [
+        0
+      ],
+      "data_mem_address[8]": [
+        0
+      ],
+      "data_mem_address[9]": [
+        0
+      ]
+    },
+    "outbits": {
+      "alu_result_equal_zero": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.singlecycle_datapath.alu_result_equal_zero",
+    "internal": {},
+    "unused": {},
+    "cellcount": 31,
+    "bitcount": 63
+  },
+  "gate_module": {
+    "name": "gold.singlecycle_datapath.alu_result_equal_zero",
+    "internal": {},
+    "unused": {},
+    "cellcount": 31,
+    "bitcount": 63
+  }
+}

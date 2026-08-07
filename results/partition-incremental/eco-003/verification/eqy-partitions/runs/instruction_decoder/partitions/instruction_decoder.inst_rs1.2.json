@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 7,
+    "name": "instruction_decoder.inst_rs1.2",
+    "inbits": {
+      "inst[17]": [
+        0
+      ]
+    },
+    "outbits": {
+      "inst_rs1[2]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.instruction_decoder.inst_rs1.2",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.instruction_decoder.inst_rs1.2",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

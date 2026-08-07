@@ -1,0 +1,11 @@
+plugin -i /opt/oss-cad-suite/libexec/../share/yosys/plugins/eqy_combine.so
+read_rtlil /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/singlecycle_datapath/gold.il
+uniquify
+hierarchy
+design -stash gold
+read_rtlil /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/singlecycle_datapath/gate_recoded.il
+uniquify
+hierarchy
+design -stash gate
+eqy_combine -gold_ids /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/singlecycle_datapath/gold.ids -gate_ids /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/singlecycle_datapath/gate_recoded.ids
+write_rtlil /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/singlecycle_datapath/combined.il

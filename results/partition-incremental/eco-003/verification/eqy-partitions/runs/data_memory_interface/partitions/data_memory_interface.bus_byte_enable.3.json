@@ -1,0 +1,40 @@
+{
+  "partition": {
+    "index": 66,
+    "name": "data_memory_interface.bus_byte_enable.3",
+    "inbits": {
+      "bus_address[0]": [
+        0
+      ],
+      "bus_address[1]": [
+        0
+      ],
+      "data_format[0]": [
+        0
+      ],
+      "data_format[1]": [
+        0
+      ]
+    },
+    "outbits": {
+      "bus_byte_enable[3]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.data_memory_interface.bus_byte_enable.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 7,
+    "bitcount": 11
+  },
+  "gate_module": {
+    "name": "gold.data_memory_interface.bus_byte_enable.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 7,
+    "bitcount": 11
+  }
+}

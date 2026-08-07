@@ -1,0 +1,6 @@
+partition	root_module	status	method	seconds	return_code
+data_memory_interface	data_memory_interface	PASS	eqy	0	0
+immediate_generator	immediate_generator	PASS	eqy	0	0
+instruction_decoder	instruction_decoder	PASS	eqy	0	0
+singlecycle_ctlpath	singlecycle_ctlpath	PASS	identical_json_hash	0.000000	0
+singlecycle_datapath	singlecycle_datapath	TIMEOUT	eqy	0	124

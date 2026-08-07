@@ -1,0 +1,48 @@
+{
+  "status": "FAIL",
+  "partition_count": 5,
+  "pass_count": 4,
+  "fail_count": 1,
+  "partitions": [
+    {
+      "partition": "data_memory_interface",
+      "root_module": "data_memory_interface",
+      "status": "PASS",
+      "method": "eqy",
+      "seconds": 0.0,
+      "return_code": 0
+    },
+    {
+      "partition": "immediate_generator",
+      "root_module": "immediate_generator",
+      "status": "PASS",
+      "method": "eqy",
+      "seconds": 0.0,
+      "return_code": 0
+    },
+    {
+      "partition": "instruction_decoder",
+      "root_module": "instruction_decoder",
+      "status": "PASS",
+      "method": "eqy",
+      "seconds": 0.0,
+      "return_code": 0
+    },
+    {
+      "partition": "singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "status": "PASS",
+      "method": "identical_json_hash",
+      "seconds": 0.0,
+      "return_code": 0
+    },
+    {
+      "partition": "singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "status": "TIMEOUT",
+      "method": "eqy",
+      "seconds": 0.0,
+      "return_code": 124
+    }
+  ]
+}

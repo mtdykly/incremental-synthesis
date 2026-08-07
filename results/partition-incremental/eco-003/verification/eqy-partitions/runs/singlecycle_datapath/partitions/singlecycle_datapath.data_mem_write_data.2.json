@@ -1,0 +1,139 @@
+{
+  "partition": {
+    "index": 1097,
+    "name": "singlecycle_datapath.data_mem_write_data.2",
+    "inbits": {
+      "inst_rs2[0]": [
+        0
+      ],
+      "inst_rs2[1]": [
+        0
+      ],
+      "inst_rs2[2]": [
+        0
+      ],
+      "inst_rs2[3]": [
+        0
+      ],
+      "inst_rs2[4]": [
+        0
+      ],
+      "regfile.register[0][2]": [
+        0
+      ],
+      "regfile.register[10][2]": [
+        0
+      ],
+      "regfile.register[11][2]": [
+        0
+      ],
+      "regfile.register[12][2]": [
+        0
+      ],
+      "regfile.register[13][2]": [
+        0
+      ],
+      "regfile.register[14][2]": [
+        0
+      ],
+      "regfile.register[15][2]": [
+        0
+      ],
+      "regfile.register[16][2]": [
+        0
+      ],
+      "regfile.register[17][2]": [
+        0
+      ],
+      "regfile.register[18][2]": [
+        0
+      ],
+      "regfile.register[19][2]": [
+        0
+      ],
+      "regfile.register[1][2]": [
+        0
+      ],
+      "regfile.register[20][2]": [
+        0
+      ],
+      "regfile.register[21][2]": [
+        0
+      ],
+      "regfile.register[22][2]": [
+        0
+      ],
+      "regfile.register[23][2]": [
+        0
+      ],
+      "regfile.register[24][2]": [
+        0
+      ],
+      "regfile.register[25][2]": [
+        0
+      ],
+      "regfile.register[26][2]": [
+        0
+      ],
+      "regfile.register[27][2]": [
+        0
+      ],
+      "regfile.register[28][2]": [
+        0
+      ],
+      "regfile.register[29][2]": [
+        0
+      ],
+      "regfile.register[2][2]": [
+        0
+      ],
+      "regfile.register[30][2]": [
+        0
+      ],
+      "regfile.register[31][2]": [
+        0
+      ],
+      "regfile.register[3][2]": [
+        0
+      ],
+      "regfile.register[4][2]": [
+        0
+      ],
+      "regfile.register[5][2]": [
+        0
+      ],
+      "regfile.register[6][2]": [
+        0
+      ],
+      "regfile.register[7][2]": [
+        0
+      ],
+      "regfile.register[8][2]": [
+        0
+      ],
+      "regfile.register[9][2]": [
+        0
+      ]
+    },
+    "outbits": {
+      "data_mem_write_data[2]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.singlecycle_datapath.data_mem_write_data.2",
+    "internal": {},
+    "unused": {},
+    "cellcount": 119,
+    "bitcount": 156
+  },
+  "gate_module": {
+    "name": "gold.singlecycle_datapath.data_mem_write_data.2",
+    "internal": {},
+    "unused": {},
+    "cellcount": 111,
+    "bitcount": 148
+  }
+}

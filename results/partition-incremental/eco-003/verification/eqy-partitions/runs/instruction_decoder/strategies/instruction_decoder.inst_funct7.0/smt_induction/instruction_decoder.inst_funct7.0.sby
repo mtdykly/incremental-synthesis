@@ -1,0 +1,22 @@
+[options]
+mode prove
+depth 5
+expect pass,fail,unknown,timeout
+
+timeout 1800
+
+[engines]
+smtbmc bitwuzla
+
+[script]
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../../../partitions/instruction_decoder.inst_funct7.0.sv
+read_rtlil ../../../../../partitions/instruction_decoder.inst_funct7.0.il
+hierarchy -top miter; proc
+
+async2sync
+formalff -clk2ff -ff2anyinit gate.instruction_decoder.inst_funct7.0
+setundef -anyseq gate.instruction_decoder.inst_funct7.0
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+xprop -formal -split-ports -assume-def-inputs miter
+

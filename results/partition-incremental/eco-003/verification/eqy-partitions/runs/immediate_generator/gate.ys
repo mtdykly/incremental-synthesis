@@ -1,0 +1,10 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/immediate_generator/synth.json"
+hierarchy -check -top immediate_generator
+async2sync
+memory_map
+opt_clean
+splitnets -ports
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/immediate_generator/gate.il

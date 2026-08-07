@@ -1,0 +1,8 @@
+{
+  "status": "proven",
+  "case_name": "eco-001",
+  "reference_kind": "all_new_partitioned_reference",
+  "reference_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/new/partitioned-reference/linked/linked.json",
+  "incremental_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked.json",
+  "equivalence_summary": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/verification/incremental-vs-partitioned-new/summary.json"
+}

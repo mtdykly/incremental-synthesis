@@ -1,0 +1,217 @@
+{
+  "partition": {
+    "index": 32,
+    "name": "immediate_generator",
+    "inbits": {
+      "inst[0]": [
+        0
+      ],
+      "inst[10]": [
+        0
+      ],
+      "inst[11]": [
+        0
+      ],
+      "inst[12]": [
+        0
+      ],
+      "inst[13]": [
+        0
+      ],
+      "inst[14]": [
+        0
+      ],
+      "inst[15]": [
+        0
+      ],
+      "inst[16]": [
+        0
+      ],
+      "inst[17]": [
+        0
+      ],
+      "inst[18]": [
+        0
+      ],
+      "inst[19]": [
+        0
+      ],
+      "inst[1]": [
+        0
+      ],
+      "inst[20]": [
+        0
+      ],
+      "inst[21]": [
+        0
+      ],
+      "inst[22]": [
+        0
+      ],
+      "inst[23]": [
+        0
+      ],
+      "inst[24]": [
+        0
+      ],
+      "inst[25]": [
+        0
+      ],
+      "inst[26]": [
+        0
+      ],
+      "inst[27]": [
+        0
+      ],
+      "inst[28]": [
+        0
+      ],
+      "inst[29]": [
+        0
+      ],
+      "inst[2]": [
+        0
+      ],
+      "inst[30]": [
+        0
+      ],
+      "inst[31]": [
+        0
+      ],
+      "inst[3]": [
+        0
+      ],
+      "inst[4]": [
+        0
+      ],
+      "inst[5]": [
+        0
+      ],
+      "inst[6]": [
+        0
+      ],
+      "inst[7]": [
+        0
+      ],
+      "inst[8]": [
+        0
+      ],
+      "inst[9]": [
+        0
+      ]
+    },
+    "outbits": {
+      "immediate[0]": [
+        0
+      ],
+      "immediate[10]": [
+        0
+      ],
+      "immediate[11]": [
+        0
+      ],
+      "immediate[12]": [
+        0
+      ],
+      "immediate[13]": [
+        0
+      ],
+      "immediate[14]": [
+        0
+      ],
+      "immediate[15]": [
+        0
+      ],
+      "immediate[16]": [
+        0
+      ],
+      "immediate[17]": [
+        0
+      ],
+      "immediate[18]": [
+        0
+      ],
+      "immediate[19]": [
+        0
+      ],
+      "immediate[1]": [
+        0
+      ],
+      "immediate[20]": [
+        0
+      ],
+      "immediate[21]": [
+        0
+      ],
+      "immediate[22]": [
+        0
+      ],
+      "immediate[23]": [
+        0
+      ],
+      "immediate[24]": [
+        0
+      ],
+      "immediate[25]": [
+        0
+      ],
+      "immediate[26]": [
+        0
+      ],
+      "immediate[27]": [
+        0
+      ],
+      "immediate[28]": [
+        0
+      ],
+      "immediate[29]": [
+        0
+      ],
+      "immediate[2]": [
+        0
+      ],
+      "immediate[30]": [
+        0
+      ],
+      "immediate[31]": [
+        0
+      ],
+      "immediate[3]": [
+        0
+      ],
+      "immediate[4]": [
+        0
+      ],
+      "immediate[5]": [
+        0
+      ],
+      "immediate[6]": [
+        0
+      ],
+      "immediate[7]": [
+        0
+      ],
+      "immediate[8]": [
+        0
+      ],
+      "immediate[9]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.immediate_generator",
+    "internal": {},
+    "unused": {},
+    "cellcount": 106,
+    "bitcount": 138
+  },
+  "gate_module": {
+    "name": "gold.immediate_generator",
+    "internal": {},
+    "unused": {},
+    "cellcount": 106,
+    "bitcount": 138
+  }
+}

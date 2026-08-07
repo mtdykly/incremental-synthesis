@@ -21,20 +21,22 @@ CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 NEW_OUT="$CASE_OUT/new"
 INCREMENTAL_OUT="$CASE_OUT/incremental"
 
-FULL_NEW_OUT="$NEW_OUT/full-reference"
-VERIFY_OUT="$CASE_OUT/verification/incremental-vs-full-new"
+PARTITIONED_REFERENCE_OUT="$NEW_OUT/partitioned-reference"
+VERIFY_OUT="$CASE_OUT/verification/incremental-vs-partitioned-new"
 
-SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/synth_full_reference.sh"
+SYNTH_PARTITIONED_REFERENCE="$REPO_ROOT/partition-incremental/scripts/synth_partitioned_reference.sh"
 VERIFY="$REPO_ROOT/partition-incremental/scripts/verify_full_vs_linked.sh"
 
+NEW_HIER_JSON="$NEW_OUT/frontend_hier.json"
 NEW_MANIFEST="$NEW_OUT/partition_manifest.json"
-LINKED_JSON="$INCREMENTAL_OUT/linked/linked.json"
+INCREMENTAL_LINKED_JSON="$INCREMENTAL_OUT/linked/linked.json"
 
 for required_path in \
     "$NEW_SOURCE_DIR" \
+    "$NEW_HIER_JSON" \
     "$NEW_MANIFEST" \
-    "$LINKED_JSON" \
-    "$SYNTH_FULL" \
+    "$INCREMENTAL_LINKED_JSON" \
+    "$SYNTH_PARTITIONED_REFERENCE" \
     "$VERIFY"
 do
     if [[ ! -e "$required_path" ]]; then
@@ -44,22 +46,52 @@ do
     fi
 done
 
-# New 全量综合仅用于验证，
-# 不计入增量构建时间。
-rm -rf "$FULL_NEW_OUT" "$VERIFY_OUT"
+# The partitioned New reference is generated only for validation.
+# It is not included in the incremental synthesis benchmark time.
+rm -rf "$PARTITIONED_REFERENCE_OUT" "$VERIFY_OUT"
 
-"$SYNTH_FULL" \
+echo
+echo "============================================================"
+echo "1. Build an all-New partitioned reference"
+echo "============================================================"
+
+"$SYNTH_PARTITIONED_REFERENCE" \
     "$NEW_SOURCE_DIR" \
-    "$FULL_NEW_OUT" \
-    riscv_core
+    "$NEW_HIER_JSON" \
+    "$NEW_MANIFEST" \
+    "$PARTITIONED_REFERENCE_OUT"
+
+REFERENCE_LINKED_JSON="$PARTITIONED_REFERENCE_OUT/linked/linked.json"
+
+echo
+echo "============================================================"
+echo "2. Verify partitioned New reference vs incremental result"
+echo "============================================================"
 
 "$VERIFY" \
-    "$FULL_NEW_OUT/full_reference.json" \
-    "$LINKED_JSON" \
+    "$REFERENCE_LINKED_JSON" \
+    "$INCREMENTAL_LINKED_JSON" \
     "$NEW_MANIFEST" \
     "$VERIFY_OUT"
 
-echo
-echo "Incremental-vs-Full-New equivalence proven."
+jq -n \
+    --arg status "proven" \
+    --arg case_name "$CASE_NAME" \
+    --arg reference_kind "all_new_partitioned_reference" \
+    --arg reference_design "$REFERENCE_LINKED_JSON" \
+    --arg incremental_design "$INCREMENTAL_LINKED_JSON" \
+    --arg equivalence_summary "$VERIFY_OUT/summary.json" \
+    '{
+        status: $status,
+        case_name: $case_name,
+        reference_kind: $reference_kind,
+        reference_design: $reference_design,
+        incremental_design: $incremental_design,
+        equivalence_summary: $equivalence_summary
+    }' \
+    > "$VERIFY_OUT/validation_summary.json"
 
-cat "$VERIFY_OUT/summary.json"
+echo
+echo "Partitioned-New vs incremental equivalence proven."
+echo
+cat "$VERIFY_OUT/validation_summary.json"

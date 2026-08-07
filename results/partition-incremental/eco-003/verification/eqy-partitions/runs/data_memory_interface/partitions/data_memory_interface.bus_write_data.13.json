@@ -1,0 +1,40 @@
+{
+  "partition": {
+    "index": 60,
+    "name": "data_memory_interface.bus_write_data.13",
+    "inbits": {
+      "bus_address[0]": [
+        0
+      ],
+      "bus_address[1]": [
+        0
+      ],
+      "write_data[13]": [
+        0
+      ],
+      "write_data[5]": [
+        0
+      ]
+    },
+    "outbits": {
+      "bus_write_data[13]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.data_memory_interface.bus_write_data.13",
+    "internal": {},
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 7
+  },
+  "gate_module": {
+    "name": "gold.data_memory_interface.bus_write_data.13",
+    "internal": {},
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 7
+  }
+}

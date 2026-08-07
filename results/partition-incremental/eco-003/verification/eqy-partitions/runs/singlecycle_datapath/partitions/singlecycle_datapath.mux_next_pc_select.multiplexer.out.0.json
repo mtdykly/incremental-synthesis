@@ -1,0 +1,40 @@
+{
+  "partition": {
+    "index": 1087,
+    "name": "singlecycle_datapath.mux_next_pc_select.multiplexer.out.0",
+    "inbits": {
+      "immediate[0]": [
+        0
+      ],
+      "next_pc_select[0]": [
+        0
+      ],
+      "next_pc_select[1]": [
+        0
+      ],
+      "pc[0]": [
+        0
+      ]
+    },
+    "outbits": {
+      "mux_next_pc_select.multiplexer.out[0]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.singlecycle_datapath.mux_next_pc_select.multiplexer.out.0",
+    "internal": {},
+    "unused": {},
+    "cellcount": 5,
+    "bitcount": 9
+  },
+  "gate_module": {
+    "name": "gold.singlecycle_datapath.mux_next_pc_select.multiplexer.out.0",
+    "internal": {},
+    "unused": {},
+    "cellcount": 5,
+    "bitcount": 9
+  }
+}

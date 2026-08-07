@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 16,
+    "name": "instruction_decoder.inst_opcode.5",
+    "inbits": {
+      "inst[5]": [
+        0
+      ]
+    },
+    "outbits": {
+      "inst_opcode[5]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.instruction_decoder.inst_opcode.5",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.instruction_decoder.inst_opcode.5",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

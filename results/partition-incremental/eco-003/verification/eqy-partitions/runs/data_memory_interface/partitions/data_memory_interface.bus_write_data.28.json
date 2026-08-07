@@ -1,0 +1,46 @@
+{
+  "partition": {
+    "index": 44,
+    "name": "data_memory_interface.bus_write_data.28",
+    "inbits": {
+      "bus_address[0]": [
+        0
+      ],
+      "bus_address[1]": [
+        0
+      ],
+      "write_data[12]": [
+        0
+      ],
+      "write_data[20]": [
+        0
+      ],
+      "write_data[28]": [
+        0
+      ],
+      "write_data[4]": [
+        0
+      ]
+    },
+    "outbits": {
+      "bus_write_data[28]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.data_memory_interface.bus_write_data.28",
+    "internal": {},
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 9
+  },
+  "gate_module": {
+    "name": "gold.data_memory_interface.bus_write_data.28",
+    "internal": {},
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 9
+  }
+}

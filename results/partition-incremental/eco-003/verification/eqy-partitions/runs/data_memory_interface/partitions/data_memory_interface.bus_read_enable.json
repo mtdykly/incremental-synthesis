@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 65,
+    "name": "data_memory_interface.bus_read_enable",
+    "inbits": {
+      "read_enable": [
+        0
+      ]
+    },
+    "outbits": {
+      "bus_read_enable": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.data_memory_interface.bus_read_enable",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.data_memory_interface.bus_read_enable",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 88,
+    "name": "data_memory_interface.bus_address.21",
+    "inbits": {
+      "address[21]": [
+        0
+      ]
+    },
+    "outbits": {
+      "bus_address[21]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.data_memory_interface.bus_address.21",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.data_memory_interface.bus_address.21",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

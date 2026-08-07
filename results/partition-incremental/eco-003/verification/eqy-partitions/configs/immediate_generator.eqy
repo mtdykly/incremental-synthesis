@@ -1,0 +1,31 @@
+[options]
+splitnets on
+
+[gold]
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partitioned-reference/partitions/immediate_generator/synth.json"
+hierarchy -check -top immediate_generator
+async2sync
+memory_map
+opt_clean
+
+[gate]
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/partitions/immediate_generator/synth.json"
+hierarchy -check -top immediate_generator
+async2sync
+memory_map
+opt_clean
+
+[strategy quick_sat]
+use sat
+depth 2
+
+[strategy pdr]
+use sby
+engine abc pdr
+timeout 1800
+
+[strategy smt_induction]
+use sby
+engine smtbmc bitwuzla
+depth 5
+timeout 1800

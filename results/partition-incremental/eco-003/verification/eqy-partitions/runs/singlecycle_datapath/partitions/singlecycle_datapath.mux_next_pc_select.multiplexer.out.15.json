@@ -1,0 +1,133 @@
+{
+  "partition": {
+    "index": 1081,
+    "name": "singlecycle_datapath.mux_next_pc_select.multiplexer.out.15",
+    "inbits": {
+      "data_mem_address[15]": [
+        0
+      ],
+      "immediate[0]": [
+        0
+      ],
+      "immediate[10]": [
+        0
+      ],
+      "immediate[11]": [
+        0
+      ],
+      "immediate[12]": [
+        0
+      ],
+      "immediate[13]": [
+        0
+      ],
+      "immediate[14]": [
+        0
+      ],
+      "immediate[15]": [
+        0
+      ],
+      "immediate[1]": [
+        0
+      ],
+      "immediate[2]": [
+        0
+      ],
+      "immediate[3]": [
+        0
+      ],
+      "immediate[4]": [
+        0
+      ],
+      "immediate[5]": [
+        0
+      ],
+      "immediate[6]": [
+        0
+      ],
+      "immediate[7]": [
+        0
+      ],
+      "immediate[8]": [
+        0
+      ],
+      "immediate[9]": [
+        0
+      ],
+      "next_pc_select[0]": [
+        0
+      ],
+      "next_pc_select[1]": [
+        0
+      ],
+      "pc[0]": [
+        0
+      ],
+      "pc[10]": [
+        0
+      ],
+      "pc[11]": [
+        0
+      ],
+      "pc[12]": [
+        0
+      ],
+      "pc[13]": [
+        0
+      ],
+      "pc[14]": [
+        0
+      ],
+      "pc[15]": [
+        0
+      ],
+      "pc[1]": [
+        0
+      ],
+      "pc[2]": [
+        0
+      ],
+      "pc[3]": [
+        0
+      ],
+      "pc[4]": [
+        0
+      ],
+      "pc[5]": [
+        0
+      ],
+      "pc[6]": [
+        0
+      ],
+      "pc[7]": [
+        0
+      ],
+      "pc[8]": [
+        0
+      ],
+      "pc[9]": [
+        0
+      ]
+    },
+    "outbits": {
+      "mux_next_pc_select.multiplexer.out[15]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.singlecycle_datapath.mux_next_pc_select.multiplexer.out.15",
+    "internal": {},
+    "unused": {},
+    "cellcount": 82,
+    "bitcount": 117
+  },
+  "gate_module": {
+    "name": "gold.singlecycle_datapath.mux_next_pc_select.multiplexer.out.15",
+    "internal": {},
+    "unused": {},
+    "cellcount": 82,
+    "bitcount": 117
+  }
+}

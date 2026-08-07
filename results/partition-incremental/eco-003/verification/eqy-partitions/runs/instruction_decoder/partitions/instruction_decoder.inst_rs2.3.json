@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1,
+    "name": "instruction_decoder.inst_rs2.3",
+    "inbits": {
+      "inst[23]": [
+        0
+      ]
+    },
+    "outbits": {
+      "inst_rs2[3]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.instruction_decoder.inst_rs2.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.instruction_decoder.inst_rs2.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

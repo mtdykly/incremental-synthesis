@@ -1,0 +1,3243 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `partition.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: combined.il
+
+2. Executing INSBUF pass (insert buffer cells for connected wires).
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$821: \address[31] -> \bus_address[31]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$822: \address[30] -> \bus_address[30]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$823: \address[29] -> \bus_address[29]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$824: \address[28] -> \bus_address[28]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$825: \address[27] -> \bus_address[27]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$826: \address[26] -> \bus_address[26]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$827: \address[25] -> \bus_address[25]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$828: \address[24] -> \bus_address[24]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$829: \address[23] -> \bus_address[23]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$830: \address[22] -> \bus_address[22]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$831: \address[21] -> \bus_address[21]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$832: \address[20] -> \bus_address[20]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$833: \address[19] -> \bus_address[19]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$834: \address[18] -> \bus_address[18]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$835: \address[17] -> \bus_address[17]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$836: \address[16] -> \bus_address[16]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$837: \address[15] -> \bus_address[15]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$838: \address[14] -> \bus_address[14]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$839: \address[13] -> \bus_address[13]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$840: \address[12] -> \bus_address[12]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$841: \address[11] -> \bus_address[11]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$842: \address[10] -> \bus_address[10]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$843: \address[9] -> \bus_address[9]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$844: \address[8] -> \bus_address[8]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$845: \address[7] -> \bus_address[7]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$846: \address[6] -> \bus_address[6]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$847: \address[5] -> \bus_address[5]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$848: \address[4] -> \bus_address[4]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$849: \address[3] -> \bus_address[3]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$850: \address[2] -> \bus_address[2]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$851: \address[1] -> \bus_address[1]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$852: \address[0] -> \bus_address[0]
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$853: \write_enable -> \bus_write_enable
+Add gate.data_memory_interface/$auto$insbuf.cc:97:execute$854: \read_enable -> \bus_read_enable
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1347/A: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1348/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1352/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1353/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1354/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1359/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1360/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1361/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1366/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1369/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1374/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1377/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1380/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1383/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1386/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1389/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1392/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1395/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1398/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1403/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1404/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1405/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1408/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1409/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1412/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1413/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1416/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1417/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1418/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1421/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1422/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1425/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1426/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1429/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1430/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1433/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1436/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1437/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1438/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1439/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1440/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1441/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1442/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1443/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1444/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1445/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1446/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1447/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1448/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1449/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1450/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1451/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1452/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1453/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1454/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1455/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1456/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1457/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1458/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1459/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1460/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1461/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1462/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1463/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1464/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1465/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1466/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1467/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1468/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1469/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1470/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1471/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1472/S: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1473/S: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1474/A: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1474/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1476/A: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1476/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1477/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1478/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1483/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1484/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1489/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1490/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1495/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1496/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1501/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1502/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1507/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1508/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1513/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1514/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1519/B: \address[0] -> \bus_address[0]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1520/B: \address[1] -> \bus_address[1]
+Rewrite gate.data_memory_interface/$abc$1346$auto$blifparse.cc:397:parse_blif$1544/A: \address[0] -> \bus_address[0]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$855: \address[31] -> \bus_address[31]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$856: \address[30] -> \bus_address[30]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$857: \address[29] -> \bus_address[29]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$858: \address[28] -> \bus_address[28]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$859: \address[27] -> \bus_address[27]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$860: \address[26] -> \bus_address[26]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$861: \address[25] -> \bus_address[25]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$862: \address[24] -> \bus_address[24]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$863: \address[23] -> \bus_address[23]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$864: \address[22] -> \bus_address[22]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$865: \address[21] -> \bus_address[21]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$866: \address[20] -> \bus_address[20]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$867: \address[19] -> \bus_address[19]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$868: \address[18] -> \bus_address[18]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$869: \address[17] -> \bus_address[17]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$870: \address[16] -> \bus_address[16]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$871: \address[15] -> \bus_address[15]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$872: \address[14] -> \bus_address[14]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$873: \address[13] -> \bus_address[13]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$874: \address[12] -> \bus_address[12]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$875: \address[11] -> \bus_address[11]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$876: \address[10] -> \bus_address[10]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$877: \address[9] -> \bus_address[9]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$878: \address[8] -> \bus_address[8]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$879: \address[7] -> \bus_address[7]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$880: \address[6] -> \bus_address[6]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$881: \address[5] -> \bus_address[5]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$882: \address[4] -> \bus_address[4]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$883: \address[3] -> \bus_address[3]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$884: \address[2] -> \bus_address[2]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$885: \address[1] -> \bus_address[1]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$886: \address[0] -> \bus_address[0]
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$887: \write_enable -> \bus_write_enable
+Add gold.data_memory_interface/$auto$insbuf.cc:97:execute$888: \read_enable -> \bus_read_enable
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1346/A: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1347/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1351/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1352/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1353/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1358/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1359/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1360/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1365/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1368/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1373/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1376/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1379/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1382/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1385/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1388/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1391/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1394/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1397/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1402/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1403/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1404/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1407/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1408/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1411/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1412/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1415/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1416/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1417/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1420/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1421/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1424/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1425/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1428/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1429/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1432/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1435/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1436/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1437/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1438/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1439/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1440/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1441/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1442/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1443/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1444/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1445/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1446/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1447/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1448/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1449/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1450/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1451/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1452/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1453/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1454/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1455/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1456/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1457/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1458/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1459/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1460/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1461/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1462/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1463/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1464/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1465/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1466/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1467/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1468/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1469/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1470/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1471/S: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1472/S: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1473/A: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1473/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1475/A: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1475/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1476/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1477/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1482/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1483/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1488/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1489/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1494/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1495/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1500/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1501/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1506/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1507/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1512/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1513/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1518/B: \address[0] -> \bus_address[0]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1519/B: \address[1] -> \bus_address[1]
+Rewrite gold.data_memory_interface/$abc$1345$auto$blifparse.cc:397:parse_blif$1543/A: \address[0] -> \bus_address[0]
+
+3. Executing EQY PARTITION task.
+
+3.1. Processing module pair gold.data_memory_interface / gate.data_memory_interface.
+
+3.1.1. Processing matched IDs for module data_memory_interface.
+
+3.1.2. Create fragment partitions for module data_memory_interface.
+Adding output bit \read_data[9] to partition 0.
+Adding output bit \read_data[8] to partition 1.
+Adding output bit \read_data[7] to partition 2.
+Adding output bit \read_data[6] to partition 3.
+Adding output bit \read_data[5] to partition 4.
+Adding output bit \read_data[4] to partition 5.
+Adding output bit \read_data[3] to partition 6.
+Adding output bit \read_data[31] to partition 7.
+Adding output bit \read_data[30] to partition 8.
+Adding output bit \read_data[2] to partition 9.
+Adding output bit \read_data[29] to partition 10.
+Adding output bit \read_data[28] to partition 11.
+Adding output bit \read_data[27] to partition 12.
+Adding output bit \read_data[26] to partition 13.
+Adding output bit \read_data[25] to partition 14.
+Adding output bit \read_data[24] to partition 15.
+Adding output bit \read_data[23] to partition 16.
+Adding output bit \read_data[22] to partition 17.
+Adding output bit \read_data[21] to partition 18.
+Adding output bit \read_data[20] to partition 19.
+Adding output bit \read_data[1] to partition 20.
+Adding output bit \read_data[19] to partition 21.
+Adding output bit \read_data[18] to partition 22.
+Adding output bit \read_data[17] to partition 23.
+Adding output bit \read_data[16] to partition 24.
+Adding output bit \read_data[15] to partition 25.
+Adding output bit \read_data[14] to partition 26.
+Adding output bit \read_data[13] to partition 27.
+Adding output bit \read_data[12] to partition 28.
+Adding output bit \read_data[11] to partition 29.
+Adding output bit \read_data[10] to partition 30.
+Adding output bit \read_data[0] to partition 31.
+Adding output bit \bus_write_enable to partition 32.
+Adding output bit \bus_write_data[9] to partition 33.
+Adding output bit \bus_write_data[8] to partition 34.
+Adding output bit \bus_write_data[7] to partition 35.
+Adding output bit \bus_write_data[6] to partition 36.
+Adding output bit \bus_write_data[5] to partition 37.
+Adding output bit \bus_write_data[4] to partition 38.
+Adding output bit \bus_write_data[3] to partition 39.
+Adding output bit \bus_write_data[31] to partition 40.
+Adding output bit \bus_write_data[30] to partition 41.
+Adding output bit \bus_write_data[2] to partition 42.
+Adding output bit \bus_write_data[29] to partition 43.
+Adding output bit \bus_write_data[28] to partition 44.
+Adding output bit \bus_write_data[27] to partition 45.
+Adding output bit \bus_write_data[26] to partition 46.
+Adding output bit \bus_write_data[25] to partition 47.
+Adding output bit \bus_write_data[24] to partition 48.
+Adding output bit \bus_write_data[23] to partition 49.
+Adding output bit \bus_write_data[22] to partition 50.
+Adding output bit \bus_write_data[21] to partition 51.
+Adding output bit \bus_write_data[20] to partition 52.
+Adding output bit \bus_write_data[1] to partition 53.
+Adding output bit \bus_write_data[19] to partition 54.
+Adding output bit \bus_write_data[18] to partition 55.
+Adding output bit \bus_write_data[17] to partition 56.
+Adding output bit \bus_write_data[16] to partition 57.
+Adding output bit \bus_write_data[15] to partition 58.
+Adding output bit \bus_write_data[14] to partition 59.
+Adding output bit \bus_write_data[13] to partition 60.
+Adding output bit \bus_write_data[12] to partition 61.
+Adding output bit \bus_write_data[11] to partition 62.
+Adding output bit \bus_write_data[10] to partition 63.
+Adding output bit \bus_write_data[0] to partition 64.
+Adding output bit \bus_read_enable to partition 65.
+Adding output bit \bus_byte_enable[3] to partition 66.
+Adding output bit \bus_byte_enable[2] to partition 67.
+Adding output bit \bus_byte_enable[1] to partition 68.
+Adding output bit \bus_byte_enable[0] to partition 69.
+Adding output bit \bus_address[9] to partition 70.
+Adding output bit \bus_address[8] to partition 71.
+Adding output bit \bus_address[7] to partition 72.
+Adding output bit \bus_address[6] to partition 73.
+Adding output bit \bus_address[5] to partition 74.
+Adding output bit \bus_address[4] to partition 75.
+Adding output bit \bus_address[3] to partition 76.
+Adding output bit \bus_address[31] to partition 77.
+Adding output bit \bus_address[30] to partition 78.
+Adding output bit \bus_address[2] to partition 79.
+Adding output bit \bus_address[29] to partition 80.
+Adding output bit \bus_address[28] to partition 81.
+Adding output bit \bus_address[27] to partition 82.
+Adding output bit \bus_address[26] to partition 83.
+Adding output bit \bus_address[25] to partition 84.
+Adding output bit \bus_address[24] to partition 85.
+Adding output bit \bus_address[23] to partition 86.
+Adding output bit \bus_address[22] to partition 87.
+Adding output bit \bus_address[21] to partition 88.
+Adding output bit \bus_address[20] to partition 89.
+Adding output bit \bus_address[1] to partition 90.
+Adding output bit \bus_address[19] to partition 91.
+Adding output bit \bus_address[18] to partition 92.
+Adding output bit \bus_address[17] to partition 93.
+Adding output bit \bus_address[16] to partition 94.
+Adding output bit \bus_address[15] to partition 95.
+Adding output bit \bus_address[14] to partition 96.
+Adding output bit \bus_address[13] to partition 97.
+Adding output bit \bus_address[12] to partition 98.
+Adding output bit \bus_address[11] to partition 99.
+Adding output bit \bus_address[10] to partition 100.
+Adding output bit \bus_address[0] to partition 101.
+
+Final list of fragment partitions:
+  0 \read_data[9] <= \bus_address[1] \bus_read_data[25] \bus_address[0] \bus_read_data[17] \bus_read_data[9] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  1 \read_data[8] <= \bus_address[1] \bus_read_data[24] \bus_address[0] \bus_read_data[16] \bus_read_data[8] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  2 \read_data[7] <= \bus_address[1] \bus_read_data[31] \bus_read_data[23] \bus_address[0] \bus_read_data[15] \bus_read_data[7]
+  3 \read_data[6] <= \bus_address[1] \bus_read_data[30] \bus_read_data[22] \bus_address[0] \bus_read_data[14] \bus_read_data[6]
+  4 \read_data[5] <= \bus_address[1] \bus_read_data[29] \bus_read_data[21] \bus_address[0] \bus_read_data[13] \bus_read_data[5]
+  5 \read_data[4] <= \bus_address[1] \bus_read_data[28] \bus_read_data[20] \bus_address[0] \bus_read_data[12] \bus_read_data[4]
+  6 \read_data[3] <= \bus_address[1] \bus_read_data[27] \bus_read_data[19] \bus_address[0] \bus_read_data[11] \bus_read_data[3]
+  7 \read_data[31] <= \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  8 \read_data[30] <= \bus_read_data[30] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  9 \read_data[2] <= \bus_address[1] \bus_read_data[26] \bus_read_data[18] \bus_address[0] \bus_read_data[10] \bus_read_data[2]
+  10 \read_data[29] <= \bus_read_data[29] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  11 \read_data[28] <= \bus_read_data[28] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  12 \read_data[27] <= \bus_read_data[27] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  13 \read_data[26] <= \bus_read_data[31] \bus_read_data[23] \bus_read_data[15] \data_format[2] \read_data[7] \data_format[0] \data_format[1] \bus_address[1] \bus_address[0] \bus_read_data[26]
+  14 \read_data[25] <= \bus_read_data[25] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  15 \read_data[24] <= \bus_read_data[24] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  16 \read_data[23] <= \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  17 \read_data[22] <= \bus_read_data[30] \bus_read_data[22] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  18 \read_data[21] <= \bus_read_data[29] \bus_read_data[21] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  19 \read_data[20] <= \bus_read_data[28] \bus_read_data[20] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  20 \read_data[1] <= \bus_address[1] \bus_read_data[25] \bus_read_data[17] \bus_address[0] \bus_read_data[9] \bus_read_data[1]
+  21 \read_data[19] <= \bus_read_data[27] \bus_read_data[19] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  22 \read_data[18] <= \bus_read_data[26] \bus_read_data[18] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  23 \read_data[17] <= \bus_read_data[25] \bus_read_data[17] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  24 \read_data[16] <= \bus_read_data[24] \bus_read_data[16] \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  25 \read_data[15] <= \bus_address[1] \bus_read_data[31] \bus_address[0] \bus_read_data[23] \bus_read_data[15] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  26 \read_data[14] <= \bus_address[1] \bus_read_data[30] \bus_address[0] \bus_read_data[22] \bus_read_data[14] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  27 \read_data[13] <= \bus_address[1] \bus_read_data[29] \bus_address[0] \bus_read_data[21] \bus_read_data[13] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  28 \read_data[12] <= \bus_address[1] \bus_read_data[28] \bus_address[0] \bus_read_data[20] \bus_read_data[12] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  29 \read_data[11] <= \bus_address[1] \bus_read_data[27] \bus_address[0] \bus_read_data[19] \bus_read_data[11] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  30 \read_data[10] <= \bus_address[1] \bus_read_data[26] \bus_address[0] \bus_read_data[18] \bus_read_data[10] \data_format[1] \data_format[0] \data_format[2] \read_data[7]
+  31 \read_data[0] <= \bus_address[1] \bus_read_data[24] \bus_read_data[16] \bus_address[0] \bus_read_data[8] \bus_read_data[0]
+  32 \bus_write_enable <= \write_enable
+  33 \bus_write_data[9] <= \bus_address[0] \write_data[1] \write_data[9] \bus_address[1]
+  34 \bus_write_data[8] <= \bus_address[0] \write_data[0] \write_data[8] \bus_address[1]
+  35 \bus_write_data[7] <= \bus_address[0] \bus_address[1] \write_data[7]
+  36 \bus_write_data[6] <= \bus_address[0] \bus_address[1] \write_data[6]
+  37 \bus_write_data[5] <= \bus_address[0] \bus_address[1] \write_data[5]
+  38 \bus_write_data[4] <= \bus_address[0] \bus_address[1] \write_data[4]
+  39 \bus_write_data[3] <= \bus_address[0] \bus_address[1] \write_data[3]
+  40 \bus_write_data[31] <= \bus_address[1] \write_data[7] \write_data[15] \bus_address[0] \write_data[23] \write_data[31]
+  41 \bus_write_data[30] <= \bus_address[1] \write_data[6] \write_data[14] \bus_address[0] \write_data[22] \write_data[30]
+  42 \bus_write_data[2] <= \bus_address[0] \bus_address[1] \write_data[2]
+  43 \bus_write_data[29] <= \bus_address[1] \write_data[5] \write_data[13] \bus_address[0] \write_data[21] \write_data[29]
+  44 \bus_write_data[28] <= \bus_address[1] \write_data[4] \write_data[12] \bus_address[0] \write_data[20] \write_data[28]
+  45 \bus_write_data[27] <= \bus_address[1] \write_data[3] \write_data[11] \bus_address[0] \write_data[19] \write_data[27]
+  46 \bus_write_data[26] <= \bus_address[1] \write_data[2] \write_data[10] \bus_address[0] \write_data[18] \write_data[26]
+  47 \bus_write_data[25] <= \bus_address[1] \write_data[1] \write_data[9] \bus_address[0] \write_data[17] \write_data[25]
+  48 \bus_write_data[24] <= \bus_address[1] \write_data[0] \write_data[8] \bus_address[0] \write_data[16] \write_data[24]
+  49 \bus_write_data[23] <= \write_data[15] \bus_address[0] \write_data[23] \bus_address[1] \write_data[7]
+  50 \bus_write_data[22] <= \write_data[14] \bus_address[0] \write_data[22] \bus_address[1] \write_data[6]
+  51 \bus_write_data[21] <= \write_data[13] \bus_address[0] \write_data[21] \bus_address[1] \write_data[5]
+  52 \bus_write_data[20] <= \write_data[12] \bus_address[0] \write_data[20] \bus_address[1] \write_data[4]
+  53 \bus_write_data[1] <= \bus_address[0] \bus_address[1] \write_data[1]
+  54 \bus_write_data[19] <= \write_data[11] \bus_address[0] \write_data[19] \bus_address[1] \write_data[3]
+  55 \bus_write_data[18] <= \write_data[10] \bus_address[0] \write_data[18] \bus_address[1] \write_data[2]
+  56 \bus_write_data[17] <= \write_data[9] \bus_address[0] \write_data[17] \bus_address[1] \write_data[1]
+  57 \bus_write_data[16] <= \write_data[8] \bus_address[0] \write_data[16] \bus_address[1] \write_data[0]
+  58 \bus_write_data[15] <= \bus_address[0] \write_data[7] \write_data[15] \bus_address[1]
+  59 \bus_write_data[14] <= \bus_address[0] \write_data[6] \write_data[14] \bus_address[1]
+  60 \bus_write_data[13] <= \bus_address[0] \write_data[5] \write_data[13] \bus_address[1]
+  61 \bus_write_data[12] <= \bus_address[0] \write_data[4] \write_data[12] \bus_address[1]
+  62 \bus_write_data[11] <= \bus_address[0] \write_data[3] \write_data[11] \bus_address[1]
+  63 \bus_write_data[10] <= \bus_address[0] \write_data[2] \write_data[10] \bus_address[1]
+  64 \bus_write_data[0] <= \bus_address[0] \bus_address[1] \write_data[0]
+  65 \bus_read_enable <= \read_enable
+  66 \bus_byte_enable[3] <= \bus_address[1] \data_format[1] \bus_address[0] \data_format[0]
+  67 \bus_byte_enable[2] <= \bus_address[1] \data_format[1] \data_format[0] \bus_address[0]
+  68 \bus_byte_enable[1] <= \data_format[1] \bus_address[0] \data_format[0] \bus_address[1]
+  69 \bus_byte_enable[0] <= \data_format[1] \data_format[0] \bus_address[0] \bus_address[1]
+  70 \bus_address[9] <= \address[9]
+  71 \bus_address[8] <= \address[8]
+  72 \bus_address[7] <= \address[7]
+  73 \bus_address[6] <= \address[6]
+  74 \bus_address[5] <= \address[5]
+  75 \bus_address[4] <= \address[4]
+  76 \bus_address[3] <= \address[3]
+  77 \bus_address[31] <= \address[31]
+  78 \bus_address[30] <= \address[30]
+  79 \bus_address[2] <= \address[2]
+  80 \bus_address[29] <= \address[29]
+  81 \bus_address[28] <= \address[28]
+  82 \bus_address[27] <= \address[27]
+  83 \bus_address[26] <= \address[26]
+  84 \bus_address[25] <= \address[25]
+  85 \bus_address[24] <= \address[24]
+  86 \bus_address[23] <= \address[23]
+  87 \bus_address[22] <= \address[22]
+  88 \bus_address[21] <= \address[21]
+  89 \bus_address[20] <= \address[20]
+  90 \bus_address[1] <= \address[1]
+  91 \bus_address[19] <= \address[19]
+  92 \bus_address[18] <= \address[18]
+  93 \bus_address[17] <= \address[17]
+  94 \bus_address[16] <= \address[16]
+  95 \bus_address[15] <= \address[15]
+  96 \bus_address[14] <= \address[14]
+  97 \bus_address[13] <= \address[13]
+  98 \bus_address[12] <= \address[12]
+  99 \bus_address[11] <= \address[11]
+  100 \bus_address[10] <= \address[10]
+  101 \bus_address[0] <= \address[0]
+
+3.1.3. Execute partitioning commands for module data_memory_interface.
+
+Amending partitions:
+Execute queued amend rules.
+Find automatic amend rules.
+  Checking partition 0:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 1:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 2:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 3:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 4:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 5:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 6:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 7:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 8:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 9:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 10:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 11:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 12:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 13:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 14:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 15:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 16:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 17:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 18:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 19:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 20:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 21:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 22:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 23:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 24:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 25:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 26:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 27:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 28:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 29:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 30:
+    Found 3 po matches and 0 auto/pi matches.
+  Checking partition 31:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 32:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 33:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 34:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 35:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 36:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 37:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 38:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 39:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 40:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 41:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 42:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 43:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 44:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 45:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 46:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 47:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 48:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 49:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 50:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 51:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 52:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 53:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 54:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 55:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 56:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 57:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 58:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 59:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 60:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 61:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 62:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 63:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 64:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 65:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 66:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 67:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 68:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 69:
+    Found 2 po matches and 0 auto/pi matches.
+  Checking partition 70:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 71:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 72:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 73:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 74:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 75:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 76:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 77:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 78:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 79:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 80:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 81:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 82:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 83:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 84:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 85:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 86:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 87:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 88:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 89:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 90:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 91:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 92:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 93:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 94:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 95:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 96:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 97:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 98:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 99:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 100:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 101:
+    Found 0 po matches and 0 auto/pi matches.
+
+Assigning partition names:
+Automatically naming partition 0 'read_data.9' using a PO name: read_data[9]
+Automatically naming partition 1 'read_data.8' using a PO name: read_data[8]
+Automatically naming partition 2 'read_data.7' using a PO name: read_data[7]
+Automatically naming partition 3 'read_data.6' using a PO name: read_data[6]
+Automatically naming partition 4 'read_data.5' using a PO name: read_data[5]
+Automatically naming partition 5 'read_data.4' using a PO name: read_data[4]
+Automatically naming partition 6 'read_data.3' using a PO name: read_data[3]
+Automatically naming partition 7 'read_data.31' using a PO name: read_data[31]
+Automatically naming partition 8 'read_data.30' using a PO name: read_data[30]
+Automatically naming partition 9 'read_data.2' using a PO name: read_data[2]
+Automatically naming partition 10 'read_data.29' using a PO name: read_data[29]
+Automatically naming partition 11 'read_data.28' using a PO name: read_data[28]
+Automatically naming partition 12 'read_data.27' using a PO name: read_data[27]
+Automatically naming partition 13 'read_data.26' using a PO name: read_data[26]
+Automatically naming partition 14 'read_data.25' using a PO name: read_data[25]
+Automatically naming partition 15 'read_data.24' using a PO name: read_data[24]
+Automatically naming partition 16 'read_data.23' using a PO name: read_data[23]
+Automatically naming partition 17 'read_data.22' using a PO name: read_data[22]
+Automatically naming partition 18 'read_data.21' using a PO name: read_data[21]
+Automatically naming partition 19 'read_data.20' using a PO name: read_data[20]
+Automatically naming partition 20 'read_data.1' using a PO name: read_data[1]
+Automatically naming partition 21 'read_data.19' using a PO name: read_data[19]
+Automatically naming partition 22 'read_data.18' using a PO name: read_data[18]
+Automatically naming partition 23 'read_data.17' using a PO name: read_data[17]
+Automatically naming partition 24 'read_data.16' using a PO name: read_data[16]
+Automatically naming partition 25 'read_data.15' using a PO name: read_data[15]
+Automatically naming partition 26 'read_data.14' using a PO name: read_data[14]
+Automatically naming partition 27 'read_data.13' using a PO name: read_data[13]
+Automatically naming partition 28 'read_data.12' using a PO name: read_data[12]
+Automatically naming partition 29 'read_data.11' using a PO name: read_data[11]
+Automatically naming partition 30 'read_data.10' using a PO name: read_data[10]
+Automatically naming partition 31 'read_data.0' using a PO name: read_data[0]
+Automatically naming partition 32 'bus_write_enable' using a PO name: bus_write_enable
+Automatically naming partition 33 'bus_write_data.9' using a PO name: bus_write_data[9]
+Automatically naming partition 34 'bus_write_data.8' using a PO name: bus_write_data[8]
+Automatically naming partition 35 'bus_write_data.7' using a PO name: bus_write_data[7]
+Automatically naming partition 36 'bus_write_data.6' using a PO name: bus_write_data[6]
+Automatically naming partition 37 'bus_write_data.5' using a PO name: bus_write_data[5]
+Automatically naming partition 38 'bus_write_data.4' using a PO name: bus_write_data[4]
+Automatically naming partition 39 'bus_write_data.3' using a PO name: bus_write_data[3]
+Automatically naming partition 40 'bus_write_data.31' using a PO name: bus_write_data[31]
+Automatically naming partition 41 'bus_write_data.30' using a PO name: bus_write_data[30]
+Automatically naming partition 42 'bus_write_data.2' using a PO name: bus_write_data[2]
+Automatically naming partition 43 'bus_write_data.29' using a PO name: bus_write_data[29]
+Automatically naming partition 44 'bus_write_data.28' using a PO name: bus_write_data[28]
+Automatically naming partition 45 'bus_write_data.27' using a PO name: bus_write_data[27]
+Automatically naming partition 46 'bus_write_data.26' using a PO name: bus_write_data[26]
+Automatically naming partition 47 'bus_write_data.25' using a PO name: bus_write_data[25]
+Automatically naming partition 48 'bus_write_data.24' using a PO name: bus_write_data[24]
+Automatically naming partition 49 'bus_write_data.23' using a PO name: bus_write_data[23]
+Automatically naming partition 50 'bus_write_data.22' using a PO name: bus_write_data[22]
+Automatically naming partition 51 'bus_write_data.21' using a PO name: bus_write_data[21]
+Automatically naming partition 52 'bus_write_data.20' using a PO name: bus_write_data[20]
+Automatically naming partition 53 'bus_write_data.1' using a PO name: bus_write_data[1]
+Automatically naming partition 54 'bus_write_data.19' using a PO name: bus_write_data[19]
+Automatically naming partition 55 'bus_write_data.18' using a PO name: bus_write_data[18]
+Automatically naming partition 56 'bus_write_data.17' using a PO name: bus_write_data[17]
+Automatically naming partition 57 'bus_write_data.16' using a PO name: bus_write_data[16]
+Automatically naming partition 58 'bus_write_data.15' using a PO name: bus_write_data[15]
+Automatically naming partition 59 'bus_write_data.14' using a PO name: bus_write_data[14]
+Automatically naming partition 60 'bus_write_data.13' using a PO name: bus_write_data[13]
+Automatically naming partition 61 'bus_write_data.12' using a PO name: bus_write_data[12]
+Automatically naming partition 62 'bus_write_data.11' using a PO name: bus_write_data[11]
+Automatically naming partition 63 'bus_write_data.10' using a PO name: bus_write_data[10]
+Automatically naming partition 64 'bus_write_data.0' using a PO name: bus_write_data[0]
+Automatically naming partition 65 'bus_read_enable' using a PO name: bus_read_enable
+Automatically naming partition 66 'bus_byte_enable.3' using a PO name: bus_byte_enable[3]
+Automatically naming partition 67 'bus_byte_enable.2' using a PO name: bus_byte_enable[2]
+Automatically naming partition 68 'bus_byte_enable.1' using a PO name: bus_byte_enable[1]
+Automatically naming partition 69 'bus_byte_enable.0' using a PO name: bus_byte_enable[0]
+Automatically naming partition 70 'bus_address.9' using a PO name: bus_address[9]
+Automatically naming partition 71 'bus_address.8' using a PO name: bus_address[8]
+Automatically naming partition 72 'bus_address.7' using a PO name: bus_address[7]
+Automatically naming partition 73 'bus_address.6' using a PO name: bus_address[6]
+Automatically naming partition 74 'bus_address.5' using a PO name: bus_address[5]
+Automatically naming partition 75 'bus_address.4' using a PO name: bus_address[4]
+Automatically naming partition 76 'bus_address.3' using a PO name: bus_address[3]
+Automatically naming partition 77 'bus_address.31' using a PO name: bus_address[31]
+Automatically naming partition 78 'bus_address.30' using a PO name: bus_address[30]
+Automatically naming partition 79 'bus_address.2' using a PO name: bus_address[2]
+Automatically naming partition 80 'bus_address.29' using a PO name: bus_address[29]
+Automatically naming partition 81 'bus_address.28' using a PO name: bus_address[28]
+Automatically naming partition 82 'bus_address.27' using a PO name: bus_address[27]
+Automatically naming partition 83 'bus_address.26' using a PO name: bus_address[26]
+Automatically naming partition 84 'bus_address.25' using a PO name: bus_address[25]
+Automatically naming partition 85 'bus_address.24' using a PO name: bus_address[24]
+Automatically naming partition 86 'bus_address.23' using a PO name: bus_address[23]
+Automatically naming partition 87 'bus_address.22' using a PO name: bus_address[22]
+Automatically naming partition 88 'bus_address.21' using a PO name: bus_address[21]
+Automatically naming partition 89 'bus_address.20' using a PO name: bus_address[20]
+Automatically naming partition 90 'bus_address.1' using a PO name: bus_address[1]
+Automatically naming partition 91 'bus_address.19' using a PO name: bus_address[19]
+Automatically naming partition 92 'bus_address.18' using a PO name: bus_address[18]
+Automatically naming partition 93 'bus_address.17' using a PO name: bus_address[17]
+Automatically naming partition 94 'bus_address.16' using a PO name: bus_address[16]
+Automatically naming partition 95 'bus_address.15' using a PO name: bus_address[15]
+Automatically naming partition 96 'bus_address.14' using a PO name: bus_address[14]
+Automatically naming partition 97 'bus_address.13' using a PO name: bus_address[13]
+Automatically naming partition 98 'bus_address.12' using a PO name: bus_address[12]
+Automatically naming partition 99 'bus_address.11' using a PO name: bus_address[11]
+Automatically naming partition 100 'bus_address.10' using a PO name: bus_address[10]
+Automatically naming partition 101 'bus_address.0' using a PO name: bus_address[0]
+
+Partition Summary:
+  Fragments:
+       0: \read_data[9]
+       1: \read_data[8]
+       2: \read_data[7]
+       3: \read_data[6]
+       4: \read_data[5]
+       5: \read_data[4]
+       6: \read_data[3]
+       7: \read_data[31]
+       8: \read_data[30]
+       9: \read_data[2]
+      10: \read_data[29]
+      11: \read_data[28]
+      12: \read_data[27]
+      13: \read_data[26]
+      14: \read_data[25]
+      15: \read_data[24]
+      16: \read_data[23]
+      17: \read_data[22]
+      18: \read_data[21]
+      19: \read_data[20]
+      20: \read_data[1]
+      21: \read_data[19]
+      22: \read_data[18]
+      23: \read_data[17]
+      24: \read_data[16]
+      25: \read_data[15]
+      26: \read_data[14]
+      27: \read_data[13]
+      28: \read_data[12]
+      29: \read_data[11]
+      30: \read_data[10]
+      31: \read_data[0]
+      32: \bus_write_enable
+      33: \bus_write_data[9]
+      34: \bus_write_data[8]
+      35: \bus_write_data[7]
+      36: \bus_write_data[6]
+      37: \bus_write_data[5]
+      38: \bus_write_data[4]
+      39: \bus_write_data[3]
+      40: \bus_write_data[31]
+      41: \bus_write_data[30]
+      42: \bus_write_data[2]
+      43: \bus_write_data[29]
+      44: \bus_write_data[28]
+      45: \bus_write_data[27]
+      46: \bus_write_data[26]
+      47: \bus_write_data[25]
+      48: \bus_write_data[24]
+      49: \bus_write_data[23]
+      50: \bus_write_data[22]
+      51: \bus_write_data[21]
+      52: \bus_write_data[20]
+      53: \bus_write_data[1]
+      54: \bus_write_data[19]
+      55: \bus_write_data[18]
+      56: \bus_write_data[17]
+      57: \bus_write_data[16]
+      58: \bus_write_data[15]
+      59: \bus_write_data[14]
+      60: \bus_write_data[13]
+      61: \bus_write_data[12]
+      62: \bus_write_data[11]
+      63: \bus_write_data[10]
+      64: \bus_write_data[0]
+      65: \bus_read_enable
+      66: \bus_byte_enable[3]
+      67: \bus_byte_enable[2]
+      68: \bus_byte_enable[1]
+      69: \bus_byte_enable[0]
+      70: \bus_address[9]
+      71: \bus_address[8]
+      72: \bus_address[7]
+      73: \bus_address[6]
+      74: \bus_address[5]
+      75: \bus_address[4]
+      76: \bus_address[3]
+      77: \bus_address[31]
+      78: \bus_address[30]
+      79: \bus_address[2]
+      80: \bus_address[29]
+      81: \bus_address[28]
+      82: \bus_address[27]
+      83: \bus_address[26]
+      84: \bus_address[25]
+      85: \bus_address[24]
+      86: \bus_address[23]
+      87: \bus_address[22]
+      88: \bus_address[21]
+      89: \bus_address[20]
+      90: \bus_address[1]
+      91: \bus_address[19]
+      92: \bus_address[18]
+      93: \bus_address[17]
+      94: \bus_address[16]
+      95: \bus_address[15]
+      96: \bus_address[14]
+      97: \bus_address[13]
+      98: \bus_address[12]
+      99: \bus_address[11]
+     100: \bus_address[10]
+     101: \bus_address[0]
+  Partitions:
+       0: read_data.9
+       1: read_data.8
+       2: read_data.7
+       3: read_data.6
+       4: read_data.5
+       5: read_data.4
+       6: read_data.3
+       7: read_data.31
+       8: read_data.30
+       9: read_data.2
+      10: read_data.29
+      11: read_data.28
+      12: read_data.27
+      13: read_data.26
+      14: read_data.25
+      15: read_data.24
+      16: read_data.23
+      17: read_data.22
+      18: read_data.21
+      19: read_data.20
+      20: read_data.1
+      21: read_data.19
+      22: read_data.18
+      23: read_data.17
+      24: read_data.16
+      25: read_data.15
+      26: read_data.14
+      27: read_data.13
+      28: read_data.12
+      29: read_data.11
+      30: read_data.10
+      31: read_data.0
+      32: bus_write_enable
+      33: bus_write_data.9
+      34: bus_write_data.8
+      35: bus_write_data.7
+      36: bus_write_data.6
+      37: bus_write_data.5
+      38: bus_write_data.4
+      39: bus_write_data.3
+      40: bus_write_data.31
+      41: bus_write_data.30
+      42: bus_write_data.2
+      43: bus_write_data.29
+      44: bus_write_data.28
+      45: bus_write_data.27
+      46: bus_write_data.26
+      47: bus_write_data.25
+      48: bus_write_data.24
+      49: bus_write_data.23
+      50: bus_write_data.22
+      51: bus_write_data.21
+      52: bus_write_data.20
+      53: bus_write_data.1
+      54: bus_write_data.19
+      55: bus_write_data.18
+      56: bus_write_data.17
+      57: bus_write_data.16
+      58: bus_write_data.15
+      59: bus_write_data.14
+      60: bus_write_data.13
+      61: bus_write_data.12
+      62: bus_write_data.11
+      63: bus_write_data.10
+      64: bus_write_data.0
+      65: bus_read_enable
+      66: bus_byte_enable.3
+      67: bus_byte_enable.2
+      68: bus_byte_enable.1
+      69: bus_byte_enable.0
+      70: bus_address.9
+      71: bus_address.8
+      72: bus_address.7
+      73: bus_address.6
+      74: bus_address.5
+      75: bus_address.4
+      76: bus_address.3
+      77: bus_address.31
+      78: bus_address.30
+      79: bus_address.2
+      80: bus_address.29
+      81: bus_address.28
+      82: bus_address.27
+      83: bus_address.26
+      84: bus_address.25
+      85: bus_address.24
+      86: bus_address.23
+      87: bus_address.22
+      88: bus_address.21
+      89: bus_address.20
+      90: bus_address.1
+      91: bus_address.19
+      92: bus_address.18
+      93: bus_address.17
+      94: bus_address.16
+      95: bus_address.15
+      96: bus_address.14
+      97: bus_address.13
+      98: bus_address.12
+      99: bus_address.11
+     100: bus_address.10
+     101: bus_address.0
+  Fragment-Partition-Matrix:
+           0           1           2           3           4           5           6           7           8           9           10         
+           01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01234 56789 01
+       0   #.=.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.9
+       1   .#=.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.8
+       2   ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.7
+       3   ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.6
+       4   ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.5
+       5   ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.4
+       6   ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.3
+       7   ..=.. ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.31
+       8   ..=.. ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.30
+       9   ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.2
+      10   ..=.. ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.29
+      11   ..=.. ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.28
+      12   ..=.. ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.27
+      13   ..=.. ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.26
+      14   ..=.. ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.25
+      15   ..=.. ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.24
+      16   ..=.. ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.23
+      17   ..=.. ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.22
+      18   ..=.. ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.21
+      19   ..=.. ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.20
+      20   ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.1
+      21   ..=.. ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.19
+      22   ..=.. ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.18
+      23   ..=.. ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.17
+      24   ..=.. ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.16
+      25   ..=.. ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.15
+      26   ..=.. ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.14
+      27   ..=.. ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.13
+      28   ..=.. ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.12
+      29   ..=.. ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.11
+      30   ..=.. ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.10
+      31   ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  read_data.0
+      32   ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..  bus_write_enable
+      33   ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.9
+      34   ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.8
+      35   ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.7
+      36   ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.6
+      37   ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.5
+      38   ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.4
+      39   ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.3
+      40   ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.31
+      41   ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.30
+      42   ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.2
+      43   ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.29
+      44   ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.28
+      45   ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.27
+      46   ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.26
+      47   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.25
+      48   ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.24
+      49   ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.23
+      50   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.22
+      51   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.21
+      52   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.20
+      53   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.1
+      54   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.19
+      55   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.18
+      56   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.17
+      57   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.16
+      58   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.15
+      59   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.14
+      60   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.13
+      61   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.12
+      62   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.11
+      63   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.10
+      64   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... =.... ..... .=  bus_write_data.0
+      65   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..... ..  bus_read_enable
+      66   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... =.... ..... .=  bus_byte_enable.3
+      67   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... =.... ..... .=  bus_byte_enable.2
+      68   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... =.... ..... .=  bus_byte_enable.1
+      69   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... =.... ..... .=  bus_byte_enable.0
+      70   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..... ..  bus_address.9
+      71   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..... ..  bus_address.8
+      72   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..... ..  bus_address.7
+      73   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..... ..  bus_address.6
+      74   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..... ..  bus_address.5
+      75   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..... ..  bus_address.4
+      76   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..... ..  bus_address.3
+      77   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..... ..  bus_address.31
+      78   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..... ..  bus_address.30
+      79   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..... ..  bus_address.2
+      80   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..... ..  bus_address.29
+      81   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..... ..  bus_address.28
+      82   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..... ..  bus_address.27
+      83   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..... ..  bus_address.26
+      84   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..... ..  bus_address.25
+      85   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..... ..  bus_address.24
+      86   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..... ..  bus_address.23
+      87   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..... ..  bus_address.22
+      88   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..... ..  bus_address.21
+      89   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..... ..  bus_address.20
+      90   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..... ..  bus_address.1
+      91   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..... ..  bus_address.19
+      92   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..... ..  bus_address.18
+      93   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..... ..  bus_address.17
+      94   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..... ..  bus_address.16
+      95   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.... ..  bus_address.15
+      96   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#... ..  bus_address.14
+      97   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..#.. ..  bus_address.13
+      98   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ...#. ..  bus_address.12
+      99   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....# ..  bus_address.11
+     100   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... #.  bus_address.10
+     101   ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... .#  bus_address.0
+  Legend for Fragment-Partition-Matrix:
+      #  .... partition is this single fragment
+      *  .... fragments merged into single partition
+      +  .... fragments amended to the partition
+      =  .... fragment is driving a partition input
+      -  .... fragment is driving an amended fragment
+      .  .... no relationship between fragment and partition
+      ,  .... unused fragment index (as result of grouping)
+
+3.1.4. Write partitions for module data_memory_interface.
+Adding non-output bit \clock to partition 102.
+Adding non-output bit \read_enable to partition 102.
+Adding non-output bit \write_enable to partition 102.
+Adding output bit \bus_write_data[30] to partition 102.
+Adding output bit \bus_write_data[31] to partition 102.
+Adding output bit \bus_write_data[28] to partition 102.
+Adding output bit \bus_write_data[29] to partition 102.
+Adding output bit \bus_byte_enable[0] to partition 102.
+Adding output bit \bus_byte_enable[1] to partition 102.
+Adding output bit \bus_byte_enable[2] to partition 102.
+Adding output bit \bus_byte_enable[3] to partition 102.
+Adding output bit \bus_read_enable to partition 102.
+Adding output bit \bus_write_enable to partition 102.
+Adding non-output bit \write_data[0] to partition 102.
+Adding non-output bit \write_data[1] to partition 102.
+Adding non-output bit \write_data[2] to partition 102.
+Adding non-output bit \write_data[3] to partition 102.
+Adding non-output bit \write_data[4] to partition 102.
+Adding non-output bit \write_data[5] to partition 102.
+Adding non-output bit \write_data[6] to partition 102.
+Adding non-output bit \write_data[7] to partition 102.
+Adding non-output bit \write_data[8] to partition 102.
+Adding non-output bit \write_data[9] to partition 102.
+Adding non-output bit \write_data[10] to partition 102.
+Adding non-output bit \write_data[11] to partition 102.
+Adding non-output bit \write_data[12] to partition 102.
+Adding non-output bit \write_data[13] to partition 102.
+Adding non-output bit \write_data[14] to partition 102.
+Adding non-output bit \write_data[15] to partition 102.
+Adding non-output bit \write_data[16] to partition 102.
+Adding non-output bit \write_data[17] to partition 102.
+Adding non-output bit \write_data[18] to partition 102.
+Adding non-output bit \write_data[19] to partition 102.
+Adding non-output bit \write_data[20] to partition 102.
+Adding non-output bit \write_data[21] to partition 102.
+Adding non-output bit \write_data[22] to partition 102.
+Adding non-output bit \write_data[23] to partition 102.
+Adding non-output bit \write_data[24] to partition 102.
+Adding non-output bit \write_data[25] to partition 102.
+Adding non-output bit \write_data[26] to partition 102.
+Adding non-output bit \write_data[27] to partition 102.
+Adding non-output bit \write_data[28] to partition 102.
+Adding non-output bit \write_data[29] to partition 102.
+Adding non-output bit \write_data[30] to partition 102.
+Adding non-output bit \write_data[31] to partition 102.
+Adding output bit \read_data[0] to partition 102.
+Adding output bit \read_data[1] to partition 102.
+Adding output bit \read_data[2] to partition 102.
+Adding output bit \read_data[3] to partition 102.
+Adding output bit \read_data[4] to partition 102.
+Adding output bit \read_data[5] to partition 102.
+Adding output bit \read_data[6] to partition 102.
+Adding output bit \read_data[7] to partition 102.
+Adding output bit \read_data[8] to partition 102.
+Adding output bit \read_data[9] to partition 102.
+Adding output bit \read_data[10] to partition 102.
+Adding output bit \read_data[11] to partition 102.
+Adding output bit \read_data[12] to partition 102.
+Adding output bit \read_data[13] to partition 102.
+Adding output bit \read_data[14] to partition 102.
+Adding output bit \read_data[15] to partition 102.
+Adding output bit \read_data[16] to partition 102.
+Adding output bit \read_data[17] to partition 102.
+Adding output bit \read_data[18] to partition 102.
+Adding output bit \read_data[19] to partition 102.
+Adding output bit \read_data[20] to partition 102.
+Adding output bit \read_data[21] to partition 102.
+Adding output bit \read_data[22] to partition 102.
+Adding output bit \read_data[23] to partition 102.
+Adding output bit \read_data[24] to partition 102.
+Adding output bit \read_data[25] to partition 102.
+Adding output bit \read_data[26] to partition 102.
+Adding output bit \read_data[27] to partition 102.
+Adding output bit \read_data[28] to partition 102.
+Adding output bit \read_data[29] to partition 102.
+Adding output bit \read_data[30] to partition 102.
+Adding output bit \read_data[31] to partition 102.
+Adding non-output bit \data_format[0] to partition 102.
+Adding non-output bit \data_format[1] to partition 102.
+Adding non-output bit \data_format[2] to partition 102.
+Adding non-output bit \address[0] to partition 102.
+Adding non-output bit \address[1] to partition 102.
+Adding non-output bit \address[2] to partition 102.
+Adding non-output bit \address[3] to partition 102.
+Adding non-output bit \address[4] to partition 102.
+Adding non-output bit \address[5] to partition 102.
+Adding non-output bit \address[6] to partition 102.
+Adding non-output bit \address[7] to partition 102.
+Adding non-output bit \address[8] to partition 102.
+Adding non-output bit \address[9] to partition 102.
+Adding non-output bit \address[10] to partition 102.
+Adding non-output bit \address[11] to partition 102.
+Adding non-output bit \address[12] to partition 102.
+Adding non-output bit \address[13] to partition 102.
+Adding non-output bit \address[14] to partition 102.
+Adding non-output bit \address[15] to partition 102.
+Adding non-output bit \address[16] to partition 102.
+Adding non-output bit \address[17] to partition 102.
+Adding non-output bit \address[18] to partition 102.
+Adding non-output bit \address[19] to partition 102.
+Adding non-output bit \address[20] to partition 102.
+Adding non-output bit \address[21] to partition 102.
+Adding non-output bit \address[22] to partition 102.
+Adding non-output bit \address[23] to partition 102.
+Adding non-output bit \address[24] to partition 102.
+Adding non-output bit \address[25] to partition 102.
+Adding non-output bit \address[26] to partition 102.
+Adding non-output bit \address[27] to partition 102.
+Adding non-output bit \address[28] to partition 102.
+Adding non-output bit \address[29] to partition 102.
+Adding non-output bit \address[30] to partition 102.
+Adding non-output bit \address[31] to partition 102.
+Adding output bit \bus_address[0] to partition 102.
+Adding output bit \bus_address[1] to partition 102.
+Adding output bit \bus_address[2] to partition 102.
+Adding output bit \bus_address[3] to partition 102.
+Adding output bit \bus_address[4] to partition 102.
+Adding output bit \bus_address[5] to partition 102.
+Adding output bit \bus_address[6] to partition 102.
+Adding output bit \bus_address[7] to partition 102.
+Adding output bit \bus_address[8] to partition 102.
+Adding output bit \bus_address[9] to partition 102.
+Adding output bit \bus_address[10] to partition 102.
+Adding output bit \bus_address[11] to partition 102.
+Adding output bit \bus_address[12] to partition 102.
+Adding output bit \bus_address[13] to partition 102.
+Adding output bit \bus_address[14] to partition 102.
+Adding output bit \bus_address[15] to partition 102.
+Adding output bit \bus_address[16] to partition 102.
+Adding output bit \bus_address[17] to partition 102.
+Adding output bit \bus_address[18] to partition 102.
+Adding output bit \bus_address[19] to partition 102.
+Adding output bit \bus_address[20] to partition 102.
+Adding output bit \bus_address[21] to partition 102.
+Adding output bit \bus_address[22] to partition 102.
+Adding output bit \bus_address[23] to partition 102.
+Adding output bit \bus_address[24] to partition 102.
+Adding output bit \bus_address[25] to partition 102.
+Adding output bit \bus_address[26] to partition 102.
+Adding output bit \bus_address[27] to partition 102.
+Adding output bit \bus_address[28] to partition 102.
+Adding output bit \bus_address[29] to partition 102.
+Adding output bit \bus_address[30] to partition 102.
+Adding output bit \bus_address[31] to partition 102.
+Adding non-output bit \bus_read_data[0] to partition 102.
+Adding non-output bit \bus_read_data[1] to partition 102.
+Adding non-output bit \bus_read_data[2] to partition 102.
+Adding non-output bit \bus_read_data[3] to partition 102.
+Adding non-output bit \bus_read_data[4] to partition 102.
+Adding non-output bit \bus_read_data[5] to partition 102.
+Adding non-output bit \bus_read_data[6] to partition 102.
+Adding non-output bit \bus_read_data[7] to partition 102.
+Adding non-output bit \bus_read_data[8] to partition 102.
+Adding non-output bit \bus_read_data[9] to partition 102.
+Adding non-output bit \bus_read_data[10] to partition 102.
+Adding non-output bit \bus_read_data[11] to partition 102.
+Adding non-output bit \bus_read_data[12] to partition 102.
+Adding non-output bit \bus_read_data[13] to partition 102.
+Adding non-output bit \bus_read_data[14] to partition 102.
+Adding non-output bit \bus_read_data[15] to partition 102.
+Adding non-output bit \bus_read_data[16] to partition 102.
+Adding non-output bit \bus_read_data[17] to partition 102.
+Adding non-output bit \bus_read_data[18] to partition 102.
+Adding non-output bit \bus_read_data[19] to partition 102.
+Adding non-output bit \bus_read_data[20] to partition 102.
+Adding non-output bit \bus_read_data[21] to partition 102.
+Adding non-output bit \bus_read_data[22] to partition 102.
+Adding non-output bit \bus_read_data[23] to partition 102.
+Adding non-output bit \bus_read_data[24] to partition 102.
+Adding non-output bit \bus_read_data[25] to partition 102.
+Adding non-output bit \bus_read_data[26] to partition 102.
+Adding non-output bit \bus_read_data[27] to partition 102.
+Adding non-output bit \bus_read_data[28] to partition 102.
+Adding non-output bit \bus_read_data[29] to partition 102.
+Adding non-output bit \bus_read_data[30] to partition 102.
+Adding non-output bit \bus_read_data[31] to partition 102.
+Adding output bit \bus_write_data[0] to partition 102.
+Adding output bit \bus_write_data[1] to partition 102.
+Adding output bit \bus_write_data[2] to partition 102.
+Adding output bit \bus_write_data[3] to partition 102.
+Adding output bit \bus_write_data[4] to partition 102.
+Adding output bit \bus_write_data[5] to partition 102.
+Adding output bit \bus_write_data[6] to partition 102.
+Adding output bit \bus_write_data[7] to partition 102.
+Adding output bit \bus_write_data[8] to partition 102.
+Adding output bit \bus_write_data[9] to partition 102.
+Adding output bit \bus_write_data[10] to partition 102.
+Adding output bit \bus_write_data[11] to partition 102.
+Adding output bit \bus_write_data[12] to partition 102.
+Adding output bit \bus_write_data[13] to partition 102.
+Adding output bit \bus_write_data[14] to partition 102.
+Adding output bit \bus_write_data[15] to partition 102.
+Adding output bit \bus_write_data[16] to partition 102.
+Adding output bit \bus_write_data[17] to partition 102.
+Adding output bit \bus_write_data[18] to partition 102.
+Adding output bit \bus_write_data[19] to partition 102.
+Adding output bit \bus_write_data[20] to partition 102.
+Adding output bit \bus_write_data[21] to partition 102.
+Adding output bit \bus_write_data[22] to partition 102.
+Adding output bit \bus_write_data[23] to partition 102.
+Adding output bit \bus_write_data[24] to partition 102.
+Adding output bit \bus_write_data[25] to partition 102.
+Adding output bit \bus_write_data[26] to partition 102.
+Adding output bit \bus_write_data[27] to partition 102.
+Writing partition 0 as data_memory_interface.read_data.9.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[25] <-> \bus_read_data[25]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[17] <-> \bus_read_data[17]
+  partition pi bit 4: \bus_read_data[9] <-> \bus_read_data[9]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[9] <-> \read_data[9]
+
+3.1.5. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.9.il
+<suppressed ~7097 debug messages>
+
+3.1.6. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.9...
+Checking module gold.data_memory_interface.read_data.9...
+Found and reported 0 problems.
+
+Writing partition 1 as data_memory_interface.read_data.8.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[24] <-> \bus_read_data[24]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[16] <-> \bus_read_data[16]
+  partition pi bit 4: \bus_read_data[8] <-> \bus_read_data[8]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[8] <-> \read_data[8]
+
+3.1.7. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.8.il
+<suppressed ~136 debug messages>
+
+3.1.8. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.8...
+Checking module gold.data_memory_interface.read_data.8...
+Found and reported 0 problems.
+
+Writing partition 2 as data_memory_interface.read_data.7.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 2: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 5: \bus_read_data[7] <-> \bus_read_data[7]
+  partition po bit 0: \read_data[7] <-> \read_data[7]
+
+3.1.9. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.7.il
+<suppressed ~66 debug messages>
+
+3.1.10. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.7...
+Checking module gold.data_memory_interface.read_data.7...
+Found and reported 0 problems.
+
+Writing partition 3 as data_memory_interface.read_data.6.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[30] <-> \bus_read_data[30]
+  partition pi bit 2: \bus_read_data[22] <-> \bus_read_data[22]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[14] <-> \bus_read_data[14]
+  partition pi bit 5: \bus_read_data[6] <-> \bus_read_data[6]
+  partition po bit 0: \read_data[6] <-> \read_data[6]
+
+3.1.11. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.6.il
+<suppressed ~66 debug messages>
+
+3.1.12. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.6...
+Checking module gold.data_memory_interface.read_data.6...
+Found and reported 0 problems.
+
+Writing partition 4 as data_memory_interface.read_data.5.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[29] <-> \bus_read_data[29]
+  partition pi bit 2: \bus_read_data[21] <-> \bus_read_data[21]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[13] <-> \bus_read_data[13]
+  partition pi bit 5: \bus_read_data[5] <-> \bus_read_data[5]
+  partition po bit 0: \read_data[5] <-> \read_data[5]
+
+3.1.13. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.5.il
+<suppressed ~66 debug messages>
+
+3.1.14. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.5...
+Checking module gold.data_memory_interface.read_data.5...
+Found and reported 0 problems.
+
+Writing partition 5 as data_memory_interface.read_data.4.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[28] <-> \bus_read_data[28]
+  partition pi bit 2: \bus_read_data[20] <-> \bus_read_data[20]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[12] <-> \bus_read_data[12]
+  partition pi bit 5: \bus_read_data[4] <-> \bus_read_data[4]
+  partition po bit 0: \read_data[4] <-> \read_data[4]
+
+3.1.15. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.4.il
+<suppressed ~66 debug messages>
+
+3.1.16. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.4...
+Checking module gold.data_memory_interface.read_data.4...
+Found and reported 0 problems.
+
+Writing partition 6 as data_memory_interface.read_data.3.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[27] <-> \bus_read_data[27]
+  partition pi bit 2: \bus_read_data[19] <-> \bus_read_data[19]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[11] <-> \bus_read_data[11]
+  partition pi bit 5: \bus_read_data[3] <-> \bus_read_data[3]
+  partition po bit 0: \read_data[3] <-> \read_data[3]
+
+3.1.17. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.3.il
+<suppressed ~66 debug messages>
+
+3.1.18. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.3...
+Checking module gold.data_memory_interface.read_data.3...
+Found and reported 0 problems.
+
+Writing partition 7 as data_memory_interface.read_data.31.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 4: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[31] <-> \read_data[31]
+
+3.1.19. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.31.il
+<suppressed ~218 debug messages>
+
+3.1.20. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.31...
+Checking module gold.data_memory_interface.read_data.31...
+Found and reported 0 problems.
+
+Writing partition 8 as data_memory_interface.read_data.30.
+  partition pi bit 0: \bus_read_data[30] <-> \bus_read_data[30]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[30] <-> \read_data[30]
+
+3.1.21. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.30.il
+<suppressed ~234 debug messages>
+
+3.1.22. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.30...
+Checking module gold.data_memory_interface.read_data.30...
+Found and reported 0 problems.
+
+Writing partition 9 as data_memory_interface.read_data.2.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[26] <-> \bus_read_data[26]
+  partition pi bit 2: \bus_read_data[18] <-> \bus_read_data[18]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[10] <-> \bus_read_data[10]
+  partition pi bit 5: \bus_read_data[2] <-> \bus_read_data[2]
+  partition po bit 0: \read_data[2] <-> \read_data[2]
+
+3.1.23. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.2.il
+<suppressed ~66 debug messages>
+
+3.1.24. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.2...
+Checking module gold.data_memory_interface.read_data.2...
+Found and reported 0 problems.
+
+Writing partition 10 as data_memory_interface.read_data.29.
+  partition pi bit 0: \bus_read_data[29] <-> \bus_read_data[29]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[29] <-> \read_data[29]
+
+3.1.25. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.29.il
+<suppressed ~234 debug messages>
+
+3.1.26. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.29...
+Checking module gold.data_memory_interface.read_data.29...
+Found and reported 0 problems.
+
+Writing partition 11 as data_memory_interface.read_data.28.
+  partition pi bit 0: \bus_read_data[28] <-> \bus_read_data[28]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[28] <-> \read_data[28]
+
+3.1.27. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.28.il
+<suppressed ~234 debug messages>
+
+3.1.28. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.28...
+Checking module gold.data_memory_interface.read_data.28...
+Found and reported 0 problems.
+
+Writing partition 12 as data_memory_interface.read_data.27.
+  partition pi bit 0: \bus_read_data[27] <-> \bus_read_data[27]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[27] <-> \read_data[27]
+
+3.1.29. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.27.il
+<suppressed ~234 debug messages>
+
+3.1.30. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.27...
+Checking module gold.data_memory_interface.read_data.27...
+Found and reported 0 problems.
+
+Writing partition 13 as data_memory_interface.read_data.26.
+  partition pi bit 0: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 1: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 2: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 3: \data_format[2] <-> \data_format[2]
+  partition pi bit 4: \read_data[7] <-> \read_data[7]
+  partition pi bit 5: \data_format[0] <-> \data_format[0]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 8: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 9: \bus_read_data[26] <-> \bus_read_data[26]
+  partition po bit 0: \read_data[26] <-> \read_data[26]
+
+3.1.31. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.26.il
+<suppressed ~234 debug messages>
+
+3.1.32. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.26...
+Checking module gold.data_memory_interface.read_data.26...
+Found and reported 0 problems.
+
+Writing partition 14 as data_memory_interface.read_data.25.
+  partition pi bit 0: \bus_read_data[25] <-> \bus_read_data[25]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[25] <-> \read_data[25]
+
+3.1.33. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.25.il
+<suppressed ~234 debug messages>
+
+3.1.34. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.25...
+Checking module gold.data_memory_interface.read_data.25...
+Found and reported 0 problems.
+
+Writing partition 15 as data_memory_interface.read_data.24.
+  partition pi bit 0: \bus_read_data[24] <-> \bus_read_data[24]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 5: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 6: \data_format[1] <-> \data_format[1]
+  partition pi bit 7: \data_format[0] <-> \data_format[0]
+  partition pi bit 8: \data_format[2] <-> \data_format[2]
+  partition pi bit 9: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[24] <-> \read_data[24]
+
+3.1.35. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.24.il
+<suppressed ~234 debug messages>
+
+3.1.36. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.24...
+Checking module gold.data_memory_interface.read_data.24...
+Found and reported 0 problems.
+
+Writing partition 16 as data_memory_interface.read_data.23.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 4: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[23] <-> \read_data[23]
+
+3.1.37. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.23.il
+<suppressed ~232 debug messages>
+
+3.1.38. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.23...
+Checking module gold.data_memory_interface.read_data.23...
+Found and reported 0 problems.
+
+Writing partition 17 as data_memory_interface.read_data.22.
+  partition pi bit 0: \bus_read_data[30] <-> \bus_read_data[30]
+  partition pi bit 1: \bus_read_data[22] <-> \bus_read_data[22]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[22] <-> \read_data[22]
+
+3.1.39. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.22.il
+<suppressed ~240 debug messages>
+
+3.1.40. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.22...
+Checking module gold.data_memory_interface.read_data.22...
+Found and reported 0 problems.
+
+Writing partition 18 as data_memory_interface.read_data.21.
+  partition pi bit 0: \bus_read_data[29] <-> \bus_read_data[29]
+  partition pi bit 1: \bus_read_data[21] <-> \bus_read_data[21]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[21] <-> \read_data[21]
+
+3.1.41. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.21.il
+<suppressed ~240 debug messages>
+
+3.1.42. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.21...
+Checking module gold.data_memory_interface.read_data.21...
+Found and reported 0 problems.
+
+Writing partition 19 as data_memory_interface.read_data.20.
+  partition pi bit 0: \bus_read_data[28] <-> \bus_read_data[28]
+  partition pi bit 1: \bus_read_data[20] <-> \bus_read_data[20]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[20] <-> \read_data[20]
+
+3.1.43. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.20.il
+<suppressed ~240 debug messages>
+
+3.1.44. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.20...
+Checking module gold.data_memory_interface.read_data.20...
+Found and reported 0 problems.
+
+Writing partition 20 as data_memory_interface.read_data.1.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[25] <-> \bus_read_data[25]
+  partition pi bit 2: \bus_read_data[17] <-> \bus_read_data[17]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[9] <-> \bus_read_data[9]
+  partition pi bit 5: \bus_read_data[1] <-> \bus_read_data[1]
+  partition po bit 0: \read_data[1] <-> \read_data[1]
+
+3.1.45. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.1.il
+<suppressed ~66 debug messages>
+
+3.1.46. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.1...
+Checking module gold.data_memory_interface.read_data.1...
+Found and reported 0 problems.
+
+Writing partition 21 as data_memory_interface.read_data.19.
+  partition pi bit 0: \bus_read_data[27] <-> \bus_read_data[27]
+  partition pi bit 1: \bus_read_data[19] <-> \bus_read_data[19]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[19] <-> \read_data[19]
+
+3.1.47. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.19.il
+<suppressed ~240 debug messages>
+
+3.1.48. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.19...
+Checking module gold.data_memory_interface.read_data.19...
+Found and reported 0 problems.
+
+Writing partition 22 as data_memory_interface.read_data.18.
+  partition pi bit 0: \bus_read_data[26] <-> \bus_read_data[26]
+  partition pi bit 1: \bus_read_data[18] <-> \bus_read_data[18]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[18] <-> \read_data[18]
+
+3.1.49. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.18.il
+<suppressed ~240 debug messages>
+
+3.1.50. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.18...
+Checking module gold.data_memory_interface.read_data.18...
+Found and reported 0 problems.
+
+Writing partition 23 as data_memory_interface.read_data.17.
+  partition pi bit 0: \bus_read_data[25] <-> \bus_read_data[25]
+  partition pi bit 1: \bus_read_data[17] <-> \bus_read_data[17]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[17] <-> \read_data[17]
+
+3.1.51. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.17.il
+<suppressed ~240 debug messages>
+
+3.1.52. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.17...
+Checking module gold.data_memory_interface.read_data.17...
+Found and reported 0 problems.
+
+Writing partition 24 as data_memory_interface.read_data.16.
+  partition pi bit 0: \bus_read_data[24] <-> \bus_read_data[24]
+  partition pi bit 1: \bus_read_data[16] <-> \bus_read_data[16]
+  partition pi bit 2: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 3: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 4: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 5: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 6: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 7: \data_format[1] <-> \data_format[1]
+  partition pi bit 8: \data_format[0] <-> \data_format[0]
+  partition pi bit 9: \data_format[2] <-> \data_format[2]
+  partition pi bit 10: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[16] <-> \read_data[16]
+
+3.1.53. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.16.il
+<suppressed ~240 debug messages>
+
+3.1.54. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.16...
+Checking module gold.data_memory_interface.read_data.16...
+Found and reported 0 problems.
+
+Writing partition 25 as data_memory_interface.read_data.15.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 4: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[15] <-> \read_data[15]
+
+3.1.55. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.15.il
+<suppressed ~136 debug messages>
+
+3.1.56. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.15...
+Checking module gold.data_memory_interface.read_data.15...
+Found and reported 0 problems.
+
+Writing partition 26 as data_memory_interface.read_data.14.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[30] <-> \bus_read_data[30]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[22] <-> \bus_read_data[22]
+  partition pi bit 4: \bus_read_data[14] <-> \bus_read_data[14]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[14] <-> \read_data[14]
+
+3.1.57. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.14.il
+<suppressed ~136 debug messages>
+
+3.1.58. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.14...
+Checking module gold.data_memory_interface.read_data.14...
+Found and reported 0 problems.
+
+Writing partition 27 as data_memory_interface.read_data.13.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[29] <-> \bus_read_data[29]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[21] <-> \bus_read_data[21]
+  partition pi bit 4: \bus_read_data[13] <-> \bus_read_data[13]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[13] <-> \read_data[13]
+
+3.1.59. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.13.il
+<suppressed ~136 debug messages>
+
+3.1.60. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.13...
+Checking module gold.data_memory_interface.read_data.13...
+Found and reported 0 problems.
+
+Writing partition 28 as data_memory_interface.read_data.12.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[28] <-> \bus_read_data[28]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[20] <-> \bus_read_data[20]
+  partition pi bit 4: \bus_read_data[12] <-> \bus_read_data[12]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[12] <-> \read_data[12]
+
+3.1.61. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.12.il
+<suppressed ~136 debug messages>
+
+3.1.62. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.12...
+Checking module gold.data_memory_interface.read_data.12...
+Found and reported 0 problems.
+
+Writing partition 29 as data_memory_interface.read_data.11.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[27] <-> \bus_read_data[27]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[19] <-> \bus_read_data[19]
+  partition pi bit 4: \bus_read_data[11] <-> \bus_read_data[11]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[11] <-> \read_data[11]
+
+3.1.63. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.11.il
+<suppressed ~136 debug messages>
+
+3.1.64. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.11...
+Checking module gold.data_memory_interface.read_data.11...
+Found and reported 0 problems.
+
+Writing partition 30 as data_memory_interface.read_data.10.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[26] <-> \bus_read_data[26]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_read_data[18] <-> \bus_read_data[18]
+  partition pi bit 4: \bus_read_data[10] <-> \bus_read_data[10]
+  partition pi bit 5: \data_format[1] <-> \data_format[1]
+  partition pi bit 6: \data_format[0] <-> \data_format[0]
+  partition pi bit 7: \data_format[2] <-> \data_format[2]
+  partition pi bit 8: \read_data[7] <-> \read_data[7]
+  partition po bit 0: \read_data[10] <-> \read_data[10]
+
+3.1.65. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.10.il
+<suppressed ~136 debug messages>
+
+3.1.66. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.10...
+Checking module gold.data_memory_interface.read_data.10...
+Found and reported 0 problems.
+
+Writing partition 31 as data_memory_interface.read_data.0.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \bus_read_data[24] <-> \bus_read_data[24]
+  partition pi bit 2: \bus_read_data[16] <-> \bus_read_data[16]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \bus_read_data[8] <-> \bus_read_data[8]
+  partition pi bit 5: \bus_read_data[0] <-> \bus_read_data[0]
+  partition po bit 0: \read_data[0] <-> \read_data[0]
+
+3.1.67. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.read_data.0.il
+<suppressed ~66 debug messages>
+
+3.1.68. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.read_data.0...
+Checking module gold.data_memory_interface.read_data.0...
+Found and reported 0 problems.
+
+Writing partition 32 as data_memory_interface.bus_write_enable.
+  partition pi bit 0: \write_enable <-> \write_enable
+  partition po bit 0: \bus_write_enable <-> \bus_write_enable
+
+3.1.69. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_enable.il
+<suppressed ~14 debug messages>
+
+3.1.70. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_enable...
+Checking module gold.data_memory_interface.bus_write_enable...
+Found and reported 0 problems.
+
+Writing partition 33 as data_memory_interface.bus_write_data.9.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[1] <-> \write_data[1]
+  partition pi bit 2: \write_data[9] <-> \write_data[9]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[9] <-> \bus_write_data[9]
+
+3.1.71. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.9.il
+<suppressed ~52 debug messages>
+
+3.1.72. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.9...
+Checking module gold.data_memory_interface.bus_write_data.9...
+Found and reported 0 problems.
+
+Writing partition 34 as data_memory_interface.bus_write_data.8.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[0] <-> \write_data[0]
+  partition pi bit 2: \write_data[8] <-> \write_data[8]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[8] <-> \bus_write_data[8]
+
+3.1.73. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.8.il
+<suppressed ~52 debug messages>
+
+3.1.74. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.8...
+Checking module gold.data_memory_interface.bus_write_data.8...
+Found and reported 0 problems.
+
+Writing partition 35 as data_memory_interface.bus_write_data.7.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[7] <-> \write_data[7]
+  partition po bit 0: \bus_write_data[7] <-> \bus_write_data[7]
+
+3.1.75. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.7.il
+<suppressed ~36 debug messages>
+
+3.1.76. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.7...
+Checking module gold.data_memory_interface.bus_write_data.7...
+Found and reported 0 problems.
+
+Writing partition 36 as data_memory_interface.bus_write_data.6.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[6] <-> \write_data[6]
+  partition po bit 0: \bus_write_data[6] <-> \bus_write_data[6]
+
+3.1.77. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.6.il
+<suppressed ~36 debug messages>
+
+3.1.78. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.6...
+Checking module gold.data_memory_interface.bus_write_data.6...
+Found and reported 0 problems.
+
+Writing partition 37 as data_memory_interface.bus_write_data.5.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[5] <-> \write_data[5]
+  partition po bit 0: \bus_write_data[5] <-> \bus_write_data[5]
+
+3.1.79. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.5.il
+<suppressed ~36 debug messages>
+
+3.1.80. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.5...
+Checking module gold.data_memory_interface.bus_write_data.5...
+Found and reported 0 problems.
+
+Writing partition 38 as data_memory_interface.bus_write_data.4.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[4] <-> \write_data[4]
+  partition po bit 0: \bus_write_data[4] <-> \bus_write_data[4]
+
+3.1.81. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.4.il
+<suppressed ~36 debug messages>
+
+3.1.82. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.4...
+Checking module gold.data_memory_interface.bus_write_data.4...
+Found and reported 0 problems.
+
+Writing partition 39 as data_memory_interface.bus_write_data.3.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[3] <-> \write_data[3]
+  partition po bit 0: \bus_write_data[3] <-> \bus_write_data[3]
+
+3.1.83. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.3.il
+<suppressed ~36 debug messages>
+
+3.1.84. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.3...
+Checking module gold.data_memory_interface.bus_write_data.3...
+Found and reported 0 problems.
+
+Writing partition 40 as data_memory_interface.bus_write_data.31.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[7] <-> \write_data[7]
+  partition pi bit 2: \write_data[15] <-> \write_data[15]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[23] <-> \write_data[23]
+  partition pi bit 5: \write_data[31] <-> \write_data[31]
+  partition po bit 0: \bus_write_data[31] <-> \bus_write_data[31]
+
+3.1.85. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.31.il
+<suppressed ~66 debug messages>
+
+3.1.86. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.31...
+Checking module gold.data_memory_interface.bus_write_data.31...
+Found and reported 0 problems.
+
+Writing partition 41 as data_memory_interface.bus_write_data.30.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[6] <-> \write_data[6]
+  partition pi bit 2: \write_data[14] <-> \write_data[14]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[22] <-> \write_data[22]
+  partition pi bit 5: \write_data[30] <-> \write_data[30]
+  partition po bit 0: \bus_write_data[30] <-> \bus_write_data[30]
+
+3.1.87. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.30.il
+<suppressed ~66 debug messages>
+
+3.1.88. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.30...
+Checking module gold.data_memory_interface.bus_write_data.30...
+Found and reported 0 problems.
+
+Writing partition 42 as data_memory_interface.bus_write_data.2.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[2] <-> \write_data[2]
+  partition po bit 0: \bus_write_data[2] <-> \bus_write_data[2]
+
+3.1.89. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.2.il
+<suppressed ~36 debug messages>
+
+3.1.90. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.2...
+Checking module gold.data_memory_interface.bus_write_data.2...
+Found and reported 0 problems.
+
+Writing partition 43 as data_memory_interface.bus_write_data.29.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[5] <-> \write_data[5]
+  partition pi bit 2: \write_data[13] <-> \write_data[13]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[21] <-> \write_data[21]
+  partition pi bit 5: \write_data[29] <-> \write_data[29]
+  partition po bit 0: \bus_write_data[29] <-> \bus_write_data[29]
+
+3.1.91. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.29.il
+<suppressed ~66 debug messages>
+
+3.1.92. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.29...
+Checking module gold.data_memory_interface.bus_write_data.29...
+Found and reported 0 problems.
+
+Writing partition 44 as data_memory_interface.bus_write_data.28.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[4] <-> \write_data[4]
+  partition pi bit 2: \write_data[12] <-> \write_data[12]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[20] <-> \write_data[20]
+  partition pi bit 5: \write_data[28] <-> \write_data[28]
+  partition po bit 0: \bus_write_data[28] <-> \bus_write_data[28]
+
+3.1.93. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.28.il
+<suppressed ~66 debug messages>
+
+3.1.94. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.28...
+Checking module gold.data_memory_interface.bus_write_data.28...
+Found and reported 0 problems.
+
+Writing partition 45 as data_memory_interface.bus_write_data.27.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[3] <-> \write_data[3]
+  partition pi bit 2: \write_data[11] <-> \write_data[11]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[19] <-> \write_data[19]
+  partition pi bit 5: \write_data[27] <-> \write_data[27]
+  partition po bit 0: \bus_write_data[27] <-> \bus_write_data[27]
+
+3.1.95. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.27.il
+<suppressed ~66 debug messages>
+
+3.1.96. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.27...
+Checking module gold.data_memory_interface.bus_write_data.27...
+Found and reported 0 problems.
+
+Writing partition 46 as data_memory_interface.bus_write_data.26.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[2] <-> \write_data[2]
+  partition pi bit 2: \write_data[10] <-> \write_data[10]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[18] <-> \write_data[18]
+  partition pi bit 5: \write_data[26] <-> \write_data[26]
+  partition po bit 0: \bus_write_data[26] <-> \bus_write_data[26]
+
+3.1.97. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.26.il
+<suppressed ~66 debug messages>
+
+3.1.98. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.26...
+Checking module gold.data_memory_interface.bus_write_data.26...
+Found and reported 0 problems.
+
+Writing partition 47 as data_memory_interface.bus_write_data.25.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[1] <-> \write_data[1]
+  partition pi bit 2: \write_data[9] <-> \write_data[9]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[17] <-> \write_data[17]
+  partition pi bit 5: \write_data[25] <-> \write_data[25]
+  partition po bit 0: \bus_write_data[25] <-> \bus_write_data[25]
+
+3.1.99. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.25.il
+<suppressed ~66 debug messages>
+
+3.1.100. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.25...
+Checking module gold.data_memory_interface.bus_write_data.25...
+Found and reported 0 problems.
+
+Writing partition 48 as data_memory_interface.bus_write_data.24.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \write_data[0] <-> \write_data[0]
+  partition pi bit 2: \write_data[8] <-> \write_data[8]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 4: \write_data[16] <-> \write_data[16]
+  partition pi bit 5: \write_data[24] <-> \write_data[24]
+  partition po bit 0: \bus_write_data[24] <-> \bus_write_data[24]
+
+3.1.101. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.24.il
+<suppressed ~66 debug messages>
+
+3.1.102. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.24...
+Checking module gold.data_memory_interface.bus_write_data.24...
+Found and reported 0 problems.
+
+Writing partition 49 as data_memory_interface.bus_write_data.23.
+  partition pi bit 0: \write_data[15] <-> \write_data[15]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[23] <-> \write_data[23]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[7] <-> \write_data[7]
+  partition po bit 0: \bus_write_data[23] <-> \bus_write_data[23]
+
+3.1.103. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.23.il
+<suppressed ~116 debug messages>
+
+3.1.104. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.23...
+Checking module gold.data_memory_interface.bus_write_data.23...
+Found and reported 0 problems.
+
+Writing partition 50 as data_memory_interface.bus_write_data.22.
+  partition pi bit 0: \write_data[14] <-> \write_data[14]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[22] <-> \write_data[22]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[6] <-> \write_data[6]
+  partition po bit 0: \bus_write_data[22] <-> \bus_write_data[22]
+
+3.1.105. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.22.il
+<suppressed ~116 debug messages>
+
+3.1.106. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.22...
+Checking module gold.data_memory_interface.bus_write_data.22...
+Found and reported 0 problems.
+
+Writing partition 51 as data_memory_interface.bus_write_data.21.
+  partition pi bit 0: \write_data[13] <-> \write_data[13]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[21] <-> \write_data[21]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[5] <-> \write_data[5]
+  partition po bit 0: \bus_write_data[21] <-> \bus_write_data[21]
+
+3.1.107. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.21.il
+<suppressed ~116 debug messages>
+
+3.1.108. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.21...
+Checking module gold.data_memory_interface.bus_write_data.21...
+Found and reported 0 problems.
+
+Writing partition 52 as data_memory_interface.bus_write_data.20.
+  partition pi bit 0: \write_data[12] <-> \write_data[12]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[20] <-> \write_data[20]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[4] <-> \write_data[4]
+  partition po bit 0: \bus_write_data[20] <-> \bus_write_data[20]
+
+3.1.109. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.20.il
+<suppressed ~116 debug messages>
+
+3.1.110. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.20...
+Checking module gold.data_memory_interface.bus_write_data.20...
+Found and reported 0 problems.
+
+Writing partition 53 as data_memory_interface.bus_write_data.1.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[1] <-> \write_data[1]
+  partition po bit 0: \bus_write_data[1] <-> \bus_write_data[1]
+
+3.1.111. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.1.il
+<suppressed ~36 debug messages>
+
+3.1.112. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.1...
+Checking module gold.data_memory_interface.bus_write_data.1...
+Found and reported 0 problems.
+
+Writing partition 54 as data_memory_interface.bus_write_data.19.
+  partition pi bit 0: \write_data[11] <-> \write_data[11]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[19] <-> \write_data[19]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[3] <-> \write_data[3]
+  partition po bit 0: \bus_write_data[19] <-> \bus_write_data[19]
+
+3.1.113. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.19.il
+<suppressed ~116 debug messages>
+
+3.1.114. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.19...
+Checking module gold.data_memory_interface.bus_write_data.19...
+Found and reported 0 problems.
+
+Writing partition 55 as data_memory_interface.bus_write_data.18.
+  partition pi bit 0: \write_data[10] <-> \write_data[10]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[18] <-> \write_data[18]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[2] <-> \write_data[2]
+  partition po bit 0: \bus_write_data[18] <-> \bus_write_data[18]
+
+3.1.115. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.18.il
+<suppressed ~116 debug messages>
+
+3.1.116. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.18...
+Checking module gold.data_memory_interface.bus_write_data.18...
+Found and reported 0 problems.
+
+Writing partition 56 as data_memory_interface.bus_write_data.17.
+  partition pi bit 0: \write_data[9] <-> \write_data[9]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[17] <-> \write_data[17]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[1] <-> \write_data[1]
+  partition po bit 0: \bus_write_data[17] <-> \bus_write_data[17]
+
+3.1.117. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.17.il
+<suppressed ~116 debug messages>
+
+3.1.118. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.17...
+Checking module gold.data_memory_interface.bus_write_data.17...
+Found and reported 0 problems.
+
+Writing partition 57 as data_memory_interface.bus_write_data.16.
+  partition pi bit 0: \write_data[8] <-> \write_data[8]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \write_data[16] <-> \write_data[16]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 4: \write_data[0] <-> \write_data[0]
+  partition po bit 0: \bus_write_data[16] <-> \bus_write_data[16]
+
+3.1.119. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.16.il
+<suppressed ~116 debug messages>
+
+3.1.120. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.16...
+Checking module gold.data_memory_interface.bus_write_data.16...
+Found and reported 0 problems.
+
+Writing partition 58 as data_memory_interface.bus_write_data.15.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[7] <-> \write_data[7]
+  partition pi bit 2: \write_data[15] <-> \write_data[15]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[15] <-> \bus_write_data[15]
+
+3.1.121. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.15.il
+<suppressed ~52 debug messages>
+
+3.1.122. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.15...
+Checking module gold.data_memory_interface.bus_write_data.15...
+Found and reported 0 problems.
+
+Writing partition 59 as data_memory_interface.bus_write_data.14.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[6] <-> \write_data[6]
+  partition pi bit 2: \write_data[14] <-> \write_data[14]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[14] <-> \bus_write_data[14]
+
+3.1.123. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.14.il
+<suppressed ~52 debug messages>
+
+3.1.124. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.14...
+Checking module gold.data_memory_interface.bus_write_data.14...
+Found and reported 0 problems.
+
+Writing partition 60 as data_memory_interface.bus_write_data.13.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[5] <-> \write_data[5]
+  partition pi bit 2: \write_data[13] <-> \write_data[13]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[13] <-> \bus_write_data[13]
+
+3.1.125. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.13.il
+<suppressed ~52 debug messages>
+
+3.1.126. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.13...
+Checking module gold.data_memory_interface.bus_write_data.13...
+Found and reported 0 problems.
+
+Writing partition 61 as data_memory_interface.bus_write_data.12.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[4] <-> \write_data[4]
+  partition pi bit 2: \write_data[12] <-> \write_data[12]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[12] <-> \bus_write_data[12]
+
+3.1.127. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.12.il
+<suppressed ~52 debug messages>
+
+3.1.128. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.12...
+Checking module gold.data_memory_interface.bus_write_data.12...
+Found and reported 0 problems.
+
+Writing partition 62 as data_memory_interface.bus_write_data.11.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[3] <-> \write_data[3]
+  partition pi bit 2: \write_data[11] <-> \write_data[11]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[11] <-> \bus_write_data[11]
+
+3.1.129. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.11.il
+<suppressed ~52 debug messages>
+
+3.1.130. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.11...
+Checking module gold.data_memory_interface.bus_write_data.11...
+Found and reported 0 problems.
+
+Writing partition 63 as data_memory_interface.bus_write_data.10.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \write_data[2] <-> \write_data[2]
+  partition pi bit 2: \write_data[10] <-> \write_data[10]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_write_data[10] <-> \bus_write_data[10]
+
+3.1.131. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.10.il
+<suppressed ~52 debug messages>
+
+3.1.132. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.10...
+Checking module gold.data_memory_interface.bus_write_data.10...
+Found and reported 0 problems.
+
+Writing partition 64 as data_memory_interface.bus_write_data.0.
+  partition pi bit 0: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 1: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 2: \write_data[0] <-> \write_data[0]
+  partition po bit 0: \bus_write_data[0] <-> \bus_write_data[0]
+
+3.1.133. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_write_data.0.il
+<suppressed ~36 debug messages>
+
+3.1.134. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_write_data.0...
+Checking module gold.data_memory_interface.bus_write_data.0...
+Found and reported 0 problems.
+
+Writing partition 65 as data_memory_interface.bus_read_enable.
+  partition pi bit 0: \read_enable <-> \read_enable
+  partition po bit 0: \bus_read_enable <-> \bus_read_enable
+
+3.1.135. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_read_enable.il
+<suppressed ~14 debug messages>
+
+3.1.136. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_read_enable...
+Checking module gold.data_memory_interface.bus_read_enable...
+Found and reported 0 problems.
+
+Writing partition 66 as data_memory_interface.bus_byte_enable.3.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \data_format[1] <-> \data_format[1]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \data_format[0] <-> \data_format[0]
+  partition po bit 0: \bus_byte_enable[3] <-> \bus_byte_enable[3]
+
+3.1.137. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_byte_enable.3.il
+<suppressed ~98 debug messages>
+
+3.1.138. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_byte_enable.3...
+Checking module gold.data_memory_interface.bus_byte_enable.3...
+Found and reported 0 problems.
+
+Writing partition 67 as data_memory_interface.bus_byte_enable.2.
+  partition pi bit 0: \bus_address[1] <-> \bus_address[1]
+  partition pi bit 1: \data_format[1] <-> \data_format[1]
+  partition pi bit 2: \data_format[0] <-> \data_format[0]
+  partition pi bit 3: \bus_address[0] <-> \bus_address[0]
+  partition po bit 0: \bus_byte_enable[2] <-> \bus_byte_enable[2]
+
+3.1.139. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_byte_enable.2.il
+<suppressed ~134 debug messages>
+
+3.1.140. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_byte_enable.2...
+Checking module gold.data_memory_interface.bus_byte_enable.2...
+Found and reported 0 problems.
+
+Writing partition 68 as data_memory_interface.bus_byte_enable.1.
+  partition pi bit 0: \data_format[1] <-> \data_format[1]
+  partition pi bit 1: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 2: \data_format[0] <-> \data_format[0]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_byte_enable[1] <-> \bus_byte_enable[1]
+
+3.1.141. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_byte_enable.1.il
+<suppressed ~74 debug messages>
+
+3.1.142. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_byte_enable.1...
+Checking module gold.data_memory_interface.bus_byte_enable.1...
+Found and reported 0 problems.
+
+Writing partition 69 as data_memory_interface.bus_byte_enable.0.
+  partition pi bit 0: \data_format[1] <-> \data_format[1]
+  partition pi bit 1: \data_format[0] <-> \data_format[0]
+  partition pi bit 2: \bus_address[0] <-> \bus_address[0]
+  partition pi bit 3: \bus_address[1] <-> \bus_address[1]
+  partition po bit 0: \bus_byte_enable[0] <-> \bus_byte_enable[0]
+
+3.1.143. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_byte_enable.0.il
+<suppressed ~52 debug messages>
+
+3.1.144. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_byte_enable.0...
+Checking module gold.data_memory_interface.bus_byte_enable.0...
+Found and reported 0 problems.
+
+Writing partition 70 as data_memory_interface.bus_address.9.
+  partition pi bit 0: \address[9] <-> \address[9]
+  partition po bit 0: \bus_address[9] <-> \bus_address[9]
+
+3.1.145. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.9.il
+<suppressed ~14 debug messages>
+
+3.1.146. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.9...
+Checking module gold.data_memory_interface.bus_address.9...
+Found and reported 0 problems.
+
+Writing partition 71 as data_memory_interface.bus_address.8.
+  partition pi bit 0: \address[8] <-> \address[8]
+  partition po bit 0: \bus_address[8] <-> \bus_address[8]
+
+3.1.147. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.8.il
+<suppressed ~14 debug messages>
+
+3.1.148. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.8...
+Checking module gold.data_memory_interface.bus_address.8...
+Found and reported 0 problems.
+
+Writing partition 72 as data_memory_interface.bus_address.7.
+  partition pi bit 0: \address[7] <-> \address[7]
+  partition po bit 0: \bus_address[7] <-> \bus_address[7]
+
+3.1.149. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.7.il
+<suppressed ~14 debug messages>
+
+3.1.150. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.7...
+Checking module gold.data_memory_interface.bus_address.7...
+Found and reported 0 problems.
+
+Writing partition 73 as data_memory_interface.bus_address.6.
+  partition pi bit 0: \address[6] <-> \address[6]
+  partition po bit 0: \bus_address[6] <-> \bus_address[6]
+
+3.1.151. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.6.il
+<suppressed ~14 debug messages>
+
+3.1.152. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.6...
+Checking module gold.data_memory_interface.bus_address.6...
+Found and reported 0 problems.
+
+Writing partition 74 as data_memory_interface.bus_address.5.
+  partition pi bit 0: \address[5] <-> \address[5]
+  partition po bit 0: \bus_address[5] <-> \bus_address[5]
+
+3.1.153. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.5.il
+<suppressed ~14 debug messages>
+
+3.1.154. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.5...
+Checking module gold.data_memory_interface.bus_address.5...
+Found and reported 0 problems.
+
+Writing partition 75 as data_memory_interface.bus_address.4.
+  partition pi bit 0: \address[4] <-> \address[4]
+  partition po bit 0: \bus_address[4] <-> \bus_address[4]
+
+3.1.155. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.4.il
+<suppressed ~14 debug messages>
+
+3.1.156. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.4...
+Checking module gold.data_memory_interface.bus_address.4...
+Found and reported 0 problems.
+
+Writing partition 76 as data_memory_interface.bus_address.3.
+  partition pi bit 0: \address[3] <-> \address[3]
+  partition po bit 0: \bus_address[3] <-> \bus_address[3]
+
+3.1.157. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.3.il
+<suppressed ~14 debug messages>
+
+3.1.158. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.3...
+Checking module gold.data_memory_interface.bus_address.3...
+Found and reported 0 problems.
+
+Writing partition 77 as data_memory_interface.bus_address.31.
+  partition pi bit 0: \address[31] <-> \address[31]
+  partition po bit 0: \bus_address[31] <-> \bus_address[31]
+
+3.1.159. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.31.il
+<suppressed ~14 debug messages>
+
+3.1.160. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.31...
+Checking module gold.data_memory_interface.bus_address.31...
+Found and reported 0 problems.
+
+Writing partition 78 as data_memory_interface.bus_address.30.
+  partition pi bit 0: \address[30] <-> \address[30]
+  partition po bit 0: \bus_address[30] <-> \bus_address[30]
+
+3.1.161. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.30.il
+<suppressed ~14 debug messages>
+
+3.1.162. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.30...
+Checking module gold.data_memory_interface.bus_address.30...
+Found and reported 0 problems.
+
+Writing partition 79 as data_memory_interface.bus_address.2.
+  partition pi bit 0: \address[2] <-> \address[2]
+  partition po bit 0: \bus_address[2] <-> \bus_address[2]
+
+3.1.163. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.2.il
+<suppressed ~14 debug messages>
+
+3.1.164. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.2...
+Checking module gold.data_memory_interface.bus_address.2...
+Found and reported 0 problems.
+
+Writing partition 80 as data_memory_interface.bus_address.29.
+  partition pi bit 0: \address[29] <-> \address[29]
+  partition po bit 0: \bus_address[29] <-> \bus_address[29]
+
+3.1.165. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.29.il
+<suppressed ~14 debug messages>
+
+3.1.166. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.29...
+Checking module gold.data_memory_interface.bus_address.29...
+Found and reported 0 problems.
+
+Writing partition 81 as data_memory_interface.bus_address.28.
+  partition pi bit 0: \address[28] <-> \address[28]
+  partition po bit 0: \bus_address[28] <-> \bus_address[28]
+
+3.1.167. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.28.il
+<suppressed ~14 debug messages>
+
+3.1.168. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.28...
+Checking module gold.data_memory_interface.bus_address.28...
+Found and reported 0 problems.
+
+Writing partition 82 as data_memory_interface.bus_address.27.
+  partition pi bit 0: \address[27] <-> \address[27]
+  partition po bit 0: \bus_address[27] <-> \bus_address[27]
+
+3.1.169. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.27.il
+<suppressed ~14 debug messages>
+
+3.1.170. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.27...
+Checking module gold.data_memory_interface.bus_address.27...
+Found and reported 0 problems.
+
+Writing partition 83 as data_memory_interface.bus_address.26.
+  partition pi bit 0: \address[26] <-> \address[26]
+  partition po bit 0: \bus_address[26] <-> \bus_address[26]
+
+3.1.171. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.26.il
+<suppressed ~14 debug messages>
+
+3.1.172. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.26...
+Checking module gold.data_memory_interface.bus_address.26...
+Found and reported 0 problems.
+
+Writing partition 84 as data_memory_interface.bus_address.25.
+  partition pi bit 0: \address[25] <-> \address[25]
+  partition po bit 0: \bus_address[25] <-> \bus_address[25]
+
+3.1.173. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.25.il
+<suppressed ~14 debug messages>
+
+3.1.174. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.25...
+Checking module gold.data_memory_interface.bus_address.25...
+Found and reported 0 problems.
+
+Writing partition 85 as data_memory_interface.bus_address.24.
+  partition pi bit 0: \address[24] <-> \address[24]
+  partition po bit 0: \bus_address[24] <-> \bus_address[24]
+
+3.1.175. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.24.il
+<suppressed ~14 debug messages>
+
+3.1.176. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.24...
+Checking module gold.data_memory_interface.bus_address.24...
+Found and reported 0 problems.
+
+Writing partition 86 as data_memory_interface.bus_address.23.
+  partition pi bit 0: \address[23] <-> \address[23]
+  partition po bit 0: \bus_address[23] <-> \bus_address[23]
+
+3.1.177. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.23.il
+<suppressed ~14 debug messages>
+
+3.1.178. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.23...
+Checking module gold.data_memory_interface.bus_address.23...
+Found and reported 0 problems.
+
+Writing partition 87 as data_memory_interface.bus_address.22.
+  partition pi bit 0: \address[22] <-> \address[22]
+  partition po bit 0: \bus_address[22] <-> \bus_address[22]
+
+3.1.179. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.22.il
+<suppressed ~14 debug messages>
+
+3.1.180. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.22...
+Checking module gold.data_memory_interface.bus_address.22...
+Found and reported 0 problems.
+
+Writing partition 88 as data_memory_interface.bus_address.21.
+  partition pi bit 0: \address[21] <-> \address[21]
+  partition po bit 0: \bus_address[21] <-> \bus_address[21]
+
+3.1.181. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.21.il
+<suppressed ~14 debug messages>
+
+3.1.182. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.21...
+Checking module gold.data_memory_interface.bus_address.21...
+Found and reported 0 problems.
+
+Writing partition 89 as data_memory_interface.bus_address.20.
+  partition pi bit 0: \address[20] <-> \address[20]
+  partition po bit 0: \bus_address[20] <-> \bus_address[20]
+
+3.1.183. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.20.il
+<suppressed ~14 debug messages>
+
+3.1.184. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.20...
+Checking module gold.data_memory_interface.bus_address.20...
+Found and reported 0 problems.
+
+Writing partition 90 as data_memory_interface.bus_address.1.
+  partition pi bit 0: \address[1] <-> \address[1]
+  partition po bit 0: \bus_address[1] <-> \bus_address[1]
+
+3.1.185. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.1.il
+<suppressed ~14 debug messages>
+
+3.1.186. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.1...
+Checking module gold.data_memory_interface.bus_address.1...
+Found and reported 0 problems.
+
+Writing partition 91 as data_memory_interface.bus_address.19.
+  partition pi bit 0: \address[19] <-> \address[19]
+  partition po bit 0: \bus_address[19] <-> \bus_address[19]
+
+3.1.187. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.19.il
+<suppressed ~14 debug messages>
+
+3.1.188. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.19...
+Checking module gold.data_memory_interface.bus_address.19...
+Found and reported 0 problems.
+
+Writing partition 92 as data_memory_interface.bus_address.18.
+  partition pi bit 0: \address[18] <-> \address[18]
+  partition po bit 0: \bus_address[18] <-> \bus_address[18]
+
+3.1.189. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.18.il
+<suppressed ~14 debug messages>
+
+3.1.190. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.18...
+Checking module gold.data_memory_interface.bus_address.18...
+Found and reported 0 problems.
+
+Writing partition 93 as data_memory_interface.bus_address.17.
+  partition pi bit 0: \address[17] <-> \address[17]
+  partition po bit 0: \bus_address[17] <-> \bus_address[17]
+
+3.1.191. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.17.il
+<suppressed ~14 debug messages>
+
+3.1.192. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.17...
+Checking module gold.data_memory_interface.bus_address.17...
+Found and reported 0 problems.
+
+Writing partition 94 as data_memory_interface.bus_address.16.
+  partition pi bit 0: \address[16] <-> \address[16]
+  partition po bit 0: \bus_address[16] <-> \bus_address[16]
+
+3.1.193. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.16.il
+<suppressed ~14 debug messages>
+
+3.1.194. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.16...
+Checking module gold.data_memory_interface.bus_address.16...
+Found and reported 0 problems.
+
+Writing partition 95 as data_memory_interface.bus_address.15.
+  partition pi bit 0: \address[15] <-> \address[15]
+  partition po bit 0: \bus_address[15] <-> \bus_address[15]
+
+3.1.195. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.15.il
+<suppressed ~14 debug messages>
+
+3.1.196. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.15...
+Checking module gold.data_memory_interface.bus_address.15...
+Found and reported 0 problems.
+
+Writing partition 96 as data_memory_interface.bus_address.14.
+  partition pi bit 0: \address[14] <-> \address[14]
+  partition po bit 0: \bus_address[14] <-> \bus_address[14]
+
+3.1.197. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.14.il
+<suppressed ~14 debug messages>
+
+3.1.198. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.14...
+Checking module gold.data_memory_interface.bus_address.14...
+Found and reported 0 problems.
+
+Writing partition 97 as data_memory_interface.bus_address.13.
+  partition pi bit 0: \address[13] <-> \address[13]
+  partition po bit 0: \bus_address[13] <-> \bus_address[13]
+
+3.1.199. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.13.il
+<suppressed ~14 debug messages>
+
+3.1.200. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.13...
+Checking module gold.data_memory_interface.bus_address.13...
+Found and reported 0 problems.
+
+Writing partition 98 as data_memory_interface.bus_address.12.
+  partition pi bit 0: \address[12] <-> \address[12]
+  partition po bit 0: \bus_address[12] <-> \bus_address[12]
+
+3.1.201. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.12.il
+<suppressed ~14 debug messages>
+
+3.1.202. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.12...
+Checking module gold.data_memory_interface.bus_address.12...
+Found and reported 0 problems.
+
+Writing partition 99 as data_memory_interface.bus_address.11.
+  partition pi bit 0: \address[11] <-> \address[11]
+  partition po bit 0: \bus_address[11] <-> \bus_address[11]
+
+3.1.203. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.11.il
+<suppressed ~14 debug messages>
+
+3.1.204. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.11...
+Checking module gold.data_memory_interface.bus_address.11...
+Found and reported 0 problems.
+
+Writing partition 100 as data_memory_interface.bus_address.10.
+  partition pi bit 0: \address[10] <-> \address[10]
+  partition po bit 0: \bus_address[10] <-> \bus_address[10]
+
+3.1.205. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.10.il
+<suppressed ~14 debug messages>
+
+3.1.206. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.10...
+Checking module gold.data_memory_interface.bus_address.10...
+Found and reported 0 problems.
+
+Writing partition 101 as data_memory_interface.bus_address.0.
+  partition pi bit 0: \address[0] <-> \address[0]
+  partition po bit 0: \bus_address[0] <-> \bus_address[0]
+
+3.1.207. Executing RTLIL backend.
+Output filename: partitions/data_memory_interface.bus_address.0.il
+<suppressed ~14 debug messages>
+
+3.1.208. Executing CHECK pass (checking for obvious problems).
+Checking module gate.data_memory_interface.bus_address.0...
+Checking module gold.data_memory_interface.bus_address.0...
+Found and reported 0 problems.
+
+Writing partition 102 as data_memory_interface.
+  partition pi bit 0: \address[31] <-> \address[31]
+  partition pi bit 1: \address[30] <-> \address[30]
+  partition pi bit 2: \address[29] <-> \address[29]
+  partition pi bit 3: \address[28] <-> \address[28]
+  partition pi bit 4: \address[27] <-> \address[27]
+  partition pi bit 5: \address[26] <-> \address[26]
+  partition pi bit 6: \address[25] <-> \address[25]
+  partition pi bit 7: \address[24] <-> \address[24]
+  partition pi bit 8: \address[23] <-> \address[23]
+  partition pi bit 9: \address[22] <-> \address[22]
+  partition pi bit 10: \address[21] <-> \address[21]
+  partition pi bit 11: \address[20] <-> \address[20]
+  partition pi bit 12: \address[19] <-> \address[19]
+  partition pi bit 13: \address[18] <-> \address[18]
+  partition pi bit 14: \address[17] <-> \address[17]
+  partition pi bit 15: \address[16] <-> \address[16]
+  partition pi bit 16: \address[15] <-> \address[15]
+  partition pi bit 17: \address[14] <-> \address[14]
+  partition pi bit 18: \address[13] <-> \address[13]
+  partition pi bit 19: \address[12] <-> \address[12]
+  partition pi bit 20: \address[11] <-> \address[11]
+  partition pi bit 21: \address[10] <-> \address[10]
+  partition pi bit 22: \address[9] <-> \address[9]
+  partition pi bit 23: \address[8] <-> \address[8]
+  partition pi bit 24: \address[7] <-> \address[7]
+  partition pi bit 25: \address[6] <-> \address[6]
+  partition pi bit 26: \address[5] <-> \address[5]
+  partition pi bit 27: \address[4] <-> \address[4]
+  partition pi bit 28: \address[3] <-> \address[3]
+  partition pi bit 29: \address[2] <-> \address[2]
+  partition pi bit 30: \data_format[2] <-> \data_format[2]
+  partition pi bit 31: \bus_read_data[31] <-> \bus_read_data[31]
+  partition pi bit 32: \bus_read_data[23] <-> \bus_read_data[23]
+  partition pi bit 33: \bus_read_data[15] <-> \bus_read_data[15]
+  partition pi bit 34: \bus_read_data[7] <-> \bus_read_data[7]
+  partition pi bit 35: \bus_read_data[30] <-> \bus_read_data[30]
+  partition pi bit 36: \bus_read_data[22] <-> \bus_read_data[22]
+  partition pi bit 37: \bus_read_data[14] <-> \bus_read_data[14]
+  partition pi bit 38: \bus_read_data[6] <-> \bus_read_data[6]
+  partition pi bit 39: \bus_read_data[29] <-> \bus_read_data[29]
+  partition pi bit 40: \bus_read_data[21] <-> \bus_read_data[21]
+  partition pi bit 41: \bus_read_data[13] <-> \bus_read_data[13]
+  partition pi bit 42: \bus_read_data[5] <-> \bus_read_data[5]
+  partition pi bit 43: \bus_read_data[28] <-> \bus_read_data[28]
+  partition pi bit 44: \bus_read_data[20] <-> \bus_read_data[20]
+  partition pi bit 45: \bus_read_data[12] <-> \bus_read_data[12]
+  partition pi bit 46: \bus_read_data[4] <-> \bus_read_data[4]
+  partition pi bit 47: \bus_read_data[27] <-> \bus_read_data[27]
+  partition pi bit 48: \bus_read_data[19] <-> \bus_read_data[19]
+  partition pi bit 49: \bus_read_data[11] <-> \bus_read_data[11]
+  partition pi bit 50: \bus_read_data[3] <-> \bus_read_data[3]
+  partition pi bit 51: \bus_read_data[26] <-> \bus_read_data[26]
+  partition pi bit 52: \bus_read_data[18] <-> \bus_read_data[18]
+  partition pi bit 53: \bus_read_data[10] <-> \bus_read_data[10]
+  partition pi bit 54: \bus_read_data[2] <-> \bus_read_data[2]
+  partition pi bit 55: \bus_read_data[25] <-> \bus_read_data[25]
+  partition pi bit 56: \bus_read_data[17] <-> \bus_read_data[17]
+  partition pi bit 57: \bus_read_data[9] <-> \bus_read_data[9]
+  partition pi bit 58: \bus_read_data[1] <-> \bus_read_data[1]
+  partition pi bit 59: \bus_read_data[24] <-> \bus_read_data[24]
+  partition pi bit 60: \bus_read_data[16] <-> \bus_read_data[16]
+  partition pi bit 61: \bus_read_data[8] <-> \bus_read_data[8]
+  partition pi bit 62: \bus_read_data[0] <-> \bus_read_data[0]
+  partition pi bit 63: \write_data[27] <-> \write_data[27]
+  partition pi bit 64: \write_data[26] <-> \write_data[26]
+  partition pi bit 65: \write_data[25] <-> \write_data[25]
+  partition pi bit 66: \write_data[24] <-> \write_data[24]
+  partition pi bit 67: \write_data[19] <-> \write_data[19]
+  partition pi bit 68: \write_data[18] <-> \write_data[18]
+  partition pi bit 69: \write_data[17] <-> \write_data[17]
+  partition pi bit 70: \write_data[16] <-> \write_data[16]
+  partition pi bit 71: \write_data[11] <-> \write_data[11]
+  partition pi bit 72: \write_data[10] <-> \write_data[10]
+  partition pi bit 73: \write_data[9] <-> \write_data[9]
+  partition pi bit 74: \write_data[8] <-> \write_data[8]
+  partition pi bit 75: \write_data[3] <-> \write_data[3]
+  partition pi bit 76: \write_data[2] <-> \write_data[2]
+  partition pi bit 77: \write_data[1] <-> \write_data[1]
+  partition pi bit 78: \write_data[0] <-> \write_data[0]
+  partition pi bit 79: \data_format[1] <-> \data_format[1]
+  partition pi bit 80: \data_format[0] <-> \data_format[0]
+  partition pi bit 81: \write_data[5] <-> \write_data[5]
+  partition pi bit 82: \write_data[13] <-> \write_data[13]
+  partition pi bit 83: \write_data[21] <-> \write_data[21]
+  partition pi bit 84: \write_data[29] <-> \write_data[29]
+  partition pi bit 85: \write_data[4] <-> \write_data[4]
+  partition pi bit 86: \write_data[12] <-> \write_data[12]
+  partition pi bit 87: \write_data[20] <-> \write_data[20]
+  partition pi bit 88: \write_data[28] <-> \write_data[28]
+  partition pi bit 89: \write_data[7] <-> \write_data[7]
+  partition pi bit 90: \write_data[15] <-> \write_data[15]
+  partition pi bit 91: \write_data[23] <-> \write_data[23]
+  partition pi bit 92: \write_data[31] <-> \write_data[31]
+  partition pi bit 93: \address[1] <-> \address[1]
+  partition pi bit 94: \write_data[6] <-> \write_data[6]
+  partition pi bit 95: \write_data[14] <-> \write_data[14]
+  partition pi bit 96: \address[0] <-> \address[0]
+  partition pi bit 97: \write_data[22] <-> \write_data[22]
+  partition pi bit 98: \write_data[30] <-> \write_data[30]
+  partition pi bit 99: \write_enable <-> \write_enable
+  partition pi bit 100: \read_enable <-> \read_enable
+  partition pi bit 101: \clock <-> \clock
+  partition po bit 0: \bus_write_data[27] <-> \bus_write_data[27]
+  partition po bit 1: \bus_write_data[26] <-> \bus_write_data[26]
+  partition po bit 2: \bus_write_data[25] <-> \bus_write_data[25]
+  partition po bit 3: \bus_write_data[24] <-> \bus_write_data[24]
+  partition po bit 4: \bus_write_data[23] <-> \bus_write_data[23]
+  partition po bit 5: \bus_write_data[22] <-> \bus_write_data[22]
+  partition po bit 6: \bus_write_data[21] <-> \bus_write_data[21]
+  partition po bit 7: \bus_write_data[20] <-> \bus_write_data[20]
+  partition po bit 8: \bus_write_data[19] <-> \bus_write_data[19]
+  partition po bit 9: \bus_write_data[18] <-> \bus_write_data[18]
+  partition po bit 10: \bus_write_data[17] <-> \bus_write_data[17]
+  partition po bit 11: \bus_write_data[16] <-> \bus_write_data[16]
+  partition po bit 12: \bus_write_data[15] <-> \bus_write_data[15]
+  partition po bit 13: \bus_write_data[14] <-> \bus_write_data[14]
+  partition po bit 14: \bus_write_data[13] <-> \bus_write_data[13]
+  partition po bit 15: \bus_write_data[12] <-> \bus_write_data[12]
+  partition po bit 16: \bus_write_data[11] <-> \bus_write_data[11]
+  partition po bit 17: \bus_write_data[10] <-> \bus_write_data[10]
+  partition po bit 18: \bus_write_data[9] <-> \bus_write_data[9]
+  partition po bit 19: \bus_write_data[8] <-> \bus_write_data[8]
+  partition po bit 20: \bus_write_data[7] <-> \bus_write_data[7]
+  partition po bit 21: \bus_write_data[6] <-> \bus_write_data[6]
+  partition po bit 22: \bus_write_data[5] <-> \bus_write_data[5]
+  partition po bit 23: \bus_write_data[4] <-> \bus_write_data[4]
+  partition po bit 24: \bus_write_data[3] <-> \bus_write_data[3]
+  partition po bit 25: \bus_write_data[2] <-> \bus_write_data[2]
+  partition po bit 26: \bus_write_data[1] <-> \bus_write_data[1]
+  partition po bit 27: \bus_write_data[0] <-> \bus_write_data[0]
+  partition po bit 28: \bus_address[31] <-> \bus_address[31]
+  partition po bit 29: \bus_address[30] <-> \bus_address[30]
+  partition po bit 30: \bus_address[29] <-> \bus_address[29]
+  partition po bit 31: \bus_address[28] <-> \bus_address[28]
+  partition po bit 32: \bus_address[27] <-> \bus_address[27]
+  partition po bit 33: \bus_address[26] <-> \bus_address[26]
+  partition po bit 34: \bus_address[25] <-> \bus_address[25]
+  partition po bit 35: \bus_address[24] <-> \bus_address[24]
+  partition po bit 36: \bus_address[23] <-> \bus_address[23]
+  partition po bit 37: \bus_address[22] <-> \bus_address[22]
+  partition po bit 38: \bus_address[21] <-> \bus_address[21]
+  partition po bit 39: \bus_address[20] <-> \bus_address[20]
+  partition po bit 40: \bus_address[19] <-> \bus_address[19]
+  partition po bit 41: \bus_address[18] <-> \bus_address[18]
+  partition po bit 42: \bus_address[17] <-> \bus_address[17]
+  partition po bit 43: \bus_address[16] <-> \bus_address[16]
+  partition po bit 44: \bus_address[15] <-> \bus_address[15]
+  partition po bit 45: \bus_address[14] <-> \bus_address[14]
+  partition po bit 46: \bus_address[13] <-> \bus_address[13]
+  partition po bit 47: \bus_address[12] <-> \bus_address[12]
+  partition po bit 48: \bus_address[11] <-> \bus_address[11]
+  partition po bit 49: \bus_address[10] <-> \bus_address[10]
+  partition po bit 50: \bus_address[9] <-> \bus_address[9]
+  partition po bit 51: \bus_address[8] <-> \bus_address[8]
+  partition po bit 52: \bus_address[7] <-> \bus_address[7]
+  partition po bit 53: \bus_address[6] <-> \bus_address[6]
+  partition po bit 54: \bus_address[5] <-> \bus_address[5]
+  partition po bit 55: \bus_address[4] <-> \bus_address[4]
+  partition po bit 56: \bus_address[3] <-> \bus_address[3]
+  partition po bit 57: \bus_address[2] <-> \bus_address[2]
+  partition po bit 58: \bus_address[1] <-> \bus_address[1]
+  partition po bit 59: \bus_address[0] <-> \bus_address[0]
+  partition po bit 60: \read_data[31] <-> \read_data[31]
+  partition po bit 61: \read_data[30] <-> \read_data[30]
+  partition po bit 62: \read_data[29] <-> \read_data[29]
+  partition po bit 63: \read_data[28] <-> \read_data[28]
+  partition po bit 64: \read_data[27] <-> \read_data[27]
+  partition po bit 65: \read_data[26] <-> \read_data[26]
+  partition po bit 66: \read_data[25] <-> \read_data[25]
+  partition po bit 67: \read_data[24] <-> \read_data[24]
+  partition po bit 68: \read_data[23] <-> \read_data[23]
+  partition po bit 69: \read_data[22] <-> \read_data[22]
+  partition po bit 70: \read_data[21] <-> \read_data[21]
+  partition po bit 71: \read_data[20] <-> \read_data[20]
+  partition po bit 72: \read_data[19] <-> \read_data[19]
+  partition po bit 73: \read_data[18] <-> \read_data[18]
+  partition po bit 74: \read_data[17] <-> \read_data[17]
+  partition po bit 75: \read_data[16] <-> \read_data[16]
+  partition po bit 76: \read_data[15] <-> \read_data[15]
+  partition po bit 77: \read_data[14] <-> \read_data[14]
+  partition po bit 78: \read_data[13] <-> \read_data[13]
+  partition po bit 79: \read_data[12] <-> \read_data[12]
+  partition po bit 80: \read_data[11] <-> \read_data[11]
+  partition po bit 81: \read_data[10] <-> \read_data[10]
+  partition po bit 82: \read_data[9] <-> \read_data[9]
+  partition po bit 83: \read_data[8] <-> \read_data[8]
+  partition po bit 84: \read_data[7] <-> \read_data[7]
+  partition po bit 85: \read_data[6] <-> \read_data[6]
+  partition po bit 86: \read_data[5] <-> \read_data[5]
+  partition po bit 87: \read_data[4] <-> \read_data[4]
+  partition po bit 88: \read_data[3] <-> \read_data[3]
+  partition po bit 89: \read_data[2] <-> \read_data[2]
+  partition po bit 90: \read_data[1] <-> \read_data[1]
+  partition po bit 91: \read_data[0] <-> \read_data[0]
+  partition po bit 92: \bus_write_enable <-> \bus_write_enable
+  partition po bit 93: \bus_read_enable <-> \bus_read_enable
+  partition po bit 94: \bus_byte_enable[3] <-> \bus_byte_enable[3]
+  partition po bit 95: \bus_byte_enable[2] <-> \bus_byte_enable[2]
+  partition po bit 96: \bus_byte_enable[1] <-> \bus_byte_enable[1]
+  partition po bit 97: \bus_byte_enable[0] <-> \bus_byte_enable[0]
+  partition po bit 98: \bus_write_data[29] <-> \bus_write_data[29]
+  partition po bit 99: \bus_write_data[28] <-> \bus_write_data[28]
+  partition po bit 100: \bus_write_data[31] <-> \bus_write_data[31]
+  partition po bit 101: \bus_write_data[30] <-> \bus_write_data[30]
+
+3.1.209. Executing RTLIL backend.
+Output filename: modules/data_memory_interface.il
+<suppressed ~3358 debug messages>
+
+End of script. Logfile hash: 1bdf985a92, time: 0.06s, user: 0.06s, system: 0.02s, MEM: 21.97 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 72% 1x eqy_partition (0 sec), 9% 103x write_rtlil (0 sec), ...

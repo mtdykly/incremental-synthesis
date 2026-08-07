@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 27,
+    "name": "instruction_decoder.inst_funct7.1",
+    "inbits": {
+      "inst[26]": [
+        0
+      ]
+    },
+    "outbits": {
+      "inst_funct7[1]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.instruction_decoder.inst_funct7.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.instruction_decoder.inst_funct7.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "partition": {
+    "index": 24,
+    "name": "immediate_generator.immediate.16",
+    "inbits": {
+      "inst[0]": [
+        0
+      ],
+      "inst[16]": [
+        0
+      ],
+      "inst[1]": [
+        0
+      ],
+      "inst[2]": [
+        0
+      ],
+      "inst[31]": [
+        0
+      ],
+      "inst[3]": [
+        0
+      ],
+      "inst[4]": [
+        0
+      ],
+      "inst[5]": [
+        0
+      ],
+      "inst[6]": [
+        0
+      ]
+    },
+    "outbits": {
+      "immediate[16]": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.immediate_generator.immediate.16",
+    "internal": {},
+    "unused": {},
+    "cellcount": 27,
+    "bitcount": 36
+  },
+  "gate_module": {
+    "name": "gold.immediate_generator.immediate.16",
+    "internal": {},
+    "unused": {},
+    "cellcount": 27,
+    "bitcount": 36
+  }
+}

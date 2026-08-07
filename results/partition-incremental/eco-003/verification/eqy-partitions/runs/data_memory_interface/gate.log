@@ -1,0 +1,46 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/data_memory_interface/gate.ys' --
+
+1. Executing JSON frontend.
+Importing module data_memory_interface from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+
+2.2. Analyzing design hierarchy..
+Top module:  \data_memory_interface
+Removed 0 unused modules.
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+
+6. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \data_memory_interface..
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module data_memory_interface...
+Found and reported 0 problems.
+
+9. Executing SETUNDEF pass (replace undef values with defined constants).
+
+10. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-003/verification/eqy-partitions/runs/data_memory_interface/gate.il
+
+End of script. Logfile hash: 8aabc9c0c7, time: 0.02s, user: 0.02s, system: 0.01s, MEM: 16.40 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 53% 2x read_json (0 sec), 17% 2x opt_clean (0 sec), ...
