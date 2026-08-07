@@ -5,7 +5,7 @@
   "source_kind": "base_cache",
   "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/partitions/data_memory_interface",
   "reasons": [],
-  "action_wall_seconds": 0.006818,
+  "action_wall_seconds": 0.007269,
   "yosys_seconds": 0,
   "partition_netlist_sha256": "164f31183f97cedafad83d2eaa25a3706423b112fe2e771501a5f4222f7d8a44"
 }

@@ -22,11 +22,11 @@
     }
   },
   "detection": {
-    "phase_wall_seconds": 1.305532,
+    "phase_wall_seconds": 1.341908,
     "export_hierarchy_seconds": 0.18,
     "extract_partitions_seconds": 0.05,
-    "prepare_partition_frontends_seconds": 0.9,
-    "compute_signatures_seconds": 0.08,
+    "prepare_partition_frontends_seconds": 0.92,
+    "compute_signatures_seconds": 0.11,
     "compare_signatures_seconds": 0.04,
     "partition_frontend_yosys": [
       {
@@ -57,11 +57,11 @@
     ]
   },
   "build": {
-    "phase_wall_seconds": 2.434096,
-    "materialize_partitions_seconds": 1.36,
+    "phase_wall_seconds": 2.435726,
+    "materialize_partitions_seconds": 1.39,
     "top_shell_seconds": 0.0,
-    "link_partitions_seconds": 0.97,
-    "check_linked_seconds": 4.71,
+    "link_partitions_seconds": 0.94,
+    "check_linked_seconds": 4.78,
     "materialization": {
       "partitions": [
         {
@@ -71,7 +71,7 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/data_memory_interface",
           "reasons": [],
-          "action_wall_seconds": 0.007658,
+          "action_wall_seconds": 0.008642,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "f5a7f7d25317c7bbc16d037a69ea77cb316eb9707cf93db10994f7055d53c7a0"
         },
@@ -82,7 +82,7 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/immediate_generator",
           "reasons": [],
-          "action_wall_seconds": 0.007245,
+          "action_wall_seconds": 0.008006,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "3dfad8cdc5aa5695aa6de04a104437cc4bfa2edf9b3187e3ab8d008f6951019e"
         },
@@ -93,7 +93,7 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/instruction_decoder",
           "reasons": [],
-          "action_wall_seconds": 0.008134,
+          "action_wall_seconds": 0.006872,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "b47b101ffd5e58dd4f5401a92aa1158f2fca7ebd4a1a2766a1002989d6e6103b"
         },
@@ -106,7 +106,7 @@
           "reasons": [
             "implementation_changed"
           ],
-          "action_wall_seconds": 0.306892,
+          "action_wall_seconds": 0.315351,
           "yosys_seconds": 0.24,
           "partition_netlist_sha256": "7099f2cdd8316a629c6f296ed7680070996c4d88f8a49406cfbed7034d5b74bd"
         },
@@ -117,23 +117,23 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/singlecycle_datapath",
           "reasons": [],
-          "action_wall_seconds": 0.036951,
+          "action_wall_seconds": 0.037513,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "8a2d8cbda6ba0918c4c6fb8d09d686813e23b770071beb0add8f3fb91f9a4410"
         }
       ],
       "reuse_count": 4,
       "rebuild_count": 1,
-      "reuse_copy_seconds": 0.059988,
-      "rebuild_wall_seconds": 0.306892,
+      "reuse_copy_seconds": 0.061033,
+      "rebuild_wall_seconds": 0.315351,
       "rebuild_yosys_seconds": 0.24,
-      "partition_action_seconds": 0.36688000000000004
+      "partition_action_seconds": 0.376384
     }
   },
   "totals": {
-    "pipeline_core_seconds": 3.80966,
-    "pipeline_with_check_seconds": 8.55434,
-    "profiled_stage_sum_seconds": 3.58,
-    "unattributed_core_overhead_seconds": 0.22965999999999998
+    "pipeline_core_seconds": 3.846763,
+    "pipeline_with_check_seconds": 8.651365,
+    "profiled_stage_sum_seconds": 3.63,
+    "unattributed_core_overhead_seconds": 0.21676300000000026
   }
 }

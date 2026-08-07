@@ -1,0 +1,8 @@
+{
+  "gate_hash": "5c6862b802e7d57d1047d9343ec5331503bcf87ffb0f75b5cbec3009a0b065bd",
+  "gate_json": "/workspace/incremental-synthesis/results/partition-incremental/eco-006/incremental/top-shell/top_shell.json",
+  "gold_hash": "5c6862b802e7d57d1047d9343ec5331503bcf87ffb0f75b5cbec3009a0b065bd",
+  "gold_json": "/workspace/incremental-synthesis/results/partition-incremental/eco-006/verification/certified-compositional/reference/top-shell/top_shell.json",
+  "status": "PASS",
+  "top_module": "riscv_core"
+}

@@ -6,5 +6,5 @@
   "top_shell_action": "reuse",
   "linked_json": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked.json",
   "linked_netlist": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked_netlist.v",
-  "incremental_build_seconds": 2.756271
+  "incremental_build_seconds": 3.100346
 }

@@ -894,6 +894,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 Dumping module `\data_memory_interface'.
 
 Warnings: 2 unique messages, 2 total
-End of script. Logfile hash: a63728e3f0, time: 0.22s, user: 0.13s, system: 0.02s, MEM: 24.41 MB peak
+End of script. Logfile hash: a63728e3f0, time: 0.23s, user: 0.14s, system: 0.01s, MEM: 24.91 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 44% 1x abc (0 sec), 21% 24x read_verilog (0 sec), ...
+Time spent: 45% 1x abc (0 sec), 20% 24x read_verilog (0 sec), ...

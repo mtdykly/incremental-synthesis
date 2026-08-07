@@ -1650,6 +1650,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 Dumping module `\singlecycle_datapath'.
 
 Warnings: 1 unique messages, 4 total
-End of script. Logfile hash: bc16a014d4, time: 1.78s, user: 0.98s, system: 0.08s, MEM: 41.43 MB peak
+End of script. Logfile hash: bc16a014d4, time: 1.83s, user: 1.01s, system: 0.07s, MEM: 41.68 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 53% 1x abc (1 sec), 10% 25x opt_clean (0 sec), ...

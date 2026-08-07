@@ -1,0 +1,4 @@
+partition	root_module	action	status	method	detail
+data_memory_interface	data_memory_interface	reuse	PASS	certified_reuse	same_interface+same_IR+same_environment+exact_base_cache_copy
+singlecycle_ctlpath	singlecycle_ctlpath	reuse	PASS	certified_reuse	same_interface+same_IR+same_environment+exact_base_cache_copy
+singlecycle_datapath	singlecycle_datapath	rebuild	PASS	identical_new_reference	independent_New_rebuild_is_byte_identical

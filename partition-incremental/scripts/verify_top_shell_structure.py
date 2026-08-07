@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 from __future__ import annotations
 
 import argparse
@@ -32,30 +33,6 @@ def normalize_name(name: str) -> str:
     return name[1:] if name.startswith("\\") else name
 
 
-def resolve_module(
-    modules: JsonObject,
-    requested: str,
-) -> tuple[str, JsonObject]:
-    if requested in modules:
-        return requested, modules[requested]
-
-    target = normalize_name(requested)
-
-    matches = [
-        name
-        for name in modules
-        if normalize_name(name) == target
-    ]
-
-    if len(matches) != 1:
-        raise ValueError(
-            f"Cannot uniquely resolve module {requested!r}"
-        )
-
-    name = matches[0]
-    return name, modules[name]
-
-
 def clean(value: Any) -> Any:
     if isinstance(value, dict):
         return {
@@ -70,8 +47,38 @@ def clean(value: Any) -> Any:
     return value
 
 
+def resolve_module(
+    modules: JsonObject,
+    requested: str,
+) -> tuple[str, JsonObject]:
+    if requested in modules:
+        return requested, modules[requested]
+
+    normalized = normalize_name(requested)
+
+    matches = [
+        name
+        for name in modules
+        if normalize_name(name) == normalized
+    ]
+
+    if len(matches) != 1:
+        raise ValueError(
+            f"Cannot uniquely resolve module {requested!r}"
+        )
+
+    name = matches[0]
+    module = modules[name]
+
+    if not isinstance(module, dict):
+        raise ValueError(
+            f"Module {name!r} is not a JSON object"
+        )
+
+    return name, module
+
+
 def endpoint_sort_key(endpoint: JsonObject) -> str:
-    """为单个连接端点生成稳定排序键。"""
     return json.dumps(
         endpoint,
         ensure_ascii=False,
@@ -83,14 +90,13 @@ def endpoint_sort_key(endpoint: JsonObject) -> str:
 def endpoint_group_sort_key(
     endpoints: list[JsonObject],
 ) -> str:
-    """为一组属于同一根网络的端点生成稳定排序键。"""
-    ordered_endpoints = sorted(
+    ordered = sorted(
         endpoints,
         key=endpoint_sort_key,
     )
 
     return json.dumps(
-        ordered_endpoints,
+        ordered,
         ensure_ascii=False,
         sort_keys=True,
         separators=(",", ":"),
@@ -102,10 +108,17 @@ def canonical_top(
     top_name: str,
 ) -> JsonObject:
     modules = design.get("modules", {})
-    _, module = resolve_module(modules, top_name)
+
+    if not isinstance(modules, dict):
+        raise ValueError("Design has no modules object")
+
+    _, module = resolve_module(
+        modules,
+        top_name,
+    )
 
     net_endpoints: dict[int, list[JsonObject]] = defaultdict(list)
-    constants: list[JsonObject] = []
+    constant_connections: list[JsonObject] = []
 
     ports_result: list[JsonObject] = []
 
@@ -122,7 +135,7 @@ def canonical_top(
         )
 
         for index, bit in enumerate(bits):
-            endpoint = {
+            endpoint: JsonObject = {
                 "kind": "top_port",
                 "name": normalize_name(port_name),
                 "index": index,
@@ -132,7 +145,7 @@ def canonical_top(
             if isinstance(bit, int):
                 net_endpoints[bit].append(endpoint)
             else:
-                constants.append(
+                constant_connections.append(
                     {
                         "endpoint": endpoint,
                         "constant": bit,
@@ -183,7 +196,7 @@ def canonical_top(
                 if isinstance(bit, int):
                     net_endpoints[bit].append(endpoint)
                 else:
-                    constants.append(
+                    constant_connections.append(
                         {
                             "endpoint": endpoint,
                             "constant": bit,
@@ -203,14 +216,16 @@ def canonical_top(
         )
     ]
 
-    constants.sort(key=endpoint_sort_key)
+    constant_connections.sort(
+        key=endpoint_sort_key
+    )
 
     return {
         "top_module": normalize_name(top_name),
         "ports": ports_result,
         "cells": cells_result,
         "nets": nets_result,
-        "constant_connections": constants,
+        "constant_connections": constant_connections,
     }
 
 
@@ -226,7 +241,10 @@ def stable_hash(value: Any) -> str:
 
 
 def write_json(path: Path, value: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     with path.open("w", encoding="utf-8") as file:
         json.dump(
@@ -240,13 +258,7 @@ def write_json(path: Path, value: Any) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description=(
-            "Compare two top-shell JSON designs while "
-            "ignoring Yosys numeric bit identifiers and "
-            "source attributes."
-        )
-    )
+    parser = argparse.ArgumentParser()
 
     parser.add_argument(
         "--gold-json",
@@ -280,8 +292,6 @@ def main() -> None:
             args.top,
         )
 
-        gold_hash = stable_hash(gold)
-        gate_hash = stable_hash(gate)
         equivalent = gold == gate
 
         write_json(
@@ -299,19 +309,17 @@ def main() -> None:
                     "PASS" if equivalent else "FAIL"
                 ),
                 "top_module": args.top,
-                "gold_hash": gold_hash,
-                "gate_hash": gate_hash,
+                "gold_hash": stable_hash(gold),
+                "gate_hash": stable_hash(gate),
                 "gold_json": str(args.gold_json),
                 "gate_json": str(args.gate_json),
             },
         )
 
         print(
-            f"Top shell structural comparison: "
-            f"{'PASS' if equivalent else 'FAIL'}"
+            "Top-shell structural check: "
+            + ("PASS" if equivalent else "FAIL")
         )
-        print(f"Gold hash: {gold_hash}")
-        print(f"Gate hash: {gate_hash}")
 
         if not equivalent:
             raise SystemExit(2)
@@ -321,7 +329,10 @@ def main() -> None:
         ValueError,
         json.JSONDecodeError,
     ) as error:
-        print(f"ERROR: {error}", file=sys.stderr)
+        print(
+            f"ERROR: {error}",
+            file=sys.stderr,
+        )
         raise SystemExit(1)
 
 

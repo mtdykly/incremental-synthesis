@@ -1,7 +1,0 @@
-{
-  "status": "timeout",
-  "top_module": "riscv_core",
-  "gold_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partitioned-reference/linked/linked.json",
-  "gate_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/incremental/linked/linked.json",
-  "timeout": "5m"
-}

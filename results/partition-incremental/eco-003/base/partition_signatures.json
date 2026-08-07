@@ -15,7 +15,7 @@
   "partition_environment_signature": "a69ec2f5deafa53ce5eb84f5fd05c31cf0725c7eef51c5354bd82f60a522ff90",
   "partitions": {
     "data_memory_interface": {
-      "implementation_signature": "42f5a0307acac4df98877fa432c9645d1d8ec5c9b0615dc9cd8d1ff75813af93",
+      "implementation_signature": "e7c5b038b82252439644033a3372233a4c86e7e48bc7167bef3575c097e6eb16",
       "interface": [
         {
           "direction": "input",
@@ -91,7 +91,7 @@
       "root_parameters": {}
     },
     "immediate_generator": {
-      "implementation_signature": "c932c4e330a85e34e2b63873fa653e0ab2801bc12f9829c5f66dead8c4a647e9",
+      "implementation_signature": "6f13628d7fb6417ca67ee2417453f753f63de801a68dfe368496fa48f86855d3",
       "interface": [
         {
           "direction": "output",
@@ -112,7 +112,7 @@
       "root_parameters": {}
     },
     "instruction_decoder": {
-      "implementation_signature": "3c47353ef235c0eccdac22723cc1319f40286bfaa91dee8bc66a5812e0b9d2fa",
+      "implementation_signature": "3d0dae4cac6535b5a2eccfee38961c3d7e456a0c4b9851d70d81471b74831723",
       "interface": [
         {
           "direction": "input",
@@ -158,7 +158,7 @@
       "root_parameters": {}
     },
     "singlecycle_ctlpath": {
-      "implementation_signature": "0bbee84640a7a6dbb82dbb4b898f7e5887bae57fb115088c9c996fa4187675a8",
+      "implementation_signature": "e2d1e9a288a91207a41d3ed654d6cfbbfab50a4d5f4f4fbee7040fa42486765a",
       "interface": [
         {
           "direction": "output",
@@ -234,7 +234,7 @@
       "root_parameters": {}
     },
     "singlecycle_datapath": {
-      "implementation_signature": "20983b759f81e7e23971c306d6251b3206e112408a46797f42e7bb24f0ce473f",
+      "implementation_signature": "902379bb199274b65e62e9c65a07bccd3bd989e142ace9a6cea2116f8a0bdb01",
       "interface": [
         {
           "direction": "input",
@@ -335,10 +335,10 @@
       "root_parameters": {}
     }
   },
-  "schema_version": 2,
-  "signature_method": "isolated_partition_flattened_ir_without_cell_names",
+  "schema_version": 4,
+  "signature_method": "isolated_partition_flattened_ir_with_stable_memory_ids",
   "top": {
-    "implementation_signature": "bb0c3282b6d6da51f577bd2f1344d6f2537d530b08bc19851d7c7ada191fc3d7",
+    "implementation_signature": "a9db8b97bf213eec60d6057dd109d5d67c12b68008d5ab459b66d4d2f73210b6",
     "interface": [
       {
         "direction": "output",

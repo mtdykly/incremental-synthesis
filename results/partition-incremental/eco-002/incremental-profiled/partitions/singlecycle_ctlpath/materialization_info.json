@@ -5,7 +5,7 @@
   "source_kind": "base_cache",
   "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/base/partitions/singlecycle_ctlpath",
   "reasons": [],
-  "action_wall_seconds": 0.007668,
+  "action_wall_seconds": 0.004927,
   "yosys_seconds": 0,
   "partition_netlist_sha256": "e532681d77df6b01ed154ce062e2d24530da8595aeddba6880711a7896c99ac0"
 }

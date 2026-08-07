@@ -5,7 +5,7 @@
   "source_kind": "base_cache",
   "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/immediate_generator",
   "reasons": [],
-  "action_wall_seconds": 0.007284,
+  "action_wall_seconds": 0.004415,
   "yosys_seconds": 0,
   "partition_netlist_sha256": "3dfad8cdc5aa5695aa6de04a104437cc4bfa2edf9b3187e3ab8d008f6951019e"
 }

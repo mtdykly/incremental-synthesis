@@ -336,6 +336,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
        13   $pmux
 
 Warnings: 9 unique messages, 9 total
-End of script. Logfile hash: 9e6f5f925b, time: 0.06s, user: 0.07s, system: 0.00s, MEM: 19.91 MB peak
+End of script. Logfile hash: 9e6f5f925b, time: 0.06s, user: 0.05s, system: 0.02s, MEM: 19.97 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 74% 23x read_verilog (0 sec), 5% 4x write_json (0 sec), ...
+Time spent: 71% 23x read_verilog (0 sec), 5% 4x write_json (0 sec), ...

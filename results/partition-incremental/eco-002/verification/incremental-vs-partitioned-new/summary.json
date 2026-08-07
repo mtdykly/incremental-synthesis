@@ -1,7 +1,0 @@
-{
-  "status": "proven",
-  "top_module": "riscv_core",
-  "gold_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/new/partitioned-reference/linked/linked.json",
-  "gate_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-002/incremental/linked/linked.json",
-  "ff_normalization": "async2sync"
-}

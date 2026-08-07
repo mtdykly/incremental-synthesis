@@ -1108,6 +1108,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 Dumping module `\singlecycle_ctlpath'.
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: a9a2d83c0b, time: 0.19s, user: 0.10s, system: 0.01s, MEM: 22.45 MB peak
+End of script. Logfile hash: a9a2d83c0b, time: 0.19s, user: 0.09s, system: 0.02s, MEM: 22.46 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 50% 1x abc (0 sec), 17% 23x read_verilog (0 sec), ...
+Time spent: 48% 1x abc (0 sec), 19% 23x read_verilog (0 sec), ...

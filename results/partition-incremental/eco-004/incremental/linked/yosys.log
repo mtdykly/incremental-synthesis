@@ -224,6 +224,6 @@ Dumping module `\riscv_core'.
 Dumping module `\singlecycle_ctlpath'.
 Dumping module `\singlecycle_datapath'.
 
-End of script. Logfile hash: b9c02140e8, time: 0.73s, user: 0.88s, system: 0.16s, MEM: 184.21 MB peak
+End of script. Logfile hash: b9c02140e8, time: 0.80s, user: 1.01s, system: 0.09s, MEM: 184.14 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 61% 10x read_json (0 sec), 13% 2x write_json (0 sec), ...
+Time spent: 58% 10x read_json (0 sec), 12% 2x write_json (0 sec), ...

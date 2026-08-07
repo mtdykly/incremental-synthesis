@@ -7,7 +7,7 @@
       "source_kind": "base_cache",
       "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/data_memory_interface",
       "reasons": [],
-      "action_wall_seconds": 0.007837,
+      "action_wall_seconds": 0.008324,
       "yosys_seconds": 0,
       "partition_netlist_sha256": "f5a7f7d25317c7bbc16d037a69ea77cb316eb9707cf93db10994f7055d53c7a0"
     },
@@ -18,7 +18,7 @@
       "source_kind": "base_cache",
       "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/immediate_generator",
       "reasons": [],
-      "action_wall_seconds": 0.007284,
+      "action_wall_seconds": 0.004415,
       "yosys_seconds": 0,
       "partition_netlist_sha256": "3dfad8cdc5aa5695aa6de04a104437cc4bfa2edf9b3187e3ab8d008f6951019e"
     },
@@ -29,7 +29,7 @@
       "source_kind": "base_cache",
       "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/instruction_decoder",
       "reasons": [],
-      "action_wall_seconds": 0.006395,
+      "action_wall_seconds": 0.005772,
       "yosys_seconds": 0,
       "partition_netlist_sha256": "b47b101ffd5e58dd4f5401a92aa1158f2fca7ebd4a1a2766a1002989d6e6103b"
     },
@@ -42,7 +42,7 @@
       "reasons": [
         "implementation_changed"
       ],
-      "action_wall_seconds": 0.305875,
+      "action_wall_seconds": 0.313253,
       "yosys_seconds": 0.24,
       "partition_netlist_sha256": "7099f2cdd8316a629c6f296ed7680070996c4d88f8a49406cfbed7034d5b74bd"
     },
@@ -53,15 +53,15 @@
       "source_kind": "base_cache",
       "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-003/base/partitions/singlecycle_datapath",
       "reasons": [],
-      "action_wall_seconds": 0.037384,
+      "action_wall_seconds": 0.038523,
       "yosys_seconds": 0,
       "partition_netlist_sha256": "8a2d8cbda6ba0918c4c6fb8d09d686813e23b770071beb0add8f3fb91f9a4410"
     }
   ],
   "reuse_count": 4,
   "rebuild_count": 1,
-  "reuse_copy_seconds": 0.0589,
-  "rebuild_wall_seconds": 0.305875,
+  "reuse_copy_seconds": 0.057034,
+  "rebuild_wall_seconds": 0.313253,
   "rebuild_yosys_seconds": 0.24,
-  "partition_action_seconds": 0.36477499999999996
+  "partition_action_seconds": 0.37028700000000003
 }

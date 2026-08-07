@@ -1,0 +1,40 @@
+{
+  "case_name": "eco-008",
+  "status": "PASS",
+  "validation_method": "certified_compositional",
+  "top_shell_status": "PASS",
+  "partition_count": 3,
+  "pass_count": 3,
+  "methods": {
+    "certified_reuse": 3,
+    "identical_new_reference": 0,
+    "eqy_fallback": 0
+  },
+  "partitions": [
+    {
+      "partition": "data_memory_interface",
+      "root_module": "data_memory_interface",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    }
+  ],
+  "statement": "Reuse partitions are certified by equal isolated implementation and interface signatures under the same synthesis environment, plus exact cache materialization. Rebuilt partitions are checked against an independent New rebuild, with EQY only as a fallback. The top-shell connectivity is checked structurally."
+}

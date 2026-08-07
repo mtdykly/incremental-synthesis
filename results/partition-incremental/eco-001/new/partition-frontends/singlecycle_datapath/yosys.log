@@ -513,6 +513,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
         1   $xor
 
 Warnings: 1 unique messages, 4 total
-End of script. Logfile hash: cf5f4fadf2, time: 0.06s, user: 0.07s, system: 0.01s, MEM: 19.54 MB peak
+End of script. Logfile hash: cf5f4fadf2, time: 0.06s, user: 0.08s, system: 0.00s, MEM: 19.49 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 49% 22x read_verilog (0 sec), 10% 2x opt_clean (0 sec), ...
+Time spent: 48% 22x read_verilog (0 sec), 10% 2x opt_clean (0 sec), ...

@@ -3,3 +3,4 @@
 .partition-cache/
 partition-incremental/.tmp/
 partition-incremental/**/__pycache__/
+*.bak

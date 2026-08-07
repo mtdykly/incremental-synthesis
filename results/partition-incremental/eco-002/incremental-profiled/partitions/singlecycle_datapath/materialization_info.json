@@ -7,7 +7,7 @@
   "reasons": [
     "implementation_changed"
   ],
-  "action_wall_seconds": 1.811014,
+  "action_wall_seconds": 1.808705,
   "yosys_seconds": 1.73,
   "partition_netlist_sha256": "b19a63dd0b485bcf5f426f88c588cceed402555170a81ad32fe4247725a09271"
 }

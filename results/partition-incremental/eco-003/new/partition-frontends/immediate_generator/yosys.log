@@ -241,6 +241,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
         3   $reduce_or
 
 Warnings: 9 unique messages, 9 total
-End of script. Logfile hash: 6c97d26e79, time: 0.05s, user: 0.04s, system: 0.02s, MEM: 20.08 MB peak
+End of script. Logfile hash: 6c97d26e79, time: 0.05s, user: 0.03s, system: 0.03s, MEM: 19.81 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 92% 23x read_verilog (0 sec), 1% 1x hierarchy (0 sec), ...

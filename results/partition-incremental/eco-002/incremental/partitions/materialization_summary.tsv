@@ -1,4 +1,4 @@
 partition	root_module	action	source	build_seconds
 data_memory_interface	data_memory_interface	reuse	base_cache	0.000
 singlecycle_ctlpath	singlecycle_ctlpath	reuse	base_cache	0.000
-singlecycle_datapath	singlecycle_datapath	rebuild	new_synthesis	1.72
+singlecycle_datapath	singlecycle_datapath	rebuild	new_synthesis	1.76

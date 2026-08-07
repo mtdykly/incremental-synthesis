@@ -1,67 +1,67 @@
 {
   "iteration_count": 5,
-  "full_median_seconds": 2.35,
-  "incremental_core_median_seconds": 3.906711,
-  "speedup": 0.6015290099523615,
-  "time_reduction_percent": -66.24302127659574,
+  "full_median_seconds": 2.37,
+  "incremental_core_median_seconds": 3.943819,
+  "speedup": 0.6009403575569772,
+  "time_reduction_percent": -66.40586497890294,
   "stage_medians": {
-    "full_seconds": 2.35,
-    "incremental_core_seconds": 3.906711,
-    "detection_seconds": 0.808925,
+    "full_seconds": 2.37,
+    "incremental_core_seconds": 3.943819,
+    "detection_seconds": 0.811888,
     "export_hierarchy_seconds": 0.11,
     "extract_partitions_seconds": 0.05,
     "prepare_partition_frontends_seconds": 0.5,
-    "compute_signatures_seconds": 0.06,
+    "compute_signatures_seconds": 0.07,
     "compare_signatures_seconds": 0.05,
-    "materialize_partitions_seconds": 2.5,
-    "reuse_copy_seconds": 0.01603,
-    "rebuild_wall_seconds": 1.807688,
-    "rebuild_yosys_seconds": 1.73,
+    "materialize_partitions_seconds": 2.52,
+    "reuse_copy_seconds": 0.015120999999999999,
+    "rebuild_wall_seconds": 1.811458,
+    "rebuild_yosys_seconds": 1.74,
     "top_shell_seconds": 0.0,
     "link_partitions_seconds": 0.42,
-    "check_linked_seconds": 1.15,
-    "unattributed_overhead_seconds": 0.217924
+    "check_linked_seconds": 1.16,
+    "unattributed_overhead_seconds": 0.21819800000000011
   },
   "stage_breakdown": [
     {
       "stage": "materialize_partitions",
-      "median_seconds": 2.5,
-      "percent_of_incremental": 63.992447867272496
+      "median_seconds": 2.52,
+      "percent_of_incremental": 63.89745574023554
     },
     {
       "stage": "prepare_partition_frontends",
       "median_seconds": 0.5,
-      "percent_of_incremental": 12.7984895734545
+      "percent_of_incremental": 12.678066615126099
     },
     {
       "stage": "link_partitions",
       "median_seconds": 0.42,
-      "percent_of_incremental": 10.750731241701779
+      "percent_of_incremental": 10.649575956705924
     },
     {
       "stage": "unattributed_overhead",
-      "median_seconds": 0.217924,
-      "percent_of_incremental": 5.5781960836109965
+      "median_seconds": 0.21819800000000011,
+      "percent_of_incremental": 5.532657558574573
     },
     {
       "stage": "export_hierarchy",
       "median_seconds": 0.11,
-      "percent_of_incremental": 2.8156677061599895
+      "percent_of_incremental": 2.789174655327742
     },
     {
       "stage": "compute_signatures",
-      "median_seconds": 0.06,
-      "percent_of_incremental": 1.5358187488145398
+      "median_seconds": 0.07,
+      "percent_of_incremental": 1.7749293261176542
     },
     {
       "stage": "extract_partitions",
       "median_seconds": 0.05,
-      "percent_of_incremental": 1.2798489573454501
+      "percent_of_incremental": 1.26780666151261
     },
     {
       "stage": "compare_signatures",
       "median_seconds": 0.05,
-      "percent_of_incremental": 1.2798489573454501
+      "percent_of_incremental": 1.26780666151261
     },
     {
       "stage": "top_shell",
@@ -69,5 +69,5 @@
       "percent_of_incremental": 0.0
     }
   ],
-  "check_linked_median_seconds_excluded_from_core": 1.15
+  "check_linked_median_seconds_excluded_from_core": 1.16
 }
