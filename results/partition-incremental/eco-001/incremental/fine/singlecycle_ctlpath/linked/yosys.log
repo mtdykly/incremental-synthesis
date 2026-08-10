@@ -1,0 +1,164 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/fine/singlecycle_ctlpath/linked/run_link_partitions.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/fine/singlecycle_ctlpath/root_shell/top_shell_netlist.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/fine/singlecycle_ctlpath/root_shell/top_shell_netlist.v' to AST representation.
+Generating RTLIL representation for module `\singlecycle_ctlpath'.
+Successfully finished Verilog frontend.
+
+2. Executing JSON frontend.
+Importing module alu_control from JSON tree.
+
+3. Executing JSON frontend.
+Importing module control_transfer from JSON tree.
+
+4. Executing JSON frontend.
+Importing module singlecycle_control from JSON tree.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \singlecycle_control
+Used module:     \control_transfer
+Used module:     \alu_control
+
+5.2. Analyzing design hierarchy..
+Top module:  \singlecycle_ctlpath
+Used module:     \singlecycle_control
+Used module:     \control_transfer
+Used module:     \alu_control
+Removed 0 unused modules.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_control...
+Checking module control_transfer...
+Checking module alu_control...
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+
+7. Printing statistics.
+
+=== singlecycle_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       38 wires
+       48 wire bits
+       11 public wires
+       21 public wire bits
+       11 ports
+       21 port bits
+       38 cells
+        5   $_ANDNOT_
+       16   $_AND_
+       12   $_NAND_
+        3   $_NOR_
+        2   $_ORNOT_
+
+=== control_transfer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        7 wire bits
+        3 public wires
+        5 public wire bits
+        3 ports
+        5 port bits
+        3 cells
+        1   $_AND_
+        1   $_ORNOT_
+        1   $_XNOR_
+
+=== alu_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       46 wires
+       59 wire bits
+        4 public wires
+       17 public wire bits
+        4 ports
+       17 port bits
+       46 cells
+        4   $_ANDNOT_
+        9   $_AND_
+        4   $_MUX_
+       18   $_NAND_
+        1   $_NOR_
+        1   $_NOT_
+        6   $_ORNOT_
+        3   $_OR_
+
+=== singlecycle_ctlpath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+       37 wire bits
+       15 public wires
+       37 public wire bits
+       13 ports
+       34 port bits
+        3 submodules
+        1   alu_control
+        1   control_transfer
+        1   singlecycle_control
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       87 singlecycle_ctlpath
+       46 alu_control
+        3 control_transfer
+       38 singlecycle_control
+
+        +----------Count including submodules.
+        | 
+      104 wires
+      151 wire bits
+       33 public wires
+       80 public wire bits
+       31 ports
+       77 port bits
+        - memories
+        - memory bits
+        - processes
+       87 cells
+        9   $_ANDNOT_
+       26   $_AND_
+        4   $_MUX_
+       30   $_NAND_
+        4   $_NOR_
+        1   $_NOT_
+        9   $_ORNOT_
+        3   $_OR_
+        1   $_XNOR_
+        3 submodules
+        1   alu_control
+        1   control_transfer
+        1   singlecycle_control
+
+8. Executing JSON backend.
+
+9. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/fine/singlecycle_ctlpath/linked/linked.rtlil
+
+10. Executing Verilog backend.
+Dumping module `\alu_control'.
+Dumping module `\control_transfer'.
+Dumping module `\singlecycle_control'.
+Dumping module `\singlecycle_ctlpath'.
+
+End of script. Logfile hash: eaa9f30073, time: 0.02s, user: 0.01s, system: 0.02s, MEM: 16.03 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 26% 6x read_json (0 sec), 21% 2x read_verilog (0 sec), ...

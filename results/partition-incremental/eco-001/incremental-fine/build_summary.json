@@ -1,0 +1,7 @@
+{
+  "case_name": "eco-001",
+  "method": "partition_plus_fine_grained",
+  "top_shell_action": "reuse",
+  "linked_json": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine/linked/linked.json",
+  "status": "built"
+}

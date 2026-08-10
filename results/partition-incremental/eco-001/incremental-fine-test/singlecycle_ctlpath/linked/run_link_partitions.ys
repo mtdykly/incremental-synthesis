@@ -1,0 +1,18 @@
+# Read synthesized top shell.
+read_verilog -sv "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/root-shell/top_shell_netlist.v"
+
+# Read each independently synthesized partition.
+# alu_control -> alu_control
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/regions/alu_control/synth.json"
+# control_transfer -> control_transfer
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/regions/control_transfer/synth.json"
+# singlecycle_control -> singlecycle_control
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/regions/singlecycle_control/synth.json"
+
+hierarchy -check -top singlecycle_ctlpath
+check
+stat -top singlecycle_ctlpath
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/linked/linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/linked/linked.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/linked/linked_netlist.v"

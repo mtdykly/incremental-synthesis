@@ -1,0 +1,5 @@
+{
+  "partition": "singlecycle_ctlpath",
+  "manifest": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/fine_partition_manifest.json",
+  "status": "ready"
+}

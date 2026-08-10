@@ -1,0 +1,8 @@
+{
+  "partition": "singlecycle_ctlpath",
+  "root_glue_action": "reuse",
+  "reuse_count": 2,
+  "rebuild_count": 1,
+  "rebuild_yosys_seconds": 0.15,
+  "status": "materialized"
+}

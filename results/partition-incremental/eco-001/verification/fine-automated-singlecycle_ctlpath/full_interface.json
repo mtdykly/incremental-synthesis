@@ -1,0 +1,67 @@
+[
+  {
+    "direction": "output",
+    "name": "alu_function",
+    "width": 5
+  },
+  {
+    "direction": "output",
+    "name": "alu_operand_a_select",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "alu_operand_b_select",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "alu_result_equal_zero",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "data_mem_read_enable",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "data_mem_write_enable",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "inst_funct3",
+    "width": 3
+  },
+  {
+    "direction": "input",
+    "name": "inst_funct7",
+    "width": 7
+  },
+  {
+    "direction": "input",
+    "name": "inst_opcode",
+    "width": 7
+  },
+  {
+    "direction": "output",
+    "name": "next_pc_select",
+    "width": 2
+  },
+  {
+    "direction": "output",
+    "name": "pc_write_enable",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "reg_writeback_select",
+    "width": 3
+  },
+  {
+    "direction": "output",
+    "name": "regfile_write_enable",
+    "width": 1
+  }
+]

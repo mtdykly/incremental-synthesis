@@ -1,0 +1,7 @@
+{
+  "status": "proven",
+  "top_module": "singlecycle_ctlpath",
+  "gold_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/new/fine-reference/singlecycle_ctlpath/synth.json",
+  "gate_design": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine-test/singlecycle_ctlpath/synth.json",
+  "ff_normalization": "async2sync"
+}

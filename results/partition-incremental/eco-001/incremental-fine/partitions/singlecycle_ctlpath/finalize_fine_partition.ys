@@ -1,0 +1,13 @@
+read_json /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine/partitions/singlecycle_ctlpath/linked/linked.json
+
+hierarchy -check -top singlecycle_ctlpath
+
+flatten
+
+hierarchy -check -top singlecycle_ctlpath
+
+check
+
+write_json /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine/partitions/singlecycle_ctlpath/synth.json
+write_rtlil /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine/partitions/singlecycle_ctlpath/synth.rtlil
+write_verilog -noattr /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-fine/partitions/singlecycle_ctlpath/partition_netlist.v
