@@ -1,0 +1,212 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-005/area-analysis/liberty-area/incremental-mapped/linked/run_link_mapped.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/results/partition-incremental/eco-005/area-analysis/liberty-area/incremental-mapped/top-shell/mapped_netlist.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/results/partition-incremental/eco-005/area-analysis/liberty-area/incremental-mapped/top-shell/mapped_netlist.v' to AST representation.
+Generating RTLIL representation for module `\riscv_core'.
+Successfully finished Verilog frontend.
+
+2. Executing JSON frontend.
+Importing module data_memory_interface from JSON tree.
+
+3. Executing JSON frontend.
+Importing module immediate_generator from JSON tree.
+
+4. Executing JSON frontend.
+Importing module instruction_decoder from JSON tree.
+
+5. Executing JSON frontend.
+Importing module singlecycle_ctlpath from JSON tree.
+
+6. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \singlecycle_datapath
+Used module:     \singlecycle_ctlpath
+Used module:     \instruction_decoder
+Used module:     \immediate_generator
+Used module:     \data_memory_interface
+
+7.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \singlecycle_datapath
+Used module:     \singlecycle_ctlpath
+Used module:     \instruction_decoder
+Used module:     \immediate_generator
+Used module:     \data_memory_interface
+Removed 0 unused modules.
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module singlecycle_datapath.
+Deleting now unused module singlecycle_ctlpath.
+Deleting now unused module instruction_decoder.
+Deleting now unused module immediate_generator.
+Deleting now unused module data_memory_interface.
+<suppressed ~5 debug messages>
+
+9. Executing Verilog backend.
+Dumping module `\riscv_core'.
+
+10. Printing statistics.
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    22242        - wires
+    24023        - wire bits
+      114        - public wires
+     1895        - public wire bits
+       10        - ports
+      168        - port bits
+    22307 3.03E+04 cells
+      752  800.128   AND2_X1
+      327   434.91   AND3_X1
+       11   17.556   AND4_X1
+      278   369.74   AOI211_X1
+     1796 1.91E+03   AOI21_X1
+      247  394.212   AOI221_X1
+       25     53.2   AOI222_X1
+      157   208.81   AOI22_X1
+       31   164.92   DFFR_X1
+        1     5.32   DFFS_X1
+      992 4.49E+03   DFF_X1
+     1298  690.536   INV_X1
+     2124 3.95E+03   MUX2_X1
+     2249 1.79E+03   NAND2_X1
+      194  206.416   NAND3_X1
+       41    54.53   NAND4_X1
+     2955  2358.09   NOR2_X1
+      319  339.416   NOR3_X1
+       35    46.55   NOR4_X1
+      471   626.43   OAI211_X1
+     1745  1856.68   OAI21_X1
+      186  296.856   OAI221_X1
+       14   29.792   OAI222_X1
+      152   202.16   OAI22_X1
+      261  485.982   OAI33_X1
+      884  940.576   OR2_X1
+      255   339.15   OR3_X1
+       18   28.728   OR4_X1
+     2963 4.73E+03   XNOR2_X1
+     1526 2.44E+03   XOR2_X1
+
+   Chip area for module '\riscv_core': 30261.490000
+     of which used for sequential elements: 4656.064000 (15.39%)
+
+{
+   "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+   "invocation": "stat -top riscv_core -liberty \"/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib\" -json ",
+   "modules": {
+      "\\riscv_core": {
+         "num_wires":         22242,
+         "num_wire_bits":     24023,
+         "num_pub_wires":     114,
+         "num_pub_wire_bits": 1895,
+         "num_ports":         10,
+         "num_port_bits":     168,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22307,
+         "num_submodules":       0,
+         "area":              30261.490000,
+         "sequential_area":    4656.064000,
+         "num_cells_by_type": {
+            "AND2_X1": 752,
+            "AND3_X1": 327,
+            "AND4_X1": 11,
+            "AOI211_X1": 278,
+            "AOI21_X1": 1796,
+            "AOI221_X1": 247,
+            "AOI222_X1": 25,
+            "AOI22_X1": 157,
+            "DFFR_X1": 31,
+            "DFFS_X1": 1,
+            "DFF_X1": 992,
+            "INV_X1": 1298,
+            "MUX2_X1": 2124,
+            "NAND2_X1": 2249,
+            "NAND3_X1": 194,
+            "NAND4_X1": 41,
+            "NOR2_X1": 2955,
+            "NOR3_X1": 319,
+            "NOR4_X1": 35,
+            "OAI211_X1": 471,
+            "OAI21_X1": 1745,
+            "OAI221_X1": 186,
+            "OAI222_X1": 14,
+            "OAI22_X1": 152,
+            "OAI33_X1": 261,
+            "OR2_X1": 884,
+            "OR3_X1": 255,
+            "OR4_X1": 18,
+            "XNOR2_X1": 2963,
+            "XOR2_X1": 1526
+         }
+      }
+   },
+      "design": {
+         "num_wires":         22242,
+         "num_wire_bits":     24023,
+         "num_pub_wires":     114,
+         "num_pub_wire_bits": 1895,
+         "num_ports":         10,
+         "num_port_bits":     168,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22307,
+         "num_submodules":       0,
+         "area":              30261.490000,
+         "sequential_area":    4656.064000,
+         "num_cells_by_type": {
+            "AND2_X1": 752,
+            "AND3_X1": 327,
+            "AND4_X1": 11,
+            "AOI211_X1": 278,
+            "AOI21_X1": 1796,
+            "AOI221_X1": 247,
+            "AOI222_X1": 25,
+            "AOI22_X1": 157,
+            "DFFR_X1": 31,
+            "DFFS_X1": 1,
+            "DFF_X1": 992,
+            "INV_X1": 1298,
+            "MUX2_X1": 2124,
+            "NAND2_X1": 2249,
+            "NAND3_X1": 194,
+            "NAND4_X1": 41,
+            "NOR2_X1": 2955,
+            "NOR3_X1": 319,
+            "NOR4_X1": 35,
+            "OAI211_X1": 471,
+            "OAI21_X1": 1745,
+            "OAI221_X1": 186,
+            "OAI222_X1": 14,
+            "OAI22_X1": 152,
+            "OAI33_X1": 261,
+            "OR2_X1": 884,
+            "OR3_X1": 255,
+            "OR4_X1": 18,
+            "XNOR2_X1": 2963,
+            "XOR2_X1": 1526
+         }
+      }
+}
+
+End of script. Logfile hash: 0b1b9e3375, time: 0.64s, user: 0.67s, system: 0.11s, MEM: 147.45 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 54% 10x read_json (0 sec), 18% 2x stat (0 sec), ...

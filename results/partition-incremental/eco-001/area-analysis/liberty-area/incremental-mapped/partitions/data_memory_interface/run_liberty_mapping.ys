@@ -1,0 +1,15 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/data_memory_interface/synth.json"
+
+hierarchy -top data_memory_interface
+
+# Map sequential cells to the target standard-cell library.
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+# Map combinational logic to the same library.
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+opt_clean -purge
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/incremental-mapped/partitions/data_memory_interface/mapped.json"
+
+write_verilog -noattr -noexpr -nodec     "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/incremental-mapped/partitions/data_memory_interface/mapped_netlist.v"

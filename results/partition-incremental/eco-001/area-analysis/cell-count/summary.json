@@ -1,0 +1,117 @@
+{
+  "metric": "generic_cell_count_area_proxy",
+  "top_module": "riscv_core",
+  "full_total_cells": 7482,
+  "incremental_total_cells": 7623,
+  "delta_cells": 141,
+  "cell_overhead_percent": 1.884522854851644,
+  "incremental_to_full_ratio": 1.0188452285485163,
+  "note": "This is a logic-size proxy based on generic synthesized cell counts, not physical silicon area.",
+  "cell_types": [
+    {
+      "cell_type": "$_ANDNOT_",
+      "full_count": 195,
+      "incremental_count": 211,
+      "delta": 16,
+      "delta_percent": 8.205128205128204
+    },
+    {
+      "cell_type": "$_AND_",
+      "full_count": 1320,
+      "incremental_count": 1422,
+      "delta": 102,
+      "delta_percent": 7.727272727272727
+    },
+    {
+      "cell_type": "$_DFFE_PP0P_",
+      "full_count": 2,
+      "incremental_count": 31,
+      "delta": 29,
+      "delta_percent": 1450.0
+    },
+    {
+      "cell_type": "$_DFFE_PP1P_",
+      "full_count": 0,
+      "incremental_count": 1,
+      "delta": 1,
+      "delta_percent": null
+    },
+    {
+      "cell_type": "$_DFFE_PP_",
+      "full_count": 992,
+      "incremental_count": 992,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    {
+      "cell_type": "$_DFF_PP0_",
+      "full_count": 29,
+      "incremental_count": 0,
+      "delta": -29,
+      "delta_percent": -100.0
+    },
+    {
+      "cell_type": "$_DFF_PP1_",
+      "full_count": 1,
+      "incremental_count": 0,
+      "delta": -1,
+      "delta_percent": -100.0
+    },
+    {
+      "cell_type": "$_MUX_",
+      "full_count": 1284,
+      "incremental_count": 1277,
+      "delta": -7,
+      "delta_percent": -0.5451713395638629
+    },
+    {
+      "cell_type": "$_NAND_",
+      "full_count": 1890,
+      "incremental_count": 1933,
+      "delta": 43,
+      "delta_percent": 2.2751322751322753
+    },
+    {
+      "cell_type": "$_NOR_",
+      "full_count": 290,
+      "incremental_count": 331,
+      "delta": 41,
+      "delta_percent": 14.13793103448276
+    },
+    {
+      "cell_type": "$_NOT_",
+      "full_count": 25,
+      "incremental_count": 29,
+      "delta": 4,
+      "delta_percent": 16.0
+    },
+    {
+      "cell_type": "$_ORNOT_",
+      "full_count": 685,
+      "incremental_count": 684,
+      "delta": -1,
+      "delta_percent": -0.145985401459854
+    },
+    {
+      "cell_type": "$_OR_",
+      "full_count": 640,
+      "incremental_count": 597,
+      "delta": -43,
+      "delta_percent": -6.71875
+    },
+    {
+      "cell_type": "$_XNOR_",
+      "full_count": 55,
+      "incremental_count": 57,
+      "delta": 2,
+      "delta_percent": 3.6363636363636362
+    },
+    {
+      "cell_type": "$_XOR_",
+      "full_count": 74,
+      "incremental_count": 58,
+      "delta": -16,
+      "delta_percent": -21.62162162162162
+    }
+  ]
+}

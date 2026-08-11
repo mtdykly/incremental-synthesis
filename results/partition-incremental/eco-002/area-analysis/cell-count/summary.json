@@ -1,0 +1,117 @@
+{
+  "metric": "generic_cell_count_area_proxy",
+  "top_module": "riscv_core",
+  "full_total_cells": 7476,
+  "incremental_total_cells": 7451,
+  "delta_cells": -25,
+  "cell_overhead_percent": -0.33440342429106473,
+  "incremental_to_full_ratio": 0.9966559657570894,
+  "note": "This is a logic-size proxy based on generic synthesized cell counts, not physical silicon area.",
+  "cell_types": [
+    {
+      "cell_type": "$_ANDNOT_",
+      "full_count": 180,
+      "incremental_count": 199,
+      "delta": 19,
+      "delta_percent": 10.555555555555555
+    },
+    {
+      "cell_type": "$_AND_",
+      "full_count": 1277,
+      "incremental_count": 1325,
+      "delta": 48,
+      "delta_percent": 3.7588097102584186
+    },
+    {
+      "cell_type": "$_DFFE_PP_",
+      "full_count": 992,
+      "incremental_count": 992,
+      "delta": 0,
+      "delta_percent": 0.0
+    },
+    {
+      "cell_type": "$_MUX_",
+      "full_count": 1303,
+      "incremental_count": 1369,
+      "delta": 66,
+      "delta_percent": 5.065234075211052
+    },
+    {
+      "cell_type": "$_NAND_",
+      "full_count": 1887,
+      "incremental_count": 1837,
+      "delta": -50,
+      "delta_percent": -2.6497085320614735
+    },
+    {
+      "cell_type": "$_NOR_",
+      "full_count": 249,
+      "incremental_count": 289,
+      "delta": 40,
+      "delta_percent": 16.06425702811245
+    },
+    {
+      "cell_type": "$_NOT_",
+      "full_count": 22,
+      "incremental_count": 26,
+      "delta": 4,
+      "delta_percent": 18.181818181818183
+    },
+    {
+      "cell_type": "$_ORNOT_",
+      "full_count": 753,
+      "incremental_count": 659,
+      "delta": -94,
+      "delta_percent": -12.48339973439575
+    },
+    {
+      "cell_type": "$_OR_",
+      "full_count": 656,
+      "incremental_count": 603,
+      "delta": -53,
+      "delta_percent": -8.079268292682928
+    },
+    {
+      "cell_type": "$_SDFFE_PP0P_",
+      "full_count": 2,
+      "incremental_count": 31,
+      "delta": 29,
+      "delta_percent": 1450.0
+    },
+    {
+      "cell_type": "$_SDFFE_PP1P_",
+      "full_count": 0,
+      "incremental_count": 1,
+      "delta": 1,
+      "delta_percent": null
+    },
+    {
+      "cell_type": "$_SDFF_PP0_",
+      "full_count": 29,
+      "incremental_count": 0,
+      "delta": -29,
+      "delta_percent": -100.0
+    },
+    {
+      "cell_type": "$_SDFF_PP1_",
+      "full_count": 1,
+      "incremental_count": 0,
+      "delta": -1,
+      "delta_percent": -100.0
+    },
+    {
+      "cell_type": "$_XNOR_",
+      "full_count": 59,
+      "incremental_count": 60,
+      "delta": 1,
+      "delta_percent": 1.694915254237288
+    },
+    {
+      "cell_type": "$_XOR_",
+      "full_count": 66,
+      "incremental_count": 60,
+      "delta": -6,
+      "delta_percent": -9.090909090909092
+    }
+  ]
+}
