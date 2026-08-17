@@ -1,0 +1,302 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/linked/run_link_partitions.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/top-shell/top_shell.rtlil
+
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/cs_registers_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/ex_stage_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/id_stage_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+
+5. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/if_stage_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+
+6. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/load_store_unit_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+
+7. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/partitions/sleep_unit_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+8.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+Removed 0 unused modules.
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i...
+Checking module cv32e40p_core...
+Checking module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i...
+Checking module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i...
+Checking module cv32e40p_id_stage$cv32e40p_core.id_stage_i...
+Checking module cv32e40p_if_stage$cv32e40p_core.if_stage_i...
+Checking module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i...
+Found and reported 0 problems.
+
+10. Printing statistics.
+
+=== cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+       24 wire bits
+       20 public wires
+       20 public wire bits
+       16 ports
+       16 port bits
+       11 cells
+        1   $_ANDNOT_
+        2   $_AND_
+        1   $_DFFE_PN0P_
+        1   $_DFF_PN0_
+        1   $_DLATCH_N_
+        1   $_NAND_
+        2   $_NOR_
+        2   $_OR_
+
+=== cv32e40p_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      209 wires
+     2628 wire bits
+      207 public wires
+     2626 public wire bits
+       40 ports
+      537 port bits
+       24 cells
+       22   $_AND_
+        2   $_OR_
+        6 submodules
+        1   cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+        1   cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+        1   cv32e40p_id_stage$cv32e40p_core.id_stage_i
+        1   cv32e40p_if_stage$cv32e40p_core.if_stage_i
+        1   cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+        1   cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+=== cv32e40p_cs_registers$cv32e40p_core.cs_registers_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     3037 wires
+     5146 wire bits
+      104 public wires
+     2213 public wire bits
+       67 ports
+     1371 port bits
+     3793 cells
+      120   $_ANDNOT_
+      862   $_AND_
+      362   $_DFFE_PN0P_
+        4   $_DFFE_PN1P_
+       96   $_DFF_PN0_
+        2   $_DFF_PN1_
+      536   $_MUX_
+     1229   $_NAND_
+       32   $_NOR_
+       11   $_NOT_
+      209   $_ORNOT_
+      135   $_OR_
+        9   $_XNOR_
+      186   $_XOR_
+
+=== cv32e40p_ex_stage$cv32e40p_core.ex_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    20305 wires
+    21258 wire bits
+      113 public wires
+     1066 public wire bits
+       86 ports
+      843 port bits
+    20461 cells
+     1011   $_ANDNOT_
+     3095   $_AND_
+      113   $_DFFE_PN0P_
+        6   $_DFF_PN0_
+        2   $_DFF_PN1_
+     1417   $_MUX_
+     8200   $_NAND_
+      245   $_NOR_
+      173   $_NOT_
+      586   $_ORNOT_
+      842   $_OR_
+      770   $_XNOR_
+     4001   $_XOR_
+
+=== cv32e40p_id_stage$cv32e40p_core.id_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    12097 wires
+    15575 wire bits
+      257 public wires
+     3735 public wire bits
+      151 ports
+     1191 port bits
+    15029 cells
+      366   $_ANDNOT_
+     3358   $_AND_
+     1575   $_DFFE_PN0P_
+        3   $_DFFE_PN1P_
+       48   $_DFF_PN0_
+        1   $_DFF_PN1_
+     2726   $_MUX_
+     4512   $_NAND_
+      379   $_NOR_
+       47   $_NOT_
+      757   $_ORNOT_
+      852   $_OR_
+      269   $_XNOR_
+      136   $_XOR_
+
+=== cv32e40p_if_stage$cv32e40p_core.if_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2180 wires
+     3087 wire bits
+       85 public wires
+      992 public wire bits
+       41 ports
+      535 port bits
+     2649 cells
+      143   $_ANDNOT_
+      511   $_AND_
+       32   $_DFFE_PN0N_
+      253   $_DFFE_PN0P_
+        5   $_DFF_PN0_
+        1   $_DFF_PN1_
+      416   $_MUX_
+      637   $_NAND_
+      122   $_NOR_
+       16   $_NOT_
+      117   $_ORNOT_
+      305   $_OR_
+       79   $_XNOR_
+       12   $_XOR_
+
+=== cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      668 wires
+      999 wire bits
+       44 public wires
+      375 public wire bits
+       32 ports
+      265 port bits
+      811 cells
+       11   $_ANDNOT_
+      118   $_AND_
+       42   $_DFFE_PN0P_
+      182   $_MUX_
+      308   $_NAND_
+        4   $_NOR_
+        4   $_NOT_
+       44   $_ORNOT_
+       44   $_OR_
+       20   $_XNOR_
+       34   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    42778 cv32e40p_core
+     3793 cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+    20461 cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+    15029 cv32e40p_id_stage$cv32e40p_core.id_stage_i
+     2649 cv32e40p_if_stage$cv32e40p_core.if_stage_i
+      811 cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+       11 cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+        +----------Count including submodules.
+        | 
+    38520 wires
+    48717 wire bits
+      830 public wires
+    11027 public wire bits
+      433 ports
+     4758 port bits
+        - memories
+        - memory bits
+        - processes
+    42778 cells
+     1652   $_ANDNOT_
+     7968   $_AND_
+       32   $_DFFE_PN0N_
+     2346   $_DFFE_PN0P_
+        7   $_DFFE_PN1P_
+      156   $_DFF_PN0_
+        6   $_DFF_PN1_
+        1   $_DLATCH_N_
+     5277   $_MUX_
+    14887   $_NAND_
+      784   $_NOR_
+      251   $_NOT_
+     1713   $_ORNOT_
+     2182   $_OR_
+     1147   $_XNOR_
+     4369   $_XOR_
+        6 submodules
+        1   cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+        1   cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+        1   cv32e40p_id_stage$cv32e40p_core.id_stage_i
+        1   cv32e40p_if_stage$cv32e40p_core.if_stage_i
+        1   cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+        1   cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+11. Executing JSON backend.
+
+12. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental-profiled/linked/linked.rtlil
+
+13. Executing Verilog backend.
+Dumping module `\cv32e40p_core'.
+Dumping module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Dumping module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Dumping module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Dumping module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Dumping module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Dumping module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+
+End of script. Logfile hash: 6370fa453f, time: 0.73s, user: 1.39s, system: 0.11s, MEM: 70.96 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 28% 2x write_json (0 sec), 19% 2x write_verilog (0 sec), ...

@@ -1,0 +1,159 @@
+{
+  "case_name": "cv32e40p-eco-001",
+  "timing_policy": {
+    "base_cache_build_included": false,
+    "equivalence_check_included": false,
+    "linked_design_check_in_core_time": false,
+    "main_incremental_time": "pipeline_core_seconds"
+  },
+  "reuse_plan": {
+    "reusable_partitions": [
+      "cs_registers_i",
+      "ex_stage_i",
+      "if_stage_i",
+      "load_store_unit_i",
+      "sleep_unit_i"
+    ],
+    "dirty_partitions": [
+      "id_stage_i"
+    ],
+    "top_shell": {
+      "reasons": [
+        "top_environment_changed",
+        "top_implementation_changed"
+      ],
+      "status": "rebuild"
+    }
+  },
+  "detection": {
+    "phase_wall_seconds": 12.360651,
+    "export_hierarchy_seconds": 2.18,
+    "extract_partitions_seconds": 0.18,
+    "prepare_partition_frontends_seconds": 8.92,
+    "compute_signatures_seconds": 1.0,
+    "compare_signatures_seconds": 0.05,
+    "partition_frontend_yosys": [
+      {
+        "partition": "cs_registers_i",
+        "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+        "yosys_seconds": 1.33
+      },
+      {
+        "partition": "ex_stage_i",
+        "root_module": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+        "yosys_seconds": 1.25
+      },
+      {
+        "partition": "id_stage_i",
+        "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+        "yosys_seconds": 2.36
+      },
+      {
+        "partition": "if_stage_i",
+        "root_module": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+        "yosys_seconds": 1.2
+      },
+      {
+        "partition": "load_store_unit_i",
+        "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+        "yosys_seconds": 1.14
+      },
+      {
+        "partition": "sleep_unit_i",
+        "root_module": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+        "yosys_seconds": 1.12
+      }
+    ]
+  },
+  "build": {
+    "phase_wall_seconds": 14.857117,
+    "materialize_partitions_seconds": 12.89,
+    "top_shell_seconds": 0.9,
+    "link_partitions_seconds": 0.96,
+    "check_linked_seconds": 9.2,
+    "materialization": {
+      "partitions": [
+        {
+          "partition": "cs_registers_i",
+          "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/cs_registers_i",
+          "reasons": [],
+          "action_wall_seconds": 0.01589,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "d18f514a1032d1cc9d91e29fdf3671ae28c8b922bb38e96d8b27781c5f21c7bd"
+        },
+        {
+          "partition": "ex_stage_i",
+          "root_module": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/ex_stage_i",
+          "reasons": [],
+          "action_wall_seconds": 0.022509,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "c1efd2407efced34f750a2000f2ea958c33e0b96f48fbfbd02d200bccbda11dc"
+        },
+        {
+          "partition": "id_stage_i",
+          "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+          "action": "rebuild",
+          "source_kind": "new_synthesis",
+          "source_path": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new",
+          "reasons": [
+            "implementation_changed"
+          ],
+          "action_wall_seconds": 11.64749,
+          "yosys_seconds": 11.57,
+          "partition_netlist_sha256": "ebb5c3cba1d836026f0fd73cc56ea668dc3e389277fbc3c98ba59b309185f835"
+        },
+        {
+          "partition": "if_stage_i",
+          "root_module": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/if_stage_i",
+          "reasons": [],
+          "action_wall_seconds": 0.017241,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "6237747debbd4cacf321efea28b624ef26358377a10abdffb222c717a439b57c"
+        },
+        {
+          "partition": "load_store_unit_i",
+          "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/load_store_unit_i",
+          "reasons": [],
+          "action_wall_seconds": 0.010654,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "c9087ec189da28d2aa7915f4f7921cfba71fe3813cde4416e2d98594b1419d0d"
+        },
+        {
+          "partition": "sleep_unit_i",
+          "root_module": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/sleep_unit_i",
+          "reasons": [],
+          "action_wall_seconds": 0.007694,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "8d87d099bb4bd747c29dc39b162ef0f1bcfdb9b3d298170f087c0c5e3c77fb42"
+        }
+      ],
+      "reuse_count": 5,
+      "rebuild_count": 1,
+      "reuse_copy_seconds": 0.07398800000000001,
+      "rebuild_wall_seconds": 11.64749,
+      "rebuild_yosys_seconds": 11.57,
+      "partition_action_seconds": 11.721478000000001
+    }
+  },
+  "totals": {
+    "pipeline_core_seconds": 27.26918,
+    "pipeline_with_check_seconds": 36.505132,
+    "profiled_stage_sum_seconds": 27.080000000000002,
+    "unattributed_core_overhead_seconds": 0.1891799999999968
+  }
+}

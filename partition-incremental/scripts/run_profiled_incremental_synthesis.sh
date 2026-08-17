@@ -4,10 +4,10 @@ set -euo pipefail
 
 usage() {
     echo "Usage:"
-    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [profile_json]"
+    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [profile_json] [top_module]"
 }
 
-if [[ $# -lt 3 || $# -gt 4 ]]; then
+if [[ $# -lt 3 || $# -gt 5 ]]; then
     usage
     exit 1
 fi
@@ -15,7 +15,7 @@ fi
 CASE_NAME="$1"
 BASE_SOURCE_DIR="$(realpath "$2")"
 NEW_SOURCE_DIR="$(realpath "$3")"
-
+TOP_MODULE="${5:-riscv_core}"
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 BASE_OUT="$CASE_OUT/base"
@@ -126,17 +126,14 @@ run_timed export_hierarchy \
     "$EXPORT_HIERARCHY" \
         "$NEW_SOURCE_DIR" \
         "$NEW_OUT" \
-        riscv_core
+        "$TOP_MODULE"
 
 echo
 echo "============================================================"
 echo "Detection 2/5: extract partitions"
 echo "============================================================"
 run_timed extract_partitions \
-    python3 "$EXTRACT_PARTITIONS" \
-        "$NEW_HIER_JSON" \
-        --top riscv_core \
-        --output "$NEW_MANIFEST"
+    python3 "$EXTRACT_PARTITIONS" "$NEW_HIER_JSON" --top "$TOP_MODULE" --output "$NEW_MANIFEST"
 
 echo
 echo "============================================================"
@@ -189,7 +186,7 @@ then
 fi
 
 if [[ "$TOP_SHELL_ACTION" == "reuse" \
-   && ! -s "$BASE_TOP_SHELL/top_shell_netlist.v" ]]
+   && ! -s "$BASE_TOP_SHELL/top_shell.rtlil" ]]
 then
     echo "ERROR: Base top-shell cache is missing."
     echo "Create it before profiling so Base cache construction is not timed:"
@@ -252,7 +249,7 @@ echo "Build 3/4: link top shell and partitions"
 echo "============================================================"
 run_timed link_partitions \
     "$LINK_PARTITIONS" \
-        "$INCREMENTAL_OUT/top-shell/top_shell_netlist.v" \
+        "$INCREMENTAL_OUT/top-shell/top_shell.rtlil" \
         "$NEW_MANIFEST" \
         "$INCREMENTAL_OUT/partitions" \
         "$INCREMENTAL_OUT/linked"

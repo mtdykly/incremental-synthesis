@@ -1,0 +1,20 @@
+{
+  "benchmark": "cv32e40p",
+  "upstream_commit": "e11ee1983ac529a2d0e943fbc4b0e53e0f14a099",
+  "logical_top": "cv32e40p_core",
+  "frontend_adapter": "slang_proc_mux_lowering_write_verilog",
+  "keep_hierarchy": true,
+  "configuration": {
+    "COREV_PULP": 1,
+    "COREV_CLUSTER": 0,
+    "FPU": 0
+  },
+  "frontend_lowering": [
+    "proc",
+    "pmuxtree",
+    "bmuxmap",
+    "demuxmap",
+    "bwmuxmap"
+  ],
+  "normalized_source": "core/common/normalized_cv32e40p.v"
+}

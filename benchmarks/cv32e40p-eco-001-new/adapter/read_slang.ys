@@ -1,0 +1,18 @@
+read_slang --keep-hierarchy --top cv32e40p_core /tmp/tmp.d0OB88AdrH/source/000_cv32e40p_apu_core_pkg.sv /tmp/tmp.d0OB88AdrH/source/001_cv32e40p_fpu_pkg.sv /tmp/tmp.d0OB88AdrH/source/002_cv32e40p_pkg.sv /tmp/tmp.d0OB88AdrH/source/003_cv32e40p_if_stage.sv /tmp/tmp.d0OB88AdrH/source/004_cv32e40p_cs_registers.sv /tmp/tmp.d0OB88AdrH/source/005_cv32e40p_register_file_ff.sv /tmp/tmp.d0OB88AdrH/source/006_cv32e40p_load_store_unit.sv /tmp/tmp.d0OB88AdrH/source/007_cv32e40p_id_stage.sv /tmp/tmp.d0OB88AdrH/source/008_cv32e40p_aligner.sv /tmp/tmp.d0OB88AdrH/source/009_cv32e40p_decoder.sv /tmp/tmp.d0OB88AdrH/source/010_cv32e40p_compressed_decoder.sv /tmp/tmp.d0OB88AdrH/source/011_cv32e40p_fifo.sv /tmp/tmp.d0OB88AdrH/source/012_cv32e40p_prefetch_buffer.sv /tmp/tmp.d0OB88AdrH/source/013_cv32e40p_hwloop_regs.sv /tmp/tmp.d0OB88AdrH/source/014_cv32e40p_mult.sv /tmp/tmp.d0OB88AdrH/source/015_cv32e40p_int_controller.sv /tmp/tmp.d0OB88AdrH/source/016_cv32e40p_ex_stage.sv /tmp/tmp.d0OB88AdrH/source/017_cv32e40p_alu_div.sv /tmp/tmp.d0OB88AdrH/source/018_cv32e40p_alu.sv /tmp/tmp.d0OB88AdrH/source/019_cv32e40p_ff_one.sv /tmp/tmp.d0OB88AdrH/source/020_cv32e40p_popcnt.sv /tmp/tmp.d0OB88AdrH/source/021_cv32e40p_apu_disp.sv /tmp/tmp.d0OB88AdrH/source/022_cv32e40p_controller.sv /tmp/tmp.d0OB88AdrH/source/023_cv32e40p_obi_interface.sv /tmp/tmp.d0OB88AdrH/source/024_cv32e40p_prefetch_controller.sv /tmp/tmp.d0OB88AdrH/source/025_cv32e40p_sleep_unit.sv /tmp/tmp.d0OB88AdrH/source/026_cv32e40p_core.sv /tmp/tmp.d0OB88AdrH/source/027_cv32e40p_sim_clock_gate.sv
+
+hierarchy -check -top cv32e40p_core
+
+proc
+
+pmuxtree
+bmuxmap
+demuxmap
+bwmuxmap
+
+check
+
+write_json /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/adapter/slang_lowered.json
+
+write_verilog -noattr /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v
+
+stat -top cv32e40p_core

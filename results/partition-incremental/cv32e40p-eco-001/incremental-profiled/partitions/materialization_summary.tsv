@@ -1,0 +1,7 @@
+partition	root_module	action	source	action_wall_seconds	yosys_seconds
+cs_registers_i	cv32e40p_cs_registers$cv32e40p_core.cs_registers_i	reuse	base_cache	0.018258	0.000000
+ex_stage_i	cv32e40p_ex_stage$cv32e40p_core.ex_stage_i	reuse	base_cache	0.034995	0.000000
+id_stage_i	cv32e40p_id_stage$cv32e40p_core.id_stage_i	rebuild	new_synthesis	11.601072	11.53
+if_stage_i	cv32e40p_if_stage$cv32e40p_core.if_stage_i	reuse	base_cache	0.015870	0.000000
+load_store_unit_i	cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i	reuse	base_cache	0.010543	0.000000
+sleep_unit_i	cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i	reuse	base_cache	0.006615	0.000000

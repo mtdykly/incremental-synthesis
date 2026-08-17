@@ -1,0 +1,10 @@
+read_verilog -sv -I/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v"
+
+hierarchy -check -top cv32e40p_core
+
+script /workspace/incremental-synthesis/partition-incremental/yosys/export_hierarchy.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/frontend_hier.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/frontend_hier.rtlil"
+
+stat -top cv32e40p_core

@@ -4,7 +4,7 @@ set -euo pipefail
 
 usage() {
     echo "Usage:"
-    echo "  $0 <case_name> <base_source_dir> <new_source_dir>"
+    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [top_module]"
     echo
     echo "Example:"
     echo "  $0 eco-001 \\"
@@ -34,6 +34,9 @@ BASE_MANIFEST="$BASE_OUT/partition_manifest.json"
 BASE_HIER_JSON="$BASE_OUT/frontend_hier.json"
 
 NEW_MANIFEST="$NEW_OUT/partition_manifest.json"
+TOP_MODULE="$(
+    jq -r '.top.module_name' "$NEW_MANIFEST"
+)"
 NEW_HIER_JSON="$NEW_OUT/frontend_hier.json"
 
 MATERIALIZE_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/materialize_incremental_partitions.sh"
@@ -113,7 +116,7 @@ if [[ "$TOP_SHELL_ACTION" == "reuse" ]]; then
 
     # 如果以前没有为该 ECO 建立 Base top shell，
     # 先生成一次作为缓存。
-    if [[ ! -s "$BASE_TOP_SHELL/top_shell_netlist.v" ]]; then
+    if [[ ! -s "$BASE_TOP_SHELL/top_shell.rtlil" ]]; then
         echo "Base top-shell cache does not exist."
         echo "Generating Base top shell..."
 
@@ -157,9 +160,9 @@ jq -n \
     > "$INCREMENTAL_OUT/top-shell/materialization_info.json"
 
 if [[ ! -s \
-  "$INCREMENTAL_OUT/top-shell/top_shell_netlist.v" ]]
+  "$INCREMENTAL_OUT/top-shell/top_shell.rtlil" ]]
 then
-    echo "ERROR: top shell netlist was not generated."
+    echo "ERROR: top shell RTLIL was not generated."
     exit 1
 fi
 
@@ -169,7 +172,7 @@ echo "3. Link top shell and partitions"
 echo "============================================================"
 
 "$LINK_PARTITIONS" \
-    "$INCREMENTAL_OUT/top-shell/top_shell_netlist.v" \
+    "$INCREMENTAL_OUT/top-shell/top_shell.rtlil" \
     "$NEW_MANIFEST" \
     "$INCREMENTAL_OUT/partitions" \
     "$INCREMENTAL_OUT/linked"
@@ -199,9 +202,9 @@ else
     echo "WARNING: check_linked_design.sh not found."
     echo "Only running a basic Yosys check."
 
-    cat > "$INCREMENTAL_OUT/check_linked.ys" <<YOSYS
+cat > "$INCREMENTAL_OUT/check_linked.ys" <<YOSYS
 read_json "$INCREMENTAL_OUT/linked/linked.json"
-hierarchy -check -top riscv_core
+hierarchy -check -top $TOP_MODULE
 check
 YOSYS
 

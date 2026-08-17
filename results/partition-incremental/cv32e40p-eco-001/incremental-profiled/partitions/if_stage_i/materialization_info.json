@@ -1,0 +1,11 @@
+{
+  "partition": "if_stage_i",
+  "root_module": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/if_stage_i",
+  "reasons": [],
+  "action_wall_seconds": 0.01587,
+  "yosys_seconds": 0,
+  "partition_netlist_sha256": "6237747debbd4cacf321efea28b624ef26358377a10abdffb222c717a439b57c"
+}

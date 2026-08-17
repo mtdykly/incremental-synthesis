@@ -1,0 +1,9 @@
+{
+  "gate_hash": "4ed0c1e34e04df531a581be14721b03da215f6b6cee8b2869f066e9384f23840",
+  "gate_json": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/top-shell/top_shell.json",
+  "generated_cell_name_policy": "ignore_yosys_generated_names_and_use_connectivity_refined_structural_ids",
+  "gold_hash": "4ed0c1e34e04df531a581be14721b03da215f6b6cee8b2869f066e9384f23840",
+  "gold_json": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/verification/certified-compositional/reference/top-shell/top_shell.json",
+  "status": "PASS",
+  "top_module": "cv32e40p_core"
+}

@@ -1,0 +1,16 @@
+read_verilog -sv -I/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core -I/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v"
+
+hierarchy -check -top cv32e40p_id_stage$cv32e40p_core.id_stage_i
+
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/id_stage_i/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/id_stage_i/frontend.rtlil"
+
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/id_stage_i/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/id_stage_i/flattened.rtlil"
+stat -top cv32e40p_id_stage$cv32e40p_core.id_stage_i

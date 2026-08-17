@@ -1,0 +1,3105 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/adapter/read_slang.ys' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    cv32e40p_core
+
+[36m../../tmp/tmp.rnnXQkHmMU/source/013_cv32e40p_hwloop_regs.sv[0m:[96m98[0m[96m:7[0m: [93mwarning: [0m[1masynchronous load value missing for variable '\i'[0m
+      hwlp_counter_q <= '{default: 32'b0};
+[92m      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[36m../../tmp/tmp.rnnXQkHmMU/source/013_cv32e40p_hwloop_regs.sv[0m:[96m96[0m[96m:14[0m: [90mnote: [0masynchronous load pattern implied by edge sensitivity on multiple signals
+  always_ff @(posedge clk, negedge rst_n) begin : HWLOOP_REGS_COUNTER
+[92m             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Build succeeded: 0 errors, 1 warning
+
+1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$101'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$68'.
+Found and cleaned up 1 empty switch in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$19'.
+Found and cleaned up 1 empty switch in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$10'.
+Found and cleaned up 1 empty switch in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$3'.
+Found and cleaned up 1 empty switch in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$56'.
+Found and cleaned up 1 empty switch in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$43'.
+Found and cleaned up 1 empty switch in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$8'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$97'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$84'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$72'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$48'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$19'.
+Found and cleaned up 1 empty switch in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$131'.
+Found and cleaned up 1 empty switch in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$53'.
+Found and cleaned up 1 empty switch in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$36'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$539'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$518'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$426'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$418'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$357'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$327'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$319'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$285'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$266'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$238'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$232'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$182'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$120'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$85'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$29'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$14'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$3'.
+Found and cleaned up 1 empty switch in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$14'.
+Removing empty process `cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$0'.
+Found and cleaned up 1 empty switch in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$688'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$685'.
+Found and cleaned up 1 empty switch in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$680'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$657'.
+Found and cleaned up 1 empty switch in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$631'.
+Found and cleaned up 1 empty switch in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$584'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$541'.
+Found and cleaned up 1 empty switch in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$0'.
+Found and cleaned up 1 empty switch in `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.$0'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$431'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$424'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$417'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$410'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$403'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$396'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$389'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$382'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$375'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$368'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$361'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$354'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$347'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$340'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$333'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$326'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$319'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$312'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$305'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$298'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$291'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$284'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$277'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$270'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$263'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$256'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$249'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$242'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$235'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$228'.
+Found and cleaned up 1 empty switch in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$221'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$218'.
+Found and cleaned up 1 empty switch in `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.$0'.
+Found and cleaned up 1 empty switch in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$16'.
+Found and cleaned up 1 empty switch in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$5'.
+Found and cleaned up 1 empty switch in `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.$0'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$756'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$753'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$749'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$686'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$648'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$642'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$635'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$286'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$130'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$119'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$78'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$26'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$14'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$2'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$144'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$139'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$95'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$74'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$71'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$52'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$33'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$30'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$16'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$13'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$0'.
+Found and cleaned up 1 empty switch in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$72'.
+Found and cleaned up 1 empty switch in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$24'.
+Found and cleaned up 1 empty switch in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$0'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$417'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$190'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$183'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$179'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$174'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$149'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$144'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$141'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$138'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$135'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$132'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$125'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$122'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$119'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$111'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$108'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$104'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$101'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$98'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$95'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$87'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$20'.
+Found and cleaned up 1 empty switch in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$25'.
+Found and cleaned up 1 empty switch in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$13'.
+Found and cleaned up 1 empty switch in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$5'.
+Found and cleaned up 1 empty switch in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$0'.
+Removing empty process `cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i.$13'.
+Cleaned up 121 empty switches.
+
+1.2. Executing TRIBUF pass.
+
+1.3. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $68 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $10 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 3 switch rules as full_case in process $3 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 6 switch rules as full_case in process $8 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 5 switch rules as full_case in process $84 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 4 switch rules as full_case in process $72 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $48 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 7 switch rules as full_case in process $19 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 4 switch rules as full_case in process $131 in module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Marked 2 switch rules as full_case in process $53 in module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Marked 2 switch rules as full_case in process $36 in module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Marked 4 switch rules as full_case in process $426 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 2 switch rules as full_case in process $418 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 4 switch rules as full_case in process $357 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 10 switch rules as full_case in process $327 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 5 switch rules as full_case in process $319 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 2 switch rules as full_case in process $238 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 1 switch rules as full_case in process $232 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 1 switch rules as full_case in process $182 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 1 switch rules as full_case in process $120 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 3 switch rules as full_case in process $85 in module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Marked 5 switch rules as full_case in process $29 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 63 switch rules as full_case in process $14 in module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Marked 6 switch rules as full_case in process $688 in module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Marked 10 switch rules as full_case in process $631 in module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Marked 4 switch rules as full_case in process $584 in module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Marked 2 switch rules as full_case in process $680 in module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Marked 109 switch rules as full_case in process $0 in module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Marked 166 switch rules as full_case in process $0 in module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.
+Marked 2 switch rules as full_case in process $424 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $417 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $410 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $403 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $396 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $389 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $382 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $375 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $368 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $361 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $354 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $347 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $340 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $333 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $326 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $319 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $312 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $305 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $298 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $291 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $284 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $277 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $270 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $263 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $256 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $249 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $242 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $235 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $228 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $221 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 2 switch rules as full_case in process $431 in module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Marked 36 switch rules as full_case in process $0 in module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.
+Marked 10 switch rules as full_case in process $16 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 2 switch rules as full_case in process $5 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 4 switch rules as full_case in process $642 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 4 switch rules as full_case in process $635 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 1 switch rules as full_case in process $286 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 1 switch rules as full_case in process $130 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 4 switch rules as full_case in process $648 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 1 switch rules as full_case in process $78 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 14 switch rules as full_case in process $26 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 1 switch rules as full_case in process $14 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 1 switch rules as full_case in process $2 in module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Marked 3 switch rules as full_case in process $95 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 2 switch rules as full_case in process $74 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $71 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 17 switch rules as full_case in process $52 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 17 switch rules as full_case in process $33 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $30 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $13 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 13 switch rules as full_case in process $0 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 3 switch rules as full_case in process $72 in module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Marked 3 switch rules as full_case in process $24 in module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Marked 5 switch rules as full_case in process $0 in module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Marked 21 switch rules as full_case in process $190 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $183 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $179 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $174 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $132 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $125 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $122 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $119 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $111 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $108 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $101 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 1 switch rules as full_case in process $95 in module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Marked 2 switch rules as full_case in process $25 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 3 switch rules as full_case in process $13 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 2 switch rules as full_case in process $0 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Removed a total of 0 dead cases.
+
+1.4. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 336 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.5. Executing PROC_INIT pass (extract init attributes).
+
+1.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1015 debug messages>
+
+1.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$68'.
+     1/13: $State_SN$75
+     2/13: $State_SN$74
+     3/13: $State_SN$73
+     4/13: $LoadEn_S$72
+     5/13: $BRegEn_S$71
+     6/13: $ARegEn_S$70
+     7/13: $OutVld_SO$69
+     8/13: $State_SN$81
+     9/13: $LoadEn_S$80
+    10/13: $ResRegEn_S$79
+    11/13: $BRegEn_S$78
+    12/13: $ARegEn_S$77
+    13/13: $OutVld_SO$76
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$19'.
+     1/5: $gen_no_trans_stable.obi_atop_q$29
+     2/5: $gen_no_trans_stable.obi_wdata_q$28
+     3/5: $gen_no_trans_stable.obi_be_q$27
+     4/5: $gen_no_trans_stable.obi_we_q$26
+     5/5: $gen_no_trans_stable.obi_addr_q$25
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$10'.
+     1/6: $obi_atop_o$17
+     2/6: $obi_wdata_o$16
+     3/6: $obi_be_o$15
+     4/6: $obi_we_o$14
+     5/6: $obi_addr_o$13
+     6/6: $obi_req_o$12
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$3'.
+     1/3: $next_state$7
+     2/3: $next_state$8
+     3/3: $next_state$6
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$56'.
+     1/1: $mem_q$60
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$43'.
+     1/3: $status_cnt_q$55
+     2/3: $write_pointer_q$54
+     3/3: $read_pointer_q$53
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$8'.
+     1/9: $status_cnt_n$41
+     2/9: $read_pointer_n$32
+     3/9: $status_cnt_n$35
+     4/9: $read_pointer_n$34
+     5/9: $write_pointer_n$22
+     6/9: $mem_n$27
+     7/9: $status_cnt_n$26
+     8/9: $write_pointer_n$25
+     9/9: $gate_clock$24
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$97'.
+     1/1: $trans_addr_q$103
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$84'.
+     1/4: $next_flush_cnt$93
+     2/4: $next_flush_cnt$94
+     3/4: $next_flush_cnt$95
+     4/4: $next_flush_cnt$89
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$72'.
+     1/6: $hwlp_flush_cnt_delayed_q$77
+     2/6: $hwlp_flush_after_resp$76
+     3/6: $hwlp_flush_cnt_delayed_q$79
+     4/6: $hwlp_flush_after_resp$78
+     5/6: $hwlp_flush_cnt_delayed_q$81
+     6/6: $hwlp_flush_after_resp$80
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$48'.
+     1/1: $next_cnt$51
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$19'.
+     1/6: $next_state$29
+     2/6: $next_state$31
+     3/6: $trans_addr_o$30
+     4/6: $next_state$26
+     5/6: $trans_addr_o$20
+     6/6: $trans_addr_o$21
+Creating decoders for process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$131'.
+     1/3: $result_o$133
+     2/3: $result_o$132
+     3/3: $result_o$134
+Creating decoders for process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$53'.
+     1/2: $mulh_carry_q$58
+     2/2: $mulh_carry_q$59
+Creating decoders for process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$36'.
+     1/13: $mulh_NS$41
+     2/13: $mulh_NS$40
+     3/13: $mulh_ready$39
+     4/13: $mulh_NS$51
+     5/13: $mulh_ready$50
+     6/13: $mulh_clearcarry$49
+     7/13: $mulh_save$48
+     8/13: $mulh_shift_arith$47
+     9/13: $mulh_signed$46
+    10/13: $mulh_subword$45
+    11/13: $mulh_imm$44
+    12/13: $mulh_active_o$43
+    13/13: $multicycle_o$42
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$539'.
+     1/1: $result_o$544
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$518'.
+     1/1: $reverse_result$519
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$426'.
+     1/3: $bitop_result$430
+     2/3: $bitop_result$429
+     3/3: $bitop_result$431
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$418'.
+     1/2: $ff_input$419
+     2/2: $ff_input$420
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$357'.
+     1/5: $shuffle_byte_sel$361
+     2/5: $shuffle_byte_sel$360
+     3/5: $shuffle_byte_sel$359
+     4/5: $shuffle_byte_sel$358
+     5/5: $shuffle_byte_sel$362
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$327'.
+     1/14: $shuffle_reg_sel$347
+     2/14: $shuffle_reg0_sel$351
+     3/14: $shuffle_reg_sel$350
+     4/14: $shuffle_reg_sel$346
+     5/14: $shuffle_reg_sel$336
+     6/14: $shuffle_through$337
+     7/14: $shuffle_reg_sel$333
+     8/14: $shuffle_through$334
+     9/14: $shuffle_reg_sel$331
+    10/14: $shuffle_reg1_sel$329
+    11/14: $shuffle_through$355
+    12/14: $shuffle_reg0_sel$354
+    13/14: $shuffle_reg1_sel$353
+    14/14: $shuffle_reg_sel$352
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$319'.
+     1/3: $clip_result$324
+     2/3: $clip_result$325
+     3/3: $clip_result$322
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$285'.
+     1/1: $cmp_result$291
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$266'.
+     1/2: $is_greater$283
+     2/2: $is_equal$282
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$238'.
+     1/2: $cmp_signed$239
+     2/2: $cmp_signed$240
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$232'.
+     1/1: $operand_b_eq$234
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$182'.
+     1/1: $shift_right_result$196
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$120'.
+     1/1: $shift_amt_left$121
+Creating decoders for process `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$85'.
+     1/13: $adder_in_a[27]$95
+     2/13: $adder_in_a[18]$94
+     3/13: $adder_in_a[9]$93
+     4/13: $adder_in_b[27]$92
+     5/13: $adder_in_b[18]$91
+     6/13: $adder_in_b[9]$90
+     7/13: $adder_in_b[27]$102
+     8/13: $adder_in_b[18]$101
+     9/13: $adder_in_b[9]$100
+    10/13: $adder_in_b[0]$99
+    11/13: $adder_in_a[27]$98
+    12/13: $adder_in_a[18]$97
+    13/13: $adder_in_a[9]$96
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$29'.
+     1/4: $hwlp_counter_q[63:32]$42
+     2/4: $hwlp_counter_q[63:32]$43
+     3/4: $hwlp_counter_q[31:0]$36
+     4/4: $hwlp_counter_q[31:0]$37
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$14'.
+     1/1: $hwlp_end_q$24
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$3'.
+     1/1: $hwlp_start_q$13
+Creating decoders for process `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$14'.
+     1/32: $irq_id_ctrl_o$15
+     2/32: $irq_id_ctrl_o$16
+     3/32: $irq_id_ctrl_o$17
+     4/32: $irq_id_ctrl_o$18
+     5/32: $irq_id_ctrl_o$19
+     6/32: $irq_id_ctrl_o$20
+     7/32: $irq_id_ctrl_o$21
+     8/32: $irq_id_ctrl_o$22
+     9/32: $irq_id_ctrl_o$23
+    10/32: $irq_id_ctrl_o$24
+    11/32: $irq_id_ctrl_o$25
+    12/32: $irq_id_ctrl_o$26
+    13/32: $irq_id_ctrl_o$27
+    14/32: $irq_id_ctrl_o$28
+    15/32: $irq_id_ctrl_o$29
+    16/32: $irq_id_ctrl_o$30
+    17/32: $irq_id_ctrl_o$31
+    18/32: $irq_id_ctrl_o$32
+    19/32: $irq_id_ctrl_o$33
+    20/32: $irq_id_ctrl_o$34
+    21/32: $irq_id_ctrl_o$35
+    22/32: $irq_id_ctrl_o$36
+    23/32: $irq_id_ctrl_o$37
+    24/32: $irq_id_ctrl_o$38
+    25/32: $irq_id_ctrl_o$39
+    26/32: $irq_id_ctrl_o$40
+    27/32: $irq_id_ctrl_o$41
+    28/32: $irq_id_ctrl_o$42
+    29/32: $irq_id_ctrl_o$43
+    30/32: $irq_id_ctrl_o$44
+    31/32: $irq_id_ctrl_o$45
+    32/32: $irq_id_ctrl_o$46
+Creating decoders for process `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$688'.
+     1/5: $debug_fsm_ns$695
+     2/5: $debug_fsm_ns$693
+     3/5: $debug_fsm_ns$696
+     4/5: $debug_fsm_ns$691
+     5/5: $debug_fsm_ns$692
+Creating decoders for process `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$631'.
+     1/16: $operand_c_fw_mux_sel_o$652
+     2/16: $operand_c_fw_mux_sel_o$655
+     3/16: $operand_b_fw_mux_sel_o$654
+     4/16: $operand_a_fw_mux_sel_o$653
+     5/16: $operand_c_fw_mux_sel_o$648
+     6/16: $operand_b_fw_mux_sel_o$646
+     7/16: $operand_a_fw_mux_sel_o$644
+     8/16: $operand_c_fw_mux_sel_o$651
+     9/16: $operand_b_fw_mux_sel_o$650
+    10/16: $operand_a_fw_mux_sel_o$649
+    11/16: $operand_c_fw_mux_sel_o$638
+    12/16: $operand_b_fw_mux_sel_o$636
+    13/16: $operand_a_fw_mux_sel_o$634
+    14/16: $operand_c_fw_mux_sel_o$641
+    15/16: $operand_b_fw_mux_sel_o$640
+    16/16: $operand_a_fw_mux_sel_o$639
+Creating decoders for process `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$584'.
+     1/6: $jr_stall_o$624
+     2/6: $deassert_we_o$623
+     3/6: $load_stall_o$608
+     4/6: $deassert_we_o$607
+     5/6: $deassert_we_o$587
+     6/6: $deassert_we_o$586
+Creating decoders for process `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$680'.
+     1/2: $debug_req_q$683
+     2/2: $debug_req_q$684
+Creating decoders for process `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$0'.
+     1/422: $ctrl_fsm_ns$495
+     2/422: $ctrl_fsm_ns$500
+     3/422: $csr_save_cause_o$499
+     4/422: $csr_cause_o$498
+     5/422: $csr_save_ex_o$497
+     6/422: $data_err_ack_o$496
+     7/422: $debug_cause_o$487
+     8/422: $debug_cause_o$488
+     9/422: $debug_cause_o$480
+    10/422: $debug_cause_o$481
+    11/422: $debug_cause_o$482
+    12/422: $csr_save_cause_o$486
+    13/422: $csr_save_id_o$485
+    14/422: $debug_csr_save_o$484
+    15/422: $debug_cause_o$483
+    16/422: $pc_mux_o$477
+    17/422: $pc_set_o$476
+    18/422: $ctrl_fsm_ns$475
+    19/422: $debug_mode_n$472
+    20/422: $exc_pc_mux_o$471
+    21/422: $pc_mux_o$470
+    22/422: $pc_set_o$469
+    23/422: $ctrl_fsm_ns$424
+    24/422: $debug_force_wakeup_n$425
+    25/422: $pc_mux_o$423
+    26/422: $pc_set_o$422
+    27/422: $ctrl_fsm_ns$414
+    28/422: $ctrl_fsm_ns$410
+    29/422: $debug_force_wakeup_n$434
+    30/422: $ctrl_fsm_ns$433
+    31/422: $csr_restore_dret_id_o$432
+    32/422: $csr_restore_uret_id_o$431
+    33/422: $csr_restore_mret_id_o$430
+    34/422: $trap_addr_mux_o$429
+    35/422: $exc_pc_mux_o$428
+    36/422: $pc_mux_o$427
+    37/422: $pc_set_o$426
+    38/422: $ctrl_fsm_ns$442
+    39/422: $trap_addr_mux_o$438
+    40/422: $exc_pc_mux_o$437
+    41/422: $pc_mux_o$436
+    42/422: $pc_set_o$435
+    43/422: $ctrl_fsm_ns$407
+    44/422: $debug_force_wakeup_n$444
+    45/422: $illegal_insn_n$443
+    46/422: $csr_restore_dret_id_o$441
+    47/422: $csr_restore_uret_id_o$440
+    48/422: $csr_restore_mret_id_o$439
+    49/422: $trap_addr_mux_o$448
+    50/422: $exc_pc_mux_o$447
+    51/422: $pc_mux_o$446
+    52/422: $pc_set_o$445
+    53/422: $debug_force_wakeup_n$455
+    54/422: $illegal_insn_n$454
+    55/422: $ctrl_fsm_ns$453
+    56/422: $csr_restore_dret_id_o$452
+    57/422: $csr_restore_uret_id_o$451
+    58/422: $csr_restore_mret_id_o$450
+    59/422: $exc_cause_o$449
+    60/422: $exc_cause_o$460
+    61/422: $trap_addr_mux_o$459
+    62/422: $exc_pc_mux_o$458
+    63/422: $pc_mux_o$457
+    64/422: $pc_set_o$456
+    65/422: $debug_force_wakeup_n$466
+    66/422: $illegal_insn_n$465
+    67/422: $ctrl_fsm_ns$464
+    68/422: $csr_restore_dret_id_o$463
+    69/422: $csr_restore_uret_id_o$462
+    70/422: $csr_restore_mret_id_o$461
+    71/422: $csr_save_cause_o$387
+    72/422: $csr_cause_o$386
+    73/422: $csr_save_id_o$385
+    74/422: $csr_save_cause_o$390
+    75/422: $csr_cause_o$389
+    76/422: $csr_save_id_o$388
+    77/422: $ctrl_fsm_ns$394
+    78/422: $csr_save_cause_o$393
+    79/422: $csr_cause_o$392
+    80/422: $csr_save_id_o$391
+    81/422: $ctrl_fsm_ns$400
+    82/422: $csr_save_cause_o$399
+    83/422: $csr_cause_o$398
+    84/422: $illegal_insn_n$401
+    85/422: $csr_save_ex_o$397
+    86/422: $csr_save_id_o$396
+    87/422: $data_err_ack_o$395
+    88/422: $is_decoding_o$358
+    89/422: $ctrl_fsm_ns$313
+    90/422: $ctrl_fsm_ns$314
+    91/422: $ctrl_fsm_ns$316
+    92/422: $halt_if_o$315
+    93/422: $ctrl_fsm_ns$285
+    94/422: $hwlp_end_4_id_d$286
+    95/422: $hwlp_targ_addr_o$284
+    96/422: $hwlp_end_4_id_d$289
+    97/422: $ctrl_fsm_ns$288
+    98/422: $hwlp_targ_addr_o$287
+    99/422: $ctrl_fsm_ns$278
+   100/422: $hwlp_end_4_id_d$279
+   101/422: $hwlp_targ_addr_o$277
+   102/422: $hwlp_end_4_id_d$282
+   103/422: $ctrl_fsm_ns$281
+   104/422: $hwlp_targ_addr_o$280
+   105/422: $hwlp_dec_cnt_o[1]$272
+   106/422: $hwlp_dec_cnt_o[0]$271
+   107/422: $ctrl_fsm_ns$274
+   108/422: $hwlp_dec_cnt_o$273
+   109/422: $ctrl_fsm_ns$298
+   110/422: $ctrl_fsm_ns$267
+   111/422: $ctrl_fsm_ns$268
+   112/422: $hwlp_end_4_id_d$299
+   113/422: $halt_id_o$297
+   114/422: $halt_if_o$296
+   115/422: $hwlp_targ_addr_o$295
+   116/422: $hwlp_dec_cnt_o$294
+   117/422: $ctrl_fsm_ns$304
+   118/422: $halt_id_o$303
+   119/422: $halt_if_o$302
+   120/422: $hwlp_end_4_id_d$306
+   121/422: $illegal_insn_n$305
+   122/422: $hwlp_targ_addr_o$301
+   123/422: $hwlp_dec_cnt_o$300
+   124/422: $ctrl_fsm_ns$334
+   125/422: $halt_id_o$333
+   126/422: $halt_if_o$332
+   127/422: $trap_addr_mux_o$265
+   128/422: $hwlp_end_4_id_d$336
+   129/422: $illegal_insn_n$335
+   130/422: $csr_save_cause_o$331
+   131/422: $csr_irq_sec_o$330
+   132/422: $csr_cause_o$329
+   133/422: $csr_save_id_o$328
+   134/422: $exc_cause_o$327
+   135/422: $irq_id_o$326
+   136/422: $irq_ack_o$325
+   137/422: $hwlp_targ_addr_o$324
+   138/422: $hwlp_dec_cnt_o$323
+   139/422: $trap_addr_mux_o$322
+   140/422: $exc_pc_mux_o$321
+   141/422: $pc_mux_o$320
+   142/422: $pc_set_o$319
+   143/422: $hwlp_mask_o$318
+   144/422: $is_decoding_o$317
+   145/422: $ctrl_fsm_ns$354
+   146/422: $halt_id_o$353
+   147/422: $halt_if_o$352
+   148/422: $is_decoding_o$337
+   149/422: $hwlp_end_4_id_d$357
+   150/422: $debug_req_entry_n$356
+   151/422: $illegal_insn_n$355
+   152/422: $csr_save_cause_o$351
+   153/422: $csr_irq_sec_o$350
+   154/422: $csr_cause_o$349
+   155/422: $csr_save_id_o$348
+   156/422: $exc_cause_o$347
+   157/422: $irq_id_o$346
+   158/422: $irq_ack_o$345
+   159/422: $hwlp_targ_addr_o$344
+   160/422: $hwlp_dec_cnt_o$343
+   161/422: $trap_addr_mux_o$342
+   162/422: $exc_pc_mux_o$341
+   163/422: $pc_mux_o$340
+   164/422: $pc_set_o$339
+   165/422: $hwlp_mask_o$338
+   166/422: $hwlp_end_4_id_d$379
+   167/422: $debug_req_entry_n$378
+   168/422: $illegal_insn_n$377
+   169/422: $ctrl_fsm_ns$376
+   170/422: $perf_pipeline_stall_o$375
+   171/422: $halt_id_o$374
+   172/422: $halt_if_o$373
+   173/422: $csr_save_cause_o$372
+   174/422: $csr_irq_sec_o$371
+   175/422: $csr_cause_o$370
+   176/422: $csr_save_id_o$369
+   177/422: $exc_cause_o$368
+   178/422: $irq_id_o$367
+   179/422: $irq_ack_o$366
+   180/422: $hwlp_targ_addr_o$365
+   181/422: $hwlp_dec_cnt_o$364
+   182/422: $trap_addr_mux_o$363
+   183/422: $exc_pc_mux_o$362
+   184/422: $pc_mux_o$361
+   185/422: $pc_set_o$360
+   186/422: $hwlp_mask_o$359
+   187/422: $is_decoding_o$167
+   188/422: $ctrl_fsm_ns$124
+   189/422: $ctrl_fsm_ns$125
+   190/422: $ctrl_fsm_ns$127
+   191/422: $halt_if_o$126
+   192/422: $hwlp_dec_cnt_o[1]$102
+   193/422: $hwlp_dec_cnt_o[0]$100
+   194/422: $jump_done$89
+   195/422: $hwlp_dec_cnt_o[1]$88
+   196/422: $pc_set_o$87
+   197/422: $jump_done$93
+   198/422: $hwlp_dec_cnt_o[1]$92
+   199/422: $pc_mux_o$91
+   200/422: $pc_set_o$90
+   201/422: $jump_done$80
+   202/422: $hwlp_dec_cnt_o[0]$79
+   203/422: $pc_set_o$78
+   204/422: $jump_done$84
+   205/422: $hwlp_dec_cnt_o[0]$83
+   206/422: $pc_mux_o$82
+   207/422: $pc_set_o$81
+   208/422: $jump_done$98
+   209/422: $ctrl_fsm_ns$97
+   210/422: $hwlp_dec_cnt_o$96
+   211/422: $pc_mux_o$95
+   212/422: $pc_set_o$94
+   213/422: $hwlp_dec_cnt_o[1]$70
+   214/422: $hwlp_dec_cnt_o[0]$69
+   215/422: $ctrl_fsm_ns$72
+   216/422: $hwlp_dec_cnt_o$71
+   217/422: $ctrl_fsm_ns$60
+   218/422: $ctrl_fsm_ns$61
+   219/422: $jump_done$58
+   220/422: $pc_set_o$57
+   221/422: $jump_done$109
+   222/422: $ctrl_fsm_ns$108
+   223/422: $halt_id_o$107
+   224/422: $halt_if_o$106
+   225/422: $hwlp_dec_cnt_o$105
+   226/422: $pc_mux_o$104
+   227/422: $pc_set_o$103
+   228/422: $ctrl_fsm_ns$115
+   229/422: $halt_id_o$114
+   230/422: $halt_if_o$113
+   231/422: $illegal_insn_n$117
+   232/422: $jump_done$116
+   233/422: $hwlp_dec_cnt_o$112
+   234/422: $pc_mux_o$111
+   235/422: $pc_set_o$110
+   236/422: $halt_id_o$143
+   237/422: $halt_if_o$142
+   238/422: $pc_mux_o$131
+   239/422: $pc_set_o$130
+   240/422: $trap_addr_mux_o$52
+   241/422: $illegal_insn_n$146
+   242/422: $jump_done$145
+   243/422: $ctrl_fsm_ns$144
+   244/422: $csr_save_cause_o$141
+   245/422: $csr_irq_sec_o$140
+   246/422: $csr_cause_o$139
+   247/422: $csr_save_id_o$138
+   248/422: $exc_cause_o$137
+   249/422: $irq_id_o$136
+   250/422: $irq_ack_o$135
+   251/422: $hwlp_dec_cnt_o$134
+   252/422: $trap_addr_mux_o$133
+   253/422: $exc_pc_mux_o$132
+   254/422: $hwlp_mask_o$129
+   255/422: $is_decoding_o$128
+   256/422: $ctrl_fsm_ns$163
+   257/422: $halt_id_o$162
+   258/422: $halt_if_o$161
+   259/422: $is_decoding_o$147
+   260/422: $debug_req_entry_n$166
+   261/422: $illegal_insn_n$165
+   262/422: $jump_done$164
+   263/422: $csr_save_cause_o$160
+   264/422: $csr_irq_sec_o$159
+   265/422: $csr_cause_o$158
+   266/422: $csr_save_id_o$157
+   267/422: $exc_cause_o$156
+   268/422: $irq_id_o$155
+   269/422: $irq_ack_o$154
+   270/422: $hwlp_dec_cnt_o$153
+   271/422: $trap_addr_mux_o$152
+   272/422: $exc_pc_mux_o$151
+   273/422: $pc_mux_o$150
+   274/422: $pc_set_o$149
+   275/422: $hwlp_mask_o$148
+   276/422: $debug_req_entry_n$187
+   277/422: $illegal_insn_n$186
+   278/422: $jump_done$185
+   279/422: $ctrl_fsm_ns$184
+   280/422: $perf_pipeline_stall_o$183
+   281/422: $halt_id_o$182
+   282/422: $halt_if_o$181
+   283/422: $csr_save_cause_o$180
+   284/422: $csr_irq_sec_o$179
+   285/422: $csr_cause_o$178
+   286/422: $csr_save_id_o$177
+   287/422: $exc_cause_o$176
+   288/422: $irq_id_o$175
+   289/422: $irq_ack_o$174
+   290/422: $hwlp_dec_cnt_o$173
+   291/422: $trap_addr_mux_o$172
+   292/422: $exc_pc_mux_o$171
+   293/422: $pc_mux_o$170
+   294/422: $pc_set_o$169
+   295/422: $hwlp_mask_o$168
+   296/422: $ctrl_fsm_ns$206
+   297/422: $halt_id_o$204
+   298/422: $halt_if_o$203
+   299/422: $csr_save_cause_o$202
+   300/422: $csr_cause_o$200
+   301/422: $is_decoding_o$188
+   302/422: $debug_req_entry_n$209
+   303/422: $illegal_insn_n$208
+   304/422: $jump_done$207
+   305/422: $perf_pipeline_stall_o$205
+   306/422: $csr_irq_sec_o$201
+   307/422: $csr_save_id_o$199
+   308/422: $csr_save_if_o$198
+   309/422: $exc_cause_o$197
+   310/422: $irq_id_o$196
+   311/422: $irq_ack_o$195
+   312/422: $hwlp_dec_cnt_o$194
+   313/422: $trap_addr_mux_o$193
+   314/422: $exc_pc_mux_o$192
+   315/422: $pc_mux_o$191
+   316/422: $pc_set_o$190
+   317/422: $hwlp_mask_o$189
+   318/422: $ctrl_fsm_ns$230
+   319/422: $halt_id_o$228
+   320/422: $halt_if_o$227
+   321/422: $csr_save_cause_o$226
+   322/422: $csr_cause_o$224
+   323/422: $is_decoding_o$210
+   324/422: $debug_req_entry_n$233
+   325/422: $illegal_insn_n$232
+   326/422: $jump_done$231
+   327/422: $perf_pipeline_stall_o$229
+   328/422: $csr_irq_sec_o$225
+   329/422: $csr_save_ex_o$223
+   330/422: $csr_save_id_o$222
+   331/422: $csr_save_if_o$221
+   332/422: $exc_cause_o$220
+   333/422: $irq_id_o$219
+   334/422: $irq_ack_o$218
+   335/422: $data_err_ack_o$217
+   336/422: $hwlp_dec_cnt_o$216
+   337/422: $trap_addr_mux_o$215
+   338/422: $exc_pc_mux_o$214
+   339/422: $pc_mux_o$213
+   340/422: $pc_set_o$212
+   341/422: $hwlp_mask_o$211
+   342/422: $pc_mux_o$237
+   343/422: $pc_set_o$236
+   344/422: $is_decoding_o$234
+   345/422: $debug_req_entry_n$257
+   346/422: $illegal_insn_n$256
+   347/422: $jump_done$255
+   348/422: $ctrl_fsm_ns$254
+   349/422: $perf_pipeline_stall_o$253
+   350/422: $halt_id_o$252
+   351/422: $halt_if_o$251
+   352/422: $csr_save_cause_o$250
+   353/422: $csr_irq_sec_o$249
+   354/422: $csr_cause_o$248
+   355/422: $csr_save_ex_o$247
+   356/422: $csr_save_id_o$246
+   357/422: $csr_save_if_o$245
+   358/422: $exc_cause_o$244
+   359/422: $irq_id_o$243
+   360/422: $irq_ack_o$242
+   361/422: $data_err_ack_o$241
+   362/422: $hwlp_dec_cnt_o$240
+   363/422: $trap_addr_mux_o$239
+   364/422: $exc_pc_mux_o$238
+   365/422: $hwlp_mask_o$235
+   366/422: $trap_addr_mux_o$29
+   367/422: $halt_id_o$42
+   368/422: $halt_if_o$41
+   369/422: $csr_save_cause_o$40
+   370/422: $csr_irq_sec_o$39
+   371/422: $csr_cause_o$38
+   372/422: $csr_save_if_o$37
+   373/422: $exc_cause_o$36
+   374/422: $irq_id_o$35
+   375/422: $irq_ack_o$34
+   376/422: $trap_addr_mux_o$33
+   377/422: $exc_pc_mux_o$32
+   378/422: $pc_mux_o$31
+   379/422: $pc_set_o$30
+   380/422: $ctrl_fsm_ns$19
+   381/422: $debug_force_wakeup_n$20
+   382/422: $debug_force_wakeup_n$23
+   383/422: $ctrl_fsm_ns$22
+   384/422: $ctrl_busy_o$21
+   385/422: $ctrl_fsm_ns$17
+   386/422: $debug_force_wakeup_n$18
+   387/422: $ctrl_fsm_ns$16
+   388/422: $hwlp_end_4_id_d$535
+   389/422: $debug_force_wakeup_n$534
+   390/422: $debug_req_entry_n$533
+   391/422: $illegal_insn_n$532
+   392/422: $debug_mode_n$531
+   393/422: $jump_done$530
+   394/422: $ctrl_fsm_ns$529
+   395/422: $perf_pipeline_stall_o$528
+   396/422: $halt_id_o$527
+   397/422: $halt_if_o$526
+   398/422: $csr_save_cause_o$525
+   399/422: $csr_restore_dret_id_o$524
+   400/422: $csr_restore_uret_id_o$523
+   401/422: $csr_restore_mret_id_o$522
+   402/422: $csr_irq_sec_o$521
+   403/422: $csr_cause_o$520
+   404/422: $csr_save_ex_o$519
+   405/422: $csr_save_id_o$518
+   406/422: $csr_save_if_o$517
+   407/422: $debug_csr_save_o$516
+   408/422: $debug_cause_o$515
+   409/422: $exc_cause_o$514
+   410/422: $irq_id_o$513
+   411/422: $irq_ack_o$512
+   412/422: $data_err_ack_o$511
+   413/422: $hwlp_targ_addr_o$510
+   414/422: $hwlp_dec_cnt_o$509
+   415/422: $trap_addr_mux_o$508
+   416/422: $exc_pc_mux_o$507
+   417/422: $pc_mux_o$506
+   418/422: $pc_set_o$505
+   419/422: $instr_req_o$504
+   420/422: $hwlp_mask_o$503
+   421/422: $is_decoding_o$502
+   422/422: $ctrl_busy_o$501
+Creating decoders for process `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.$0'.
+     1/442: $illegal_insn_o$778
+     2/442: $csr_illegal$698
+     3/442: $csr_illegal$695
+     4/442: $csr_status_o$694
+     5/442: $csr_illegal$691
+     6/442: $csr_illegal$688
+     7/442: $csr_illegal$685
+     8/442: $csr_status_o$684
+     9/442: $csr_illegal$682
+    10/442: $csr_status_o$681
+    11/442: $csr_illegal$678
+    12/442: $csr_illegal$700
+    13/442: $csr_status_o$699
+    14/442: $csr_illegal$676
+    15/442: $csr_op$674
+    16/442: $csr_illegal$673
+    17/442: $alu_op_a_mux_sel_o$668
+    18/442: $rega_used_o$667
+    19/442: $imm_b_mux_sel_o$716
+    20/442: $alu_op_b_mux_sel_o$714
+    21/442: $illegal_insn_o$701
+    22/442: $illegal_insn_o$653
+    23/442: $imm_b_mux_sel_o$639
+    24/442: $alu_op_b_mux_sel_o$638
+    25/442: $alu_operator_o$637
+    26/442: $imm_b_mux_sel_o$652
+    27/442: $alu_op_b_mux_sel_o$651
+    28/442: $alu_operator_o$650
+    29/442: $wfi_o$649
+    30/442: $ecall_insn_o$648
+    31/442: $dret_dec_o$647
+    32/442: $uret_dec_o$646
+    33/442: $mret_dec_o$645
+    34/442: $dret_insn_o$644
+    35/442: $uret_insn_o$643
+    36/442: $mret_insn_o$642
+    37/442: $ebrk_insn_o$641
+    38/442: $illegal_insn_o$640
+    39/442: $imm_b_mux_sel_o$665
+    40/442: $alu_op_b_mux_sel_o$664
+    41/442: $alu_operator_o$663
+    42/442: $wfi_o$662
+    43/442: $ecall_insn_o$661
+    44/442: $dret_dec_o$660
+    45/442: $uret_dec_o$659
+    46/442: $mret_dec_o$658
+    47/442: $dret_insn_o$657
+    48/442: $uret_insn_o$656
+    49/442: $mret_insn_o$655
+    50/442: $ebrk_insn_o$654
+    51/442: $csr_op$721
+    52/442: $csr_illegal$720
+    53/442: $regfile_alu_we$719
+    54/442: $csr_status_o$718
+    55/442: $csr_access_o$717
+    56/442: $imm_a_mux_sel_o$715
+    57/442: $alu_op_a_mux_sel_o$713
+    58/442: $alu_operator_o$712
+    59/442: $rega_used_o$711
+    60/442: $wfi_o$710
+    61/442: $ecall_insn_o$709
+    62/442: $dret_dec_o$708
+    63/442: $uret_dec_o$707
+    64/442: $mret_dec_o$706
+    65/442: $dret_insn_o$705
+    66/442: $uret_insn_o$704
+    67/442: $mret_insn_o$703
+    68/442: $ebrk_insn_o$702
+    69/442: $fencei_insn_o$633
+    70/442: $illegal_insn_o$632
+    71/442: $illegal_insn_o$617
+    72/442: $illegal_insn_o$611
+    73/442: $illegal_insn_o$605
+    74/442: $illegal_insn_o$601
+    75/442: $illegal_insn_o$597
+    76/442: $illegal_insn_o$591
+    77/442: $illegal_insn_o$587
+    78/442: $illegal_insn_o$581
+    79/442: $illegal_insn_o$577
+    80/442: $illegal_insn_o$571
+    81/442: $illegal_insn_o$567
+    82/442: $illegal_insn_o$561
+    83/442: $illegal_insn_o$557
+    84/442: $illegal_insn_o$551
+    85/442: $illegal_insn_o$547
+    86/442: $illegal_insn_o$541
+    87/442: $illegal_insn_o$537
+    88/442: $illegal_insn_o$531
+    89/442: $illegal_insn_o$527
+    90/442: $illegal_insn_o$521
+    91/442: $illegal_insn_o$517
+    92/442: $illegal_insn_o$511
+    93/442: $illegal_insn_o$507
+    94/442: $illegal_insn_o$501
+    95/442: $illegal_insn_o$497
+    96/442: $illegal_insn_o$494
+    97/442: $illegal_insn_o$491
+    98/442: $illegal_insn_o$489
+    99/442: $illegal_insn_o$485
+   100/442: $illegal_insn_o$483
+   101/442: $illegal_insn_o$477
+   102/442: $regc_mux_o$469
+   103/442: $alu_op_b_mux_sel_o$468
+   104/442: $alu_operator_o$467
+   105/442: $regc_used_o$466
+   106/442: $illegal_insn_o$465
+   107/442: $illegal_insn_o$464
+   108/442: $illegal_insn_o$458
+   109/442: $illegal_insn_o$454
+   110/442: $illegal_insn_o$448
+   111/442: $illegal_insn_o$444
+   112/442: $illegal_insn_o$438
+   113/442: $illegal_insn_o$434
+   114/442: $illegal_insn_o$428
+   115/442: $illegal_insn_o$424
+   116/442: $illegal_insn_o$418
+   117/442: $illegal_insn_o$414
+   118/442: $illegal_insn_o$408
+   119/442: $illegal_insn_o$404
+   120/442: $illegal_insn_o$402
+   121/442: $illegal_insn_o$398
+   122/442: $illegal_insn_o$392
+   123/442: $illegal_insn_o$388
+   124/442: $illegal_insn_o$382
+   125/442: $illegal_insn_o$378
+   126/442: $illegal_insn_o$372
+   127/442: $illegal_insn_o$368
+   128/442: $illegal_insn_o$362
+   129/442: $illegal_insn_o$358
+   130/442: $illegal_insn_o$352
+   131/442: $illegal_insn_o$348
+   132/442: $illegal_insn_o$342
+   133/442: $illegal_insn_o$338
+   134/442: $illegal_insn_o$332
+   135/442: $illegal_insn_o$328
+   136/442: $illegal_insn_o$322
+   137/442: $illegal_insn_o$318
+   138/442: $illegal_insn_o$312
+   139/442: $illegal_insn_o$308
+   140/442: $illegal_insn_o$302
+   141/442: $illegal_insn_o$298
+   142/442: $illegal_insn_o$292
+   143/442: $illegal_insn_o$288
+   144/442: $illegal_insn_o$282
+   145/442: $illegal_insn_o$278
+   146/442: $illegal_insn_o$272
+   147/442: $illegal_insn_o$618
+   148/442: $illegal_insn_o$268
+   149/442: $illegal_insn_o$262
+   150/442: $mult_dot_en$631
+   151/442: $alu_en$630
+   152/442: $mult_dot_signed_o$629
+   153/442: $is_subrot_o$628
+   154/442: $is_clpx_o$627
+   155/442: $regc_mux_o$626
+   156/442: $imm_b_mux_sel_o$625
+   157/442: $scalar_replication_o$624
+   158/442: $alu_op_b_mux_sel_o$623
+   159/442: $alu_operator_o$622
+   160/442: $bmask_b_mux_o$621
+   161/442: $regc_used_o$620
+   162/442: $regb_used_o$619
+   163/442: $regb_used_o$256
+   164/442: $alu_op_b_mux_sel_o$255
+   165/442: $regb_used_o$254
+   166/442: $scalar_replication_o$258
+   167/442: $alu_op_b_mux_sel_o$257
+   168/442: $mult_operator_o$253
+   169/442: $alu_vec_mode_o$252
+   170/442: $mult_operator_o$235
+   171/442: $regc_mux_o$234
+   172/442: $regc_used_o$233
+   173/442: $alu_operator_o$231
+   174/442: $illegal_insn_o$223
+   175/442: $regc_mux_o$230
+   176/442: $imm_b_mux_sel_o$229
+   177/442: $alu_operator_o$228
+   178/442: $alu_bmask_a_mux_sel_o$227
+   179/442: $bmask_b_mux_o$226
+   180/442: $regc_used_o$225
+   181/442: $illegal_insn_o$224
+   182/442: $mult_int_en$251
+   183/442: $alu_en$250
+   184/442: $mult_signed_mode_o$249
+   185/442: $mult_sel_subword_o$248
+   186/442: $mult_imm_mux_o$247
+   187/442: $mult_operator_o$246
+   188/442: $regc_mux_o$245
+   189/442: $imm_b_mux_sel_o$244
+   190/442: $alu_op_b_mux_sel_o$243
+   191/442: $alu_operator_o$242
+   192/442: $alu_bmask_a_mux_sel_o$241
+   193/442: $bmask_b_mux_o$240
+   194/442: $bmask_a_mux_o$239
+   195/442: $regc_used_o$238
+   196/442: $regb_used_o$237
+   197/442: $illegal_insn_o$236
+   198/442: $hwlp_we$191 [2]
+   199/442: $illegal_insn_o$183
+   200/442: $illegal_insn_o$181
+   201/442: $hwlp_we$191 [0]
+   202/442: $hwlp_we$191 [1]
+   203/442: $illegal_insn_o$177
+   204/442: $illegal_insn_o$179
+   205/442: $illegal_insn_o$185
+   206/442: $illegal_insn_o$175
+   207/442: $hwlp_cnt_mux_sel_o$190
+   208/442: $hwlp_start_mux_sel_o$189
+   209/442: $hwlp_target_mux_sel_o$188
+   210/442: $rega_used_o$187
+   211/442: $illegal_insn_o$186
+   212/442: $mult_operator_o$147
+   213/442: $alu_operator_o$145
+   214/442: $illegal_insn_o$138
+   215/442: $illegal_insn_o$136
+   216/442: $illegal_insn_o$134
+   217/442: $illegal_insn_o$132
+   218/442: $illegal_insn_o$130
+   219/442: $illegal_insn_o$128
+   220/442: $illegal_insn_o$126
+   221/442: $illegal_insn_o$124
+   222/442: $illegal_insn_o$122
+   223/442: $imm_b_mux_sel_o$144
+   224/442: $alu_vec_mode_o$143
+   225/442: $alu_op_b_mux_sel_o$142
+   226/442: $alu_operator_o$141
+   227/442: $regb_used_o$140
+   228/442: $illegal_insn_o$139
+   229/442: $regc_mux_o$120
+   230/442: $imm_b_mux_sel_o$119
+   231/442: $alu_op_b_mux_sel_o$118
+   232/442: $alu_operator_o$117
+   233/442: $alu_bmask_b_mux_sel_o$116
+   234/442: $bmask_b_mux_o$115
+   235/442: $regc_used_o$114
+   236/442: $illegal_insn_o$113
+   237/442: $data_type_o$111
+   238/442: $data_req$112
+   239/442: $data_we_o$110
+   240/442: $illegal_insn_o$109
+   241/442: $regfile_alu_we$108
+   242/442: $prepost_useincr_o$107
+   243/442: $regfile_alu_waddr_sel_o$106
+   244/442: $data_req$104
+   245/442: $regfile_alu_we$103
+   246/442: $regfile_mem_we$102
+   247/442: $data_type_o$101
+   248/442: $illegal_insn_o$100
+   249/442: $regfile_alu_we$98
+   250/442: $prepost_useincr_o$97
+   251/442: $regfile_alu_waddr_sel_o$96
+   252/442: $mult_int_en$173
+   253/442: $alu_en$172
+   254/442: $data_req$171
+   255/442: $regfile_alu_we$170
+   256/442: $regfile_mem_we$169
+   257/442: $data_sign_extension_o$168
+   258/442: $data_type_o$167
+   259/442: $prepost_useincr_o$166
+   260/442: $data_we_o$165
+   261/442: $regfile_alu_waddr_sel_o$164
+   262/442: $mult_operator_o$163
+   263/442: $regc_mux_o$162
+   264/442: $imm_b_mux_sel_o$161
+   265/442: $alu_vec_mode_o$160
+   266/442: $alu_op_c_mux_sel_o$159
+   267/442: $alu_op_b_mux_sel_o$158
+   268/442: $alu_op_a_mux_sel_o$157
+   269/442: $alu_operator_o$156
+   270/442: $alu_bmask_b_mux_sel_o$155
+   271/442: $alu_bmask_a_mux_sel_o$154
+   272/442: $bmask_b_mux_o$153
+   273/442: $bmask_a_mux_o$152
+   274/442: $regc_used_o$151
+   275/442: $regb_used_o$150
+   276/442: $rega_used_o$149
+   277/442: $illegal_insn_o$148
+   278/442: $data_type_o$94
+   279/442: $mult_int_en$221
+   280/442: $alu_en$220
+   281/442: $hwlp_we$219
+   282/442: $data_req$218
+   283/442: $regfile_alu_we$217
+   284/442: $regfile_mem_we$216
+   285/442: $hwlp_cnt_mux_sel_o$215
+   286/442: $hwlp_start_mux_sel_o$214
+   287/442: $hwlp_target_mux_sel_o$213
+   288/442: $data_sign_extension_o$212
+   289/442: $data_type_o$211
+   290/442: $prepost_useincr_o$210
+   291/442: $data_we_o$209
+   292/442: $regfile_alu_waddr_sel_o$208
+   293/442: $mult_operator_o$207
+   294/442: $regc_mux_o$206
+   295/442: $imm_b_mux_sel_o$205
+   296/442: $alu_vec_mode_o$204
+   297/442: $alu_op_c_mux_sel_o$203
+   298/442: $alu_op_b_mux_sel_o$202
+   299/442: $alu_op_a_mux_sel_o$201
+   300/442: $alu_operator_o$200
+   301/442: $alu_bmask_b_mux_sel_o$199
+   302/442: $alu_bmask_a_mux_sel_o$198
+   303/442: $bmask_b_mux_o$197
+   304/442: $bmask_a_mux_o$196
+   305/442: $regc_used_o$195
+   306/442: $regb_used_o$194
+   307/442: $rega_used_o$193
+   308/442: $illegal_insn_o$192
+   309/442: $alu_operator_o$78
+   310/442: $imm_b_mux_sel_o$84
+   311/442: $alu_op_b_mux_sel_o$82
+   312/442: $alu_operator_o$81
+   313/442: $rega_used_o$80
+   314/442: $illegal_insn_o$76
+   315/442: $data_type_o$74
+   316/442: $regfile_alu_we$72
+   317/442: $prepost_useincr_o$71
+   318/442: $regfile_alu_waddr_sel_o$70
+   319/442: $ctrl_transfer_insn$93
+   320/442: $data_req$92
+   321/442: $regfile_alu_we$91
+   322/442: $regfile_mem_we$90
+   323/442: $ctrl_transfer_target_mux_sel_o$89
+   324/442: $data_sign_extension_o$88
+   325/442: $data_type_o$87
+   326/442: $prepost_useincr_o$86
+   327/442: $regfile_alu_waddr_sel_o$85
+   328/442: $alu_op_c_mux_sel_o$83
+   329/442: $illegal_insn_o$79
+   330/442: $mult_int_en$40
+   331/442: $alu_en$39
+   332/442: $mult_signed_mode_o$38
+   333/442: $mult_operator_o$37
+   334/442: $regc_mux_o$36
+   335/442: $alu_op_b_mux_sel_o$35
+   336/442: $alu_op_a_mux_sel_o$34
+   337/442: $alu_operator_o$33
+   338/442: $regc_used_o$32
+   339/442: $regb_used_o$31
+   340/442: $illegal_insn_o$30
+   341/442: $regb_used_o$29
+   342/442: $illegal_insn_o$41
+   343/442: $illegal_insn_o$27
+   344/442: $mult_int_en$53
+   345/442: $alu_en$52
+   346/442: $regfile_alu_we$51
+   347/442: $mult_signed_mode_o$50
+   348/442: $mult_operator_o$49
+   349/442: $regc_mux_o$48
+   350/442: $alu_op_b_mux_sel_o$47
+   351/442: $alu_op_a_mux_sel_o$46
+   352/442: $alu_operator_o$45
+   353/442: $regc_used_o$44
+   354/442: $regb_used_o$43
+   355/442: $rega_used_o$42
+   356/442: $illegal_insn_o$54
+   357/442: $mult_int_en$66
+   358/442: $alu_en$65
+   359/442: $regfile_alu_we$64
+   360/442: $mult_signed_mode_o$63
+   361/442: $mult_operator_o$62
+   362/442: $regc_mux_o$61
+   363/442: $alu_op_b_mux_sel_o$60
+   364/442: $alu_op_a_mux_sel_o$59
+   365/442: $alu_operator_o$58
+   366/442: $regc_used_o$57
+   367/442: $regb_used_o$56
+   368/442: $rega_used_o$55
+   369/442: $alu_operator_o$19
+   370/442: $illegal_insn_o$18
+   371/442: $alu_operator_o$21
+   372/442: $illegal_insn_o$20
+   373/442: $illegal_insn_o$15
+   374/442: $alu_operator_o$23
+   375/442: $illegal_insn_o$22
+   376/442: $data_type_o$13
+   377/442: $illegal_insn_o$12
+   378/442: $data_req$10
+   379/442: $data_type_o$9
+   380/442: $data_we_o$8
+   381/442: $illegal_insn_o$7
+   382/442: $alu_operator_o$6
+   383/442: $illegal_insn_o$5
+   384/442: $ctrl_transfer_insn$4
+   385/442: $regfile_alu_we$3
+   386/442: $illegal_insn_o$2
+   387/442: $mult_dot_en$777
+   388/442: $mult_int_en$776
+   389/442: $alu_en$775
+   390/442: $csr_op$774
+   391/442: $ctrl_transfer_insn$773
+   392/442: $csr_illegal$772
+   393/442: $hwlp_we$771
+   394/442: $data_req$770
+   395/442: $regfile_alu_we$769
+   396/442: $regfile_mem_we$768
+   397/442: $ctrl_transfer_target_mux_sel_o$767
+   398/442: $hwlp_cnt_mux_sel_o$766
+   399/442: $hwlp_start_mux_sel_o$765
+   400/442: $hwlp_target_mux_sel_o$764
+   401/442: $data_sign_extension_o$763
+   402/442: $data_type_o$762
+   403/442: $prepost_useincr_o$761
+   404/442: $data_we_o$760
+   405/442: $csr_status_o$759
+   406/442: $csr_access_o$758
+   407/442: $regfile_alu_waddr_sel_o$757
+   408/442: $mult_dot_signed_o$756
+   409/442: $mult_signed_mode_o$755
+   410/442: $mult_sel_subword_o$754
+   411/442: $mult_imm_mux_o$753
+   412/442: $mult_operator_o$752
+   413/442: $is_subrot_o$751
+   414/442: $is_clpx_o$750
+   415/442: $regc_mux_o$749
+   416/442: $imm_b_mux_sel_o$748
+   417/442: $imm_a_mux_sel_o$747
+   418/442: $scalar_replication_o$746
+   419/442: $alu_vec_mode_o$745
+   420/442: $alu_vec_o$744
+   421/442: $alu_op_c_mux_sel_o$743
+   422/442: $alu_op_b_mux_sel_o$742
+   423/442: $alu_op_a_mux_sel_o$741
+   424/442: $alu_operator_o$740
+   425/442: $alu_bmask_b_mux_sel_o$739
+   426/442: $alu_bmask_a_mux_sel_o$738
+   427/442: $bmask_b_mux_o$737
+   428/442: $bmask_a_mux_o$736
+   429/442: $regc_used_o$735
+   430/442: $regb_used_o$734
+   431/442: $rega_used_o$733
+   432/442: $fencei_insn_o$732
+   433/442: $wfi_o$731
+   434/442: $ecall_insn_o$730
+   435/442: $dret_dec_o$729
+   436/442: $uret_dec_o$728
+   437/442: $mret_dec_o$727
+   438/442: $dret_insn_o$726
+   439/442: $uret_insn_o$725
+   440/442: $mret_insn_o$724
+   441/442: $ebrk_insn_o$723
+   442/442: $illegal_insn_o$722
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$424'.
+     1/2: $mem[991:960]$429
+     2/2: $mem[991:960]$430
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$417'.
+     1/2: $mem[959:928]$422
+     2/2: $mem[959:928]$423
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$410'.
+     1/2: $mem[927:896]$415
+     2/2: $mem[927:896]$416
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$403'.
+     1/2: $mem[895:864]$408
+     2/2: $mem[895:864]$409
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$396'.
+     1/2: $mem[863:832]$401
+     2/2: $mem[863:832]$402
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$389'.
+     1/2: $mem[831:800]$394
+     2/2: $mem[831:800]$395
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$382'.
+     1/2: $mem[799:768]$387
+     2/2: $mem[799:768]$388
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$375'.
+     1/2: $mem[767:736]$380
+     2/2: $mem[767:736]$381
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$368'.
+     1/2: $mem[735:704]$373
+     2/2: $mem[735:704]$374
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$361'.
+     1/2: $mem[703:672]$366
+     2/2: $mem[703:672]$367
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$354'.
+     1/2: $mem[671:640]$359
+     2/2: $mem[671:640]$360
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$347'.
+     1/2: $mem[639:608]$352
+     2/2: $mem[639:608]$353
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$340'.
+     1/2: $mem[607:576]$345
+     2/2: $mem[607:576]$346
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$333'.
+     1/2: $mem[575:544]$338
+     2/2: $mem[575:544]$339
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$326'.
+     1/2: $mem[543:512]$331
+     2/2: $mem[543:512]$332
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$319'.
+     1/2: $mem[511:480]$324
+     2/2: $mem[511:480]$325
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$312'.
+     1/2: $mem[479:448]$317
+     2/2: $mem[479:448]$318
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$305'.
+     1/2: $mem[447:416]$310
+     2/2: $mem[447:416]$311
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$298'.
+     1/2: $mem[415:384]$303
+     2/2: $mem[415:384]$304
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$291'.
+     1/2: $mem[383:352]$296
+     2/2: $mem[383:352]$297
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$284'.
+     1/2: $mem[351:320]$289
+     2/2: $mem[351:320]$290
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$277'.
+     1/2: $mem[319:288]$282
+     2/2: $mem[319:288]$283
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$270'.
+     1/2: $mem[287:256]$275
+     2/2: $mem[287:256]$276
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$263'.
+     1/2: $mem[255:224]$268
+     2/2: $mem[255:224]$269
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$256'.
+     1/2: $mem[223:192]$261
+     2/2: $mem[223:192]$262
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$249'.
+     1/2: $mem[191:160]$254
+     2/2: $mem[191:160]$255
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$242'.
+     1/2: $mem[159:128]$247
+     2/2: $mem[159:128]$248
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$235'.
+     1/2: $mem[127:96]$240
+     2/2: $mem[127:96]$241
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$228'.
+     1/2: $mem[95:64]$233
+     2/2: $mem[95:64]$234
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$221'.
+     1/2: $mem[63:32]$226
+     2/2: $mem[63:32]$227
+Creating decoders for process `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$431'.
+     1/2: $mem[1023:992]$436
+     2/2: $mem[1023:992]$437
+Creating decoders for process `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.$0'.
+     1/34: $instr_o$47
+     2/34: $instr_o$48
+     3/34: $instr_o$45
+     4/34: $instr_o$49
+     5/34: $instr_o$40
+     6/34: $instr_o$41
+     7/34: $illegal_instr_o$38
+     8/34: $illegal_instr_o$42
+     9/34: $illegal_instr_o$50
+    10/34: $illegal_instr_o$34
+    11/34: $instr_o$30
+    12/34: $instr_o$31
+    13/34: $illegal_instr_o$32
+    14/34: $illegal_instr_o$52
+    15/34: $instr_o$51
+    16/34: $illegal_instr_o$21
+    17/34: $instr_o$20
+    18/34: $instr_o$22
+    19/34: $instr_o$17
+    20/34: $instr_o$18
+    21/34: $illegal_instr_o$19
+    22/34: $illegal_instr_o$23
+    23/34: $instr_o$11
+    24/34: $instr_o$12
+    25/34: $illegal_instr_o$14
+    26/34: $instr_o$13
+    27/34: $instr_o$7
+    28/34: $instr_o$24
+    29/34: $illegal_instr_o$25
+    30/34: $instr_o$53
+    31/34: $illegal_instr_o$2
+    32/34: $illegal_instr_o$4
+    33/34: $instr_o$3
+    34/34: $illegal_instr_o$54
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$16'.
+     1/29: $update_state$66
+     2/29: $pc_n$65
+     3/29: $next_state$64
+     4/29: $update_state$56
+     5/29: $pc_n$55
+     6/29: $next_state$54
+     7/29: $instr_aligned_o$52
+     8/29: $instr_valid_o$53
+     9/29: $update_state$48
+    10/29: $pc_n$47
+    11/29: $next_state$46
+    12/29: $instr_aligned_o$45
+    13/29: $update_state$35
+    14/29: $pc_n$34
+    15/29: $next_state$33
+    16/29: $instr_aligned_o$31
+    17/29: $instr_valid_o$32
+    18/29: $aligner_ready_o$30
+    19/29: $update_state$26
+    20/29: $pc_n$25
+    21/29: $next_state$24
+    22/29: $instr_aligned_o$23
+    23/29: $pc_n$21
+    24/29: $update_state$62
+    25/29: $pc_n$61
+    26/29: $next_state$60
+    27/29: $instr_valid_o$59
+    28/29: $instr_aligned_o$58
+    29/29: $aligner_ready_o$57
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$5'.
+     1/8: $hwlp_update_pc_q$9
+     2/8: $hwlp_addr_q$8
+     3/8: $hwlp_update_pc_q$15
+     4/8: $aligner_ready_q$14
+     5/8: $pc_q$13
+     6/8: $hwlp_addr_q$12
+     7/8: $r_instr_h$11
+     8/8: $state$10
+Creating decoders for process `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.$0'.
+     1/3: $clk_en$3
+     2/3: $5
+     3/3: $4
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$642'.
+     1/5: $mhpmcounter_q[191:128]$647 [63:32]
+     2/5: $mhpmcounter_q[191:128]$646 [31:0]
+     3/5: $mhpmcounter_q[191:128]$645
+     4/5: $mhpmcounter_q[191:128]$646 [63:32]
+     5/5: $mhpmcounter_q[191:128]$647 [31:0]
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$635'.
+     1/5: $mhpmcounter_q[63:0]$640 [63:32]
+     2/5: $mhpmcounter_q[63:0]$639 [31:0]
+     3/5: $mhpmcounter_q[63:0]$638
+     4/5: $mhpmcounter_q[63:0]$639 [63:32]
+     5/5: $mhpmcounter_q[63:0]$640 [31:0]
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$286'.
+     1/2: $mhpmevent_n$294
+     2/2: $mcountinhibit_n$287
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$130'.
+     1/2: $gen_trigger_regs.tmatch_value_q$134
+     2/2: $gen_trigger_regs.tmatch_control_exec_q$133
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$648'.
+     1/5: $mhpmcounter_q[255:192]$653 [63:32]
+     2/5: $mhpmcounter_q[255:192]$652 [31:0]
+     3/5: $mhpmcounter_q[255:192]$651
+     4/5: $mhpmcounter_q[255:192]$652 [63:32]
+     5/5: $mhpmcounter_q[255:192]$653 [31:0]
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$78'.
+     1/2: $csr_wdata_int$82
+     2/2: $csr_we_int$83
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$26'.
+     1/46: $priv_lvl_n$67
+     2/46: $mcause_n$66
+     3/46: $mstatus_n[5]$65
+     4/46: $mstatus_n[3:1]$64
+     5/46: $depc_n$63
+     6/46: $dcsr_n[8:6]$62
+     7/46: $dcsr_n[1:0]$61
+     8/46: $mepc_n$60
+     9/46: $exception_pc$59
+    10/46: $priv_lvl_n$76
+    11/46: $mcause_n$75
+    12/46: $mstatus_n[5]$74
+    13/46: $mstatus_n[3:1]$73
+    14/46: $exception_pc$72
+    15/46: $depc_n$71
+    16/46: $dcsr_n[8:6]$70
+    17/46: $dcsr_n[1:0]$69
+    18/46: $mepc_n$68
+    19/46: $dscratch1_n$44
+    20/46: $dscratch0_n$43
+    21/46: $depc_n$42
+    22/46: $dcsr_n[15]$40
+    23/46: $dcsr_n[13:9]$39
+    24/46: $dcsr_n[4]$38
+    25/46: $dcsr_n[2:0]$37
+    26/46: $mcause_n$36
+    27/46: $mepc_n$35
+    28/46: $mscratch_n$33
+    29/46: $mtvec_mode_n$32
+    30/46: $mtvec_n$31
+    31/46: $mie_n$30
+    32/46: $mstatus_n$28
+    33/46: $mie_n$58
+    34/46: $mtvec_mode_n$57
+    35/46: $mtvec_n$56
+    36/46: $mcause_n$55
+    37/46: $mstatus_n$54
+    38/46: $mscratch_n$53
+    39/46: $dscratch1_n$52
+    40/46: $dscratch0_n$51
+    41/46: $depc_n$50
+    42/46: $dcsr_n[15]$49
+    43/46: $dcsr_n[13:9]$48
+    44/46: $dcsr_n[4]$47
+    45/46: $dcsr_n[2:0]$46
+    46/46: $mepc_n$45
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$14'.
+     1/1: $csr_rdata_int$24
+Creating decoders for process `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$2'.
+     1/2: $csr_mie_wdata$6
+     2/2: $csr_mie_we$7
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$139'.
+     1/1: $next_cnt$142
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$95'.
+     1/4: $data_misaligned_o$102
+     2/4: $data_misaligned_o$100
+     3/4: $data_misaligned_o$103
+     4/4: $data_misaligned_o$104
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$74'.
+     1/2: $rdata_q$82
+     2/2: $rdata_q$83
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$71'.
+     1/1: $data_rdata_ext$72
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$52'.
+     1/9: $rdata_b_ext$67
+     2/9: $rdata_b_ext$68
+     3/9: $rdata_b_ext$63
+     4/9: $rdata_b_ext$64
+     5/9: $rdata_b_ext$59
+     6/9: $rdata_b_ext$60
+     7/9: $rdata_b_ext$69
+     8/9: $rdata_b_ext$55
+     9/9: $rdata_b_ext$56
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$33'.
+     1/9: $rdata_h_ext$48
+     2/9: $rdata_h_ext$49
+     3/9: $rdata_h_ext$44
+     4/9: $rdata_h_ext$45
+     5/9: $rdata_h_ext$40
+     6/9: $rdata_h_ext$41
+     7/9: $rdata_h_ext$50
+     8/9: $rdata_h_ext$36
+     9/9: $rdata_h_ext$37
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$30'.
+     1/1: $rdata_w_ext$31
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$16'.
+     1/5: $data_load_event_q$23
+     2/5: $data_we_q$22
+     3/5: $data_sign_ext_q$21
+     4/5: $rdata_offset_q$20
+     5/5: $data_type_q$19
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$13'.
+     1/1: $data_wdata$14
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$0'.
+     1/7: $data_be$8
+     2/7: $data_be$7
+     3/7: $data_be$6
+     4/7: $data_be$9
+     5/7: $data_be$3
+     6/7: $data_be$4
+     7/7: $data_be$2
+Creating decoders for process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$72'.
+     1/4: $regfile_we_lsu$80
+     2/4: $regfile_we_lsu$81
+     3/4: $regfile_waddr_lsu$79
+     4/4: $regfile_waddr_lsu$82
+Creating decoders for process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$24'.
+     1/10: $regfile_wdata_wb_o$39
+     2/10: $regfile_we_wb_power_o$38
+     3/10: $regfile_we_wb_o$37
+     4/10: $regfile_waddr_wb_o$36
+     5/10: $regfile_we_wb_power_o$42
+     6/10: $regfile_we_wb_o$41
+     7/10: $wb_contention_lsu$31
+     8/10: $wb_contention_lsu$44
+     9/10: $regfile_wdata_wb_o$43
+    10/10: $regfile_waddr_wb_o$40
+Creating decoders for process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$0'.
+     1/9: $regfile_alu_wdata_fw_o$17
+     2/9: $regfile_alu_wdata_fw_o$16
+     3/9: $regfile_alu_wdata_fw_o$15
+     4/9: $regfile_alu_wdata_fw_o$21
+     5/9: $regfile_alu_we_fw_power_o$20
+     6/9: $regfile_alu_we_fw_o$19
+     7/9: $regfile_alu_waddr_fw_o$18
+     8/9: $wb_contention$5
+     9/9: $wb_contention$22
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$190'.
+     1/209: $regfile_alu_we_ex_o$249
+     2/209: $regfile_alu_we_ex_o$252
+     3/209: $data_misaligned_ex_o$260
+     4/209: $data_load_event_ex_o$259
+     5/209: $data_req_ex_o$258
+     6/209: $csr_op_ex_o$257
+     7/209: $apu_en_ex_o$256
+     8/209: $mult_en_ex_o$255
+     9/209: $alu_operator_ex_o$254
+    10/209: $alu_en_ex_o$253
+    11/209: $regfile_we_ex_o$251
+    12/209: $branch_in_ex_o$250
+    13/209: $data_misaligned_ex_o$308
+    14/209: $data_load_event_ex_o$307
+    15/209: $data_req_ex_o$302
+    16/209: $csr_op_ex_o$301
+    17/209: $apu_en_ex_o$294
+    18/209: $mult_en_ex_o$283
+    19/209: $alu_operator_ex_o$275
+    20/209: $alu_en_ex_o$274
+    21/209: $regfile_alu_we_ex_o$273
+    22/209: $regfile_we_ex_o$271
+    23/209: $branch_in_ex_o$261
+    24/209: $pc_ex_o$247
+    25/209: $data_load_event_ex_o$243
+    26/209: $atop_ex_o$244
+    27/209: $data_reg_offset_ex_o$242
+    28/209: $data_sign_ext_ex_o$241
+    29/209: $data_type_ex_o$240
+    30/209: $data_we_ex_o$239
+    31/209: $regfile_alu_waddr_ex_o$238
+    32/209: $regfile_waddr_ex_o$237
+    33/209: $apu_waddr_ex_o$236
+    34/209: $apu_flags_ex_o$235
+    35/209: $apu_operands_ex_o$234
+    36/209: $apu_lat_ex_o$233
+    37/209: $apu_op_ex_o$232
+    38/209: $mult_clpx_img_ex_o$231
+    39/209: $mult_clpx_shift_ex_o$230
+    40/209: $mult_is_clpx_ex_o$229
+    41/209: $mult_dot_signed_ex_o$228
+    42/209: $mult_dot_op_c_ex_o$227
+    43/209: $mult_dot_op_b_ex_o$226
+    44/209: $mult_dot_op_a_ex_o$225
+    45/209: $mult_operator_ex_o$224
+    46/209: $mult_imm_ex_o$223
+    47/209: $mult_signed_mode_ex_o$222
+    48/209: $mult_sel_subword_ex_o$221
+    49/209: $mult_operand_c_ex_o$220
+    50/209: $mult_operand_b_ex_o$219
+    51/209: $mult_operand_a_ex_o$218
+    52/209: $mult_operator_ex_o$217
+    53/209: $alu_operand_b_ex_o$205
+    54/209: $alu_clpx_shift_ex_o$216
+    55/209: $alu_is_subrot_ex_o$215
+    56/209: $alu_is_clpx_ex_o$214
+    57/209: $alu_operator_ex_o$213
+    58/209: $alu_vec_mode_ex_o$212
+    59/209: $imm_vec_ext_ex_o$211
+    60/209: $bmask_b_ex_o$210
+    61/209: $bmask_a_ex_o$209
+    62/209: $alu_operand_c_ex_o$208
+    63/209: $alu_operand_b_ex_o$207
+    64/209: $alu_operand_a_ex_o$206
+    65/209: $atop_ex_o$310
+    66/209: $prepost_useincr_ex_o$309
+    67/209: $data_reg_offset_ex_o$306
+    68/209: $data_sign_ext_ex_o$305
+    69/209: $data_type_ex_o$304
+    70/209: $data_we_ex_o$303
+    71/209: $csr_access_ex_o$300
+    72/209: $apu_waddr_ex_o$299
+    73/209: $apu_flags_ex_o$298
+    74/209: $apu_operands_ex_o$297
+    75/209: $apu_lat_ex_o$296
+    76/209: $apu_op_ex_o$295
+    77/209: $mult_clpx_img_ex_o$293
+    78/209: $mult_clpx_shift_ex_o$292
+    79/209: $mult_is_clpx_ex_o$291
+    80/209: $mult_dot_signed_ex_o$290
+    81/209: $mult_dot_op_c_ex_o$289
+    82/209: $mult_dot_op_b_ex_o$288
+    83/209: $mult_dot_op_a_ex_o$287
+    84/209: $mult_imm_ex_o$286
+    85/209: $mult_signed_mode_ex_o$285
+    86/209: $mult_sel_subword_ex_o$284
+    87/209: $mult_operand_c_ex_o$282
+    88/209: $mult_operand_b_ex_o$281
+    89/209: $mult_operand_a_ex_o$280
+    90/209: $mult_operator_ex_o$279
+    91/209: $alu_clpx_shift_ex_o$278
+    92/209: $alu_is_subrot_ex_o$277
+    93/209: $alu_is_clpx_ex_o$276
+    94/209: $regfile_alu_waddr_ex_o$272
+    95/209: $regfile_waddr_ex_o$270
+    96/209: $alu_vec_mode_ex_o$269
+    97/209: $imm_vec_ext_ex_o$268
+    98/209: $bmask_b_ex_o$267
+    99/209: $bmask_a_ex_o$266
+   100/209: $alu_operand_c_ex_o$265
+   101/209: $alu_operand_b_ex_o$264
+   102/209: $alu_operand_a_ex_o$263
+   103/209: $pc_ex_o$262
+   104/209: $mult_operand_c_ex_o$332
+   105/209: $atop_ex_o$360
+   106/209: $prepost_useincr_ex_o$359
+   107/209: $data_misaligned_ex_o$358
+   108/209: $data_load_event_ex_o$357
+   109/209: $data_reg_offset_ex_o$356
+   110/209: $data_sign_ext_ex_o$355
+   111/209: $data_type_ex_o$354
+   112/209: $data_we_ex_o$353
+   113/209: $data_req_ex_o$352
+   114/209: $csr_op_ex_o$351
+   115/209: $csr_access_ex_o$350
+   116/209: $apu_waddr_ex_o$349
+   117/209: $apu_flags_ex_o$348
+   118/209: $apu_operands_ex_o$347
+   119/209: $apu_lat_ex_o$346
+   120/209: $apu_op_ex_o$345
+   121/209: $apu_en_ex_o$344
+   122/209: $mult_clpx_img_ex_o$343
+   123/209: $mult_clpx_shift_ex_o$342
+   124/209: $mult_is_clpx_ex_o$341
+   125/209: $mult_dot_signed_ex_o$340
+   126/209: $mult_dot_op_c_ex_o$339
+   127/209: $mult_dot_op_b_ex_o$338
+   128/209: $mult_dot_op_a_ex_o$337
+   129/209: $mult_imm_ex_o$336
+   130/209: $mult_signed_mode_ex_o$335
+   131/209: $mult_sel_subword_ex_o$334
+   132/209: $mult_en_ex_o$333
+   133/209: $mult_operand_b_ex_o$331
+   134/209: $mult_operand_a_ex_o$330
+   135/209: $mult_operator_ex_o$329
+   136/209: $alu_clpx_shift_ex_o$328
+   137/209: $alu_is_subrot_ex_o$327
+   138/209: $alu_is_clpx_ex_o$326
+   139/209: $alu_operator_ex_o$325
+   140/209: $alu_en_ex_o$324
+   141/209: $regfile_alu_we_ex_o$323
+   142/209: $regfile_alu_waddr_ex_o$322
+   143/209: $regfile_we_ex_o$321
+   144/209: $regfile_waddr_ex_o$320
+   145/209: $alu_vec_mode_ex_o$319
+   146/209: $imm_vec_ext_ex_o$318
+   147/209: $bmask_b_ex_o$317
+   148/209: $bmask_a_ex_o$316
+   149/209: $alu_operand_c_ex_o$315
+   150/209: $alu_operand_b_ex_o$314
+   151/209: $alu_operand_a_ex_o$313
+   152/209: $pc_ex_o$312
+   153/209: $branch_in_ex_o$311
+   154/209: $prepost_useincr_ex_o$409
+   155/209: $data_misaligned_ex_o$408
+   156/209: $regfile_alu_we_ex_o$373
+   157/209: $alu_operand_b_ex_o$364
+   158/209: $alu_operand_a_ex_o$363
+   159/209: $alu_operand_a_ex_o$194
+   160/209: $prepost_useincr_ex_o$199
+   161/209: $data_misaligned_ex_o$198
+   162/209: $regfile_alu_we_ex_o$197
+   163/209: $alu_operand_b_ex_o$196
+   164/209: $alu_operand_a_ex_o$195
+   165/209: $atop_ex_o$410
+   166/209: $data_load_event_ex_o$407
+   167/209: $data_reg_offset_ex_o$406
+   168/209: $data_sign_ext_ex_o$405
+   169/209: $data_type_ex_o$404
+   170/209: $data_we_ex_o$403
+   171/209: $data_req_ex_o$402
+   172/209: $csr_op_ex_o$401
+   173/209: $csr_access_ex_o$400
+   174/209: $apu_waddr_ex_o$399
+   175/209: $apu_flags_ex_o$398
+   176/209: $apu_operands_ex_o$397
+   177/209: $apu_lat_ex_o$396
+   178/209: $apu_op_ex_o$395
+   179/209: $apu_en_ex_o$394
+   180/209: $mult_clpx_img_ex_o$393
+   181/209: $mult_clpx_shift_ex_o$392
+   182/209: $mult_is_clpx_ex_o$391
+   183/209: $mult_dot_signed_ex_o$390
+   184/209: $mult_dot_op_c_ex_o$389
+   185/209: $mult_dot_op_b_ex_o$388
+   186/209: $mult_dot_op_a_ex_o$387
+   187/209: $mult_imm_ex_o$386
+   188/209: $mult_signed_mode_ex_o$385
+   189/209: $mult_sel_subword_ex_o$384
+   190/209: $mult_en_ex_o$383
+   191/209: $mult_operand_c_ex_o$382
+   192/209: $mult_operand_b_ex_o$381
+   193/209: $mult_operand_a_ex_o$380
+   194/209: $mult_operator_ex_o$379
+   195/209: $alu_clpx_shift_ex_o$378
+   196/209: $alu_is_subrot_ex_o$377
+   197/209: $alu_is_clpx_ex_o$376
+   198/209: $alu_operator_ex_o$375
+   199/209: $alu_en_ex_o$374
+   200/209: $regfile_alu_waddr_ex_o$372
+   201/209: $regfile_we_ex_o$371
+   202/209: $regfile_waddr_ex_o$370
+   203/209: $alu_vec_mode_ex_o$369
+   204/209: $imm_vec_ext_ex_o$368
+   205/209: $bmask_b_ex_o$367
+   206/209: $bmask_a_ex_o$366
+   207/209: $alu_operand_c_ex_o$365
+   208/209: $pc_ex_o$362
+   209/209: $branch_in_ex_o$361
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$183'.
+     1/1: $hwlp_cnt$184
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$179'.
+     1/1: $hwlp_start$181
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$174'.
+     1/1: $hwlp_end$177
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$149'.
+     1/1: $mult_imm_id$150
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$144'.
+     1/1: $bmask_b_id$145
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$141'.
+     1/1: $bmask_a_id$142
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$138'.
+     1/1: $bmask_b_id_imm$139
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$135'.
+     1/1: $bmask_a_id_imm$136
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$132'.
+     1/1: $operand_c_fw_id$133
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$125'.
+     1/1: $operand_c_vec$127
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$122'.
+     1/1: $operand_c$123
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$119'.
+     1/1: $operand_b_fw_id$120
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$111'.
+     1/2: $operand_b_vec$114
+     2/2: $imm_shuffle_type$113
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$108'.
+     1/1: $operand_b$109
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$104'.
+     1/1: $imm_b$106
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$101'.
+     1/1: $operand_a_fw_id$102
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$98'.
+     1/1: $imm_a$99
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$95'.
+     1/1: $alu_operand_a$96
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$87'.
+     1/1: $jump_target$92
+Creating decoders for process `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$20'.
+     1/1: $regfile_addr_rc_id$21
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$25'.
+     1/8: $is_fetch_failed_o$30
+     2/8: $instr_valid_id_o$29
+     3/8: $is_fetch_failed_o$36
+     4/8: $instr_valid_id_o$31
+     5/8: $pc_id_o$35
+     6/8: $illegal_c_insn_id_o$34
+     7/8: $is_compressed_id_o$33
+     8/8: $instr_rdata_id_o$32
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$13'.
+     1/4: $fetch_ready$15
+     2/4: $fetch_ready$16
+     3/4: $fetch_ready$18
+     4/4: $branch_req$17
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$5'.
+     1/1: $branch_addr_n$7
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$0'.
+     1/3: $exc_pc$3
+     2/3: $exc_vec_pc_mux$2
+     3/3: $trap_base_addr$1
+
+1.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 7 empty switches in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$68'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$68'.
+Found and cleaned up 1 empty switch in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$19'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$19'.
+Found and cleaned up 1 empty switch in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$10'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$10'.
+Found and cleaned up 5 empty switches in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$3'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$3'.
+Found and cleaned up 1 empty switch in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$56'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$56'.
+Found and cleaned up 1 empty switch in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$43'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$43'.
+Found and cleaned up 9 empty switches in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$8'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$8'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$97'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$97'.
+Found and cleaned up 7 empty switches in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$84'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$84'.
+Found and cleaned up 5 empty switches in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$72'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$72'.
+Found and cleaned up 1 empty switch in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$48'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$48'.
+Found and cleaned up 9 empty switches in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$19'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$19'.
+Found and cleaned up 5 empty switches in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$131'.
+Removing empty process `cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$131'.
+Found and cleaned up 3 empty switches in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$53'.
+Removing empty process `cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$53'.
+Found and cleaned up 5 empty switches in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$36'.
+Removing empty process `cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$36'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$539'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$539'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$518'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$518'.
+Found and cleaned up 5 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$426'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$426'.
+Found and cleaned up 3 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$418'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$418'.
+Found and cleaned up 9 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$357'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$357'.
+Found and cleaned up 15 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$327'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$327'.
+Found and cleaned up 5 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$319'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$319'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$285'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$285'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$266'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$266'.
+Found and cleaned up 3 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$238'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$238'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$232'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$232'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$182'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$182'.
+Found and cleaned up 1 empty switch in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$120'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$120'.
+Found and cleaned up 5 empty switches in `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$85'.
+Removing empty process `cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.$85'.
+Found and cleaned up 7 empty switches in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$29'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$29'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$14'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$14'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$3'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$3'.
+Found and cleaned up 63 empty switches in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$14'.
+Removing empty process `cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$14'.
+Found and cleaned up 9 empty switches in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$688'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$688'.
+Found and cleaned up 19 empty switches in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$631'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$631'.
+Found and cleaned up 7 empty switches in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$584'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$584'.
+Found and cleaned up 3 empty switches in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$680'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$680'.
+Found and cleaned up 147 empty switches in `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$0'.
+Removing empty process `cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.$0'.
+Found and cleaned up 293 empty switches in `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.$0'.
+Removing empty process `cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.$0'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$424'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$424'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$417'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$417'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$410'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$410'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$403'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$403'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$396'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$396'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$389'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$389'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$382'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$382'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$375'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$375'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$368'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$368'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$361'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$361'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$354'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$354'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$347'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$347'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$340'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$340'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$333'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$333'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$326'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$326'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$319'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$319'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$312'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$312'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$305'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$305'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$298'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$298'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$291'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$291'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$284'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$284'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$277'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$277'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$270'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$270'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$263'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$263'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$256'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$256'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$249'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$249'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$242'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$242'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$235'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$235'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$228'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$228'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$221'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$221'.
+Found and cleaned up 3 empty switches in `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$431'.
+Removing empty process `cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.$431'.
+Found and cleaned up 45 empty switches in `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.$0'.
+Removing empty process `cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.$0'.
+Found and cleaned up 13 empty switches in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$16'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$16'.
+Found and cleaned up 3 empty switches in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$5'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$5'.
+Found and cleaned up 1 empty switch in `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.$0'.
+Removing empty process `cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.$0'.
+Found and cleaned up 5 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$642'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$642'.
+Found and cleaned up 5 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$635'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$635'.
+Found and cleaned up 3 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$286'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$286'.
+Found and cleaned up 3 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$130'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$130'.
+Found and cleaned up 5 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$648'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$648'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$78'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$78'.
+Found and cleaned up 27 empty switches in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$26'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$26'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$14'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$14'.
+Found and cleaned up 1 empty switch in `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$2'.
+Removing empty process `cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.$2'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$139'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$139'.
+Found and cleaned up 7 empty switches in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$95'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$95'.
+Found and cleaned up 3 empty switches in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$74'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$74'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$71'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$71'.
+Found and cleaned up 17 empty switches in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$52'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$52'.
+Found and cleaned up 17 empty switches in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$33'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$33'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$30'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$30'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$16'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$16'.
+Found and cleaned up 1 empty switch in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$13'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$13'.
+Found and cleaned up 13 empty switches in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$0'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$0'.
+Found and cleaned up 5 empty switches in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$72'.
+Removing empty process `cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$72'.
+Found and cleaned up 5 empty switches in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$24'.
+Removing empty process `cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$24'.
+Found and cleaned up 9 empty switches in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$0'.
+Removing empty process `cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$0'.
+Found and cleaned up 31 empty switches in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$190'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$190'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$183'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$183'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$179'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$179'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$174'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$174'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$149'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$149'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$144'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$144'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$141'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$141'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$138'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$138'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$135'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$135'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$132'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$132'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$125'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$125'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$122'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$122'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$119'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$119'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$111'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$111'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$108'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$108'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$104'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$104'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$101'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$101'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$98'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$98'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$95'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$95'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$87'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$87'.
+Found and cleaned up 1 empty switch in `\cv32e40p_id_stage$cv32e40p_core.id_stage_i.$20'.
+Removing empty process `cv32e40p_id_stage$cv32e40p_core.id_stage_i.$20'.
+Found and cleaned up 3 empty switches in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$25'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$25'.
+Found and cleaned up 5 empty switches in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$13'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$13'.
+Found and cleaned up 1 empty switch in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$5'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$5'.
+Found and cleaned up 5 empty switches in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$0'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$0'.
+Cleaned up 1015 empty switches.
+
+1.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i.
+<suppressed ~31 debug messages>
+Optimizing module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i.
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+<suppressed ~14 debug messages>
+Optimizing module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+<suppressed ~17 debug messages>
+Optimizing module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i.
+Optimizing module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+<suppressed ~7 debug messages>
+Optimizing module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+<suppressed ~10 debug messages>
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~9 debug messages>
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+<suppressed ~2 debug messages>
+Optimizing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Couldn't topologically sort cells, optimizing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i may take a longer time.
+Couldn't topologically sort cells, optimizing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i may take a longer time.
+<suppressed ~405 debug messages>
+Optimizing module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.
+<suppressed ~203 debug messages>
+Optimizing module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+<suppressed ~96 debug messages>
+Optimizing module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.
+<suppressed ~46 debug messages>
+Optimizing module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+<suppressed ~10 debug messages>
+Optimizing module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i.
+Optimizing module cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.
+<suppressed ~5 debug messages>
+Optimizing module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+<suppressed ~73 debug messages>
+Optimizing module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+<suppressed ~48 debug messages>
+Optimizing module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+<suppressed ~1 debug messages>
+Optimizing module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Couldn't topologically sort cells, optimizing module cv32e40p_id_stage$cv32e40p_core.id_stage_i may take a longer time.
+Couldn't topologically sort cells, optimizing module cv32e40p_id_stage$cv32e40p_core.id_stage_i may take a longer time.
+<suppressed ~35 debug messages>
+Optimizing module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+<suppressed ~2 debug messages>
+Optimizing module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i.
+<suppressed ~1 debug messages>
+Optimizing module cv32e40p_core.
+<suppressed ~2 debug messages>
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:         \cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:         \cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+Used module:         \cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+Used module:             \cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+Used module:             \cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+Used module:             \cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:         \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:         \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:         \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:         \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:         \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:         \cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+Used module:         \cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+Used module:         \cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+Used module:             \cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+Used module:             \cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+Used module:             \cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+Used module:         \cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:         \cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:         \cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+Used module:         \cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+Used module:             \cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+Used module:             \cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+Used module:             \cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:         \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:         \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:         \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:         \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:         \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:         \cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+Used module:         \cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+Used module:         \cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+Used module:             \cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+Used module:             \cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+Used module:             \cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+Used module:         \cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Optimizing module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i.
+Optimizing module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i.
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Optimizing module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Optimizing module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i.
+Optimizing module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Optimizing module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Optimizing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Couldn't topologically sort cells, optimizing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i may take a longer time.
+Optimizing module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.
+Optimizing module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+Optimizing module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.
+Optimizing module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Optimizing module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i.
+Optimizing module cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i.
+Optimizing module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Optimizing module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Optimizing module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Optimizing module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Couldn't topologically sort cells, optimizing module cv32e40p_id_stage$cv32e40p_core.id_stage_i may take a longer time.
+Optimizing module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Optimizing module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i.
+Optimizing module cv32e40p_core.
+
+4. Executing PMUXTREE pass.
+
+5. Executing BMUXMAP pass.
+
+6. Executing DEMUXMAP pass.
+
+7. Executing BWMUXMAP pass.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i...
+Checking module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i...
+Checking module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i...
+Checking module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i...
+Checking module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i...
+Checking module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i...
+Checking module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i...
+Checking module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i...
+Checking module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i...
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Checking module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i...
+Checking module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i...
+Checking module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i...
+Checking module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i...
+Checking module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i...
+Checking module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i...
+Checking module cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i...
+Checking module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i...
+Checking module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i...
+Checking module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i...
+Checking module cv32e40p_id_stage$cv32e40p_core.id_stage_i...
+Checking module cv32e40p_if_stage$cv32e40p_core.if_stage_i...
+Checking module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i...
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+9. Executing JSON backend.
+
+10. Executing Verilog backend.
+
+10.1. Executing BMUXMAP pass.
+
+10.2. Executing DEMUXMAP pass.
+Dumping module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Dumping module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Dumping module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Dumping module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Dumping module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Dumping module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Dumping module `\cv32e40p_core'.
+Dumping module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Dumping module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Dumping module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Dumping module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Dumping module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Dumping module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Dumping module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Dumping module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Dumping module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Dumping module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Dumping module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Dumping module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Dumping module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Dumping module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Dumping module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Dumping module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Dumping module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Dumping module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+
+11. Printing statistics.
+
+=== cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      250 wires
+     2205 wire bits
+       24 public wires
+      353 public wire bits
+       13 ports
+      168 port bits
+      161 cells
+        2   $add
+        6   $aldff
+        7   $and
+        4   $buf
+       35   $eq
+       14   $logic_not
+        2   $logic_or
+       74   $mux
+        5   $not
+        7   $or
+        5   $reduce_or
+
+=== cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      754 wires
+     6037 wire bits
+       96 public wires
+     1731 public wire bits
+       18 ports
+      159 port bits
+      902 cells
+        3   $add
+       32   $and
+      241   $buf
+      235   $eq
+        4   $gt
+        6   $logic_not
+       37   $logic_or
+        1   $lt
+      220   $mux
+       39   $not
+       18   $or
+       53   $reduce_or
+        2   $shl
+        1   $shr
+        6   $sshr
+        2   $sub
+        2   $xor
+        3 submodules
+        1   cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+        1   cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+        1   cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+
+=== cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      157 wires
+     1150 wire bits
+       41 public wires
+      524 public wire bits
+       12 ports
+      111 port bits
+      148 cells
+        1   $add
+        8   $aldff
+        5   $and
+       49   $buf
+        9   $eq
+        1   $gt
+       11   $logic_not
+       40   $mux
+        1   $neg
+        8   $not
+        4   $or
+        6   $reduce_or
+        2   $sub
+        3   $xor
+
+=== cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       17 wires
+       17 wire bits
+        5 public wires
+        5 public wire bits
+        4 ports
+        4 port bits
+        8 cells
+        1   $and
+        1   $buf
+        1   $dlatch
+        3   $mux
+        1   $not
+        1   $or
+
+=== cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      376 wires
+     3734 wire bits
+        4 public wires
+       66 public wire bits
+        4 ports
+       66 port bits
+      305 cells
+        2   $buf
+       95   $eq
+       34   $logic_not
+        1   $logic_or
+      134   $mux
+        1   $ne
+       11   $not
+        8   $or
+       19   $reduce_or
+
+=== cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     5724 wires
+    12248 wire bits
+      146 public wires
+      451 public wire bits
+      108 ports
+      401 port bits
+     3344 cells
+        6   $add
+       10   $aldff
+       11   $and
+       31   $buf
+      552   $eq
+        2   $ge
+        2   $gt
+        2   $le
+       36   $logic_and
+       26   $logic_not
+       25   $logic_or
+     2281   $mux
+      111   $not
+      122   $or
+      127   $reduce_or
+
+=== cv32e40p_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      227 wires
+     2784 wire bits
+      222 public wires
+     2760 public wire bits
+       40 ports
+      537 port bits
+       23 cells
+       18   $buf
+        2   $logic_not
+        3   $mux
+        6 submodules
+        1   cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+        1   cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+        1   cv32e40p_id_stage$cv32e40p_core.id_stage_i
+        1   cv32e40p_if_stage$cv32e40p_core.if_stage_i
+        1   cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+        1   cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+=== cv32e40p_cs_registers$cv32e40p_core.cs_registers_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      983 wires
+    30995 wire bits
+      141 public wires
+    10284 public wire bits
+       67 ports
+     1371 port bits
+     1260 cells
+       32   $add
+       39   $aldff
+       13   $and
+      316   $buf
+      346   $eq
+        1   $ge
+      110   $logic_and
+       58   $logic_not
+       28   $logic_or
+        4   $lt
+      275   $mux
+        8   $not
+       14   $or
+       16   $reduce_or
+
+=== cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     5190 wires
+     9527 wire bits
+       97 public wires
+      220 public wire bits
+       81 ports
+      196 port bits
+     6052 cells
+       13   $buf
+     3296   $eq
+        1   $gt
+       65   $logic_and
+      116   $logic_not
+       39   $logic_or
+     1767   $mux
+       68   $ne
+      158   $not
+      113   $or
+       30   $reduce_bool
+      386   $reduce_or
+
+=== cv32e40p_ex_stage$cv32e40p_core.ex_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      244 wires
+     1695 wire bits
+      108 public wires
+     1003 public wire bits
+       86 ports
+      843 port bits
+      113 cells
+        2   $aldff
+       24   $and
+       33   $buf
+        5   $logic_not
+       34   $mux
+        9   $not
+        6   $or
+        2 submodules
+        1   cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+        1   cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+
+=== cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      100 wires
+      608 wire bits
+        6 public wires
+      390 public wire bits
+        3 ports
+       38 port bits
+      161 cells
+       98   $buf
+       31   $mux
+        1   $not
+       31   $or
+
+=== cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      126 wires
+     1205 wire bits
+       21 public wires
+      212 public wire bits
+       12 ports
+       75 port bits
+       71 cells
+        4   $add
+        5   $aldff
+        2   $and
+        4   $buf
+        3   $eq
+        1   $ge
+        3   $gt
+        6   $logic_and
+        4   $logic_not
+        2   $lt
+       24   $mux
+        8   $not
+        1   $or
+        3   $reduce_or
+        1   $sub
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       79 wires
+     1963 wire bits
+       17 public wires
+      585 public wire bits
+       12 ports
+      297 port bits
+       54 cells
+        6   $aldff
+        4   $and
+        5   $buf
+        1   $dffe
+        4   $eq
+        2   $ge
+        6   $logic_and
+        3   $logic_not
+        2   $lt
+       14   $mux
+        3   $not
+        2   $or
+        2   $sub
+
+=== cv32e40p_id_stage$cv32e40p_core.id_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1870 wires
+    13955 wire bits
+      312 public wires
+     2719 public wire bits
+      151 ports
+     1191 port bits
+      902 cells
+        7   $add
+       64   $aldff
+       11   $and
+       79   $buf
+       55   $eq
+       34   $logic_and
+       11   $logic_not
+        5   $logic_or
+      580   $mux
+       23   $not
+       10   $or
+        9   $reduce_bool
+       12   $reduce_or
+        1   $shl
+        1   $sub
+        5 submodules
+        1   cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+        1   cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+        1   cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+        1   cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+        1   cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+=== cv32e40p_if_stage$cv32e40p_core.if_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      158 wires
+     1508 wire bits
+       59 public wires
+      735 public wire bits
+       41 ports
+      535 port bits
+       78 cells
+        1   $add
+        6   $aldff
+        3   $and
+        9   $buf
+       13   $eq
+        3   $logic_and
+        4   $logic_not
+       30   $mux
+        3   $not
+        3   $or
+        3   $reduce_or
+        3 submodules
+        1   cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+        1   cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+        1   cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1113 wires
+     3606 wire bits
+       17 public wires
+      177 public wire bits
+       13 ports
+      111 port bits
+      543 cells
+        2   $aldff
+        2   $and
+        7   $buf
+        1   $logic_and
+        1   $logic_not
+      528   $mux
+        2   $reduce_or
+
+=== cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      413 wires
+     3860 wire bits
+       64 public wires
+      624 public wire bits
+       32 ports
+      265 port bits
+      285 cells
+        2   $add
+        7   $aldff
+       28   $buf
+       58   $eq
+       15   $logic_and
+       33   $logic_not
+        2   $logic_or
+        1   $lt
+      107   $mux
+       11   $not
+        9   $or
+        2   $reduce_bool
+        8   $reduce_or
+        2   $sub
+        1 submodules
+        1   cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+
+=== cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      267 wires
+     2580 wire bits
+       62 public wires
+     1052 public wire bits
+       22 ports
+      248 port bits
+      220 cells
+       10   $add
+        2   $aldff
+       24   $and
+       47   $buf
+       33   $eq
+        1   $logic_and
+        7   $logic_not
+        8   $mul
+       55   $mux
+       12   $not
+        4   $or
+       12   $reduce_or
+        1   $shl
+        2   $sshr
+        2   $xor
+
+=== cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       86 wires
+      638 wire bits
+       29 public wires
+      301 public wire bits
+       22 ports
+      224 port bits
+       37 cells
+        6   $aldff
+        6   $buf
+        2   $logic_and
+        2   $logic_not
+       16   $mux
+        5   $not
+
+=== cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+      226 wire bits
+       24 public wires
+      226 public wire bits
+       22 ports
+      224 port bits
+       12 cells
+       12   $buf
+
+=== cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       37 wires
+      208 wire bits
+        6 public wires
+      120 public wire bits
+        2 ports
+       38 port bits
+       62 cells
+       31   $add
+       31   $buf
+
+=== cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       32 wires
+      312 wire bits
+       31 public wires
+      280 public wire bits
+       18 ports
+      173 port bits
+        2 cells
+        1   $buf
+        1   $mux
+        3 submodules
+        1   cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+        1   cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+        1   cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+
+=== cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      195 wires
+      885 wire bits
+       38 public wires
+      231 public wire bits
+       20 ports
+      114 port bits
+      130 cells
+        3   $add
+        6   $aldff
+       19   $buf
+        3   $eq
+        4   $gt
+       21   $logic_and
+       14   $logic_not
+       11   $logic_or
+        1   $lt
+       37   $mux
+        5   $not
+        1   $or
+        1   $reduce_bool
+        4   $sub
+
+=== cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      574 wires
+    14064 wire bits
+       21 public wires
+     2319 public wire bits
+       15 ports
+      195 port bits
+      556 cells
+       32   $aldff
+       70   $buf
+       62   $eq
+       34   $logic_not
+        6   $lt
+      352   $mux
+
+=== cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       33 wires
+       33 wire bits
+       23 public wires
+       23 public wire bits
+       16 ports
+       16 port bits
+       18 cells
+        3   $aldff
+        6   $buf
+        2   $logic_and
+        2   $logic_not
+        4   $logic_or
+        1   $mux
+        1 submodules
+        1   cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    15447 cv32e40p_core
+     1260 cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+      113 cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+      902   cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+      148     cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+      161     cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+       62     cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+      220   cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+      902 cv32e40p_id_stage$cv32e40p_core.id_stage_i
+     3344   cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+     6052   cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+       54   cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+      543   cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+      556   cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+       78 cv32e40p_if_stage$cv32e40p_core.if_stage_i
+      161   cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+      305   cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+        2   cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+       71     cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+       37     cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+      130     cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+      285 cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+       12   cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+       18 cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+        8   cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i
+
+        +----------Count including submodules.
+        | 
+    19029 wires
+   116043 wire bits
+     1614 public wires
+    27391 public wire bits
+      834 ports
+     7600 port bits
+        - memories
+        - memory bits
+        - processes
+    15447 cells
+      102   $add
+      204   $aldff
+      139   $and
+     1130   $buf
+        1   $dffe
+        1   $dlatch
+     4799   $eq
+        6   $ge
+       15   $gt
+        2   $le
+      302   $logic_and
+      387   $logic_not
+      154   $logic_or
+       17   $lt
+        8   $mul
+     6607   $mux
+       69   $ne
+        1   $neg
+      421   $not
+      354   $or
+       42   $reduce_bool
+      652   $reduce_or
+        4   $shl
+        1   $shr
+        8   $sshr
+       14   $sub
+        7   $xor
+        6 submodules
+        1   cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+        1   cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+        1   cv32e40p_id_stage$cv32e40p_core.id_stage_i
+        1   cv32e40p_if_stage$cv32e40p_core.if_stage_i
+        1   cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+        1   cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+End of script. Logfile hash: b564d61e19, time: 1.17s, user: 1.32s, system: 0.19s, MEM: 74.47 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 24% 2x read_slang (0 sec), 20% 1x check (0 sec), ...

@@ -1,0 +1,630 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42486.1-42567.10"
+      },
+      "ports": {
+        "pulp_clock_en_i": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "scan_cg_en_i": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "fetch_enable_i": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "core_sleep_o": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "clk_ungated_i": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "clk_gated_o": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "fetch_enable_o": {
+          "direction": "output",
+          "bits": [ 9 ]
+        },
+        "if_busy_i": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "ctrl_busy_i": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "lsu_busy_i": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "apu_busy_i": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "p_elw_start_i": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "p_elw_finish_i": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "debug_p_elw_no_sleep_i": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "wake_from_sleep_i": {
+          "direction": "input",
+          "bits": [ 17 ]
+        }
+      },
+      "cells": {
+        "$flatten\\core_clock_gate_i.$and$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2710$936": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2710.17-2710.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 18 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$flatten\\core_clock_gate_i.$auto$proc_dlatch.cc:547:proc_dlatch$14592": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2708.3-2709.31"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 19 ],
+            "EN": [ 6 ],
+            "Q": [ 18 ]
+          }
+        },
+        "$flatten\\core_clock_gate_i.$or$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2707$933": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2707.17-2707.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 3 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$logic_and$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42538$14565": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42538.17-42538.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 21 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$logic_and$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42548$14571": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42548.17-42548.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 22 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$logic_not$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42550$14572": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42550.17-42550.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$logic_or$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42543$14567": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42543.17-42543.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$logic_or$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42544$14568": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42544.17-42544.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 12 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$logic_or$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42545$14569": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42545.17-42545.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 13 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$logic_or$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42547$14570": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42547.17-42547.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 26 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$procdff$14602": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42554.3-42556.43"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 27 ],
+            "Q": [ 9 ]
+          }
+        },
+        "$procdff$14607": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42551.3-42553.37"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 25 ],
+            "Q": [ 26 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42536$14564": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42536.17-42536.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ "1" ],
+            "S": [ 4 ],
+            "Y": [ 27 ]
+          }
+        }
+      },
+      "netnames": {
+        "_00_": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42519.8-42519.12"
+          }
+        },
+        "_04_": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42523.8-42523.12"
+          }
+        },
+        "_05_": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42524.8-42524.12"
+          }
+        },
+        "_06_": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42525.8-42525.12"
+          }
+        },
+        "_07_": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42526.8-42526.12"
+          }
+        },
+        "_09_": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42528.8-42528.12"
+          }
+        },
+        "apu_busy_i": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42509.9-42509.19"
+          }
+        },
+        "clk_gated_o": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42499.10-42499.21"
+          }
+        },
+        "clk_ungated_i": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42495.9-42495.22"
+          }
+        },
+        "clock_en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42529.8-42529.16"
+          }
+        },
+        "core_busy_d": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42530.8-42530.19"
+          }
+        },
+        "core_busy_q": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42531.7-42531.18"
+          }
+        },
+        "core_clock_gate_i._01_": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i _01_",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2694.8-2694.12"
+          }
+        },
+        "core_clock_gate_i.clk_en": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i clk_en",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2705.7-2705.13"
+          }
+        },
+        "core_clock_gate_i.clk_i": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i clk_i",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2685.9-2685.14"
+          }
+        },
+        "core_clock_gate_i.clk_o": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i clk_o",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2691.10-2691.15"
+          }
+        },
+        "core_clock_gate_i.en_i": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i en_i",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2689.9-2689.13"
+          }
+        },
+        "core_clock_gate_i.scan_cg_en_i": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "core_clock_gate_i scan_cg_en_i",
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42560.70-42565.4|/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2687.9-2687.21"
+          }
+        },
+        "core_sleep_o": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42493.10-42493.22"
+          }
+        },
+        "ctrl_busy_i": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42505.9-42505.20"
+          }
+        },
+        "debug_p_elw_no_sleep_i": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42515.9-42515.31"
+          }
+        },
+        "fetch_enable_d": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42532.8-42532.22"
+          }
+        },
+        "fetch_enable_i": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42491.9-42491.23"
+          }
+        },
+        "fetch_enable_o": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42501.10-42501.24"
+          }
+        },
+        "fetch_enable_q": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42533.7-42533.21"
+          }
+        },
+        "if_busy_i": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42503.9-42503.18"
+          }
+        },
+        "lsu_busy_i": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42507.9-42507.19"
+          }
+        },
+        "p_elw_busy_d": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42534.8-42534.20"
+          }
+        },
+        "p_elw_finish_i": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42513.9-42513.23"
+          }
+        },
+        "p_elw_start_i": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42511.9-42511.22"
+          }
+        },
+        "pulp_clock_en_i": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42487.9-42487.24"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42497.9-42497.14"
+          }
+        },
+        "scan_cg_en_i": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42489.9-42489.21"
+          }
+        },
+        "wake_from_sleep_i": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42517.9-42517.26"
+          }
+        }
+      }
+    }
+  }
+}

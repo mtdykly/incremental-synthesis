@@ -16,10 +16,16 @@ INPUT_JSON="$(realpath "$1")"
 TOP_MODULE="$2"
 LIBERTY_FILE="$(realpath "$3")"
 OUTPUT_DIR="$(realpath -m "$4")"
+SCRIPT_DIR="$(
+    cd "$(dirname "${BASH_SOURCE[0]}")"
+    pwd
+)"
+LATCH_MAP="$SCRIPT_DIR/nangate45_latch_map.v"
 
 for required in \
     "$INPUT_JSON" \
-    "$LIBERTY_FILE"
+    "$LIBERTY_FILE" \
+    "$LATCH_MAP"
 do
     if [[ ! -f "$required" ]]; then
         echo "ERROR: required file does not exist:"
@@ -39,11 +45,11 @@ read_json "$INPUT_JSON"
 
 hierarchy -top $TOP_MODULE
 
-# Map sequential cells to the target standard-cell library.
 dfflibmap -liberty "$LIBERTY_FILE"
 
-# Map combinational logic to the same library.
 abc -liberty "$LIBERTY_FILE"
+
+techmap -map "$LATCH_MAP"
 
 opt_clean -purge
 

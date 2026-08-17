@@ -7,7 +7,7 @@ usage() {
     echo "  $0 <case_name> <base_source_dir> <new_source_dir>"
 }
 
-if [[ $# -ne 3 ]]; then
+if [[ $# -lt 3 || $# -gt 4 ]]; then
     usage
     exit 1
 fi
@@ -15,6 +15,7 @@ fi
 CASE_NAME="$1"
 BASE_SRC="$(realpath "$2")"
 NEW_SRC="$(realpath "$3")"
+TOP_MODULE="${4:-riscv_core}"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
@@ -51,11 +52,11 @@ echo "============================================================"
 echo "1. Prepare Base hierarchy"
 echo "============================================================"
 
-"$EXPORT_HIERARCHY" "$BASE_SRC" "$BASE_OUT" riscv_core
+"$EXPORT_HIERARCHY" "$BASE_SRC" "$BASE_OUT" "$TOP_MODULE"
 
 python3 "$EXTRACT_PARTITIONS" \
     "$BASE_OUT/frontend_hier.json" \
-    --top riscv_core \
+    --top "$TOP_MODULE" \
     --output "$BASE_OUT/partition_manifest.json"
 
 echo
@@ -120,11 +121,11 @@ echo "============================================================"
 
 rm -rf "$NEW_OUT/partitions" "$NEW_OUT/partition-frontends"
 
-"$EXPORT_HIERARCHY" "$NEW_SRC" "$NEW_OUT" riscv_core
+"$EXPORT_HIERARCHY" "$NEW_SRC" "$NEW_OUT" "$TOP_MODULE"
 
 python3 "$EXTRACT_PARTITIONS" \
     "$NEW_OUT/frontend_hier.json" \
-    --top riscv_core \
+    --top "$TOP_MODULE" \
     --output "$NEW_OUT/partition_manifest.json"
 
 echo

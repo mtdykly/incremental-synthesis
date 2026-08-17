@@ -4,10 +4,10 @@ set -euo pipefail
 
 usage() {
     echo "Usage:"
-    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [repeat_count]"
+    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [repeat_count] [top_module]"
 }
 
-if [[ $# -lt 3 || $# -gt 4 ]]; then
+if [[ $# -lt 3 || $# -gt 5 ]]; then
     usage
     exit 1
 fi
@@ -15,8 +15,8 @@ fi
 CASE_NAME="$1"
 BASE_SOURCE_DIR="$(realpath "$2")"
 NEW_SOURCE_DIR="$(realpath "$3")"
-REPEAT_COUNT="${4:-5}"
-
+REPEAT_COUNT="${4:-}"
+TOP_MODULE="${5:-riscv_core}"
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 BASE_OUT="$CASE_OUT/base"
@@ -81,7 +81,7 @@ run_full() {
         "$SYNTH_FULL" \
             "$NEW_SOURCE_DIR" \
             "$run_dir" \
-            riscv_core
+            "$TOP_MODULE"
 
     test -s "$run_dir/full_reference.json"
 }
@@ -96,7 +96,8 @@ run_incremental() {
         "$CASE_NAME" \
         "$BASE_SOURCE_DIR" \
         "$NEW_SOURCE_DIR" \
-        "$profile"
+        "$profile" \
+        "$TOP_MODULE"
 
     test -s "$profile"
 }

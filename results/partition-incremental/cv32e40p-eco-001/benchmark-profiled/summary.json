@@ -1,0 +1,73 @@
+{
+  "iteration_count": 5,
+  "full_median_seconds": 32.91,
+  "incremental_core_median_seconds": 27.362079,
+  "speedup": 1.2027594832980344,
+  "time_reduction_percent": 16.85785779398358,
+  "stage_medians": {
+    "full_seconds": 32.91,
+    "incremental_core_seconds": 27.362079,
+    "detection_seconds": 12.42111,
+    "export_hierarchy_seconds": 2.18,
+    "extract_partitions_seconds": 0.18,
+    "prepare_partition_frontends_seconds": 8.94,
+    "compute_signatures_seconds": 1.0,
+    "compare_signatures_seconds": 0.05,
+    "materialize_partitions_seconds": 12.89,
+    "reuse_copy_seconds": 0.08628099999999998,
+    "rebuild_wall_seconds": 11.64749,
+    "rebuild_yosys_seconds": 11.57,
+    "top_shell_seconds": 0.9,
+    "link_partitions_seconds": 0.98,
+    "check_linked_seconds": 9.22,
+    "unattributed_overhead_seconds": 0.20207899999999768
+  },
+  "stage_breakdown": [
+    {
+      "stage": "materialize_partitions",
+      "median_seconds": 12.89,
+      "percent_of_incremental": 47.108993435769264
+    },
+    {
+      "stage": "prepare_partition_frontends",
+      "median_seconds": 8.94,
+      "percent_of_incremental": 32.67295588175153
+    },
+    {
+      "stage": "export_hierarchy",
+      "median_seconds": 2.18,
+      "percent_of_incremental": 7.96723085259713
+    },
+    {
+      "stage": "compute_signatures",
+      "median_seconds": 1.0,
+      "percent_of_incremental": 3.654693051650059
+    },
+    {
+      "stage": "link_partitions",
+      "median_seconds": 0.98,
+      "percent_of_incremental": 3.5815991906170574
+    },
+    {
+      "stage": "top_shell",
+      "median_seconds": 0.9,
+      "percent_of_incremental": 3.289223746485053
+    },
+    {
+      "stage": "unattributed_overhead",
+      "median_seconds": 0.20207899999999768,
+      "percent_of_incremental": 0.7385367171843839
+    },
+    {
+      "stage": "extract_partitions",
+      "median_seconds": 0.18,
+      "percent_of_incremental": 0.6578447492970106
+    },
+    {
+      "stage": "compare_signatures",
+      "median_seconds": 0.05,
+      "percent_of_incremental": 0.18273465258250296
+    }
+  ],
+  "check_linked_median_seconds_excluded_from_core": 9.22
+}

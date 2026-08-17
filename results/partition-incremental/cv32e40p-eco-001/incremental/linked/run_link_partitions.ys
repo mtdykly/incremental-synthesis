@@ -1,0 +1,38 @@
+# Read synthesized top shell.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/top-shell/top_shell.json"
+
+# Remove partition blackbox placeholders from top shell.
+# remove blackbox: cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+delete =cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+# remove blackbox: cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+delete =cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+# remove blackbox: cv32e40p_id_stage$cv32e40p_core.id_stage_i
+delete =cv32e40p_id_stage$cv32e40p_core.id_stage_i
+# remove blackbox: cv32e40p_if_stage$cv32e40p_core.if_stage_i
+delete =cv32e40p_if_stage$cv32e40p_core.if_stage_i
+# remove blackbox: cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+delete =cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+# remove blackbox: cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+delete =cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+# Read each independently synthesized partition.
+# cs_registers_i -> cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/cs_registers_i/synth.json"
+# ex_stage_i -> cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/ex_stage_i/synth.json"
+# id_stage_i -> cv32e40p_id_stage$cv32e40p_core.id_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/id_stage_i/synth.json"
+# if_stage_i -> cv32e40p_if_stage$cv32e40p_core.if_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/if_stage_i/synth.json"
+# load_store_unit_i -> cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/load_store_unit_i/synth.json"
+# sleep_unit_i -> cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/partitions/sleep_unit_i/synth.json"
+
+hierarchy -check -top cv32e40p_core
+check
+stat -top cv32e40p_core
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/linked/linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/linked/linked.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/incremental/linked/linked_netlist.v"

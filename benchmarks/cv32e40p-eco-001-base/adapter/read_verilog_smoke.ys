@@ -1,0 +1,11 @@
+read_verilog -sv /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v
+
+hierarchy -check -top cv32e40p_core
+
+proc
+
+check
+
+write_json /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/adapter/normalized_design.json
+
+stat -top cv32e40p_core

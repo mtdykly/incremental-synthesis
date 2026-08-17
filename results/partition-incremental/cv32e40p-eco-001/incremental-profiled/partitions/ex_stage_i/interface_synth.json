@@ -1,0 +1,432 @@
+[
+  {
+    "direction": "input",
+    "name": "clk",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "data_rvalid_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_busy_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_req_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "apu_gnt_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_operands_o",
+    "width": 96
+  },
+  {
+    "direction": "output",
+    "name": "apu_op_o",
+    "width": 6
+  },
+  {
+    "direction": "input",
+    "name": "apu_rvalid_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "apu_result_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "apu_flags_i",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "rst_n",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "jump_target_o",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "wb_ready_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "data_misaligned_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "alu_operator_i",
+    "width": 7
+  },
+  {
+    "direction": "input",
+    "name": "alu_operand_a_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "alu_operand_b_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "alu_operand_c_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "alu_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "bmask_a_i",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "bmask_b_i",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "imm_vec_ext_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "alu_vec_mode_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "alu_is_clpx_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "alu_is_subrot_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "alu_clpx_shift_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "mult_operator_i",
+    "width": 3
+  },
+  {
+    "direction": "input",
+    "name": "mult_operand_a_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_operand_b_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_operand_c_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "mult_sel_subword_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "mult_signed_mode_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "mult_imm_i",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "mult_dot_op_a_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_dot_op_b_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_dot_op_c_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "mult_dot_signed_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "mult_is_clpx_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "mult_clpx_shift_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "mult_clpx_img_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "mult_multicycle_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "data_req_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "data_misaligned_ex_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "ctrl_transfer_insn_in_dec_i",
+    "width": 2
+  },
+  {
+    "direction": "output",
+    "name": "fpu_fflags_we_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "fpu_fflags_o",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "apu_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "apu_op_i",
+    "width": 6
+  },
+  {
+    "direction": "input",
+    "name": "apu_lat_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "apu_operands_i",
+    "width": 96
+  },
+  {
+    "direction": "input",
+    "name": "apu_waddr_i",
+    "width": 6
+  },
+  {
+    "direction": "input",
+    "name": "apu_read_regs_i",
+    "width": 18
+  },
+  {
+    "direction": "input",
+    "name": "apu_read_regs_valid_i",
+    "width": 3
+  },
+  {
+    "direction": "output",
+    "name": "apu_read_dep_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_read_dep_for_jalr_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "apu_write_regs_i",
+    "width": 12
+  },
+  {
+    "direction": "input",
+    "name": "apu_write_regs_valid_i",
+    "width": 2
+  },
+  {
+    "direction": "output",
+    "name": "apu_write_dep_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_perf_type_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_perf_cont_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_perf_wb_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "apu_ready_wb_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "lsu_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "lsu_rdata_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "branch_in_ex_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "regfile_alu_waddr_i",
+    "width": 6
+  },
+  {
+    "direction": "input",
+    "name": "regfile_alu_we_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "regfile_we_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "regfile_waddr_i",
+    "width": 6
+  },
+  {
+    "direction": "input",
+    "name": "csr_access_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "csr_rdata_i",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "regfile_waddr_wb_o",
+    "width": 6
+  },
+  {
+    "direction": "output",
+    "name": "regfile_we_wb_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "regfile_we_wb_power_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "regfile_wdata_wb_o",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "regfile_alu_waddr_fw_o",
+    "width": 6
+  },
+  {
+    "direction": "output",
+    "name": "regfile_alu_we_fw_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "regfile_alu_we_fw_power_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "regfile_alu_wdata_fw_o",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "branch_decision_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "is_decoding_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "lsu_ready_ex_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "lsu_err_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "ex_ready_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "ex_valid_o",
+    "width": 1
+  }
+]

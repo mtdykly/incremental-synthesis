@@ -1,0 +1,384 @@
+{
+  "partition_count": 6,
+  "partitions": {
+    "cs_registers_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [],
+        "instance_path": "cv32e40p_core.cs_registers_i",
+        "module_type": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+          "module_name": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15668.1-18280.10"
+        }
+      ],
+      "module_count": 1,
+      "partition_index": 1,
+      "root_instance_name": "cs_registers_i",
+      "root_instance_path": "cv32e40p_core.cs_registers_i",
+      "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+      "root_parameters": {}
+    },
+    "ex_stage_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "alu_div_i",
+                "instance_path": "cv32e40p_core.ex_stage_i.alu_i.alu_div_i",
+                "module_type": "cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i",
+                "parameters": {}
+              },
+              {
+                "children": [],
+                "instance_name": "ff_one_i",
+                "instance_path": "cv32e40p_core.ex_stage_i.alu_i.ff_one_i",
+                "module_type": "cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i",
+                "parameters": {}
+              },
+              {
+                "children": [],
+                "instance_name": "popcnt_i",
+                "instance_path": "cv32e40p_core.ex_stage_i.alu_i.popcnt_i",
+                "module_type": "cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "alu_i",
+            "instance_path": "cv32e40p_core.ex_stage_i.alu_i",
+            "module_type": "cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "mult_i",
+            "instance_path": "cv32e40p_core.ex_stage_i.mult_i",
+            "module_type": "cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "cv32e40p_core.ex_stage_i",
+        "module_type": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i",
+          "module_name": "cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:517.1-2321.10"
+        },
+        {
+          "display_name": "cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i",
+          "module_name": "cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2323.1-2682.10"
+        },
+        {
+          "display_name": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+          "module_name": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:30699.1-31253.10"
+        },
+        {
+          "display_name": "cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i",
+          "module_name": "cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31255.1-31551.10"
+        },
+        {
+          "display_name": "cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i",
+          "module_name": "cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39584.1-40136.10"
+        },
+        {
+          "display_name": "cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i",
+          "module_name": "cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40393.1-40495.10"
+        }
+      ],
+      "module_count": 6,
+      "partition_index": 2,
+      "root_instance_name": "ex_stage_i",
+      "root_instance_path": "cv32e40p_core.ex_stage_i",
+      "root_module": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+      "root_parameters": {}
+    },
+    "id_stage_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "controller_i",
+            "instance_path": "cv32e40p_core.id_stage_i.controller_i",
+            "module_type": "cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "decoder_i",
+            "instance_path": "cv32e40p_core.id_stage_i.decoder_i",
+            "module_type": "cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "gen_hwloop_regs.hwloop_regs_i",
+            "instance_path": "cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+            "module_type": "cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "int_controller_i",
+            "instance_path": "cv32e40p_core.id_stage_i.int_controller_i",
+            "module_type": "cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "register_file_i",
+            "instance_path": "cv32e40p_core.id_stage_i.register_file_i",
+            "module_type": "cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "cv32e40p_core.id_stage_i",
+        "module_type": "cv32e40p_id_stage$cv32e40p_core.id_stage_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i",
+          "module_name": "cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:3490.1-14967.10"
+        },
+        {
+          "display_name": "cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i",
+          "module_name": "cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:18282.1-30697.10"
+        },
+        {
+          "display_name": "cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+          "module_name": "cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31819.1-32000.10"
+        },
+        {
+          "display_name": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+          "module_name": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:32002.1-36099.10"
+        },
+        {
+          "display_name": "cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i",
+          "module_name": "cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36471.1-38708.10"
+        },
+        {
+          "display_name": "cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i",
+          "module_name": "cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:41019.1-42484.10"
+        }
+      ],
+      "module_count": 6,
+      "partition_index": 3,
+      "root_instance_name": "id_stage_i",
+      "root_instance_path": "cv32e40p_core.id_stage_i",
+      "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+      "root_parameters": {}
+    },
+    "if_stage_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "aligner_i",
+            "instance_path": "cv32e40p_core.if_stage_i.aligner_i",
+            "module_type": "cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i",
+            "parameters": {}
+          },
+          {
+            "children": [],
+            "instance_name": "compressed_decoder_i",
+            "instance_path": "cv32e40p_core.if_stage_i.compressed_decoder_i",
+            "module_type": "cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i",
+            "parameters": {}
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "instance_name": "fifo_i",
+                "instance_path": "cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i",
+                "module_type": "cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i",
+                "parameters": {}
+              },
+              {
+                "children": [],
+                "instance_name": "instruction_obi_i",
+                "instance_path": "cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i",
+                "module_type": "cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i",
+                "parameters": {}
+              },
+              {
+                "children": [],
+                "instance_name": "prefetch_controller_i",
+                "instance_path": "cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i",
+                "module_type": "cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i",
+                "parameters": {}
+              }
+            ],
+            "instance_name": "prefetch_buffer_i",
+            "instance_path": "cv32e40p_core.if_stage_i.prefetch_buffer_i",
+            "module_type": "cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "cv32e40p_core.if_stage_i",
+        "module_type": "cv32e40p_if_stage$cv32e40p_core.if_stage_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i",
+          "module_name": "cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:3.1-515.10"
+        },
+        {
+          "display_name": "cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i",
+          "module_name": "cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2723.1-3488.10"
+        },
+        {
+          "display_name": "cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i",
+          "module_name": "cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31553.1-31817.10"
+        },
+        {
+          "display_name": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+          "module_name": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36101.1-36469.10"
+        },
+        {
+          "display_name": "cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i",
+          "module_name": "cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40138.1-40329.10"
+        },
+        {
+          "display_name": "cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i",
+          "module_name": "cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40497.1-40605.10"
+        },
+        {
+          "display_name": "cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i",
+          "module_name": "cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40607.1-41017.10"
+        }
+      ],
+      "module_count": 7,
+      "partition_index": 4,
+      "root_instance_name": "if_stage_i",
+      "root_instance_path": "cv32e40p_core.if_stage_i",
+      "root_module": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+      "root_parameters": {}
+    },
+    "load_store_unit_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "data_obi_i",
+            "instance_path": "cv32e40p_core.load_store_unit_i.data_obi_i",
+            "module_type": "cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "cv32e40p_core.load_store_unit_i",
+        "module_type": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+          "module_name": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:38710.1-39582.10"
+        },
+        {
+          "display_name": "cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i",
+          "module_name": "cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40331.1-40391.10"
+        }
+      ],
+      "module_count": 2,
+      "partition_index": 5,
+      "root_instance_name": "load_store_unit_i",
+      "root_instance_path": "cv32e40p_core.load_store_unit_i",
+      "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+      "root_parameters": {}
+    },
+    "sleep_unit_i": {
+      "flatten_internal": true,
+      "instance_tree": {
+        "children": [
+          {
+            "children": [],
+            "instance_name": "core_clock_gate_i",
+            "instance_path": "cv32e40p_core.sleep_unit_i.core_clock_gate_i",
+            "module_type": "cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i",
+            "parameters": {}
+          }
+        ],
+        "instance_path": "cv32e40p_core.sleep_unit_i",
+        "module_type": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i"
+      },
+      "internal_modules": [
+        {
+          "display_name": "cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i",
+          "module_name": "cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2684.1-2721.10"
+        },
+        {
+          "display_name": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+          "module_name": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+          "source": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:42486.1-42567.10"
+        }
+      ],
+      "module_count": 2,
+      "partition_index": 6,
+      "root_instance_name": "sleep_unit_i",
+      "root_instance_path": "cv32e40p_core.sleep_unit_i",
+      "root_module": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+      "root_parameters": {}
+    }
+  },
+  "schema_version": 1,
+  "shared_module_types": {},
+  "strategy": "top_first_level_instances",
+  "top": {
+    "display_name": "cv32e40p_core",
+    "local_cell_count": 5,
+    "local_cells": [
+      {
+        "cell_name": "$logic_not$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15238$4566",
+        "cell_type": "$logic_not"
+      },
+      {
+        "cell_name": "$logic_not$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15254$4569",
+        "cell_type": "$logic_not"
+      },
+      {
+        "cell_name": "$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15239$4567",
+        "cell_type": "$mux"
+      },
+      {
+        "cell_name": "$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15242$4568",
+        "cell_type": "$mux"
+      },
+      {
+        "cell_name": "$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:15255$4570",
+        "cell_type": "$mux"
+      }
+    ],
+    "module_name": "cv32e40p_core"
+  }
+}

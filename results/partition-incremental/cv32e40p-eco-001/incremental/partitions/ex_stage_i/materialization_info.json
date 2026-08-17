@@ -1,0 +1,11 @@
+{
+  "partition": "ex_stage_i",
+  "root_module": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/base/partitions/ex_stage_i",
+  "reasons": [],
+  "base_implementation_signature": "97ace43b9f31753476404a750a8128423c8df9be4d24b51ad2d90f0fee49bff8",
+  "new_implementation_signature": "97ace43b9f31753476404a750a8128423c8df9be4d24b51ad2d90f0fee49bff8",
+  "partition_netlist_sha256": "c1efd2407efced34f750a2000f2ea958c33e0b96f48fbfbd02d200bccbda11dc"
+}

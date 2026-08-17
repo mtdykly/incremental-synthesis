@@ -1,0 +1,288 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/ex_stage_i/run_prepare_partition_frontend.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v' to AST representation.
+Generating RTLIL representation for module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Generating RTLIL representation for module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Generating RTLIL representation for module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Generating RTLIL representation for module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Generating RTLIL representation for module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Generating RTLIL representation for module `\cv32e40p_core'.
+Generating RTLIL representation for module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Generating RTLIL representation for module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Generating RTLIL representation for module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Generating RTLIL representation for module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Generating RTLIL representation for module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Generating RTLIL representation for module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Generating RTLIL representation for module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+Used module:     \cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+Used module:         \cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+Used module:         \cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+Used module:         \cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i
+Used module:     \cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i
+Used module:         \cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i
+Used module:         \cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i
+Used module:         \cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i
+Removing unused module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removing unused module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Removing unused module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Removing unused module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Removing unused module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removing unused module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Removing unused module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Removing unused module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removing unused module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Removing unused module `\cv32e40p_core'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Removed 19 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31114$11694 in module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31111$11692 in module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40042$13804 in module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40039$13802 in module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2620$896 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2617$894 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2614$892 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2611$890 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2608$888 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2605$886 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2602$884 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2599$882 in module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 12 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31114$11694'.
+Found async reset \rst_n in `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31111$11692'.
+Found async reset \rst_n in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40042$13804'.
+Found async reset \rst_n in `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40039$13802'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2620$896'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2617$894'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2614$892'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2611$890'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2608$888'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2605$886'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2602$884'.
+Found async reset \Rst_RBI in `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2599$882'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31114$11694'.
+     1/1: $0\regfile_we_lsu[0:0]
+Creating decoders for process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31111$11692'.
+     1/1: $0\regfile_waddr_lsu[5:0]
+Creating decoders for process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40042$13804'.
+     1/1: $0\mulh_carry_q[0:0]
+Creating decoders for process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40039$13802'.
+     1/1: $0\mulh_CS[2:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2620$896'.
+     1/1: $0\State_SP[1:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2617$894'.
+     1/1: $0\ResReg_DP[31:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2614$892'.
+     1/1: $0\ResInv_SP[0:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2611$890'.
+     1/1: $0\RemSel_SP[0:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2608$888'.
+     1/1: $0\CompInv_SP[0:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2605$886'.
+     1/1: $0\Cnt_DP[5:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2602$884'.
+     1/1: $0\BReg_DP[31:0]
+Creating decoders for process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2599$882'.
+     1/1: $0\AReg_DP[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.\regfile_we_lsu' using process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31114$11694'.
+  created $adff cell `$procdff$14583' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.\regfile_waddr_lsu' using process `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31111$11692'.
+  created $adff cell `$procdff$14588' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.\mulh_carry_q' using process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40042$13804'.
+  created $adff cell `$procdff$14593' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.\mulh_CS' using process `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40039$13802'.
+  created $adff cell `$procdff$14598' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\State_SP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2620$896'.
+  created $adff cell `$procdff$14603' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\ResReg_DP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2617$894'.
+  created $adff cell `$procdff$14608' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\ResInv_SP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2614$892'.
+  created $adff cell `$procdff$14613' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\RemSel_SP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2611$890'.
+  created $adff cell `$procdff$14618' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\CompInv_SP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2608$888'.
+  created $adff cell `$procdff$14623' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\Cnt_DP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2605$886'.
+  created $adff cell `$procdff$14628' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\BReg_DP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2602$884'.
+  created $adff cell `$procdff$14633' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.\AReg_DP' using process `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2599$882'.
+  created $adff cell `$procdff$14638' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31114$11694'.
+Removing empty process `cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31111$11692'.
+Removing empty process `cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40042$13804'.
+Removing empty process `cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40039$13802'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2620$896'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2617$894'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2614$892'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2611$890'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2608$888'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2605$886'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2602$884'.
+Removing empty process `cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:2599$882'.
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+<suppressed ~33 debug messages>
+Optimizing module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i.
+Optimizing module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+<suppressed ~19 debug messages>
+Optimizing module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+<suppressed ~1 debug messages>
+Optimizing module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i..
+Finding unused cells or wires in module \cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i..
+Finding unused cells or wires in module \cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i..
+Finding unused cells or wires in module \cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i..
+Finding unused cells or wires in module \cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i..
+Finding unused cells or wires in module \cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i..
+Removed 104 unused cells and 1619 unused wires.
+<suppressed ~112 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i...
+Checking module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i...
+Checking module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i...
+Checking module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i...
+Checking module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i...
+Checking module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/ex_stage_i/frontend.rtlil
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i.
+Deleting now unused module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i.
+Deleting now unused module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i.
+Deleting now unused module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i.
+Deleting now unused module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i.
+<suppressed ~5 debug messages>
+
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i...
+Found and reported 0 problems.
+
+11. Executing JSON backend.
+
+12. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/ex_stage_i/flattened.rtlil
+
+13. Printing statistics.
+
+=== cv32e40p_ex_stage$cv32e40p_core.ex_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1081 wires
+     9067 wire bits
+     1081 public wires
+     9067 public wire bits
+       86 ports
+      843 port bits
+      994 cells
+       45   $add
+       12   $adff
+       76   $and
+      277   $eq
+        5   $gt
+        1   $logic_and
+       21   $logic_not
+       37   $logic_or
+        1   $lt
+        8   $mul
+      360   $mux
+        1   $neg
+       29   $not
+       61   $or
+       37   $reduce_or
+        3   $shl
+        1   $shr
+        8   $sshr
+        4   $sub
+        7   $xor
+
+End of script. Logfile hash: 3f3cf42964, time: 1.23s, user: 1.18s, system: 0.09s, MEM: 172.45 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 82% 2x read_verilog (0 sec), 3% 1x hierarchy (0 sec), ...

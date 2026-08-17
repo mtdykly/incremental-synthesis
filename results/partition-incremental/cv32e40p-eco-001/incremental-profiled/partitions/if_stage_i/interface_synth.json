@@ -1,0 +1,207 @@
+[
+  {
+    "direction": "input",
+    "name": "clk",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "boot_addr_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "dm_halt_addr_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "dm_exception_addr_i",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "instr_req_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "instr_gnt_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "instr_rvalid_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "instr_addr_o",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "instr_rdata_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "rst_n",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "m_trap_base_addr_i",
+    "width": 24
+  },
+  {
+    "direction": "input",
+    "name": "u_trap_base_addr_i",
+    "width": 24
+  },
+  {
+    "direction": "input",
+    "name": "trap_addr_mux_i",
+    "width": 2
+  },
+  {
+    "direction": "input",
+    "name": "req_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "instr_err_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "instr_err_pmp_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "instr_valid_id_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "instr_rdata_id_o",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "is_compressed_id_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "illegal_c_insn_id_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "pc_if_o",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "pc_id_o",
+    "width": 32
+  },
+  {
+    "direction": "output",
+    "name": "is_fetch_failed_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "clear_instr_valid_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "pc_set_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "mepc_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "uepc_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "depc_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "pc_mux_i",
+    "width": 4
+  },
+  {
+    "direction": "input",
+    "name": "exc_pc_mux_i",
+    "width": 3
+  },
+  {
+    "direction": "input",
+    "name": "m_exc_vec_pc_mux_i",
+    "width": 5
+  },
+  {
+    "direction": "input",
+    "name": "u_exc_vec_pc_mux_i",
+    "width": 5
+  },
+  {
+    "direction": "output",
+    "name": "csr_mtvec_init_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "jump_target_id_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "jump_target_ex_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "hwlp_jump_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "hwlp_target_i",
+    "width": 32
+  },
+  {
+    "direction": "input",
+    "name": "halt_if_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "id_ready_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "if_busy_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "perf_imiss_o",
+    "width": 1
+  }
+]

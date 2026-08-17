@@ -1,0 +1,13 @@
+{
+  "partition": "id_stage_i",
+  "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+  "action": "rebuild",
+  "source_kind": "new_synthesis",
+  "source_path": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new",
+  "reasons": [
+    "implementation_changed"
+  ],
+  "base_implementation_signature": "168619dddb3f6a622167d656cf90fe0c02891fec6d4b91be372888a19d252601",
+  "new_implementation_signature": "ea0183dd555d8c29f26fe997b45c5b47a363c11d7b95f6f9569d2f1ff2c8947a",
+  "partition_netlist_sha256": "ebb5c3cba1d836026f0fd73cc56ea668dc3e389277fbc3c98ba59b309185f835"
+}

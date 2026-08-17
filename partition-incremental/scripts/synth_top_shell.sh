@@ -86,9 +86,19 @@ yosys_quote() {
     printf 'check\n'
     printf 'stat -top %s\n\n' "$TOP_MODULE"
 
-    printf 'write_json '
+    # Only store the real top module in top_shell.json.
+    #
+    # Partition roots are blackboxes at this point. They are deliberately
+    # omitted from the JSON because link_partitions.sh will later load the
+    # real independently synthesized partition implementations.
+    printf 'select -clear\n'
+    printf 'select %s\n' "$TOP_MODULE"
+
+    printf 'write_json -selected '
     yosys_quote "$OUTPUT_DIR/top_shell.json"
     printf '\n'
+
+    printf 'select -clear\n\n'
 
     printf 'write_rtlil '
     yosys_quote "$OUTPUT_DIR/top_shell.rtlil"

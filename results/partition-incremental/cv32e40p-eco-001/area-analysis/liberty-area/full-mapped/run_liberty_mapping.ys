@@ -1,0 +1,15 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/full-generic/full_reference.json"
+
+hierarchy -top cv32e40p_core
+
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+
+opt_clean -purge
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/full-mapped/mapped.json"
+
+write_verilog -noattr -noexpr -nodec     "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/full-mapped/mapped_netlist.v"

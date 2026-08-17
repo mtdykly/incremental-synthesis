@@ -1,0 +1,64 @@
+{
+  "case_name": "cv32e40p-eco-001",
+  "status": "PASS",
+  "validation_method": "certified_compositional",
+  "top_shell_status": "PASS",
+  "partition_count": 6,
+  "pass_count": 6,
+  "methods": {
+    "certified_reuse": 5,
+    "identical_new_reference": 1,
+    "eqy_fallback": 0
+  },
+  "partitions": [
+    {
+      "partition": "cs_registers_i",
+      "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "ex_stage_i",
+      "root_module": "cv32e40p_ex_stage$cv32e40p_core.ex_stage_i",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "id_stage_i",
+      "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i",
+      "action": "rebuild",
+      "status": "PASS",
+      "method": "identical_new_reference",
+      "detail": "independent_New_rebuild_is_byte_identical"
+    },
+    {
+      "partition": "if_stage_i",
+      "root_module": "cv32e40p_if_stage$cv32e40p_core.if_stage_i",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "load_store_unit_i",
+      "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    },
+    {
+      "partition": "sleep_unit_i",
+      "root_module": "cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i",
+      "action": "reuse",
+      "status": "PASS",
+      "method": "certified_reuse",
+      "detail": "same_interface+same_IR+same_environment+exact_base_cache_copy"
+    }
+  ],
+  "statement": "Reuse partitions are certified by equal isolated implementation and interface signatures under the same synthesis environment, plus exact cache materialization. Rebuilt partitions are checked against an independent New rebuild, with EQY only as a fallback. The top-shell connectivity is checked structurally."
+}
