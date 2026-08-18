@@ -1,0 +1,7 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/area-analysis/liberty-area/full-resynth-control/mapped.json"
+
+hierarchy -top riscv_core
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-004/area-analysis/liberty-area/full-resynth-control/area.rpt"     stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-004/area-analysis/liberty-area/full-resynth-control/stat.json"     stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib" -json

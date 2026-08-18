@@ -1,0 +1,7 @@
+ID,Method,Area,Delta vs A,Overhead vs A (%),Combinational area,Sequential area,Num cells,Recovered original overhead (%)
+A,Full,30061.990,+0.000,+0.000,25405.926,4656.064,22227,
+B,Incremental,30314.690,+252.700,+0.841,25658.626,4656.064,22498,0.000
+C,Incremental + global mapping,30161.740,+99.750,+0.332,25505.676,4656.064,22586,60.526
+D,Incremental + global resynth + mapping,29867.278,-194.712,-0.648,25211.214,4656.064,22399,177.053
+E,Full resynth control,29911.168,-150.822,-0.502,25255.104,4656.064,22706,
+F,Pre-synth linked + global synth + mapping,29902.656,-159.334,-0.530,25246.592,4656.064,22692,163.053

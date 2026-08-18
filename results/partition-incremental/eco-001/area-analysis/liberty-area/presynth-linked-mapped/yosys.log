@@ -1,0 +1,1266 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/presynth-linked-mapped/run_presynth_linked.ys' --
+
+1. Executing JSON frontend.
+Importing module riscv_core from JSON tree.
+
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/new/partition-frontends/data_memory_interface/flattened.rtlil
+
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/new/partition-frontends/singlecycle_ctlpath/flattened.rtlil
+
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/new/partition-frontends/singlecycle_datapath/flattened.rtlil
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+
+5.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+Removed 0 unused modules.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Checking module singlecycle_ctlpath...
+Checking module data_memory_interface...
+Checking module riscv_core...
+Found and reported 0 problems.
+
+7. Executing JSON backend.
+
+8. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked.rtlil
+
+9. Executing FLATTEN pass (flatten design).
+Deleting now unused module data_memory_interface.
+Deleting now unused module singlecycle_ctlpath.
+Deleting now unused module singlecycle_datapath.
+<suppressed ~3 debug messages>
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+
+13. Executing SYNTH pass.
+
+13.1. Executing HIERARCHY pass (managing design hierarchy).
+
+13.1.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+
+13.1.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Removed 0 unused modules.
+
+13.2. Executing PROC pass (convert processes to netlists).
+
+13.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+13.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+13.2.4. Executing PROC_INIT pass (extract init attributes).
+
+13.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+13.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+13.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+13.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+13.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+13.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+13.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~4 debug messages>
+
+13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+13.5. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Found and reported 0 problems.
+
+13.6. Executing OPT pass (performing simple optimizations).
+
+13.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 208 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 119 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+<suppressed ~267 debug messages>
+Removed a total of 89 cells.
+
+13.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\singlecycle_datapath.\regfile.$procmux$149.
+    dead port 2/2 on $mux $flatten\singlecycle_datapath.\regfile.$procmux$155.
+    dead port 2/2 on $mux $flatten\singlecycle_datapath.\regfile.$procmux$161.
+Removed 3 multiplexer ports.
+<suppressed ~57 debug messages>
+
+13.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\control_transfer.$procmux$97: { $auto$opt_reduce.cc:137:opt_pmux$225 $auto$opt_reduce.cc:137:opt_pmux$223 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$182: { $auto$opt_reduce.cc:137:opt_pmux$229 $auto$opt_reduce.cc:137:opt_pmux$227 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$129: { $auto$opt_reduce.cc:137:opt_pmux$233 $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$132_CMP $auto$opt_reduce.cc:137:opt_pmux$231 $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$136_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$138: { $auto$opt_reduce.cc:137:opt_pmux$235 $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$136_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$194: { $auto$opt_reduce.cc:137:opt_pmux$237 $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$144_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$105: { $auto$opt_reduce.cc:137:opt_pmux$243 $auto$opt_reduce.cc:137:opt_pmux$241 $auto$opt_reduce.cc:137:opt_pmux$239 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$150: { $auto$opt_reduce.cc:137:opt_pmux$245 $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$141_CMP $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$133_CMP $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$135_CMP }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$206: $auto$opt_reduce.cc:137:opt_pmux$247
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$160: { $auto$opt_reduce.cc:137:opt_pmux$251 $auto$opt_reduce.cc:137:opt_pmux$249 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$171: { $auto$opt_reduce.cc:137:opt_pmux$255 $auto$opt_reduce.cc:137:opt_pmux$253 }
+    New ctrl vector for $pmux cell $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$121: { $auto$opt_reduce.cc:137:opt_pmux$257 $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$126_CMP $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$127_CMP $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$129_CMP }
+    Consolidated identical input bits for $mux cell $flatten\singlecycle_datapath.\regfile.$procmux$147:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\singlecycle_datapath.\regfile.$procmux$147_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0]
+      New connections: $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [31:1] = { $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] $flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0] }
+  Optimizing cells in module \riscv_core.
+    Consolidated identical input bits for $mux cell $flatten\singlecycle_datapath.\regfile.$procmux$164:
+      Old ports: A=0, B=$flatten\singlecycle_datapath.\regfile.$2$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$83, Y=$flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76
+      New ports: A=1'0, B=$flatten\singlecycle_datapath.\regfile.$procmux$147_Y [0], Y=$flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0]
+      New connections: $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [31:1] = { $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] $flatten\singlecycle_datapath.\regfile.$0$memwr$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$70_EN[31:0]$76 [0] }
+  Optimizing cells in module \riscv_core.
+Performed a total of 13 changes.
+
+13.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 87 unused wires.
+<suppressed ~1 debug messages>
+
+13.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~54 debug messages>
+
+13.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+13.7. Executing FSM pass (extract and optimize FSM).
+
+13.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+13.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+13.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+13.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+13.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+13.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+13.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+13.8. Executing OPT pass (performing simple optimizations).
+
+13.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~54 debug messages>
+
+13.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\singlecycle_datapath.\program_counter.$procdff$192 ($adff) from module riscv_core (D = \singlecycle_datapath.mux_next_pc_select.multiplexer.out, Q = \singlecycle_datapath.program_counter.value).
+
+13.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+13.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~53 debug messages>
+
+13.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 133 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+13.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port riscv_core.$flatten\singlecycle_ctlpath.\alu_control.$auto$mem.cc:351:emit$95 ($flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93).
+Removed top 27 address bits (of 32) from memory init port riscv_core.$flatten\singlecycle_datapath.\regfile.$meminit$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:28$84 (singlecycle_datapath.regfile.register).
+Removed top 29 bits (of 32) from port A of cell riscv_core.$flatten\singlecycle_datapath.\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120 ($add).
+Removed top 1 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$174_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$175_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$176_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$177_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$178_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$179_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$180_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$181_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$182_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$183_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell riscv_core.$flatten\singlecycle_datapath.\alu.$procmux$184_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_datapath.\immediate_generator.$procmux$143_CMP0 ($eq).
+Removed top 4 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_datapath.\immediate_generator.$procmux$144_CMP1 ($eq).
+Removed top 1 bits (of 2) from port B of cell riscv_core.$flatten\singlecycle_datapath.\mux_next_pc_select.\multiplexer.$procmux$133_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell riscv_core.$flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$126_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell riscv_core.$flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$127_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell riscv_core.$flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\alu_control.$procmux$110_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\alu_control.$procmux$124_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$132_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$133_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$134_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$135_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$136_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$144_CMP0 ($eq).
+Removed top 3 bits (of 7) from port B of cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$147_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/singlecycle/singlecycle_control.sv:25$90 ($mux).
+Removed top 1 bits (of 2) from port B of cell riscv_core.$flatten\data_memory_interface.$procmux$100_CMP0 ($eq).
+Removed top 27 bits (of 32) from port B of cell riscv_core.$flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:32$28 ($shl).
+Removed top 3 bits (of 4) from port A of cell riscv_core.$flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:38$30 ($shl).
+Removed top 2 bits (of 4) from port A of cell riscv_core.$flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:39$31 ($shl).
+Removed top 27 bits (of 32) from port B of cell riscv_core.$flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35 ($shr).
+Removed top 1 bits (of 2) from wire riscv_core.$flatten\singlecycle_ctlpath.\singlecycle_control.$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/singlecycle/singlecycle_control.sv:25$90_Y.
+
+13.10. Executing PEEPOPT pass (run peephole optimizers).
+
+13.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+13.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module riscv_core:
+  creating $macc model for $flatten\singlecycle_datapath.\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120 ($add).
+  creating $macc model for $flatten\singlecycle_datapath.\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120 ($add).
+  creating $macc model for $flatten\singlecycle_datapath.\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:28$4 ($add).
+  creating $macc model for $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5 ($sub).
+  creating $alu model for $macc $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5.
+  creating $alu model for $macc $flatten\singlecycle_datapath.\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:28$4.
+  creating $alu model for $macc $flatten\singlecycle_datapath.\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120.
+  creating $alu model for $macc $flatten\singlecycle_datapath.\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120.
+  creating $alu model for $flatten\singlecycle_datapath.\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:34$10 ($lt): merged with $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5.
+  creating $alu model for $flatten\singlecycle_datapath.\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:35$11 ($lt): merged with $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5.
+  creating $alu model for $flatten\singlecycle_datapath.\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:33$9 ($eq): merged with $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5.
+  creating $alu cell for $flatten\singlecycle_datapath.\adder_pc_plus_4.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120: $auto$alumacc.cc:512:replace_alu$260
+  creating $alu cell for $flatten\singlecycle_datapath.\adder_pc_plus_immediate.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/adder.sv:17$120: $auto$alumacc.cc:512:replace_alu$263
+  creating $alu cell for $flatten\singlecycle_datapath.\alu.$add$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:28$4: $auto$alumacc.cc:512:replace_alu$266
+  creating $alu cell for $flatten\singlecycle_datapath.\alu.$sub$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:29$5, $flatten\singlecycle_datapath.\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:34$10, $flatten\singlecycle_datapath.\alu.$lt$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:35$11, $flatten\singlecycle_datapath.\alu.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:33$9: $auto$alumacc.cc:512:replace_alu$269
+  created 4 $alu and 0 $macc cells.
+
+13.13. Executing SHARE pass (SAT-based resource sharing).
+Found 6 cells in module riscv_core that may be considered for resource sharing.
+  Analyzing resource sharing options for $flatten\singlecycle_datapath.\regfile.$memrd$\register$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:24$71 ($memrd):
+    Found 11 activation_patterns using ctrl signal { $flatten\singlecycle_datapath.\mux_operand_a.\multiplexer.$procmux$137_CMP $flatten\singlecycle_datapath.\alu.$procmux$184_CMP $flatten\singlecycle_datapath.\alu.$procmux$183_CMP $flatten\singlecycle_datapath.\alu.$procmux$182_CMP $flatten\singlecycle_datapath.\alu.$procmux$181_CMP $flatten\singlecycle_datapath.\alu.$procmux$180_CMP $flatten\singlecycle_datapath.\alu.$procmux$179_CMP $flatten\singlecycle_datapath.\alu.$procmux$178_CMP $flatten\singlecycle_datapath.\alu.$procmux$177_CMP $flatten\singlecycle_datapath.\alu.$procmux$176_CMP $flatten\singlecycle_datapath.\alu.$procmux$175_CMP $flatten\singlecycle_datapath.\alu.$procmux$174_CMP }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\singlecycle_datapath.\alu.$sshr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:32$8 ($sshr):
+    Found 1 activation_patterns using ctrl signal $flatten\singlecycle_datapath.\alu.$procmux$180_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\singlecycle_datapath.\alu.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:31$7 ($shr):
+    Found 1 activation_patterns using ctrl signal $flatten\singlecycle_datapath.\alu.$procmux$181_CMP.
+    Found 1 candidates: $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35
+    Analyzing resource sharing with $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35 ($shr):
+      Found 3 activation_patterns using ctrl signal { $flatten\data_memory_interface.$procmux$94_CMP $flatten\data_memory_interface.$procmux$101_CMP $flatten\data_memory_interface.$procmux$100_CMP \singlecycle_ctlpath.singlecycle_control.regfile_write_enable $flatten\singlecycle_datapath.\regfile.$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80_Y $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP }.
+      Forbidden control signals for this pair of cells: { \singlecycle_ctlpath.control_transfer.take_branch $flatten\singlecycle_datapath.\mux_next_pc_select.\multiplexer.$procmux$134_CMP $flatten\singlecycle_datapath.\mux_next_pc_select.\multiplexer.$procmux$133_CMP $flatten\singlecycle_datapath.\mux_next_pc_select.\multiplexer.$procmux$132_CMP $flatten\singlecycle_datapath.\mux_next_pc_select.\multiplexer.$procmux$131_CMP }
+      Activation pattern for cell $flatten\singlecycle_datapath.\alu.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:31$7: $flatten\singlecycle_datapath.\alu.$procmux$181_CMP = 1'1
+      Activation pattern for cell $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35: { $flatten\data_memory_interface.$procmux$94_CMP \singlecycle_ctlpath.singlecycle_control.regfile_write_enable $flatten\singlecycle_datapath.\regfile.$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80_Y $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP } = 4'1111
+      Activation pattern for cell $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35: { $flatten\data_memory_interface.$procmux$100_CMP \singlecycle_ctlpath.singlecycle_control.regfile_write_enable $flatten\singlecycle_datapath.\regfile.$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80_Y $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP } = 4'1111
+      Activation pattern for cell $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35: { $flatten\data_memory_interface.$procmux$101_CMP \singlecycle_ctlpath.singlecycle_control.regfile_write_enable $flatten\singlecycle_datapath.\regfile.$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80_Y $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP } = 4'1111
+      Size of SAT problem: 43 cells, 566 variables, 1587 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $flatten\singlecycle_datapath.\alu.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:31$7: $auto$share.cc:1062:make_cell_activation_logic$280
+      New cell: $auto$share.cc:663:make_supercell$287 ($shr)
+      New topology contains loops! Rolling back..
+  Analyzing resource sharing options for $flatten\data_memory_interface.$shr$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:47$35 ($shr):
+    Found 3 activation_patterns using ctrl signal { $flatten\data_memory_interface.$procmux$94_CMP $flatten\data_memory_interface.$procmux$101_CMP $flatten\data_memory_interface.$procmux$100_CMP \singlecycle_ctlpath.singlecycle_control.regfile_write_enable $flatten\singlecycle_datapath.\regfile.$ne$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/regfile.sv:33$80_Y $flatten\singlecycle_datapath.\mux_reg_writeback.\multiplexer.$procmux$128_CMP }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\singlecycle_ctlpath.\alu_control.$auto$mem.cc:305:emit$94 ($memrd_v2):
+    Found 2 activation_patterns using ctrl signal { $flatten\singlecycle_ctlpath.\alu_control.$procmux$126_CMP $flatten\singlecycle_ctlpath.\alu_control.$procmux$125_CMP $flatten\singlecycle_ctlpath.\alu_control.$logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu_control.sv:42$19_Y \inst [30] }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\singlecycle_datapath.\alu.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/alu.sv:30$6 ($shl):
+    Found 1 activation_patterns using ctrl signal $flatten\singlecycle_datapath.\alu.$procmux$182_CMP.
+    No candidates found.
+
+13.14. Executing OPT pass (performing simple optimizations).
+
+13.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~53 debug messages>
+
+13.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+13.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~53 debug messages>
+
+13.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 134 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+13.15. Executing MEMORY pass.
+
+13.15.1. Executing OPT_MEM pass (optimize memories).
+riscv_core.$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 4
+Performed a total of 1 transformations.
+
+13.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+13.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing riscv_core.singlecycle_datapath.regfile.register write port 0.
+
+13.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+13.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93'[0] in module `\riscv_core': no output FF found.
+Checking read port `\singlecycle_datapath.regfile.register'[0] in module `\riscv_core': no output FF found.
+Checking read port `\singlecycle_datapath.regfile.register'[1] in module `\riscv_core': no output FF found.
+Checking read port address `$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93'[0] in module `\riscv_core': no address FF found.
+Checking read port address `\singlecycle_datapath.regfile.register'[0] in module `\riscv_core': no address FF found.
+Checking read port address `\singlecycle_datapath.regfile.register'[1] in module `\riscv_core': no address FF found.
+
+13.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory riscv_core.singlecycle_datapath.regfile.register by address:
+
+13.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+13.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+13.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.17. Executing OPT pass (performing simple optimizations).
+
+13.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~31 debug messages>
+
+13.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 119 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+Removing always-active EN on $auto$ff.cc:337:slice$258 ($adffe) from module riscv_core.
+Adding EN signal on $auto$ff.cc:337:slice$258 ($adffe) from module riscv_core (D = \singlecycle_datapath.mux_next_pc_select.multiplexer.out [1:0], Q = \singlecycle_datapath.program_counter.value [1:0]).
+
+13.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 19 unused cells and 43 unused wires.
+<suppressed ~37 debug messages>
+
+13.17.5. Rerunning OPT passes. (Removed registers in this run.)
+
+13.17.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~1 debug messages>
+
+13.17.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 102 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.17.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.17.10. Finished fast OPT passes.
+
+13.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93 in module \riscv_core:
+  created 8 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory \singlecycle_datapath.regfile.register in module \riscv_core:
+  created 32 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 62 $mux cells.
+  write interface: 32 write mux blocks.
+
+13.19. Executing OPT pass (performing simple optimizations).
+
+13.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~10 debug messages>
+
+13.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 318 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~246 debug messages>
+
+13.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+    Consolidated identical input bits for $mux cell $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][2][2]$315:
+      Old ports: A=4'1001, B=4'0100, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307 [2] $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307 [0] }
+      New connections: { $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307 [3] $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307 [1] } = { $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$a$307 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][2][1]$312:
+      Old ports: A=4'0111, B=4'1000, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305 [3] $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305 [0] }
+      New connections: $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305 [2:1] = { $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305 [0] $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$b$305 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][2][0]$309:
+      Old ports: A=4'0001, B=4'0011, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$a$304
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$a$304 [1]
+      New connections: { $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$a$304 [3:2] $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][0]$a$304 [0] } = 3'001
+    Consolidated identical input bits for $mux cell $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][2][3]$318:
+      Old ports: A=4'1010, B=4'1011, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$b$308
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$b$308 [0]
+      New connections: $memory$flatten\singlecycle_ctlpath.\alu_control.$auto$proc_rom.cc:155:do_switch$93$rdmux[0][1][1]$b$308 [3:1] = 3'101
+    Consolidated identical input bits for $pmux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$105:
+      Old ports: A=5'01000, B=10'0011100110, Y=\singlecycle_ctlpath.alu_control.branch_funct
+      New ports: A=3'100, B=6'011010, Y={ \singlecycle_ctlpath.alu_control.branch_funct [3] \singlecycle_ctlpath.alu_control.branch_funct [1:0] }
+      New connections: { \singlecycle_ctlpath.alu_control.branch_funct [4] \singlecycle_ctlpath.alu_control.branch_funct [2] } = { 1'0 \singlecycle_ctlpath.alu_control.branch_funct [1] }
+    Consolidated identical input bits for $mux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$113:
+      Old ports: A=5'00010, B=5'00101, Y=\singlecycle_ctlpath.alu_control.secondary_funct
+      New ports: A=2'10, B=2'01, Y=\singlecycle_ctlpath.alu_control.secondary_funct [1:0]
+      New connections: \singlecycle_ctlpath.alu_control.secondary_funct [4:2] = { 2'00 \singlecycle_ctlpath.alu_control.secondary_funct [0] }
+    Consolidated identical input bits for $pmux cell $flatten\data_memory_interface.$procmux$93:
+      Old ports: A={ $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y \data_memory_interface.position_fix [7:0] }, B={ $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y \data_memory_interface.position_fix [15:0] \data_memory_interface.position_fix }, Y=\data_memory_interface.read_data
+      New ports: A={ $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:53$38_Y }, B={ $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y $flatten\data_memory_interface.$and$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:54$40_Y \data_memory_interface.position_fix [15:8] \data_memory_interface.position_fix [31:8] }, Y=\data_memory_interface.read_data [31:8]
+      New connections: \data_memory_interface.read_data [7:0] = \data_memory_interface.position_fix [7:0]
+    Consolidated identical input bits for $pmux cell $flatten\singlecycle_ctlpath.\singlecycle_control.$procmux$129:
+      Old ports: A=3'010, B=9'011000001, Y=\singlecycle_ctlpath.singlecycle_control.reg_writeback_select
+      New ports: A=2'10, B=6'110001, Y=\singlecycle_ctlpath.singlecycle_control.reg_writeback_select [1:0]
+      New connections: \singlecycle_ctlpath.singlecycle_control.reg_writeback_select [2] = 1'0
+  Optimizing cells in module \riscv_core.
+    Consolidated identical input bits for $mux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$118:
+      Old ports: A={ 1'0 \singlecycle_ctlpath.alu_control.default_funct [3:0] }, B=\singlecycle_ctlpath.alu_control.secondary_funct, Y=\singlecycle_ctlpath.alu_control.op_imm_funct
+      New ports: A=\singlecycle_ctlpath.alu_control.default_funct [3:0], B={ 1'0 \singlecycle_ctlpath.alu_control.secondary_funct [0] \singlecycle_ctlpath.alu_control.secondary_funct [1:0] }, Y=\singlecycle_ctlpath.alu_control.op_imm_funct [3:0]
+      New connections: \singlecycle_ctlpath.alu_control.op_imm_funct [4] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$121:
+      Old ports: A={ 1'0 \singlecycle_ctlpath.alu_control.default_funct [3:0] }, B=\singlecycle_ctlpath.alu_control.secondary_funct, Y=\singlecycle_ctlpath.alu_control.op_funct
+      New ports: A=\singlecycle_ctlpath.alu_control.default_funct [3:0], B={ 1'0 \singlecycle_ctlpath.alu_control.secondary_funct [0] \singlecycle_ctlpath.alu_control.secondary_funct [1:0] }, Y=\singlecycle_ctlpath.alu_control.op_funct [3:0]
+      New connections: \singlecycle_ctlpath.alu_control.op_funct [4] = 1'0
+  Optimizing cells in module \riscv_core.
+    Consolidated identical input bits for $pmux cell $flatten\singlecycle_ctlpath.\alu_control.$procmux$123:
+      Old ports: A=5'00001, B={ \singlecycle_ctlpath.alu_control.op_funct \singlecycle_ctlpath.alu_control.op_imm_funct \singlecycle_ctlpath.alu_control.branch_funct }, Y=\singlecycle_ctlpath.alu_control.alu_function
+      New ports: A=4'0001, B={ \singlecycle_ctlpath.alu_control.op_funct [3:0] \singlecycle_ctlpath.alu_control.op_imm_funct [3:0] \singlecycle_ctlpath.alu_control.branch_funct [3] \singlecycle_ctlpath.alu_control.branch_funct [1] \singlecycle_ctlpath.alu_control.branch_funct [1:0] }, Y=\singlecycle_ctlpath.alu_control.alu_function [3:0]
+      New connections: \singlecycle_ctlpath.alu_control.alu_function [4] = 1'0
+  Optimizing cells in module \riscv_core.
+Performed a total of 11 changes.
+
+13.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 318 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 316 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+13.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $pmux $flatten\data_memory_interface.$procmux$98 in front of them:
+        $flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:40$32
+        $flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:39$31
+        $flatten\data_memory_interface.$shl$/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/data_memory_interface.sv:38$30
+
+13.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 114 unused wires.
+<suppressed ~1 debug messages>
+
+13.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~3 debug messages>
+
+13.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~244 debug messages>
+
+13.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+    Consolidated identical input bits for $pmux cell $auto$opt_share.cc:246:merge_operators$816:
+      Old ports: A=4'0001, B=8'00111111, Y=$auto$rtlil.cc:3404:Pmux$817
+      New ports: A=2'00, B=4'0111, Y=$auto$rtlil.cc:3404:Pmux$817 [2:1]
+      New connections: { $auto$rtlil.cc:3404:Pmux$817 [3] $auto$rtlil.cc:3404:Pmux$817 [0] } = { $auto$rtlil.cc:3404:Pmux$817 [2] 1'1 }
+    New ctrl vector for $pmux cell $flatten\data_memory_interface.$procmux$98: $auto$opt_reduce.cc:137:opt_pmux$819
+  Optimizing cells in module \riscv_core.
+Performed a total of 2 changes.
+
+13.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 315 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.19.14. Executing OPT_SHARE pass.
+
+13.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[0]$321 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[0]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[1]$323 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[1]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[2]$325 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[2]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[3]$327 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[3]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[4]$329 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[4]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[5]$331 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[5]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[6]$333 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[6]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[7]$335 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[7]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[8]$337 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[8]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[9]$339 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[9]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[10]$341 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[10]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[11]$343 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[11]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[12]$345 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[12]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[13]$347 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[13]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[14]$349 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[14]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[15]$351 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[15]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[16]$353 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[16]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[17]$355 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[17]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[18]$357 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[18]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[19]$359 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[19]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[20]$361 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[20]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[21]$363 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[21]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[22]$365 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[22]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[23]$367 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[23]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[24]$369 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[24]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[25]$371 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[25]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[26]$373 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[26]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[27]$375 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[27]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[28]$377 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[28]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[29]$379 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[29]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[30]$381 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[30]).
+Adding EN signal on $memory\singlecycle_datapath.regfile.register[31]$383 ($dff) from module riscv_core (D = \singlecycle_datapath.mux_reg_writeback.multiplexer.out, Q = \singlecycle_datapath.regfile.register[31]).
+
+13.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 32 unused cells and 33 unused wires.
+<suppressed ~33 debug messages>
+
+13.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \riscv_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~116 debug messages>
+
+13.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \riscv_core.
+Performed a total of 0 changes.
+
+13.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 283 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.19.22. Executing OPT_SHARE pass.
+
+13.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+
+13.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+13.20. Executing TECHMAP pass (map to technology primitives).
+
+13.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+13.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$2653f68ddb8eab7b1907b4a20767b72a824a7a36\_90_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$ccbcf9cf459c8d68b04688a9a5245ee9d295a0be\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$b8fb36dbb218c8f6b30171c756a8f8357614d906\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$e765c459d3029c22a22a27989e94858fd9ebfa9c\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$constmap:02ee4fad4c1ffc2bbdc3e6fbc37bedbf9185352a$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:6e3026a439ed4a6e7983ca0e910890cc59b2f7b2$paramod$7b0bb309dce042ecaf2e0bfa495da988fc49fdf1\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:cb2599409e80fa22cf38e727ff6651af8a197f76$paramod$7892be8d2a0a6dcb653747d5990213750e930cf2\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3620 debug messages>
+
+13.21. Executing OPT pass (performing simple optimizations).
+
+13.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~1141 debug messages>
+
+13.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 6563 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 6214 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 6118 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 6076 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 6058 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 6057 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+<suppressed ~1518 debug messages>
+Removed a total of 506 cells.
+
+13.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 62 unused cells and 858 unused wires.
+<suppressed ~63 debug messages>
+
+13.21.5. Finished fast OPT passes.
+
+13.22. Executing ABC pass (technology mapping using ABC).
+
+13.22.1. Extracting gate netlist of module `\riscv_core' to `<abc-temp-dir>/input.blif'..
+Replacing 2 occurrences of constant undef bits with constant zero bits
+
+13.22.1.1. Executed ABC.
+Extracted 4939 gates and 6062 wires to a netlist network with 1120 inputs and 167 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+13.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     1330
+ABC RESULTS:            ANDNOT cells:      179
+ABC RESULTS:               MUX cells:     1299
+ABC RESULTS:              NAND cells:     1894
+ABC RESULTS:               NOR cells:      315
+ABC RESULTS:               NOT cells:       25
+ABC RESULTS:                OR cells:      605
+ABC RESULTS:             ORNOT cells:      688
+ABC RESULTS:              XNOR cells:       60
+ABC RESULTS:               XOR cells:       64
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     4775
+ABC RESULTS:           input signals:     1120
+ABC RESULTS:          output signals:      167
+Removing temp directory.
+Removing global temp directory.
+
+13.23. Executing OPT pass (performing simple optimizations).
+
+13.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+<suppressed ~28 debug messages>
+
+13.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 7515 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Removed a total of 0 cells.
+
+13.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+Handling never-active EN on $auto$ff.cc:337:slice$1946 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1915 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1916 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1917 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1918 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1919 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1920 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1921 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1922 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1923 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1924 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1925 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1926 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1927 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1928 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1929 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1930 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1931 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1932 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1933 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1934 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1935 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1936 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1937 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1938 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1939 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1940 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1941 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1942 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1943 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1944 ($_DFFE_PP_) from module riscv_core (removing D path).
+Handling never-active EN on $auto$ff.cc:337:slice$1945 ($_DFFE_PP_) from module riscv_core (removing D path).
+
+13.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 2853 unused wires.
+<suppressed ~56 debug messages>
+
+13.23.5. Rerunning OPT passes. (Removed registers in this run.)
+
+13.23.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module riscv_core.
+
+13.23.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\riscv_core'.
+Computing hashes of 7483 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+Computing hashes of 7476 cells of `\riscv_core'.
+Finding duplicate cells in `\riscv_core'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+13.23.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+13.23.10. Finished fast OPT passes.
+
+13.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `riscv_core'. Setting top module to riscv_core.
+
+13.24.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+
+13.24.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Removed 0 unused modules.
+
+13.25. Printing statistics.
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     6473 wires
+     9659 wire bits
+      155 public wires
+     3341 public wire bits
+       10 ports
+      168 port bits
+     7476 cells
+      179   $_ANDNOT_
+     1330   $_AND_
+        2   $_DFFE_PP0P_
+      992   $_DFFE_PP_
+       29   $_DFF_PP0_
+        1   $_DFF_PP1_
+     1299   $_MUX_
+     1894   $_NAND_
+      315   $_NOR_
+       25   $_NOT_
+      681   $_ORNOT_
+      605   $_OR_
+       60   $_XNOR_
+       64   $_XOR_
+
+13.26. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Found and reported 0 problems.
+
+14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 112 unused wires.
+<suppressed ~112 debug messages>
+
+15. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Found and reported 0 problems.
+
+16. Executing JSON backend.
+
+17. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/presynth-linked-mapped/global_synth.rtlil
+
+18. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+18.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\riscv_core':
+  mapped 31 $_DFF_PN0_ cells to \DFFR_X1 cells.
+  mapped 1 $_DFF_PN1_ cells to \DFFS_X1 cells.
+  mapped 992 $_DFF_P_ cells to \DFF_X1 cells.
+
+19. Executing ABC pass (technology mapping using ABC).
+
+19.1. Extracting gate netlist of module `\riscv_core' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl (1 files)
+
+19.1.1. Executed ABC.
+Extracted 7478 gates and 8568 wires to a netlist network with 1089 inputs and 1126 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+19.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:      152
+ABC RESULTS:           AND3_X1 cells:       21
+ABC RESULTS:           AND4_X1 cells:        2
+ABC RESULTS:         AOI211_X1 cells:      196
+ABC RESULTS:          AOI21_X1 cells:      825
+ABC RESULTS:         AOI221_X1 cells:      196
+ABC RESULTS:         AOI222_X1 cells:       42
+ABC RESULTS:          AOI22_X1 cells:      126
+ABC RESULTS:            INV_X1 cells:      263
+ABC RESULTS:           MUX2_X1 cells:      974
+ABC RESULTS:          NAND2_X1 cells:      390
+ABC RESULTS:          NAND3_X1 cells:       65
+ABC RESULTS:          NAND4_X1 cells:       10
+ABC RESULTS:           NOR2_X1 cells:      755
+ABC RESULTS:           NOR3_X1 cells:       50
+ABC RESULTS:           NOR4_X1 cells:       13
+ABC RESULTS:         OAI211_X1 cells:      167
+ABC RESULTS:          OAI21_X1 cells:      492
+ABC RESULTS:         OAI221_X1 cells:      247
+ABC RESULTS:         OAI222_X1 cells:       39
+ABC RESULTS:          OAI22_X1 cells:      114
+ABC RESULTS:          OAI33_X1 cells:       20
+ABC RESULTS:            OR2_X1 cells:      128
+ABC RESULTS:            OR3_X1 cells:       13
+ABC RESULTS:            OR4_X1 cells:        2
+ABC RESULTS:          XNOR2_X1 cells:       89
+ABC RESULTS:           XOR2_X1 cells:       33
+ABC RESULTS:        internal signals:     6353
+ABC RESULTS:           input signals:     1089
+ABC RESULTS:          output signals:     1126
+Removing temp directory.
+Removing global temp directory.
+
+20. Executing TECHMAP pass (map to technology primitives).
+
+20.1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v
+Parsing Verilog input from `/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 8534 unused wires.
+<suppressed ~2 debug messages>
+
+22. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Warning: Wire riscv_core.\pc [31] is used but has no driver.
+Warning: Wire riscv_core.\pc [30] is used but has no driver.
+Warning: Wire riscv_core.\pc [29] is used but has no driver.
+Warning: Wire riscv_core.\pc [28] is used but has no driver.
+Warning: Wire riscv_core.\pc [27] is used but has no driver.
+Warning: Wire riscv_core.\pc [26] is used but has no driver.
+Warning: Wire riscv_core.\pc [25] is used but has no driver.
+Warning: Wire riscv_core.\pc [24] is used but has no driver.
+Warning: Wire riscv_core.\pc [23] is used but has no driver.
+Warning: Wire riscv_core.\pc [22] is used but has no driver.
+Warning: Wire riscv_core.\pc [21] is used but has no driver.
+Warning: Wire riscv_core.\pc [20] is used but has no driver.
+Warning: Wire riscv_core.\pc [19] is used but has no driver.
+Warning: Wire riscv_core.\pc [18] is used but has no driver.
+Warning: Wire riscv_core.\pc [17] is used but has no driver.
+Warning: Wire riscv_core.\pc [16] is used but has no driver.
+Warning: Wire riscv_core.\pc [15] is used but has no driver.
+Warning: Wire riscv_core.\pc [14] is used but has no driver.
+Warning: Wire riscv_core.\pc [13] is used but has no driver.
+Warning: Wire riscv_core.\pc [12] is used but has no driver.
+Warning: Wire riscv_core.\pc [11] is used but has no driver.
+Warning: Wire riscv_core.\pc [10] is used but has no driver.
+Warning: Wire riscv_core.\pc [9] is used but has no driver.
+Warning: Wire riscv_core.\pc [8] is used but has no driver.
+Warning: Wire riscv_core.\pc [7] is used but has no driver.
+Warning: Wire riscv_core.\pc [6] is used but has no driver.
+Warning: Wire riscv_core.\pc [5] is used but has no driver.
+Warning: Wire riscv_core.\pc [4] is used but has no driver.
+Warning: Wire riscv_core.\pc [3] is used but has no driver.
+Warning: Wire riscv_core.\pc [2] is used but has no driver.
+Warning: Wire riscv_core.\pc [1] is used but has no driver.
+Warning: Wire riscv_core.\pc [0] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_enable is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [31] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [30] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [29] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [28] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [27] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [26] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [25] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [24] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [23] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [22] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [21] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [20] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [19] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [18] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [17] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [16] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [15] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [14] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [13] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [12] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [11] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [10] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [9] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [8] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [7] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [6] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [5] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [4] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [3] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [2] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [1] is used but has no driver.
+Warning: Wire riscv_core.\bus_write_data [0] is used but has no driver.
+Warning: Wire riscv_core.\bus_read_enable is used but has no driver.
+Warning: Wire riscv_core.\bus_byte_enable [3] is used but has no driver.
+Warning: Wire riscv_core.\bus_byte_enable [2] is used but has no driver.
+Warning: Wire riscv_core.\bus_byte_enable [1] is used but has no driver.
+Warning: Wire riscv_core.\bus_byte_enable [0] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [31] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [30] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [29] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [28] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [27] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [26] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [25] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [24] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [23] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [22] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [21] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [20] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [19] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [18] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [17] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [16] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [15] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [14] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [13] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [12] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [11] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [10] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [9] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [8] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [7] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [6] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [5] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [4] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [3] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [2] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [1] is used but has no driver.
+Warning: Wire riscv_core.\bus_address [0] is used but has no driver.
+Found and reported 102 problems.
+
+23. Executing JSON backend.
+
+24. Executing Verilog backend.
+Dumping module `\riscv_core'.
+
+Warnings: 102 unique messages, 102 total
+End of script. Logfile hash: 1cc36b6f37, time: 4.09s, user: 1.29s, system: 0.08s, MEM: 49.45 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 73% 2x abc (3 sec), 6% 25x opt_clean (0 sec), ...

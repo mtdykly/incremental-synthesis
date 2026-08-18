@@ -1,0 +1,73 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/build_presynth_top_shell.ys' --
+
+1. Executing JSON frontend.
+Importing module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i from JSON tree.
+Importing module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i from JSON tree.
+Importing module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i from JSON tree.
+Importing module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i from JSON tree.
+Importing module cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i from JSON tree.
+Importing module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i from JSON tree.
+Importing module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i from JSON tree.
+Importing module cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i from JSON tree.
+Importing module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i from JSON tree.
+Importing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i from JSON tree.
+Importing module cv32e40p_if_stage$cv32e40p_core.if_stage_i from JSON tree.
+Importing module cv32e40p_id_stage$cv32e40p_core.id_stage_i from JSON tree.
+Importing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i from JSON tree.
+Importing module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i from JSON tree.
+Importing module cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i from JSON tree.
+Importing module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i from JSON tree.
+Importing module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i from JSON tree.
+Importing module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i from JSON tree.
+Importing module cv32e40p_core from JSON tree.
+Importing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i from JSON tree.
+Importing module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i from JSON tree.
+Importing module cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i from JSON tree.
+Importing module cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i from JSON tree.
+Importing module cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i from JSON tree.
+Importing module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Removing unused module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Removing unused module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Removing unused module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Removing unused module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Removing unused module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removing unused module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removing unused module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Removing unused module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Removing unused module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Removing unused module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removed 18 unused modules.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+End of script. Logfile hash: 4399c5e35f, time: 0.59s, user: 0.65s, system: 0.10s, MEM: 195.95 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 96% 2x read_json (0 sec), 2% 1x hierarchy (0 sec), ...

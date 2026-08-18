@@ -12123,6 +12123,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 Dumping module `\cv32e40p_core'.
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 58ec8f0d49, time: 32.76s, user: 22.07s, system: 1.07s, MEM: 275.60 MB peak
+End of script. Logfile hash: 58ec8f0d49, time: 33.69s, user: 23.43s, system: 0.74s, MEM: 269.64 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 43% 1x abc (16 sec), 14% 40x opt_clean (5 sec), ...
+Time spent: 42% 1x abc (16 sec), 14% 40x opt_clean (5 sec), ...

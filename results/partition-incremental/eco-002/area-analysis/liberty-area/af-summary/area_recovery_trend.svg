@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500" y="34" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold">Area Overhead Recovery Trend</text>
+<text x="500" y="57" text-anchor="middle" font-family="sans-serif" font-size="13">eco-002</text>
+<line x1="100" y1="490.00" x2="940" y2="490.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="495.00" text-anchor="end" font-family="sans-serif" font-size="12">0.0%</text>
+<line x1="100" y1="406.00" x2="940" y2="406.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="411.00" text-anchor="end" font-family="sans-serif" font-size="12">0.5%</text>
+<line x1="100" y1="322.00" x2="940" y2="322.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="327.00" text-anchor="end" font-family="sans-serif" font-size="12">1.0%</text>
+<line x1="100" y1="238.00" x2="940" y2="238.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="243.00" text-anchor="end" font-family="sans-serif" font-size="12">1.5%</text>
+<line x1="100" y1="154.00" x2="940" y2="154.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="159.00" text-anchor="end" font-family="sans-serif" font-size="12">2.0%</text>
+<line x1="100" y1="70.00" x2="940" y2="70.00" stroke="#dddddd" stroke-width="1"/>
+<text x="88" y="75.00" text-anchor="end" font-family="sans-serif" font-size="12">2.5%</text>
+<line x1="100" y1="70" x2="100" y2="490" stroke="black" stroke-width="1.5"/>
+<line x1="100" y1="490" x2="940" y2="490" stroke="black" stroke-width="1.5"/>
+<line x1="100" y1="490.00" x2="940" y2="490.00" stroke="black" stroke-width="2"/>
+<text x="940" y="482.00" text-anchor="end" font-family="sans-serif" font-size="12">A Full baseline</text>
+<line x1="100" y1="490.00" x2="940" y2="490.00" stroke="#777777" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="940" y="482.00" text-anchor="end" font-family="sans-serif" font-size="12">E control: -0.128%</text>
+<polyline points="100.00,206.61 380.00,345.17 660.00,648.14 940.00,650.88" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="100.00" cy="206.61" r="6" fill="#2563eb"/>
+<text x="100.00" y="192.61" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">+1.687%</text>
+<text x="100.00" y="518" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">B</text>
+<text x="100.00" y="538" text-anchor="middle" font-family="sans-serif" font-size="12">Incremental</text>
+<circle cx="380.00" cy="345.17" r="6" fill="#2563eb"/>
+<text x="380.00" y="331.17" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">+0.862%</text>
+<text x="380.00" y="518" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">C</text>
+<text x="380.00" y="538" text-anchor="middle" font-family="sans-serif" font-size="12">Global map</text>
+<circle cx="660.00" cy="648.14" r="6" fill="#2563eb"/>
+<text x="660.00" y="634.14" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">-0.941%</text>
+<text x="660.00" y="518" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">D</text>
+<text x="660.00" y="538" text-anchor="middle" font-family="sans-serif" font-size="12">Global resynth</text>
+<circle cx="940.00" cy="650.88" r="6" fill="#2563eb"/>
+<text x="940.00" y="636.88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">-0.958%</text>
+<text x="940.00" y="518" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">F</text>
+<text x="940.00" y="538" text-anchor="middle" font-family="sans-serif" font-size="12">Pre-synth link</text>
+<text x="24" y="290" text-anchor="middle" font-family="sans-serif" font-size="14" transform="rotate(-90 24 290)">Area overhead vs Full (%)</text>
+<text x="100" y="585" font-family="sans-serif" font-size="12">Recovery path: B → C → D → F. E is shown only as a Full-resynthesis control.</text>
+</svg>

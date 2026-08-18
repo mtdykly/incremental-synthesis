@@ -1,0 +1,46 @@
+# Load unsynthesized top shell.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/presynth_top_shell.json"
+
+# Load partition frontends.
+# These partitions have been internally flattened,
+# but have NOT passed through synth.
+# data_memory_interface -> data_memory_interface
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partition-frontends/data_memory_interface/flattened.rtlil"
+# immediate_generator -> immediate_generator
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partition-frontends/immediate_generator/flattened.rtlil"
+# instruction_decoder -> instruction_decoder
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partition-frontends/instruction_decoder/flattened.rtlil"
+# singlecycle_ctlpath -> singlecycle_ctlpath
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partition-frontends/singlecycle_ctlpath/flattened.rtlil"
+# singlecycle_datapath -> singlecycle_datapath
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/new/partition-frontends/singlecycle_datapath/flattened.rtlil"
+
+# Validate reconstructed pre-synthesis hierarchy.
+hierarchy -check -top riscv_core
+check
+
+# Save design BEFORE global flatten/synthesis.
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked.rtlil"
+
+# Remove partition boundaries globally.
+flatten -noscopeinfo
+opt_clean
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked_flattened.json"
+
+# Perform ONE global generic synthesis.
+synth -top riscv_core
+opt_clean -purge
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/global_synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/global_synth.rtlil"
+
+# Perform ONE global Nangate45 technology mapping.
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+opt_clean -purge
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/mapped.json"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/mapped_netlist.v"

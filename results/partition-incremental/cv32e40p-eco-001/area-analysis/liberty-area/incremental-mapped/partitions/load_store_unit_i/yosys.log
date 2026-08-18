@@ -132,6 +132,6 @@ Removed 0 unused cells and 963 unused wires.
 8. Executing Verilog backend.
 Dumping module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
 
-End of script. Logfile hash: 31c192d82c, time: 0.25s, user: 0.09s, system: 0.02s, MEM: 34.32 MB peak
+End of script. Logfile hash: 31c192d82c, time: 0.25s, user: 0.10s, system: 0.01s, MEM: 34.50 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 70% 1x abc (0 sec), 13% 1x dfflibmap (0 sec), ...

@@ -1,0 +1,49 @@
+
+3. Printing statistics.
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    22634        - wires
+    23784        - wire bits
+       42        - public wires
+     1192        - public wire bits
+       10        - ports
+      168        - port bits
+    22692 2.99E+04 cells
+      769  818.216   AND2_X1
+      342   454.86   AND3_X1
+       22   35.112   AND4_X1
+      264   351.12   AOI211_X1
+     1708 1.82E+03   AOI21_X1
+      182  290.472   AOI221_X1
+       78  165.984   AOI222_X1
+      270    359.1   AOI22_X1
+       31   164.92   DFFR_X1
+        1     5.32   DFFS_X1
+      992 4.49E+03   DFF_X1
+     1055   561.26   INV_X1
+     1216 2.26E+03   MUX2_X1
+     3086 2.46E+03   NAND2_X1
+      224  238.336   NAND3_X1
+       44    58.52   NAND4_X1
+     2902 2.32E+03   NOR2_X1
+      268  285.152   NOR3_X1
+       33    43.89   NOR4_X1
+      345   458.85   OAI211_X1
+     2573 2.74E+03   OAI21_X1
+      177  282.492   OAI221_X1
+       30    63.84   OAI222_X1
+      214   284.62   OAI22_X1
+      260   484.12   OAI33_X1
+      858  912.912   OR2_X1
+      292   388.36   OR3_X1
+       12   19.152   OR4_X1
+     3020  4819.92   XNOR2_X1
+     1424 2.27E+03   XOR2_X1
+
+   Chip area for module '\riscv_core': 29902.656000
+     of which used for sequential elements: 4656.064000 (15.57%)
+

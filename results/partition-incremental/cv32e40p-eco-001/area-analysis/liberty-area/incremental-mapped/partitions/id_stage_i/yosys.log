@@ -141,6 +141,6 @@ Removed 0 unused cells and 15481 unused wires.
 8. Executing Verilog backend.
 Dumping module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
 
-End of script. Logfile hash: 2a5af95625, time: 5.07s, user: 0.76s, system: 0.08s, MEM: 120.62 MB peak
+End of script. Logfile hash: 2a5af95625, time: 5.29s, user: 0.84s, system: 0.11s, MEM: 120.17 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 89% 1x abc (4 sec), 5% 2x read_json (0 sec), ...
+Time spent: 88% 1x abc (4 sec), 6% 2x read_json (0 sec), ...

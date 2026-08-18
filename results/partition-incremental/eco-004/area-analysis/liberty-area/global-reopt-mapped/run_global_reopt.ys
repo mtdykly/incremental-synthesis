@@ -1,0 +1,23 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/incremental/linked/linked.json"
+
+hierarchy -check -top riscv_core
+
+# Remove partition hierarchy before technology mapping.
+# This is the key difference from normal incremental mapping.
+flatten -noscopeinfo
+
+# Only clean the flattened generic design here.
+opt_clean -purge
+
+# Perform one global technology mapping.
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+# Keep the same latch mapping used by the existing Liberty-area flow.
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+
+opt_clean -purge
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/area-analysis/liberty-area/global-reopt-mapped/mapped.json"
+
+write_verilog -noattr -noexpr -nodec     "/workspace/incremental-synthesis/results/partition-incremental/eco-004/area-analysis/liberty-area/global-reopt-mapped/mapped_netlist.v"

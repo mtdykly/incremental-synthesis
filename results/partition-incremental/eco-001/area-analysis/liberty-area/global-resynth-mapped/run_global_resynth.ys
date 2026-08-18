@@ -1,0 +1,37 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked.json"
+
+hierarchy -check -top riscv_core
+check
+
+# ------------------------------------------------------------
+# 1. Remove partition boundaries
+# ------------------------------------------------------------
+flatten -noscopeinfo
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/global-resynth-mapped/before_global_resynth.json"
+
+# ------------------------------------------------------------
+# 2. Re-run the same generic synthesis pass used by Full
+# ------------------------------------------------------------
+synth -top riscv_core
+opt_clean -purge
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/global-resynth-mapped/global_resynth_generic.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/global-resynth-mapped/global_resynth_generic.rtlil"
+
+# ------------------------------------------------------------
+# 3. Global Nangate45 technology mapping
+# ------------------------------------------------------------
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+opt_clean -purge
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/global-resynth-mapped/mapped.json"
+
+write_verilog -noattr -noexpr -nodec     "/workspace/incremental-synthesis/results/partition-incremental/eco-001/area-analysis/liberty-area/global-resynth-mapped/mapped_netlist.v"

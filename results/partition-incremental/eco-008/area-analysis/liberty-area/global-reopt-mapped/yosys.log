@@ -1,0 +1,167 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-008/area-analysis/liberty-area/global-reopt-mapped/run_global_reopt.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module data_memory_interface from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+
+2.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+Deleting now unused module data_memory_interface.
+Deleting now unused module singlecycle_ctlpath.
+Deleting now unused module singlecycle_datapath.
+<suppressed ~3 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 51 unused wires.
+<suppressed ~51 debug messages>
+
+5. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+5.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\riscv_core':
+  mapped 31 $_DFF_PN0_ cells to \DFFR_X1 cells.
+  mapped 1 $_DFF_PN1_ cells to \DFFS_X1 cells.
+  mapped 992 $_DFF_P_ cells to \DFF_X1 cells.
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `\riscv_core' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl (1 files)
+
+6.1.1. Executed ABC.
+Extracted 24125 gates and 25216 wires to a netlist network with 1089 inputs and 1126 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:      781
+ABC RESULTS:           AND3_X1 cells:      371
+ABC RESULTS:           AND4_X1 cells:       17
+ABC RESULTS:         AOI211_X1 cells:      245
+ABC RESULTS:          AOI21_X1 cells:     1756
+ABC RESULTS:         AOI221_X1 cells:      216
+ABC RESULTS:         AOI222_X1 cells:       25
+ABC RESULTS:          AOI22_X1 cells:      181
+ABC RESULTS:            INV_X1 cells:     1193
+ABC RESULTS:           MUX2_X1 cells:     1751
+ABC RESULTS:          NAND2_X1 cells:     2674
+ABC RESULTS:          NAND3_X1 cells:      236
+ABC RESULTS:          NAND4_X1 cells:       49
+ABC RESULTS:           NOR2_X1 cells:     2932
+ABC RESULTS:           NOR3_X1 cells:      267
+ABC RESULTS:           NOR4_X1 cells:       31
+ABC RESULTS:         OAI211_X1 cells:      391
+ABC RESULTS:          OAI21_X1 cells:     2180
+ABC RESULTS:         OAI221_X1 cells:      176
+ABC RESULTS:         OAI222_X1 cells:       29
+ABC RESULTS:          OAI22_X1 cells:      160
+ABC RESULTS:          OAI33_X1 cells:      251
+ABC RESULTS:            OR2_X1 cells:      920
+ABC RESULTS:            OR3_X1 cells:      298
+ABC RESULTS:            OR4_X1 cells:       15
+ABC RESULTS:          XNOR2_X1 cells:     3080
+ABC RESULTS:           XOR2_X1 cells:     1337
+ABC RESULTS:        internal signals:    23001
+ABC RESULTS:           input signals:     1089
+ABC RESULTS:          output signals:     1126
+Removing temp directory.
+Removing global temp directory.
+
+7. Executing TECHMAP pass (map to technology primitives).
+
+7.1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v
+Parsing Verilog input from `/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \riscv_core..
+Removed 0 unused cells and 25084 unused wires.
+<suppressed ~12 debug messages>
+
+9. Executing JSON backend.
+
+10. Executing Verilog backend.
+Dumping module `\riscv_core'.
+
+End of script. Logfile hash: 8993c57fdf, time: 15.72s, user: 1.67s, system: 0.20s, MEM: 188.29 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 93% 1x abc (14 sec), 2% 2x read_json (0 sec), ...

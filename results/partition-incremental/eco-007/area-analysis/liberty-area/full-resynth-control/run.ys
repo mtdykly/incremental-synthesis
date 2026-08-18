@@ -1,0 +1,19 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/area-analysis/liberty-area/full-generic/full_reference.json"
+
+hierarchy -check -top riscv_core
+
+# Full reference has already been synthesized once.
+# Run synth one additional time as the control experiment.
+synth -top riscv_core
+opt_clean -purge
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/area-analysis/liberty-area/full-resynth-control/resynth_generic.json"
+
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+opt_clean -purge
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/area-analysis/liberty-area/full-resynth-control/mapped.json"

@@ -1,0 +1,48 @@
+# Load unsynthesized top shell.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/presynth_top_shell.json"
+
+# Load partition frontends.
+# These partitions have been internally flattened,
+# but have NOT passed through synth.
+# cs_registers_i -> cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/cs_registers_i/flattened.rtlil"
+# ex_stage_i -> cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/ex_stage_i/flattened.rtlil"
+# id_stage_i -> cv32e40p_id_stage$cv32e40p_core.id_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/id_stage_i/flattened.rtlil"
+# if_stage_i -> cv32e40p_if_stage$cv32e40p_core.if_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/if_stage_i/flattened.rtlil"
+# load_store_unit_i -> cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/load_store_unit_i/flattened.rtlil"
+# sleep_unit_i -> cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/new/partition-frontends/sleep_unit_i/flattened.rtlil"
+
+# Validate reconstructed pre-synthesis hierarchy.
+hierarchy -check -top cv32e40p_core
+check
+
+# Save design BEFORE global flatten/synthesis.
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked.rtlil"
+
+# Remove partition boundaries globally.
+flatten -noscopeinfo
+opt_clean
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/presynth_linked_flattened.json"
+
+# Perform ONE global generic synthesis.
+synth -top cv32e40p_core
+opt_clean -purge
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/global_synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/global_synth.rtlil"
+
+# Perform ONE global Nangate45 technology mapping.
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+opt_clean -purge
+check
+write_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/mapped.json"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/presynth-linked-mapped/mapped_netlist.v"

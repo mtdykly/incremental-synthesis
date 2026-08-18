@@ -2022,6 +2022,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 Dumping module `\riscv_core'.
 
 Warnings: 8 unique messages, 11 total
-End of script. Logfile hash: 1ad87b776d, time: 20.87s, user: 11.61s, system: 1.03s, MEM: 349.16 MB peak
+End of script. Logfile hash: 1ad87b776d, time: 21.31s, user: 11.90s, system: 0.92s, MEM: 344.36 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 53% 1x abc (13 sec), 11% 53x opt_merge (3 sec), ...
+Time spent: 53% 1x abc (13 sec), 11% 103x opt_expr (3 sec), ...

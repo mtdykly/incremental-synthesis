@@ -169,6 +169,6 @@ Removed 0 unused modules.
       }
 }
 
-End of script. Logfile hash: bae65764bf, time: 0.75s, user: 0.75s, system: 0.17s, MEM: 239.91 MB peak
+End of script. Logfile hash: bae65764bf, time: 0.75s, user: 0.69s, system: 0.23s, MEM: 240.24 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 80% 2x read_json (0 sec), 15% 2x stat (0 sec), ...
+Time spent: 81% 2x read_json (0 sec), 15% 2x stat (0 sec), ...

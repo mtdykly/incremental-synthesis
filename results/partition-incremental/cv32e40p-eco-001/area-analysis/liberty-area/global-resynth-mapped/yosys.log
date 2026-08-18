@@ -1,0 +1,1332 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/global-resynth-mapped/run_global_resynth.ys' --
+
+1. Executing JSON frontend.
+Importing module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i from JSON tree.
+Importing module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i from JSON tree.
+Importing module cv32e40p_if_stage$cv32e40p_core.if_stage_i from JSON tree.
+Importing module cv32e40p_id_stage$cv32e40p_core.id_stage_i from JSON tree.
+Importing module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i from JSON tree.
+Importing module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i from JSON tree.
+Importing module cv32e40p_core from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Used module:     \cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+Used module:     \cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+Used module:     \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+Removed 0 unused modules.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Checking module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i...
+Checking module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i...
+Checking module cv32e40p_id_stage$cv32e40p_core.id_stage_i...
+Checking module cv32e40p_if_stage$cv32e40p_core.if_stage_i...
+Checking module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i...
+Checking module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i...
+Found and reported 0 problems.
+
+4. Executing FLATTEN pass (flatten design).
+Deleting now unused module cv32e40p_cs_registers$cv32e40p_core.cs_registers_i.
+Deleting now unused module cv32e40p_ex_stage$cv32e40p_core.ex_stage_i.
+Deleting now unused module cv32e40p_id_stage$cv32e40p_core.id_stage_i.
+Deleting now unused module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Deleting now unused module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Deleting now unused module cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i.
+<suppressed ~6 debug messages>
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 13 unused cells and 23 unused wires.
+<suppressed ~30 debug messages>
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+7. Executing JSON backend.
+
+8. Executing SYNTH pass.
+
+8.1. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+
+8.1.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Removed 0 unused modules.
+
+8.2. Executing PROC pass (convert processes to netlists).
+
+8.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+8.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+8.2.4. Executing PROC_INIT pass (extract init attributes).
+
+8.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+8.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+8.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+8.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+8.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+8.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~15 debug messages>
+
+8.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+8.5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+8.6. Executing OPT pass (performing simple optimizations).
+
+8.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42751 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Computing hashes of 42703 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Computing hashes of 42702 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+<suppressed ~147 debug messages>
+Removed a total of 49 cells.
+
+8.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42702 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $flatten\ex_stage_i.$auto$ff.cc:337:slice$16166 ($_DFFE_PN0P_) from module cv32e40p_core.
+Setting constant 0-bit at position 0 on $flatten\id_stage_i.$auto$ff.cc:337:slice$23623 ($_DFF_PN0_) from module cv32e40p_core.
+Setting constant 0-bit at position 0 on $flatten\load_store_unit_i.$auto$ff.cc:337:slice$14728 ($_DFFE_PN0P_) from module cv32e40p_core.
+
+8.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 48 unused wires.
+<suppressed ~1 debug messages>
+
+8.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~1 debug messages>
+
+8.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42698 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Computing hashes of 42697 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+8.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+8.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~1 debug messages>
+
+8.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42696 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+8.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.6.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.6.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.6.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.6.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42696 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.6.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.6.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.6.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.6.30. Finished fast OPT passes. (There is nothing left to do.)
+
+8.7. Executing FSM pass (extract and optimize FSM).
+
+8.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+8.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+8.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+8.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+8.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+8.8. Executing OPT pass (performing simple optimizations).
+
+8.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42696 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42696 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15338 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [31], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [31]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15337 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [30], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [30]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15336 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [29], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [29]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15335 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [28], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [28]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15334 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [27], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [27]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15333 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [26], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [26]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15332 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [25], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [25]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15331 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [24], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [24]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15330 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [23], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [23]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15329 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [22], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [22]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15328 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [21], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [21]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15327 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [20], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [20]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15326 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [19], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [19]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15325 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [18], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [18]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15324 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [17], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [17]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15323 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [16], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [16]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15322 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [15], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [15]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15321 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [14], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [14]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15320 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [13], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [13]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15319 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [12], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [12]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15318 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [11], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [11]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15317 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [10], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [10]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15316 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [9], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [9]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15315 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [8], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [8]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15314 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [7], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [7]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15313 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [6], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [6]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15312 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [5], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [5]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15311 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [4], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [4]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15310 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [3], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [3]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15309 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [2], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [2]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15308 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [1], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [1]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15307 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [0], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [0]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15306 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [31], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [63]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15305 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [30], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [62]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15304 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [29], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [61]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15303 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [28], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [60]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15302 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [27], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [59]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15301 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [26], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [58]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15300 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [25], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [57]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15299 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [24], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [56]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15298 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [23], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [55]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15297 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [22], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [54]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15296 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [21], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [53]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15295 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [20], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [52]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15294 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [19], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [51]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15293 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [18], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [50]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15292 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [17], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [49]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15291 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [16], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [48]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15290 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [15], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [47]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15289 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [14], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [46]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15288 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [13], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [45]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15287 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [12], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [44]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15286 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [11], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [43]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15285 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [10], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [42]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15284 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [9], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [41]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15283 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [8], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [40]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15282 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [7], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [39]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15281 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [6], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [38]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15280 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [5], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [37]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15279 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [4], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [36]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15278 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [3], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [35]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15277 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [2], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [34]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15276 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [1], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [33]).
+Adding EN signal on $flatten\if_stage_i.$auto$ff.cc:337:slice$15275 ($_DFFE_PN0P_) from module cv32e40p_core (D = \instr_rdata_i [0], Q = \if_stage_i.prefetch_buffer_i.fifo_i.mem_q [32]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18481 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15590, Q = \id_stage_i.hwlp_end_o [31]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18480 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15174, Q = \id_stage_i.hwlp_end_o [30]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18479 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15193, Q = \id_stage_i.hwlp_end_o [29]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18478 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15204, Q = \id_stage_i.hwlp_end_o [28]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18477 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15216, Q = \id_stage_i.hwlp_end_o [27]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18476 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15232, Q = \id_stage_i.hwlp_end_o [26]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18475 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15247, Q = \id_stage_i.hwlp_end_o [25]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18474 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15262, Q = \id_stage_i.hwlp_end_o [24]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18473 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15274, Q = \id_stage_i.hwlp_end_o [23]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18472 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15288, Q = \id_stage_i.hwlp_end_o [22]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18471 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15298, Q = \id_stage_i.hwlp_end_o [21]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18470 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15309, Q = \id_stage_i.hwlp_end_o [20]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18469 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15324, Q = \id_stage_i.hwlp_end_o [19]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18468 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15334, Q = \id_stage_i.hwlp_end_o [18]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18467 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15355, Q = \id_stage_i.hwlp_end_o [17]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18466 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15368, Q = \id_stage_i.hwlp_end_o [16]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18465 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15377, Q = \id_stage_i.hwlp_end_o [15]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18464 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15393, Q = \id_stage_i.hwlp_end_o [14]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18463 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15400, Q = \id_stage_i.hwlp_end_o [13]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18462 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15411, Q = \id_stage_i.hwlp_end_o [12]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18461 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15426, Q = \id_stage_i.hwlp_end_o [11]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18460 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15433, Q = \id_stage_i.hwlp_end_o [10]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18459 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15449, Q = \id_stage_i.hwlp_end_o [9]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18458 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15459, Q = \id_stage_i.hwlp_end_o [8]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18457 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15471, Q = \id_stage_i.hwlp_end_o [7]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18456 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15485, Q = \id_stage_i.hwlp_end_o [6]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18455 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15501, Q = \id_stage_i.hwlp_end_o [5]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18454 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15511, Q = \id_stage_i.hwlp_end_o [4]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18453 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15526, Q = \id_stage_i.hwlp_end_o [3]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18452 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15536, Q = \id_stage_i.hwlp_end_o [2]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18449 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15590, Q = \id_stage_i.hwlp_end_o [63]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18448 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15174, Q = \id_stage_i.hwlp_end_o [62]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18447 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15193, Q = \id_stage_i.hwlp_end_o [61]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18446 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15204, Q = \id_stage_i.hwlp_end_o [60]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18445 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15216, Q = \id_stage_i.hwlp_end_o [59]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18444 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15232, Q = \id_stage_i.hwlp_end_o [58]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18443 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15247, Q = \id_stage_i.hwlp_end_o [57]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18442 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15262, Q = \id_stage_i.hwlp_end_o [56]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18441 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15274, Q = \id_stage_i.hwlp_end_o [55]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18440 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15288, Q = \id_stage_i.hwlp_end_o [54]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18439 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15298, Q = \id_stage_i.hwlp_end_o [53]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18438 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15309, Q = \id_stage_i.hwlp_end_o [52]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18437 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15324, Q = \id_stage_i.hwlp_end_o [51]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18436 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15334, Q = \id_stage_i.hwlp_end_o [50]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18435 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15355, Q = \id_stage_i.hwlp_end_o [49]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18434 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15368, Q = \id_stage_i.hwlp_end_o [48]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18433 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15377, Q = \id_stage_i.hwlp_end_o [47]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18432 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15393, Q = \id_stage_i.hwlp_end_o [46]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18431 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15400, Q = \id_stage_i.hwlp_end_o [45]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18430 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15411, Q = \id_stage_i.hwlp_end_o [44]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18429 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15426, Q = \id_stage_i.hwlp_end_o [43]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18428 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15433, Q = \id_stage_i.hwlp_end_o [42]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18427 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15449, Q = \id_stage_i.hwlp_end_o [41]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18426 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15459, Q = \id_stage_i.hwlp_end_o [40]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18425 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15471, Q = \id_stage_i.hwlp_end_o [39]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18424 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15485, Q = \id_stage_i.hwlp_end_o [38]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18423 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15501, Q = \id_stage_i.hwlp_end_o [37]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18422 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15511, Q = \id_stage_i.hwlp_end_o [36]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18421 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15526, Q = \id_stage_i.hwlp_end_o [35]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18420 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15536, Q = \id_stage_i.hwlp_end_o [34]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18417 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15596, Q = \id_stage_i.hwlp_start_o [31]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18416 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15184, Q = \id_stage_i.hwlp_start_o [30]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18415 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15195, Q = \id_stage_i.hwlp_start_o [29]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18414 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15206, Q = \id_stage_i.hwlp_start_o [28]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18413 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15222, Q = \id_stage_i.hwlp_start_o [27]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18412 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15238, Q = \id_stage_i.hwlp_start_o [26]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18411 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15253, Q = \id_stage_i.hwlp_start_o [25]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18410 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15264, Q = \id_stage_i.hwlp_start_o [24]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18409 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15280, Q = \id_stage_i.hwlp_start_o [23]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18408 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15290, Q = \id_stage_i.hwlp_start_o [22]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18407 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15300, Q = \id_stage_i.hwlp_start_o [21]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18406 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15315, Q = \id_stage_i.hwlp_start_o [20]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18405 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15326, Q = \id_stage_i.hwlp_start_o [19]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18404 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15340, Q = \id_stage_i.hwlp_start_o [18]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18403 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15361, Q = \id_stage_i.hwlp_start_o [17]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18402 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15370, Q = \id_stage_i.hwlp_start_o [16]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18401 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15383, Q = \id_stage_i.hwlp_start_o [15]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18400 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15395, Q = \id_stage_i.hwlp_start_o [14]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18399 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15402, Q = \id_stage_i.hwlp_start_o [13]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18398 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15417, Q = \id_stage_i.hwlp_start_o [12]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18397 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15428, Q = \id_stage_i.hwlp_start_o [11]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18396 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15439, Q = \id_stage_i.hwlp_start_o [10]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18395 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15451, Q = \id_stage_i.hwlp_start_o [9]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18394 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15461, Q = \id_stage_i.hwlp_start_o [8]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18393 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15477, Q = \id_stage_i.hwlp_start_o [7]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18392 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15491, Q = \id_stage_i.hwlp_start_o [6]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18391 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15503, Q = \id_stage_i.hwlp_start_o [5]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18390 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15517, Q = \id_stage_i.hwlp_start_o [4]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18389 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15528, Q = \id_stage_i.hwlp_start_o [3]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18388 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15538, Q = \id_stage_i.hwlp_start_o [2]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18385 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15596, Q = \id_stage_i.hwlp_start_o [63]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18384 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15184, Q = \id_stage_i.hwlp_start_o [62]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18383 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15195, Q = \id_stage_i.hwlp_start_o [61]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18382 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15206, Q = \id_stage_i.hwlp_start_o [60]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18381 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15222, Q = \id_stage_i.hwlp_start_o [59]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18380 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15238, Q = \id_stage_i.hwlp_start_o [58]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18379 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15253, Q = \id_stage_i.hwlp_start_o [57]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18378 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15264, Q = \id_stage_i.hwlp_start_o [56]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18377 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15280, Q = \id_stage_i.hwlp_start_o [55]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18376 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15290, Q = \id_stage_i.hwlp_start_o [54]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18375 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15300, Q = \id_stage_i.hwlp_start_o [53]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18374 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15315, Q = \id_stage_i.hwlp_start_o [52]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18373 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15326, Q = \id_stage_i.hwlp_start_o [51]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18372 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15340, Q = \id_stage_i.hwlp_start_o [50]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18371 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15361, Q = \id_stage_i.hwlp_start_o [49]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18370 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15370, Q = \id_stage_i.hwlp_start_o [48]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18369 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15383, Q = \id_stage_i.hwlp_start_o [47]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18368 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15395, Q = \id_stage_i.hwlp_start_o [46]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18367 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15402, Q = \id_stage_i.hwlp_start_o [45]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18366 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15417, Q = \id_stage_i.hwlp_start_o [44]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18365 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15428, Q = \id_stage_i.hwlp_start_o [43]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18364 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15439, Q = \id_stage_i.hwlp_start_o [42]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18363 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15451, Q = \id_stage_i.hwlp_start_o [41]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18362 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15461, Q = \id_stage_i.hwlp_start_o [40]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18361 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15477, Q = \id_stage_i.hwlp_start_o [39]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18360 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15491, Q = \id_stage_i.hwlp_start_o [38]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18359 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15503, Q = \id_stage_i.hwlp_start_o [37]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18358 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15517, Q = \id_stage_i.hwlp_start_o [36]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18357 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15528, Q = \id_stage_i.hwlp_start_o [35]).
+Adding EN signal on $flatten\id_stage_i.$auto$ff.cc:337:slice$18356 ($_DFFE_PN0P_) from module cv32e40p_core (D = $flatten\id_stage_i.$abc$54771$new_n15538, Q = \id_stage_i.hwlp_start_o [34]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24546 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [23], Q = \cs_registers_i.mtvec_o [23]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24545 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [22], Q = \cs_registers_i.mtvec_o [22]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24544 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [21], Q = \cs_registers_i.mtvec_o [21]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24543 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [20], Q = \cs_registers_i.mtvec_o [20]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24542 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [19], Q = \cs_registers_i.mtvec_o [19]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24541 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [18], Q = \cs_registers_i.mtvec_o [18]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24540 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [17], Q = \cs_registers_i.mtvec_o [17]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24539 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [16], Q = \cs_registers_i.mtvec_o [16]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24538 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [15], Q = \cs_registers_i.mtvec_o [15]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24537 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [14], Q = \cs_registers_i.mtvec_o [14]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24536 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [13], Q = \cs_registers_i.mtvec_o [13]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24535 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [12], Q = \cs_registers_i.mtvec_o [12]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24534 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [11], Q = \cs_registers_i.mtvec_o [11]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24533 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [10], Q = \cs_registers_i.mtvec_o [10]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24532 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [9], Q = \cs_registers_i.mtvec_o [9]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24531 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [8], Q = \cs_registers_i.mtvec_o [8]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24530 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [7], Q = \cs_registers_i.mtvec_o [7]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24529 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [6], Q = \cs_registers_i.mtvec_o [6]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24528 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [5], Q = \cs_registers_i.mtvec_o [5]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24527 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [4], Q = \cs_registers_i.mtvec_o [4]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24526 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [3], Q = \cs_registers_i.mtvec_o [3]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24525 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [2], Q = \cs_registers_i.mtvec_o [2]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24524 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [1], Q = \cs_registers_i.mtvec_o [1]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$24523 ($_DFF_PN0_) from module cv32e40p_core (D = \cs_registers_i._0585_ [0], Q = \cs_registers_i.mtvec_o [0]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15167 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [15], Q = \cs_registers_i._1771_ [15]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15166 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [14], Q = \cs_registers_i._1771_ [14]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15165 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [13], Q = \cs_registers_i._1771_ [13]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15164 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [12], Q = \cs_registers_i._1771_ [12]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15163 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [11], Q = \cs_registers_i._1771_ [11]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15162 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [10], Q = \cs_registers_i._1771_ [10]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15161 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [9], Q = \cs_registers_i._1771_ [9]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15160 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [8], Q = \cs_registers_i._1771_ [8]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15159 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [7], Q = \cs_registers_i._1771_ [7]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15158 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [6], Q = \cs_registers_i._1771_ [6]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15157 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [5], Q = \cs_registers_i._1771_ [5]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15156 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [4], Q = \cs_registers_i._1771_ [4]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15155 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [3], Q = \cs_registers_i._1771_ [3]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15154 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [2], Q = \cs_registers_i._1771_ [2]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15153 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [1], Q = \cs_registers_i._1771_ [1]).
+Adding EN signal on $flatten\cs_registers_i.$auto$ff.cc:337:slice$15152 ($_DFFE_PN0P_) from module cv32e40p_core (D = \cs_registers_i.csr_wdata_int [0], Q = \cs_registers_i._1771_ [0]).
+
+8.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 200 unused cells and 226 unused wires.
+<suppressed ~203 debug messages>
+
+8.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~48 debug messages>
+
+8.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42836 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Computing hashes of 42618 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Computing hashes of 42506 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+<suppressed ~990 debug messages>
+Removed a total of 330 cells.
+
+8.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 354 unused wires.
+<suppressed ~1 debug messages>
+
+8.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42506 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+8.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from wire cv32e40p_core.data_sign_ext_ex.
+Removed top 1 bits (of 3) from wire cv32e40p_core.exc_pc_mux_id.
+Removed top 1 bits (of 6) from wire cv32e40p_core.regfile_alu_waddr_ex.
+Removed top 1 bits (of 6) from wire cv32e40p_core.regfile_alu_waddr_fw.
+Removed top 1 bits (of 6) from wire cv32e40p_core.regfile_waddr_ex.
+Removed top 1 bits (of 6) from wire cv32e40p_core.regfile_waddr_fw_wb_o.
+Removed top 1 bits (of 2) from wire cv32e40p_core.trap_addr_mux.
+
+8.10. Executing PEEPOPT pass (run peephole optimizers).
+
+8.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+8.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cv32e40p_core:
+  created 0 $alu and 0 $macc cells.
+
+8.13. Executing SHARE pass (SAT-based resource sharing).
+
+8.14. Executing OPT pass (performing simple optimizations).
+
+8.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42506 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42506 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+8.15. Executing MEMORY pass.
+
+8.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+8.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.17. Executing OPT pass (performing simple optimizations).
+
+8.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~224 debug messages>
+
+8.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42482 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+8.17.5. Finished fast OPT passes.
+
+8.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8.19. Executing OPT pass (performing simple optimizations).
+
+8.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42482 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42482 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54099 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54097
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54029
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54163 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54161
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54128
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54228 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54226
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54195
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54335 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54333
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54264
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54445 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54443
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54419
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54487 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54485
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54468
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54620 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54618
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54505
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54668 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54666
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54644
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54700 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54698
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54684
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54730 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54728
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54717
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54763 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54289
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54292
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54798 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54796
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54744
+
+8.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+8.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~12 debug messages>
+
+8.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+8.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42470 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.19.14. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54489 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54485
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54443
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54669 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54666
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54618
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54731 in front of them:
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54728
+        $flatten\ex_stage_i.$abc$52125$auto$blifparse.cc:397:parse_blif$54698
+
+8.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+8.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~3 debug messages>
+
+8.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+8.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42467 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.19.22. Executing OPT_SHARE pass.
+
+8.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+8.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.19.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.19.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+8.19.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_core.
+Performed a total of 0 changes.
+
+8.19.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42467 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.19.30. Executing OPT_SHARE pass.
+
+8.19.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.19.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.19.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.19.34. Finished fast OPT passes. (There is nothing left to do.)
+
+8.20. Executing TECHMAP pass (map to technology primitives).
+
+8.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+8.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~92 debug messages>
+
+8.21. Executing OPT pass (performing simple optimizations).
+
+8.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+
+8.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42467 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+
+8.21.5. Finished fast OPT passes.
+
+8.22. Executing ABC pass (technology mapping using ABC).
+
+8.22.1. Extracting gate netlist of module `\cv32e40p_core' to `<abc-temp-dir>/input.blif'..
+
+8.22.1.1. Executed ABC.
+Extracted 39924 gates and 42717 wires to a netlist network with 2791 inputs and 2256 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+8.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     7623
+ABC RESULTS:            ANDNOT cells:     1985
+ABC RESULTS:               MUX cells:     4699
+ABC RESULTS:              NAND cells:    14956
+ABC RESULTS:               NOR cells:      630
+ABC RESULTS:               NOT cells:      296
+ABC RESULTS:                OR cells:     2311
+ABC RESULTS:             ORNOT cells:     1671
+ABC RESULTS:              XNOR cells:     1132
+ABC RESULTS:               XOR cells:     4236
+ABC RESULTS:        internal signals:    37670
+ABC RESULTS:           input signals:     2791
+ABC RESULTS:          output signals:     2256
+Removing temp directory.
+Removing global temp directory.
+
+8.23. Executing OPT pass (performing simple optimizations).
+
+8.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_core.
+<suppressed ~85 debug messages>
+
+8.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_core'.
+Computing hashes of 42082 cells of `\cv32e40p_core'.
+Finding duplicate cells in `\cv32e40p_core'.
+Removed a total of 0 cells.
+
+8.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 34 unused cells and 42596 unused wires.
+<suppressed ~160 debug messages>
+
+8.23.5. Finished fast OPT passes.
+
+8.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `cv32e40p_core'. Setting top module to cv32e40p_core.
+
+8.24.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+
+8.24.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_core
+Removed 0 unused modules.
+
+8.25. Printing statistics.
+
+=== cv32e40p_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    38141 wires
+    47440 wire bits
+      687 public wires
+     9986 public wire bits
+       40 ports
+      537 port bits
+    42048 cells
+     1985   $_ANDNOT_
+     7622   $_AND_
+       32   $_DFFE_PN0N_
+     2335   $_DFFE_PN0P_
+        7   $_DFFE_PN1P_
+      130   $_DFF_PN0_
+        6   $_DFF_PN1_
+        1   $_DLATCH_N_
+     4699   $_MUX_
+    14956   $_NAND_
+      630   $_NOR_
+      296   $_NOT_
+     1671   $_ORNOT_
+     2310   $_OR_
+     1132   $_XNOR_
+     4236   $_XOR_
+
+8.26. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 350 unused wires.
+<suppressed ~350 debug messages>
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Found and reported 0 problems.
+
+11. Executing JSON backend.
+
+12. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/global-resynth-mapped/global_resynth_generic.rtlil
+
+13. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+13.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\cv32e40p_core':
+  mapped 2497 $_DFF_PN0_ cells to \DFFR_X1 cells.
+  mapped 13 $_DFF_PN1_ cells to \DFFS_X1 cells.
+
+14. Executing ABC pass (technology mapping using ABC).
+
+14.1. Extracting gate netlist of module `\cv32e40p_core' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl (1 files)
+
+14.1.1. Executed ABC.
+Extracted 41911 gates and 44741 wires to a netlist network with 2829 inputs and 2600 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+14.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:      960
+ABC RESULTS:           AND3_X1 cells:      406
+ABC RESULTS:           AND4_X1 cells:      111
+ABC RESULTS:         AOI211_X1 cells:      638
+ABC RESULTS:          AOI21_X1 cells:     4127
+ABC RESULTS:         AOI221_X1 cells:      624
+ABC RESULTS:         AOI222_X1 cells:      116
+ABC RESULTS:          AOI22_X1 cells:     1217
+ABC RESULTS:            INV_X1 cells:     2015
+ABC RESULTS:           MUX2_X1 cells:     1804
+ABC RESULTS:          NAND2_X1 cells:     5004
+ABC RESULTS:          NAND3_X1 cells:     1083
+ABC RESULTS:          NAND4_X1 cells:      158
+ABC RESULTS:           NOR2_X1 cells:     3516
+ABC RESULTS:           NOR3_X1 cells:      961
+ABC RESULTS:           NOR4_X1 cells:      190
+ABC RESULTS:         OAI211_X1 cells:      948
+ABC RESULTS:          OAI21_X1 cells:     4000
+ABC RESULTS:         OAI221_X1 cells:      553
+ABC RESULTS:         OAI222_X1 cells:       19
+ABC RESULTS:          OAI22_X1 cells:      543
+ABC RESULTS:          OAI33_X1 cells:       89
+ABC RESULTS:            OR2_X1 cells:     1018
+ABC RESULTS:            OR3_X1 cells:      419
+ABC RESULTS:            OR4_X1 cells:       39
+ABC RESULTS:          XNOR2_X1 cells:     2541
+ABC RESULTS:           XOR2_X1 cells:     1853
+ABC RESULTS:        internal signals:    39312
+ABC RESULTS:           input signals:     2829
+ABC RESULTS:          output signals:     2600
+Removing temp directory.
+Removing global temp directory.
+
+15. Executing TECHMAP pass (map to technology primitives).
+
+15.1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v
+Parsing Verilog input from `/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+15.2. Continuing TECHMAP pass.
+Using template $_DLATCH_N_ for cells of type $_DLATCH_N_.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_core..
+Removed 0 unused cells and 43079 unused wires.
+<suppressed ~135 debug messages>
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_core...
+Warning: Wire cv32e40p_core.\irq_id_o [4] is used but has no driver.
+Warning: Wire cv32e40p_core.\irq_id_o [3] is used but has no driver.
+Warning: Wire cv32e40p_core.\irq_id_o [2] is used but has no driver.
+Warning: Wire cv32e40p_core.\irq_id_o [1] is used but has no driver.
+Warning: Wire cv32e40p_core.\irq_id_o [0] is used but has no driver.
+Warning: Wire cv32e40p_core.\irq_ack_o is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_req_o is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [31] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [30] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [29] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [28] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [27] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [26] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [25] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [24] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [23] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [22] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [21] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [20] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [19] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [18] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [17] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [16] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [15] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [14] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [13] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [12] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [11] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [10] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [9] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [8] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [7] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [6] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [5] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [4] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [3] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [2] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [1] is used but has no driver.
+Warning: Wire cv32e40p_core.\instr_addr_o [0] is used but has no driver.
+Warning: Wire cv32e40p_core.\debug_running_o is used but has no driver.
+Warning: Wire cv32e40p_core.\debug_havereset_o is used but has no driver.
+Warning: Wire cv32e40p_core.\debug_halted_o is used but has no driver.
+Warning: Wire cv32e40p_core.\data_we_o is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [31] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [30] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [29] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [28] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [27] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [26] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [25] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [24] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [23] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [22] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [21] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [20] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [19] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [18] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [17] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [16] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [15] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [14] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [13] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [12] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [11] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [10] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [9] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [8] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [7] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [6] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [5] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [4] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [3] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [2] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [1] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_wdata_o [0] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_req_o is used but has no driver.
+Warning: Wire cv32e40p_core.\data_be_o [3] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_be_o [2] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_be_o [1] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_be_o [0] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [31] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [30] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [29] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [28] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [27] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [26] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [25] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [24] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [23] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [22] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [21] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [20] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [19] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [18] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [17] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [16] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [15] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [14] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [13] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [12] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [11] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [10] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [9] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [8] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [7] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [6] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [5] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [4] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [3] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [2] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [1] is used but has no driver.
+Warning: Wire cv32e40p_core.\data_addr_o [0] is used but has no driver.
+Warning: Wire cv32e40p_core.\core_sleep_o is used but has no driver.
+Found and reported 113 problems.
+
+18. Executing JSON backend.
+
+19. Executing Verilog backend.
+Dumping module `\cv32e40p_core'.
+
+Warnings: 113 unique messages, 113 total
+End of script. Logfile hash: d26d512fa5, time: 53.92s, user: 29.07s, system: 2.18s, MEM: 405.62 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 57% 2x abc (38 sec), 13% 24x opt_clean (8 sec), ...

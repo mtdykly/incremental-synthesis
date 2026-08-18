@@ -119,16 +119,27 @@ ABC RESULTS:          output signals:     1089
 Removing temp directory.
 Removing global temp directory.
 
-5. Executing OPT_CLEAN pass (remove unused cells and wires).
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v
+Parsing Verilog input from `/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \singlecycle_datapath..
 Removed 0 unused cells and 8260 unused wires.
 <suppressed ~3 debug messages>
 
-6. Executing JSON backend.
+7. Executing JSON backend.
 
-7. Executing Verilog backend.
+8. Executing Verilog backend.
 Dumping module `\singlecycle_datapath'.
 
-End of script. Logfile hash: 53e77702e2, time: 2.17s, user: 0.40s, system: 0.02s, MEM: 64.61 MB peak
+End of script. Logfile hash: 93652ad3e0, time: 2.23s, user: 0.38s, system: 0.05s, MEM: 65.58 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 88% 1x abc (1 sec), 5% 2x read_json (0 sec), ...
+Time spent: 89% 1x abc (1 sec), 5% 2x read_json (0 sec), ...

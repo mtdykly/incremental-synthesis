@@ -1,0 +1,19 @@
+# Load full frontend hierarchy.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-008/new/frontend_hier.json"
+
+# Replace first-level partition implementations with blackboxes.
+# data_memory_interface -> data_memory_interface
+blackbox data_memory_interface
+# singlecycle_ctlpath -> singlecycle_ctlpath
+blackbox singlecycle_ctlpath
+# singlecycle_datapath -> singlecycle_datapath
+blackbox singlecycle_datapath
+
+hierarchy -check -top riscv_core
+check
+
+# Export ONLY the unsynthesized top module.
+select -clear
+select riscv_core
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/eco-008/area-analysis/liberty-area/presynth-linked-mapped/presynth_top_shell.json"
+select -clear

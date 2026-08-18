@@ -195,6 +195,6 @@ Dumping module `\riscv_core'.
       }
 }
 
-End of script. Logfile hash: b2fca27684, time: 0.68s, user: 0.77s, system: 0.08s, MEM: 148.84 MB peak
+End of script. Logfile hash: b2fca27684, time: 0.62s, user: 0.67s, system: 0.08s, MEM: 148.61 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 50% 6x read_json (0 sec), 19% 2x stat (0 sec), ...
+Time spent: 55% 6x read_json (0 sec), 18% 2x stat (0 sec), ...

@@ -1,0 +1,7 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/global-reopt-mapped/mapped.json"
+
+hierarchy -top cv32e40p_core
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/global-reopt-mapped/area.rpt"     stat -top cv32e40p_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/area-analysis/liberty-area/global-reopt-mapped/stat.json"     stat -top cv32e40p_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib" -json

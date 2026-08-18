@@ -1,0 +1,75 @@
+{
+  "case": "eco-002",
+  "full_area": 11416.72,
+  "incremental_area": 11609.304,
+  "original_area_overhead": 192.58400000000074,
+  "original_area_overhead_percent": 1.6868592730661762,
+  "results": [
+    {
+      "id": "A",
+      "method": "Full",
+      "area": 11416.72,
+      "delta": 0.0,
+      "overhead": 0.0,
+      "comb": 6786.191999999999,
+      "seq": 4630.528,
+      "cells": 6411,
+      "recovery": null
+    },
+    {
+      "id": "B",
+      "method": "Incremental",
+      "area": 11609.304,
+      "delta": 192.58400000000074,
+      "overhead": 1.6868592730661762,
+      "comb": 6978.776,
+      "seq": 4630.528,
+      "cells": 6322,
+      "recovery": 0.0
+    },
+    {
+      "id": "C",
+      "method": "Incremental + global mapping",
+      "area": 11515.14,
+      "delta": 98.42000000000007,
+      "overhead": 0.8620689655172421,
+      "comb": 6884.611999999999,
+      "seq": 4630.528,
+      "cells": 6584,
+      "recovery": 48.89502762430955
+    },
+    {
+      "id": "D",
+      "method": "Incremental + global resynth + mapping",
+      "area": 11309.256,
+      "delta": -107.46399999999994,
+      "overhead": -0.9412861136999063,
+      "comb": 6678.727999999999,
+      "seq": 4630.528,
+      "cells": 6241,
+      "recovery": 155.80110497237544
+    },
+    {
+      "id": "E",
+      "method": "Full resynth control",
+      "area": 11402.09,
+      "delta": -14.6299999999992,
+      "overhead": -0.12814538676606943,
+      "comb": 6771.562,
+      "seq": 4630.528,
+      "cells": 6244,
+      "recovery": null
+    },
+    {
+      "id": "F",
+      "method": "Pre-synth linked + global synth + mapping",
+      "area": 11307.394,
+      "delta": -109.32599999999911,
+      "overhead": -0.9575955265610361,
+      "comb": 6676.866,
+      "seq": 4630.528,
+      "cells": 6476,
+      "recovery": 156.7679558011043
+    }
+  ]
+}

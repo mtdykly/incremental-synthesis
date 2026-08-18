@@ -1,0 +1,62 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-003/area-analysis/liberty-area/presynth-linked-mapped/build_presynth_top_shell.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\regfile'.
+Removing unused module `\singlecycle_control'.
+Removed 13 unused modules.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module riscv_core...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+End of script. Logfile hash: 03b00ad662, time: 0.04s, user: 0.02s, system: 0.03s, MEM: 27.98 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 97% 2x read_json (0 sec), 0% 1x check (0 sec), ...
