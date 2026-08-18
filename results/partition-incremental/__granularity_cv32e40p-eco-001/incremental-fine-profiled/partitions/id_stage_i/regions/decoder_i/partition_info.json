@@ -1,0 +1,6 @@
+{
+  "partition_name": "decoder_i",
+  "root_module": "cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i",
+  "source_dir": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new",
+  "flatten_internal": true
+}

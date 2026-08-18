@@ -1,0 +1,36 @@
+{
+  "case_name": "eco-007",
+  "timing_policy": {
+    "base_cache_build_included": false,
+    "correctness_check_included": false,
+    "main_time": "pipeline_core_seconds"
+  },
+  "totals": {
+    "pipeline_core_seconds": 2.160469,
+    "fine_rebuild_yosys_seconds": 0
+  },
+  "coarse_reuse_plan": {
+    "reusable_partitions": [
+      "data_memory_interface",
+      "singlecycle_ctlpath",
+      "singlecycle_datapath"
+    ],
+    "dirty_partitions": [],
+    "top_shell": {
+      "reasons": [
+        "top_environment_changed",
+        "top_implementation_changed"
+      ],
+      "status": "rebuild"
+    }
+  },
+  "fine_summary": {
+    "dirty_child_region_count": 0,
+    "new_frontend_primitive_cells_dirty": 0,
+    "new_frontend_primitive_cells_reusable": 0,
+    "new_frontend_primitive_cells_total": 0,
+    "partition_count": 0,
+    "potential_frontend_reuse_ratio": 0,
+    "reusable_child_region_count": 0
+  }
+}

@@ -1,0 +1,50 @@
+
+11. Printing statistics.
+
+=== cv32e40p_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    37800        - wires
+    45887        - wire bits
+      699        - public wires
+     8786        - public wire bits
+       40        - ports
+      537        - port bits
+    37592 5.42E+04 cells
+      919  977.816   AND2_X1
+      415   551.95   AND3_X1
+      188  300.048   AND4_X1
+      671   892.43   AOI211_X1
+     3943  4.2E+03   AOI21_X1
+      530   845.88   AOI221_X1
+      220   468.16   AOI222_X1
+     1597  2124.01   AOI22_X1
+        9    7.182   BUF_X1
+     2557 1.36E+04   DFFR_X1
+       13    69.16   DFFS_X1
+        1     2.66   DLH_X1
+     2277 1.21E+03   INV_X1
+     2806 5.22E+03   MUX2_X1
+     5025  4009.95   NAND2_X1
+      821  873.544   NAND3_X1
+      156   207.48   NAND4_X1
+     3502 2.79E+03   NOR2_X1
+      698  742.672   NOR3_X1
+      158   210.14   NOR4_X1
+      591   786.03   OAI211_X1
+     3686 3.92E+03   OAI21_X1
+      443  707.028   OAI221_X1
+       29   61.712   OAI222_X1
+      552   734.16   OAI22_X1
+       74  137.788   OAI33_X1
+      923  982.072   OR2_X1
+      413   549.29   OR3_X1
+       31   49.476   OR4_X1
+     2512 4.01E+03   XNOR2_X1
+     1832 2.92E+03   XOR2_X1
+
+   Chip area for module '\cv32e40p_core': 54174.890000
+     of which used for sequential elements: 13672.400000 (25.24%)
+

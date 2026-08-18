@@ -1,0 +1,44 @@
+{
+  "dirty_partition_count": 1,
+  "partitions": {
+    "singlecycle_ctlpath": {
+      "region_count": 3,
+      "regions": {
+        "riscv_core.singlecycle_ctlpath.alu_control": {
+          "instance_name": "alu_control",
+          "instance_path": "riscv_core.singlecycle_ctlpath.alu_control",
+          "kind": "direct_child_instance",
+          "module_type": "alu_control",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_ctlpath.control_transfer": {
+          "instance_name": "control_transfer",
+          "instance_path": "riscv_core.singlecycle_ctlpath.control_transfer",
+          "kind": "direct_child_instance",
+          "module_type": "control_transfer",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_ctlpath.singlecycle_control": {
+          "instance_name": "singlecycle_control",
+          "instance_path": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+          "kind": "direct_child_instance",
+          "module_type": "singlecycle_control",
+          "parameters": {}
+        }
+      },
+      "root_glue": {
+        "kind": "partition_root_local_logic",
+        "module_type": "singlecycle_ctlpath",
+        "region_id": "riscv_core.singlecycle_ctlpath.__root_glue__"
+      },
+      "root_instance_path": "riscv_core.singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "root_parameters": {}
+    }
+  },
+  "schema_version": 1,
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/new/frontend_hier.json",
+  "source_partition_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/new/partition_manifest.json",
+  "source_reuse_plan": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/plan/reuse_plan.json",
+  "strategy": "dirty_partition_direct_child_instances"
+}

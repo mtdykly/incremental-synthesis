@@ -1,0 +1,340 @@
+{
+  "partition_environment": {
+    "flow_files": [
+      {
+        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/prepare_partition_frontend.sh",
+        "sha256": "7bc83c432ecd10be12a8a8696cdea133956d6691c080b926f59a40aff18289ad"
+      },
+      {
+        "path": "/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys",
+        "sha256": "56f637f610cd7d18804e988a1bfd171b5afd54697108dad251b2bff5df24820a"
+      }
+    ],
+    "yosys_version": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)"
+  },
+  "partition_environment_signature": "a69ec2f5deafa53ce5eb84f5fd05c31cf0725c7eef51c5354bd82f60a522ff90",
+  "partitions": {
+    "data_memory_interface": {
+      "implementation_signature": "e7c5b038b82252439644033a3372233a4c86e7e48bc7167bef3575c097e6eb16",
+      "interface": [
+        {
+          "direction": "input",
+          "name": "address",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "bus_address",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "bus_byte_enable",
+          "width": 4
+        },
+        {
+          "direction": "input",
+          "name": "bus_read_data",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "bus_read_enable",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "bus_write_data",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "bus_write_enable",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "clock",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "data_format",
+          "width": 3
+        },
+        {
+          "direction": "output",
+          "name": "read_data",
+          "width": 32
+        },
+        {
+          "direction": "input",
+          "name": "read_enable",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "write_data",
+          "width": 32
+        },
+        {
+          "direction": "input",
+          "name": "write_enable",
+          "width": 1
+        }
+      ],
+      "interface_signature": "7ca43c4c7bc73ae37566c9e3fcb21fed142549327258d56dace72ba3ba9e8c2f",
+      "partition_ir": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/partition-frontends/data_memory_interface/flattened.json",
+      "root_instance_name": "data_memory_interface",
+      "root_instance_path": "riscv_core.data_memory_interface",
+      "root_module": "data_memory_interface",
+      "root_parameters": {}
+    },
+    "singlecycle_ctlpath": {
+      "implementation_signature": "30fd6f5431771c929567cc270d7a7bfffb67bb20e31cabcbf3fb161766e85dd0",
+      "interface": [
+        {
+          "direction": "output",
+          "name": "alu_function",
+          "width": 5
+        },
+        {
+          "direction": "output",
+          "name": "alu_operand_a_select",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "alu_operand_b_select",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "alu_result_equal_zero",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "data_mem_read_enable",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "data_mem_write_enable",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "inst_funct3",
+          "width": 3
+        },
+        {
+          "direction": "input",
+          "name": "inst_funct7",
+          "width": 7
+        },
+        {
+          "direction": "input",
+          "name": "inst_opcode",
+          "width": 7
+        },
+        {
+          "direction": "output",
+          "name": "next_pc_select",
+          "width": 2
+        },
+        {
+          "direction": "output",
+          "name": "pc_write_enable",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "reg_writeback_select",
+          "width": 3
+        },
+        {
+          "direction": "output",
+          "name": "regfile_write_enable",
+          "width": 1
+        }
+      ],
+      "interface_signature": "332d5ba3451e32452dc90d560095af73cae59dd9abbe84e70e9eb5fb2930c5f1",
+      "partition_ir": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/partition-frontends/singlecycle_ctlpath/flattened.json",
+      "root_instance_name": "singlecycle_ctlpath",
+      "root_instance_path": "riscv_core.singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath",
+      "root_parameters": {}
+    },
+    "singlecycle_datapath": {
+      "implementation_signature": "af07a18d572577dc8ba080a16ef4cd2b730152ce54a62823a62d649583a38e74",
+      "interface": [
+        {
+          "direction": "input",
+          "name": "alu_function",
+          "width": 5
+        },
+        {
+          "direction": "input",
+          "name": "alu_operand_a_select",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "alu_operand_b_select",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "alu_result_equal_zero",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "clock",
+          "width": 1
+        },
+        {
+          "direction": "output",
+          "name": "data_mem_address",
+          "width": 32
+        },
+        {
+          "direction": "input",
+          "name": "data_mem_read_data",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "data_mem_write_data",
+          "width": 32
+        },
+        {
+          "direction": "input",
+          "name": "inst",
+          "width": 32
+        },
+        {
+          "direction": "output",
+          "name": "inst_funct3",
+          "width": 3
+        },
+        {
+          "direction": "output",
+          "name": "inst_funct7",
+          "width": 7
+        },
+        {
+          "direction": "output",
+          "name": "inst_opcode",
+          "width": 7
+        },
+        {
+          "direction": "input",
+          "name": "next_pc_select",
+          "width": 2
+        },
+        {
+          "direction": "output",
+          "name": "pc",
+          "width": 32
+        },
+        {
+          "direction": "input",
+          "name": "pc_write_enable",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "reg_writeback_select",
+          "width": 3
+        },
+        {
+          "direction": "input",
+          "name": "regfile_write_enable",
+          "width": 1
+        },
+        {
+          "direction": "input",
+          "name": "reset",
+          "width": 1
+        }
+      ],
+      "interface_signature": "5b1fd81c784dad1840f6af18a34770606cbbbe833f9bbd71082b7d8f16a5f386",
+      "partition_ir": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/partition-frontends/singlecycle_datapath/flattened.json",
+      "root_instance_name": "singlecycle_datapath",
+      "root_instance_path": "riscv_core.singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "root_parameters": {}
+    }
+  },
+  "schema_version": 4,
+  "signature_method": "isolated_partition_flattened_ir_with_stable_memory_ids",
+  "top": {
+    "implementation_signature": "bbe5a17f123068a2515240d7044780ea1bd5603b34ad35ed35e9ac81a37cada3",
+    "interface": [
+      {
+        "direction": "output",
+        "name": "bus_address",
+        "width": 32
+      },
+      {
+        "direction": "output",
+        "name": "bus_byte_enable",
+        "width": 4
+      },
+      {
+        "direction": "input",
+        "name": "bus_read_data",
+        "width": 32
+      },
+      {
+        "direction": "output",
+        "name": "bus_read_enable",
+        "width": 1
+      },
+      {
+        "direction": "output",
+        "name": "bus_write_data",
+        "width": 32
+      },
+      {
+        "direction": "output",
+        "name": "bus_write_enable",
+        "width": 1
+      },
+      {
+        "direction": "input",
+        "name": "clock",
+        "width": 1
+      },
+      {
+        "direction": "input",
+        "name": "inst",
+        "width": 32
+      },
+      {
+        "direction": "output",
+        "name": "pc",
+        "width": 32
+      },
+      {
+        "direction": "input",
+        "name": "reset",
+        "width": 1
+      }
+    ],
+    "interface_signature": "ff45eb888c46f46c45b271811d317de75f61748584a92e858b06586476d48706"
+  },
+  "top_environment": {
+    "flow_files": [
+      {
+        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/synth_top_shell.sh",
+        "sha256": "e02904feaf0d940b92917a900bcd4c977d050c4b945504d013fceed63ec31014"
+      }
+    ],
+    "yosys_version": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)"
+  },
+  "top_environment_signature": "e6adb21ced3baf8c5765edc934b88e4a9c81ef9366270d7dbf0df60aca5e9cf0",
+  "top_module": "riscv_core"
+}

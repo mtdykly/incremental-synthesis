@@ -1,0 +1,333 @@
+{
+  "base_signatures": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/base/fine/fine_signatures.json",
+  "new_signatures": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/new/fine/fine_signatures.json",
+  "partitions": {
+    "singlecycle_ctlpath": {
+      "decisions": {
+        "riscv_core.singlecycle_ctlpath.alu_control": {
+          "base": {
+            "frontend_primitive_cell_count": 26,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "c35a7e0eaec599f812de096d25e8078ecf377604df46d2f955885f5d3f05d4f9",
+            "instance_name": "alu_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.alu_control",
+            "interface": [
+              {
+                "direction": "output",
+                "name": "alu_function",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "alu_op_type",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "inst_funct3",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "inst_funct7",
+                "width": 7
+              }
+            ],
+            "interface_signature": "d67b75ce4ff1c86aff01223599f17fe542f48d02aaa37e8033c000af806e6740",
+            "module_type": "alu_control",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 26,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "c35a7e0eaec599f812de096d25e8078ecf377604df46d2f955885f5d3f05d4f9",
+            "instance_name": "alu_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.alu_control",
+            "interface": [
+              {
+                "direction": "output",
+                "name": "alu_function",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "alu_op_type",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "inst_funct3",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "inst_funct7",
+                "width": 7
+              }
+            ],
+            "interface_signature": "d67b75ce4ff1c86aff01223599f17fe542f48d02aaa37e8033c000af806e6740",
+            "module_type": "alu_control",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_ctlpath.control_transfer": {
+          "base": {
+            "frontend_primitive_cell_count": 20,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "79204d08920f32730b63bc41ecaa61e973171d9c75d3c43414943825ed670303",
+            "instance_name": "control_transfer",
+            "instance_path": "riscv_core.singlecycle_ctlpath.control_transfer",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "branch_enable",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "inst_funct3",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "jal_enable",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "jalr_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "next_pc_select",
+                "width": 2
+              },
+              {
+                "direction": "input",
+                "name": "result_equal_zero",
+                "width": 1
+              }
+            ],
+            "interface_signature": "afda10159abe99923200490d7c68fb0a1b8613d218354b2341123e357b8aab60",
+            "module_type": "control_transfer",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 10,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "398f920649eb5cc06e4e0ddc4f3bfc43fc8dbe8806251af1e6c076a09976ca5b",
+            "instance_name": "control_transfer",
+            "instance_path": "riscv_core.singlecycle_ctlpath.control_transfer",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "inst_funct3",
+                "width": 3
+              },
+              {
+                "direction": "input",
+                "name": "result_equal_zero",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "take_branch",
+                "width": 1
+              }
+            ],
+            "interface_signature": "ed9a52deecd42035f3ca60aff2dd1da4a889f8e5fcaa686f858a857cce3725ab",
+            "module_type": "control_transfer",
+            "parameters": {}
+          },
+          "reasons": [
+            "interface_changed",
+            "implementation_changed"
+          ],
+          "status": "rebuild"
+        },
+        "riscv_core.singlecycle_ctlpath.singlecycle_control": {
+          "base": {
+            "frontend_primitive_cell_count": 121,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "12aaee87daecd9dc05014f0d16ed947ef49dd9282ecf515ff339da7f5a085386",
+            "instance_name": "singlecycle_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+            "interface": [
+              {
+                "direction": "output",
+                "name": "alu_op_type",
+                "width": 3
+              },
+              {
+                "direction": "output",
+                "name": "alu_operand_a_select",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "alu_operand_b_select",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "branch_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "data_mem_read_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "data_mem_write_enable",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "inst_opcode",
+                "width": 7
+              },
+              {
+                "direction": "output",
+                "name": "jal_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "jalr_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "pc_write_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "reg_writeback_select",
+                "width": 3
+              },
+              {
+                "direction": "output",
+                "name": "regfile_write_enable",
+                "width": 1
+              }
+            ],
+            "interface_signature": "776ed1d5d56d57e6665a78a6d3c46c0e2a359504e6461fad46805a329a8ec629",
+            "module_type": "singlecycle_control",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 93,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "8cdbc28605fddc12a3cfe307e39a56f83a9b02d3e5befbbe3368e7e3fd272983",
+            "instance_name": "singlecycle_control",
+            "instance_path": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+            "interface": [
+              {
+                "direction": "output",
+                "name": "alu_op_type",
+                "width": 3
+              },
+              {
+                "direction": "output",
+                "name": "alu_operand_a_select",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "alu_operand_b_select",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "data_mem_read_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "data_mem_write_enable",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "inst_opcode",
+                "width": 7
+              },
+              {
+                "direction": "output",
+                "name": "next_pc_select",
+                "width": 2
+              },
+              {
+                "direction": "output",
+                "name": "pc_write_enable",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "reg_writeback_select",
+                "width": 3
+              },
+              {
+                "direction": "output",
+                "name": "regfile_write_enable",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "take_branch",
+                "width": 1
+              }
+            ],
+            "interface_signature": "903896152966c246461341bc675c6c232b78cd036dae27e121ba785484e971c3",
+            "module_type": "singlecycle_control",
+            "parameters": {}
+          },
+          "reasons": [
+            "interface_changed",
+            "implementation_changed"
+          ],
+          "status": "rebuild"
+        }
+      },
+      "dirty_regions": [
+        "riscv_core.singlecycle_ctlpath.control_transfer",
+        "riscv_core.singlecycle_ctlpath.singlecycle_control"
+      ],
+      "reusable_regions": [
+        "riscv_core.singlecycle_ctlpath.alu_control"
+      ],
+      "root_glue": {
+        "base": {
+          "frontend_primitive_cell_count": 0,
+          "implementation_signature": "825e4be256120524f56dc108889ae3b2828de00c156ef12aea69dbe6a234a56c",
+          "region_id": "riscv_core.singlecycle_ctlpath.__root_glue__"
+        },
+        "new": {
+          "frontend_primitive_cell_count": 0,
+          "implementation_signature": "7bd23c1f2f56ffc0b523f6713a166b71f1fdd2dc867950098f8d9ae96dd5addc",
+          "region_id": "riscv_core.singlecycle_ctlpath.__root_glue__"
+        },
+        "reasons": [
+          "root_glue_changed"
+        ],
+        "status": "rebuild"
+      }
+    }
+  },
+  "schema_version": 1,
+  "summary": {
+    "dirty_child_region_count": 2,
+    "new_frontend_primitive_cells_dirty": 103,
+    "new_frontend_primitive_cells_reusable": 26,
+    "new_frontend_primitive_cells_total": 129,
+    "partition_count": 1,
+    "potential_frontend_reuse_ratio": 0.20155038759689922,
+    "reusable_child_region_count": 1
+  }
+}

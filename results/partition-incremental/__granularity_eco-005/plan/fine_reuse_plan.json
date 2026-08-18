@@ -1,0 +1,793 @@
+{
+  "base_signatures": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine/fine_signatures.json",
+  "new_signatures": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/new/fine/fine_signatures.json",
+  "partitions": {
+    "singlecycle_datapath": {
+      "decisions": {
+        "riscv_core.singlecycle_datapath.adder_pc_plus_4": {
+          "base": {
+            "frontend_primitive_cell_count": 1,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "13c31c157b3d540efbb14adb7149a17c492e52cf3b05d1232bbb85e73bda05a5",
+            "instance_name": "adder_pc_plus_4",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_4",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              }
+            ],
+            "interface_signature": "67d778a31e0bc29416aa2d90be4a4650b5e4c8791943afbb11a25ad47f7cb11c",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 1,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "13c31c157b3d540efbb14adb7149a17c492e52cf3b05d1232bbb85e73bda05a5",
+            "instance_name": "adder_pc_plus_4",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_4",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              }
+            ],
+            "interface_signature": "67d778a31e0bc29416aa2d90be4a4650b5e4c8791943afbb11a25ad47f7cb11c",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.adder_pc_plus_immediate": {
+          "base": {
+            "frontend_primitive_cell_count": 1,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "13c31c157b3d540efbb14adb7149a17c492e52cf3b05d1232bbb85e73bda05a5",
+            "instance_name": "adder_pc_plus_immediate",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_immediate",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              }
+            ],
+            "interface_signature": "67d778a31e0bc29416aa2d90be4a4650b5e4c8791943afbb11a25ad47f7cb11c",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 1,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "13c31c157b3d540efbb14adb7149a17c492e52cf3b05d1232bbb85e73bda05a5",
+            "instance_name": "adder_pc_plus_immediate",
+            "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_immediate",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              }
+            ],
+            "interface_signature": "67d778a31e0bc29416aa2d90be4a4650b5e4c8791943afbb11a25ad47f7cb11c",
+            "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.alu": {
+          "base": {
+            "frontend_primitive_cell_count": 69,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "5c57afff85713a1919233725f8fa44509ad46f94aa0ec03330448c0a7d0c07ed",
+            "instance_name": "alu",
+            "instance_path": "riscv_core.singlecycle_datapath.alu",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "alu_function",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "signed": 1,
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "signed": 1,
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result_equal_zero",
+                "width": 1
+              }
+            ],
+            "interface_signature": "53f04c6f9155c898d6d4dfe81208d9c084e000507de02dbf4599a912ed423244",
+            "module_type": "alu",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 69,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "5c57afff85713a1919233725f8fa44509ad46f94aa0ec03330448c0a7d0c07ed",
+            "instance_name": "alu",
+            "instance_path": "riscv_core.singlecycle_datapath.alu",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "alu_function",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "operand_a",
+                "signed": 1,
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "operand_b",
+                "signed": 1,
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "result_equal_zero",
+                "width": 1
+              }
+            ],
+            "interface_signature": "53f04c6f9155c898d6d4dfe81208d9c084e000507de02dbf4599a912ed423244",
+            "module_type": "alu",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.mux_next_pc_select": {
+          "base": {
+            "frontend_primitive_cell_count": 5,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "ed7e1e2c1d108fcc774af7ef3cda16cb23da2300010e38a9b889819195a6a0a2",
+            "instance_name": "mux_next_pc_select",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_next_pc_select",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in2",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in3",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 2
+              }
+            ],
+            "interface_signature": "a0db51ea83c3c502cf8f6b7ff8d6daa733c5178f662de621360687e2494667bd",
+            "module_type": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 5,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "ed7e1e2c1d108fcc774af7ef3cda16cb23da2300010e38a9b889819195a6a0a2",
+            "instance_name": "mux_next_pc_select",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_next_pc_select",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in2",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in3",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 2
+              }
+            ],
+            "interface_signature": "a0db51ea83c3c502cf8f6b7ff8d6daa733c5178f662de621360687e2494667bd",
+            "module_type": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.mux_operand_a": {
+          "base": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "494d8011c4b34ce9724a4c92dc0ad8bfdb9bce52b1eb218c53afa4670f098f59",
+            "instance_name": "mux_operand_a",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_a",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df0cda133149337982c266892f528a0bb5a0d6e232ec71812b3425ea14ff7bf7",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "494d8011c4b34ce9724a4c92dc0ad8bfdb9bce52b1eb218c53afa4670f098f59",
+            "instance_name": "mux_operand_a",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_a",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df0cda133149337982c266892f528a0bb5a0d6e232ec71812b3425ea14ff7bf7",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.mux_operand_b": {
+          "base": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "494d8011c4b34ce9724a4c92dc0ad8bfdb9bce52b1eb218c53afa4670f098f59",
+            "instance_name": "mux_operand_b",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_b",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df0cda133149337982c266892f528a0bb5a0d6e232ec71812b3425ea14ff7bf7",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "494d8011c4b34ce9724a4c92dc0ad8bfdb9bce52b1eb218c53afa4670f098f59",
+            "instance_name": "mux_operand_b",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_operand_b",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df0cda133149337982c266892f528a0bb5a0d6e232ec71812b3425ea14ff7bf7",
+            "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.mux_reg_writeback": {
+          "base": {
+            "frontend_primitive_cell_count": 9,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "eb32521a74333707b1a753fe84a95ccaf000f48abc4c4a7ed0ab1ef4d09ab185",
+            "instance_name": "mux_reg_writeback",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_reg_writeback",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in2",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in3",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in4",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in5",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in6",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in7",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 3
+              }
+            ],
+            "interface_signature": "1edb053c1db99555a3fe452fec3e9aaaa14996a8705fa089f311cd92c53eb3bf",
+            "module_type": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 9,
+            "hierarchical_instance_count": 1,
+            "implementation_signature": "eb32521a74333707b1a753fe84a95ccaf000f48abc4c4a7ed0ab1ef4d09ab185",
+            "instance_name": "mux_reg_writeback",
+            "instance_path": "riscv_core.singlecycle_datapath.mux_reg_writeback",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "in0",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in1",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in2",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in3",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in4",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in5",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in6",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "in7",
+                "width": 32
+              },
+              {
+                "direction": "output",
+                "name": "out",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "sel",
+                "width": 3
+              }
+            ],
+            "interface_signature": "1edb053c1db99555a3fe452fec3e9aaaa14996a8705fa089f311cd92c53eb3bf",
+            "module_type": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.program_counter": {
+          "base": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "c15ce5d746936a699bbbdd35bc17b26c1c1c6187e63591339613310bc171f43e",
+            "instance_name": "program_counter",
+            "instance_path": "riscv_core.singlecycle_datapath.program_counter",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "clock",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "next",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "reset",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "value",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "write_enable",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df4586e3cff4e9cecc6229c9f5ee0fd1dd3932f0a1c267bc3dc7119e39d96c69",
+            "module_type": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 2,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "c15ce5d746936a699bbbdd35bc17b26c1c1c6187e63591339613310bc171f43e",
+            "instance_name": "program_counter",
+            "instance_path": "riscv_core.singlecycle_datapath.program_counter",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "clock",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "next",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "reset",
+                "width": 1
+              },
+              {
+                "direction": "output",
+                "name": "value",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "write_enable",
+                "width": 1
+              }
+            ],
+            "interface_signature": "df4586e3cff4e9cecc6229c9f5ee0fd1dd3932f0a1c267bc3dc7119e39d96c69",
+            "module_type": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+            "parameters": {}
+          },
+          "reasons": [],
+          "status": "reuse"
+        },
+        "riscv_core.singlecycle_datapath.regfile": {
+          "base": {
+            "frontend_primitive_cell_count": 291,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "d278d132ecbf29ff99acd5e8e455922cbd5132623c7b799fdb97d02f25c772c6",
+            "instance_name": "regfile",
+            "instance_path": "riscv_core.singlecycle_datapath.regfile",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "clock",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "rd_address",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "rd_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "reset",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "rs1_address",
+                "width": 5
+              },
+              {
+                "direction": "output",
+                "name": "rs1_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "rs2_address",
+                "width": 5
+              },
+              {
+                "direction": "output",
+                "name": "rs2_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "write_enable",
+                "width": 1
+              }
+            ],
+            "interface_signature": "65ea16860d4a31f62fd739f4b479a7861355ba66a2e5ca212703fba0780f637e",
+            "module_type": "regfile",
+            "parameters": {}
+          },
+          "new": {
+            "frontend_primitive_cell_count": 14,
+            "hierarchical_instance_count": 0,
+            "implementation_signature": "1739f878bbbf9bab54fb9a7912545638a2489e1017378164a824172b0b20a351",
+            "instance_name": "regfile",
+            "instance_path": "riscv_core.singlecycle_datapath.regfile",
+            "interface": [
+              {
+                "direction": "input",
+                "name": "clock",
+                "width": 1
+              },
+              {
+                "direction": "input",
+                "name": "rd_address",
+                "width": 5
+              },
+              {
+                "direction": "input",
+                "name": "rd_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "rs1_address",
+                "width": 5
+              },
+              {
+                "direction": "output",
+                "name": "rs1_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "rs2_address",
+                "width": 5
+              },
+              {
+                "direction": "output",
+                "name": "rs2_data",
+                "width": 32
+              },
+              {
+                "direction": "input",
+                "name": "write_enable",
+                "width": 1
+              }
+            ],
+            "interface_signature": "2eeaa5b49ffc6bec2953d9c18d709d8cbb3f9b68fd0f33cdd542ac05d2012ce9",
+            "module_type": "regfile",
+            "parameters": {}
+          },
+          "reasons": [
+            "interface_changed",
+            "implementation_changed"
+          ],
+          "status": "rebuild"
+        }
+      },
+      "dirty_regions": [
+        "riscv_core.singlecycle_datapath.regfile"
+      ],
+      "reusable_regions": [
+        "riscv_core.singlecycle_datapath.adder_pc_plus_4",
+        "riscv_core.singlecycle_datapath.adder_pc_plus_immediate",
+        "riscv_core.singlecycle_datapath.alu",
+        "riscv_core.singlecycle_datapath.mux_next_pc_select",
+        "riscv_core.singlecycle_datapath.mux_operand_a",
+        "riscv_core.singlecycle_datapath.mux_operand_b",
+        "riscv_core.singlecycle_datapath.mux_reg_writeback",
+        "riscv_core.singlecycle_datapath.program_counter"
+      ],
+      "root_glue": {
+        "base": {
+          "frontend_primitive_cell_count": 0,
+          "implementation_signature": "56b6f4585c4859b73eb2b53a6851fcb8a2101d232d245cea36b4e04220b9c6b8",
+          "region_id": "riscv_core.singlecycle_datapath.__root_glue__"
+        },
+        "new": {
+          "frontend_primitive_cell_count": 0,
+          "implementation_signature": "d6550a870f2587e2c0251c1eb39e9e4496edfb7759c8cf1b1f252c1e2344e10c",
+          "region_id": "riscv_core.singlecycle_datapath.__root_glue__"
+        },
+        "reasons": [
+          "root_glue_changed"
+        ],
+        "status": "rebuild"
+      }
+    }
+  },
+  "schema_version": 1,
+  "summary": {
+    "dirty_child_region_count": 1,
+    "new_frontend_primitive_cells_dirty": 14,
+    "new_frontend_primitive_cells_reusable": 91,
+    "new_frontend_primitive_cells_total": 105,
+    "partition_count": 1,
+    "potential_frontend_reuse_ratio": 0.8666666666666667,
+    "reusable_child_region_count": 8
+  }
+}

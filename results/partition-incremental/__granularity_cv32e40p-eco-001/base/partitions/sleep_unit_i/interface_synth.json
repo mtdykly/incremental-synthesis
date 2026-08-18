@@ -1,0 +1,82 @@
+[
+  {
+    "direction": "input",
+    "name": "pulp_clock_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "scan_cg_en_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "fetch_enable_i",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "core_sleep_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "clk_ungated_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "rst_n",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "clk_gated_o",
+    "width": 1
+  },
+  {
+    "direction": "output",
+    "name": "fetch_enable_o",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "if_busy_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "ctrl_busy_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "lsu_busy_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "apu_busy_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "p_elw_start_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "p_elw_finish_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "debug_p_elw_no_sleep_i",
+    "width": 1
+  },
+  {
+    "direction": "input",
+    "name": "wake_from_sleep_i",
+    "width": 1
+  }
+]

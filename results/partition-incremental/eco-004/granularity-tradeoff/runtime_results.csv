@@ -1,0 +1,6 @@
+iteration,order,full_seconds,coarse_seconds,fine_seconds,coarse_speedup,fine_speedup,coarse_rebuild_count,fine_dirty_region_count,fine_reusable_region_count,fine_potential_reuse_ratio,fine_rebuild_yosys_seconds
+1,full-coarse-fine,26.85,3.726811,4.042816,7.204551,6.641410,1,2,1,0.08264462809917356,0.35
+2,coarse-fine-full,25.76,3.586706,4.057309,7.182077,6.349036,1,2,1,0.08264462809917356,0.35
+3,fine-full-coarse,25.80,3.69752,4.101992,6.977650,6.289627,1,2,1,0.08264462809917356,0.36
+4,full-coarse-fine,26.00,3.716485,4.088259,6.995858,6.359675,1,2,1,0.08264462809917356,0.36
+5,coarse-fine-full,25.98,3.683993,4.116617,7.052131,6.311007,1,2,1,0.08264462809917356,0.36

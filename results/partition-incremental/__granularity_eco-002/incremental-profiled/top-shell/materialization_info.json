@@ -1,0 +1,8 @@
+{
+  "action": "rebuild",
+  "source_kind": "new_synthesis",
+  "reasons": [
+    "top_environment_changed",
+    "top_implementation_changed"
+  ]
+}

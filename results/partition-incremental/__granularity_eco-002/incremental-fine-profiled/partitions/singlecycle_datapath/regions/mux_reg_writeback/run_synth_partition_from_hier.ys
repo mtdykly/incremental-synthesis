@@ -1,0 +1,30 @@
+# Load already elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/frontend_hier.json"
+
+# Select derived module implementation.
+hierarchy -check -top $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/frontend.rtlil"
+
+stat -top $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+
+# Flatten logic below the fine-region root.
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/flattened.rtlil"
+
+# Complete generic synthesis.
+synth -top $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+opt_clean -purge
+check
+stat -top $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/synth.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/base/fine-cache/singlecycle_datapath/regions/mux_reg_writeback/partition_netlist.v"

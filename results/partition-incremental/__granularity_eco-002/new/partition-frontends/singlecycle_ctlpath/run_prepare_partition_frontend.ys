@@ -1,0 +1,16 @@
+read_verilog -sv -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle -I/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/synth "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/adder.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/alu_control.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/constants.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/control_transfer.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/data_memory_interface.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_data_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/example_text_memory_bus.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/immediate_generator.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/instruction_decoder.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer2.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer4.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/multiplexer8.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/regfile.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/riscv_core.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_control.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_ctlpath.sv" "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/singlecycle/singlecycle_datapath.sv"
+
+hierarchy -check -top singlecycle_ctlpath
+
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/new/partition-frontends/singlecycle_ctlpath/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/new/partition-frontends/singlecycle_ctlpath/frontend.rtlil"
+
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/new/partition-frontends/singlecycle_ctlpath/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-002/new/partition-frontends/singlecycle_ctlpath/flattened.rtlil"
+stat -top singlecycle_ctlpath

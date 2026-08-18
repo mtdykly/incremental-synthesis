@@ -1,0 +1,145 @@
+{
+  "partitions": {
+    "singlecycle_ctlpath": {
+      "regions": {
+        "riscv_core.singlecycle_ctlpath.alu_control": {
+          "frontend_primitive_cell_count": 26,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "732120ff4d5dbb8ab08f7d99f355fa862a86762967a8f4e513ab433f3917aaac",
+          "instance_name": "alu_control",
+          "instance_path": "riscv_core.singlecycle_ctlpath.alu_control",
+          "interface": [
+            {
+              "direction": "output",
+              "name": "alu_function",
+              "width": 5
+            },
+            {
+              "direction": "input",
+              "name": "alu_op_type",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "inst_funct3",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "inst_funct7",
+              "width": 7
+            }
+          ],
+          "interface_signature": "d67b75ce4ff1c86aff01223599f17fe542f48d02aaa37e8033c000af806e6740",
+          "module_type": "alu_control",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_ctlpath.control_transfer": {
+          "frontend_primitive_cell_count": 10,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "9a9ea0b7b90f665f90e6c5c8a66df52d7f46aa3ef15e21142f81bfd0225e8e0f",
+          "instance_name": "control_transfer",
+          "instance_path": "riscv_core.singlecycle_ctlpath.control_transfer",
+          "interface": [
+            {
+              "direction": "input",
+              "name": "inst_funct3",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "result_equal_zero",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "take_branch",
+              "width": 1
+            }
+          ],
+          "interface_signature": "ed9a52deecd42035f3ca60aff2dd1da4a889f8e5fcaa686f858a857cce3725ab",
+          "module_type": "control_transfer",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_ctlpath.singlecycle_control": {
+          "frontend_primitive_cell_count": 93,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "8cdbc28605fddc12a3cfe307e39a56f83a9b02d3e5befbbe3368e7e3fd272983",
+          "instance_name": "singlecycle_control",
+          "instance_path": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+          "interface": [
+            {
+              "direction": "output",
+              "name": "alu_op_type",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "alu_operand_a_select",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "alu_operand_b_select",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "data_mem_read_enable",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "data_mem_write_enable",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "inst_opcode",
+              "width": 7
+            },
+            {
+              "direction": "output",
+              "name": "next_pc_select",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "pc_write_enable",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "reg_writeback_select",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "regfile_write_enable",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "take_branch",
+              "width": 1
+            }
+          ],
+          "interface_signature": "903896152966c246461341bc675c6c232b78cd036dae27e121ba785484e971c3",
+          "module_type": "singlecycle_control",
+          "parameters": {}
+        }
+      },
+      "root_glue": {
+        "frontend_primitive_cell_count": 0,
+        "implementation_signature": "7bd23c1f2f56ffc0b523f6713a166b71f1fdd2dc867950098f8d9ae96dd5addc",
+        "region_id": "riscv_core.singlecycle_ctlpath.__root_glue__"
+      },
+      "root_instance_path": "riscv_core.singlecycle_ctlpath",
+      "root_module": "singlecycle_ctlpath"
+    }
+  },
+  "schema_version": 1,
+  "signature_method": "direct_child_subtree_structural_signature_without_cell_names_src_or_memid",
+  "source_fine_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/base/fine/fine_manifest.json",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/base/frontend_hier.json"
+}

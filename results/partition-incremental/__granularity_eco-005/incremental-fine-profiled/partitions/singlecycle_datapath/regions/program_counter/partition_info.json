@@ -1,0 +1,7 @@
+{
+  "partition_name": "program_counter",
+  "root_module": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
+  "flatten_internal": true
+}

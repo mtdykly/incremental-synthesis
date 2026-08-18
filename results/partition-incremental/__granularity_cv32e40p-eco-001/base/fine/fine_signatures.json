@@ -1,0 +1,1224 @@
+{
+  "partitions": {
+    "id_stage_i": {
+      "regions": {
+        "cv32e40p_core.id_stage_i.controller_i": {
+          "frontend_primitive_cell_count": 2995,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "c97c46ab64e8b9f181751026e02f1103ef72f6f3a5b212c51ee1796c8d1fd6e3",
+          "instance_name": "controller_i",
+          "instance_path": "cv32e40p_core.id_stage_i.controller_i",
+          "interface": [
+            {
+              "direction": "input",
+              "name": "apu_en_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "apu_read_dep_for_jalr_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "apu_read_dep_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "apu_stall_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "apu_write_dep_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "branch_taken_ex_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "clk",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "clk_ungated_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_cause_o",
+              "width": 6
+            },
+            {
+              "direction": "output",
+              "name": "csr_irq_sec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_restore_dret_id_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_restore_mret_id_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_restore_uret_id_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_save_cause_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_save_ex_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_save_id_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_save_if_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "csr_status_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "ctrl_busy_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "ctrl_transfer_insn_in_dec_i",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "ctrl_transfer_insn_in_id_i",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "current_priv_lvl_i",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "data_err_ack_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "data_err_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "data_load_event_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "data_misaligned_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "data_req_ex_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "data_we_ex_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "deassert_we_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_cause_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "debug_csr_save_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_ebreakm_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_ebreaku_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_halted_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_havereset_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_mode_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_p_elw_no_sleep_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_req_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_running_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_single_step_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "debug_wfi_no_sleep_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "dret_dec_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "dret_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "ebrk_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "ecall_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "ex_valid_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "exc_cause_o",
+              "width": 5
+            },
+            {
+              "direction": "output",
+              "name": "exc_pc_mux_o",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "fencei_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "fetch_enable_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "halt_id_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "halt_if_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_counter_i",
+              "width": 64
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_dec_cnt_o",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_end_addr_i",
+              "width": 64
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_jump_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_mask_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_start_addr_i",
+              "width": 64
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_targ_addr_o",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "id_ready_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "id_valid_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "illegal_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "instr_req_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "instr_valid_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "irq_ack_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "irq_id_ctrl_i",
+              "width": 5
+            },
+            {
+              "direction": "output",
+              "name": "irq_id_o",
+              "width": 5
+            },
+            {
+              "direction": "input",
+              "name": "irq_req_ctrl_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "irq_sec_ctrl_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "irq_wu_ctrl_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "is_decoding_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "is_fetch_failed_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "jr_stall_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "load_stall_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "misaligned_stall_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "mret_dec_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "mret_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "mult_multicycle_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "operand_a_fw_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "operand_b_fw_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "operand_c_fw_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "pc_id_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "pc_mux_o",
+              "width": 4
+            },
+            {
+              "direction": "output",
+              "name": "pc_set_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "perf_pipeline_stall_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_alu_is_reg_a_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_alu_is_reg_b_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_alu_is_reg_c_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_ex_is_reg_a_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_ex_is_reg_b_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_ex_is_reg_c_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_wb_is_reg_a_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_wb_is_reg_b_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "reg_d_wb_is_reg_c_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "regfile_alu_waddr_id_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "regfile_alu_we_fw_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "regfile_waddr_ex_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "regfile_we_ex_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "regfile_we_id_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "regfile_we_wb_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "rst_n",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "trap_addr_mux_o",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "trigger_match_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "uret_dec_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "uret_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "wake_from_sleep_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "wb_ready_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "wfi_i",
+              "width": 1
+            }
+          ],
+          "interface_signature": "ef283442d276dc9b256aac4e7fd43ba42d4038397b3b17228c030a69e29c03b4",
+          "module_type": "cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i",
+          "parameters": {}
+        },
+        "cv32e40p_core.id_stage_i.decoder_i": {
+          "frontend_primitive_cell_count": 5613,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "4c951ea462ef9f16657a362b6e2c2277a086542c59ac9889ef24504e9f756262",
+          "instance_name": "decoder_i",
+          "instance_path": "cv32e40p_core.id_stage_i.decoder_i",
+          "interface": [
+            {
+              "direction": "output",
+              "name": "alu_bmask_a_mux_sel_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "alu_bmask_b_mux_sel_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "alu_en_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "alu_op_a_mux_sel_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "alu_op_b_mux_sel_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "alu_op_c_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "alu_operator_o",
+              "width": 7
+            },
+            {
+              "direction": "output",
+              "name": "alu_vec_mode_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "alu_vec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "apu_en_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "apu_lat_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "apu_op_o",
+              "width": 6
+            },
+            {
+              "direction": "output",
+              "name": "atop_o",
+              "width": 6
+            },
+            {
+              "direction": "output",
+              "name": "bmask_a_mux_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "bmask_b_mux_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "csr_access_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "csr_op_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "csr_status_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "ctrl_transfer_insn_in_dec_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "ctrl_transfer_insn_in_id_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "ctrl_transfer_target_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "current_priv_lvl_i",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "data_load_event_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "data_reg_offset_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "data_req_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "data_sign_extension_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "data_type_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "data_we_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "deassert_we_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_mode_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "debug_wfi_no_sleep_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "dret_dec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "dret_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "ebrk_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "ecall_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "fencei_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "fp_rnd_mode_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "fpu_dst_fmt_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "fpu_int_fmt_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "fpu_src_fmt_o",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "frm_i",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "fs_off_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_cnt_mux_sel_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_start_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_target_mux_sel_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_we_o",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "illegal_c_insn_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "illegal_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "imm_a_mux_sel_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "imm_b_mux_sel_o",
+              "width": 4
+            },
+            {
+              "direction": "input",
+              "name": "instr_rdata_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "is_clpx_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "is_subrot_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "mcounteren_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "mret_dec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mret_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mult_dot_en_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mult_dot_signed_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "mult_imm_mux_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mult_int_en_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mult_operator_o",
+              "width": 3
+            },
+            {
+              "direction": "output",
+              "name": "mult_sel_subword_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "mult_signed_mode_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "prepost_useincr_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "reg_fp_a_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "reg_fp_b_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "reg_fp_c_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "reg_fp_d_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "rega_used_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regb_used_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regc_mux_o",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "regc_used_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regfile_alu_waddr_sel_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regfile_alu_we_dec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regfile_alu_we_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "regfile_mem_we_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "scalar_replication_c_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "scalar_replication_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "uret_dec_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "uret_insn_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "wfi_o",
+              "width": 1
+            }
+          ],
+          "interface_signature": "e62d3e360a227380d51f6ff511645811ff0f5ddd615c1d10f14af6b4f18cd5e2",
+          "module_type": "cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i",
+          "parameters": {}
+        },
+        "cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i": {
+          "frontend_primitive_cell_count": 41,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "e8b1f80ad536a71fc3d0d1550da8dbd46a0957b85fa47cec14610dbd66ec2646",
+          "instance_name": "gen_hwloop_regs.hwloop_regs_i",
+          "instance_path": "cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+          "interface": [
+            {
+              "direction": "input",
+              "name": "clk",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_cnt_data_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_counter_o",
+              "width": 64
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_dec_cnt_i",
+              "width": 2
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_end_addr_o",
+              "width": 64
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_end_data_i",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_regid_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "hwlp_start_addr_o",
+              "width": 64
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_start_data_i",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "hwlp_we_i",
+              "width": 3
+            },
+            {
+              "direction": "input",
+              "name": "rst_n",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "valid_i",
+              "width": 1
+            }
+          ],
+          "interface_signature": "90979a817a554c91ce663fcf6c48fa7a29a4639cd0466501e92fee738792cdd3",
+          "module_type": "cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i",
+          "parameters": {}
+        },
+        "cv32e40p_core.id_stage_i.int_controller_i": {
+          "frontend_primitive_cell_count": 535,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "e17cbc8b8b864afb128558a72a92e7b5b697c5f11429814f0e07a5330faee601",
+          "instance_name": "int_controller_i",
+          "instance_path": "cv32e40p_core.id_stage_i.int_controller_i",
+          "interface": [
+            {
+              "direction": "input",
+              "name": "clk",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "current_priv_lvl_i",
+              "width": 2
+            },
+            {
+              "direction": "input",
+              "name": "irq_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "irq_id_ctrl_o",
+              "width": 5
+            },
+            {
+              "direction": "output",
+              "name": "irq_req_ctrl_o",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "irq_sec_ctrl_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "irq_sec_i",
+              "width": 1
+            },
+            {
+              "direction": "output",
+              "name": "irq_wu_ctrl_o",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "m_ie_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "mie_bypass_i",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "mip_o",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "rst_n",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "u_ie_i",
+              "width": 1
+            }
+          ],
+          "interface_signature": "b35aa6a1d9e32bc7f96c7a0e2c8ca7fd4c2da4df64f474d0193076104392181d",
+          "module_type": "cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i",
+          "parameters": {}
+        },
+        "cv32e40p_core.id_stage_i.register_file_i": {
+          "frontend_primitive_cell_count": 357,
+          "hierarchical_instance_count": 0,
+          "implementation_signature": "d33210605b5804e403a8fda01d2e8df18e44d830288fe92eed0f2c83b38b06bd",
+          "instance_name": "register_file_i",
+          "instance_path": "cv32e40p_core.id_stage_i.register_file_i",
+          "interface": [
+            {
+              "direction": "input",
+              "name": "clk",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "raddr_a_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "raddr_b_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "raddr_c_i",
+              "width": 6
+            },
+            {
+              "direction": "output",
+              "name": "rdata_a_o",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "rdata_b_o",
+              "width": 32
+            },
+            {
+              "direction": "output",
+              "name": "rdata_c_o",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "rst_n",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "scan_cg_en_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "waddr_a_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "waddr_b_i",
+              "width": 6
+            },
+            {
+              "direction": "input",
+              "name": "wdata_a_i",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "wdata_b_i",
+              "width": 32
+            },
+            {
+              "direction": "input",
+              "name": "we_a_i",
+              "width": 1
+            },
+            {
+              "direction": "input",
+              "name": "we_b_i",
+              "width": 1
+            }
+          ],
+          "interface_signature": "680096c35e69e474be7c73085cd959dbd1122bc9cd3be41b53104d0ea9f995dc",
+          "module_type": "cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i",
+          "parameters": {}
+        }
+      },
+      "root_glue": {
+        "frontend_primitive_cell_count": 793,
+        "implementation_signature": "fb44f761ef537614f27704b24f1bb255ad38757f08b79f299f282043ddf88504",
+        "region_id": "cv32e40p_core.id_stage_i.__root_glue__"
+      },
+      "root_instance_path": "cv32e40p_core.id_stage_i",
+      "root_module": "cv32e40p_id_stage$cv32e40p_core.id_stage_i"
+    }
+  },
+  "schema_version": 1,
+  "signature_method": "direct_child_subtree_structural_signature_without_cell_names_src_or_memid",
+  "source_fine_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine/fine_manifest.json",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/frontend_hier.json"
+}

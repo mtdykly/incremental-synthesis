@@ -1,0 +1,171 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-003/granularity-tradeoff/area/full/run_measure_area.ys' --
+
+1. Executing JSON frontend.
+Importing module riscv_core from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Removed 0 unused modules.
+
+3. Printing statistics.
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    22882        - wires
+    24063        - wire bits
+       43        - public wires
+     1224        - public wire bits
+       10        - ports
+      168        - port bits
+    22939 3.08E+04 cells
+      829  882.056   AND2_X1
+      364   484.12   AND3_X1
+       22   35.112   AND4_X1
+      138   183.54   AOI211_X1
+     1540  1638.56   AOI21_X1
+       67  106.932   AOI221_X1
+      389  827.792   AOI222_X1
+      544   723.52   AOI22_X1
+     1055   5612.6   DFFR_X1
+        1     5.32   DFFS_X1
+     2148 1.14E+03   INV_X1
+     1372 2.55E+03   MUX2_X1
+     3278 2.62E+03   NAND2_X1
+      439  467.096   NAND3_X1
+      156   207.48   NAND4_X1
+     2416 1.93E+03   NOR2_X1
+      268  285.152   NOR3_X1
+      106   140.98   NOR4_X1
+      178   236.74   OAI211_X1
+     1974  2.1E+03   OAI21_X1
+       89  142.044   OAI221_X1
+       14   29.792   OAI222_X1
+       89   118.37   OAI22_X1
+      122  227.164   OAI33_X1
+      730   776.72   OR2_X1
+      238   316.54   OR3_X1
+       20    31.92   OR4_X1
+     3055  4875.78   XNOR2_X1
+     1298 2.07E+03   XOR2_X1
+
+   Chip area for module '\riscv_core': 30768.486000
+     of which used for sequential elements: 5617.920000 (18.26%)
+
+{
+   "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+   "invocation": "stat -top riscv_core -liberty \"/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib\" -json ",
+   "modules": {
+      "\\riscv_core": {
+         "num_wires":         22882,
+         "num_wire_bits":     24063,
+         "num_pub_wires":     43,
+         "num_pub_wire_bits": 1224,
+         "num_ports":         10,
+         "num_port_bits":     168,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22939,
+         "num_submodules":       0,
+         "area":              30768.486000,
+         "sequential_area":    5617.920000,
+         "num_cells_by_type": {
+            "AND2_X1": 829,
+            "AND3_X1": 364,
+            "AND4_X1": 22,
+            "AOI211_X1": 138,
+            "AOI21_X1": 1540,
+            "AOI221_X1": 67,
+            "AOI222_X1": 389,
+            "AOI22_X1": 544,
+            "DFFR_X1": 1055,
+            "DFFS_X1": 1,
+            "INV_X1": 2148,
+            "MUX2_X1": 1372,
+            "NAND2_X1": 3278,
+            "NAND3_X1": 439,
+            "NAND4_X1": 156,
+            "NOR2_X1": 2416,
+            "NOR3_X1": 268,
+            "NOR4_X1": 106,
+            "OAI211_X1": 178,
+            "OAI21_X1": 1974,
+            "OAI221_X1": 89,
+            "OAI222_X1": 14,
+            "OAI22_X1": 89,
+            "OAI33_X1": 122,
+            "OR2_X1": 730,
+            "OR3_X1": 238,
+            "OR4_X1": 20,
+            "XNOR2_X1": 3055,
+            "XOR2_X1": 1298
+         }
+      }
+   },
+      "design": {
+         "num_wires":         22882,
+         "num_wire_bits":     24063,
+         "num_pub_wires":     43,
+         "num_pub_wire_bits": 1224,
+         "num_ports":         10,
+         "num_port_bits":     168,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22939,
+         "num_submodules":       0,
+         "area":              30768.486000,
+         "sequential_area":    5617.920000,
+         "num_cells_by_type": {
+            "AND2_X1": 829,
+            "AND3_X1": 364,
+            "AND4_X1": 22,
+            "AOI211_X1": 138,
+            "AOI21_X1": 1540,
+            "AOI221_X1": 67,
+            "AOI222_X1": 389,
+            "AOI22_X1": 544,
+            "DFFR_X1": 1055,
+            "DFFS_X1": 1,
+            "INV_X1": 2148,
+            "MUX2_X1": 1372,
+            "NAND2_X1": 3278,
+            "NAND3_X1": 439,
+            "NAND4_X1": 156,
+            "NOR2_X1": 2416,
+            "NOR3_X1": 268,
+            "NOR4_X1": 106,
+            "OAI211_X1": 178,
+            "OAI21_X1": 1974,
+            "OAI221_X1": 89,
+            "OAI222_X1": 14,
+            "OAI22_X1": 89,
+            "OAI33_X1": 122,
+            "OR2_X1": 730,
+            "OR3_X1": 238,
+            "OR4_X1": 20,
+            "XNOR2_X1": 3055,
+            "XOR2_X1": 1298
+         }
+      }
+}
+
+End of script. Logfile hash: 8fe478ea42, time: 0.49s, user: 0.51s, system: 0.08s, MEM: 152.86 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 75% 2x read_json (0 sec), 22% 2x stat (0 sec), ...

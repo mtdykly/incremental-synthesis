@@ -1,0 +1,7 @@
+{
+  "partition_name": "cs_registers_i",
+  "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+  "source_dir": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new",
+  "mode": "frontend-only",
+  "flatten_internal": true
+}

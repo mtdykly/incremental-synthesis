@@ -1,0 +1,669 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "control_transfer": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:9.1-37.10"
+      },
+      "ports": {
+        "branch_enable": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "jal_enable": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "jalr_enable": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "result_equal_zero": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "inst_funct3": {
+          "direction": "input",
+          "bits": [ 6, 7, 8 ]
+        },
+        "next_pc_select": {
+          "direction": "output",
+          "bits": [ 9, 10 ]
+        }
+      },
+      "cells": {
+        "$procmux$1744": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:33.18-33.29|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:33.14-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "0", "1" ],
+            "S": [ 4 ],
+            "Y": [ 11, 12 ]
+          }
+        },
+        "$procmux$1747": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:31.18-31.28|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:31.14-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11, 12 ],
+            "B": [ "x", "x" ],
+            "S": [ 3 ],
+            "Y": [ 13, 14 ]
+          }
+        },
+        "$procmux$1750": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.13-21.26|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.9-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13, 14 ],
+            "B": [ "x", "x" ],
+            "S": [ 2 ],
+            "Y": [ 15, 16 ]
+          }
+        },
+        "$procmux$1753": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:31.18-31.28|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:31.14-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16 ],
+            "B": [ "1", "0" ],
+            "S": [ 3 ],
+            "Y": [ 17, 18 ]
+          }
+        },
+        "$procmux$1756": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.13-21.26|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.9-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18 ],
+            "B": [ "x", "x" ],
+            "S": [ 2 ],
+            "Y": [ 19, 20 ]
+          }
+        },
+        "$procmux$1760": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000110",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27.79-27.79|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 ],
+            "S": [ 33, 34, 35, 36, 37, 38 ],
+            "Y": [ 39, 40 ]
+          }
+        },
+        "$procmux$1761_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27.79-27.79|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 33 ]
+          }
+        },
+        "$procmux$1762_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26.77-26.77|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 34 ]
+          }
+        },
+        "$procmux$1763_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:25.80-25.80|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 35 ]
+          }
+        },
+        "$procmux$1764_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24.80-24.80|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 36 ]
+          }
+        },
+        "$procmux$1765_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23.77-23.77|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 37 ]
+          }
+        },
+        "$procmux$1766_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.31-22.31|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:22.13-30.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$procmux$1767": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.13-21.26|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.9-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 39, 40 ],
+            "S": [ 2 ],
+            "Y": [ 41, 42 ]
+          }
+        },
+        "$procmux$1770": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.13-21.26|/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:21.9-34.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19, 20 ],
+            "B": [ 41, 42 ],
+            "S": [ 2 ],
+            "Y": [ 9, 10 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23$42": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23.43-23.76"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "0" ],
+            "S": [ 5 ],
+            "Y": [ 31, 32 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24$43": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24.43-24.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0" ],
+            "B": [ "0", "0" ],
+            "S": [ 5 ],
+            "Y": [ 29, 30 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:25$44": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:25.43-25.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0" ],
+            "B": [ "0", "0" ],
+            "S": [ 5 ],
+            "Y": [ 27, 28 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26$45": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26.43-26.76"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "0" ],
+            "S": [ 5 ],
+            "Y": [ 25, 26 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27$46": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27.42-27.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0" ],
+            "B": [ "0", "0" ],
+            "S": [ 5 ],
+            "Y": [ 23, 24 ]
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:28$47": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:28.42-28.75"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "0" ],
+            "S": [ 5 ],
+            "Y": [ 21, 22 ]
+          }
+        }
+      },
+      "netnames": {
+        "$2\\next_pc_select[1:0]": {
+          "hide_name": 1,
+          "bits": [ 41, 42 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19.16-19.16"
+          }
+        },
+        "$3\\next_pc_select[1:0]": {
+          "hide_name": 1,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19.16-19.16"
+          }
+        },
+        "$4\\next_pc_select[1:0]": {
+          "hide_name": 1,
+          "bits": [ 15, 16 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:19.16-19.16"
+          }
+        },
+        "$procmux$1744_Y": {
+          "hide_name": 1,
+          "bits": [ 11, 12 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1747_Y": {
+          "hide_name": 1,
+          "bits": [ 13, 14 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1753_Y": {
+          "hide_name": 1,
+          "bits": [ 17, 18 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1760_Y": {
+          "hide_name": 1,
+          "bits": [ 39, 40 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1761_CMP": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1762_CMP": {
+          "hide_name": 1,
+          "bits": [ 34 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1763_CMP": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1764_CMP": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1765_CMP": {
+          "hide_name": 1,
+          "bits": [ 37 ],
+          "attributes": {
+          }
+        },
+        "$procmux$1766_CMP": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23$42_Y": {
+          "hide_name": 1,
+          "bits": [ 31, 32 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:23.43-23.76"
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24$43_Y": {
+          "hide_name": 1,
+          "bits": [ 29, 30 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:24.43-24.79"
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:25$44_Y": {
+          "hide_name": 1,
+          "bits": [ 27, 28 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:25.43-25.79"
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26$45_Y": {
+          "hide_name": 1,
+          "bits": [ 25, 26 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:26.43-26.76"
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27$46_Y": {
+          "hide_name": 1,
+          "bits": [ 23, 24 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:27.42-27.78"
+          }
+        },
+        "$ternary$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:28$47_Y": {
+          "hide_name": 1,
+          "bits": [ 21, 22 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:28.42-28.75"
+          }
+        },
+        "branch_enable": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:10.12-10.25"
+          }
+        },
+        "inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:14.18-14.29"
+          }
+        },
+        "jal_enable": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:11.12-11.22"
+          }
+        },
+        "jalr_enable": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:12.12-12.23"
+          }
+        },
+        "next_pc_select": {
+          "hide_name": 0,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:16.24-16.38"
+          }
+        },
+        "result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:13.12-13.29"
+          }
+        }
+      }
+    }
+  }
+}

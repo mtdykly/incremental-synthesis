@@ -1,0 +1,30 @@
+# Load already elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/new/frontend_hier.json"
+
+# Select derived module implementation.
+hierarchy -check -top regfile
+
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/frontend.rtlil"
+
+stat -top regfile
+
+# Flatten logic below the fine-region root.
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/flattened.rtlil"
+
+# Complete generic synthesis.
+synth -top regfile
+opt_clean -purge
+check
+stat -top regfile
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/synth.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/partition_netlist.v"

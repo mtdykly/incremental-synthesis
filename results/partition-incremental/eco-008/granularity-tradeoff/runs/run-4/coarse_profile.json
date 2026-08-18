@@ -1,0 +1,105 @@
+{
+  "case_name": "__granularity_eco-008",
+  "timing_policy": {
+    "base_cache_build_included": false,
+    "equivalence_check_included": false,
+    "linked_design_check_in_core_time": false,
+    "main_incremental_time": "pipeline_core_seconds"
+  },
+  "reuse_plan": {
+    "reusable_partitions": [
+      "data_memory_interface",
+      "singlecycle_ctlpath",
+      "singlecycle_datapath"
+    ],
+    "dirty_partitions": [],
+    "top_shell": {
+      "reasons": [
+        "top_environment_changed",
+        "top_implementation_changed"
+      ],
+      "status": "rebuild"
+    }
+  },
+  "detection": {
+    "phase_wall_seconds": 0.849165,
+    "export_hierarchy_seconds": 0.13,
+    "extract_partitions_seconds": 0.05,
+    "prepare_partition_frontends_seconds": 0.51,
+    "compute_signatures_seconds": 0.08,
+    "compare_signatures_seconds": 0.04,
+    "partition_frontend_yosys": [
+      {
+        "partition": "data_memory_interface",
+        "root_module": "data_memory_interface",
+        "yosys_seconds": 0.05
+      },
+      {
+        "partition": "singlecycle_ctlpath",
+        "root_module": "singlecycle_ctlpath",
+        "yosys_seconds": 0.06
+      },
+      {
+        "partition": "singlecycle_datapath",
+        "root_module": "singlecycle_datapath",
+        "yosys_seconds": 0.11
+      }
+    ]
+  },
+  "build": {
+    "phase_wall_seconds": 1.651205,
+    "materialize_partitions_seconds": 0.74,
+    "top_shell_seconds": 0.25,
+    "link_partitions_seconds": 0.58,
+    "check_linked_seconds": 3.03,
+    "materialization": {
+      "partitions": [
+        {
+          "partition": "data_memory_interface",
+          "root_module": "data_memory_interface",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/base/partitions/data_memory_interface",
+          "reasons": [],
+          "action_wall_seconds": 0.008019,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "1174d550698cfccfa3c5d8d922d159a9ab1ac69f990150ee092aa4293e3339c4"
+        },
+        {
+          "partition": "singlecycle_ctlpath",
+          "root_module": "singlecycle_ctlpath",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/base/partitions/singlecycle_ctlpath",
+          "reasons": [],
+          "action_wall_seconds": 0.008132,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "870776f1b9903d0c27a03c865c9bdeb0dde3e6d9c03cb9c74111b6b6c783df38"
+        },
+        {
+          "partition": "singlecycle_datapath",
+          "root_module": "singlecycle_datapath",
+          "action": "reuse",
+          "source_kind": "base_cache",
+          "source_path": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/base/partitions/singlecycle_datapath",
+          "reasons": [],
+          "action_wall_seconds": 0.034082,
+          "yosys_seconds": 0,
+          "partition_netlist_sha256": "22ff37ae6273a6d11474d0bce97943177634027ec7fb92ed4d1d381d6b00089a"
+        }
+      ],
+      "reuse_count": 3,
+      "rebuild_count": 0,
+      "reuse_copy_seconds": 0.050233,
+      "rebuild_wall_seconds": 0,
+      "rebuild_yosys_seconds": 0,
+      "partition_action_seconds": 0.050233
+    }
+  },
+  "totals": {
+    "pipeline_core_seconds": 2.551857,
+    "pipeline_with_check_seconds": 5.615592,
+    "profiled_stage_sum_seconds": 2.38,
+    "unattributed_core_overhead_seconds": 0.17185700000000015
+  }
+}

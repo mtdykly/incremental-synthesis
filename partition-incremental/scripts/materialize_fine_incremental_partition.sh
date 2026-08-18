@@ -25,7 +25,7 @@ OUTPUT_DIR="$(realpath -m "$7")"
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 
 BUILD_MANIFEST="$REPO_ROOT/partition-incremental/scripts/build_fine_partition_manifest.py"
-SYNTH_PARTITION="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
+SYNTH_PARTITION_FROM_HIER="$REPO_ROOT/partition-incremental/scripts/synth_partition_from_hier_json.sh"
 SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
 LINK_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/link_partitions.sh"
 
@@ -36,7 +36,7 @@ for required in \
     "$FINE_REUSE_PLAN" \
     "$BASE_CACHE" \
     "$BUILD_MANIFEST" \
-    "$SYNTH_PARTITION" \
+    "$SYNTH_PARTITION_FROM_HIER" \
     "$SYNTH_TOP_SHELL" \
     "$LINK_PARTITIONS"
 do
@@ -124,8 +124,8 @@ do
         build_seconds="0.000000"
 
     else
-        "$SYNTH_PARTITION" \
-            "$NEW_SOURCE_DIR" \
+        "$SYNTH_PARTITION_FROM_HIER" \
+            "$NEW_HIER_JSON" \
             "$region_output" \
             "$region_name" \
             "$root_module"
@@ -187,7 +187,7 @@ echo "============================================================"
 if [[ "$ROOT_ACTION" == "reuse" ]]; then
 
     if [[ ! -s \
-      "$BASE_CACHE/root-shell/top_shell_netlist.v" ]]
+      "$BASE_CACHE/root-shell/top_shell.rtlil" ]]
     then
         echo "ERROR: Base root-shell cache missing"
         exit 1
@@ -211,7 +211,7 @@ echo "Link fine regions"
 echo "============================================================"
 
 "$LINK_PARTITIONS" \
-    "$OUTPUT_DIR/root-shell/top_shell_netlist.v" \
+    "$OUTPUT_DIR/root-shell/top_shell.rtlil" \
     "$FINE_MANIFEST" \
     "$OUTPUT_DIR/regions" \
     "$OUTPUT_DIR/linked"

@@ -1,0 +1,7 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-008/granularity-tradeoff/area/full/mapped.json"
+
+hierarchy -top riscv_core
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-008/granularity-tradeoff/area/full/area.rpt"     stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-008/granularity-tradeoff/area/full/stat.json"     stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib" -json

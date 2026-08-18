@@ -1,0 +1,100 @@
+{
+  "dirty_partition_count": 1,
+  "partitions": {
+    "singlecycle_datapath": {
+      "region_count": 11,
+      "regions": {
+        "riscv_core.singlecycle_datapath.adder_pc_plus_4": {
+          "instance_name": "adder_pc_plus_4",
+          "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_4",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.adder_pc_plus_immediate": {
+          "instance_name": "adder_pc_plus_immediate",
+          "instance_path": "riscv_core.singlecycle_datapath.adder_pc_plus_immediate",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.alu": {
+          "instance_name": "alu",
+          "instance_path": "riscv_core.singlecycle_datapath.alu",
+          "kind": "direct_child_instance",
+          "module_type": "alu",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.immediate_generator": {
+          "instance_name": "immediate_generator",
+          "instance_path": "riscv_core.singlecycle_datapath.immediate_generator",
+          "kind": "direct_child_instance",
+          "module_type": "immediate_generator",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.instruction_decoder": {
+          "instance_name": "instruction_decoder",
+          "instance_path": "riscv_core.singlecycle_datapath.instruction_decoder",
+          "kind": "direct_child_instance",
+          "module_type": "instruction_decoder",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.mux_next_pc_select": {
+          "instance_name": "mux_next_pc_select",
+          "instance_path": "riscv_core.singlecycle_datapath.mux_next_pc_select",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.mux_operand_a": {
+          "instance_name": "mux_operand_a",
+          "instance_path": "riscv_core.singlecycle_datapath.mux_operand_a",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.mux_operand_b": {
+          "instance_name": "mux_operand_b",
+          "instance_path": "riscv_core.singlecycle_datapath.mux_operand_b",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.mux_reg_writeback": {
+          "instance_name": "mux_reg_writeback",
+          "instance_path": "riscv_core.singlecycle_datapath.mux_reg_writeback",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.program_counter": {
+          "instance_name": "program_counter",
+          "instance_path": "riscv_core.singlecycle_datapath.program_counter",
+          "kind": "direct_child_instance",
+          "module_type": "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register",
+          "parameters": {}
+        },
+        "riscv_core.singlecycle_datapath.regfile": {
+          "instance_name": "regfile",
+          "instance_path": "riscv_core.singlecycle_datapath.regfile",
+          "kind": "direct_child_instance",
+          "module_type": "regfile",
+          "parameters": {}
+        }
+      },
+      "root_glue": {
+        "kind": "partition_root_local_logic",
+        "module_type": "singlecycle_datapath",
+        "region_id": "riscv_core.singlecycle_datapath.__root_glue__"
+      },
+      "root_instance_path": "riscv_core.singlecycle_datapath",
+      "root_module": "singlecycle_datapath",
+      "root_parameters": {}
+    }
+  },
+  "schema_version": 1,
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/new/frontend_hier.json",
+  "source_partition_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/new/partition_manifest.json",
+  "source_reuse_plan": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/plan/reuse_plan.json",
+  "strategy": "dirty_partition_direct_child_instances"
+}

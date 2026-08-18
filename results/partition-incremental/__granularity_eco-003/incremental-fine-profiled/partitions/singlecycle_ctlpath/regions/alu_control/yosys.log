@@ -1,0 +1,852 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/base/fine-cache/singlecycle_ctlpath/regions/alu_control/run_synth_partition_from_hier.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \alu_control
+
+2.2. Analyzing design hierarchy..
+Top module:  \alu_control
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\control_transfer'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\regfile'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module alu_control...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/base/fine-cache/singlecycle_ctlpath/regions/alu_control/frontend.rtlil
+
+8. Printing statistics.
+
+=== alu_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       27 wires
+       73 wire bits
+       10 public wires
+       48 public wire bits
+        4 ports
+       18 port bits
+        2 memories
+       80 memory bits
+       26 cells
+       11   $eq
+        1   $logic_and
+        3   $logic_not
+        2   $meminit
+        2   $memrd_v2
+        4   $mux
+        3   $pmux
+
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+9. Executing FLATTEN pass (flatten design).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module alu_control...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+
+13. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/base/fine-cache/singlecycle_ctlpath/regions/alu_control/flattened.rtlil
+
+14. Executing SYNTH pass.
+
+14.1. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1.1. Analyzing design hierarchy..
+Top module:  \alu_control
+
+14.1.2. Analyzing design hierarchy..
+Top module:  \alu_control
+Removed 0 unused modules.
+
+14.2. Executing PROC pass (convert processes to netlists).
+
+14.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+14.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+14.2.4. Executing PROC_INIT pass (extract init attributes).
+
+14.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+14.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+14.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+14.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+14.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+14.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.5. Executing CHECK pass (checking for obvious problems).
+Checking module alu_control...
+Found and reported 0 problems.
+
+14.6. Executing OPT pass (performing simple optimizations).
+
+14.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Computing hashes of 24 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+14.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1793.
+Removed 1 multiplexer ports.
+<suppressed ~11 debug messages>
+
+14.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+    New ctrl vector for $pmux cell $procmux$1774: { $auto$opt_reduce.cc:137:opt_pmux$166 $auto$opt_reduce.cc:137:opt_pmux$164 $auto$opt_reduce.cc:137:opt_pmux$162 }
+  Optimizing cells in module \alu_control.
+Performed a total of 1 changes.
+
+14.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+14.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+14.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+Performed a total of 0 changes.
+
+14.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14.7. Executing FSM pass (extract and optimize FSM).
+
+14.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+14.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+14.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+14.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+14.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+14.8. Executing OPT pass (performing simple optimizations).
+
+14.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+14.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+Performed a total of 0 changes.
+
+14.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port alu_control.$auto$mem.cc:351:emit$160 ($auto$proc_rom.cc:155:do_switch$158).
+Removed top 29 address bits (of 32) from memory init port alu_control.$auto$mem.cc:351:emit$156 ($auto$proc_rom.cc:155:do_switch$154).
+Removed top 2 bits (of 3) from port B of cell alu_control.$procmux$1803_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell alu_control.$procmux$1802_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell alu_control.$procmux$1801_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell alu_control.$procmux$1779_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell alu_control.$eq$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:43$35 ($eq).
+
+14.10. Executing PEEPOPT pass (run peephole optimizers).
+
+14.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module alu_control:
+  created 0 $alu and 0 $macc cells.
+
+14.13. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module alu_control that may be considered for resource sharing.
+  Analyzing resource sharing options for $auto$mem.cc:305:emit$159 ($memrd_v2):
+    Found 2 activation_patterns using ctrl signal { $logic_and$/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/alu_control.sv:43$36_Y $procmux$1801_CMP $procmux$1802_CMP \inst_funct7 [5] \inst_funct7 [0] }.
+    No candidates found.
+  Analyzing resource sharing options for $auto$mem.cc:305:emit$155 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal { $procmux$1802_CMP \inst_funct7 [5] \inst_funct7 [0] }.
+    No candidates found.
+
+14.14. Executing OPT pass (performing simple optimizations).
+
+14.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+14.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+Performed a total of 0 changes.
+
+14.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14.15. Executing MEMORY pass.
+
+14.15.1. Executing OPT_MEM pass (optimize memories).
+alu_control.$auto$proc_rom.cc:155:do_switch$158: removing const-0 lane 4
+Performed a total of 1 transformations.
+
+14.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+14.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+14.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+14.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$154'[0] in module `\alu_control': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$158'[0] in module `\alu_control': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$154'[0] in module `\alu_control': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$158'[0] in module `\alu_control': no address FF found.
+
+14.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+14.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+14.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+14.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.17. Executing OPT pass (performing simple optimizations).
+
+14.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+<suppressed ~3 debug messages>
+
+14.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 24 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 4 unused cells and 4 unused wires.
+<suppressed ~5 debug messages>
+
+14.17.5. Finished fast OPT passes.
+
+14.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$154 in module \alu_control:
+  created 8 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$158 in module \alu_control:
+  created 8 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+
+14.19. Executing OPT pass (performing simple optimizations).
+
+14.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 32 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+14.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][2][2]$207:
+      Old ports: A=4'1000, B=4'0100, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$a$199
+      New ports: A=2'10, B=2'01, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$a$199 [3:2]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$a$199 [1:0] = 2'00
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][2][1]$204:
+      Old ports: A=4'0110, B=4'0111, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$b$197
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$b$197 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$b$197 [3:1] = 3'011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][2][0]$201:
+      Old ports: A=4'0001, B=4'0011, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196 [1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196 [3:2] $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196 [0] } = 3'001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][2][2]$186:
+      Old ports: A=5'01111, B=5'10000, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] }
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [3:1] = { $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][2][1]$183:
+      Old ports: A=5'01101, B=5'01110, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$b$176
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$b$176 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$b$176 [4:2] = 3'011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][2][0]$180:
+      Old ports: A=5'01011, B=5'01100, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [4:3] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [1] } = { 2'01 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }
+    Consolidated identical input bits for $pmux cell $procmux$1774:
+      Old ports: A=5'00111, B=10'0011000010, Y=\branch_funct
+      New ports: A=2'11, B=4'1000, Y={ \branch_funct [2] \branch_funct [0] }
+      New connections: { \branch_funct [4:3] \branch_funct [1] } = 3'001
+    Consolidated identical input bits for $mux cell $procmux$1782:
+      Old ports: A=5'00010, B=5'00101, Y=\secondary_funct
+      New ports: A=2'10, B=2'01, Y=\secondary_funct [1:0]
+      New connections: \secondary_funct [4:2] = { 2'00 \secondary_funct [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][2][3]$189:
+      Old ports: A=5'10001, B=5'10010, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$b$179
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$b$179 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$b$179 [4:2] = 3'100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][2][3]$210:
+      Old ports: A=4'1001, B=4'1010, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$b$200
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$b$200 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][1]$b$200 [3:2] = 2'10
+  Optimizing cells in module \alu_control.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$195:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196, B=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$b$197, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][0][0]$a$193
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$a$196 [1] 1'1 }, B={ 2'11 $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][1][0]$b$197 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][0][0]$a$193 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$158$rdmux[0][0][0]$a$193 [3] = 1'0
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$177:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178, B=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$b$179, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$a$178 [0] }, B={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$b$179 [1:0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2:0] }
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [3] = $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2]
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$174:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175, B=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$b$176, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$b$176 [1:0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [4:3] = 2'01
+    Consolidated identical input bits for $mux cell $procmux$1787:
+      Old ports: A={ 1'0 \default_funct [3:0] }, B=\secondary_funct, Y=\op_imm_funct
+      New ports: A=\default_funct [3:0], B={ 1'0 \secondary_funct [0] \secondary_funct [1:0] }, Y=\op_imm_funct [3:0]
+      New connections: \op_imm_funct [4] = 1'0
+  Optimizing cells in module \alu_control.
+Performed a total of 14 changes.
+
+14.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 32 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Computing hashes of 27 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+14.19.6. Executing OPT_SHARE pass.
+
+14.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 21 unused wires.
+<suppressed ~1 debug messages>
+
+14.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+<suppressed ~1 debug messages>
+
+14.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+14.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][1]$177:
+      Old ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, B={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2:0] }
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, B={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2:1] }
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [0] = $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0]
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$174:
+      Old ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [2:0]
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [2] }, Y=$memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [2:1]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [0] = $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0]
+  Optimizing cells in module \alu_control.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$171:
+      Old ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [2:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2:0] }, Y=\m_extension_funct
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$a$172 [2:1] }, B={ $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [4] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2] $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][0][0]$b$173 [2:1] }, Y=\m_extension_funct [4:1]
+      New connections: \m_extension_funct [0] = $memory$auto$proc_rom.cc:155:do_switch$154$rdmux[0][1][0]$a$175 [0]
+  Optimizing cells in module \alu_control.
+Performed a total of 3 changes.
+
+14.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.19.14. Executing OPT_SHARE pass.
+
+14.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+14.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_control..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+14.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_control.
+Performed a total of 0 changes.
+
+14.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 26 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.19.22. Executing OPT_SHARE pass.
+
+14.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+
+14.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+14.20. Executing TECHMAP pass (map to technology primitives).
+
+14.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+14.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+No more expansions possible.
+<suppressed ~103 debug messages>
+
+14.21. Executing OPT pass (performing simple optimizations).
+
+14.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+<suppressed ~51 debug messages>
+
+14.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 105 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Computing hashes of 93 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Computing hashes of 91 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+<suppressed ~42 debug messages>
+Removed a total of 14 cells.
+
+14.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 52 unused wires.
+<suppressed ~1 debug messages>
+
+14.21.5. Finished fast OPT passes.
+
+14.22. Executing ABC pass (technology mapping using ABC).
+
+14.22.1. Extracting gate netlist of module `\alu_control' to `<abc-temp-dir>/input.blif'..
+
+14.22.1.1. Executed ABC.
+Extracted 91 gates and 101 wires to a netlist network with 8 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+14.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        9
+ABC RESULTS:            ANDNOT cells:       10
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:              NAND cells:       20
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:                OR cells:        7
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:        internal signals:       88
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+Removing global temp directory.
+
+14.23. Executing OPT pass (performing simple optimizations).
+
+14.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_control.
+
+14.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_control'.
+Computing hashes of 58 cells of `\alu_control'.
+Finding duplicate cells in `\alu_control'.
+Removed a total of 0 cells.
+
+14.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 66 unused wires.
+<suppressed ~3 debug messages>
+
+14.23.5. Finished fast OPT passes.
+
+14.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `alu_control'. Setting top module to alu_control.
+
+14.24.1. Analyzing design hierarchy..
+Top module:  \alu_control
+
+14.24.2. Analyzing design hierarchy..
+Top module:  \alu_control
+Removed 0 unused modules.
+
+14.25. Printing statistics.
+
+=== alu_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       61 wires
+       91 wire bits
+        8 public wires
+       38 public wire bits
+        4 ports
+       18 port bits
+       58 cells
+       10   $_ANDNOT_
+        9   $_AND_
+        2   $_MUX_
+       20   $_NAND_
+        3   $_NOR_
+        5   $_ORNOT_
+        7   $_OR_
+        2   $_XNOR_
+
+14.26. Executing CHECK pass (checking for obvious problems).
+Checking module alu_control...
+Found and reported 0 problems.
+
+15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_control..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~4 debug messages>
+
+16. Executing CHECK pass (checking for obvious problems).
+Checking module alu_control...
+Found and reported 0 problems.
+
+17. Printing statistics.
+
+=== alu_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       57 wires
+       71 wire bits
+        4 public wires
+       18 public wire bits
+        4 ports
+       18 port bits
+       58 cells
+       10   $_ANDNOT_
+        9   $_AND_
+        2   $_MUX_
+       20   $_NAND_
+        3   $_NOR_
+        5   $_ORNOT_
+        7   $_OR_
+        2   $_XNOR_
+
+18. Executing JSON backend.
+
+19. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/base/fine-cache/singlecycle_ctlpath/regions/alu_control/synth.rtlil
+
+20. Executing Verilog backend.
+Dumping module `\alu_control'.
+
+End of script. Logfile hash: a4e607a7f0, time: 0.16s, user: 0.07s, system: 0.02s, MEM: 33.59 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 54% 1x abc (0 sec), 20% 2x read_json (0 sec), ...

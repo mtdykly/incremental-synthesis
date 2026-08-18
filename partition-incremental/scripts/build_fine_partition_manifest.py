@@ -106,7 +106,13 @@ def main() -> None:
 
         output_partitions: Json = {}
 
-        used_root_modules: set[str] = set()
+        #
+        # One synthesized module implementation can be shared by
+        # multiple instances.  link_partitions.sh requires unique
+        # root modules, so direct-child instances using the same
+        # specialized module are grouped into one synthesis region.
+        #
+        root_to_region_name: dict[str, str] = {}
 
         for region_id, region in sorted(
             partition.get(
@@ -114,16 +120,53 @@ def main() -> None:
                 {},
             ).items()
         ):
-            instance_name = region[
-                "instance_name"
-            ]
-
-            region_name = safe_region_name(
-                instance_name
+            instance_name = normalize_name(
+                region["instance_name"]
             )
 
             root = normalize_name(
                 region["module_type"]
+            )
+
+            #
+            # Another instance already uses exactly the same
+            # specialized module implementation.
+            #
+            if root in root_to_region_name:
+                existing_name = root_to_region_name[
+                    root
+                ]
+
+                existing = output_partitions[
+                    existing_name
+                ]
+
+                existing.setdefault(
+                    "region_ids",
+                    [
+                        existing["region_id"]
+                    ],
+                )
+
+                existing.setdefault(
+                    "instance_names",
+                    [
+                        existing["instance_name"]
+                    ],
+                )
+
+                existing["region_ids"].append(
+                    region_id
+                )
+
+                existing["instance_names"].append(
+                    instance_name
+                )
+
+                continue
+
+            region_name = safe_region_name(
+                instance_name
             )
 
             if region_name in output_partitions:
@@ -132,27 +175,31 @@ def main() -> None:
                     f"{region_name}"
                 )
 
-            #
-            # Current link_partitions.sh requires
-            # unique root modules.
-            #
-            if root in used_root_modules:
-                raise ValueError(
-                    "multiple fine regions use the same "
-                    f"root module: {root}"
-                )
-
-            used_root_modules.add(root)
+            root_to_region_name[root] = (
+                region_name
+            )
 
             output_partitions[
                 region_name
             ] = {
                 "root_module": root,
+
+                # Representative instance.
+                # Existing materialization code can continue
+                # to use this field.
                 "region_id": region_id,
+
                 "instance_name":
-                    normalize_name(
-                        instance_name
-                    ),
+                    instance_name,
+
+                # Full group information.
+                "region_ids": [
+                    region_id
+                ],
+
+                "instance_names": [
+                    instance_name
+                ],
             }
 
         if not output_partitions:

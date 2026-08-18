@@ -23,7 +23,7 @@ OUTPUT_DIR="$(realpath -m "$5")"
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 
 BUILD_MANIFEST="$REPO_ROOT/partition-incremental/scripts/build_fine_partition_manifest.py"
-SYNTH_PARTITION="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
+SYNTH_PARTITION_FROM_HIER="$REPO_ROOT/partition-incremental/scripts/synth_partition_from_hier_json.sh"
 SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
 
 for required in \
@@ -31,7 +31,7 @@ for required in \
     "$BASE_HIER_JSON" \
     "$BASE_FINE_MANIFEST" \
     "$BUILD_MANIFEST" \
-    "$SYNTH_PARTITION" \
+    "$SYNTH_PARTITION_FROM_HIER" \
     "$SYNTH_TOP_SHELL"
 do
     if [[ ! -e "$required" ]]; then
@@ -68,8 +68,8 @@ do
     echo "Root  : $root_module"
     echo "------------------------------------------------------------"
 
-    "$SYNTH_PARTITION" \
-        "$BASE_SOURCE_DIR" \
+    "$SYNTH_PARTITION_FROM_HIER" \
+        "$BASE_HIER_JSON" \
         "$OUTPUT_DIR/regions/$region_name" \
         "$region_name" \
         "$root_module"

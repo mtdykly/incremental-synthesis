@@ -1,0 +1,6 @@
+region	root_module	action	build_seconds
+controller_i	cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i	reuse	0.000000
+decoder_i	cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i	rebuild	2.94
+gen_hwloop_regs.hwloop_regs_i	cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i	reuse	0.000000
+int_controller_i	cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i	reuse	0.000000
+register_file_i	cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i	reuse	0.000000

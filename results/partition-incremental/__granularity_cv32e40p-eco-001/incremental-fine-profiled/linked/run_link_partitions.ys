@@ -1,0 +1,28 @@
+# Load synthesized top shell in native RTLIL format.
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/top-shell/top_shell.rtlil"
+
+# Load each independently synthesized partition.
+# Existing blackbox partition definitions in the top shell
+# are replaced by the real RTLIL implementations.
+# cs_registers_i -> cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/cs_registers_i/synth.rtlil"
+# ex_stage_i -> cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/ex_stage_i/synth.rtlil"
+# id_stage_i -> cv32e40p_id_stage$cv32e40p_core.id_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/synth.rtlil"
+# if_stage_i -> cv32e40p_if_stage$cv32e40p_core.if_stage_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/if_stage_i/synth.rtlil"
+# load_store_unit_i -> cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/load_store_unit_i/synth.rtlil"
+# sleep_unit_i -> cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/sleep_unit_i/synth.rtlil"
+
+# Validate the reconstructed hierarchy.
+hierarchy -check -top cv32e40p_core
+check
+stat -top cv32e40p_core
+
+# Export linked design.
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/linked/linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/linked/linked.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/linked/linked_netlist.v"

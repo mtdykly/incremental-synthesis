@@ -1,0 +1,7 @@
+{
+  "partition_name": "alu",
+  "root_module": "alu",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
+  "flatten_internal": true
+}

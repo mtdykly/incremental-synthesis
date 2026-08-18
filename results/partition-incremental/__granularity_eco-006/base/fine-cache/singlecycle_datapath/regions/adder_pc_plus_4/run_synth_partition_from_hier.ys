@@ -1,0 +1,30 @@
+# Load already elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/frontend_hier.json"
+
+# Select derived module implementation.
+hierarchy -check -top $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+
+proc
+opt_clean
+check
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/frontend.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/frontend.rtlil"
+
+stat -top $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+
+# Flatten logic below the fine-region root.
+script /workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/flattened.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/flattened.rtlil"
+
+# Complete generic synthesis.
+synth -top $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+opt_clean -purge
+check
+stat -top $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/synth.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/synth.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/fine-cache/singlecycle_datapath/regions/adder_pc_plus_4/partition_netlist.v"

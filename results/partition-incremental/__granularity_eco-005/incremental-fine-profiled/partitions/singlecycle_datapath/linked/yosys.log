@@ -1,0 +1,279 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/linked/run_link_partitions.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/root-shell/top_shell.rtlil
+
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/adder_pc_plus_4/synth.rtlil
+Replacing existing blackbox module $paramod\adder\WIDTH=s32'00000000000000000000000000100000.
+
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/alu/synth.rtlil
+Replacing existing blackbox module \alu.
+
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_next_pc_select/synth.rtlil
+Replacing existing blackbox module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000.
+
+5. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_operand_a/synth.rtlil
+Replacing existing blackbox module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000.
+
+6. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_reg_writeback/synth.rtlil
+Replacing existing blackbox module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000.
+
+7. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/program_counter/synth.rtlil
+Replacing existing blackbox module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register.
+
+8. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/synth.rtlil
+Replacing existing blackbox module \regfile.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Used module:     \alu
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     \regfile
+
+9.2. Analyzing design hierarchy..
+Top module:  \singlecycle_datapath
+Used module:     $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+Used module:     \alu
+Used module:     $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+Used module:     \regfile
+Removed 0 unused modules.
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Checking module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000...
+Checking module alu...
+Checking module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\adder\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register...
+Checking module singlecycle_datapath...
+Found and reported 0 problems.
+
+11. Printing statistics.
+
+=== regfile ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     4165 wires
+     5231 wire bits
+       39 public wires
+     1105 public wire bits
+        8 ports
+      113 port bits
+     5182 cells
+      159   $_ANDNOT_
+      746   $_AND_
+      992   $_DFFE_PP_
+      907   $_MUX_
+      975   $_NAND_
+      262   $_NOR_
+      611   $_ORNOT_
+      530   $_OR_
+
+=== $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      470 wires
+      751 wire bits
+       10 public wires
+      291 public wire bits
+       10 ports
+      291 port bits
+      492 cells
+        6   $_ANDNOT_
+      197   $_AND_
+      288   $_NAND_
+        1   $_NOR_
+
+=== $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      202 wires
+      358 wire bits
+        6 public wires
+      162 public wire bits
+        6 ports
+      162 port bits
+      228 cells
+        2   $_ANDNOT_
+       65   $_AND_
+      160   $_NAND_
+        1   $_NOR_
+
+=== alu ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    18362 wires
+    18459 wire bits
+        5 public wires
+      102 public wire bits
+        5 ports
+      102 port bits
+    18390 cells
+      382   $_ANDNOT_
+     2893   $_AND_
+     1266   $_MUX_
+     6531   $_NAND_
+       84   $_NOR_
+       74   $_NOT_
+      376   $_ORNOT_
+     1733   $_OR_
+     2247   $_XNOR_
+     2804   $_XOR_
+
+=== $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+       97 wire bits
+        4 public wires
+       97 public wire bits
+        4 ports
+       97 port bits
+       32 cells
+       32   $_MUX_
+
+=== $paramod\adder\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      134 wires
+      227 wire bits
+        3 public wires
+       96 public wire bits
+        3 ports
+       96 port bits
+      163 cells
+       10   $_AND_
+       90   $_NAND_
+        9   $_OR_
+       11   $_XNOR_
+       43   $_XOR_
+
+=== $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+       67 wire bits
+        5 public wires
+       67 public wire bits
+        5 ports
+       67 port bits
+       32 cells
+       31   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       25 wires
+      416 wire bits
+       25 public wires
+      416 public wire bits
+       18 ports
+      192 port bits
+        9 submodules
+        1   $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+        2   $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+        2   $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+        1   alu
+        1   regfile
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    24714 singlecycle_datapath
+       32 $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+      163 $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+       32 $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+      228 $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+      492 $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+    18390 alu
+     5182 regfile
+
+        +----------Count including submodules.
+        | 
+    23505 wires
+    25930 wire bits
+      104 public wires
+     2529 public wire bits
+       66 ports
+     1313 port bits
+        - memories
+        - memory bits
+        - processes
+    24714 cells
+      549   $_ANDNOT_
+     3921   $_AND_
+       31   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+      992   $_DFFE_PP_
+     2237   $_MUX_
+     8134   $_NAND_
+      348   $_NOR_
+       74   $_NOT_
+      987   $_ORNOT_
+     2281   $_OR_
+     2269   $_XNOR_
+     2890   $_XOR_
+        9 submodules
+        1   $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+        2   $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+        2   $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+        1   $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+        1   alu
+        1   regfile
+
+12. Executing JSON backend.
+
+13. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/linked/linked.rtlil
+
+14. Executing Verilog backend.
+Dumping module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Dumping module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `\alu'.
+Dumping module `\regfile'.
+Dumping module `\singlecycle_datapath'.
+
+End of script. Logfile hash: 25a08b3d1f, time: 0.39s, user: 0.71s, system: 0.16s, MEM: 50.50 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 28% 2x write_json (0 sec), 19% 16x read_rtlil (0 sec), ...

@@ -1,0 +1,22 @@
+# Load elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/frontend_hier.json"
+
+# Replace partition implementations with blackboxes.
+blackbox data_memory_interface
+blackbox immediate_generator
+blackbox instruction_decoder
+blackbox singlecycle_ctlpath
+blackbox singlecycle_datapath
+
+hierarchy -check -top riscv_core
+check
+
+# Synthesize only the top shell.
+synth -top riscv_core
+opt_clean -purge
+check
+stat -top riscv_core
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/top-shell/top_shell.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/top-shell/top_shell.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-006/base/top-shell/top_shell_netlist.v"

@@ -1,0 +1,159 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "register",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:9.1-27.10"
+      },
+      "parameter_default_values": {
+        "INITIAL": "00000000010000000000000000000000",
+        "WIDTH": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "write_enable": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "next": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ]
+        },
+        "value": {
+          "direction": "output",
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+        }
+      },
+      "cells": {
+        "$procdff$333": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23.4-25.45"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+            "Q": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
+          }
+        },
+        "$procmux$246": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:25.17-25.29|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:25.13-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+            "B": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+            "S": [ 4 ],
+            "Y": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ]
+          }
+        },
+        "$procmux$249": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:24.12-24.17|/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:24.8-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 3 ],
+            "Y": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\value[31:0]": {
+          "hide_name": 1,
+          "bits": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:23.4-25.45"
+          }
+        },
+        "$procmux$246_Y": {
+          "hide_name": 1,
+          "bits": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:13.12-13.17"
+          }
+        },
+        "next": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:16.24-16.28"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:14.12-14.17"
+          }
+        },
+        "value": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ],
+          "attributes": {
+            "init": "00000000010000000000000000000000",
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:18.30-18.35"
+          }
+        },
+        "write_enable": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-002-new/core/common/register.sv:15.12-15.24"
+          }
+        }
+      }
+    }
+  }
+}

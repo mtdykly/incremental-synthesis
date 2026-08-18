@@ -1,0 +1,15 @@
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/incremental-profiled/top-shell/top_shell.json"
+
+hierarchy -top riscv_core
+
+dfflibmap -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+abc -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+
+techmap -map "/workspace/incremental-synthesis/partition-incremental/area-analysis/liberty-area/nangate45_latch_map.v"
+
+opt_clean -purge
+
+write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-004/granularity-tradeoff/area/coarse/top-shell/mapped.json"
+
+write_verilog -noattr -noexpr -nodec     "/workspace/incremental-synthesis/results/partition-incremental/eco-004/granularity-tradeoff/area/coarse/top-shell/mapped_netlist.v"

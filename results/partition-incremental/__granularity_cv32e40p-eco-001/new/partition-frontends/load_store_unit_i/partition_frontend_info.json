@@ -1,0 +1,7 @@
+{
+  "partition_name": "load_store_unit_i",
+  "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+  "source_dir": "/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new",
+  "mode": "frontend-only",
+  "flatten_internal": true
+}

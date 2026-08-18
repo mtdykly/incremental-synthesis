@@ -1,0 +1,814 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/regions/regfile/run_synth_partition_from_hier.ys' --
+
+1. Executing JSON frontend.
+Importing module singlecycle_datapath from JSON tree.
+Importing module singlecycle_ctlpath from JSON tree.
+Importing module singlecycle_control from JSON tree.
+Importing module riscv_core from JSON tree.
+Importing module regfile from JSON tree.
+Importing module instruction_decoder from JSON tree.
+Importing module immediate_generator from JSON tree.
+Importing module data_memory_interface from JSON tree.
+Importing module control_transfer from JSON tree.
+Importing module alu_control from JSON tree.
+Importing module alu from JSON tree.
+Importing module $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod\adder\WIDTH=s32'00000000000000000000000000100000 from JSON tree.
+Importing module $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register from JSON tree.
+Importing module $paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer from JSON tree.
+Importing module $paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer from JSON tree.
+Importing module $paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \regfile
+
+2.2. Analyzing design hierarchy..
+Top module:  \regfile
+Removing unused module `$paramod$5ef3be0bfad1454aaa6432c4ab405bbd7cbab26b\multiplexer'.
+Removing unused module `$paramod$6a3d32cf08b5e9a4d56891e3d8781ccd4215c4af\multiplexer'.
+Removing unused module `$paramod$99da07bf27abaac915a8c95d36d6f2808394e702\multiplexer'.
+Removing unused module `$paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register'.
+Removing unused module `$paramod\adder\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `$paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000'.
+Removing unused module `\alu'.
+Removing unused module `\alu_control'.
+Removing unused module `\control_transfer'.
+Removing unused module `\data_memory_interface'.
+Removing unused module `\immediate_generator'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\riscv_core'.
+Removing unused module `\singlecycle_control'.
+Removing unused module `\singlecycle_ctlpath'.
+Removing unused module `\singlecycle_datapath'.
+Removed 18 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/regions/regfile/frontend.rtlil
+
+8. Printing statistics.
+
+=== regfile ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      298 wires
+     5363 wire bits
+       41 public wires
+     1138 public wire bits
+        9 ports
+      114 port bits
+      291 cells
+       32   $adff
+      124   $eq
+        4   $logic_not
+      128   $mux
+        2   $pmux
+        1   $reduce_bool
+
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+9. Executing FLATTEN pass (flatten design).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+
+13. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/regions/regfile/flattened.rtlil
+
+14. Executing SYNTH pass.
+
+14.1. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1.1. Analyzing design hierarchy..
+Top module:  \regfile
+
+14.1.2. Analyzing design hierarchy..
+Top module:  \regfile
+Removed 0 unused modules.
+
+14.2. Executing PROC pass (convert processes to netlists).
+
+14.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+14.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+14.2.4. Executing PROC_INIT pass (extract init attributes).
+
+14.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+14.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+14.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+14.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+14.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+14.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.5. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Found and reported 0 problems.
+
+14.6. Executing OPT pass (performing simple optimizations).
+
+14.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 291 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+<suppressed ~96 debug messages>
+Removed a total of 32 cells.
+
+14.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~164 debug messages>
+
+14.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~1 debug messages>
+
+14.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~164 debug messages>
+
+14.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14.7. Executing FSM pass (extract and optimize FSM).
+
+14.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+14.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+14.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+14.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+14.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+14.8. Executing OPT pass (performing simple optimizations).
+
+14.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~164 debug messages>
+
+14.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$1912 ($adff) from module regfile (D = $procmux$375_Y, Q = \register[30]).
+Adding EN signal on $procdff$1909 ($adff) from module regfile (D = $procmux$389_Y, Q = \register[29]).
+Adding EN signal on $procdff$1906 ($adff) from module regfile (D = $procmux$405_Y, Q = \register[28]).
+Adding EN signal on $procdff$1903 ($adff) from module regfile (D = $procmux$423_Y, Q = \register[27]).
+Adding EN signal on $procdff$1900 ($adff) from module regfile (D = $procmux$443_Y, Q = \register[26]).
+Adding EN signal on $procdff$1897 ($adff) from module regfile (D = $procmux$465_Y, Q = \register[25]).
+Adding EN signal on $procdff$1894 ($adff) from module regfile (D = $procmux$489_Y, Q = \register[24]).
+Adding EN signal on $procdff$1891 ($adff) from module regfile (D = $procmux$515_Y, Q = \register[23]).
+Adding EN signal on $procdff$1888 ($adff) from module regfile (D = $procmux$543_Y, Q = \register[22]).
+Adding EN signal on $procdff$1885 ($adff) from module regfile (D = $procmux$573_Y, Q = \register[21]).
+Adding EN signal on $procdff$1882 ($adff) from module regfile (D = $procmux$605_Y, Q = \register[20]).
+Adding EN signal on $procdff$1879 ($adff) from module regfile (D = $procmux$639_Y, Q = \register[19]).
+Adding EN signal on $procdff$1876 ($adff) from module regfile (D = $procmux$675_Y, Q = \register[18]).
+Adding EN signal on $procdff$1873 ($adff) from module regfile (D = $procmux$713_Y, Q = \register[17]).
+Adding EN signal on $procdff$1870 ($adff) from module regfile (D = $procmux$753_Y, Q = \register[16]).
+Adding EN signal on $procdff$1867 ($adff) from module regfile (D = $procmux$795_Y, Q = \register[15]).
+Adding EN signal on $procdff$1864 ($adff) from module regfile (D = $procmux$839_Y, Q = \register[14]).
+Adding EN signal on $procdff$1861 ($adff) from module regfile (D = $procmux$885_Y, Q = \register[13]).
+Adding EN signal on $procdff$1858 ($adff) from module regfile (D = $procmux$933_Y, Q = \register[12]).
+Adding EN signal on $procdff$1855 ($adff) from module regfile (D = $procmux$983_Y, Q = \register[11]).
+Adding EN signal on $procdff$1852 ($adff) from module regfile (D = $procmux$1035_Y, Q = \register[10]).
+Adding EN signal on $procdff$1849 ($adff) from module regfile (D = $procmux$1089_Y, Q = \register[9]).
+Adding EN signal on $procdff$1846 ($adff) from module regfile (D = $procmux$1145_Y, Q = \register[8]).
+Adding EN signal on $procdff$1843 ($adff) from module regfile (D = $procmux$1203_Y, Q = \register[7]).
+Adding EN signal on $procdff$1840 ($adff) from module regfile (D = $procmux$1263_Y, Q = \register[6]).
+Adding EN signal on $procdff$1837 ($adff) from module regfile (D = $procmux$1325_Y, Q = \register[5]).
+Adding EN signal on $procdff$1834 ($adff) from module regfile (D = $procmux$1389_Y, Q = \register[4]).
+Adding EN signal on $procdff$1831 ($adff) from module regfile (D = $procmux$1455_Y, Q = \register[3]).
+Adding EN signal on $procdff$1828 ($adff) from module regfile (D = $procmux$1523_Y, Q = \register[2]).
+Adding EN signal on $procdff$1825 ($adff) from module regfile (D = $procmux$1593_Y, Q = \register[1]).
+Adding EN signal on $procdff$1822 ($adff) from module regfile (D = $procmux$1665_Y, Q = \register[0]).
+Adding EN signal on $procdff$1915 ($adff) from module regfile (D = $procmux$363_Y, Q = \register[31]).
+
+14.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 32 unused cells and 32 unused wires.
+<suppressed ~33 debug messages>
+
+14.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+<suppressed ~32 debug messages>
+
+14.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~132 debug messages>
+
+14.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~1 debug messages>
+
+14.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~132 debug messages>
+
+14.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+14.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$959_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$910_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$863_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$818_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$775_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell regfile.$procmux$319_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$318_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$317_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$316_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$315_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$314_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$313_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$312_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$311_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$310_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$309_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$308_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$307_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$306_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$305_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell regfile.$procmux$286_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$285_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$284_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$283_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$282_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$281_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$280_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$279_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$278_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$277_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$276_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$275_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$274_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$273_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$272_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell regfile.$procmux$1559_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$1490_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell regfile.$procmux$1423_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$1358_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$1295_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$1234_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell regfile.$procmux$1175_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$1118_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$1063_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell regfile.$procmux$1010_CMP0 ($eq).
+
+14.10. Executing PEEPOPT pass (run peephole optimizers).
+
+14.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module regfile:
+  created 0 $alu and 0 $macc cells.
+
+14.13. Executing SHARE pass (SAT-based resource sharing).
+
+14.14. Executing OPT pass (performing simple optimizations).
+
+14.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~132 debug messages>
+
+14.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 259 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14.15. Executing MEMORY pass.
+
+14.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+14.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+14.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+14.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+14.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+14.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+14.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+14.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+14.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.17. Executing OPT pass (performing simple optimizations).
+
+14.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+<suppressed ~66 debug messages>
+
+14.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 195 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Computing hashes of 164 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+<suppressed ~93 debug messages>
+Removed a total of 31 cells.
+
+14.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 2 unused cells and 97 unused wires.
+<suppressed ~3 debug messages>
+
+14.17.5. Finished fast OPT passes.
+
+14.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+14.19. Executing OPT pass (performing simple optimizations).
+
+14.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 162 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \regfile..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+14.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \regfile.
+Performed a total of 0 changes.
+
+14.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 162 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.19.6. Executing OPT_SHARE pass.
+
+14.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+14.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+14.20. Executing TECHMAP pass (map to technology primitives).
+
+14.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+14.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_bool.
+No more expansions possible.
+<suppressed ~239 debug messages>
+
+14.21. Executing OPT pass (performing simple optimizations).
+
+14.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+<suppressed ~465 debug messages>
+
+14.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 5830 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Computing hashes of 5565 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Computing hashes of 5437 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Computing hashes of 5391 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+<suppressed ~1317 debug messages>
+Removed a total of 439 cells.
+
+14.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 0 unused cells and 569 unused wires.
+<suppressed ~1 debug messages>
+
+14.21.5. Finished fast OPT passes.
+
+14.22. Executing ABC pass (technology mapping using ABC).
+
+14.22.1. Extracting gate netlist of module `\regfile' to `<abc-temp-dir>/input.blif'..
+
+14.22.1.1. Executed ABC.
+Extracted 4367 gates and 5440 wires to a netlist network with 1072 inputs and 128 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+14.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     2076
+ABC RESULTS:            ANDNOT cells:       33
+ABC RESULTS:              NAND cells:     2112
+ABC RESULTS:               NOR cells:        6
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:     4240
+ABC RESULTS:           input signals:     1072
+ABC RESULTS:          output signals:      128
+Removing temp directory.
+Removing global temp directory.
+
+14.23. Executing OPT pass (performing simple optimizations).
+
+14.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module regfile.
+
+14.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\regfile'.
+Computing hashes of 5252 cells of `\regfile'.
+Finding duplicate cells in `\regfile'.
+Removed a total of 0 cells.
+
+14.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+Removed 0 unused cells and 3752 unused wires.
+<suppressed ~1 debug messages>
+
+14.23.5. Finished fast OPT passes.
+
+14.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `regfile'. Setting top module to regfile.
+
+14.24.1. Analyzing design hierarchy..
+Top module:  \regfile
+
+14.24.2. Analyzing design hierarchy..
+Top module:  \regfile
+Removed 0 unused modules.
+
+14.25. Printing statistics.
+
+=== regfile ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     4205 wires
+     5302 wire bits
+       41 public wires
+     1138 public wire bits
+        9 ports
+      114 port bits
+     5252 cells
+       33   $_ANDNOT_
+     2076   $_AND_
+     1024   $_DFFE_PP0P_
+     2112   $_NAND_
+        6   $_NOR_
+        1   $_ORNOT_
+
+14.26. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Found and reported 0 problems.
+
+15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \regfile..
+
+16. Executing CHECK pass (checking for obvious problems).
+Checking module regfile...
+Found and reported 0 problems.
+
+17. Printing statistics.
+
+=== regfile ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     4205 wires
+     5302 wire bits
+       41 public wires
+     1138 public wire bits
+        9 ports
+      114 port bits
+     5252 cells
+       33   $_ANDNOT_
+     2076   $_AND_
+     1024   $_DFFE_PP0P_
+     2112   $_NAND_
+        6   $_NOR_
+        1   $_ORNOT_
+
+18. Executing JSON backend.
+
+19. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/regions/regfile/synth.rtlil
+
+20. Executing Verilog backend.
+Dumping module `\regfile'.
+
+End of script. Logfile hash: 19a5f5f6e0, time: 0.97s, user: 0.69s, system: 0.03s, MEM: 37.57 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 42% 1x abc (0 sec), 11% 19x opt_clean (0 sec), ...

@@ -1,0 +1,5 @@
+{
+  "partition": "id_stage_i",
+  "manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/fine_partition_manifest.json",
+  "status": "ready"
+}

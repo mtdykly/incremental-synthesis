@@ -1,0 +1,261 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/linked/run_link_partitions.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/root-shell/top_shell.rtlil
+
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/regions/controller_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/regions/decoder_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.
+
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/regions/gen_hwloop_regs.hwloop_regs_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+5. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/regions/int_controller_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+6. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/regions/register_file_i/synth.rtlil
+Replacing existing blackbox module \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:     \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:     \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:     \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:     \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+7.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:     \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:     \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:     \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:     \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+Removed 0 unused modules.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i...
+Checking module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i...
+Checking module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i...
+Checking module cv32e40p_id_stage$cv32e40p_core.id_stage_i...
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+9. Printing statistics.
+
+=== cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     5356 wires
+     7520 wire bits
+       47 public wires
+     2211 public wire bits
+       15 ports
+      195 port bits
+     7389 cells
+      105   $_ANDNOT_
+     1083   $_AND_
+      992   $_DFFE_PN0P_
+     2595   $_MUX_
+     1852   $_NAND_
+      145   $_NOR_
+        3   $_NOT_
+      256   $_ORNOT_
+      358   $_OR_
+
+=== cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2042 wires
+     2351 wire bits
+      123 public wires
+      432 public wire bits
+      108 ports
+      401 port bits
+     2046 cells
+      137   $_ANDNOT_
+      720   $_AND_
+        6   $_DFFE_PN0P_
+        1   $_DFFE_PN1P_
+       18   $_DFF_PN0_
+        1   $_DFF_PN1_
+       53   $_MUX_
+      517   $_NAND_
+      101   $_NOR_
+        8   $_NOT_
+      177   $_ORNOT_
+      171   $_OR_
+       75   $_XNOR_
+       61   $_XOR_
+
+=== cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1168 wires
+     1283 wire bits
+       81 public wires
+      196 public wire bits
+       81 ports
+      196 port bits
+     1170 cells
+      111   $_ANDNOT_
+      378   $_AND_
+       35   $_MUX_
+      422   $_NAND_
+       55   $_NOR_
+       19   $_NOT_
+       53   $_ORNOT_
+       96   $_OR_
+        1   $_XOR_
+
+=== cv32e40p_id_stage$cv32e40p_core.id_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2956 wires
+     4488 wire bits
+      290 public wires
+     1822 public wire bits
+      151 ports
+     1191 port bits
+     3479 cells
+      141   $_ANDNOT_
+      736   $_AND_
+      406   $_DFFE_PN0P_
+        2   $_DFFE_PN1P_
+       12   $_DFF_PN0_
+      345   $_MUX_
+     1080   $_NAND_
+       48   $_NOR_
+       17   $_NOT_
+      165   $_ORNOT_
+      343   $_OR_
+       81   $_XNOR_
+      103   $_XOR_
+        5 submodules
+        1   cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+        1   cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+        1   cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+        1   cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+        1   cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      146 wires
+      619 wire bits
+       16 public wires
+      489 public wire bits
+       12 ports
+      297 port bits
+      514 cells
+        4   $_ANDNOT_
+        4   $_AND_
+      192   $_DFFE_PN0P_
+      184   $_MUX_
+        5   $_NAND_
+        2   $_NOT_
+        1   $_ORNOT_
+       60   $_OR_
+       62   $_XNOR_
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      149 wires
+      247 wire bits
+       13 public wires
+      111 public wire bits
+       13 ports
+      111 port bits
+      163 cells
+        2   $_ANDNOT_
+       57   $_AND_
+       20   $_DFF_PN0_
+       82   $_NAND_
+        1   $_ORNOT_
+        1   $_OR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    14761 cv32e40p_id_stage$cv32e40p_core.id_stage_i
+     2046 cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+     1170 cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+      514 cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+      163 cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+     7389 cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+        +----------Count including submodules.
+        | 
+    11817 wires
+    16508 wire bits
+      570 public wires
+     5261 public wire bits
+      380 ports
+     2391 port bits
+        - memories
+        - memory bits
+        - processes
+    14761 cells
+      500   $_ANDNOT_
+     2978   $_AND_
+     1596   $_DFFE_PN0P_
+        3   $_DFFE_PN1P_
+       50   $_DFF_PN0_
+        1   $_DFF_PN1_
+     3212   $_MUX_
+     3958   $_NAND_
+      349   $_NOR_
+       49   $_NOT_
+      653   $_ORNOT_
+     1029   $_OR_
+      218   $_XNOR_
+      165   $_XOR_
+        5 submodules
+        1   cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+        1   cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+        1   cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+        1   cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+        1   cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+10. Executing JSON backend.
+
+11. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/linked/linked.rtlil
+
+12. Executing Verilog backend.
+Dumping module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Dumping module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Dumping module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Dumping module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Dumping module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Dumping module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+
+End of script. Logfile hash: 7fc77b0e5f, time: 0.31s, user: 0.38s, system: 0.06s, MEM: 34.61 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 28% 2x write_json (0 sec), 21% 12x read_rtlil (0 sec), ...

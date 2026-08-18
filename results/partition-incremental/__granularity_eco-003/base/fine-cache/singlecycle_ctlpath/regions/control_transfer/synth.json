@@ -1,0 +1,219 @@
+{
+  "creator": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)",
+  "modules": {
+    "control_transfer": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:9.1-37.10"
+      },
+      "ports": {
+        "branch_enable": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "jal_enable": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "jalr_enable": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "result_equal_zero": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "inst_funct3": {
+          "direction": "input",
+          "bits": [ 6, 7, 8 ]
+        },
+        "next_pc_select": {
+          "direction": "output",
+          "bits": [ 9, 10 ]
+        }
+      },
+      "cells": {
+        "$abc$295$auto$blifparse.cc:397:parse_blif$296": {
+          "hide_name": 1,
+          "type": "$_NOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 2 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$abc$295$auto$blifparse.cc:397:parse_blif$297": {
+          "hide_name": 1,
+          "type": "$_ORNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 6 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$abc$295$auto$blifparse.cc:397:parse_blif$298": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 6 ],
+            "S": [ 8 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$abc$295$auto$blifparse.cc:397:parse_blif$299": {
+          "hide_name": 1,
+          "type": "$_XNOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 13 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$abc$295$auto$blifparse.cc:397:parse_blif$300": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 14 ],
+            "S": [ 2 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$abc$295$auto$blifparse.cc:397:parse_blif$301": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 11 ],
+            "Y": [ 10 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$295$new_n10": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$abc$295$new_n11": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+          }
+        },
+        "$abc$295$new_n12": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "$abc$295$new_n13": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "branch_enable": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:10.12-10.25"
+          }
+        },
+        "inst_funct3": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:14.18-14.29"
+          }
+        },
+        "jal_enable": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:11.12-11.22"
+          }
+        },
+        "jalr_enable": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:12.12-12.23"
+          }
+        },
+        "next_pc_select": {
+          "hide_name": 0,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:16.24-16.38"
+          }
+        },
+        "result_equal_zero": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base/core/common/control_transfer.sv:13.12-13.29"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "partition_name": "control_transfer",
+  "root_module": "control_transfer",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-004/base/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
+  "flatten_internal": true
+}

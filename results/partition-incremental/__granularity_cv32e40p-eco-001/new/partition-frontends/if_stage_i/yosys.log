@@ -1,0 +1,410 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/if_stage_i/run_prepare_partition_frontend.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v' to AST representation.
+Generating RTLIL representation for module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Generating RTLIL representation for module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Generating RTLIL representation for module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Generating RTLIL representation for module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Generating RTLIL representation for module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Generating RTLIL representation for module `\cv32e40p_core'.
+Generating RTLIL representation for module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Generating RTLIL representation for module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Generating RTLIL representation for module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Generating RTLIL representation for module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Generating RTLIL representation for module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Generating RTLIL representation for module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Generating RTLIL representation for module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+Used module:         \cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+Used module:         \cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+Used module:         \cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+Used module:     \cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+Used module:     \cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_if_stage$cv32e40p_core.if_stage_i
+Used module:     \cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i
+Used module:         \cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i
+Used module:         \cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i
+Used module:         \cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i
+Used module:     \cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i
+Used module:     \cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i
+Removing unused module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removing unused module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Removing unused module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Removing unused module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Removing unused module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removing unused module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Removing unused module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removing unused module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Removing unused module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Removing unused module `\cv32e40p_core'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Removing unused module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Removed 18 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31760$11853 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31757$11851 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31754$11849 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31751$11847 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31748$11845 in module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40277$13878 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40274$13876 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40271$13874 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40268$13872 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40265$13870 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40262$13868 in module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36357$12849 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36354$12847 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36351$12845 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36348$12843 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36345$12841 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36342$12839 in module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40923$14005 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40920$14003 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40917$14001 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40914$13999 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40911$13997 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40908$13995 in module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:344$69 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:341$67 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:338$65 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:335$63 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:332$61 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:329$59 in module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 29 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31760$11853'.
+Found async reset \rst_ni in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31757$11851'.
+Found async reset \rst_ni in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31754$11849'.
+Found async reset \rst_ni in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31751$11847'.
+Found async reset \rst_ni in `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31748$11845'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40277$13878'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40274$13876'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40271$13874'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40268$13872'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40265$13870'.
+Found async reset \rst_n in `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40262$13868'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36357$12849'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36354$12847'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36351$12845'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36348$12843'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36345$12841'.
+Found async reset \rst_n in `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36342$12839'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40923$14005'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40920$14003'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40917$14001'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40914$13999'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40911$13997'.
+Found async reset \rst_n in `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40908$13995'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:344$69'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:341$67'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:338$65'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:335$63'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:332$61'.
+Found async reset \rst_n in `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:329$59'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31760$11853'.
+     1/1: $0\write_pointer_q[0:0]
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31757$11851'.
+     1/1: $0\status_cnt_q[1:0]
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31754$11849'.
+     1/1: $0\read_pointer_q[0:0]
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31751$11847'.
+     1/1: $0\mem_q[63:32]
+Creating decoders for process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31748$11845'.
+     1/1: $0\mem_q[31:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40277$13878'.
+     1/1: $0\state_q[0:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40274$13876'.
+     1/1: $0\gen_no_trans_stable.obi_we_q[0:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40271$13874'.
+     1/1: $0\gen_no_trans_stable.obi_wdata_q[31:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40268$13872'.
+     1/1: $0\gen_no_trans_stable.obi_be_q[3:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40265$13870'.
+     1/1: $0\gen_no_trans_stable.obi_atop_q[5:0]
+Creating decoders for process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40262$13868'.
+     1/1: $0\gen_no_trans_stable.obi_addr_q[31:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36357$12849'.
+     1/1: $0\pc_id_o[31:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36354$12847'.
+     1/1: $0\is_fetch_failed_o[0:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36351$12845'.
+     1/1: $0\is_compressed_id_o[0:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36348$12843'.
+     1/1: $0\instr_valid_id_o[0:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36345$12841'.
+     1/1: $0\instr_rdata_id_o[31:0]
+Creating decoders for process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36342$12839'.
+     1/1: $0\illegal_c_insn_id_o[0:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40923$14005'.
+     1/1: $0\trans_addr_q[31:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40920$14003'.
+     1/1: $0\state_q[0:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40917$14001'.
+     1/1: $0\hwlp_flush_cnt_delayed_q[1:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40914$13999'.
+     1/1: $0\hwlp_flush_after_resp[0:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40911$13997'.
+     1/1: $0\flush_cnt_q[1:0]
+Creating decoders for process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40908$13995'.
+     1/1: $0\cnt_q[1:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:344$69'.
+     1/1: $0\state[2:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:341$67'.
+     1/1: $0\r_instr_h[15:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:338$65'.
+     1/1: $0\pc_q[31:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:335$63'.
+     1/1: $0\hwlp_update_pc_q[0:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:332$61'.
+     1/1: $0\hwlp_addr_q[31:0]
+Creating decoders for process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:329$59'.
+     1/1: $0\aligner_ready_q[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.\write_pointer_q' using process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31760$11853'.
+  created $adff cell `$procdff$14583' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.\status_cnt_q' using process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31757$11851'.
+  created $adff cell `$procdff$14588' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.\read_pointer_q' using process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31754$11849'.
+  created $adff cell `$procdff$14593' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.\mem_q [63:32]' using process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31751$11847'.
+  created $adff cell `$procdff$14598' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.\mem_q [31:0]' using process `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31748$11845'.
+  created $adff cell `$procdff$14603' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\state_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40277$13878'.
+  created $adff cell `$procdff$14608' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\gen_no_trans_stable.obi_we_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40274$13876'.
+  created $adff cell `$procdff$14613' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\gen_no_trans_stable.obi_wdata_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40271$13874'.
+  created $adff cell `$procdff$14618' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\gen_no_trans_stable.obi_be_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40268$13872'.
+  created $adff cell `$procdff$14623' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\gen_no_trans_stable.obi_atop_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40265$13870'.
+  created $adff cell `$procdff$14628' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.\gen_no_trans_stable.obi_addr_q' using process `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40262$13868'.
+  created $adff cell `$procdff$14633' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\pc_id_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36357$12849'.
+  created $adff cell `$procdff$14638' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\is_fetch_failed_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36354$12847'.
+  created $adff cell `$procdff$14643' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\is_compressed_id_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36351$12845'.
+  created $adff cell `$procdff$14648' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\instr_valid_id_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36348$12843'.
+  created $adff cell `$procdff$14653' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\instr_rdata_id_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36345$12841'.
+  created $adff cell `$procdff$14658' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.\illegal_c_insn_id_o' using process `\cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36342$12839'.
+  created $adff cell `$procdff$14663' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\trans_addr_q' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40923$14005'.
+  created $adff cell `$procdff$14668' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\state_q' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40920$14003'.
+  created $adff cell `$procdff$14673' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\hwlp_flush_cnt_delayed_q' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40917$14001'.
+  created $adff cell `$procdff$14678' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\hwlp_flush_after_resp' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40914$13999'.
+  created $adff cell `$procdff$14683' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\flush_cnt_q' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40911$13997'.
+  created $adff cell `$procdff$14688' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.\cnt_q' using process `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40908$13995'.
+  created $adff cell `$procdff$14693' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\state' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:344$69'.
+  created $adff cell `$procdff$14698' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\r_instr_h' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:341$67'.
+  created $adff cell `$procdff$14703' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\pc_q' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:338$65'.
+  created $adff cell `$procdff$14708' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\hwlp_update_pc_q' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:335$63'.
+  created $adff cell `$procdff$14713' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\hwlp_addr_q' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:332$61'.
+  created $adff cell `$procdff$14718' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.\aligner_ready_q' using process `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:329$59'.
+  created $adff cell `$procdff$14723' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31760$11853'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31757$11851'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31754$11849'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31751$11847'.
+Removing empty process `cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:31748$11845'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40277$13878'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40274$13876'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40271$13874'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40268$13872'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40265$13870'.
+Removing empty process `cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40262$13868'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36357$12849'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36354$12847'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36351$12845'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36348$12843'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36345$12841'.
+Removing empty process `cv32e40p_if_stage$cv32e40p_core.if_stage_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:36342$12839'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40923$14005'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40920$14003'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40917$14001'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40914$13999'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40911$13997'.
+Removing empty process `cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:40908$13995'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:344$69'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:341$67'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:338$65'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:335$63'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:332$61'.
+Removing empty process `cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:329$59'.
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+<suppressed ~15 debug messages>
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.
+<suppressed ~2 debug messages>
+Optimizing module cv32e40p_if_stage$cv32e40p_core.if_stage_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+<suppressed ~12 debug messages>
+Optimizing module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i.
+Optimizing module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+<suppressed ~12 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i..
+Finding unused cells or wires in module \cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i..
+Finding unused cells or wires in module \cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i..
+Finding unused cells or wires in module \cv32e40p_if_stage$cv32e40p_core.if_stage_i..
+Finding unused cells or wires in module \cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i..
+Finding unused cells or wires in module \cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i..
+Finding unused cells or wires in module \cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i..
+Removed 127 unused cells and 1261 unused wires.
+<suppressed ~135 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i...
+Checking module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i...
+Checking module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i...
+Checking module cv32e40p_if_stage$cv32e40p_core.if_stage_i...
+Checking module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i...
+Checking module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i...
+Checking module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/if_stage_i/frontend.rtlil
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i.
+Deleting now unused module cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i.
+Deleting now unused module cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i.
+Deleting now unused module cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i.
+Deleting now unused module cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i.
+Deleting now unused module cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i.
+<suppressed ~6 debug messages>
+
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_if_stage$cv32e40p_core.if_stage_i..
+Removed 12 unused cells and 12 unused wires.
+<suppressed ~24 debug messages>
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_if_stage$cv32e40p_core.if_stage_i...
+Found and reported 0 problems.
+
+11. Executing JSON backend.
+
+12. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/if_stage_i/flattened.rtlil
+
+13. Printing statistics.
+
+=== cv32e40p_if_stage$cv32e40p_core.if_stage_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      776 wires
+     7432 wire bits
+      776 public wires
+     7432 public wire bits
+       41 ports
+      535 port bits
+      654 cells
+       10   $add
+       25   $adff
+       12   $and
+      146   $eq
+        1   $ge
+        7   $gt
+       32   $logic_and
+       54   $logic_not
+       13   $logic_or
+        3   $lt
+      305   $mux
+        1   $ne
+        9   $not
+       20   $or
+       11   $reduce_or
+        5   $sub
+
+End of script. Logfile hash: 77b682d158, time: 1.26s, user: 1.22s, system: 0.08s, MEM: 171.48 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 85% 2x read_verilog (1 sec), 3% 1x hierarchy (0 sec), ...

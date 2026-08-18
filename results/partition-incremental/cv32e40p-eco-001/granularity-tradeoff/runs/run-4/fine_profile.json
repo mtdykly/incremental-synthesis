@@ -1,0 +1,40 @@
+{
+  "case_name": "cv32e40p-eco-001",
+  "timing_policy": {
+    "base_cache_build_included": false,
+    "correctness_check_included": false,
+    "main_time": "pipeline_core_seconds"
+  },
+  "totals": {
+    "pipeline_core_seconds": 20.987052,
+    "fine_rebuild_yosys_seconds": 2.9
+  },
+  "coarse_reuse_plan": {
+    "reusable_partitions": [
+      "cs_registers_i",
+      "ex_stage_i",
+      "if_stage_i",
+      "load_store_unit_i",
+      "sleep_unit_i"
+    ],
+    "dirty_partitions": [
+      "id_stage_i"
+    ],
+    "top_shell": {
+      "reasons": [
+        "top_environment_changed",
+        "top_implementation_changed"
+      ],
+      "status": "rebuild"
+    }
+  },
+  "fine_summary": {
+    "dirty_child_region_count": 1,
+    "new_frontend_primitive_cells_dirty": 5668,
+    "new_frontend_primitive_cells_reusable": 4721,
+    "new_frontend_primitive_cells_total": 10389,
+    "partition_count": 1,
+    "potential_frontend_reuse_ratio": 0.4544229473481567,
+    "reusable_child_region_count": 4
+  }
+}

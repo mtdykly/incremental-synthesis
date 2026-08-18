@@ -1,0 +1,965 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/gen_hwloop_regs.hwloop_regs_i/run_synth_partition.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v' to AST representation.
+Generating RTLIL representation for module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Generating RTLIL representation for module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Generating RTLIL representation for module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Generating RTLIL representation for module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Generating RTLIL representation for module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Generating RTLIL representation for module `\cv32e40p_core'.
+Generating RTLIL representation for module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Generating RTLIL representation for module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Generating RTLIL representation for module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Generating RTLIL representation for module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Generating RTLIL representation for module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Generating RTLIL representation for module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Generating RTLIL representation for module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Removing unused module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removing unused module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Removing unused module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Removing unused module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Removing unused module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Removing unused module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Removing unused module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removing unused module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Removing unused module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Removing unused module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Removing unused module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Removing unused module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Removing unused module `\cv32e40p_core'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Removing unused module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Removing unused module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Removed 24 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31833$11854 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31830$11852 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31827$11850 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31824$11848 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31821$11846 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31818$11844 in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 6 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31778$11865'.
+  Set init value: \i = 0
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31833$11854'.
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31830$11852'.
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31827$11850'.
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31824$11848'.
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31821$11846'.
+Found async reset \rst_n in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31818$11844'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31778$11865'.
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31836$11856'.
+     1/1: $0\i[31:0]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31833$11854'.
+     1/1: $0\hwlp_start_q[63:32]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31830$11852'.
+     1/1: $0\hwlp_start_q[31:0]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31827$11850'.
+     1/1: $0\hwlp_end_q[63:32]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31824$11848'.
+     1/1: $0\hwlp_end_q[31:0]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31821$11846'.
+     1/1: $0\hwlp_counter_q[63:32]
+Creating decoders for process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31818$11844'.
+     1/1: $0\hwlp_counter_q[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\i' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31836$11856'.
+  created $dff cell `$procdff$14526' with positive edge clock.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_start_q [63:32]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31833$11854'.
+  created $adff cell `$procdff$14531' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_start_q [31:0]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31830$11852'.
+  created $adff cell `$procdff$14536' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_end_q [63:32]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31827$11850'.
+  created $adff cell `$procdff$14541' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_end_q [31:0]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31824$11848'.
+  created $adff cell `$procdff$14546' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_counter_q [63:32]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31821$11846'.
+  created $adff cell `$procdff$14551' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.\hwlp_counter_q [31:0]' using process `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31818$11844'.
+  created $adff cell `$procdff$14556' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31778$11865'.
+Found and cleaned up 1 empty switch in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31836$11856'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31836$11856'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31833$11854'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31830$11852'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31827$11850'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31824$11848'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31821$11846'.
+Removing empty process `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31818$11844'.
+Cleaned up 1 empty switch.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~18 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 19 unused cells and 100 unused wires.
+<suppressed ~21 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/gen_hwloop_regs.hwloop_regs_i/frontend.rtlil
+
+8. Printing statistics.
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       49 wires
+     1652 wire bits
+       49 public wires
+     1652 public wire bits
+       12 ports
+      297 port bits
+       41 cells
+        6   $adff
+        4   $and
+        2   $ge
+        6   $logic_and
+        2   $lt
+       14   $mux
+        3   $not
+        2   $or
+        2   $sub
+
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+9. Executing FLATTEN pass (flatten design).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+
+13. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/gen_hwloop_regs.hwloop_regs_i/flattened.rtlil
+
+14. Printing statistics.
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       49 wires
+     1652 wire bits
+       49 public wires
+     1652 public wire bits
+       12 ports
+      297 port bits
+       41 cells
+        6   $adff
+        4   $and
+        2   $ge
+        6   $logic_and
+        2   $lt
+       14   $mux
+        3   $not
+        2   $or
+        2   $sub
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 41 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 39 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 38 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31839$11858.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31842$11861.
+Removed 2 multiplexer ports.
+<suppressed ~28 debug messages>
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 36 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 35 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 33 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+15.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$14556 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_041_, Q = \hwlp_counter_q [31:0]).
+Adding EN signal on $procdff$14551 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_043_, Q = \hwlp_counter_q [63:32]).
+Adding EN signal on $procdff$14546 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_011_ [31:0], Q = \hwlp_end_q [31:0]).
+Adding EN signal on $procdff$14541 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_011_ [63:32], Q = \hwlp_end_q [63:32]).
+Adding EN signal on $procdff$14536 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_002_ [31:0], Q = \hwlp_start_q [31:0]).
+Adding EN signal on $procdff$14531 ($adff) from module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i (D = \_002_ [63:32], Q = \hwlp_start_q [63:32]).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~2 debug messages>
+
+15.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+15.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port A of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812 ($lt).
+Converting cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812 ($lt) from signed to unsigned.
+Removed top 1 bits (of 2) from port A of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812 ($lt).
+Removed top 1 bits (of 3) from port B of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812 ($lt).
+Removed top 1 bits (of 2) from port B of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$ge$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31784$11813 ($ge).
+Converting cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$ge$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31784$11813 ($ge) from signed to unsigned.
+Removed top 1 bits (of 2) from port A of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$ge$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31784$11813 ($ge).
+Removed top 31 bits (of 32) from port B of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31788$11816 ($sub).
+Removed top 31 bits (of 32) from port B of cell cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.$sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31790$11817 ($sub).
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i:
+  creating $macc model for $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31788$11816 ($sub).
+  creating $macc model for $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31790$11817 ($sub).
+  creating $alu model for $macc $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31790$11817.
+  creating $alu model for $macc $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31788$11816.
+  creating $alu model for $lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812 ($lt): new $alu
+  creating $alu model for $ge$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31784$11813 ($ge): new $alu
+  creating $alu cell for $ge$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31784$11813: $auto$alumacc.cc:512:replace_alu$14569
+  creating $alu cell for $lt$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31783$11812: $auto$alumacc.cc:512:replace_alu$14582
+  creating $alu cell for $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31788$11816: $auto$alumacc.cc:512:replace_alu$14587
+  creating $alu cell for $sub$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31790$11817: $auto$alumacc.cc:512:replace_alu$14590
+  created 4 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~8 debug messages>
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 33 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 32 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 1 unused cells and 13 unused wires.
+<suppressed ~3 debug messages>
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+15.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 30 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~29 debug messages>
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 29 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 28 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+15.17.5. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 28 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31781$11810:
+      Old ports: A=32'11111111111111111111111111111111, B=0, Y=\_000_
+      New ports: A=1'1, B=1'0, Y=\_000_ [0]
+      New connections: \_000_ [31:1] = { \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] \_000_ [0] }
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31814$11840:
+      Old ports: A=\_000_, B=0, Y=\_001_ [31:0]
+      New ports: A=\_000_ [0], B=1'0, Y=\_001_ [0]
+      New connections: \_001_ [31:1] = { \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] \_001_ [0] }
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:31815$11841:
+      Old ports: A=0, B=\_000_, Y=\_001_ [63:32]
+      New ports: A=1'0, B=\_000_ [0], Y=\_001_ [32]
+      New connections: \_001_ [63:33] = { \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] \_001_ [32] }
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 3 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 28 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~5 debug messages>
+
+15.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+15.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 28 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.19.14. Executing OPT_SHARE pass.
+
+15.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+15.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+15.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Performed a total of 0 changes.
+
+15.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 28 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.19.22. Executing OPT_SHARE pass.
+
+15.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+
+15.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$c04af8dbf0e5d1d69bbccb2c7bd8a93fc9ef54dc\_90_alu for cells of type $alu.
+Using template $paramod$adbaf76fa5a3091a329503792521395f8ff4d1a4\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~734 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+<suppressed ~470 debug messages>
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 1039 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 1037 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 28 unused cells and 217 unused wires.
+<suppressed ~29 debug messages>
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing ABC pass (technology mapping using ABC).
+
+15.22.1. Extracting gate netlist of module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i' to `<abc-temp-dir>/input.blif'..
+
+15.22.1.1. Executed ABC.
+Extracted 817 gates and 1106 wires to a netlist network with 289 inputs and 194 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+15.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:            ANDNOT cells:        4
+ABC RESULTS:               MUX cells:      184
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:       60
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:       62
+ABC RESULTS:        internal signals:      623
+ABC RESULTS:           input signals:      289
+ABC RESULTS:          output signals:      194
+Removing temp directory.
+Removing global temp directory.
+
+15.23. Executing OPT pass (performing simple optimizations).
+
+15.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Computing hashes of 514 cells of `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Finding duplicate cells in `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removed a total of 0 cells.
+
+15.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 0 unused cells and 689 unused wires.
+<suppressed ~2 debug messages>
+
+15.23.5. Finished fast OPT passes.
+
+15.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'. Setting top module to cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+
+15.24.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+
+15.24.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Removed 0 unused modules.
+
+15.25. Printing statistics.
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      151 wires
+      939 wire bits
+       21 public wires
+      809 public wire bits
+       12 ports
+      297 port bits
+      514 cells
+        4   $_ANDNOT_
+        4   $_AND_
+      192   $_DFFE_PN0P_
+      184   $_MUX_
+        5   $_NAND_
+        2   $_NOT_
+        1   $_ORNOT_
+       60   $_OR_
+       62   $_XNOR_
+
+15.26. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Found and reported 0 problems.
+
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~4 debug messages>
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i...
+Found and reported 0 problems.
+
+18. Printing statistics.
+
+=== cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      146 wires
+      619 wire bits
+       16 public wires
+      489 public wire bits
+       12 ports
+      297 port bits
+      514 cells
+        4   $_ANDNOT_
+        4   $_AND_
+      192   $_DFFE_PN0P_
+      184   $_MUX_
+        5   $_NAND_
+        2   $_NOT_
+        1   $_ORNOT_
+       60   $_OR_
+       62   $_XNOR_
+
+19. Executing JSON backend.
+
+20. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/gen_hwloop_regs.hwloop_regs_i/synth.rtlil
+
+21. Executing Verilog backend.
+Dumping module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+
+End of script. Logfile hash: 18ecf8ba81, time: 1.40s, user: 1.25s, system: 0.08s, MEM: 175.12 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 74% 3x read_verilog (1 sec), 10% 1x abc (0 sec), ...

@@ -1,0 +1,11 @@
+{
+  "partition": "cs_registers_i",
+  "root_module": "cv32e40p_cs_registers$cv32e40p_core.cs_registers_i",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/partitions/cs_registers_i",
+  "reasons": [],
+  "action_wall_seconds": 0.017584,
+  "yosys_seconds": 0,
+  "partition_netlist_sha256": "d18f514a1032d1cc9d91e29fdf3671ae28c8b922bb38e96d8b27781c5f21c7bd"
+}

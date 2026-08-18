@@ -1,0 +1,233 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/linked/run_link_partitions.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/top-shell/top_shell.rtlil
+
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/partitions/data_memory_interface/synth.rtlil
+Replacing existing blackbox module \data_memory_interface.
+
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/partitions/immediate_generator/synth.rtlil
+Replacing existing blackbox module \immediate_generator.
+
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/partitions/instruction_decoder/synth.rtlil
+Replacing existing blackbox module \instruction_decoder.
+
+5. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/partitions/singlecycle_ctlpath/synth.rtlil
+Replacing existing blackbox module \singlecycle_ctlpath.
+
+6. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/partitions/singlecycle_datapath/synth.rtlil
+Replacing existing blackbox module \singlecycle_datapath.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+
+7.2. Analyzing design hierarchy..
+Top module:  \riscv_core
+Used module:     \data_memory_interface
+Used module:     \immediate_generator
+Used module:     \instruction_decoder
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
+Removed 0 unused modules.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module singlecycle_datapath...
+Checking module data_memory_interface...
+Checking module immediate_generator...
+Checking module riscv_core...
+Checking module instruction_decoder...
+Checking module singlecycle_ctlpath...
+Found and reported 0 problems.
+
+9. Printing statistics.
+
+=== singlecycle_datapath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    23265 wires
+    24462 wire bits
+       51 public wires
+     1248 public wire bits
+       18 ports
+      192 port bits
+    24367 cells
+      352   $_ANDNOT_
+     5062   $_AND_
+     1055   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+     1287   $_MUX_
+     9047   $_NAND_
+      115   $_NOR_
+      133   $_NOT_
+      670   $_ORNOT_
+     1572   $_OR_
+     2275   $_XNOR_
+     2798   $_XOR_
+
+=== data_memory_interface ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      152 wires
+      343 wire bits
+       13 public wires
+      204 public wire bits
+       13 ports
+      204 port bits
+      207 cells
+       14   $_ANDNOT_
+       45   $_AND_
+       64   $_MUX_
+       54   $_NAND_
+        3   $_NOR_
+        1   $_NOT_
+       25   $_ORNOT_
+        1   $_XOR_
+
+=== immediate_generator ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       76 wires
+      138 wire bits
+        2 public wires
+       64 public wire bits
+        2 ports
+       64 port bits
+      106 cells
+        9   $_ANDNOT_
+       26   $_AND_
+       63   $_NAND_
+        1   $_NOR_
+        1   $_NOT_
+        3   $_ORNOT_
+        3   $_OR_
+
+=== riscv_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       30 wires
+      345 wire bits
+       30 public wires
+      345 public wire bits
+       10 ports
+      168 port bits
+        5 submodules
+        1   data_memory_interface
+        1   immediate_generator
+        1   instruction_decoder
+        1   singlecycle_ctlpath
+        1   singlecycle_datapath
+
+=== instruction_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       64 wire bits
+        7 public wires
+       64 public wire bits
+        7 ports
+       64 port bits
+
+=== singlecycle_ctlpath ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       96 wires
+      117 wire bits
+       13 public wires
+       34 public wire bits
+       13 ports
+       34 port bits
+       97 cells
+       15   $_ANDNOT_
+       28   $_AND_
+        3   $_MUX_
+       30   $_NAND_
+        6   $_NOR_
+        4   $_NOT_
+        4   $_ORNOT_
+        4   $_OR_
+        2   $_XNOR_
+        1   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+    24777 riscv_core
+      207 data_memory_interface
+      106 immediate_generator
+       97 singlecycle_ctlpath
+    24367 singlecycle_datapath
+
+        +----------Count including submodules.
+        | 
+    23626 wires
+    25469 wire bits
+      116 public wires
+     1959 public wire bits
+       63 ports
+      726 port bits
+        - memories
+        - memory bits
+        - processes
+    24777 cells
+      390   $_ANDNOT_
+     5161   $_AND_
+     1055   $_DFFE_PP0P_
+        1   $_DFFE_PP1P_
+     1354   $_MUX_
+     9194   $_NAND_
+      125   $_NOR_
+      139   $_NOT_
+      702   $_ORNOT_
+     1579   $_OR_
+     2277   $_XNOR_
+     2800   $_XOR_
+        5 submodules
+        1   data_memory_interface
+        1   immediate_generator
+        1   instruction_decoder
+        1   singlecycle_ctlpath
+        1   singlecycle_datapath
+
+10. Executing JSON backend.
+
+11. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/incremental-profiled/linked/linked.rtlil
+
+12. Executing Verilog backend.
+Dumping module `\data_memory_interface'.
+Dumping module `\immediate_generator'.
+Dumping module `\instruction_decoder'.
+Dumping module `\riscv_core'.
+Dumping module `\singlecycle_ctlpath'.
+Dumping module `\singlecycle_datapath'.
+
+End of script. Logfile hash: 75595f5634, time: 0.37s, user: 0.56s, system: 0.16s, MEM: 54.60 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 28% 2x write_json (0 sec), 19% 2x write_verilog (0 sec), ...

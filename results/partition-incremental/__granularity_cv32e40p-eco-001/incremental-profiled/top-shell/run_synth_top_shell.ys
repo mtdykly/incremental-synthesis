@@ -1,0 +1,27 @@
+# Load elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/frontend_hier.json"
+
+# Replace partition implementations with blackboxes.
+blackbox cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+blackbox cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+blackbox cv32e40p_id_stage$cv32e40p_core.id_stage_i
+blackbox cv32e40p_if_stage$cv32e40p_core.if_stage_i
+blackbox cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+blackbox cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+
+hierarchy -check -top cv32e40p_core
+check
+
+# Synthesize only the top shell.
+synth -top cv32e40p_core
+opt_clean -purge
+check
+stat -top cv32e40p_core
+
+select -clear
+select cv32e40p_core
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-profiled/top-shell/top_shell.json"
+select -clear
+
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-profiled/top-shell/top_shell.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-profiled/top-shell/top_shell_netlist.v"

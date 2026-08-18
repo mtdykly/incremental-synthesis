@@ -1,0 +1,4 @@
+Method,Median runtime (s),Speedup vs Full,Time reduction (%),Area,Area overhead (%)
+Full,21.640000,1.000000,0.000000,30061.990,0.000000
+Coarse incremental,2.618717,8.263589,87.898720,30314.690,0.840596
+Fine incremental,2.146084,10.083482,90.082791,30314.690,0.840596

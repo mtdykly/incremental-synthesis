@@ -1,0 +1,1276 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/int_controller_i/run_synth_partition.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v' to AST representation.
+Generating RTLIL representation for module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Generating RTLIL representation for module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Generating RTLIL representation for module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Generating RTLIL representation for module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Generating RTLIL representation for module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Generating RTLIL representation for module `\cv32e40p_core'.
+Generating RTLIL representation for module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Generating RTLIL representation for module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Generating RTLIL representation for module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Generating RTLIL representation for module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Generating RTLIL representation for module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Generating RTLIL representation for module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Generating RTLIL representation for module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Removing unused module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removing unused module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Removing unused module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Removing unused module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Removing unused module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Removing unused module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Removing unused module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Removing unused module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Removing unused module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removing unused module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Removing unused module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Removing unused module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Removing unused module `\cv32e40p_core'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Removing unused module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Removing unused module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Removed 24 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37482$12836 in module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37479$12834 in module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37482$12836'.
+Found async reset \rst_n in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37479$12834'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37482$12836'.
+     1/1: $0\irq_sec_q[0:0]
+Creating decoders for process `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37479$12834'.
+     1/1: $0\irq_q[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.\irq_sec_q' using process `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37482$12836'.
+  created $adff cell `$procdff$14528' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.\irq_q' using process `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37479$12834'.
+  created $adff cell `$procdff$14533' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37482$12836'.
+Removing empty process `cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37479$12834'.
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+<suppressed ~4 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 5 unused cells and 1109 unused wires.
+<suppressed ~6 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/int_controller_i/frontend.rtlil
+
+8. Printing statistics.
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      546 wires
+     2845 wire bits
+      546 public wires
+     2845 public wire bits
+       13 ports
+      111 port bits
+      535 cells
+        2   $adff
+        2   $and
+        1   $logic_and
+      528   $mux
+        2   $reduce_or
+
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+9. Executing FLATTEN pass (flatten design).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+
+13. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/int_controller_i/flattened.rtlil
+
+14. Printing statistics.
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      546 wires
+     2845 wire bits
+      546 public wires
+     2845 public wire bits
+       13 ports
+      111 port bits
+      535 cells
+        2   $adff
+        2   $and
+        1   $logic_and
+      528   $mux
+        2   $reduce_or
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 535 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37485$12838.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37486$12839.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37487$12840.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37489$12842.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37490$12843.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37491$12844.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37492$12845.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37493$12846.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37494$12847.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37495$12848.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37496$12849.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37497$12850.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37498$12851.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37499$12852.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37500$12853.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37501$12854.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37502$12855.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37503$12856.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37504$12857.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37505$12858.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37506$12859.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37507$12860.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37508$12861.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37509$12862.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37510$12863.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37511$12864.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37512$12865.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37513$12866.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37514$12867.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37515$12868.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37516$12869.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37518$12871.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37519$12872.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37520$12873.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37521$12874.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37522$12875.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37523$12876.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37524$12877.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37525$12878.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37526$12879.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37527$12880.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37528$12881.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37529$12882.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37530$12883.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37531$12884.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37532$12885.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37533$12886.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37534$12887.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37535$12888.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37536$12889.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37537$12890.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37538$12891.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37539$12892.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37540$12893.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37541$12894.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37542$12895.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37543$12896.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37544$12897.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37546$12899.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37547$12900.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37548$12901.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37549$12902.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37550$12903.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37551$12904.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37552$12905.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37553$12906.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37554$12907.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37555$12908.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37556$12909.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37557$12910.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37558$12911.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37559$12912.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37560$12913.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37561$12914.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37562$12915.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37563$12916.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37564$12917.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37565$12918.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37566$12919.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37567$12920.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37568$12921.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37569$12922.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37570$12923.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37571$12924.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37573$12926.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37574$12927.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37575$12928.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37576$12929.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37577$12930.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37578$12931.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37579$12932.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37580$12933.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37581$12934.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37582$12935.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37583$12936.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37584$12937.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37585$12938.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37586$12939.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37587$12940.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37588$12941.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37589$12942.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37590$12943.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37591$12944.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37592$12945.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37593$12946.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37594$12947.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37595$12948.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37596$12949.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37597$12950.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37599$12952.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37600$12953.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37601$12954.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37602$12955.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37603$12956.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37604$12957.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37605$12958.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37606$12959.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37607$12960.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37608$12961.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37609$12962.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37610$12963.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37611$12964.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37612$12965.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37613$12966.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37614$12967.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37615$12968.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37616$12969.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37617$12970.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37618$12971.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37619$12972.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37620$12973.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37621$12974.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37622$12975.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37624$12977.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37625$12978.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37626$12979.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37627$12980.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37628$12981.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37629$12982.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37630$12983.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37631$12984.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37632$12985.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37633$12986.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37634$12987.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37635$12988.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37636$12989.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37637$12990.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37638$12991.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37639$12992.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37640$12993.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37641$12994.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37642$12995.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37643$12996.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37644$12997.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37645$12998.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37646$12999.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37648$13001.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37649$13002.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37650$13003.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37651$13004.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37652$13005.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37653$13006.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37654$13007.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37655$13008.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37656$13009.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37657$13010.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37658$13011.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37659$13012.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37660$13013.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37661$13014.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37662$13015.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37663$13016.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37664$13017.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37665$13018.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37666$13019.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37667$13020.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37668$13021.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37669$13022.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37671$13024.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37672$13025.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37673$13026.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37674$13027.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37675$13028.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37676$13029.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37677$13030.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37678$13031.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37679$13032.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37680$13033.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37681$13034.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37682$13035.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37683$13036.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37684$13037.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37685$13038.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37686$13039.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37687$13040.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37688$13041.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37689$13042.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37690$13043.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37691$13044.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37693$13046.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37694$13047.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37695$13048.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37696$13049.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37697$13050.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37698$13051.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37699$13052.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37700$13053.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37701$13054.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37702$13055.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37703$13056.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37704$13057.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37705$13058.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37706$13059.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37707$13060.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37708$13061.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37709$13062.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37710$13063.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37711$13064.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37712$13065.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37714$13067.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37715$13068.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37716$13069.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37717$13070.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37718$13071.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37719$13072.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37720$13073.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37721$13074.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37722$13075.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37723$13076.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37724$13077.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37725$13078.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37726$13079.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37727$13080.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37728$13081.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37729$13082.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37730$13083.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37731$13084.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37732$13085.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37734$13087.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37735$13088.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37736$13089.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37737$13090.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37738$13091.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37739$13092.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37740$13093.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37741$13094.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37742$13095.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37743$13096.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37744$13097.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37745$13098.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37746$13099.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37747$13100.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37748$13101.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37749$13102.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37750$13103.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37751$13104.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37753$13106.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37754$13107.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37755$13108.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37756$13109.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37757$13110.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37758$13111.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37759$13112.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37760$13113.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37761$13114.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37762$13115.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37763$13116.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37764$13117.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37765$13118.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37766$13119.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37767$13120.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37768$13121.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37769$13122.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37771$13124.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37772$13125.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37773$13126.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37774$13127.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37775$13128.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37776$13129.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37777$13130.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37778$13131.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37779$13132.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37780$13133.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37781$13134.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37782$13135.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37783$13136.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37784$13137.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37785$13138.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37786$13139.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37788$13141.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37789$13142.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37790$13143.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37791$13144.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37792$13145.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37793$13146.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37794$13147.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37795$13148.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37796$13149.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37797$13150.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37798$13151.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37799$13152.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37800$13153.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37801$13154.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37802$13155.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37804$13157.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37805$13158.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37806$13159.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37807$13160.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37808$13161.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37809$13162.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37810$13163.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37811$13164.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37812$13165.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37813$13166.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37814$13167.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37815$13168.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37816$13169.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37817$13170.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37819$13172.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37820$13173.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37821$13174.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37822$13175.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37823$13176.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37824$13177.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37825$13178.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37826$13179.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37827$13180.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37828$13181.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37829$13182.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37830$13183.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37831$13184.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37833$13186.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37834$13187.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37835$13188.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37836$13189.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37837$13190.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37838$13191.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37839$13192.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37840$13193.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37841$13194.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37842$13195.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37843$13196.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37844$13197.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37846$13199.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37847$13200.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37848$13201.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37849$13202.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37850$13203.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37851$13204.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37852$13205.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37853$13206.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37854$13207.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37855$13208.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37856$13209.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37858$13211.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37859$13212.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37860$13213.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37861$13214.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37862$13215.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37863$13216.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37864$13217.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37865$13218.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37866$13219.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37867$13220.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37869$13222.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37870$13223.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37871$13224.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37872$13225.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37873$13226.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37874$13227.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37875$13228.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37876$13229.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37877$13230.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37879$13232.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37880$13233.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37881$13234.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37882$13235.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37883$13236.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37884$13237.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37885$13238.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37886$13239.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37888$13241.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37889$13242.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37890$13243.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37891$13244.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37892$13245.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37893$13246.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37894$13247.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37896$13249.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37897$13250.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37898$13251.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37899$13252.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37900$13253.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37901$13254.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37903$13256.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37904$13257.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37905$13258.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37906$13259.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37907$13260.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37909$13262.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37910$13263.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37911$13264.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37912$13265.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37914$13267.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37915$13268.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37916$13269.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37918$13271.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37919$13272.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37921$13274.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37924$13277.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37925$13278.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37926$13279.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37927$13280.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37928$13281.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37929$13282.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37930$13283.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37931$13284.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37932$13285.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37933$13286.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37934$13287.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37935$13288.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37936$13289.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37937$13290.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37938$13291.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37939$13292.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37940$13293.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37941$13294.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37942$13295.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37943$13296.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37944$13297.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37945$13298.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37946$13299.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37947$13300.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37948$13301.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37949$13302.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37950$13303.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37951$13304.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37952$13305.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37953$13306.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37954$13307.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37956$13309.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37957$13310.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37958$13311.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37959$13312.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37960$13313.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37961$13314.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37962$13315.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37963$13316.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37964$13317.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37965$13318.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37966$13319.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37967$13320.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37968$13321.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37969$13322.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37970$13323.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37971$13324.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37972$13325.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37973$13326.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37974$13327.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37975$13328.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37976$13329.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37977$13330.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37978$13331.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37979$13332.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37980$13333.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37981$13334.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37982$13335.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37983$13336.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37984$13337.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37985$13338.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37987$13340.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37988$13341.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37989$13342.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37990$13343.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37991$13344.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37992$13345.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37993$13346.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37994$13347.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37995$13348.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37996$13349.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37997$13350.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37998$13351.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37999$13352.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38000$13353.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38001$13354.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38002$13355.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38003$13356.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38004$13357.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38005$13358.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38006$13359.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38007$13360.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38008$13361.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38009$13362.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38010$13363.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38011$13364.
+    dead port 1/2 on $mux $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:38012$13365.
+Removed 496 multiplexer ports.
+<suppressed ~529 debug messages>
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 0 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 1 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 2 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 4 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 5 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 6 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 8 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 9 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 10 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 12 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 13 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 14 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Setting constant 0-bit at position 15 on $procdff$14533 ($adff) from module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 496 unused wires.
+<suppressed ~1 debug messages>
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+15.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 0 changes.
+
+15.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 5) from mux cell cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37923$13276 ($mux).
+Removed top 2 bits (of 5) from mux cell cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37955$13308 ($mux).
+Removed top 1 bits (of 5) from mux cell cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.$ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37986$13339 ($mux).
+Removed top 1 bits (of 5) from wire cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i._0010_.
+Removed top 2 bits (of 5) from wire cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i._0009_.
+Removed top 3 bits (of 5) from wire cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i._0008_.
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i:
+  created 0 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 39 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+<suppressed ~23 debug messages>
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 25 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+15.17.5. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 25 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37670$13023:
+      Old ports: A=5'00111, B=5'00011, Y=\_0018_
+      New ports: A=1'1, B=1'0, Y=\_0018_ [2]
+      New connections: { \_0018_ [4:3] \_0018_ [1:0] } = 4'0011
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37692$13045:
+      Old ports: A=\_0018_, B=5'01011, Y=\_0019_
+      New ports: A={ 1'0 \_0018_ [2] }, B=2'10, Y=\_0019_ [3:2]
+      New connections: { \_0019_ [4] \_0019_ [1:0] } = 3'011
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+    Consolidated identical input bits for $mux cell $ternary$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-base/core/common/normalized_cv32e40p.v:37787$13140:
+      Old ports: A=\_0019_, B=5'10000, Y=\_0024_
+      New ports: A={ 1'0 \_0019_ [3:2] 1'1 }, B=4'1000, Y={ \_0024_ [4:2] \_0024_ [0] }
+      New connections: \_0024_ [1] = \_0024_ [0]
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 3 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 25 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+<suppressed ~1 debug messages>
+
+15.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+15.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Performed a total of 0 changes.
+
+15.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 25 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.19.14. Executing OPT_SHARE pass.
+
+15.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+
+15.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.19.18. Finished fast OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~102 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+<suppressed ~2 debug messages>
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 201 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing ABC pass (technology mapping using ABC).
+
+15.22.1. Extracting gate netlist of module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i' to `<abc-temp-dir>/input.blif'..
+
+15.22.1.1. Executed ABC.
+Extracted 181 gates and 267 wires to a netlist network with 84 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+15.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       57
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:              NAND cells:       82
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:      176
+ABC RESULTS:           input signals:       84
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+Removing global temp directory.
+
+15.23. Executing OPT pass (performing simple optimizations).
+
+15.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Computing hashes of 163 cells of `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Finding duplicate cells in `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removed a total of 0 cells.
+
+15.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 118 unused wires.
+<suppressed ~1 debug messages>
+
+15.23.5. Finished fast OPT passes.
+
+15.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'. Setting top module to cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+
+15.24.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+
+15.24.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Removed 0 unused modules.
+
+15.25. Printing statistics.
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      153 wires
+      313 wire bits
+       17 public wires
+      177 public wire bits
+       13 ports
+      111 port bits
+      163 cells
+        2   $_ANDNOT_
+       57   $_AND_
+       20   $_DFF_PN0_
+       82   $_NAND_
+        1   $_ORNOT_
+        1   $_OR_
+
+15.26. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~4 debug messages>
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i...
+Found and reported 0 problems.
+
+18. Printing statistics.
+
+=== cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      149 wires
+      247 wire bits
+       13 public wires
+      111 public wire bits
+       13 ports
+      111 port bits
+      163 cells
+        2   $_ANDNOT_
+       57   $_AND_
+       20   $_DFF_PN0_
+       82   $_NAND_
+        1   $_ORNOT_
+        1   $_OR_
+
+19. Executing JSON backend.
+
+20. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/fine-cache/id_stage_i/regions/int_controller_i/synth.rtlil
+
+21. Executing Verilog backend.
+Dumping module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+
+End of script. Logfile hash: dbba8a6df7, time: 1.32s, user: 1.18s, system: 0.11s, MEM: 174.57 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 79% 3x read_verilog (1 sec), 6% 1x abc (0 sec), ...

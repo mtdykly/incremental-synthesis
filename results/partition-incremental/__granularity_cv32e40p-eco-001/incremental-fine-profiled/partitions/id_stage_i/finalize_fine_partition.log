@@ -1,0 +1,73 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/finalize_fine_partition.ys' --
+
+1. Executing JSON frontend.
+Importing module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i from JSON tree.
+Importing module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i from JSON tree.
+Importing module cv32e40p_id_stage$cv32e40p_core.id_stage_i from JSON tree.
+Importing module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i from JSON tree.
+Importing module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i from JSON tree.
+Importing module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:     \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:     \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:     \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:     \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Used module:     \cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i
+Used module:     \cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i
+Used module:     \cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i
+Used module:     \cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i
+Used module:     \cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+Deleting now unused module cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i.
+Deleting now unused module cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i.
+Deleting now unused module cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i.
+Deleting now unused module cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i.
+Deleting now unused module cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i.
+<suppressed ~5 debug messages>
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+
+4.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_id_stage$cv32e40p_core.id_stage_i
+Removed 0 unused modules.
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_id_stage$cv32e40p_core.id_stage_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/incremental-fine-profiled/partitions/id_stage_i/synth.rtlil
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+
+End of script. Logfile hash: f88ac1cb65, time: 0.51s, user: 0.61s, system: 0.08s, MEM: 117.91 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 54% 2x read_json (0 sec), 14% 2x write_json (0 sec), ...

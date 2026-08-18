@@ -1,0 +1,21 @@
+# Read mapped top shell.
+read_verilog -sv "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/top-shell/mapped_netlist.v"
+
+# Read mapped partitions.
+# data_memory_interface -> data_memory_interface
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/partitions/data_memory_interface/mapped.json"
+# singlecycle_ctlpath -> singlecycle_ctlpath
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/partitions/singlecycle_ctlpath/mapped.json"
+# singlecycle_datapath -> singlecycle_datapath
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/partitions/singlecycle_datapath/mapped.json"
+
+hierarchy -top riscv_core
+
+# Flatten hierarchy only for final measurement.
+# Do NOT run abc or synthesis again here.
+flatten -noscopeinfo
+
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/linked/linked_mapped_netlist.v"
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/linked/area.rpt" stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/eco-007/granularity-tradeoff/area/fine/linked/stat.json" stat -top riscv_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib" -json

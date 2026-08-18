@@ -1,0 +1,222 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/load_store_unit_i/run_prepare_partition_frontend.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v
+Parsing SystemVerilog input from `/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v' to AST representation.
+Generating RTLIL representation for module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Generating RTLIL representation for module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Generating RTLIL representation for module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Generating RTLIL representation for module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Generating RTLIL representation for module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Generating RTLIL representation for module `\cv32e40p_core'.
+Generating RTLIL representation for module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Generating RTLIL representation for module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Generating RTLIL representation for module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Generating RTLIL representation for module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Generating RTLIL representation for module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Generating RTLIL representation for module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Generating RTLIL representation for module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i'.
+Generating RTLIL representation for module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i'.
+Generating RTLIL representation for module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Generating RTLIL representation for module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Generating RTLIL representation for module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Generating RTLIL representation for module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+
+2.2. Analyzing design hierarchy..
+Top module:  \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+Used module:     \cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i
+Removing unused module `\cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i'.
+Removing unused module `\cv32e40p_register_file$cv32e40p_core.id_stage_i.register_file_i'.
+Removing unused module `\cv32e40p_prefetch_controller$cv32e40p_core.if_stage_i.prefetch_buffer_i.prefetch_controller_i'.
+Removing unused module `\cv32e40p_prefetch_buffer$cv32e40p_core.if_stage_i.prefetch_buffer_i'.
+Removing unused module `\cv32e40p_popcnt$cv32e40p_core.ex_stage_i.alu_i.popcnt_i'.
+Removing unused module `\cv32e40p_obi_interface$cv32e40p_core.if_stage_i.prefetch_buffer_i.instruction_obi_i'.
+Removing unused module `\cv32e40p_mult$cv32e40p_core.ex_stage_i.mult_i'.
+Removing unused module `\cv32e40p_int_controller$cv32e40p_core.id_stage_i.int_controller_i'.
+Removing unused module `\cv32e40p_if_stage$cv32e40p_core.if_stage_i'.
+Removing unused module `\cv32e40p_id_stage$cv32e40p_core.id_stage_i'.
+Removing unused module `\cv32e40p_hwloop_regs$cv32e40p_core.id_stage_i.gen_hwloop_regs.hwloop_regs_i'.
+Removing unused module `\cv32e40p_fifo$cv32e40p_core.if_stage_i.prefetch_buffer_i.fifo_i'.
+Removing unused module `\cv32e40p_ff_one$cv32e40p_core.ex_stage_i.alu_i.ff_one_i'.
+Removing unused module `\cv32e40p_ex_stage$cv32e40p_core.ex_stage_i'.
+Removing unused module `\cv32e40p_decoder$cv32e40p_core.id_stage_i.decoder_i'.
+Removing unused module `\cv32e40p_cs_registers$cv32e40p_core.cs_registers_i'.
+Removing unused module `\cv32e40p_core'.
+Removing unused module `\cv32e40p_controller$cv32e40p_core.id_stage_i.controller_i'.
+Removing unused module `\cv32e40p_compressed_decoder$cv32e40p_core.if_stage_i.compressed_decoder_i'.
+Removing unused module `\cv32e40p_clock_gate$cv32e40p_core.sleep_unit_i.core_clock_gate_i'.
+Removing unused module `\cv32e40p_alu_div$cv32e40p_core.ex_stage_i.alu_i.alu_div_i'.
+Removing unused module `\cv32e40p_alu$cv32e40p_core.ex_stage_i.alu_i'.
+Removing unused module `\cv32e40p_aligner$cv32e40p_core.if_stage_i.aligner_i'.
+Removed 23 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39316$13546 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39313$13544 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39310$13542 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39307$13540 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39304$13538 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39301$13536 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Marked 1 switch rules as full_case in process $proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39298$13534 in module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 7 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39316$13546'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39313$13544'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39310$13542'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39307$13540'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39304$13538'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39301$13536'.
+Found async reset \rst_n in `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39298$13534'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39316$13546'.
+     1/1: $0\rdata_q[31:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39313$13544'.
+     1/1: $0\rdata_offset_q[1:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39310$13542'.
+     1/1: $0\data_we_q[0:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39307$13540'.
+     1/1: $0\data_type_q[1:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39304$13538'.
+     1/1: $0\data_sign_ext_q[1:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39301$13536'.
+     1/1: $0\data_load_event_q[0:0]
+Creating decoders for process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39298$13534'.
+     1/1: $0\cnt_q[1:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\rdata_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39316$13546'.
+  created $adff cell `$procdff$14583' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\rdata_offset_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39313$13544'.
+  created $adff cell `$procdff$14588' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\data_we_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39310$13542'.
+  created $adff cell `$procdff$14593' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\data_type_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39307$13540'.
+  created $adff cell `$procdff$14598' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\data_sign_ext_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39304$13538'.
+  created $adff cell `$procdff$14603' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\data_load_event_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39301$13536'.
+  created $adff cell `$procdff$14608' with positive edge clock and positive level reset.
+Creating register for signal `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.\cnt_q' using process `\cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39298$13534'.
+  created $adff cell `$procdff$14613' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39316$13546'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39313$13544'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39310$13542'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39307$13540'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39304$13538'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39301$13536'.
+Removing empty process `cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.$proc$/workspace/incremental-synthesis/benchmarks/cv32e40p-eco-001-new/core/common/normalized_cv32e40p.v:39298$13534'.
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i.
+Optimizing module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i.
+<suppressed ~14 debug messages>
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i..
+Finding unused cells or wires in module \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i..
+Removed 42 unused cells and 426 unused wires.
+<suppressed ~45 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i...
+Checking module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/load_store_unit_i/frontend.rtlil
+
+-- Executing script file `/workspace/incremental-synthesis/partition-incremental/yosys/synth_partition.ys' --
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module cv32e40p_obi_interface$cv32e40p_core.load_store_unit_i.data_obi_i.
+<suppressed ~1 debug messages>
+
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i...
+Found and reported 0 problems.
+
+11. Executing JSON backend.
+
+12. Executing RTLIL backend.
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/new/partition-frontends/load_store_unit_i/flattened.rtlil
+
+13. Printing statistics.
+
+=== cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      288 wires
+     2776 wire bits
+      288 public wires
+     2776 public wire bits
+       32 ports
+      265 port bits
+      229 cells
+        2   $add
+        7   $adff
+       58   $eq
+       11   $logic_and
+       23   $logic_not
+        2   $logic_or
+        1   $lt
+      107   $mux
+        2   $not
+        9   $or
+        5   $reduce_or
+        2   $sub
+
+End of script. Logfile hash: 370069d671, time: 1.19s, user: 1.15s, system: 0.08s, MEM: 171.47 MB peak
+Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 91% 2x read_verilog (1 sec), 4% 1x hierarchy (0 sec), ...

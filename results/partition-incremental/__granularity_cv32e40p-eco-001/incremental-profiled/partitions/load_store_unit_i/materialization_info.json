@@ -1,0 +1,11 @@
+{
+  "partition": "load_store_unit_i",
+  "root_module": "cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i",
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "source_path": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_cv32e40p-eco-001/base/partitions/load_store_unit_i",
+  "reasons": [],
+  "action_wall_seconds": 0.010499,
+  "yosys_seconds": 0,
+  "partition_netlist_sha256": "c9087ec189da28d2aa7915f4f7921cfba71fe3813cde4416e2d98594b1419d0d"
+}

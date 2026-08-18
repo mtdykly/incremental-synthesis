@@ -1,0 +1,27 @@
+# Read mapped top shell.
+read_verilog -sv "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/top-shell/mapped_netlist.v"
+
+# Read mapped partitions.
+# cs_registers_i -> cv32e40p_cs_registers$cv32e40p_core.cs_registers_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/cs_registers_i/mapped.json"
+# ex_stage_i -> cv32e40p_ex_stage$cv32e40p_core.ex_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/ex_stage_i/mapped.json"
+# id_stage_i -> cv32e40p_id_stage$cv32e40p_core.id_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/id_stage_i/mapped.json"
+# if_stage_i -> cv32e40p_if_stage$cv32e40p_core.if_stage_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/if_stage_i/mapped.json"
+# load_store_unit_i -> cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/load_store_unit_i/mapped.json"
+# sleep_unit_i -> cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i
+read_json "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/partitions/sleep_unit_i/mapped.json"
+
+hierarchy -top cv32e40p_core
+
+# Flatten hierarchy only for final measurement.
+# Do NOT run abc or synthesis again here.
+flatten -noscopeinfo
+
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/linked/linked_mapped_netlist.v"
+
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/linked/area.rpt" stat -top cv32e40p_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib"
+tee -o "/workspace/incremental-synthesis/results/partition-incremental/cv32e40p-eco-001/granularity-tradeoff/area/coarse/linked/stat.json" stat -top cv32e40p_core -liberty "/workspace/incremental-synthesis/partition-incremental/area-analysis/lib/NangateOpenCellLibrary_typical.lib" -json

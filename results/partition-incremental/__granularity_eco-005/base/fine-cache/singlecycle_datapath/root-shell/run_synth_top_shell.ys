@@ -1,0 +1,28 @@
+# Load elaborated hierarchical design.
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/frontend_hier.json"
+
+# Replace partition implementations with blackboxes.
+blackbox $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\register
+blackbox $paramod\adder\WIDTH=s32'00000000000000000000000000100000
+blackbox $paramod\multiplexer2\WIDTH=s32'00000000000000000000000000100000
+blackbox $paramod\multiplexer4\WIDTH=s32'00000000000000000000000000100000
+blackbox $paramod\multiplexer8\WIDTH=s32'00000000000000000000000000100000
+blackbox alu
+blackbox regfile
+
+hierarchy -check -top singlecycle_datapath
+check
+
+# Synthesize only the top shell.
+synth -top singlecycle_datapath
+opt_clean -purge
+check
+stat -top singlecycle_datapath
+
+select -clear
+select singlecycle_datapath
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/root-shell/top_shell.json"
+select -clear
+
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/root-shell/top_shell.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/fine-cache/singlecycle_datapath/root-shell/top_shell_netlist.v"

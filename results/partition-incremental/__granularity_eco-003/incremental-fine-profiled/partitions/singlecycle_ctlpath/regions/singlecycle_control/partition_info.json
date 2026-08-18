@@ -1,0 +1,7 @@
+{
+  "partition_name": "singlecycle_control",
+  "root_module": "singlecycle_control",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-003/new/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
+  "flatten_internal": true
+}

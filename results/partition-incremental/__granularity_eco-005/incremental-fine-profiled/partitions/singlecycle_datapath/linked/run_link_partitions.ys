@@ -1,0 +1,30 @@
+# Load synthesized top shell in native RTLIL format.
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/root-shell/top_shell.rtlil"
+
+# Load each independently synthesized partition.
+# Existing blackbox partition definitions in the top shell
+# are replaced by the real RTLIL implementations.
+# adder_pc_plus_4 -> $paramod\\adder\\WIDTH=s32'00000000000000000000000000100000
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/adder_pc_plus_4/synth.rtlil"
+# alu -> alu
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/alu/synth.rtlil"
+# mux_next_pc_select -> $paramod\\multiplexer4\\WIDTH=s32'00000000000000000000000000100000
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_next_pc_select/synth.rtlil"
+# mux_operand_a -> $paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_operand_a/synth.rtlil"
+# mux_reg_writeback -> $paramod\\multiplexer8\\WIDTH=s32'00000000000000000000000000100000
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/mux_reg_writeback/synth.rtlil"
+# program_counter -> $paramod$e358a763f16798cd10903dfd37e7986c0fbbe40f\\register
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/program_counter/synth.rtlil"
+# regfile -> regfile
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/regions/regfile/synth.rtlil"
+
+# Validate the reconstructed hierarchy.
+hierarchy -check -top singlecycle_datapath
+check
+stat -top singlecycle_datapath
+
+# Export linked design.
+write_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/linked/linked.json"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/linked/linked.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/incremental-fine-profiled/partitions/singlecycle_datapath/linked/linked_netlist.v"

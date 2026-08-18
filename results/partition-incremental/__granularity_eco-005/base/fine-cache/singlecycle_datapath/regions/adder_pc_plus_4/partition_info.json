@@ -1,0 +1,7 @@
+{
+  "partition_name": "adder_pc_plus_4",
+  "root_module": "$paramod\\adder\\WIDTH=s32'00000000000000000000000000100000",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-005/base/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
+  "flatten_internal": true
+}

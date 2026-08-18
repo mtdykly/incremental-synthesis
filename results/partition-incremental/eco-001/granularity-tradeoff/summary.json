@@ -1,0 +1,50 @@
+{
+  "case_name": "eco-001",
+  "repeat_count": 5,
+  "timing_policy": {
+    "full": "full generic synthesis",
+    "coarse": "coarse incremental core: detection + materialization + link",
+    "fine": "coarse detection + fine detection + fine materialization + outer link",
+    "base_cache_build_included": false,
+    "correctness_check_included": false,
+    "liberty_mapping_included_in_runtime": false
+  },
+  "runtime": {
+    "full_median_seconds": 2.43,
+    "coarse_median_seconds": 2.546293,
+    "fine_median_seconds": 2.618849,
+    "coarse_speedup": 0.9543285081489052,
+    "fine_speedup": 0.9278885495116367,
+    "coarse_time_reduction_percent": -4.785720164609043,
+    "fine_time_reduction_percent": -7.771563786008223,
+    "fine_vs_coarse_time_reduction_percent": -2.8494756887758035
+  },
+  "area": {
+    "full": {
+      "total": 11386.396,
+      "comb": 6730.332,
+      "seq": 4656.064,
+      "cells": 6212
+    },
+    "coarse": {
+      "total": 11640.426,
+      "comb": 6984.361999999999,
+      "seq": 4656.064,
+      "cells": 6372,
+      "overhead_percent": 2.2309956548147354
+    },
+    "fine": {
+      "total": 11641.756,
+      "comb": 6985.691999999999,
+      "seq": 4656.064,
+      "cells": 6376,
+      "overhead_percent": 2.242676260337325
+    }
+  },
+  "granularity": {
+    "coarse_dirty_partition_count": 1,
+    "fine_dirty_child_region_count": 1,
+    "fine_reusable_child_region_count": 2,
+    "fine_potential_frontend_reuse_ratio_within_dirty_partitions": 0.9145299145299145
+  }
+}
