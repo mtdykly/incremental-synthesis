@@ -23,6 +23,7 @@ PLANNING_DIR="$REPO_ROOT/partition-incremental/scripts/planning"
 BASE_OUT="$CASE_OUT/base"
 NEW_OUT="$CASE_OUT/new"
 PLAN_OUT="$CASE_OUT/plan"
+BASE_MANIFEST="$BASE_OUT/partition_manifest.json"
 
 EXPORT_HIERARCHY="$PIPELINE_DIR/export_hierarchy.sh"
 EXTRACT_PARTITIONS="$PIPELINE_DIR/extract_first_level_partitions.py"
@@ -36,6 +37,9 @@ TOP_SCRIPT="$PIPELINE_DIR/synth_top_shell.sh"
 
 BASE_SIGNATURES="$BASE_OUT/partition_signatures.json"
 BASE_PARTITIONS="$BASE_OUT/partitions"
+TOP_MODULE="$(
+    jq -r '.top.module_name' "$BASE_MANIFEST"
+)"
 
 YOSYS_VERSION="$(yosys -V | head -n 1)"
 
@@ -47,7 +51,7 @@ fi
 
 for required_file in \
     "$BASE_SIGNATURES" \
-    "$BASE_OUT/partition_manifest.json"
+    "$BASE_MANIFEST"
 do
     if [[ ! -s "$required_file" ]]; then
         echo "ERROR: Base cache information is missing:"
@@ -59,6 +63,12 @@ done
 if [[ ! -d "$BASE_PARTITIONS" ]]; then
     echo "ERROR: Base partition cache does not exist:"
     echo "  $BASE_PARTITIONS"
+    exit 1
+fi
+
+if [[ -z "$TOP_MODULE" || "$TOP_MODULE" == "null" ]]; then
+    echo "ERROR: top.module_name is missing from Base manifest:"
+    echo "  $BASE_MANIFEST"
     exit 1
 fi
 
@@ -74,7 +84,7 @@ echo "============================================================"
 "$EXPORT_HIERARCHY" \
     "$NEW_SOURCE_DIR" \
     "$NEW_OUT" \
-    riscv_core
+    "$TOP_MODULE"
 
 echo
 echo "============================================================"
@@ -83,7 +93,7 @@ echo "============================================================"
 
 python3 "$EXTRACT_PARTITIONS" \
     "$NEW_OUT/frontend_hier.json" \
-    --top riscv_core \
+    --top "$TOP_MODULE" \
     --output "$NEW_OUT/partition_manifest.json"
 
 echo

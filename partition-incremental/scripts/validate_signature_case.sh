@@ -4,7 +4,7 @@ set -euo pipefail
 
 usage() {
     echo "Usage:"
-    echo "  $0 <case_name> <base_source_dir> <new_source_dir>"
+    echo "  $0 <case_name> <base_source_dir> <new_source_dir> [top_module]"
 }
 
 if [[ $# -lt 3 || $# -gt 4 ]]; then
