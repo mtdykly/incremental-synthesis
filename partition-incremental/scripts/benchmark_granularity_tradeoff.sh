@@ -86,45 +86,48 @@ fi
 # Existing repository scripts
 # ============================================================
 
-SCRIPT_DIR="$REPO_ROOT/partition-incremental/scripts"
+SCRIPT_ROOT="$REPO_ROOT/partition-incremental/scripts"
+PIPELINE_DIR="$SCRIPT_ROOT/pipeline"
+PLANNING_DIR="$SCRIPT_ROOT/planning"
+CHECKS_DIR="$SCRIPT_ROOT/checks"
 
-SYNTH_FULL="$SCRIPT_DIR/synth_full_reference.sh"
+SYNTH_FULL="$PIPELINE_DIR/synth_full_reference.sh"
 
-RUN_COARSE_PROFILED="$SCRIPT_DIR/run_profiled_incremental_synthesis.sh"
+RUN_COARSE_PROFILED="$SCRIPT_ROOT/run_profiled_incremental_synthesis.sh"
 
-EXPORT_HIERARCHY="$SCRIPT_DIR/export_hierarchy.sh"
+EXPORT_HIERARCHY="$PIPELINE_DIR/export_hierarchy.sh"
 
-EXTRACT_PARTITIONS="$SCRIPT_DIR/extract_first_level_partitions.py"
+EXTRACT_PARTITIONS="$PIPELINE_DIR/extract_first_level_partitions.py"
 
-PREPARE_FRONTENDS="$SCRIPT_DIR/prepare_all_partition_frontends.sh"
+PREPARE_FRONTENDS="$PIPELINE_DIR/prepare_all_partition_frontends.sh"
 
-COMPUTE_SIGNATURES="$SCRIPT_DIR/compute_partition_signatures.py"
+COMPUTE_SIGNATURES="$PLANNING_DIR/compute_partition_signatures.py"
 
-COMPARE_SIGNATURES="$SCRIPT_DIR/compare_partition_signatures.py"
+COMPARE_SIGNATURES="$PLANNING_DIR/compare_partition_signatures.py"
 
-EXTRACT_FINE="$SCRIPT_DIR/extract_fine_regions.py"
+EXTRACT_FINE="$PLANNING_DIR/extract_fine_regions.py"
 
-COMPUTE_FINE="$SCRIPT_DIR/compute_fine_region_signatures.py"
+COMPUTE_FINE="$PLANNING_DIR/compute_fine_region_signatures.py"
 
-COMPARE_FINE="$SCRIPT_DIR/compare_fine_region_signatures.py"
+COMPARE_FINE="$PLANNING_DIR/compare_fine_region_signatures.py"
 
-PREPARE_FINE_CACHE="$SCRIPT_DIR/prepare_fine_base_cache.sh"
+PREPARE_FINE_CACHE="$PIPELINE_DIR/prepare_fine_base_cache.sh"
 
-MATERIALIZE_FINE="$SCRIPT_DIR/materialize_fine_incremental_partition.sh"
+MATERIALIZE_FINE="$PIPELINE_DIR/materialize_fine_incremental_partition.sh"
 
-SYNTH_TOP_SHELL="$SCRIPT_DIR/synth_top_shell.sh"
+SYNTH_TOP_SHELL="$PIPELINE_DIR/synth_top_shell.sh"
 
-LINK_PARTITIONS="$SCRIPT_DIR/link_partitions.sh"
+LINK_PARTITIONS="$PIPELINE_DIR/link_partitions.sh"
 
-CHECK_LINKED="$SCRIPT_DIR/check_linked_design.sh"
+CHECK_LINKED="$CHECKS_DIR/check_linked_design.sh"
 
 PARTITION_FLOW="$REPO_ROOT/partition-incremental/yosys/synth_partition.ys"
 
-PARTITION_FRONTEND_SCRIPT="$SCRIPT_DIR/prepare_partition_frontend.sh"
+PARTITION_FRONTEND_SCRIPT="$PIPELINE_DIR/prepare_partition_frontend.sh"
 
-TOP_FLOW_SCRIPT="$SCRIPT_DIR/synth_top_shell.sh"
+TOP_FLOW_SCRIPT="$PIPELINE_DIR/synth_top_shell.sh"
 
-SYNTH_PARTITION="$SCRIPT_DIR/synth_partition.sh"
+SYNTH_PARTITION="$PIPELINE_DIR/synth_partition.sh"
 
 # ============================================================
 # Area scripts

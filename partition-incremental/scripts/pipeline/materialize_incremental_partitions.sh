@@ -18,7 +18,7 @@ REUSE_PLAN="$(realpath "$3")"
 OUTPUT_DIR="$(realpath -m "$4")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
-SYNTH_PARTITION="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
+SYNTH_PARTITION="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_partition.sh"
 
 for required_path in \
     "$NEW_SOURCE_DIR" \

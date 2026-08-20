@@ -22,6 +22,8 @@ BASE_SOURCE_DIR="$(realpath "$2")"
 NEW_SOURCE_DIR="$(realpath "$3")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
+PIPELINE_DIR="$REPO_ROOT/partition-incremental/scripts/pipeline"
+CHECKS_DIR="$REPO_ROOT/partition-incremental/scripts/checks"
 
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 
@@ -39,10 +41,10 @@ TOP_MODULE="$(
 )"
 NEW_HIER_JSON="$NEW_OUT/frontend_hier.json"
 
-MATERIALIZE_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/materialize_incremental_partitions.sh"
-SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
-LINK_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/link_partitions.sh"
-CHECK_LINKED="$REPO_ROOT/partition-incremental/scripts/check_linked_design.sh"
+MATERIALIZE_PARTITIONS="$PIPELINE_DIR/materialize_incremental_partitions.sh"
+SYNTH_TOP_SHELL="$PIPELINE_DIR/synth_top_shell.sh"
+LINK_PARTITIONS="$PIPELINE_DIR/link_partitions.sh"
+CHECK_LINKED="$CHECKS_DIR/check_linked_design.sh"
 
 for required_file in \
     "$PLAN_FILE" \

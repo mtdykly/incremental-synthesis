@@ -28,6 +28,8 @@ fi
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
+PIPELINE_DIR="$REPO_ROOT/partition-incremental/scripts/pipeline"
+CHECKS_DIR="$REPO_ROOT/partition-incremental/scripts/checks"
 
 BASE_OUT="$CASE_OUT/base"
 NEW_OUT="$CASE_OUT/new"
@@ -46,10 +48,10 @@ REUSE_PLAN="$PLAN_OUT/reuse_plan.json"
 BASE_PARTITIONS="$BASE_OUT/partitions"
 INCREMENTAL_PARTITIONS="$INCREMENTAL_OUT/partitions"
 
-SYNTH_PARTITION="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
-SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
-VERIFY_TOP_STRUCTURE="$REPO_ROOT/partition-incremental/scripts/verify_top_shell_structure.py"
-VERIFY_PARTITION_EQY="$REPO_ROOT/partition-incremental/scripts/verify_partition_with_eqy.sh"
+SYNTH_PARTITION="$PIPELINE_DIR/synth_partition.sh"
+SYNTH_TOP_SHELL="$PIPELINE_DIR/synth_top_shell.sh"
+VERIFY_TOP_STRUCTURE="$CHECKS_DIR/verify_top_shell_structure.py"
+VERIFY_PARTITION_EQY="$CHECKS_DIR/verify_partition_with_eqy.sh"
 
 for required_path in \
     "$NEW_SOURCE_DIR" \

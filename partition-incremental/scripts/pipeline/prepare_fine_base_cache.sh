@@ -22,9 +22,9 @@ OUTPUT_DIR="$(realpath -m "$5")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 
-BUILD_MANIFEST="$REPO_ROOT/partition-incremental/scripts/build_fine_partition_manifest.py"
-SYNTH_PARTITION_FROM_HIER="$REPO_ROOT/partition-incremental/scripts/synth_partition_from_hier_json.sh"
-SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
+BUILD_MANIFEST="$REPO_ROOT/partition-incremental/scripts/planning/build_fine_partition_manifest.py"
+SYNTH_PARTITION_FROM_HIER="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_partition_from_hier_json.sh"
+SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_top_shell.sh"
 
 for required in \
     "$BASE_SOURCE_DIR" \

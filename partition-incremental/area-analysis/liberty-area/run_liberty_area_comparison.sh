@@ -44,7 +44,7 @@ MAPPED_TOP_SHELL="$INCREMENTAL_MAPPED/top-shell"
 MAPPED_PARTITIONS="$INCREMENTAL_MAPPED/partitions"
 MAPPED_LINKED="$INCREMENTAL_MAPPED/linked"
 
-SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/synth_full_reference.sh"
+SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_full_reference.sh"
 
 MAP_GENERIC="$REPO_ROOT/partition-incremental/area-analysis/liberty-area/map_generic_json_to_liberty.sh"
 

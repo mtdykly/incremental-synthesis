@@ -17,7 +17,7 @@ MANIFEST_FILE="$(realpath "$2")"
 OUTPUT_DIR="$(realpath -m "$3")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
-SYNTH_ONE="$REPO_ROOT/partition-incremental/scripts/synth_partition.sh"
+SYNTH_ONE="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_partition.sh"
 
 if [[ ! -d "$SOURCE_DIR" ]]; then
     echo "ERROR: source directory does not exist:"

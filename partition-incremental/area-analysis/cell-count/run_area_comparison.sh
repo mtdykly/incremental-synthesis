@@ -32,7 +32,7 @@ FULL_JSON="$FULL_OUT/full_reference.json"
 FULL_FLAT_JSON="$AREA_OUT/full_flat.json"
 INCREMENTAL_FLAT_JSON="$AREA_OUT/incremental_flat.json"
 
-SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/synth_full_reference.sh"
+SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/pipeline/synth_full_reference.sh"
 
 FLATTEN_FOR_STATS="$REPO_ROOT/partition-incremental/area-analysis/cell-count/flatten_netlist_for_stats.sh"
 

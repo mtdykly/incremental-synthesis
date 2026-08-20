@@ -21,10 +21,11 @@ REPO_ROOT="$(git rev-parse --show-toplevel)"
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 BASE_OUT="$CASE_OUT/base"
 BENCHMARK_OUT="$CASE_OUT/benchmark-profiled"
+PIPELINE_DIR="$REPO_ROOT/partition-incremental/scripts/pipeline"
 
-SYNTH_FULL="$REPO_ROOT/partition-incremental/scripts/synth_full_reference.sh"
+SYNTH_FULL="$PIPELINE_DIR/synth_full_reference.sh"
 RUN_PROFILED="$REPO_ROOT/partition-incremental/scripts/run_profiled_incremental_synthesis.sh"
-SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
+SYNTH_TOP_SHELL="$PIPELINE_DIR/synth_top_shell.sh"
 
 for required_path in \
     "$BASE_SOURCE_DIR" \

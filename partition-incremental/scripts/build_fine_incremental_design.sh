@@ -17,6 +17,8 @@ BASE_SOURCE_DIR="$(realpath "$2")"
 NEW_SOURCE_DIR="$(realpath "$3")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
+PIPELINE_DIR="$REPO_ROOT/partition-incremental/scripts/pipeline"
+CHECKS_DIR="$REPO_ROOT/partition-incremental/scripts/checks"
 
 CASE_OUT="$REPO_ROOT/results/partition-incremental/$CASE_NAME"
 
@@ -34,11 +36,11 @@ NEW_FINE_MANIFEST="$NEW_OUT/fine/fine_manifest.json"
 
 NEW_MANIFEST="$NEW_OUT/partition_manifest.json"
 
-PREPARE_CACHE="$REPO_ROOT/partition-incremental/scripts/prepare_fine_base_cache.sh"
-MATERIALIZE_FINE="$REPO_ROOT/partition-incremental/scripts/materialize_fine_incremental_partition.sh"
-SYNTH_TOP_SHELL="$REPO_ROOT/partition-incremental/scripts/synth_top_shell.sh"
-LINK_PARTITIONS="$REPO_ROOT/partition-incremental/scripts/link_partitions.sh"
-CHECK_LINKED="$REPO_ROOT/partition-incremental/scripts/check_linked_design.sh"
+PREPARE_CACHE="$PIPELINE_DIR/prepare_fine_base_cache.sh"
+MATERIALIZE_FINE="$PIPELINE_DIR/materialize_fine_incremental_partition.sh"
+SYNTH_TOP_SHELL="$PIPELINE_DIR/synth_top_shell.sh"
+LINK_PARTITIONS="$PIPELINE_DIR/link_partitions.sh"
+CHECK_LINKED="$CHECKS_DIR/check_linked_design.sh"
 
 for required in \
     "$BASE_SOURCE_DIR" \

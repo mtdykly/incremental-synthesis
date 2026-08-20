@@ -17,7 +17,7 @@ MANIFEST_FILE="$(realpath "$2")"
 OUTPUT_DIR="$(realpath -m "$3")"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
-PREPARE_ONE="$REPO_ROOT/partition-incremental/scripts/prepare_partition_frontend.sh"
+PREPARE_ONE="$REPO_ROOT/partition-incremental/scripts/pipeline/prepare_partition_frontend.sh"
 
 if [[ ! -d "$SOURCE_DIR" ]]; then
     echo "ERROR: source directory does not exist:"

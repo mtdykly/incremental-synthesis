@@ -1,5 +1,7 @@
 # Partition-Based Incremental Synthesis Prototype
 
+> Script layout guide: see [scripts/README.md](scripts/README.md).
+
 本目录用于实现基于设计分区的Yosys增量综合原型，与已有ECO全量综合差异实验分开。
 
 第一版分区策略：
