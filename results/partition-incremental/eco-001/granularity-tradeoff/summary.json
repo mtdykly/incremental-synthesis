@@ -10,14 +10,14 @@
     "liberty_mapping_included_in_runtime": false
   },
   "runtime": {
-    "full_median_seconds": 2.43,
-    "coarse_median_seconds": 2.546293,
-    "fine_median_seconds": 2.618849,
-    "coarse_speedup": 0.9543285081489052,
-    "fine_speedup": 0.9278885495116367,
-    "coarse_time_reduction_percent": -4.785720164609043,
-    "fine_time_reduction_percent": -7.771563786008223,
-    "fine_vs_coarse_time_reduction_percent": -2.8494756887758035
+    "full_median_seconds": 2.34,
+    "coarse_median_seconds": 2.266394,
+    "fine_median_seconds": 2.44431,
+    "coarse_speedup": 1.0324771421032706,
+    "fine_speedup": 0.9573253801686364,
+    "coarse_time_reduction_percent": 3.1455555555555486,
+    "fine_time_reduction_percent": -4.457692307692323,
+    "fine_vs_coarse_time_reduction_percent": -7.850179624548962
   },
   "area": {
     "full": {
@@ -34,11 +34,11 @@
       "overhead_percent": 2.2309956548147354
     },
     "fine": {
-      "total": 11641.756,
-      "comb": 6985.691999999999,
+      "total": 11643.086,
+      "comb": 6987.021999999999,
       "seq": 4656.064,
-      "cells": 6376,
-      "overhead_percent": 2.242676260337325
+      "cells": 6377,
+      "overhead_percent": 2.2543568658599145
     }
   },
   "granularity": {

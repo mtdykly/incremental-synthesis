@@ -1,6 +1,0 @@
-partition	root_module	action	source	action_wall_seconds	yosys_seconds
-data_memory_interface	data_memory_interface	reuse	base_cache	0.008646	0.000000
-immediate_generator	immediate_generator	reuse	base_cache	0.007658	0.000000
-instruction_decoder	instruction_decoder	reuse	base_cache	0.006633	0.000000
-singlecycle_ctlpath	singlecycle_ctlpath	rebuild	new_synthesis	0.333486	0.26
-singlecycle_datapath	singlecycle_datapath	reuse	base_cache	0.036330	0.000000

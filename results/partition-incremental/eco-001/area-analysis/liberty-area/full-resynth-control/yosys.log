@@ -597,6 +597,6 @@ Removed 0 unused cells and 8176 unused wires.
 
 11. Executing JSON backend.
 
-End of script. Logfile hash: 9b12a0637b, time: 4.31s, user: 1.76s, system: 0.09s, MEM: 70.40 MB peak
+End of script. Logfile hash: 9b12a0637b, time: 4.33s, user: 1.76s, system: 0.09s, MEM: 70.38 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 66% 2x abc (3 sec), 6% 15x opt_clean (0 sec), ...

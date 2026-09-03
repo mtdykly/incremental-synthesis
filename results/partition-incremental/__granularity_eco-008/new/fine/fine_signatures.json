@@ -1,7 +1,0 @@
-{
-  "partitions": {},
-  "schema_version": 1,
-  "signature_method": "direct_child_subtree_structural_signature_without_cell_names_src_or_memid",
-  "source_fine_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/fine/fine_manifest.json",
-  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/frontend_hier.json"
-}

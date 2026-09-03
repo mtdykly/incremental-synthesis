@@ -1,8 +1,0 @@
-{
-  "top_module": "singlecycle_ctlpath",
-  "partition_roots": [
-    "alu_control",
-    "control_transfer",
-    "singlecycle_control"
-  ]
-}

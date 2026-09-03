@@ -6,8 +6,8 @@
     "main_time": "pipeline_core_seconds"
   },
   "totals": {
-    "pipeline_core_seconds": 2.5907,
-    "fine_rebuild_yosys_seconds": 0.15
+    "pipeline_core_seconds": 2.444359,
+    "fine_rebuild_yosys_seconds": 0.14
   },
   "coarse_reuse_plan": {
     "reusable_partitions": [
@@ -18,11 +18,8 @@
       "singlecycle_ctlpath"
     ],
     "top_shell": {
-      "reasons": [
-        "top_environment_changed",
-        "top_implementation_changed"
-      ],
-      "status": "rebuild"
+      "reasons": [],
+      "status": "reuse"
     }
   },
   "fine_summary": {

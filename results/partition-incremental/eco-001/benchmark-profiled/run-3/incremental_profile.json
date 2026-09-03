@@ -20,12 +20,12 @@
     }
   },
   "detection": {
-    "phase_wall_seconds": 0.78334,
+    "phase_wall_seconds": 0.817853,
     "export_hierarchy_seconds": 0.11,
     "extract_partitions_seconds": 0.05,
-    "prepare_partition_frontends_seconds": 0.47,
+    "prepare_partition_frontends_seconds": 0.5,
     "compute_signatures_seconds": 0.07,
-    "compare_signatures_seconds": 0.05,
+    "compare_signatures_seconds": 0.04,
     "partition_frontend_yosys": [
       {
         "partition": "data_memory_interface",
@@ -45,11 +45,11 @@
     ]
   },
   "build": {
-    "phase_wall_seconds": 1.490567,
-    "materialize_partitions_seconds": 0.98,
+    "phase_wall_seconds": 1.434062,
+    "materialize_partitions_seconds": 1.0,
     "top_shell_seconds": 0.0,
-    "link_partitions_seconds": 0.4,
-    "check_linked_seconds": 1.18,
+    "link_partitions_seconds": 0.33,
+    "check_linked_seconds": 1.2,
     "materialization": {
       "partitions": [
         {
@@ -59,7 +59,7 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/partitions/data_memory_interface",
           "reasons": [],
-          "action_wall_seconds": 0.008142,
+          "action_wall_seconds": 0.007912,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "164f31183f97cedafad83d2eaa25a3706423b112fe2e771501a5f4222f7d8a44"
         },
@@ -72,7 +72,7 @@
           "reasons": [
             "implementation_changed"
           ],
-          "action_wall_seconds": 0.28693,
+          "action_wall_seconds": 0.289021,
           "yosys_seconds": 0.21,
           "partition_netlist_sha256": "947acc8af9b069783f2e1b6fb3f08a648c48861e7d6ffcc401443e93e5de994e"
         },
@@ -83,23 +83,23 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/partitions/singlecycle_datapath",
           "reasons": [],
-          "action_wall_seconds": 0.018536,
+          "action_wall_seconds": 0.018424,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "9d6ffc8a57895bbacd84890bc03bf8a821fa3999a33e97ddec62fac0f981ee4c"
         }
       ],
       "reuse_count": 2,
       "rebuild_count": 1,
-      "reuse_copy_seconds": 0.026678,
-      "rebuild_wall_seconds": 0.28693,
+      "reuse_copy_seconds": 0.026336,
+      "rebuild_wall_seconds": 0.289021,
       "rebuild_yosys_seconds": 0.21,
-      "partition_action_seconds": 0.313608
+      "partition_action_seconds": 0.31535699999999994
     }
   },
   "totals": {
-    "pipeline_core_seconds": 2.34572,
-    "pipeline_with_check_seconds": 3.559837,
-    "profiled_stage_sum_seconds": 2.13,
-    "unattributed_core_overhead_seconds": 0.21572000000000013
+    "pipeline_core_seconds": 2.307345,
+    "pipeline_with_check_seconds": 3.543611,
+    "profiled_stage_sum_seconds": 2.1,
+    "unattributed_core_overhead_seconds": 0.2073450000000001
   }
 }

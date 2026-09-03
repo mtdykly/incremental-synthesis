@@ -1,18 +1,22 @@
-# Read synthesized top shell.
-read_verilog -sv "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/top-shell/top_shell_netlist.v"
+# Load synthesized top shell in native RTLIL format.
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/top-shell/top_shell.rtlil"
 
-# Read each independently synthesized partition.
+# Load each independently synthesized partition.
+# Existing blackbox partition definitions in the top shell
+# are replaced by the real RTLIL implementations.
 # data_memory_interface -> data_memory_interface
-read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/data_memory_interface/synth.json"
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/data_memory_interface/synth.rtlil"
 # singlecycle_ctlpath -> singlecycle_ctlpath
-read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/singlecycle_ctlpath/synth.json"
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/singlecycle_ctlpath/synth.rtlil"
 # singlecycle_datapath -> singlecycle_datapath
-read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/singlecycle_datapath/synth.json"
+read_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/partitions/singlecycle_datapath/synth.rtlil"
 
+# Validate the reconstructed hierarchy.
 hierarchy -check -top riscv_core
 check
 stat -top riscv_core
 
+# Export linked design.
 write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked.json"
 write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked.rtlil"
 write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental/linked/linked_netlist.v"

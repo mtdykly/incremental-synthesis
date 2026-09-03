@@ -1,6 +1,0 @@
-{
-  "partition_name": "control_transfer",
-  "root_module": "control_transfer",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new",
-  "flatten_internal": true
-}

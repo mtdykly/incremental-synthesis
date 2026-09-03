@@ -1,5 +1,5 @@
 # Load elaborated hierarchical design.
-read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/frontend_hier.json"
+read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/frontend_hier.json"
 
 # Replace partition implementations with blackboxes.
 blackbox alu_control
@@ -15,6 +15,10 @@ opt_clean -purge
 check
 stat -top singlecycle_ctlpath
 
-write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.json"
-write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.rtlil"
-write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell_netlist.v"
+select -clear
+select singlecycle_ctlpath
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.json"
+select -clear
+
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell_netlist.v"

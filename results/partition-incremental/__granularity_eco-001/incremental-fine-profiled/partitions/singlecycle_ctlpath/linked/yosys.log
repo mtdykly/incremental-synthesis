@@ -51,38 +51,39 @@ Found and reported 0 problems.
 
         +----------Local Count, excluding submodules.
         | 
-       38 wires
-       48 wire bits
+       39 wires
+       49 wire bits
        11 public wires
        21 public wire bits
        11 ports
        21 port bits
-       38 cells
-        5   $_ANDNOT_
-       16   $_AND_
-       12   $_NAND_
-        3   $_NOR_
-        2   $_ORNOT_
+       39 cells
+        8   $_ANDNOT_
+       14   $_AND_
+        8   $_NAND_
+        2   $_NOR_
+        1   $_NOT_
+        3   $_ORNOT_
+        3   $_OR_
 
 === alu_control ===
 
         +----------Local Count, excluding submodules.
         | 
-       46 wires
-       59 wire bits
+       40 wires
+       53 wire bits
         4 public wires
        17 public wire bits
         4 ports
        17 port bits
-       46 cells
-        4   $_ANDNOT_
-        9   $_AND_
+       40 cells
+       10   $_ANDNOT_
+        6   $_AND_
         4   $_MUX_
-       18   $_NAND_
+       13   $_NAND_
         1   $_NOR_
-        1   $_NOT_
-        6   $_ORNOT_
-        3   $_OR_
+        1   $_ORNOT_
+        5   $_OR_
 
 === control_transfer ===
 
@@ -118,15 +119,15 @@ Found and reported 0 problems.
 
         +----------Count including submodules.
         | 
-       87 singlecycle_ctlpath
-       46 alu_control
+       82 singlecycle_ctlpath
+       40 alu_control
         3 control_transfer
-       38 singlecycle_control
+       39 singlecycle_control
 
         +----------Count including submodules.
         | 
-      104 wires
-      151 wire bits
+       99 wires
+      146 wire bits
        33 public wires
        80 public wire bits
        31 ports
@@ -134,15 +135,15 @@ Found and reported 0 problems.
         - memories
         - memory bits
         - processes
-       87 cells
-        9   $_ANDNOT_
-       26   $_AND_
+       82 cells
+       18   $_ANDNOT_
+       21   $_AND_
         4   $_MUX_
-       30   $_NAND_
-        4   $_NOR_
+       21   $_NAND_
+        3   $_NOR_
         1   $_NOT_
-        9   $_ORNOT_
-        3   $_OR_
+        5   $_ORNOT_
+        8   $_OR_
         1   $_XNOR_
         3 submodules
         1   alu_control
@@ -160,6 +161,6 @@ Dumping module `\control_transfer'.
 Dumping module `\singlecycle_control'.
 Dumping module `\singlecycle_ctlpath'.
 
-End of script. Logfile hash: 5508f346a6, time: 0.01s, user: 0.01s, system: 0.01s, MEM: 15.42 MB peak
+End of script. Logfile hash: 3370c41a94, time: 0.01s, user: 0.02s, system: 0.00s, MEM: 15.16 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 24% 8x read_rtlil (0 sec), 17% 2x write_json (0 sec), ...
+Time spent: 23% 2x write_json (0 sec), 17% 8x read_rtlil (0 sec), ...

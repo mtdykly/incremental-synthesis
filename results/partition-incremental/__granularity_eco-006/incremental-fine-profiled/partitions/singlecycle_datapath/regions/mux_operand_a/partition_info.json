@@ -1,7 +1,0 @@
-{
-  "partition_name": "mux_operand_a",
-  "root_module": "$paramod\\multiplexer2\\WIDTH=s32'00000000000000000000000000100000",
-  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/base/frontend_hier.json",
-  "source_kind": "elaborated_hier_json",
-  "flatten_internal": true
-}

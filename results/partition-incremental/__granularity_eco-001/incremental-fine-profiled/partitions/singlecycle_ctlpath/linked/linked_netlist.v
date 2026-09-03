@@ -45,243 +45,208 @@ module alu_control(alu_op_type, inst_funct3, inst_funct7, alu_function);
   wire _33_;
   wire _34_;
   wire _35_;
-  wire _36_;
-  wire _37_;
-  wire _38_;
-  wire _39_;
-  wire _40_;
-  wire _41_;
-  \$_NOT_  _42_ (
-    .A(inst_funct7[5]),
+  \$_ANDNOT_  _36_ (
+    .A(alu_op_type[1]),
+    .B(alu_op_type[0]),
     .Y(_00_)
   );
-  \$_ANDNOT_  _43_ (
-    .A(alu_op_type[1]),
-    .B(alu_op_type[0]),
-    .Y(_01_)
-  );
-  \$_ANDNOT_  _44_ (
+  \$_ANDNOT_  _37_ (
     .A(inst_funct3[0]),
     .B(inst_funct3[1]),
+    .Y(_01_)
+  );
+  \$_AND_  _38_ (
+    .A(inst_funct7[5]),
+    .B(_01_),
     .Y(_02_)
   );
-  \$_ORNOT_  _45_ (
-    .A(inst_funct3[1]),
-    .B(inst_funct3[2]),
-    .Y(_03_)
-  );
-  \$_AND_  _46_ (
+  \$_NAND_  _39_ (
     .A(inst_funct3[2]),
     .B(_02_),
+    .Y(_03_)
+  );
+  \$_ANDNOT_  _40_ (
+    .A(_00_),
+    .B(_03_),
     .Y(_04_)
   );
-  \$_ORNOT_  _47_ (
-    .A(_04_),
-    .B(_01_),
+  \$_ANDNOT_  _41_ (
+    .A(alu_op_type[0]),
+    .B(alu_op_type[1]),
     .Y(_05_)
   );
-  \$_AND_  _48_ (
-    .A(alu_op_type[1]),
-    .B(alu_op_type[0]),
+  \$_ORNOT_  _42_ (
+    .A(inst_funct3[1]),
+    .B(_05_),
     .Y(_06_)
   );
-  \$_NAND_  _49_ (
-    .A(alu_op_type[1]),
-    .B(alu_op_type[0]),
+  \$_ANDNOT_  _43_ (
+    .A(inst_funct3[1]),
+    .B(inst_funct3[0]),
     .Y(_07_)
   );
-  \$_NAND_  _50_ (
-    .A(_05_),
+  \$_NOR_  _44_ (
+    .A(inst_funct3[2]),
     .B(_07_),
     .Y(_08_)
   );
-  \$_ANDNOT_  _51_ (
-    .A(inst_funct3[1]),
-    .B(inst_funct3[0]),
+  \$_MUX_  _45_ (
+    .A(_07_),
+    .B(_01_),
+    .S(inst_funct3[2]),
     .Y(_09_)
   );
-  \$_NOR_  _52_ (
-    .A(inst_funct3[2]),
-    .B(_09_),
+  \$_AND_  _46_ (
+    .A(alu_op_type[1]),
+    .B(alu_op_type[0]),
     .Y(_10_)
   );
-  \$_ORNOT_  _53_ (
-    .A(_02_),
-    .B(_10_),
+  \$_ANDNOT_  _47_ (
+    .A(alu_op_type[1]),
+    .B(inst_funct7[5]),
     .Y(_11_)
   );
-  \$_AND_  _54_ (
-    .A(_03_),
+  \$_OR_  _48_ (
+    .A(_10_),
     .B(_11_),
     .Y(_12_)
   );
-  \$_NAND_  _55_ (
-    .A(_08_),
+  \$_NAND_  _49_ (
+    .A(_09_),
     .B(_12_),
     .Y(_13_)
   );
-  \$_ANDNOT_  _56_ (
-    .A(alu_op_type[0]),
-    .B(alu_op_type[1]),
+  \$_NAND_  _50_ (
+    .A(_06_),
+    .B(_13_),
     .Y(_14_)
   );
-  \$_ORNOT_  _57_ (
-    .A(inst_funct3[1]),
+  \$_OR_  _51_ (
+    .A(_04_),
     .B(_14_),
+    .Y(alu_function[2])
+  );
+  \$_OR_  _52_ (
+    .A(_01_),
+    .B(_07_),
     .Y(_15_)
   );
-  \$_OR_  _58_ (
-    .A(_00_),
-    .B(_05_),
+  \$_MUX_  _53_ (
+    .A(_15_),
+    .B(inst_funct3[1]),
+    .S(inst_funct3[2]),
     .Y(_16_)
   );
-  \$_AND_  _59_ (
-    .A(_15_),
+  \$_OR_  _54_ (
+    .A(inst_funct7[5]),
     .B(_16_),
     .Y(_17_)
   );
-  \$_NAND_  _60_ (
-    .A(_13_),
-    .B(_17_),
-    .Y(alu_function[1])
-  );
-  \$_NAND_  _61_ (
-    .A(inst_funct7[5]),
-    .B(_02_),
+  \$_AND_  _55_ (
+    .A(_00_),
+    .B(_03_),
     .Y(_18_)
   );
-  \$_NAND_  _62_ (
-    .A(inst_funct7[5]),
-    .B(_04_),
+  \$_NAND_  _56_ (
+    .A(_17_),
+    .B(_18_),
     .Y(_19_)
   );
-  \$_MUX_  _63_ (
-    .A(_09_),
-    .B(_02_),
-    .S(inst_funct3[2]),
+  \$_NAND_  _57_ (
+    .A(_10_),
+    .B(_16_),
     .Y(_20_)
   );
-  \$_ORNOT_  _64_ (
-    .A(inst_funct7[5]),
-    .B(alu_op_type[1]),
-    .Y(_21_)
-  );
-  \$_NAND_  _65_ (
-    .A(_07_),
-    .B(_21_),
-    .Y(_22_)
-  );
-  \$_NAND_  _66_ (
+  \$_AND_  _58_ (
     .A(_06_),
     .B(_20_),
+    .Y(_21_)
+  );
+  \$_NAND_  _59_ (
+    .A(_19_),
+    .B(_21_),
+    .Y(alu_function[1])
+  );
+  \$_NAND_  _60_ (
+    .A(inst_funct3[1]),
+    .B(_08_),
+    .Y(_22_)
+  );
+  \$_NAND_  _61_ (
+    .A(inst_funct3[2]),
+    .B(_15_),
     .Y(_23_)
   );
-  \$_MUX_  _67_ (
-    .A(_20_),
-    .B(_04_),
-    .S(inst_funct7[5]),
+  \$_AND_  _62_ (
+    .A(_22_),
+    .B(_23_),
     .Y(_24_)
   );
-  \$_NAND_  _68_ (
-    .A(_01_),
-    .B(_24_),
+  \$_MUX_  _63_ (
+    .A(_24_),
+    .B(inst_funct3[2]),
+    .S(_02_),
     .Y(_25_)
   );
-  \$_AND_  _69_ (
-    .A(_15_),
-    .B(_23_),
+  \$_NAND_  _64_ (
+    .A(_10_),
+    .B(_25_),
     .Y(_26_)
   );
-  \$_NAND_  _70_ (
-    .A(_25_),
-    .B(_26_),
-    .Y(alu_function[2])
-  );
-  \$_NAND_  _71_ (
-    .A(inst_funct3[1]),
-    .B(_10_),
+  \$_ANDNOT_  _65_ (
+    .A(_24_),
+    .B(inst_funct7[5]),
     .Y(_27_)
   );
-  \$_OR_  _72_ (
-    .A(_02_),
-    .B(_09_),
+  \$_AND_  _66_ (
+    .A(alu_op_type[1]),
+    .B(_03_),
     .Y(_28_)
   );
-  \$_NAND_  _73_ (
-    .A(inst_funct3[2]),
-    .B(_28_),
+  \$_ANDNOT_  _67_ (
+    .A(_28_),
+    .B(_27_),
     .Y(_29_)
   );
-  \$_AND_  _74_ (
-    .A(_27_),
+  \$_OR_  _68_ (
+    .A(alu_op_type[0]),
     .B(_29_),
     .Y(_30_)
   );
-  \$_MUX_  _75_ (
+  \$_ANDNOT_  _69_ (
     .A(inst_funct3[2]),
-    .B(_30_),
-    .S(_18_),
+    .B(_06_),
     .Y(_31_)
   );
-  \$_NAND_  _76_ (
-    .A(_06_),
+  \$_ANDNOT_  _70_ (
+    .A(_26_),
     .B(_31_),
     .Y(_32_)
   );
-  \$_NAND_  _77_ (
-    .A(_00_),
-    .B(_30_),
-    .Y(_33_)
-  );
-  \$_AND_  _78_ (
-    .A(alu_op_type[1]),
-    .B(_19_),
-    .Y(_34_)
-  );
-  \$_AND_  _79_ (
-    .A(_33_),
-    .B(_34_),
-    .Y(_35_)
-  );
-  \$_OR_  _80_ (
-    .A(alu_op_type[0]),
-    .B(_35_),
-    .Y(_36_)
-  );
-  \$_ORNOT_  _81_ (
-    .A(_03_),
-    .B(_14_),
-    .Y(_37_)
-  );
-  \$_AND_  _82_ (
-    .A(_32_),
-    .B(_37_),
-    .Y(_38_)
-  );
-  \$_NAND_  _83_ (
-    .A(_36_),
-    .B(_38_),
+  \$_NAND_  _71_ (
+    .A(_30_),
+    .B(_32_),
     .Y(alu_function[0])
   );
-  \$_NAND_  _84_ (
+  \$_NAND_  _72_ (
     .A(inst_funct3[1]),
-    .B(_14_),
-    .Y(_39_)
+    .B(_05_),
+    .Y(_33_)
   );
-  \$_MUX_  _85_ (
+  \$_MUX_  _73_ (
     .A(inst_funct3[2]),
     .B(inst_funct3[1]),
     .S(inst_funct3[0]),
-    .Y(_40_)
+    .Y(_34_)
   );
-  \$_NAND_  _86_ (
-    .A(_22_),
-    .B(_40_),
-    .Y(_41_)
+  \$_NAND_  _74_ (
+    .A(_12_),
+    .B(_34_),
+    .Y(_35_)
   );
-  \$_NAND_  _87_ (
-    .A(_39_),
-    .B(_41_),
+  \$_NAND_  _75_ (
+    .A(_33_),
+    .B(_35_),
     .Y(alu_function[3])
   );
   assign alu_function[4] = 1'h0;
@@ -363,195 +328,200 @@ module singlecycle_control(inst_opcode, take_branch, pc_write_enable, regfile_wr
   wire _24_;
   wire _25_;
   wire _26_;
-  \$_ANDNOT_  _27_ (
-    .A(inst_opcode[5]),
-    .B(inst_opcode[4]),
-    .Y(_00_)
-  );
+  wire _27_;
   \$_AND_  _28_ (
-    .A(inst_opcode[6]),
-    .B(_00_),
-    .Y(_01_)
-  );
-  \$_AND_  _29_ (
     .A(inst_opcode[1]),
     .B(inst_opcode[0]),
+    .Y(_00_)
+  );
+  \$_ANDNOT_  _29_ (
+    .A(_00_),
+    .B(inst_opcode[3]),
+    .Y(_01_)
+  );
+  \$_ANDNOT_  _30_ (
+    .A(_01_),
+    .B(inst_opcode[2]),
     .Y(_02_)
   );
-  \$_AND_  _30_ (
-    .A(inst_opcode[2]),
-    .B(_02_),
+  \$_ANDNOT_  _31_ (
+    .A(_02_),
+    .B(inst_opcode[6]),
     .Y(_03_)
   );
-  \$_NAND_  _31_ (
-    .A(inst_opcode[3]),
+  \$_ORNOT_  _32_ (
+    .A(inst_opcode[4]),
     .B(_03_),
     .Y(_04_)
   );
-  \$_NOR_  _32_ (
-    .A(inst_opcode[3]),
-    .B(inst_opcode[2]),
+  \$_NOR_  _33_ (
+    .A(inst_opcode[5]),
+    .B(inst_opcode[6]),
     .Y(_05_)
   );
-  \$_AND_  _33_ (
-    .A(_02_),
+  \$_ORNOT_  _34_ (
+    .A(inst_opcode[4]),
     .B(_05_),
     .Y(_06_)
   );
-  \$_NAND_  _34_ (
-    .A(_00_),
+  \$_ANDNOT_  _35_ (
+    .A(_02_),
     .B(_06_),
+    .Y(data_mem_read_enable)
+  );
+  \$_ANDNOT_  _36_ (
+    .A(inst_opcode[5]),
+    .B(inst_opcode[4]),
     .Y(_07_)
   );
-  \$_NAND_  _35_ (
-    .A(_01_),
-    .B(_06_),
+  \$_AND_  _37_ (
+    .A(inst_opcode[6]),
+    .B(_07_),
     .Y(_08_)
   );
-  \$_NAND_  _36_ (
-    .A(take_branch),
-    .B(_06_),
+  \$_AND_  _38_ (
+    .A(inst_opcode[4]),
+    .B(_05_),
     .Y(_09_)
   );
-  \$_NAND_  _37_ (
-    .A(_04_),
+  \$_OR_  _39_ (
+    .A(_08_),
     .B(_09_),
     .Y(_10_)
   );
-  \$_AND_  _38_ (
-    .A(_01_),
-    .B(_10_),
-    .Y(next_pc_select[0])
-  );
-  \$_NOR_  _39_ (
-    .A(inst_opcode[5]),
+  \$_ANDNOT_  _40_ (
+    .A(inst_opcode[4]),
     .B(inst_opcode[6]),
     .Y(_11_)
   );
-  \$_NAND_  _40_ (
-    .A(_06_),
-    .B(_11_),
-    .Y(_12_)
-  );
   \$_AND_  _41_ (
-    .A(inst_opcode[4]),
+    .A(_02_),
     .B(_11_),
-    .Y(_13_)
+    .Y(alu_op_type[1])
   );
   \$_NAND_  _42_ (
-    .A(_06_),
-    .B(_13_),
-    .Y(_14_)
+    .A(_02_),
+    .B(_07_),
+    .Y(_12_)
   );
   \$_NAND_  _43_ (
-    .A(_08_),
-    .B(_14_),
+    .A(_02_),
+    .B(_08_),
+    .Y(_13_)
+  );
+  \$_NAND_  _44_ (
+    .A(_02_),
+    .B(_10_),
+    .Y(_14_)
+  );
+  \$_NOT_  _45_ (
+    .A(_14_),
     .Y(alu_op_type[0])
   );
-  \$_ANDNOT_  _44_ (
-    .A(_11_),
-    .B(inst_opcode[4]),
+  \$_AND_  _46_ (
+    .A(inst_opcode[2]),
+    .B(inst_opcode[3]),
     .Y(_15_)
   );
-  \$_AND_  _45_ (
-    .A(_06_),
+  \$_NAND_  _47_ (
+    .A(_00_),
     .B(_15_),
-    .Y(data_mem_read_enable)
-  );
-  \$_ANDNOT_  _46_ (
-    .A(_03_),
-    .B(inst_opcode[3]),
     .Y(_16_)
   );
-  \$_ANDNOT_  _47_ (
-    .A(inst_opcode[5]),
-    .B(inst_opcode[6]),
+  \$_NAND_  _48_ (
+    .A(take_branch),
+    .B(_02_),
     .Y(_17_)
-  );
-  \$_AND_  _48_ (
-    .A(inst_opcode[4]),
-    .B(_17_),
-    .Y(_18_)
   );
   \$_NAND_  _49_ (
     .A(_16_),
+    .B(_17_),
+    .Y(_18_)
+  );
+  \$_AND_  _50_ (
+    .A(_08_),
     .B(_18_),
+    .Y(next_pc_select[0])
+  );
+  \$_AND_  _51_ (
+    .A(inst_opcode[5]),
+    .B(_11_),
     .Y(_19_)
   );
-  \$_ORNOT_  _50_ (
-    .A(data_mem_read_enable),
-    .B(_19_),
-    .Y(reg_writeback_select[0])
-  );
-  \$_NOR_  _51_ (
-    .A(inst_opcode[6]),
-    .B(_07_),
-    .Y(data_mem_write_enable)
-  );
-  \$_NAND_  _52_ (
-    .A(_06_),
-    .B(_18_),
+  \$_AND_  _52_ (
+    .A(inst_opcode[2]),
+    .B(_01_),
     .Y(_20_)
   );
-  \$_AND_  _53_ (
-    .A(_19_),
-    .B(_20_),
+  \$_NAND_  _53_ (
+    .A(_01_),
+    .B(_19_),
     .Y(_21_)
   );
-  \$_AND_  _54_ (
-    .A(_08_),
+  \$_ANDNOT_  _54_ (
+    .A(inst_opcode[2]),
     .B(_21_),
-    .Y(alu_operand_b_select)
-  );
-  \$_NAND_  _55_ (
-    .A(_14_),
-    .B(_20_),
-    .Y(alu_op_type[1])
-  );
-  \$_AND_  _56_ (
-    .A(_01_),
-    .B(_16_),
-    .Y(next_pc_select[1])
-  );
-  \$_ORNOT_  _57_ (
-    .A(_04_),
-    .B(_15_),
     .Y(_22_)
   );
-  \$_AND_  _58_ (
-    .A(_07_),
+  \$_OR_  _55_ (
+    .A(data_mem_read_enable),
     .B(_22_),
-    .Y(regfile_write_enable)
+    .Y(reg_writeback_select[0])
   );
-  \$_NAND_  _59_ (
-    .A(_13_),
-    .B(_16_),
+  \$_NOR_  _56_ (
+    .A(inst_opcode[6]),
+    .B(_12_),
+    .Y(data_mem_write_enable)
+  );
+  \$_NAND_  _57_ (
+    .A(_09_),
+    .B(_20_),
     .Y(_23_)
   );
-  \$_AND_  _60_ (
-    .A(_12_),
-    .B(_20_),
+  \$_ORNOT_  _58_ (
+    .A(_07_),
+    .B(_03_),
     .Y(_24_)
   );
-  \$_AND_  _61_ (
+  \$_AND_  _59_ (
     .A(_23_),
     .B(_24_),
     .Y(reg_writeback_select[1])
   );
-  \$_AND_  _62_ (
-    .A(_07_),
-    .B(_12_),
+  \$_AND_  _60_ (
+    .A(_08_),
+    .B(_20_),
+    .Y(next_pc_select[1])
+  );
+  \$_AND_  _61_ (
+    .A(_14_),
+    .B(_21_),
     .Y(_25_)
   );
-  \$_ANDNOT_  _63_ (
+  \$_ANDNOT_  _62_ (
     .A(_25_),
     .B(next_pc_select[1]),
     .Y(_26_)
   );
-  \$_AND_  _64_ (
-    .A(_21_),
+  \$_AND_  _63_ (
+    .A(_04_),
     .B(_26_),
     .Y(alu_operand_a_select)
+  );
+  \$_AND_  _64_ (
+    .A(_13_),
+    .B(_21_),
+    .Y(alu_operand_b_select)
+  );
+  \$_OR_  _65_ (
+    .A(_06_),
+    .B(_16_),
+    .Y(_27_)
+  );
+  \$_AND_  _66_ (
+    .A(_12_),
+    .B(_27_),
+    .Y(regfile_write_enable)
   );
   assign pc_write_enable = 1'h1;
   assign reg_writeback_select[2] = 1'h0;

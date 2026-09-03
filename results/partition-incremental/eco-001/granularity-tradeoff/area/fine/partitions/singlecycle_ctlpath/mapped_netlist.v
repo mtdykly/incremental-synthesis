@@ -77,355 +77,372 @@ module singlecycle_ctlpath(inst_opcode, inst_funct3, inst_funct7, alu_result_equ
   wire _047_;
   wire _048_;
   wire _049_;
-  NOR2_X1 _050_ (
-    .A1(_003_),
-    .A2(inst_opcode[4]),
+  wire _050_;
+  AND2_X1 _051_ (
+    .A1(inst_opcode[1]),
+    .A2(inst_opcode[0]),
     .ZN(_008_)
   );
-  NAND2_X1 _051_ (
-    .A1(inst_opcode[6]),
-    .A2(_008_),
+  NAND2_X1 _052_ (
+    .A1(inst_opcode[1]),
+    .A2(inst_opcode[0]),
     .ZN(_009_)
   );
-  AND2_X1 _052_ (
-    .A1(_007_),
-    .A2(_008_),
+  NOR3_X1 _053_ (
+    .A1(inst_opcode[3]),
+    .A2(inst_opcode[2]),
+    .A3(_009_),
     .ZN(_010_)
   );
-  NAND3_X1 _053_ (
-    .A1(inst_opcode[6]),
-    .A2(_007_),
+  NAND3_X1 _054_ (
+    .A1(_004_),
+    .A2(_005_),
     .A3(_008_),
     .ZN(_011_)
   );
-  OR2_X1 _054_ (
-    .A1(inst_funct3[1]),
-    .A2(_011_),
+  NAND2_X1 _055_ (
+    .A1(_007_),
+    .A2(_010_),
     .ZN(_012_)
   );
-  NAND2_X1 _055_ (
-    .A1(inst_opcode[5]),
-    .A2(inst_opcode[4]),
+  NAND2_X1 _056_ (
+    .A1(inst_funct7[5]),
+    .A2(inst_opcode[5]),
     .ZN(_013_)
   );
-  NOR4_X1 _056_ (
-    .A1(inst_opcode[6]),
-    .A2(inst_opcode[3]),
-    .A3(_006_),
-    .A4(_013_),
+  AND3_X1 _057_ (
+    .A1(_007_),
+    .A2(_010_),
+    .A3(_013_),
     .ZN(_014_)
   );
-  AND2_X1 _057_ (
-    .A1(_005_),
-    .A2(_014_),
+  INV_X1 _058_ (
+    .A(_014_),
     .ZN(_015_)
   );
-  OR2_X1 _058_ (
-    .A1(inst_opcode[5]),
-    .A2(inst_opcode[6]),
+  OAI21_X1 _059_ (
+    .A(_003_),
+    .B1(_001_),
+    .B2(inst_funct3[0]),
     .ZN(_016_)
   );
-  NOR4_X1 _059_ (
-    .A1(inst_opcode[2]),
-    .A2(inst_opcode[3]),
-    .A3(_006_),
-    .A4(_016_),
+  NOR2_X1 _060_ (
+    .A1(_000_),
+    .A2(inst_funct3[1]),
     .ZN(_017_)
   );
-  INV_X1 _060_ (
-    .A(inst_funct7[5]),
+  INV_X1 _061_ (
+    .A(inst_funct3[0]),
     .ZN(_000_)
   );
-  NAND3_X1 _061_ (
-    .A1(_003_),
-    .A2(_004_),
-    .A3(_007_),
+  OAI21_X1 _062_ (
+    .A(inst_funct3[2]),
+    .B1(inst_funct3[1]),
+    .B2(_000_),
     .ZN(_018_)
   );
-  AND2_X1 _062_ (
-    .A1(inst_opcode[4]),
-    .A2(_017_),
+  NAND3_X1 _063_ (
+    .A1(_014_),
+    .A2(_016_),
+    .A3(_018_),
     .ZN(_019_)
   );
-  NAND2_X1 _063_ (
-    .A1(inst_opcode[4]),
-    .A2(_017_),
+  NOR4_X1 _064_ (
+    .A1(_000_),
+    .A2(inst_funct3[1]),
+    .A3(_002_),
+    .A4(_003_),
     .ZN(_020_)
   );
-  NAND2_X1 _064_ (
-    .A1(_002_),
-    .A2(inst_funct3[2]),
+  AND4_X1 _065_ (
+    .A1(_004_),
+    .A2(inst_opcode[5]),
+    .A3(_007_),
+    .A4(_008_),
     .ZN(_021_)
   );
-  NAND2_X1 _065_ (
-    .A1(inst_funct3[0]),
-    .A2(_002_),
+  NAND3_X1 _066_ (
+    .A1(inst_opcode[5]),
+    .A2(_007_),
+    .A3(_010_),
     .ZN(_022_)
   );
-  AOI21_X1 _066_ (
-    .A(inst_funct3[2]),
-    .B1(inst_funct3[1]),
-    .B2(_001_),
+  NAND3_X1 _067_ (
+    .A1(_005_),
+    .A2(_020_),
+    .A3(_021_),
     .ZN(_023_)
   );
-  NAND2_X1 _067_ (
-    .A1(_022_),
-    .A2(_023_),
+  AND2_X1 _068_ (
+    .A1(_006_),
+    .A2(inst_opcode[5]),
     .ZN(_024_)
   );
-  NAND2_X1 _068_ (
-    .A1(inst_funct7[5]),
-    .A2(_015_),
+  NAND2_X1 _069_ (
+    .A1(_010_),
+    .A2(_024_),
     .ZN(_025_)
   );
-  AOI22_X1 _069_ (
-    .A1(inst_funct7[5]),
-    .A2(_015_),
-    .B1(_021_),
-    .B2(_024_),
+  NAND3_X1 _070_ (
+    .A1(inst_opcode[6]),
+    .A2(_010_),
+    .A3(_024_),
     .ZN(_026_)
   );
-  NAND3_X1 _070_ (
-    .A1(inst_funct3[0]),
-    .A2(_002_),
-    .A3(inst_funct3[2]),
+  NAND3_X1 _071_ (
+    .A1(inst_opcode[6]),
+    .A2(_006_),
+    .A3(inst_opcode[5]),
     .ZN(_027_)
   );
-  INV_X1 _071_ (
-    .A(inst_funct3[0]),
+  INV_X1 _072_ (
+    .A(inst_funct3[1]),
     .ZN(_001_)
   );
-  OAI21_X1 _072_ (
-    .A(_027_),
-    .B1(_019_),
-    .B2(_015_),
+  NOR2_X1 _073_ (
+    .A1(_011_),
+    .A2(_027_),
     .ZN(_028_)
   );
-  OAI21_X1 _073_ (
-    .A(_012_),
-    .B1(_026_),
-    .B2(_028_),
-    .ZN(alu_function[1])
-  );
-  AND2_X1 _074_ (
-    .A1(inst_funct3[2]),
-    .A2(_022_),
-    .ZN(_029_)
-  );
-  OR2_X1 _075_ (
-    .A1(_023_),
-    .A2(_029_),
-    .ZN(_030_)
-  );
-  AOI21_X1 _076_ (
+  OAI211_X1 _074_ (
     .A(_019_),
-    .B1(_015_),
-    .B2(_000_),
-    .ZN(_031_)
-  );
-  NOR3_X1 _077_ (
-    .A1(_000_),
-    .A2(_001_),
-    .A3(inst_funct3[1]),
-    .ZN(_032_)
-  );
-  NOR2_X1 _078_ (
-    .A1(_000_),
-    .A2(_027_),
-    .ZN(_033_)
-  );
-  OAI221_X1 _079_ (
-    .A(_012_),
-    .B1(_025_),
-    .B2(_027_),
-    .C1(_030_),
-    .C2(_031_),
+    .B(_023_),
+    .C1(_026_),
+    .C2(inst_funct3[1]),
     .ZN(alu_function[2])
   );
-  AOI21_X1 _080_ (
-    .A(inst_funct3[2]),
-    .B1(inst_funct3[1]),
-    .B2(inst_funct3[0]),
+  NAND2_X1 _075_ (
+    .A1(_001_),
+    .A2(inst_funct3[2]),
+    .ZN(_029_)
+  );
+  XOR2_X1 _076_ (
+    .A(inst_funct3[0]),
+    .B(inst_funct3[1]),
+    .Z(_030_)
+  );
+  OAI21_X1 _077_ (
+    .A(_029_),
+    .B1(_030_),
+    .B2(inst_funct3[2]),
+    .ZN(_031_)
+  );
+  AOI211_X1 _078_ (
+    .A(_020_),
+    .B(_022_),
+    .C1(_031_),
+    .C2(_002_),
+    .ZN(_032_)
+  );
+  NOR3_X1 _079_ (
+    .A1(inst_opcode[6]),
+    .A2(_006_),
+    .A3(inst_opcode[5]),
+    .ZN(_033_)
+  );
+  NAND2_X1 _080_ (
+    .A1(_010_),
+    .A2(_033_),
     .ZN(_034_)
   );
-  XNOR2_X1 _081_ (
-    .A(inst_funct3[0]),
-    .B(inst_funct3[1]),
+  OAI22_X1 _081_ (
+    .A1(inst_funct3[1]),
+    .A2(_026_),
+    .B1(_031_),
+    .B2(_034_),
     .ZN(_035_)
   );
-  INV_X1 _082_ (
-    .A(inst_funct3[1]),
+  OR2_X1 _082_ (
+    .A1(_032_),
+    .A2(_035_),
+    .ZN(alu_function[1])
+  );
+  INV_X1 _083_ (
+    .A(inst_funct7[5]),
     .ZN(_002_)
   );
-  AOI21_X1 _083_ (
-    .A(_034_),
-    .B1(_035_),
-    .B2(inst_funct3[2]),
+  NOR3_X1 _084_ (
+    .A1(_000_),
+    .A2(_001_),
+    .A3(inst_funct3[2]),
     .ZN(_036_)
   );
-  NOR2_X1 _084_ (
-    .A1(_032_),
-    .A2(_036_),
+  AOI221_X1 _085_ (
+    .A(_036_),
+    .B1(_030_),
+    .B2(inst_funct3[2]),
+    .C1(inst_funct7[5]),
+    .C2(_017_),
     .ZN(_037_)
   );
-  OAI21_X1 _085_ (
-    .A(_019_),
-    .B1(_033_),
-    .B2(_037_),
+  OAI211_X1 _086_ (
+    .A(_010_),
+    .B(_033_),
+    .C1(_037_),
+    .C2(_020_),
     .ZN(_038_)
   );
-  OAI211_X1 _086_ (
-    .A(_005_),
-    .B(_014_),
-    .C1(_036_),
-    .C2(inst_funct7[5]),
+  AOI211_X1 _087_ (
+    .A(inst_funct7[5]),
+    .B(_036_),
+    .C1(_030_),
+    .C2(inst_funct3[2]),
     .ZN(_039_)
   );
-  OAI211_X1 _087_ (
-    .A(_011_),
-    .B(_020_),
-    .C1(_033_),
-    .C2(_039_),
+  NOR3_X1 _088_ (
+    .A1(_012_),
+    .A2(_020_),
+    .A3(_039_),
     .ZN(_040_)
   );
-  OAI211_X1 _088_ (
+  NAND2_X1 _089_ (
+    .A1(_026_),
+    .A2(_034_),
+    .ZN(_041_)
+  );
+  OAI221_X1 _090_ (
     .A(_038_),
-    .B(_040_),
-    .C1(_011_),
-    .C2(_021_),
+    .B1(_040_),
+    .B2(_041_),
+    .C1(_029_),
+    .C2(_026_),
     .ZN(alu_function[0])
   );
-  MUX2_X1 _089_ (
-    .A(inst_funct3[2]),
-    .B(inst_funct3[1]),
-    .S(inst_funct3[0]),
-    .Z(_041_)
-  );
-  INV_X1 _090_ (
-    .A(_041_),
+  AOI21_X1 _091_ (
+    .A(_028_),
+    .B1(_014_),
+    .B2(inst_funct3[0]),
     .ZN(_042_)
   );
-  OAI22_X1 _091_ (
-    .A1(_002_),
-    .A2(_011_),
-    .B1(_031_),
-    .B2(_042_),
+  OAI22_X1 _092_ (
+    .A1(_015_),
+    .A2(_018_),
+    .B1(_042_),
+    .B2(_001_),
     .ZN(alu_function[3])
   );
-  NAND4_X1 _092_ (
-    .A1(inst_opcode[1]),
-    .A2(inst_opcode[0]),
-    .A3(inst_opcode[2]),
-    .A4(inst_opcode[3]),
+  NOR3_X1 _093_ (
+    .A1(inst_opcode[6]),
+    .A2(inst_opcode[4]),
+    .A3(_011_),
     .ZN(_043_)
   );
-  INV_X1 _093_ (
-    .A(inst_opcode[5]),
+  INV_X1 _094_ (
+    .A(inst_funct3[2]),
     .ZN(_003_)
   );
-  XNOR2_X1 _094_ (
-    .A(inst_funct3[0]),
-    .B(alu_result_equal_zero),
-    .ZN(_044_)
-  );
-  OAI21_X1 _095_ (
-    .A(_044_),
-    .B1(inst_funct3[2]),
-    .B2(_002_),
-    .ZN(_045_)
-  );
-  OAI22_X1 _096_ (
-    .A1(_009_),
-    .A2(_043_),
-    .B1(_045_),
-    .B2(_011_),
-    .ZN(next_pc_select[0])
-  );
-  NOR2_X1 _097_ (
-    .A1(inst_opcode[4]),
-    .A2(_018_),
+  NOR4_X1 _095_ (
+    .A1(inst_opcode[6]),
+    .A2(inst_opcode[4]),
+    .A3(inst_opcode[5]),
+    .A4(_011_),
     .ZN(data_mem_read_enable)
   );
-  OR3_X1 _098_ (
-    .A1(_005_),
-    .A2(inst_opcode[3]),
-    .A3(_006_),
+  NAND3_X1 _096_ (
+    .A1(inst_opcode[3]),
+    .A2(inst_opcode[2]),
+    .A3(_008_),
+    .ZN(_044_)
+  );
+  AOI22_X1 _097_ (
+    .A1(inst_funct3[1]),
+    .A2(_003_),
+    .B1(alu_result_equal_zero),
+    .B2(_000_),
+    .ZN(_045_)
+  );
+  OAI211_X1 _098_ (
+    .A(_010_),
+    .B(_045_),
+    .C1(_000_),
+    .C2(alu_result_equal_zero),
     .ZN(_046_)
   );
-  NAND2_X1 _099_ (
-    .A1(inst_opcode[2]),
-    .A2(_014_),
+  AOI21_X1 _099_ (
+    .A(_027_),
+    .B1(_044_),
+    .B2(_046_),
+    .ZN(next_pc_select[0])
+  );
+  AOI21_X1 _100_ (
+    .A(data_mem_read_enable),
+    .B1(_021_),
+    .B2(inst_opcode[2]),
     .ZN(_047_)
   );
-  OAI21_X1 _100_ (
+  INV_X1 _101_ (
     .A(_047_),
-    .B1(_018_),
-    .B2(inst_opcode[4]),
     .ZN(reg_writeback_select[0])
   );
-  AND2_X1 _101_ (
-    .A1(_004_),
-    .A2(_010_),
+  NOR2_X1 _102_ (
+    .A1(inst_opcode[6]),
+    .A2(_025_),
     .ZN(data_mem_write_enable)
   );
-  AOI21_X1 _102_ (
-    .A(_014_),
-    .B1(_010_),
-    .B2(inst_opcode[6]),
-    .ZN(alu_operand_b_select)
-  );
-  NOR2_X1 _103_ (
-    .A1(_009_),
-    .A2(_046_),
-    .ZN(next_pc_select[1])
-  );
-  INV_X1 _104_ (
-    .A(inst_opcode[6]),
-    .ZN(_004_)
-  );
-  NOR3_X1 _105_ (
-    .A1(inst_opcode[4]),
-    .A2(_016_),
-    .A3(_043_),
+  NOR3_X1 _103_ (
+    .A1(inst_opcode[3]),
+    .A2(_005_),
+    .A3(_009_),
     .ZN(_048_)
   );
-  NOR2_X1 _106_ (
-    .A1(_010_),
-    .A2(_048_),
-    .ZN(regfile_write_enable)
-  );
-  NOR2_X1 _107_ (
-    .A1(_016_),
-    .A2(_046_),
+  NOR3_X1 _104_ (
+    .A1(inst_opcode[6]),
+    .A2(_011_),
+    .A3(_024_),
     .ZN(_049_)
   );
-  AOI211_X1 _108_ (
-    .A(_015_),
-    .B(_017_),
-    .C1(_049_),
-    .C2(inst_opcode[4]),
+  INV_X1 _105_ (
+    .A(inst_opcode[3]),
+    .ZN(_004_)
+  );
+  AOI21_X1 _106_ (
+    .A(_049_),
+    .B1(_048_),
+    .B2(_033_),
     .ZN(reg_writeback_select[1])
   );
+  AND3_X1 _107_ (
+    .A1(inst_opcode[6]),
+    .A2(_024_),
+    .A3(_048_),
+    .ZN(next_pc_select[1])
+  );
+  NOR2_X1 _108_ (
+    .A1(_021_),
+    .A2(_028_),
+    .ZN(alu_operand_b_select)
+  );
   NOR4_X1 _109_ (
-    .A1(_010_),
-    .A2(_014_),
-    .A3(_017_),
+    .A1(_021_),
+    .A2(_041_),
+    .A3(_043_),
     .A4(next_pc_select[1]),
     .ZN(alu_operand_a_select)
   );
-  INV_X1 _110_ (
+  NOR4_X1 _110_ (
+    .A1(inst_opcode[6]),
+    .A2(inst_opcode[4]),
+    .A3(inst_opcode[5]),
+    .A4(_044_),
+    .ZN(_050_)
+  );
+  AOI21_X1 _111_ (
+    .A(_050_),
+    .B1(_024_),
+    .B2(_010_),
+    .ZN(regfile_write_enable)
+  );
+  INV_X1 _112_ (
     .A(inst_opcode[2]),
     .ZN(_005_)
   );
-  NAND2_X1 _111_ (
-    .A1(inst_opcode[1]),
-    .A2(inst_opcode[0]),
+  INV_X1 _113_ (
+    .A(inst_opcode[4]),
     .ZN(_006_)
   );
-  NOR3_X1 _112_ (
-    .A1(inst_opcode[2]),
-    .A2(inst_opcode[3]),
-    .A3(_006_),
+  NOR2_X1 _114_ (
+    .A1(inst_opcode[6]),
+    .A2(_006_),
     .ZN(_007_)
   );
   assign alu_function[4] = 1'h0;

@@ -1,5 +1,5 @@
 # Load elaborated hierarchical design.
-read_json "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/new/frontend_hier.json"
+read_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/frontend_hier.json"
 
 # Replace partition implementations with blackboxes.
 blackbox data_memory_interface
@@ -17,8 +17,8 @@ stat -top riscv_core
 
 select -clear
 select riscv_core
-write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/incremental-profiled/top-shell/top_shell.json"
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell.json"
 select -clear
 
-write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/incremental-profiled/top-shell/top_shell.rtlil"
-write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/incremental-profiled/top-shell/top_shell_netlist.v"
+write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell.rtlil"
+write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell_netlist.v"

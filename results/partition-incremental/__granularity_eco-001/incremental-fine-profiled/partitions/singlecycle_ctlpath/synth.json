@@ -61,23 +61,7 @@
         }
       },
       "cells": {
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$423": {
-          "hide_name": 1,
-          "type": "$_NOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 17 ],
-            "Y": [ 33 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$424": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$637": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -90,12 +74,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 34 ],
-            "B": [ 35 ],
-            "Y": [ 36 ]
+            "A": [ 33 ],
+            "B": [ 34 ],
+            "Y": [ 35 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$425": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$638": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -110,10 +94,82 @@
           "connections": {
             "A": [ 9 ],
             "B": [ 10 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$639": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 36 ],
             "Y": [ 37 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$426": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$640": {
+          "hide_name": 1,
+          "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 37 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$641": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 38 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$642": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 33 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$643": {
           "hide_name": 1,
           "type": "$_ORNOT_",
           "parameters": {
@@ -127,101 +183,11 @@
           },
           "connections": {
             "A": [ 10 ],
-            "B": [ 11 ],
-            "Y": [ 38 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$427": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 11 ],
-            "B": [ 37 ],
-            "Y": [ 39 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$428": {
-          "hide_name": 1,
-          "type": "$_ORNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 39 ],
-            "B": [ 36 ],
-            "Y": [ 40 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$429": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 34 ],
-            "B": [ 35 ],
+            "B": [ 40 ],
             "Y": [ 41 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$430": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 34 ],
-            "B": [ 35 ],
-            "Y": [ 42 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$431": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 40 ],
-            "B": [ 42 ],
-            "Y": [ 43 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$432": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$644": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -236,10 +202,10 @@
           "connections": {
             "A": [ 10 ],
             "B": [ 9 ],
-            "Y": [ 44 ]
+            "Y": [ 42 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$433": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$645": {
           "hide_name": 1,
           "type": "$_NOR_",
           "parameters": {
@@ -253,13 +219,13 @@
           },
           "connections": {
             "A": [ 11 ],
-            "B": [ 44 ],
-            "Y": [ 45 ]
+            "B": [ 42 ],
+            "Y": [ 43 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$434": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$646": {
           "hide_name": 1,
-          "type": "$_ORNOT_",
+          "type": "$_MUX_",
           "parameters": {
           },
           "attributes": {
@@ -267,15 +233,17 @@
           "port_directions": {
             "A": "input",
             "B": "input",
+            "S": "input",
             "Y": "output"
           },
           "connections": {
-            "A": [ 37 ],
-            "B": [ 45 ],
-            "Y": [ 46 ]
+            "A": [ 42 ],
+            "B": [ 36 ],
+            "S": [ 11 ],
+            "Y": [ 44 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$435": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$647": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -288,30 +256,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 38 ],
-            "B": [ 46 ],
-            "Y": [ 47 ]
+            "A": [ 33 ],
+            "B": [ 34 ],
+            "Y": [ 45 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$436": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 43 ],
-            "B": [ 47 ],
-            "Y": [ 48 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$437": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$648": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -324,30 +274,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 35 ],
-            "B": [ 34 ],
-            "Y": [ 49 ]
+            "A": [ 33 ],
+            "B": [ 17 ],
+            "Y": [ 46 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$438": {
-          "hide_name": 1,
-          "type": "$_ORNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 10 ],
-            "B": [ 49 ],
-            "Y": [ 50 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$439": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$649": {
           "hide_name": 1,
           "type": "$_OR_",
           "parameters": {
@@ -360,30 +292,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 33 ],
-            "B": [ 40 ],
-            "Y": [ 51 ]
+            "A": [ 45 ],
+            "B": [ 46 ],
+            "Y": [ 47 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$440": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 50 ],
-            "B": [ 51 ],
-            "Y": [ 52 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$441": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$650": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -396,12 +310,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 48 ],
-            "B": [ 52 ],
-            "Y": [ 28 ]
+            "A": [ 44 ],
+            "B": [ 47 ],
+            "Y": [ 48 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$442": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$651": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -414,14 +328,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 17 ],
-            "B": [ 37 ],
-            "Y": [ 53 ]
+            "A": [ 41 ],
+            "B": [ 48 ],
+            "Y": [ 49 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$443": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$652": {
           "hide_name": 1,
-          "type": "$_NAND_",
+          "type": "$_OR_",
           "parameters": {
           },
           "attributes": {
@@ -432,12 +346,30 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 17 ],
-            "B": [ 39 ],
-            "Y": [ 54 ]
+            "A": [ 39 ],
+            "B": [ 49 ],
+            "Y": [ 29 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$444": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$653": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "B": [ 42 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$654": {
           "hide_name": 1,
           "type": "$_MUX_",
           "parameters": {
@@ -451,15 +383,15 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 44 ],
-            "B": [ 37 ],
+            "A": [ 50 ],
+            "B": [ 10 ],
             "S": [ 11 ],
-            "Y": [ 55 ]
+            "Y": [ 51 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$445": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$655": {
           "hide_name": 1,
-          "type": "$_ORNOT_",
+          "type": "$_OR_",
           "parameters": {
           },
           "attributes": {
@@ -471,11 +403,29 @@
           },
           "connections": {
             "A": [ 17 ],
-            "B": [ 34 ],
-            "Y": [ 56 ]
+            "B": [ 51 ],
+            "Y": [ 52 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$446": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$656": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 38 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$657": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -488,14 +438,32 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 42 ],
-            "B": [ 56 ],
-            "Y": [ 57 ]
+            "A": [ 52 ],
+            "B": [ 53 ],
+            "Y": [ 54 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$447": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$658": {
           "hide_name": 1,
           "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 45 ],
+            "B": [ 51 ],
+            "Y": [ 55 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$659": {
+          "hide_name": 1,
+          "type": "$_AND_",
           "parameters": {
           },
           "attributes": {
@@ -508,30 +476,10 @@
           "connections": {
             "A": [ 41 ],
             "B": [ 55 ],
-            "Y": [ 58 ]
+            "Y": [ 56 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$448": {
-          "hide_name": 1,
-          "type": "$_MUX_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "S": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 55 ],
-            "B": [ 39 ],
-            "S": [ 17 ],
-            "Y": [ 59 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$449": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$660": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -544,48 +492,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 36 ],
-            "B": [ 59 ],
-            "Y": [ 60 ]
+            "A": [ 54 ],
+            "B": [ 56 ],
+            "Y": [ 28 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$450": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 50 ],
-            "B": [ 58 ],
-            "Y": [ 61 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$451": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 60 ],
-            "B": [ 61 ],
-            "Y": [ 29 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$452": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$661": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -599,29 +511,11 @@
           },
           "connections": {
             "A": [ 10 ],
-            "B": [ 45 ],
-            "Y": [ 62 ]
+            "B": [ 43 ],
+            "Y": [ 57 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$453": {
-          "hide_name": 1,
-          "type": "$_OR_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 37 ],
-            "B": [ 44 ],
-            "Y": [ 63 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$454": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$662": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -635,11 +529,11 @@
           },
           "connections": {
             "A": [ 11 ],
-            "B": [ 63 ],
-            "Y": [ 64 ]
+            "B": [ 50 ],
+            "Y": [ 58 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$455": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$663": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -652,12 +546,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 62 ],
-            "B": [ 64 ],
-            "Y": [ 65 ]
+            "A": [ 57 ],
+            "B": [ 58 ],
+            "Y": [ 59 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$456": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$664": {
           "hide_name": 1,
           "type": "$_MUX_",
           "parameters": {
@@ -671,13 +565,13 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 11 ],
-            "B": [ 65 ],
-            "S": [ 53 ],
-            "Y": [ 66 ]
+            "A": [ 59 ],
+            "B": [ 11 ],
+            "S": [ 37 ],
+            "Y": [ 60 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$457": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$665": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -690,14 +584,32 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 41 ],
-            "B": [ 66 ],
-            "Y": [ 67 ]
+            "A": [ 45 ],
+            "B": [ 60 ],
+            "Y": [ 61 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$458": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$666": {
           "hide_name": 1,
-          "type": "$_NAND_",
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 59 ],
+            "B": [ 17 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$667": {
+          "hide_name": 1,
+          "type": "$_AND_",
           "parameters": {
           },
           "attributes": {
@@ -709,13 +621,13 @@
           },
           "connections": {
             "A": [ 33 ],
-            "B": [ 65 ],
-            "Y": [ 68 ]
+            "B": [ 38 ],
+            "Y": [ 63 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$459": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$668": {
           "hide_name": 1,
-          "type": "$_AND_",
+          "type": "$_ANDNOT_",
           "parameters": {
           },
           "attributes": {
@@ -726,30 +638,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 34 ],
-            "B": [ 54 ],
-            "Y": [ 69 ]
+            "A": [ 63 ],
+            "B": [ 62 ],
+            "Y": [ 64 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$460": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 68 ],
-            "B": [ 69 ],
-            "Y": [ 70 ]
-          }
-        },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$461": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$669": {
           "hide_name": 1,
           "type": "$_OR_",
           "parameters": {
@@ -762,14 +656,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 35 ],
-            "B": [ 70 ],
-            "Y": [ 71 ]
+            "A": [ 34 ],
+            "B": [ 64 ],
+            "Y": [ 65 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$462": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$670": {
           "hide_name": 1,
-          "type": "$_ORNOT_",
+          "type": "$_ANDNOT_",
           "parameters": {
           },
           "attributes": {
@@ -780,14 +674,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 38 ],
-            "B": [ 49 ],
-            "Y": [ 72 ]
+            "A": [ 11 ],
+            "B": [ 41 ],
+            "Y": [ 66 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$463": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$671": {
           "hide_name": 1,
-          "type": "$_AND_",
+          "type": "$_ANDNOT_",
           "parameters": {
           },
           "attributes": {
@@ -798,12 +692,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 67 ],
-            "B": [ 72 ],
-            "Y": [ 73 ]
+            "A": [ 61 ],
+            "B": [ 66 ],
+            "Y": [ 67 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$464": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$672": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -816,12 +710,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 71 ],
-            "B": [ 73 ],
+            "A": [ 65 ],
+            "B": [ 67 ],
             "Y": [ 27 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$465": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$673": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -835,11 +729,11 @@
           },
           "connections": {
             "A": [ 10 ],
-            "B": [ 49 ],
-            "Y": [ 74 ]
+            "B": [ 40 ],
+            "Y": [ 68 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$466": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$674": {
           "hide_name": 1,
           "type": "$_MUX_",
           "parameters": {
@@ -856,10 +750,10 @@
             "A": [ 11 ],
             "B": [ 10 ],
             "S": [ 9 ],
-            "Y": [ 75 ]
+            "Y": [ 69 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$467": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$675": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -872,12 +766,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 57 ],
-            "B": [ 75 ],
-            "Y": [ 76 ]
+            "A": [ 47 ],
+            "B": [ 69 ],
+            "Y": [ 70 ]
           }
         },
-        "$flatten\\alu_control.$abc$422$auto$blifparse.cc:397:parse_blif$468": {
+        "$flatten\\alu_control.$abc$636$auto$blifparse.cc:397:parse_blif$676": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -890,12 +784,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 74 ],
-            "B": [ 76 ],
+            "A": [ 68 ],
+            "B": [ 70 ],
             "Y": [ 30 ]
           }
         },
-        "$flatten\\control_transfer.$abc$281$auto$blifparse.cc:397:parse_blif$282": {
+        "$flatten\\control_transfer.$abc$515$auto$blifparse.cc:397:parse_blif$516": {
           "hide_name": 1,
           "type": "$_ORNOT_",
           "parameters": {
@@ -910,10 +804,10 @@
           "connections": {
             "A": [ 11 ],
             "B": [ 10 ],
-            "Y": [ 77 ]
+            "Y": [ 71 ]
           }
         },
-        "$flatten\\control_transfer.$abc$281$auto$blifparse.cc:397:parse_blif$283": {
+        "$flatten\\control_transfer.$abc$515$auto$blifparse.cc:397:parse_blif$517": {
           "hide_name": 1,
           "type": "$_XNOR_",
           "parameters": {
@@ -928,10 +822,10 @@
           "connections": {
             "A": [ 9 ],
             "B": [ 19 ],
-            "Y": [ 78 ]
+            "Y": [ 72 ]
           }
         },
-        "$flatten\\control_transfer.$abc$281$auto$blifparse.cc:397:parse_blif$284": {
+        "$flatten\\control_transfer.$abc$515$auto$blifparse.cc:397:parse_blif$518": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -944,48 +838,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 77 ],
-            "B": [ 78 ],
-            "Y": [ 79 ]
+            "A": [ 71 ],
+            "B": [ 72 ],
+            "Y": [ 73 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$685": {
-          "hide_name": 1,
-          "type": "$_ANDNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 7 ],
-            "B": [ 6 ],
-            "Y": [ 80 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$686": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 8 ],
-            "B": [ 80 ],
-            "Y": [ 81 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$687": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$833": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1000,10 +858,314 @@
           "connections": {
             "A": [ 3 ],
             "B": [ 2 ],
+            "Y": [ 74 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$834": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 74 ],
+            "B": [ 5 ],
+            "Y": [ 75 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$835": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 75 ],
+            "B": [ 4 ],
+            "Y": [ 76 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$836": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 8 ],
+            "Y": [ 77 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$837": {
+          "hide_name": 1,
+          "type": "$_ORNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 77 ],
+            "Y": [ 78 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$838": {
+          "hide_name": 1,
+          "type": "$_NOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "Y": [ 79 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$839": {
+          "hide_name": 1,
+          "type": "$_ORNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 79 ],
+            "Y": [ 80 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$840": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 80 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$841": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 6 ],
+            "Y": [ 81 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$842": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 81 ],
             "Y": [ 82 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$688": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$843": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 79 ],
+            "Y": [ 83 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$844": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 82 ],
+            "B": [ 83 ],
+            "Y": [ 84 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$845": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 8 ],
+            "Y": [ 85 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$846": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 85 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$847": {
+          "hide_name": 1,
+          "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 81 ],
+            "Y": [ 86 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$848": {
+          "hide_name": 1,
+          "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 82 ],
+            "Y": [ 87 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$849": {
+          "hide_name": 1,
+          "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 84 ],
+            "Y": [ 88 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$850": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 88 ],
+            "Y": [ 34 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$851": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1017,11 +1179,11 @@
           },
           "connections": {
             "A": [ 4 ],
-            "B": [ 82 ],
-            "Y": [ 83 ]
+            "B": [ 5 ],
+            "Y": [ 89 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$689": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$852": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -1034,14 +1196,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 5 ],
-            "B": [ 83 ],
-            "Y": [ 84 ]
+            "A": [ 74 ],
+            "B": [ 89 ],
+            "Y": [ 90 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$690": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$853": {
           "hide_name": 1,
-          "type": "$_NOR_",
+          "type": "$_NAND_",
           "parameters": {
           },
           "attributes": {
@@ -1052,12 +1214,30 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 5 ],
-            "B": [ 4 ],
-            "Y": [ 85 ]
+            "A": [ 73 ],
+            "B": [ 76 ],
+            "Y": [ 91 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$691": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$854": {
+          "hide_name": 1,
+          "type": "$_NAND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 90 ],
+            "B": [ 91 ],
+            "Y": [ 92 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$855": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1071,137 +1251,11 @@
           },
           "connections": {
             "A": [ 82 ],
-            "B": [ 85 ],
-            "Y": [ 86 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$692": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 80 ],
-            "B": [ 86 ],
-            "Y": [ 87 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$693": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 81 ],
-            "B": [ 86 ],
-            "Y": [ 88 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$694": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 79 ],
-            "B": [ 86 ],
-            "Y": [ 89 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$695": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 84 ],
-            "B": [ 89 ],
-            "Y": [ 90 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$696": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 81 ],
-            "B": [ 90 ],
+            "B": [ 92 ],
             "Y": [ 31 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$697": {
-          "hide_name": 1,
-          "type": "$_NOR_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 7 ],
-            "B": [ 8 ],
-            "Y": [ 91 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$698": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 86 ],
-            "B": [ 91 ],
-            "Y": [ 92 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$699": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$856": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1214,14 +1268,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 6 ],
-            "B": [ 91 ],
+            "A": [ 7 ],
+            "B": [ 85 ],
             "Y": [ 93 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$700": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$857": {
           "hide_name": 1,
-          "type": "$_NAND_",
+          "type": "$_AND_",
           "parameters": {
           },
           "attributes": {
@@ -1232,12 +1286,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 86 ],
-            "B": [ 93 ],
+            "A": [ 4 ],
+            "B": [ 75 ],
             "Y": [ 94 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$701": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$858": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -1250,48 +1304,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 88 ],
-            "B": [ 94 ],
-            "Y": [ 35 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$702": {
-          "hide_name": 1,
-          "type": "$_ANDNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 91 ],
-            "B": [ 6 ],
+            "A": [ 75 ],
+            "B": [ 93 ],
             "Y": [ 95 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$703": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 86 ],
-            "B": [ 95 ],
-            "Y": [ 23 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$704": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$859": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -1304,68 +1322,14 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 83 ],
-            "B": [ 5 ],
+            "A": [ 4 ],
+            "B": [ 95 ],
             "Y": [ 96 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$705": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$860": {
           "hide_name": 1,
-          "type": "$_ANDNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 7 ],
-            "B": [ 8 ],
-            "Y": [ 97 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$706": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 6 ],
-            "B": [ 97 ],
-            "Y": [ 98 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$707": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 96 ],
-            "B": [ 98 ],
-            "Y": [ 99 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$708": {
-          "hide_name": 1,
-          "type": "$_ORNOT_",
+          "type": "$_OR_",
           "parameters": {
           },
           "attributes": {
@@ -1377,11 +1341,11 @@
           },
           "connections": {
             "A": [ 23 ],
-            "B": [ 99 ],
+            "B": [ 96 ],
             "Y": [ 25 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$709": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$861": {
           "hide_name": 1,
           "type": "$_NOR_",
           "parameters": {
@@ -1395,11 +1359,11 @@
           },
           "connections": {
             "A": [ 8 ],
-            "B": [ 87 ],
+            "B": [ 86 ],
             "Y": [ 24 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$710": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$862": {
           "hide_name": 1,
           "type": "$_NAND_",
           "parameters": {
@@ -1412,12 +1376,30 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 86 ],
-            "B": [ 98 ],
-            "Y": [ 100 ]
+            "A": [ 83 ],
+            "B": [ 94 ],
+            "Y": [ 97 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$711": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$863": {
+          "hide_name": 1,
+          "type": "$_ORNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 81 ],
+            "B": [ 77 ],
+            "Y": [ 98 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$864": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1430,12 +1412,30 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 99 ],
-            "B": [ 100 ],
-            "Y": [ 101 ]
+            "A": [ 97 ],
+            "B": [ 98 ],
+            "Y": [ 26 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$712": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$865": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 82 ],
+            "B": [ 94 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$866": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1449,155 +1449,11 @@
           },
           "connections": {
             "A": [ 88 ],
-            "B": [ 101 ],
-            "Y": [ 22 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$713": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 94 ],
-            "B": [ 100 ],
-            "Y": [ 34 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$714": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 81 ],
-            "B": [ 96 ],
-            "Y": [ 32 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$715": {
-          "hide_name": 1,
-          "type": "$_ORNOT_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 84 ],
             "B": [ 95 ],
-            "Y": [ 102 ]
+            "Y": [ 99 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$716": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 87 ],
-            "B": [ 102 ],
-            "Y": [ 20 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$717": {
-          "hide_name": 1,
-          "type": "$_NAND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 93 ],
-            "B": [ 96 ],
-            "Y": [ 103 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$718": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 92 ],
-            "B": [ 100 ],
-            "Y": [ 104 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$719": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 103 ],
-            "B": [ 104 ],
-            "Y": [ 26 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$720": {
-          "hide_name": 1,
-          "type": "$_AND_",
-          "parameters": {
-          },
-          "attributes": {
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 87 ],
-            "B": [ 92 ],
-            "Y": [ 105 ]
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$721": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$867": {
           "hide_name": 1,
           "type": "$_ANDNOT_",
           "parameters": {
@@ -1610,12 +1466,12 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 105 ],
+            "A": [ 99 ],
             "B": [ 32 ],
-            "Y": [ 106 ]
+            "Y": [ 100 ]
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$auto$blifparse.cc:397:parse_blif$722": {
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$868": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -1628,9 +1484,63 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 101 ],
-            "B": [ 106 ],
+            "A": [ 78 ],
+            "B": [ 100 ],
             "Y": [ 21 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$869": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 87 ],
+            "B": [ 95 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$870": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80 ],
+            "B": [ 90 ],
+            "Y": [ 101 ]
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$auto$blifparse.cc:397:parse_blif$871": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 86 ],
+            "B": [ 101 ],
+            "Y": [ 20 ]
           }
         },
         "alu_control": {
@@ -1686,429 +1596,399 @@
         }
       },
       "netnames": {
-        "$flatten\\alu_control.$abc$422$new_n11": {
+        "$flatten\\alu_control.$abc$636$new_n11": {
           "hide_name": 1,
-          "bits": [ 33 ],
+          "bits": [ 35 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n12": {
+        "$flatten\\alu_control.$abc$636$new_n12": {
           "hide_name": 1,
           "bits": [ 36 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n13": {
+        "$flatten\\alu_control.$abc$636$new_n13": {
           "hide_name": 1,
           "bits": [ 37 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n14": {
+        "$flatten\\alu_control.$abc$636$new_n14": {
           "hide_name": 1,
           "bits": [ 38 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n15": {
+        "$flatten\\alu_control.$abc$636$new_n15": {
           "hide_name": 1,
           "bits": [ 39 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n16": {
+        "$flatten\\alu_control.$abc$636$new_n16": {
           "hide_name": 1,
           "bits": [ 40 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n17": {
+        "$flatten\\alu_control.$abc$636$new_n17": {
           "hide_name": 1,
           "bits": [ 41 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n18": {
+        "$flatten\\alu_control.$abc$636$new_n18": {
           "hide_name": 1,
           "bits": [ 42 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n19": {
+        "$flatten\\alu_control.$abc$636$new_n19": {
           "hide_name": 1,
           "bits": [ 43 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n20": {
+        "$flatten\\alu_control.$abc$636$new_n20": {
           "hide_name": 1,
           "bits": [ 44 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n21": {
+        "$flatten\\alu_control.$abc$636$new_n21": {
           "hide_name": 1,
           "bits": [ 45 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n22": {
+        "$flatten\\alu_control.$abc$636$new_n22": {
           "hide_name": 1,
           "bits": [ 46 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n23": {
+        "$flatten\\alu_control.$abc$636$new_n23": {
           "hide_name": 1,
           "bits": [ 47 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n24": {
+        "$flatten\\alu_control.$abc$636$new_n24": {
           "hide_name": 1,
           "bits": [ 48 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n25": {
+        "$flatten\\alu_control.$abc$636$new_n25": {
           "hide_name": 1,
           "bits": [ 49 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n26": {
+        "$flatten\\alu_control.$abc$636$new_n27": {
           "hide_name": 1,
           "bits": [ 50 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n27": {
+        "$flatten\\alu_control.$abc$636$new_n28": {
           "hide_name": 1,
           "bits": [ 51 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n28": {
+        "$flatten\\alu_control.$abc$636$new_n29": {
           "hide_name": 1,
           "bits": [ 52 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n30": {
+        "$flatten\\alu_control.$abc$636$new_n30": {
           "hide_name": 1,
           "bits": [ 53 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n31": {
+        "$flatten\\alu_control.$abc$636$new_n31": {
           "hide_name": 1,
           "bits": [ 54 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n32": {
+        "$flatten\\alu_control.$abc$636$new_n32": {
           "hide_name": 1,
           "bits": [ 55 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n33": {
+        "$flatten\\alu_control.$abc$636$new_n33": {
           "hide_name": 1,
           "bits": [ 56 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n34": {
+        "$flatten\\alu_control.$abc$636$new_n35": {
           "hide_name": 1,
           "bits": [ 57 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n35": {
+        "$flatten\\alu_control.$abc$636$new_n36": {
           "hide_name": 1,
           "bits": [ 58 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n36": {
+        "$flatten\\alu_control.$abc$636$new_n37": {
           "hide_name": 1,
           "bits": [ 59 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n37": {
+        "$flatten\\alu_control.$abc$636$new_n38": {
           "hide_name": 1,
           "bits": [ 60 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n38": {
+        "$flatten\\alu_control.$abc$636$new_n39": {
           "hide_name": 1,
           "bits": [ 61 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n40": {
+        "$flatten\\alu_control.$abc$636$new_n40": {
           "hide_name": 1,
           "bits": [ 62 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n41": {
+        "$flatten\\alu_control.$abc$636$new_n41": {
           "hide_name": 1,
           "bits": [ 63 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n42": {
+        "$flatten\\alu_control.$abc$636$new_n42": {
           "hide_name": 1,
           "bits": [ 64 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n43": {
+        "$flatten\\alu_control.$abc$636$new_n43": {
           "hide_name": 1,
           "bits": [ 65 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n44": {
+        "$flatten\\alu_control.$abc$636$new_n44": {
           "hide_name": 1,
           "bits": [ 66 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n45": {
+        "$flatten\\alu_control.$abc$636$new_n45": {
           "hide_name": 1,
           "bits": [ 67 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n46": {
+        "$flatten\\alu_control.$abc$636$new_n47": {
           "hide_name": 1,
           "bits": [ 68 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n47": {
+        "$flatten\\alu_control.$abc$636$new_n48": {
           "hide_name": 1,
           "bits": [ 69 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n48": {
+        "$flatten\\alu_control.$abc$636$new_n49": {
           "hide_name": 1,
           "bits": [ 70 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n49": {
+        "$flatten\\control_transfer.$abc$515$new_n6": {
           "hide_name": 1,
           "bits": [ 71 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n50": {
+        "$flatten\\control_transfer.$abc$515$new_n7": {
           "hide_name": 1,
           "bits": [ 72 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n51": {
-          "hide_name": 1,
-          "bits": [ 73 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\alu_control.$abc$422$new_n53": {
+        "$flatten\\singlecycle_control.$abc$832$new_n20": {
           "hide_name": 1,
           "bits": [ 74 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n54": {
+        "$flatten\\singlecycle_control.$abc$832$new_n21": {
           "hide_name": 1,
           "bits": [ 75 ],
           "attributes": {
           }
         },
-        "$flatten\\alu_control.$abc$422$new_n55": {
+        "$flatten\\singlecycle_control.$abc$832$new_n22": {
           "hide_name": 1,
           "bits": [ 76 ],
           "attributes": {
           }
         },
-        "$flatten\\control_transfer.$abc$281$new_n6": {
+        "$flatten\\singlecycle_control.$abc$832$new_n23": {
           "hide_name": 1,
           "bits": [ 77 ],
           "attributes": {
           }
         },
-        "$flatten\\control_transfer.$abc$281$new_n7": {
+        "$flatten\\singlecycle_control.$abc$832$new_n24": {
           "hide_name": 1,
           "bits": [ 78 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n20": {
+        "$flatten\\singlecycle_control.$abc$832$new_n25": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\singlecycle_control.$abc$832$new_n26": {
           "hide_name": 1,
           "bits": [ 80 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n21": {
+        "$flatten\\singlecycle_control.$abc$832$new_n28": {
           "hide_name": 1,
           "bits": [ 81 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n22": {
+        "$flatten\\singlecycle_control.$abc$832$new_n29": {
           "hide_name": 1,
           "bits": [ 82 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n23": {
+        "$flatten\\singlecycle_control.$abc$832$new_n30": {
           "hide_name": 1,
           "bits": [ 83 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n24": {
+        "$flatten\\singlecycle_control.$abc$832$new_n31": {
           "hide_name": 1,
           "bits": [ 84 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n25": {
+        "$flatten\\singlecycle_control.$abc$832$new_n32": {
           "hide_name": 1,
           "bits": [ 85 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n26": {
+        "$flatten\\singlecycle_control.$abc$832$new_n34": {
           "hide_name": 1,
           "bits": [ 86 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n27": {
+        "$flatten\\singlecycle_control.$abc$832$new_n35": {
           "hide_name": 1,
           "bits": [ 87 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n28": {
+        "$flatten\\singlecycle_control.$abc$832$new_n36": {
           "hide_name": 1,
           "bits": [ 88 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n29": {
+        "$flatten\\singlecycle_control.$abc$832$new_n38": {
           "hide_name": 1,
           "bits": [ 89 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n30": {
+        "$flatten\\singlecycle_control.$abc$832$new_n39": {
           "hide_name": 1,
           "bits": [ 90 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n32": {
+        "$flatten\\singlecycle_control.$abc$832$new_n40": {
           "hide_name": 1,
           "bits": [ 91 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n33": {
+        "$flatten\\singlecycle_control.$abc$832$new_n41": {
           "hide_name": 1,
           "bits": [ 92 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n34": {
+        "$flatten\\singlecycle_control.$abc$832$new_n43": {
           "hide_name": 1,
           "bits": [ 93 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n35": {
+        "$flatten\\singlecycle_control.$abc$832$new_n44": {
           "hide_name": 1,
           "bits": [ 94 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n37": {
+        "$flatten\\singlecycle_control.$abc$832$new_n45": {
           "hide_name": 1,
           "bits": [ 95 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n39": {
+        "$flatten\\singlecycle_control.$abc$832$new_n46": {
           "hide_name": 1,
           "bits": [ 96 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n40": {
+        "$flatten\\singlecycle_control.$abc$832$new_n49": {
           "hide_name": 1,
           "bits": [ 97 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n41": {
+        "$flatten\\singlecycle_control.$abc$832$new_n50": {
           "hide_name": 1,
           "bits": [ 98 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n42": {
+        "$flatten\\singlecycle_control.$abc$832$new_n53": {
           "hide_name": 1,
           "bits": [ 99 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n45": {
+        "$flatten\\singlecycle_control.$abc$832$new_n54": {
           "hide_name": 1,
           "bits": [ 100 ],
           "attributes": {
           }
         },
-        "$flatten\\singlecycle_control.$abc$684$new_n46": {
+        "$flatten\\singlecycle_control.$abc$832$new_n57": {
           "hide_name": 1,
           "bits": [ 101 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$new_n50": {
-          "hide_name": 1,
-          "bits": [ 102 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$new_n52": {
-          "hide_name": 1,
-          "bits": [ 103 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$new_n53": {
-          "hide_name": 1,
-          "bits": [ 104 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$new_n55": {
-          "hide_name": 1,
-          "bits": [ 105 ],
-          "attributes": {
-          }
-        },
-        "$flatten\\singlecycle_control.$abc$684$new_n56": {
-          "hide_name": 1,
-          "bits": [ 106 ],
           "attributes": {
           }
         },
@@ -2122,7 +2002,7 @@
         },
         "alu_control.alu_op_type": {
           "hide_name": 0,
-          "bits": [ 35, 34 ],
+          "bits": [ 34, 33 ],
           "attributes": {
             "hdlname": "alu_control alu_op_type",
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/alu_control.sv:10.24-10.35"
@@ -2153,7 +2033,7 @@
         },
         "alu_op_type": {
           "hide_name": 0,
-          "bits": [ 35, 34 ],
+          "bits": [ 34, 33 ],
           "attributes": {
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/singlecycle/singlecycle_ctlpath.sv:27.17-27.28"
           }
@@ -2197,7 +2077,7 @@
         },
         "control_transfer.take_branch": {
           "hide_name": 0,
-          "bits": [ 79 ],
+          "bits": [ 73 ],
           "attributes": {
             "hdlname": "control_transfer take_branch",
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-new/core/common/control_transfer.sv:12.18-12.29"
@@ -2268,7 +2148,7 @@
         },
         "singlecycle_control.alu_op_type": {
           "hide_name": 0,
-          "bits": [ 35, 34 ],
+          "bits": [ 34, 33 ],
           "attributes": {
             "hdlname": "singlecycle_control alu_op_type",
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/singlecycle/singlecycle_control.sv:16.24-16.35"
@@ -2348,7 +2228,7 @@
         },
         "singlecycle_control.take_branch": {
           "hide_name": 0,
-          "bits": [ 79 ],
+          "bits": [ 73 ],
           "attributes": {
             "hdlname": "singlecycle_control take_branch",
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/singlecycle/singlecycle_control.sv:11.12-11.23"
@@ -2356,7 +2236,7 @@
         },
         "take_branch": {
           "hide_name": 0,
-          "bits": [ 79 ],
+          "bits": [ 73 ],
           "attributes": {
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/singlecycle/singlecycle_ctlpath.sv:26.11-26.22"
           }

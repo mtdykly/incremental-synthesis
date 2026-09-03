@@ -162,6 +162,6 @@ Removed 0 unused cells and 8615 unused wires.
 10. Executing Verilog backend.
 Dumping module `\riscv_core'.
 
-End of script. Logfile hash: db68645f36, time: 2.11s, user: 0.41s, system: 0.12s, MEM: 69.02 MB peak
+End of script. Logfile hash: db68645f36, time: 2.10s, user: 0.45s, system: 0.06s, MEM: 68.95 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 85% 1x abc (1 sec), 6% 2x read_json (0 sec), ...
+Time spent: 85% 1x abc (1 sec), 5% 2x read_json (0 sec), ...

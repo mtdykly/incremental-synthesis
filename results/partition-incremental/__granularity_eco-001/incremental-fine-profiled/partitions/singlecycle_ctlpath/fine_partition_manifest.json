@@ -2,17 +2,35 @@
   "partitions": {
     "alu_control": {
       "instance_name": "alu_control",
+      "instance_names": [
+        "alu_control"
+      ],
       "region_id": "riscv_core.singlecycle_ctlpath.alu_control",
+      "region_ids": [
+        "riscv_core.singlecycle_ctlpath.alu_control"
+      ],
       "root_module": "alu_control"
     },
     "control_transfer": {
       "instance_name": "control_transfer",
+      "instance_names": [
+        "control_transfer"
+      ],
       "region_id": "riscv_core.singlecycle_ctlpath.control_transfer",
+      "region_ids": [
+        "riscv_core.singlecycle_ctlpath.control_transfer"
+      ],
       "root_module": "control_transfer"
     },
     "singlecycle_control": {
       "instance_name": "singlecycle_control",
+      "instance_names": [
+        "singlecycle_control"
+      ],
       "region_id": "riscv_core.singlecycle_ctlpath.singlecycle_control",
+      "region_ids": [
+        "riscv_core.singlecycle_ctlpath.singlecycle_control"
+      ],
       "root_module": "singlecycle_control"
     }
   },

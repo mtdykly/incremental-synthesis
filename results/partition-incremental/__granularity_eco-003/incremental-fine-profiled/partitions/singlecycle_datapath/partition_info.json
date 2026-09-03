@@ -1,6 +1,0 @@
-{
-  "partition_name": "singlecycle_datapath",
-  "root_module": "singlecycle_datapath",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-003-base",
-  "flatten_internal": true
-}

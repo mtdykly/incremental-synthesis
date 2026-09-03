@@ -6,7 +6,7 @@
  \----------------------------------------------------------------------------/
  Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 
--- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/run_synth_top_shell.ys' --
+-- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/run_synth_top_shell.ys' --
 
 1. Executing JSON frontend.
 Importing module singlecycle_datapath from JSON tree.
@@ -482,11 +482,11 @@ Found and reported 0 problems.
 8. Executing JSON backend.
 
 9. Executing RTLIL backend.
-Output filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.rtlil
+Output filename: /workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/fine-cache/singlecycle_ctlpath/root-shell/top_shell.rtlil
 
 10. Executing Verilog backend.
 Dumping module `\singlecycle_ctlpath'.
 
-End of script. Logfile hash: ac9301b357, time: 0.04s, user: 0.03s, system: 0.03s, MEM: 24.59 MB peak
+End of script. Logfile hash: 9e8bcb9e0a, time: 0.04s, user: 0.03s, system: 0.03s, MEM: 24.64 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 49% 2x read_json (0 sec), 18% 1x read_verilog (0 sec), ...
+Time spent: 48% 2x read_json (0 sec), 19% 1x read_verilog (0 sec), ...

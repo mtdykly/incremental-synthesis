@@ -2,7 +2,7 @@
   "partition_environment": {
     "flow_files": [
       {
-        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/prepare_partition_frontend.sh",
+        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/pipeline/prepare_partition_frontend.sh",
         "sha256": "7bc83c432ecd10be12a8a8696cdea133956d6691c080b926f59a40aff18289ad"
       },
       {
@@ -12,10 +12,10 @@
     ],
     "yosys_version": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)"
   },
-  "partition_environment_signature": "a69ec2f5deafa53ce5eb84f5fd05c31cf0725c7eef51c5354bd82f60a522ff90",
+  "partition_environment_signature": "179bbe579dbffebffcd735383f0f66d696f2bc5cf1d898a2b491ab45d2f2ef67",
   "partitions": {
     "data_memory_interface": {
-      "implementation_signature": "d71c1e8225efff96f0f194389ae4751967e4e8037c1c055138e430419fc1497d",
+      "implementation_signature": "ac2313ea08f71f3728ffc1af93f2e213443de34308a65c2cf4f2f449346048df",
       "interface": [
         {
           "direction": "input",
@@ -91,7 +91,7 @@
       "root_parameters": {}
     },
     "singlecycle_ctlpath": {
-      "implementation_signature": "df9dd707ac85289d07e6d394e07ca3c266c9598b43837d6e62cd17557ce309e9",
+      "implementation_signature": "64eeae2c3acea4ca5d619b53d45d6f432acbf229dd55023b5aba717114cd2c40",
       "interface": [
         {
           "direction": "output",
@@ -167,7 +167,7 @@
       "root_parameters": {}
     },
     "singlecycle_datapath": {
-      "implementation_signature": "7f541d4c8ed8565d76065061275d7144b5c01953cb7c048c856775d32a1044e9",
+      "implementation_signature": "ddf00e8022e23ffb972518f8cfb7cf3c4d257c88b545a0f494b1f3b48982c015",
       "interface": [
         {
           "direction": "input",
@@ -271,7 +271,7 @@
   "schema_version": 4,
   "signature_method": "isolated_partition_flattened_ir_with_stable_memory_ids",
   "top": {
-    "implementation_signature": "0f42ee2d3025eb912853904a750fdb02762e83e9f39384f099278ff81b5c4442",
+    "implementation_signature": "ad62652ea7d6a0bf07f38bc7154fb2ccf5f5d06880f03394fb2b88d6cf56f6e3",
     "interface": [
       {
         "direction": "output",
@@ -329,12 +329,12 @@
   "top_environment": {
     "flow_files": [
       {
-        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/synth_top_shell.sh",
-        "sha256": "3670773cd5f02561aaaf6c57a936cfe3963b49524bec1eabc43b640daf834c3c"
+        "path": "/workspace/incremental-synthesis/partition-incremental/scripts/pipeline/synth_top_shell.sh",
+        "sha256": "e02904feaf0d940b92917a900bcd4c977d050c4b945504d013fceed63ec31014"
       }
     ],
     "yosys_version": "Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)"
   },
-  "top_environment_signature": "76305a4fa9853ea2bf9d2c8dc726770181829ac0fded247d4d70956539369fa4",
+  "top_environment_signature": "8e94a12f8fae76f1db964da429922a8a3dc32add8db9ccbd68fdd696275ef310",
   "top_module": "riscv_core"
 }

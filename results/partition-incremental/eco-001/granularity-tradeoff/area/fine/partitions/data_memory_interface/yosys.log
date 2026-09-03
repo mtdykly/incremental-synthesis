@@ -127,6 +127,6 @@ Removed 0 unused cells and 251 unused wires.
 8. Executing Verilog backend.
 Dumping module `\data_memory_interface'.
 
-End of script. Logfile hash: 21d7d8f5a3, time: 0.16s, user: 0.06s, system: 0.02s, MEM: 33.65 MB peak
+End of script. Logfile hash: 21d7d8f5a3, time: 0.16s, user: 0.07s, system: 0.01s, MEM: 33.50 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 65% 1x abc (0 sec), 24% 1x dfflibmap (0 sec), ...

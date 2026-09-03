@@ -8,40 +8,41 @@
 
 -- Executing script file `/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/linked/run_link_partitions.ys' --
 
-1. Executing Verilog-2005 frontend: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/top-shell/top_shell_netlist.v
-Parsing SystemVerilog input from `/workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/top-shell/top_shell_netlist.v' to AST representation.
-Generating RTLIL representation for module `\riscv_core'.
-Successfully finished Verilog frontend.
+1. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/top-shell/top_shell.rtlil
 
-2. Executing JSON frontend.
-Importing module data_memory_interface from JSON tree.
+2. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/partitions/data_memory_interface/synth.rtlil
+Replacing existing blackbox module \data_memory_interface.
 
-3. Executing JSON frontend.
-Importing module singlecycle_ctlpath from JSON tree.
+3. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/partitions/singlecycle_ctlpath/synth.rtlil
+Replacing existing blackbox module \singlecycle_ctlpath.
 
-4. Executing JSON frontend.
-Importing module singlecycle_datapath from JSON tree.
+4. Executing RTLIL frontend.
+Input filename: /workspace/incremental-synthesis/results/partition-incremental/eco-001/incremental-profiled/partitions/singlecycle_datapath/synth.rtlil
+Replacing existing blackbox module \singlecycle_datapath.
 
 5. Executing HIERARCHY pass (managing design hierarchy).
 
 5.1. Analyzing design hierarchy..
 Top module:  \riscv_core
-Used module:     \singlecycle_datapath
-Used module:     \singlecycle_ctlpath
 Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
 
 5.2. Analyzing design hierarchy..
 Top module:  \riscv_core
-Used module:     \singlecycle_datapath
-Used module:     \singlecycle_ctlpath
 Used module:     \data_memory_interface
+Used module:     \singlecycle_ctlpath
+Used module:     \singlecycle_datapath
 Removed 0 unused modules.
 
 6. Executing CHECK pass (checking for obvious problems).
 Checking module singlecycle_datapath...
-Checking module singlecycle_ctlpath...
-Checking module data_memory_interface...
 Checking module riscv_core...
+Checking module data_memory_interface...
+Checking module singlecycle_ctlpath...
 Found and reported 0 problems.
 
 7. Printing statistics.
@@ -71,27 +72,20 @@ Found and reported 0 problems.
        56   $_XNOR_
        56   $_XOR_
 
-=== singlecycle_ctlpath ===
+=== riscv_core ===
 
         +----------Local Count, excluding submodules.
         | 
-       83 wires
-      104 wire bits
-       13 public wires
-       34 public wire bits
-       13 ports
-       34 port bits
-       83 cells
-       10   $_ANDNOT_
-       25   $_AND_
-        3   $_MUX_
-       29   $_NAND_
-        5   $_NOR_
-        1   $_NOT_
-        4   $_ORNOT_
-        4   $_OR_
-        1   $_XNOR_
-        1   $_XOR_
+       26 wires
+      298 wire bits
+       26 public wires
+      298 public wire bits
+       10 ports
+      168 port bits
+        3 submodules
+        1   data_memory_interface
+        1   singlecycle_ctlpath
+        1   singlecycle_datapath
 
 === data_memory_interface ===
 
@@ -114,20 +108,27 @@ Found and reported 0 problems.
         1   $_OR_
         1   $_XOR_
 
-=== riscv_core ===
+=== singlecycle_ctlpath ===
 
         +----------Local Count, excluding submodules.
         | 
-       26 wires
-      298 wire bits
-       26 public wires
-      298 public wire bits
-       10 ports
-      168 port bits
-        3 submodules
-        1   data_memory_interface
-        1   singlecycle_ctlpath
-        1   singlecycle_datapath
+       83 wires
+      104 wire bits
+       13 public wires
+       34 public wire bits
+       13 ports
+       34 port bits
+       83 cells
+       10   $_ANDNOT_
+       25   $_AND_
+        3   $_MUX_
+       29   $_NAND_
+        5   $_NOR_
+        1   $_NOT_
+        4   $_ORNOT_
+        4   $_OR_
+        1   $_XNOR_
+        1   $_XOR_
 
 === design hierarchy ===
 
@@ -179,6 +180,6 @@ Dumping module `\riscv_core'.
 Dumping module `\singlecycle_ctlpath'.
 Dumping module `\singlecycle_datapath'.
 
-End of script. Logfile hash: 1a08b3fe37, time: 0.22s, user: 0.21s, system: 0.08s, MEM: 67.38 MB peak
+End of script. Logfile hash: 36e65dcf96, time: 0.12s, user: 0.15s, system: 0.05s, MEM: 27.13 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 60% 6x read_json (0 sec), 13% 2x write_json (0 sec), ...
+Time spent: 29% 2x write_json (0 sec), 20% 2x write_verilog (0 sec), ...

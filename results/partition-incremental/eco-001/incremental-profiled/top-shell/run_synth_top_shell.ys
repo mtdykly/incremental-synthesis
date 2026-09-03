@@ -15,6 +15,10 @@ opt_clean -purge
 check
 stat -top riscv_core
 
-write_json "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell.json"
+select -clear
+select riscv_core
+write_json -selected "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell.json"
+select -clear
+
 write_rtlil "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell.rtlil"
 write_verilog -noattr -noexpr -nodec "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/top-shell/top_shell_netlist.v"

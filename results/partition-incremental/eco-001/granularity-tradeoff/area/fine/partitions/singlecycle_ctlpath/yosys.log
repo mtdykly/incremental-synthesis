@@ -59,7 +59,7 @@ Mapping DFF cells in module `\singlecycle_ctlpath':
 ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f21340ff.scl (1 files)
 
 4.1.1. Executed ABC.
-Extracted 87 gates and 99 wires to a netlist network with 12 inputs and 13 outputs.
+Extracted 82 gates and 94 wires to a netlist network with 12 inputs and 13 outputs.
 Running ABC script: <abc-temp-dir>/abc.script
 ABC: UC Berkeley, ABC 1.01 (compiled Jul 11 2026 03:57:20)
 ABC: abc 01> empty
@@ -85,26 +85,26 @@ ABC:
 ABC: YOSYS_ABC_DONE 
 
 4.1.2. Re-integrating ABC results.
-ABC RESULTS:           AND2_X1 cells:        5
-ABC RESULTS:         AOI211_X1 cells:        1
+ABC RESULTS:           AND2_X1 cells:        2
+ABC RESULTS:           AND3_X1 cells:        2
+ABC RESULTS:           AND4_X1 cells:        1
+ABC RESULTS:         AOI211_X1 cells:        2
 ABC RESULTS:          AOI21_X1 cells:        5
+ABC RESULTS:         AOI221_X1 cells:        1
 ABC RESULTS:          AOI22_X1 cells:        1
-ABC RESULTS:            INV_X1 cells:        7
-ABC RESULTS:           MUX2_X1 cells:        1
-ABC RESULTS:          NAND2_X1 cells:        9
-ABC RESULTS:          NAND3_X1 cells:        3
-ABC RESULTS:          NAND4_X1 cells:        1
-ABC RESULTS:           NOR2_X1 cells:        7
-ABC RESULTS:           NOR3_X1 cells:        3
-ABC RESULTS:           NOR4_X1 cells:        3
+ABC RESULTS:            INV_X1 cells:        9
+ABC RESULTS:          NAND2_X1 cells:        7
+ABC RESULTS:          NAND3_X1 cells:        7
+ABC RESULTS:           NOR2_X1 cells:        5
+ABC RESULTS:           NOR3_X1 cells:        7
+ABC RESULTS:           NOR4_X1 cells:        4
 ABC RESULTS:         OAI211_X1 cells:        3
-ABC RESULTS:          OAI21_X1 cells:        5
+ABC RESULTS:          OAI21_X1 cells:        3
 ABC RESULTS:         OAI221_X1 cells:        1
 ABC RESULTS:          OAI22_X1 cells:        2
-ABC RESULTS:            OR2_X1 cells:        3
-ABC RESULTS:            OR3_X1 cells:        1
-ABC RESULTS:          XNOR2_X1 cells:        2
-ABC RESULTS:        internal signals:       74
+ABC RESULTS:            OR2_X1 cells:        1
+ABC RESULTS:           XOR2_X1 cells:        1
+ABC RESULTS:        internal signals:       69
 ABC RESULTS:           input signals:       12
 ABC RESULTS:          output signals:       13
 Removing temp directory.
@@ -123,7 +123,7 @@ No more expansions possible.
 
 6. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \singlecycle_ctlpath..
-Removed 3 unused cells and 116 unused wires.
+Removed 3 unused cells and 111 unused wires.
 <suppressed ~24 debug messages>
 
 7. Executing JSON backend.
@@ -131,6 +131,6 @@ Removed 3 unused cells and 116 unused wires.
 8. Executing Verilog backend.
 Dumping module `\singlecycle_ctlpath'.
 
-End of script. Logfile hash: 5a4ba65e66, time: 0.15s, user: 0.06s, system: 0.02s, MEM: 33.53 MB peak
+End of script. Logfile hash: 316ceb0373, time: 0.16s, user: 0.07s, system: 0.01s, MEM: 33.37 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 67% 1x abc (0 sec), 26% 1x dfflibmap (0 sec), ...

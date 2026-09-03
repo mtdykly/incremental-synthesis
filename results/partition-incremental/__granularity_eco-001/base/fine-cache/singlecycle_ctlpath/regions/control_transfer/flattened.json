@@ -81,7 +81,7 @@
             "Y": [ 9 ]
           }
         },
-        "$procmux$93": {
+        "$procmux$283": {
           "hide_name": 1,
           "type": "$pmux",
           "parameters": {
@@ -105,7 +105,7 @@
             "Y": [ 6 ]
           }
         },
-        "$procmux$94_CMP0": {
+        "$procmux$284_CMP0": {
           "hide_name": 1,
           "type": "$eq",
           "parameters": {
@@ -130,7 +130,7 @@
             "Y": [ 10 ]
           }
         },
-        "$procmux$95_CMP0": {
+        "$procmux$285_CMP0": {
           "hide_name": 1,
           "type": "$eq",
           "parameters": {
@@ -155,7 +155,7 @@
             "Y": [ 11 ]
           }
         },
-        "$procmux$96_CMP0": {
+        "$procmux$286_CMP0": {
           "hide_name": 1,
           "type": "$eq",
           "parameters": {
@@ -180,7 +180,7 @@
             "Y": [ 12 ]
           }
         },
-        "$procmux$97_CMP0": {
+        "$procmux$287_CMP0": {
           "hide_name": 1,
           "type": "$eq",
           "parameters": {
@@ -205,7 +205,7 @@
             "Y": [ 13 ]
           }
         },
-        "$procmux$98_CMP0": {
+        "$procmux$288_CMP0": {
           "hide_name": 1,
           "type": "$eq",
           "parameters": {
@@ -230,7 +230,7 @@
             "Y": [ 14 ]
           }
         },
-        "$procmux$99_CMP0": {
+        "$procmux$289_CMP0": {
           "hide_name": 1,
           "type": "$logic_not",
           "parameters": {
@@ -274,37 +274,37 @@
             "src": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base/core/common/control_transfer.sv:21.35-21.53"
           }
         },
-        "$procmux$94_CMP": {
+        "$procmux$284_CMP": {
           "hide_name": 1,
           "bits": [ 10 ],
           "attributes": {
           }
         },
-        "$procmux$95_CMP": {
+        "$procmux$285_CMP": {
           "hide_name": 1,
           "bits": [ 11 ],
           "attributes": {
           }
         },
-        "$procmux$96_CMP": {
+        "$procmux$286_CMP": {
           "hide_name": 1,
           "bits": [ 12 ],
           "attributes": {
           }
         },
-        "$procmux$97_CMP": {
+        "$procmux$287_CMP": {
           "hide_name": 1,
           "bits": [ 13 ],
           "attributes": {
           }
         },
-        "$procmux$98_CMP": {
+        "$procmux$288_CMP": {
           "hide_name": 1,
           "bits": [ 14 ],
           "attributes": {
           }
         },
-        "$procmux$99_CMP": {
+        "$procmux$289_CMP": {
           "hide_name": 1,
           "bits": [ 15 ],
           "attributes": {

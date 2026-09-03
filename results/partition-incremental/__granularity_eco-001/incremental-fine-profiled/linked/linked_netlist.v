@@ -1318,11 +1318,6 @@ module singlecycle_ctlpath(inst_opcode, inst_funct3, inst_funct7, alu_result_equ
   wire _063_;
   wire _064_;
   wire _065_;
-  wire _066_;
-  wire _067_;
-  wire _068_;
-  wire _069_;
-  wire _070_;
   wire [4:0] \alu_control.alu_function ;
   wire [1:0] \alu_control.alu_op_type ;
   wire [2:0] \alu_control.inst_funct3 ;
@@ -1343,443 +1338,418 @@ module singlecycle_ctlpath(inst_opcode, inst_funct3, inst_funct7, alu_result_equ
   wire \singlecycle_control.regfile_write_enable ;
   wire \singlecycle_control.take_branch ;
   wire take_branch;
-  \$_NOT_  _071_ (
-    .A(\alu_control.inst_funct7 [5]),
+  \$_ANDNOT_  _066_ (
+    .A(\alu_control.alu_op_type [1]),
+    .B(\alu_control.alu_op_type [0]),
     .Y(_000_)
   );
-  \$_ANDNOT_  _072_ (
-    .A(\alu_control.alu_op_type [1]),
-    .B(\alu_control.alu_op_type [0]),
-    .Y(_001_)
-  );
-  \$_ANDNOT_  _073_ (
+  \$_ANDNOT_  _067_ (
     .A(\alu_control.inst_funct3 [0]),
     .B(\alu_control.inst_funct3 [1]),
+    .Y(_001_)
+  );
+  \$_AND_  _068_ (
+    .A(\alu_control.inst_funct7 [5]),
+    .B(_001_),
     .Y(_002_)
   );
-  \$_ORNOT_  _074_ (
-    .A(\alu_control.inst_funct3 [1]),
-    .B(\alu_control.inst_funct3 [2]),
-    .Y(_003_)
-  );
-  \$_AND_  _075_ (
+  \$_NAND_  _069_ (
     .A(\alu_control.inst_funct3 [2]),
     .B(_002_),
+    .Y(_003_)
+  );
+  \$_ANDNOT_  _070_ (
+    .A(_000_),
+    .B(_003_),
     .Y(_004_)
   );
-  \$_ORNOT_  _076_ (
-    .A(_004_),
-    .B(_001_),
+  \$_ANDNOT_  _071_ (
+    .A(\alu_control.alu_op_type [0]),
+    .B(\alu_control.alu_op_type [1]),
     .Y(_005_)
   );
-  \$_AND_  _077_ (
-    .A(\alu_control.alu_op_type [1]),
-    .B(\alu_control.alu_op_type [0]),
+  \$_ORNOT_  _072_ (
+    .A(\alu_control.inst_funct3 [1]),
+    .B(_005_),
     .Y(_006_)
   );
-  \$_NAND_  _078_ (
-    .A(\alu_control.alu_op_type [1]),
-    .B(\alu_control.alu_op_type [0]),
+  \$_ANDNOT_  _073_ (
+    .A(\alu_control.inst_funct3 [1]),
+    .B(\alu_control.inst_funct3 [0]),
     .Y(_007_)
   );
-  \$_NAND_  _079_ (
-    .A(_005_),
+  \$_NOR_  _074_ (
+    .A(\alu_control.inst_funct3 [2]),
     .B(_007_),
     .Y(_008_)
   );
-  \$_ANDNOT_  _080_ (
-    .A(\alu_control.inst_funct3 [1]),
-    .B(\alu_control.inst_funct3 [0]),
+  \$_MUX_  _075_ (
+    .A(_007_),
+    .B(_001_),
+    .S(\alu_control.inst_funct3 [2]),
     .Y(_009_)
   );
-  \$_NOR_  _081_ (
-    .A(\alu_control.inst_funct3 [2]),
-    .B(_009_),
+  \$_AND_  _076_ (
+    .A(\alu_control.alu_op_type [1]),
+    .B(\alu_control.alu_op_type [0]),
     .Y(_010_)
   );
-  \$_ORNOT_  _082_ (
-    .A(_002_),
-    .B(_010_),
+  \$_ANDNOT_  _077_ (
+    .A(\alu_control.alu_op_type [1]),
+    .B(\alu_control.inst_funct7 [5]),
     .Y(_011_)
   );
-  \$_AND_  _083_ (
-    .A(_003_),
+  \$_OR_  _078_ (
+    .A(_010_),
     .B(_011_),
     .Y(_012_)
   );
-  \$_NAND_  _084_ (
-    .A(_008_),
+  \$_NAND_  _079_ (
+    .A(_009_),
     .B(_012_),
     .Y(_013_)
   );
-  \$_ANDNOT_  _085_ (
-    .A(\alu_control.alu_op_type [0]),
-    .B(\alu_control.alu_op_type [1]),
+  \$_NAND_  _080_ (
+    .A(_006_),
+    .B(_013_),
     .Y(_014_)
   );
-  \$_ORNOT_  _086_ (
-    .A(\alu_control.inst_funct3 [1]),
+  \$_OR_  _081_ (
+    .A(_004_),
     .B(_014_),
+    .Y(\alu_control.alu_function [2])
+  );
+  \$_OR_  _082_ (
+    .A(_001_),
+    .B(_007_),
     .Y(_015_)
   );
-  \$_OR_  _087_ (
-    .A(_000_),
-    .B(_005_),
+  \$_MUX_  _083_ (
+    .A(_015_),
+    .B(\alu_control.inst_funct3 [1]),
+    .S(\alu_control.inst_funct3 [2]),
     .Y(_016_)
   );
-  \$_AND_  _088_ (
-    .A(_015_),
+  \$_OR_  _084_ (
+    .A(\alu_control.inst_funct7 [5]),
     .B(_016_),
     .Y(_017_)
   );
+  \$_AND_  _085_ (
+    .A(_000_),
+    .B(_003_),
+    .Y(_018_)
+  );
+  \$_NAND_  _086_ (
+    .A(_017_),
+    .B(_018_),
+    .Y(_019_)
+  );
+  \$_NAND_  _087_ (
+    .A(_010_),
+    .B(_016_),
+    .Y(_020_)
+  );
+  \$_AND_  _088_ (
+    .A(_006_),
+    .B(_020_),
+    .Y(_021_)
+  );
   \$_NAND_  _089_ (
-    .A(_013_),
-    .B(_017_),
+    .A(_019_),
+    .B(_021_),
     .Y(\alu_control.alu_function [1])
   );
   \$_NAND_  _090_ (
-    .A(\alu_control.inst_funct7 [5]),
-    .B(_002_),
-    .Y(_018_)
-  );
-  \$_NAND_  _091_ (
-    .A(\alu_control.inst_funct7 [5]),
-    .B(_004_),
-    .Y(_019_)
-  );
-  \$_MUX_  _092_ (
-    .A(_009_),
-    .B(_002_),
-    .S(\alu_control.inst_funct3 [2]),
-    .Y(_020_)
-  );
-  \$_ORNOT_  _093_ (
-    .A(\alu_control.inst_funct7 [5]),
-    .B(\alu_control.alu_op_type [1]),
-    .Y(_021_)
-  );
-  \$_NAND_  _094_ (
-    .A(_007_),
-    .B(_021_),
+    .A(\alu_control.inst_funct3 [1]),
+    .B(_008_),
     .Y(_022_)
   );
-  \$_NAND_  _095_ (
-    .A(_006_),
-    .B(_020_),
+  \$_NAND_  _091_ (
+    .A(\alu_control.inst_funct3 [2]),
+    .B(_015_),
     .Y(_023_)
   );
-  \$_MUX_  _096_ (
-    .A(_020_),
-    .B(_004_),
-    .S(\alu_control.inst_funct7 [5]),
+  \$_AND_  _092_ (
+    .A(_022_),
+    .B(_023_),
     .Y(_024_)
   );
-  \$_NAND_  _097_ (
-    .A(_001_),
-    .B(_024_),
+  \$_MUX_  _093_ (
+    .A(_024_),
+    .B(\alu_control.inst_funct3 [2]),
+    .S(_002_),
     .Y(_025_)
   );
-  \$_AND_  _098_ (
-    .A(_015_),
-    .B(_023_),
+  \$_NAND_  _094_ (
+    .A(_010_),
+    .B(_025_),
     .Y(_026_)
   );
-  \$_NAND_  _099_ (
-    .A(_025_),
-    .B(_026_),
-    .Y(\alu_control.alu_function [2])
-  );
-  \$_NAND_  _100_ (
-    .A(\alu_control.inst_funct3 [1]),
-    .B(_010_),
+  \$_ANDNOT_  _095_ (
+    .A(_024_),
+    .B(\alu_control.inst_funct7 [5]),
     .Y(_027_)
   );
-  \$_OR_  _101_ (
-    .A(_002_),
-    .B(_009_),
+  \$_AND_  _096_ (
+    .A(\alu_control.alu_op_type [1]),
+    .B(_003_),
     .Y(_028_)
   );
-  \$_NAND_  _102_ (
-    .A(\alu_control.inst_funct3 [2]),
-    .B(_028_),
+  \$_ANDNOT_  _097_ (
+    .A(_028_),
+    .B(_027_),
     .Y(_029_)
   );
-  \$_AND_  _103_ (
-    .A(_027_),
+  \$_OR_  _098_ (
+    .A(\alu_control.alu_op_type [0]),
     .B(_029_),
     .Y(_030_)
   );
-  \$_MUX_  _104_ (
+  \$_ANDNOT_  _099_ (
     .A(\alu_control.inst_funct3 [2]),
-    .B(_030_),
-    .S(_018_),
+    .B(_006_),
     .Y(_031_)
   );
-  \$_NAND_  _105_ (
-    .A(_006_),
+  \$_ANDNOT_  _100_ (
+    .A(_026_),
     .B(_031_),
     .Y(_032_)
   );
-  \$_NAND_  _106_ (
-    .A(_000_),
-    .B(_030_),
-    .Y(_033_)
-  );
-  \$_AND_  _107_ (
-    .A(\alu_control.alu_op_type [1]),
-    .B(_019_),
-    .Y(_034_)
-  );
-  \$_AND_  _108_ (
-    .A(_033_),
-    .B(_034_),
-    .Y(_035_)
-  );
-  \$_OR_  _109_ (
-    .A(\alu_control.alu_op_type [0]),
-    .B(_035_),
-    .Y(_036_)
-  );
-  \$_ORNOT_  _110_ (
-    .A(_003_),
-    .B(_014_),
-    .Y(_037_)
-  );
-  \$_AND_  _111_ (
-    .A(_032_),
-    .B(_037_),
-    .Y(_038_)
-  );
-  \$_NAND_  _112_ (
-    .A(_036_),
-    .B(_038_),
+  \$_NAND_  _101_ (
+    .A(_030_),
+    .B(_032_),
     .Y(\alu_control.alu_function [0])
   );
-  \$_NAND_  _113_ (
+  \$_NAND_  _102_ (
     .A(\alu_control.inst_funct3 [1]),
-    .B(_014_),
-    .Y(_039_)
+    .B(_005_),
+    .Y(_033_)
   );
-  \$_MUX_  _114_ (
+  \$_MUX_  _103_ (
     .A(\alu_control.inst_funct3 [2]),
     .B(\alu_control.inst_funct3 [1]),
     .S(\alu_control.inst_funct3 [0]),
-    .Y(_040_)
+    .Y(_034_)
   );
-  \$_NAND_  _115_ (
-    .A(_022_),
-    .B(_040_),
-    .Y(_041_)
+  \$_NAND_  _104_ (
+    .A(_012_),
+    .B(_034_),
+    .Y(_035_)
   );
-  \$_NAND_  _116_ (
-    .A(_039_),
-    .B(_041_),
+  \$_NAND_  _105_ (
+    .A(_033_),
+    .B(_035_),
     .Y(\alu_control.alu_function [3])
   );
-  \$_ORNOT_  _117_ (
+  \$_ORNOT_  _106_ (
     .A(\control_transfer.inst_funct3 [2]),
     .B(\control_transfer.inst_funct3 [1]),
-    .Y(_042_)
+    .Y(_036_)
   );
-  \$_XNOR_  _118_ (
+  \$_XNOR_  _107_ (
     .A(\control_transfer.inst_funct3 [0]),
     .B(\control_transfer.result_equal_zero ),
-    .Y(_043_)
+    .Y(_037_)
   );
-  \$_AND_  _119_ (
-    .A(_042_),
-    .B(_043_),
+  \$_AND_  _108_ (
+    .A(_036_),
+    .B(_037_),
     .Y(\control_transfer.take_branch )
   );
-  \$_ANDNOT_  _120_ (
-    .A(\singlecycle_control.inst_opcode [5]),
-    .B(\singlecycle_control.inst_opcode [4]),
-    .Y(_044_)
-  );
-  \$_AND_  _121_ (
-    .A(\singlecycle_control.inst_opcode [6]),
-    .B(_044_),
-    .Y(_045_)
-  );
-  \$_AND_  _122_ (
+  \$_AND_  _109_ (
     .A(\singlecycle_control.inst_opcode [1]),
     .B(\singlecycle_control.inst_opcode [0]),
+    .Y(_038_)
+  );
+  \$_ANDNOT_  _110_ (
+    .A(_038_),
+    .B(\singlecycle_control.inst_opcode [3]),
+    .Y(_039_)
+  );
+  \$_ANDNOT_  _111_ (
+    .A(_039_),
+    .B(\singlecycle_control.inst_opcode [2]),
+    .Y(_040_)
+  );
+  \$_ANDNOT_  _112_ (
+    .A(_040_),
+    .B(\singlecycle_control.inst_opcode [6]),
+    .Y(_041_)
+  );
+  \$_ORNOT_  _113_ (
+    .A(\singlecycle_control.inst_opcode [4]),
+    .B(_041_),
+    .Y(_042_)
+  );
+  \$_NOR_  _114_ (
+    .A(\singlecycle_control.inst_opcode [5]),
+    .B(\singlecycle_control.inst_opcode [6]),
+    .Y(_043_)
+  );
+  \$_ORNOT_  _115_ (
+    .A(\singlecycle_control.inst_opcode [4]),
+    .B(_043_),
+    .Y(_044_)
+  );
+  \$_ANDNOT_  _116_ (
+    .A(_040_),
+    .B(_044_),
+    .Y(\singlecycle_control.data_mem_read_enable )
+  );
+  \$_ANDNOT_  _117_ (
+    .A(\singlecycle_control.inst_opcode [5]),
+    .B(\singlecycle_control.inst_opcode [4]),
+    .Y(_045_)
+  );
+  \$_AND_  _118_ (
+    .A(\singlecycle_control.inst_opcode [6]),
+    .B(_045_),
     .Y(_046_)
   );
-  \$_AND_  _123_ (
-    .A(\singlecycle_control.inst_opcode [2]),
-    .B(_046_),
+  \$_AND_  _119_ (
+    .A(\singlecycle_control.inst_opcode [4]),
+    .B(_043_),
     .Y(_047_)
   );
-  \$_NAND_  _124_ (
-    .A(\singlecycle_control.inst_opcode [3]),
+  \$_OR_  _120_ (
+    .A(_046_),
     .B(_047_),
     .Y(_048_)
   );
-  \$_NOR_  _125_ (
-    .A(\singlecycle_control.inst_opcode [3]),
-    .B(\singlecycle_control.inst_opcode [2]),
+  \$_ANDNOT_  _121_ (
+    .A(\singlecycle_control.inst_opcode [4]),
+    .B(\singlecycle_control.inst_opcode [6]),
     .Y(_049_)
   );
-  \$_AND_  _126_ (
-    .A(_046_),
+  \$_AND_  _122_ (
+    .A(_040_),
     .B(_049_),
+    .Y(\singlecycle_control.alu_op_type [1])
+  );
+  \$_NAND_  _123_ (
+    .A(_040_),
+    .B(_045_),
     .Y(_050_)
   );
-  \$_NAND_  _127_ (
-    .A(_044_),
-    .B(_050_),
+  \$_NAND_  _124_ (
+    .A(_040_),
+    .B(_046_),
     .Y(_051_)
   );
-  \$_NAND_  _128_ (
-    .A(_045_),
-    .B(_050_),
+  \$_NAND_  _125_ (
+    .A(_040_),
+    .B(_048_),
     .Y(_052_)
   );
-  \$_NAND_  _129_ (
-    .A(\singlecycle_control.take_branch ),
-    .B(_050_),
+  \$_NOT_  _126_ (
+    .A(_052_),
+    .Y(\singlecycle_control.alu_op_type [0])
+  );
+  \$_AND_  _127_ (
+    .A(\singlecycle_control.inst_opcode [2]),
+    .B(\singlecycle_control.inst_opcode [3]),
     .Y(_053_)
   );
-  \$_NAND_  _130_ (
-    .A(_048_),
+  \$_NAND_  _128_ (
+    .A(_038_),
     .B(_053_),
     .Y(_054_)
   );
-  \$_AND_  _131_ (
-    .A(_045_),
-    .B(_054_),
-    .Y(\singlecycle_control.next_pc_select [0])
-  );
-  \$_NOR_  _132_ (
-    .A(\singlecycle_control.inst_opcode [5]),
-    .B(\singlecycle_control.inst_opcode [6]),
+  \$_NAND_  _129_ (
+    .A(\singlecycle_control.take_branch ),
+    .B(_040_),
     .Y(_055_)
   );
-  \$_NAND_  _133_ (
-    .A(_050_),
+  \$_NAND_  _130_ (
+    .A(_054_),
     .B(_055_),
     .Y(_056_)
   );
-  \$_AND_  _134_ (
-    .A(\singlecycle_control.inst_opcode [4]),
-    .B(_055_),
+  \$_AND_  _131_ (
+    .A(_046_),
+    .B(_056_),
+    .Y(\singlecycle_control.next_pc_select [0])
+  );
+  \$_AND_  _132_ (
+    .A(\singlecycle_control.inst_opcode [5]),
+    .B(_049_),
     .Y(_057_)
   );
-  \$_NAND_  _135_ (
-    .A(_050_),
-    .B(_057_),
+  \$_AND_  _133_ (
+    .A(\singlecycle_control.inst_opcode [2]),
+    .B(_039_),
     .Y(_058_)
   );
-  \$_NAND_  _136_ (
-    .A(_052_),
-    .B(_058_),
-    .Y(\singlecycle_control.alu_op_type [0])
-  );
-  \$_ANDNOT_  _137_ (
-    .A(_055_),
-    .B(\singlecycle_control.inst_opcode [4]),
+  \$_NAND_  _134_ (
+    .A(_039_),
+    .B(_057_),
     .Y(_059_)
   );
-  \$_AND_  _138_ (
-    .A(_050_),
+  \$_ANDNOT_  _135_ (
+    .A(\singlecycle_control.inst_opcode [2]),
     .B(_059_),
-    .Y(\singlecycle_control.data_mem_read_enable )
-  );
-  \$_ANDNOT_  _139_ (
-    .A(_047_),
-    .B(\singlecycle_control.inst_opcode [3]),
     .Y(_060_)
   );
-  \$_ANDNOT_  _140_ (
-    .A(\singlecycle_control.inst_opcode [5]),
-    .B(\singlecycle_control.inst_opcode [6]),
-    .Y(_061_)
-  );
-  \$_AND_  _141_ (
-    .A(\singlecycle_control.inst_opcode [4]),
-    .B(_061_),
-    .Y(_062_)
-  );
-  \$_NAND_  _142_ (
-    .A(_060_),
-    .B(_062_),
-    .Y(_063_)
-  );
-  \$_ORNOT_  _143_ (
+  \$_OR_  _136_ (
     .A(\singlecycle_control.data_mem_read_enable ),
-    .B(_063_),
+    .B(_060_),
     .Y(\singlecycle_control.reg_writeback_select [0])
   );
-  \$_NOR_  _144_ (
+  \$_NOR_  _137_ (
     .A(\singlecycle_control.inst_opcode [6]),
-    .B(_051_),
+    .B(_050_),
     .Y(\singlecycle_control.data_mem_write_enable )
   );
-  \$_NAND_  _145_ (
-    .A(_050_),
+  \$_NAND_  _138_ (
+    .A(_047_),
+    .B(_058_),
+    .Y(_061_)
+  );
+  \$_ORNOT_  _139_ (
+    .A(_045_),
+    .B(_041_),
+    .Y(_062_)
+  );
+  \$_AND_  _140_ (
+    .A(_061_),
     .B(_062_),
+    .Y(\singlecycle_control.reg_writeback_select [1])
+  );
+  \$_AND_  _141_ (
+    .A(_046_),
+    .B(_058_),
+    .Y(\singlecycle_control.next_pc_select [1])
+  );
+  \$_AND_  _142_ (
+    .A(_052_),
+    .B(_059_),
+    .Y(_063_)
+  );
+  \$_ANDNOT_  _143_ (
+    .A(_063_),
+    .B(\singlecycle_control.next_pc_select [1]),
     .Y(_064_)
   );
-  \$_AND_  _146_ (
-    .A(_063_),
+  \$_AND_  _144_ (
+    .A(_042_),
     .B(_064_),
+    .Y(\singlecycle_control.alu_operand_a_select )
+  );
+  \$_AND_  _145_ (
+    .A(_051_),
+    .B(_059_),
+    .Y(\singlecycle_control.alu_operand_b_select )
+  );
+  \$_OR_  _146_ (
+    .A(_044_),
+    .B(_054_),
     .Y(_065_)
   );
   \$_AND_  _147_ (
-    .A(_052_),
+    .A(_050_),
     .B(_065_),
-    .Y(\singlecycle_control.alu_operand_b_select )
-  );
-  \$_NAND_  _148_ (
-    .A(_058_),
-    .B(_064_),
-    .Y(\singlecycle_control.alu_op_type [1])
-  );
-  \$_AND_  _149_ (
-    .A(_045_),
-    .B(_060_),
-    .Y(\singlecycle_control.next_pc_select [1])
-  );
-  \$_ORNOT_  _150_ (
-    .A(_048_),
-    .B(_059_),
-    .Y(_066_)
-  );
-  \$_AND_  _151_ (
-    .A(_051_),
-    .B(_066_),
     .Y(\singlecycle_control.regfile_write_enable )
-  );
-  \$_NAND_  _152_ (
-    .A(_057_),
-    .B(_060_),
-    .Y(_067_)
-  );
-  \$_AND_  _153_ (
-    .A(_056_),
-    .B(_064_),
-    .Y(_068_)
-  );
-  \$_AND_  _154_ (
-    .A(_067_),
-    .B(_068_),
-    .Y(\singlecycle_control.reg_writeback_select [1])
-  );
-  \$_AND_  _155_ (
-    .A(_051_),
-    .B(_056_),
-    .Y(_069_)
-  );
-  \$_ANDNOT_  _156_ (
-    .A(_069_),
-    .B(\singlecycle_control.next_pc_select [1]),
-    .Y(_070_)
-  );
-  \$_AND_  _157_ (
-    .A(_065_),
-    .B(_070_),
-    .Y(\singlecycle_control.alu_operand_a_select )
   );
   assign \singlecycle_control.reg_writeback_select [2] = 1'h0;
   assign \singlecycle_control.pc_write_enable  = 1'h1;

@@ -1,6 +1,0 @@
-{
-  "partition_name": "alu_control",
-  "root_module": "alu_control",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base",
-  "flatten_internal": true
-}

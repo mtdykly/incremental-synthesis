@@ -1,7 +1,0 @@
-{
-  "partition_name": "instruction_decoder",
-  "root_module": "instruction_decoder",
-  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-006/new/frontend_hier.json",
-  "source_kind": "elaborated_hier_json",
-  "flatten_internal": true
-}

@@ -1261,6 +1261,6 @@ Found and reported 102 problems.
 Dumping module `\riscv_core'.
 
 Warnings: 102 unique messages, 102 total
-End of script. Logfile hash: 1cc36b6f37, time: 4.09s, user: 1.29s, system: 0.08s, MEM: 49.45 MB peak
+End of script. Logfile hash: 1cc36b6f37, time: 4.08s, user: 1.26s, system: 0.08s, MEM: 49.49 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 73% 2x abc (3 sec), 6% 25x opt_clean (0 sec), ...
+Time spent: 74% 2x abc (3 sec), 6% 25x opt_clean (0 sec), ...

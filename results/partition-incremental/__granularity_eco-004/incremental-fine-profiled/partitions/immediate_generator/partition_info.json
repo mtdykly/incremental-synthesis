@@ -1,6 +1,0 @@
-{
-  "partition_name": "immediate_generator",
-  "root_module": "immediate_generator",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-004-base",
-  "flatten_internal": true
-}

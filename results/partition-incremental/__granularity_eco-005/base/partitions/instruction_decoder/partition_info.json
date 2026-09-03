@@ -1,6 +1,0 @@
-{
-  "partition_name": "instruction_decoder",
-  "root_module": "instruction_decoder",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-base",
-  "flatten_internal": true
-}

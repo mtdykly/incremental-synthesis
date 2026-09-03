@@ -142,6 +142,6 @@ Removed 0 unused cells and 8431 unused wires.
 8. Executing Verilog backend.
 Dumping module `\singlecycle_datapath'.
 
-End of script. Logfile hash: 25a03cf181, time: 2.15s, user: 0.35s, system: 0.06s, MEM: 67.18 MB peak
+End of script. Logfile hash: 25a03cf181, time: 2.16s, user: 0.34s, system: 0.07s, MEM: 66.65 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
 Time spent: 88% 1x abc (1 sec), 5% 2x read_json (0 sec), ...

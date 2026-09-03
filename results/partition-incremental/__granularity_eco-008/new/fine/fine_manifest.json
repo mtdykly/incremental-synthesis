@@ -1,9 +1,0 @@
-{
-  "dirty_partition_count": 0,
-  "partitions": {},
-  "schema_version": 1,
-  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/frontend_hier.json",
-  "source_partition_manifest": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/new/partition_manifest.json",
-  "source_reuse_plan": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-008/plan/reuse_plan.json",
-  "strategy": "dirty_partition_direct_child_instances"
-}

@@ -112,21 +112,21 @@ Found and reported 0 problems.
 
         +----------Local Count, excluding submodules.
         | 
-      104 wires
-      151 wire bits
+       99 wires
+      146 wire bits
        33 public wires
        80 public wire bits
        13 ports
        34 port bits
-       90 cells
-        9   $_ANDNOT_
-       26   $_AND_
+       85 cells
+       18   $_ANDNOT_
+       21   $_AND_
         4   $_MUX_
-       30   $_NAND_
-        4   $_NOR_
+       21   $_NAND_
+        3   $_NOR_
         1   $_NOT_
-        9   $_ORNOT_
-        3   $_OR_
+        5   $_ORNOT_
+        8   $_OR_
         1   $_XNOR_
         3   $scopeinfo
 
@@ -134,15 +134,15 @@ Found and reported 0 problems.
 
         +----------Count including submodules.
         | 
-     7630 riscv_core
+     7625 riscv_core
       182 data_memory_interface
-       90 singlecycle_ctlpath
+       85 singlecycle_ctlpath
      7358 singlecycle_datapath
 
         +----------Count including submodules.
         | 
-     6513 wires
-     8222 wire bits
+     6508 wires
+     8217 wire bits
       123 public wires
      1832 public wire bits
        54 ports
@@ -150,18 +150,18 @@ Found and reported 0 problems.
         - memories
         - memory bits
         - processes
-     7630 cells
-      210   $_ANDNOT_
-     1423   $_AND_
+     7625 cells
+      219   $_ANDNOT_
+     1418   $_AND_
        31   $_DFFE_PP0P_
         1   $_DFFE_PP1P_
       992   $_DFFE_PP_
      1278   $_MUX_
-     1934   $_NAND_
-      330   $_NOR_
+     1925   $_NAND_
+      329   $_NOR_
        29   $_NOT_
-      689   $_ORNOT_
-      596   $_OR_
+      685   $_ORNOT_
+      601   $_OR_
        57   $_XNOR_
        57   $_XOR_
         3   $scopeinfo
@@ -181,6 +181,6 @@ Dumping module `\riscv_core'.
 Dumping module `\singlecycle_ctlpath'.
 Dumping module `\singlecycle_datapath'.
 
-End of script. Logfile hash: 8a1efe23a2, time: 0.13s, user: 0.20s, system: 0.02s, MEM: 27.12 MB peak
+End of script. Logfile hash: 1ecc6b0553, time: 0.13s, user: 0.19s, system: 0.03s, MEM: 27.00 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 28% 2x write_json (0 sec), 22% 8x read_rtlil (0 sec), ...
+Time spent: 26% 2x write_json (0 sec), 24% 8x read_rtlil (0 sec), ...

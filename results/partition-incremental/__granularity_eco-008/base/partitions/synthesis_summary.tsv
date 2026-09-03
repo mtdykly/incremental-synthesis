@@ -1,4 +1,0 @@
-partition	root_module	real_seconds
-data_memory_interface	data_memory_interface	0.23
-singlecycle_ctlpath	singlecycle_ctlpath	0.21
-singlecycle_datapath	singlecycle_datapath	18.85

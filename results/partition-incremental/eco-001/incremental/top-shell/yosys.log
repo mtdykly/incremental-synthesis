@@ -487,6 +487,6 @@ Output filename: /workspace/incremental-synthesis/results/partition-incremental/
 10. Executing Verilog backend.
 Dumping module `\riscv_core'.
 
-End of script. Logfile hash: 112b14a3aa, time: 0.05s, user: 0.04s, system: 0.02s, MEM: 24.41 MB peak
+End of script. Logfile hash: 112b14a3aa, time: 0.05s, user: 0.05s, system: 0.01s, MEM: 25.09 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 42% 2x read_json (0 sec), 16% 1x read_verilog (0 sec), ...
+Time spent: 43% 2x read_json (0 sec), 17% 1x read_verilog (0 sec), ...

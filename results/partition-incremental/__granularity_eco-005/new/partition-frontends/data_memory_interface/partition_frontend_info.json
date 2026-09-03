@@ -1,7 +1,0 @@
-{
-  "partition_name": "data_memory_interface",
-  "root_module": "data_memory_interface",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-005-new",
-  "mode": "frontend-only",
-  "flatten_internal": true
-}

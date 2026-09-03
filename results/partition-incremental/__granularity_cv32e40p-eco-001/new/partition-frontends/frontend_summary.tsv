@@ -1,7 +1,0 @@
-partition	root_module	real_seconds
-cs_registers_i	cv32e40p_cs_registers$cv32e40p_core.cs_registers_i	1.41
-ex_stage_i	cv32e40p_ex_stage$cv32e40p_core.ex_stage_i	1.35
-id_stage_i	cv32e40p_id_stage$cv32e40p_core.id_stage_i	2.62
-if_stage_i	cv32e40p_if_stage$cv32e40p_core.if_stage_i	1.28
-load_store_unit_i	cv32e40p_load_store_unit$cv32e40p_core.load_store_unit_i	1.22
-sleep_unit_i	cv32e40p_sleep_unit$cv32e40p_core.sleep_unit_i	1.17

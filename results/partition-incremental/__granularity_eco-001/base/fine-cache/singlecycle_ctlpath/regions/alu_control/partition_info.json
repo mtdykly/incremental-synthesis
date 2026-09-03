@@ -1,6 +1,7 @@
 {
   "partition_name": "alu_control",
   "root_module": "alu_control",
-  "source_dir": "/workspace/incremental-synthesis/benchmarks/riscv-eco-001-base",
+  "source_hier_json": "/workspace/incremental-synthesis/results/partition-incremental/__granularity_eco-001/base/frontend_hier.json",
+  "source_kind": "elaborated_hier_json",
   "flatten_internal": true
 }

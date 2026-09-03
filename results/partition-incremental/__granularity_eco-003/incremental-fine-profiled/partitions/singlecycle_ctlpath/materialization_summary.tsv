@@ -1,4 +1,0 @@
-region	root_module	action	build_seconds
-alu_control	alu_control	reuse	0.000000
-control_transfer	control_transfer	rebuild	0.15
-singlecycle_control	singlecycle_control	rebuild	0.18

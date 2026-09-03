@@ -83,6 +83,6 @@ Finding unused cells or wires in module \riscv_core..
 8. Executing Verilog backend.
 Dumping module `\riscv_core'.
 
-End of script. Logfile hash: 5af8507c45, time: 0.05s, user: 0.04s, system: 0.02s, MEM: 32.34 MB peak
+End of script. Logfile hash: 5af8507c45, time: 0.05s, user: 0.06s, system: 0.01s, MEM: 32.36 MB peak
 Yosys 0.67+24 (git sha1 0e82bbefe, Release, Clang /usr/bin/clang++ 18.1.8)
-Time spent: 84% 1x dfflibmap (0 sec), 9% 1x abc (0 sec), ...
+Time spent: 84% 1x dfflibmap (0 sec), 10% 1x abc (0 sec), ...

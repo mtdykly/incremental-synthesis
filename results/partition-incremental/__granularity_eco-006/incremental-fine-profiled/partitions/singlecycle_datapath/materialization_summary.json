@@ -1,8 +1,0 @@
-{
-  "partition": "singlecycle_datapath",
-  "root_glue_action": "rebuild",
-  "reuse_count": 7,
-  "rebuild_count": 2,
-  "rebuild_yosys_seconds": 0.24,
-  "status": "materialized"
-}

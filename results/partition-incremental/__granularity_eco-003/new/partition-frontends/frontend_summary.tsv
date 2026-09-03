@@ -1,6 +1,0 @@
-partition	root_module	real_seconds
-data_memory_interface	data_memory_interface	0.06
-immediate_generator	immediate_generator	0.06
-instruction_decoder	instruction_decoder	0.06
-singlecycle_ctlpath	singlecycle_ctlpath	0.07
-singlecycle_datapath	singlecycle_datapath	0.18

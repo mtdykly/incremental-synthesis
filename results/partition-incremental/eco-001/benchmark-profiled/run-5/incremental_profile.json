@@ -20,12 +20,12 @@
     }
   },
   "detection": {
-    "phase_wall_seconds": 0.820013,
+    "phase_wall_seconds": 0.814336,
     "export_hierarchy_seconds": 0.11,
     "extract_partitions_seconds": 0.05,
     "prepare_partition_frontends_seconds": 0.5,
     "compute_signatures_seconds": 0.07,
-    "compare_signatures_seconds": 0.05,
+    "compare_signatures_seconds": 0.04,
     "partition_frontend_yosys": [
       {
         "partition": "data_memory_interface",
@@ -35,7 +35,7 @@
       {
         "partition": "singlecycle_ctlpath",
         "root_module": "singlecycle_ctlpath",
-        "yosys_seconds": 0.08
+        "yosys_seconds": 0.06
       },
       {
         "partition": "singlecycle_datapath",
@@ -45,11 +45,11 @@
     ]
   },
   "build": {
-    "phase_wall_seconds": 1.537036,
-    "materialize_partitions_seconds": 1.03,
+    "phase_wall_seconds": 1.388669,
+    "materialize_partitions_seconds": 0.97,
     "top_shell_seconds": 0.0,
-    "link_partitions_seconds": 0.4,
-    "check_linked_seconds": 1.22,
+    "link_partitions_seconds": 0.31,
+    "check_linked_seconds": 1.21,
     "materialization": {
       "partitions": [
         {
@@ -59,7 +59,7 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/partitions/data_memory_interface",
           "reasons": [],
-          "action_wall_seconds": 0.007269,
+          "action_wall_seconds": 0.006526,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "164f31183f97cedafad83d2eaa25a3706423b112fe2e771501a5f4222f7d8a44"
         },
@@ -72,8 +72,8 @@
           "reasons": [
             "implementation_changed"
           ],
-          "action_wall_seconds": 0.279247,
-          "yosys_seconds": 0.21,
+          "action_wall_seconds": 0.261135,
+          "yosys_seconds": 0.2,
           "partition_netlist_sha256": "947acc8af9b069783f2e1b6fb3f08a648c48861e7d6ffcc401443e93e5de994e"
         },
         {
@@ -83,23 +83,23 @@
           "source_kind": "base_cache",
           "source_path": "/workspace/incremental-synthesis/results/partition-incremental/eco-001/base/partitions/singlecycle_datapath",
           "reasons": [],
-          "action_wall_seconds": 0.018631,
+          "action_wall_seconds": 0.017848,
           "yosys_seconds": 0,
           "partition_netlist_sha256": "9d6ffc8a57895bbacd84890bc03bf8a821fa3999a33e97ddec62fac0f981ee4c"
         }
       ],
       "reuse_count": 2,
       "rebuild_count": 1,
-      "reuse_copy_seconds": 0.025900000000000003,
-      "rebuild_wall_seconds": 0.279247,
-      "rebuild_yosys_seconds": 0.21,
-      "partition_action_seconds": 0.30514700000000006
+      "reuse_copy_seconds": 0.024374,
+      "rebuild_wall_seconds": 0.261135,
+      "rebuild_yosys_seconds": 0.2,
+      "partition_action_seconds": 0.28550899999999996
     }
   },
   "totals": {
-    "pipeline_core_seconds": 2.429348,
-    "pipeline_with_check_seconds": 3.691173,
-    "profiled_stage_sum_seconds": 2.21,
-    "unattributed_core_overhead_seconds": 0.2193480000000001
+    "pipeline_core_seconds": 2.272497,
+    "pipeline_with_check_seconds": 3.51502,
+    "profiled_stage_sum_seconds": 2.05,
+    "unattributed_core_overhead_seconds": 0.22249700000000017
   }
 }

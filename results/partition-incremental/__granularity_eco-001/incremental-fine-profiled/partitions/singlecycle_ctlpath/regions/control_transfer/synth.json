@@ -21,7 +21,7 @@
         }
       },
       "cells": {
-        "$abc$281$auto$blifparse.cc:397:parse_blif$282": {
+        "$abc$515$auto$blifparse.cc:397:parse_blif$516": {
           "hide_name": 1,
           "type": "$_ORNOT_",
           "parameters": {
@@ -39,7 +39,7 @@
             "Y": [ 7 ]
           }
         },
-        "$abc$281$auto$blifparse.cc:397:parse_blif$283": {
+        "$abc$515$auto$blifparse.cc:397:parse_blif$517": {
           "hide_name": 1,
           "type": "$_XNOR_",
           "parameters": {
@@ -57,7 +57,7 @@
             "Y": [ 8 ]
           }
         },
-        "$abc$281$auto$blifparse.cc:397:parse_blif$284": {
+        "$abc$515$auto$blifparse.cc:397:parse_blif$518": {
           "hide_name": 1,
           "type": "$_AND_",
           "parameters": {
@@ -77,13 +77,13 @@
         }
       },
       "netnames": {
-        "$abc$281$new_n6": {
+        "$abc$515$new_n6": {
           "hide_name": 1,
           "bits": [ 7 ],
           "attributes": {
           }
         },
-        "$abc$281$new_n7": {
+        "$abc$515$new_n7": {
           "hide_name": 1,
           "bits": [ 8 ],
           "attributes": {

@@ -1131,40 +1131,9 @@ module data_memory_interface(clock, read_enable, write_enable, data_format, addr
     .B(_111_),
     .Y(bus_byte_enable[3])
   );
-  assign bus_write_enable = write_enable;
+  assign bus_address = address;
   assign bus_read_enable = read_enable;
-  assign bus_address[31] = address[31];
-  assign bus_address[30] = address[30];
-  assign bus_address[29] = address[29];
-  assign bus_address[28] = address[28];
-  assign bus_address[27] = address[27];
-  assign bus_address[26] = address[26];
-  assign bus_address[25] = address[25];
-  assign bus_address[24] = address[24];
-  assign bus_address[23] = address[23];
-  assign bus_address[22] = address[22];
-  assign bus_address[21] = address[21];
-  assign bus_address[20] = address[20];
-  assign bus_address[19] = address[19];
-  assign bus_address[18] = address[18];
-  assign bus_address[17] = address[17];
-  assign bus_address[16] = address[16];
-  assign bus_address[15] = address[15];
-  assign bus_address[14] = address[14];
-  assign bus_address[13] = address[13];
-  assign bus_address[12] = address[12];
-  assign bus_address[11] = address[11];
-  assign bus_address[10] = address[10];
-  assign bus_address[9] = address[9];
-  assign bus_address[8] = address[8];
-  assign bus_address[7] = address[7];
-  assign bus_address[6] = address[6];
-  assign bus_address[5] = address[5];
-  assign bus_address[4] = address[4];
-  assign bus_address[3] = address[3];
-  assign bus_address[2] = address[2];
-  assign bus_address[1] = address[1];
-  assign bus_address[0] = address[0];
+  assign bus_write_enable = write_enable;
 endmodule
 
 module riscv_core(clock, reset, bus_address, bus_read_data, bus_write_data, bus_byte_enable, bus_read_enable, bus_write_enable, inst, pc);
@@ -1771,8 +1740,8 @@ module singlecycle_ctlpath(inst_opcode, inst_funct3, inst_funct7, alu_result_equ
     .Y(alu_operand_a_select)
   );
   assign alu_function[4] = 1'h0;
-  assign reg_writeback_select[2] = 1'h0;
   assign pc_write_enable = 1'h1;
+  assign reg_writeback_select[2] = 1'h0;
 endmodule
 
 module singlecycle_datapath(clock, reset, data_mem_read_data, data_mem_address, data_mem_write_data, inst, pc, inst_opcode, inst_funct3, inst_funct7, alu_result_equal_zero, pc_write_enable, regfile_write_enable, alu_operand_a_select, alu_operand_b_select, reg_writeback_select, next_pc_select, alu_function);
@@ -47062,21 +47031,7 @@ module singlecycle_datapath(clock, reset, data_mem_read_data, data_mem_address, 
     .E(_00018_),
     .Q(\regfile.register[26] [15])
   );
-  assign inst_funct7[6] = inst[31];
-  assign inst_funct7[5] = inst[30];
-  assign inst_funct7[4] = inst[29];
-  assign inst_funct7[3] = inst[28];
-  assign inst_funct7[2] = inst[27];
-  assign inst_funct7[1] = inst[26];
-  assign inst_funct7[0] = inst[25];
-  assign inst_funct3[2] = inst[14];
-  assign inst_funct3[1] = inst[13];
-  assign inst_funct3[0] = inst[12];
-  assign inst_opcode[6] = inst[6];
-  assign inst_opcode[5] = inst[5];
-  assign inst_opcode[4] = inst[4];
-  assign inst_opcode[3] = inst[3];
-  assign inst_opcode[2] = inst[2];
-  assign inst_opcode[1] = inst[1];
-  assign inst_opcode[0] = inst[0];
+  assign inst_funct3 = inst[14:12];
+  assign inst_funct7 = inst[31:25];
+  assign inst_opcode = inst[6:0];
 endmodule

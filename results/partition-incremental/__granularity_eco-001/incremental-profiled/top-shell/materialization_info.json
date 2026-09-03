@@ -1,8 +1,5 @@
 {
-  "action": "rebuild",
-  "source_kind": "new_synthesis",
-  "reasons": [
-    "top_environment_changed",
-    "top_implementation_changed"
-  ]
+  "action": "reuse",
+  "source_kind": "base_cache",
+  "reasons": []
 }
